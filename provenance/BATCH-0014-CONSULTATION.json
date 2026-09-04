@@ -1,0 +1,56 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0014",
+  "unit_ids": [
+    "OLP-0033",
+    "OLP-0034"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T21:26:04.5539995Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0033",
+      "source_path": "content/sets-functions-relations/size-of-sets/non-enumerability.tex",
+      "source_sha256": "4471def29c2da48dcb01635adf692cd0bc89cb6885636db149f4b2d86ff4e9fa",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0034",
+      "source_path": "content/sets-functions-relations/size-of-sets/reduction.tex",
+      "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+      "read_in_full": true
+    }
+  ],
+  "shared_source_findings_read": [
+    {
+      "finding_id": "OLSIZ-004",
+      "unit_id": "OLP-0034",
+      "required_handling": "Use one bound output-sequence name s consistently in the characteristic-sequence definition and add an adjacent Punjabi note."
+    },
+    {
+      "finding_id": "OLSIZ-005",
+      "unit_id": "OLP-0034",
+      "required_handling": "Replace the finite n-zero string by a valid infinite binary sequence with an explicit infinite tail and add an adjacent Punjabi note."
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0014, the current owner read the complete non-enumerability.tex and reduction.tex originals, freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader, and rechecked authoritative shared findings OLSIZ-004/005 against their exact source contexts. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest non-enumerability, diagonalization, characteristic sequence, reduction, power set or infinite binary-sequence terminology; these remain reversible definition-based/scholarly bridges."
+}

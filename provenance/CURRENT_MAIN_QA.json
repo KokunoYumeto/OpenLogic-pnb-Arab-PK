@@ -4,71 +4,71 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 32,
-  "translated_range": "OLP-0001 through OLP-0032, contiguous",
-  "remaining_units": 690,
-  "aligned_blocks": 544,
-  "translated_linguistic_blocks": 352,
-  "unchanged_formal_blocks": 192,
+  "translated_and_source_aligned_units": 34,
+  "translated_range": "OLP-0001 through OLP-0034, contiguous",
+  "remaining_units": 688,
+  "aligned_blocks": 593,
+  "translated_linguistic_blocks": 391,
+  "unchanged_formal_blocks": 202,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
-  "current_chapter_progress": "Size of Sets through pairing functions and the alternative pairing construction, OLP-0032",
+  "current_chapter_progress": "Size of Sets through non-enumerability and reduction, OLP-0034",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 32,
-    "sha256": "0debda8bf10b0189c2b41e1eb7d63c581cbc955962d50503db3a9456f4f4128e",
+    "units": 34,
+    "sha256": "3fb3474283d0b944b37fe1ddf9e2e5e4712a431ae447865349fa3992d4f50fc9",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0032.json",
-    "sha256": "0939bb54feb46014e1d8bde7ee8f82fab00e86e48bc91b8f53e9468bf5d9067a",
+    "file": "AUDIT-REGRESSION-0034.json",
+    "sha256": "a2f17755e9fb9b16889f7a97b31bf37ca8f609c6814bf5fb7cb2b24cdd90723e",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 544,
-    "sha256": "b617881d5a8d0ca68bb7816ca55d67996510f076cd45e0d7c8769855c6335ab4",
+    "rows": 593,
+    "sha256": "8a40476712d6d6058f86ffea7d363056723ed1bfc5e582a9d324911b4516aa4f",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 36,
-    "sha256": "9949bc2d2911663fc9d7743f505a944295c35ff034456c6a4e08059aa7039ef3"
+    "entries": 39,
+    "sha256": "b8fb7419f7404132d62a57abd517907485935f2058e258cadca97b59dde6d98a"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 52,
-    "terminology_entries": 36,
-    "source_fidelity_entries": 16,
-    "sha256": "121dc3cc1037026c4b88e2819e5cadca0b591e2b389b55d0e5bcc79322e90668"
+    "entries": 57,
+    "terminology_entries": 39,
+    "source_fidelity_entries": 18,
+    "sha256": "5b7e3e6feb1ab04b57cd86968e3efb4607f9cd2e2102d1b13dee239189587642"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 10,
-    "applied_and_audited": 10,
+    "entries": 12,
+    "applied_and_audited": 12,
     "pending_until_unit_translation": 0,
-    "sha256": "4ab0d41be7f146076f8430218fcf1b38cf7db5efe194a8c3c2da8cb467c2bae9"
+    "sha256": "90be635585c94df95deb854d41c58d4d8cfc9f3088e8ed338220da69d600f2b3"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
-    "sha256": "7780cc934f691a669b8919513345f869162f0a7016e9bc8ce18ee0e9558fb6bd",
+    "sha256": "95afbde9c1e841eceb4129301d191793b5cb50fda5bfebd41dc2eec9b179b972",
     "authoritative_findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
     "authoritative_review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
     "applied_findings": [
       "OLSIZ-001",
       "OLSIZ-002",
-      "OLSIZ-003"
+      "OLSIZ-003",
+      "OLSIZ-004",
+      "OLSIZ-005"
     ],
     "reserved_pending_findings": [
-      "OLSIZ-004",
-      "OLSIZ-005",
       "OLSIZ-006",
       "OLSIZ-007",
       "OLSIZ-008",

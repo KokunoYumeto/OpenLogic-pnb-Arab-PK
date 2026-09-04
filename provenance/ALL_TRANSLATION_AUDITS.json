@@ -765,6 +765,57 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0033",
+      "source_path": "content/sets-functions-relations/size-of-sets/non-enumerability.tex",
+      "source_sha256": "4471def29c2da48dcb01635adf692cd0bc89cb6885636db149f4b2d86ff4e9fa",
+      "translation_sha256": "07ea8011875408b83e30949595a3dd658294f055a02616482bf437dcdae250e4",
+      "translation_bytes": 12926,
+      "source_blocks": 27,
+      "translation_blocks": 27,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0034",
+      "source_path": "content/sets-functions-relations/size-of-sets/reduction.tex",
+      "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+      "translation_sha256": "2b3bb97a798c179f5013fb47bc6ac203a5eba8ea8f91b5cea4a370ec863ec84a",
+      "translation_bytes": 8357,
+      "source_blocks": 22,
+      "translation_blocks": 22,
+      "source_corrections": [
+        "OLSIZ-004",
+        "OLSIZ-005"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,
