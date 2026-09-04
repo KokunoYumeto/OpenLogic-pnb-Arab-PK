@@ -1,0 +1,56 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0013",
+  "unit_ids": [
+    "OLP-0031",
+    "OLP-0032"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T21:06:47.1162712Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0031",
+      "source_path": "content/sets-functions-relations/size-of-sets/pairing.tex",
+      "source_sha256": "fb6cc1176e91e56cea5f5b9708723c59191813f8fe256aac8ed0457a0119a9bf",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0032",
+      "source_path": "content/sets-functions-relations/size-of-sets/pairing-alt.tex",
+      "source_sha256": "c26b4e0da9e2e0b0ec839470ddd1d0d5eb1b3d3922d3b6986c9a795f34328797",
+      "read_in_full": true
+    }
+  ],
+  "shared_source_findings_read": [
+    {
+      "finding_id": "OLSIZ-002",
+      "unit_id": "OLP-0031",
+      "required_handling": "State the complement in Nat of a finite subset of Nat and add an adjacent Punjabi note."
+    },
+    {
+      "finding_id": "OLSIZ-003",
+      "unit_id": "OLP-0032",
+      "required_handling": "Replace the second repeated tuple (2,m) by (3,m) and add an adjacent Punjabi note."
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0013, the current owner read the complete pairing.tex and pairing-alt.tex originals, freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader, and rechecked authoritative shared findings OLSIZ-002/003 against their exact source contexts. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest pairing functions, codes, triangular numbers, cofinite sets, truth functions, exponentiation or decoding terminology; these remain reversible definition-based/scholarly bridges."
+}

@@ -712,6 +712,59 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0031",
+      "source_path": "content/sets-functions-relations/size-of-sets/pairing.tex",
+      "source_sha256": "fb6cc1176e91e56cea5f5b9708723c59191813f8fe256aac8ed0457a0119a9bf",
+      "translation_sha256": "bc8255b81845a1413d90066610a55d47831b78d218b15edfc1fb097f2132ac8e",
+      "translation_bytes": 6222,
+      "source_blocks": 19,
+      "translation_blocks": 19,
+      "source_corrections": [
+        "OLSIZ-002"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0032",
+      "source_path": "content/sets-functions-relations/size-of-sets/pairing-alt.tex",
+      "source_sha256": "c26b4e0da9e2e0b0ec839470ddd1d0d5eb1b3d3922d3b6986c9a795f34328797",
+      "translation_sha256": "a439a3250059f69df53243c10a2143e5871d49a3dfdf10bd7b91cac4a2af8d15",
+      "translation_bytes": 6517,
+      "source_blocks": 11,
+      "translation_blocks": 11,
+      "source_corrections": [
+        "PNBSIZ-002",
+        "OLSIZ-003"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,
