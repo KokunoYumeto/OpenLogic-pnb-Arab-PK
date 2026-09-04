@@ -918,6 +918,59 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0039",
+      "source_path": "content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex",
+      "source_sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+      "translation_sha256": "e63cb37ed1c54ad96828ff7fd27227fb3d307fe51c05ea0a32ed476db41b6f1a",
+      "translation_bytes": 9713,
+      "source_blocks": 19,
+      "translation_blocks": 19,
+      "source_corrections": [
+        "OLSIZ-008",
+        "OLSIZ-009"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0040",
+      "source_path": "content/sets-functions-relations/size-of-sets/reduction-alt.tex",
+      "source_sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
+      "translation_sha256": "5e45160a2c020e15456ba624f32b6018cb5ad8d8bce00cc8b4d73e02c0ac8f77",
+      "translation_bytes": 8001,
+      "source_blocks": 24,
+      "translation_blocks": 24,
+      "source_corrections": [
+        "OLSIZ-010"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

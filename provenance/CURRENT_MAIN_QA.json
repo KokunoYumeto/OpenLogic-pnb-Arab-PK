@@ -1,64 +1,64 @@
 {
   "schema": "pnb-current-main-qa/1",
-  "date_utc": "2026-09-04",
+  "date_utc": "2026-09-05",
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 38,
-  "translated_range": "OLP-0001 through OLP-0038, contiguous",
-  "remaining_units": 684,
-  "aligned_blocks": 661,
-  "translated_linguistic_blocks": 441,
-  "unchanged_formal_blocks": 220,
+  "translated_and_source_aligned_units": 40,
+  "translated_range": "OLP-0001 through OLP-0040, contiguous",
+  "remaining_units": 682,
+  "aligned_blocks": 704,
+  "translated_linguistic_blocks": 474,
+  "unchanged_formal_blocks": 230,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
-  "current_chapter_progress": "Size of Sets through Schroder-Bernstein and the alternate set-theoretic enumeration presentation, OLP-0038",
+  "current_chapter_progress": "Size of Sets through the alternate diagonal nonenumerability and reduction presentations, OLP-0040",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 38,
-    "sha256": "2dfa8980e476278b3d0088d726b1898eb4507eea7014415e9ca7352c883ef0b5",
+    "units": 40,
+    "sha256": "f4bfc6e57548a378fb3f9535e7efd0b7f49c671ea3e60752ca967c3fec05357d",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0038.json",
-    "sha256": "165264012be794fa614a6dcec70af7d0a89744d7f47344f6bfc1cc1a4acd2336",
+    "file": "AUDIT-REGRESSION-0040.json",
+    "sha256": "050a5d26982f7c1d73dd2d38416bd639a64702ca437d514f5517c6b71e7b788e",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 661,
-    "sha256": "f40ce39e54f6e84f5a7c8ec58c4844ab401c42edc5f27bf89fed32e3f5e018fe",
+    "rows": 704,
+    "sha256": "4a5c52efbc8b8bcaf40e94c98418998c26f17584263a292e3506268d015959bb",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 44,
-    "sha256": "b1e0a4954c46fbebcaba7c990757afe24131c44f3a8430c9b6a8817dd1d674b7"
+    "entries": 45,
+    "sha256": "1a1cde1c93366124aa73cbb4e7132af49fcd6ee84d892cb3c7add3412bcdbe30"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 65,
-    "terminology_entries": 44,
-    "source_fidelity_entries": 21,
-    "sha256": "f99a512db017aa891e84ca884c3c25d62377f635ccd95b8469f434f19f4eedf1"
+    "entries": 69,
+    "terminology_entries": 45,
+    "source_fidelity_entries": 24,
+    "sha256": "4f9a3d0fd5ffaab2854606bea1126154cd0d7969776a3e2fa625108819a01c6d"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 15,
-    "applied_and_audited": 15,
+    "entries": 18,
+    "applied_and_audited": 18,
     "pending_until_unit_translation": 0,
-    "sha256": "7bc50eecece8c73ceb0b68b444bb1f1d3d61e55ead816a304da2faf882fb9401"
+    "sha256": "405c02c29da454a77e38ab198bf0945ed7f0a4bd05567a00c4a2f7dc16e4dd8f"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
-    "sha256": "891cf39bff91ffb38113fecd516dae75560d0359f3eac11a4b5c8feaade72d2b",
+    "sha256": "7b40e80fe7d9cee3e917b3fefdcbdebdec31cb0caa9f218929152239ff97da93",
     "authoritative_findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
     "authoritative_review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
     "applied_findings": [
@@ -68,13 +68,12 @@
       "OLSIZ-004",
       "OLSIZ-005",
       "OLSIZ-006",
-      "OLSIZ-007"
-    ],
-    "reserved_pending_findings": [
+      "OLSIZ-007",
       "OLSIZ-008",
       "OLSIZ-009",
       "OLSIZ-010"
     ],
+    "reserved_pending_findings": [],
     "retracted_false_positive_alerts": [
       "OLSIZ-011"
     ]

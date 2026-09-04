@@ -1,0 +1,80 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0017",
+  "unit_ids": [
+    "OLP-0039",
+    "OLP-0040"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T22:34:11.4423388Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0039",
+      "source_path": "content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex",
+      "source_bytes": 6574,
+      "source_sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0040",
+      "source_path": "content/sets-functions-relations/size-of-sets/reduction-alt.tex",
+      "source_bytes": 5500,
+      "source_sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
+      "read_in_full": true
+    }
+  ],
+  "shared_source_audit": {
+    "audit_id": "OLSIZ-20260904",
+    "findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
+    "review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
+    "read_in_full_before_drafting": true,
+    "relevant_findings": [
+      {
+        "finding_id": "OLSIZ-008",
+        "unit_id": "OLP-0039",
+        "source_locator": "lines 61-75",
+        "required_handling": "Describe s_n(m) as the mth digit of the nth string, consistently with its row and column in the adjacent array; add an adjacent Punjabi note."
+      },
+      {
+        "finding_id": "OLSIZ-009",
+        "unit_id": "OLP-0039",
+        "source_locator": "lines 77-84",
+        "required_handling": "State both complementary diagonal bit flips, 1 to 0 and 0 to 1; add an adjacent Punjabi note."
+      },
+      {
+        "finding_id": "OLSIZ-010",
+        "unit_id": "OLP-0040",
+        "source_locator": "lines 48-58",
+        "required_handling": "Replace the unbound output s_k and its components with one bound output name s; add an adjacent Punjabi note."
+      }
+    ]
+  },
+  "retracted_alert_check": {
+    "void_alert_id": "OLSIZ-011",
+    "status": "retracted_false_positive_no_correction",
+    "final_retraction_sha256": "b495d66165f3c7f0b32d61b0b106c402badcc6e4e6a130442734c8f883dd5adc",
+    "source_triple_backslash_hline_occurrences": 5,
+    "source_offsets_zero_based": [2809, 2879, 2946, 3013, 3080],
+    "required_handling": "Preserve each original three-backslash-plus-hline byte sequence exactly; do not add an OLSIZ-011 marker or correction record."
+  },
+  "consultation_record": "2026-09-04: before drafting BATCH-0017, the current owner read the complete non-enumerability-alt.tex and reduction-alt.tex originals, freshly re-read the full exact P007/P015 Punjabi paragraphs, and read the complete authoritative shared findings and review before checking OLSIZ-008/009/010 against their exact source contexts. The final OLSIZ-011 retraction was re-read and all five three-backslash-plus-hline byte sequences were independently reverified. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest alternate diagonalization, row/column indexing, reduction or characteristic-sequence terminology; these remain reversible definition-based/scholarly bridges."
+}

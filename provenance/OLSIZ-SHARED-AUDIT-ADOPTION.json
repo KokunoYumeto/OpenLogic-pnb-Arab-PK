@@ -108,17 +108,32 @@
     {
       "finding_id": "OLSIZ-008",
       "unit_id": "OLP-0039",
-      "status": "pending_until_unit_translation"
+      "status": "applied_and_audited",
+      "target_sha256": "e63cb37ed1c54ad96828ff7fd27227fb3d307fe51c05ea0a32ed476db41b6f1a",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0017-audit.json",
+      "batch_audit_sha256": "71dde86cd36df640fe7295c2ae30a804298523ec0900409b0e5925da2a422905"
     },
     {
       "finding_id": "OLSIZ-009",
       "unit_id": "OLP-0039",
-      "status": "pending_until_unit_translation"
+      "status": "applied_and_audited",
+      "target_sha256": "e63cb37ed1c54ad96828ff7fd27227fb3d307fe51c05ea0a32ed476db41b6f1a",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0017-audit.json",
+      "batch_audit_sha256": "71dde86cd36df640fe7295c2ae30a804298523ec0900409b0e5925da2a422905"
     },
     {
       "finding_id": "OLSIZ-010",
       "unit_id": "OLP-0040",
-      "status": "pending_until_unit_translation"
+      "status": "applied_and_audited",
+      "target_sha256": "5e45160a2c020e15456ba624f32b6018cb5ad8d8bce00cc8b4d73e02c0ac8f77",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0017-audit.json",
+      "batch_audit_sha256": "71dde86cd36df640fe7295c2ae30a804298523ec0900409b0e5925da2a422905"
     }
   ],
   "rule": "For each reached unit, compare this Punjabi target directly with the frozen English source and the shared audit; repair the localized body, add an adjacent Punjabi note keyed by the shared ID, append the machine correction ledger, and rerun strict audit and regression. Do not inherit another translation."
