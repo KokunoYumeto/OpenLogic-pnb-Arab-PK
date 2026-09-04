@@ -1,0 +1,95 @@
+{
+  "schema": "pnb-shared-source-audit-adoption/1",
+  "shared_audit_id": "OLSIZ-20260904",
+  "frozen_source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
+  "review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
+  "retracted_alerts": [
+    {
+      "void_alert_id": "OLSIZ-011",
+      "status": "retracted_false_positive_no_correction",
+      "initial_supplement_sha256": "c1734efa1c1b6e7a82f98b4ccd49031346907fac4dae91082abde539659e8307",
+      "final_retraction_record_sha256": "b495d66165f3c7f0b32d61b0b106c402badcc6e4e6a130442734c8f883dd5adc",
+      "current_tombstone_sha256": "b1b9f8ad296bc8d718a17514cdb91c61a8c1ea537a1231604f862551406b35bf",
+      "retraction_received_at_utc": "2026-09-04T20:52:01.3460133Z",
+      "independent_check": "Five occurrences each contain bytes 5c 5c 5c 68 6c 69 6e 65: a TeX row break followed immediately by a genuine hline control sequence.",
+      "triple_backslash_sequence_start_offsets_zero_based": [
+        2809,
+        2879,
+        2946,
+        3013,
+        3080
+      ],
+      "h_character_offsets_zero_based": [
+        2812,
+        2882,
+        2949,
+        3016,
+        3083
+      ],
+      "frozen_source_sha256_verified": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+      "action": "Do not apply or reserve OLSIZ-011 as a correction. Publish only this retraction provenance, and preserve the original three-backslash TeX tokens when OLP-0039 is translated.",
+      "manager_retraction_status": "FINAL_RETRACTION_FALSE_POSITIVE"
+    }
+  ],
+  "lane_local_copyedit_namespace": "PNBSIZ",
+  "namespace_note": "PNBSIZ-001 predates receipt of the shared audit and was renamed immediately so it does not collide with authoritative OLSIZ-001.",
+  "findings": [
+    {
+      "finding_id": "OLSIZ-001",
+      "unit_id": "OLP-0029",
+      "status": "applied_and_audited",
+      "target_sha256": "4fdcde1705fe60e488ffe99222c58576b729cbed61ff4bd651929bf94e793a5b",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0012-audit.json",
+      "batch_audit_sha256": "17001b360f33231d3d4943c6c8d6243cb0d30e947931502eb87487e169b17189"
+    },
+    {
+      "finding_id": "OLSIZ-002",
+      "unit_id": "OLP-0031",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-003",
+      "unit_id": "OLP-0032",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-004",
+      "unit_id": "OLP-0034",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-005",
+      "unit_id": "OLP-0034",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-006",
+      "unit_id": "OLP-0035",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-007",
+      "unit_id": "OLP-0036",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-008",
+      "unit_id": "OLP-0039",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-009",
+      "unit_id": "OLP-0039",
+      "status": "pending_until_unit_translation"
+    },
+    {
+      "finding_id": "OLSIZ-010",
+      "unit_id": "OLP-0040",
+      "status": "pending_until_unit_translation"
+    }
+  ],
+  "rule": "For each reached unit, compare this Punjabi target directly with the frozen English source and the shared audit; repair the localized body, add an adjacent Punjabi note keyed by the shared ID, append the machine correction ledger, and rerun strict audit and regression. Do not inherit another translation."
+}

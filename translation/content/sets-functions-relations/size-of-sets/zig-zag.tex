@@ -1,0 +1,129 @@
+% Part:sets-functions-relations
+% Chapter: size-of-sets
+% Section: zig-zag
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{siz}{zigzag}
+
+\olsection{کانتور دا زگ زیگ طریقہ}
+
+\begin{explain}
+اسی کجھ ”سوکھیاں“ گنتی وار فہرستاں پہلے ای ویکھ چکے آں۔ ہُن اسی
+کجھ ذرا اوکھا ویکھاں گے۔ قدرتی عدداں دیاں جوڑیاں دے سیٹ اُتے غور
+کرو\oliflabeldef{sfr:set:pai:sec}{، جیہنوں اسی \olref[set][pai]{sec}
+وچ ایویں تعریف کیتا سی:}{، جیہڑا ایویں تعریف اے:}
+\[
+\Nat \times \Nat = \Setabs{\tuple{n,m}}{n,m \in \Nat}
+\]
+اسی ایہناں ترتیب وار جوڑیاں نوں اک \emph{جدول} وچ ایویں سجا سکدے آں:
+\[
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \dots \\
+\hline
+\mathbf 0 & \tuple{0,0} & \tuple{0,1} & \tuple{0,2} & \tuple{0,3} & \dots \\
+\hline
+\mathbf 1 & \tuple{1,0} & \tuple{1,1} & \tuple{1,2} & \tuple{1,3} & \dots \\
+\hline
+\mathbf 2 & \tuple{2,0} & \tuple{2,1} & \tuple{2,2} & \tuple{2,3} & \dots \\
+\hline
+\mathbf 3 & \tuple{3,0} & \tuple{3,1} & \tuple{3,2} & \tuple{3,3} & \dots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+\end{array}
+\]
+صاف اے کہ $\Nat \times \Nat$ دی ہر ترتیب وار جوڑی جدول وچ ٹھیک اک
+واری آوے گی۔ خاص طور تے، $\tuple{n,m}$، $n$ویں قطار تے $m$ویں کالم
+وچ آوے گی۔ پر اسی ایہو جہے جدول دے عنصراں نوں ”اک جہتی“ فہرست وچ
+کِویں سجاواں؟ ہیٹھلے جدول دا نمونہ ایہ کرن دا اک طریقہ وکھاؤندا اے
+(بھاویں ہور کئی طریقے وی موجود نیں):
+\[
+\begin{array}{ c | c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 &\dots \\
+\hline
+\mathbf 0 & 0  & 1& 3 & 6& 10 &\ldots \\
+\hline
+\mathbf 1 &2 & 4& 7 & 11 & \dots &\ldots \\
+\hline
+\mathbf 2 & 5 & 8 & 12 & \ldots & \dots&\ldots \\
+\hline
+\mathbf 3 & 9 & 13 & \ldots & \ldots & \dots & \ldots \\
+\hline
+\mathbf 4 & 14 & \ldots & \ldots & \ldots & \dots & \ldots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots&\ldots & \ddots\\
+\end{array}
+\]\noindent
+ایس نمونے نوں \emph{کانتور دا زگ زیگ طریقہ} آکھیا جاندا اے۔ ایہ
+$\Nat \times \Nat$ دی گنتی وار فہرست ایویں بناؤندا اے:
+\[
+\tuple{0,0}, \tuple{0,1}, \tuple{1,0}, \tuple{0,2}, \tuple{1,1},
+\tuple{2,0}, \tuple{0,3}, \tuple{1,2}, \tuple{2,1}, \tuple{3,0}, \dots
+\]
+تے ایس توں اگلی گل قائم ہوندی اے:
+\end{explain}
+
+\begin{prop}\ollabel{natsquaredenumerable}
+$\Nat \times \Nat$، !!{enumerable} اے۔
+\end{prop}
+
+\begin{proof}
+فنکشن $f \colon \Nat \to \Nat\times\Nat$، ہر $k \in \Nat$ نوں
+اوہ تِک $\tuple{n,m} \in \Nat \times \Nat$ دیندا اے جیہدے لئی $k$،
+کانتور دے زگ زیگ جدول دی $n$ویں قطار تے $m$ویں کالم دی قدر اے۔
+\end{proof}
+
+\begin{explain}
+ایس تکنیک نوں بڑے سوہنے ڈھنگ نال عام وی کیتا جا سکدا اے۔ مثال لئی،
+اسی قدرتی عدداں دے ترتیب وار تِکاں دے سیٹ دی گنتی وار فہرست بناؤن
+لئی اینوں ورت سکدے آں، یعنی:
+\[
+\Nat \times \Nat \times \Nat = \Setabs{\tuple{n,m,k}}{n,m,k \in \Nat}
+\]
+اسی $\Nat \times \Nat \times \Nat$ نوں $\Nat \times \Nat$ تے
+$\Nat$ دا کارتیسی حاصل ضرب سمجھدے آں، یعنی
+\[
+\Nat^3 = (\Nat \times \Nat) \times \Nat =
+\Setabs{\tuple{\tuple{n,m},k}}{n, m, k
+  \in \Nat }
+\]
+تے ایس طرح اسی $\Nat^3$ دی گنتی وار فہرست اک جدول نال بنا سکدے آں:
+اک محور اُتے $\Nat$ دی گنتی وار فہرست دے لیبل لا دیو، تے دوجے محور
+اُتے $\Nat^2$ دی گنتی وار فہرست دے:
+\[
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \dots \\
+\hline
+\mathbf{\tuple{0,0}} & \tuple{0,0,0} & \tuple{0,0,1} & \tuple{0,0,2} & \tuple{0,0,3} & \dots \\
+\hline
+\mathbf{\tuple{0,1}} & \tuple{0,1,0} & \tuple{0,1,1} & \tuple{0,1,2} & \tuple{0,1,3} & \dots \\
+\hline
+\mathbf{\tuple{1,0}} & \tuple{1,0,0} & \tuple{1,0,1} & \tuple{1,0,2} & \tuple{1,0,3} & \dots \\
+\hline
+\mathbf{\tuple{0,2}} & \tuple{0,2,0} & \tuple{0,2,1} & \tuple{0,2,2} & \tuple{0,2,3} & \dots\\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
+\end{array}
+\]
+سو کانتور دے زگ زیگ طریقے ورگا طریقہ ورت کے اسی اوسے طرح $\Nat^3$
+دی گنتی وار فہرست حاصل کر سکدے آں۔ تے اسی ایویں اگے ودھدے ہوئے،
+$\Nat^n$ دیاں گنتی وار فہرستاں حاصل کر سکدے آں، ہر قدرتی عدد $n$ لئی۔
+سو ساڈے کول اگلا نتیجہ اے:
+\end{explain}
+
+\begin{prop}
+$\Nat^n$، ہر $n \in \Nat$ لئی، !!{enumerable} اے۔
+\end{prop}
+
+\begin{prob}\label{sfr:siz:zigzag:prob:posint-n}
+وکھاؤ کہ $(\PosInt)^n$، ہر $n \in \Nat$ لئی، !!{enumerable} اے۔
+\end{prob}
+
+\begin{prob}\label{sfr:siz:zigzag:prob:posint-star}
+  وکھاؤ کہ $(\PosInt)^*$، !!{enumerable} اے۔ تسیں
+  \cref{sfr:siz:zigzag:prob:posint-n} منّ سکدے او۔
+\end{prob}
+
+\end{document}

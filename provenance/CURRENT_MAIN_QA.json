@@ -4,38 +4,80 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 26,
-  "translated_range": "OLP-0001 through OLP-0026, contiguous",
-  "remaining_units": 696,
-  "aligned_blocks": 438,
-  "translated_linguistic_blocks": 286,
-  "unchanged_formal_blocks": 152,
+  "translated_and_source_aligned_units": 30,
+  "translated_range": "OLP-0001 through OLP-0030, contiguous",
+  "remaining_units": 692,
+  "aligned_blocks": 514,
+  "translated_linguistic_blocks": 331,
+  "unchanged_formal_blocks": 183,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
+  "current_chapter_progress": "Size of Sets driver, introduction, enumerability, and Cantor zig-zag through OLP-0030",
   "accepted_reader_chapters": [
     "Sets"
   ],
-  "current_regression": {
-    "file": "AUDIT-REGRESSION-0026.json",
-    "sha256": "7576fd6123c84e641d2011c2dc1b656055f157ff7cfb94d6f7891e4bdef4db13",
+  "aggregate_translation_audits": {
+    "file": "ALL_TRANSLATION_AUDITS.json",
+    "units": 30,
+    "sha256": "195c047d6c18dd00da7eb1981a80ab75c206a2c6a9a28582e3ee7a41ec3003be",
     "all_passed": true
+  },
+  "current_regression": {
+    "file": "AUDIT-REGRESSION-0030.json",
+    "sha256": "57db544e6ef77406f6c61e54c84393eab9ac87cb8cc4996157f6a34becdd3309",
+    "all_passed": true
+  },
+  "segment_canon_use": {
+    "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
+    "rows": 514,
+    "sha256": "1298967144d5b84a7cf556cdc8cffff1e713a4a09d458cd9832399a3bf26f15d",
+    "canonical_unit_block_order": true
+  },
+  "term_decisions": {
+    "file": "TERM_DECISIONS.jsonl",
+    "entries": 33,
+    "sha256": "ef7b7f147aa62dc55744d5b4a229a951f0de484190cfdddc4b65414d98d21737"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 38,
-    "terminology_entries": 28,
-    "source_fidelity_entries": 10,
-    "sha256": "c2ea931441503446bd31f548b3b6dddb3268c3b7579d2e73bc1b2684fc0254b1"
+    "entries": 46,
+    "terminology_entries": 33,
+    "source_fidelity_entries": 13,
+    "sha256": "56eec064033790ff06c66a7a38ec79215937164c6837e63da137d8705a842d1c"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 5,
-    "applied_and_audited": 5,
-    "sha256": "753785a0caa0ab6a93756319e21ced3a990b8532c6c9f645782868c1cb80e2fd"
+    "entries": 7,
+    "applied_and_audited": 7,
+    "pending_until_unit_translation": 0,
+    "sha256": "3b824cb388df94f3b22fd2d81f12334338262551e1958d7b19857486b35750eb"
+  },
+  "shared_size_of_sets_audit": {
+    "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
+    "sha256": "0e8e9b62fc0f3cdc21d8fd44b781af270eb49a39cb8770bd146df6944d22d20f",
+    "authoritative_findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
+    "authoritative_review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
+    "applied_findings": [
+      "OLSIZ-001"
+    ],
+    "reserved_pending_findings": [
+      "OLSIZ-002",
+      "OLSIZ-003",
+      "OLSIZ-004",
+      "OLSIZ-005",
+      "OLSIZ-006",
+      "OLSIZ-007",
+      "OLSIZ-008",
+      "OLSIZ-009",
+      "OLSIZ-010"
+    ],
+    "retracted_false_positive_alerts": [
+      "OLSIZ-011"
+    ]
   },
   "release_snapshot": {
     "version": "v0.1.0",
@@ -48,6 +90,7 @@
   "limits": [
     "This branch checkpoint is not a new binary reader release.",
     "Relations and Functions have source-aligned review but no integrated reader visual acceptance.",
+    "Size of Sets is incomplete and has no integrated reader visual acceptance.",
     "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ]

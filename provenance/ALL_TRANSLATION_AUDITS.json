@@ -612,8 +612,108 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0027",
+      "source_path": "content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex",
+      "source_sha256": "bce6978871cb87871f8fbae0d51c9e260ba26c6c63ebefaad30d83c89ad1eae0",
+      "translation_sha256": "c9e5291749860c9d51628a8cf029c132fb66f46f4b15eaa2d3d002ed66d1ea32",
+      "translation_bytes": 2270,
+      "source_blocks": 19,
+      "translation_blocks": 19,
+      "source_corrections": [
+        "PNBSIZ-001"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0028",
+      "source_path": "content/sets-functions-relations/size-of-sets/introduction.tex",
+      "source_sha256": "bb5010906c4b4b95ef652f372efc49c44ca9feebbca1e50fecbb29b3ff6ce8aa",
+      "translation_sha256": "b2ac92d48d3dc9d20ae1cfba8e511b974041e739a16fe78560f30b375d503544",
+      "translation_bytes": 1753,
+      "source_blocks": 8,
+      "translation_blocks": 8,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0029",
+      "source_path": "content/sets-functions-relations/size-of-sets/enumerability.tex",
+      "source_sha256": "bf6be35c0e393cb6e1d227f8e9024df4216792e663f23beb7277045487acfa67",
+      "translation_sha256": "4fdcde1705fe60e488ffe99222c58576b729cbed61ff4bd651929bf94e793a5b",
+      "translation_bytes": 18102,
+      "source_blocks": 36,
+      "translation_blocks": 36,
+      "source_corrections": [
+        "OLSIZ-001"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0030",
+      "source_path": "content/sets-functions-relations/size-of-sets/zig-zag.tex",
+      "source_sha256": "514c709d325dd5496ee321828b0c4a0e7eea089a58d3f2ecde05128b9e7daf26",
+      "translation_sha256": "a68fcac4958ede0adebcfc75a7c15d8ba771c442db23f9b5c740cc257014587e",
+      "translation_bytes": 5471,
+      "source_blocks": 13,
+      "translation_blocks": 13,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,
-  "reader_acceptance": "Only the Sets tranche; Relations and Functions have complete source-aligned translation/review but no integrated reader visual acceptance."
+  "reader_acceptance": "Only the Sets tranche has integrated reader visual acceptance; all other translated units have source-aligned review only."
 }

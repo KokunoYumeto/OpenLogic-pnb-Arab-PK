@@ -1,0 +1,44 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0012",
+  "unit_ids": [
+    "OLP-0029",
+    "OLP-0030"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T18:36:24.1038486Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0029",
+      "source_path": "content/sets-functions-relations/size-of-sets/enumerability.tex",
+      "source_sha256": "bf6be35c0e393cb6e1d227f8e9024df4216792e663f23beb7277045487acfa67",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0030",
+      "source_path": "content/sets-functions-relations/size-of-sets/zig-zag.tex",
+      "source_sha256": "514c709d325dd5496ee321828b0c4a0e7eea089a58d3f2ecde05128b9e7daf26",
+      "read_in_full": true
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0012, the current owner read the complete enumerability.tex and zig-zag.tex originals, then freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest enumeration, redundancy, recursion, ceiling, array/axis or Cantor zig-zag terminology; these remain reversible definition-based/scholarly bridges."
+}
