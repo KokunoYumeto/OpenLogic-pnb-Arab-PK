@@ -88,12 +88,22 @@
     {
       "finding_id": "OLSIZ-006",
       "unit_id": "OLP-0035",
-      "status": "pending_until_unit_translation"
+      "status": "applied_and_audited",
+      "target_sha256": "23407d23543992a54120878a89dfbe8eb7bd77d1e0bf8d5fbb1294efda5a0cb4",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0015-audit.json",
+      "batch_audit_sha256": "be25a709a0158d2ed52384c647bb582f7e304da4a52c4023e534da0fdca98ac6"
     },
     {
       "finding_id": "OLSIZ-007",
       "unit_id": "OLP-0036",
-      "status": "pending_until_unit_translation"
+      "status": "applied_and_audited",
+      "target_sha256": "27f257a64738581f6957c75d8f0528d756e649de501431e562f0091dd367e5b0",
+      "adjacent_localized_note": true,
+      "machine_correction_record": "SOURCE_CORRECTIONS.jsonl",
+      "batch_audit": "work/batch-0015-audit.json",
+      "batch_audit_sha256": "be25a709a0158d2ed52384c647bb582f7e304da4a52c4023e534da0fdca98ac6"
     },
     {
       "finding_id": "OLSIZ-008",

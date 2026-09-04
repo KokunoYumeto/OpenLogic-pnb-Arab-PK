@@ -1,0 +1,63 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0015",
+  "unit_ids": [
+    "OLP-0035",
+    "OLP-0036"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T21:46:37.9984215Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0035",
+      "source_path": "content/sets-functions-relations/size-of-sets/equinumerous-sets.tex",
+      "source_sha256": "025a3fc368d6873825effcb07631913762edbf2d3f9a0711d57dcd9575361251",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0036",
+      "source_path": "content/sets-functions-relations/size-of-sets/comparing-size.tex",
+      "source_sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+      "read_in_full": true
+    }
+  ],
+  "shared_audit_checks": {
+    "findings_file": "source-audits/2026-09-04-size-of-sets/FINDINGS.json",
+    "findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
+    "review_file": "source-audits/2026-09-04-size-of-sets/REVIEW.md",
+    "review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9",
+    "read_in_full": true
+  },
+  "shared_source_findings_read": [
+    {
+      "finding_id": "OLSIZ-006",
+      "unit_id": "OLP-0035",
+      "required_handling": "Replace both premature g(x)=y occurrences by f(x)=y in the empty-set branches and add an adjacent Punjabi note."
+    },
+    {
+      "finding_id": "OLSIZ-007",
+      "unit_id": "OLP-0036",
+      "required_handling": "Quantify the diagonal conclusion over every x in A, rather than x in the complement set, and add an adjacent Punjabi note."
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0015, the current owner read the complete equinumerous-sets.tex and comparing-size.tex originals, freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader, and read the complete authoritative shared findings and review before checking OLSIZ-006/007 against their exact source contexts. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest equinumerosity, cardinal comparison, Cantor's theorem, injection, diagonal-set or power-set terminology; these remain reversible definition-based/scholarly bridges."
+}

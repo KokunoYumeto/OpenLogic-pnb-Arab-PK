@@ -816,6 +816,58 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0035",
+      "source_path": "content/sets-functions-relations/size-of-sets/equinumerous-sets.tex",
+      "source_sha256": "025a3fc368d6873825effcb07631913762edbf2d3f9a0711d57dcd9575361251",
+      "translation_sha256": "23407d23543992a54120878a89dfbe8eb7bd77d1e0bf8d5fbb1294efda5a0cb4",
+      "translation_bytes": 5982,
+      "source_blocks": 19,
+      "translation_blocks": 19,
+      "source_corrections": [
+        "OLSIZ-006"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0036",
+      "source_path": "content/sets-functions-relations/size-of-sets/comparing-size.tex",
+      "source_sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+      "translation_sha256": "27f257a64738581f6957c75d8f0528d756e649de501431e562f0091dd367e5b0",
+      "translation_bytes": 9893,
+      "source_blocks": 19,
+      "translation_blocks": 19,
+      "source_corrections": [
+        "OLSIZ-007"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

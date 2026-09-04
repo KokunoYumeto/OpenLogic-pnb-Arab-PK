@@ -1,0 +1,114 @@
+% Part:sets-functions-relations
+% Chapter: size-of-sets
+% Section: equinumerous-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{siz}{equ}
+
+\olsection{ہم تعدادیت}
+
+ساڈے کول سیٹاں دے ”سائز“ دا اک بدیہی تصور اے، جیہڑا متناہی سیٹاں
+لئی چنگی طرح کم کردا اے۔ پر لامتناہی سیٹاں دا کی؟ جے اسی
+\emph{کسے وی} سائز دے دو سیٹاں دے سائز دا رسمی موازنہ کرن دا طریقہ
+بناؤنا چاہنے آں، تاں ایہ تعریف کرن توں شروع کرنا چنگا خیال اے کہ سیٹ
+کدوں اکّو سائز دے ہوندے نیں۔ فریگے دی مثال ویکھو:
+\begin{quote}
+  جے اک بیرا ایہ پکا کرنا چاہوے کہ اوہنے میز اُتے پلیٹاں دے عین برابر
+  چھریاں رکھیاں نیں، تاں اوہنوں دوہاں وچوں کسے نوں وی گنّن دی لوڑ
+  نہیں، جے اوہ بس ہر پلیٹ دے سجے پاسے اک چھری رکھ دیوے، ایس طرح کہ
+  میز اُتے ہر چھری کسے پلیٹ دے سجے پاسے پئی ہووے۔ ایس طرح پلیٹاں تے
+  چھریاں اک دوجے نال اکلوتے ڈھنگ نال میل کھاندیاں نیں، تے اوہ وی
+  اوسے مکانی تعلق راہیں۔ \citep[\S70]{Frege1884}
+\end{quote}
+ایس عبارت دی سوجھ نوں اک رسمی تعریف راہیں صاف کیتا جا سکدا اے:
+
+\begin{defn}\ollabel{comparisondef}
+  $A$،~$B$ دے نال \emph{ہم تعداد} اے، جیہنوں $\cardeq{A}{B}$ لکھدے
+  آں، عین اوس ویلے جدوں کوئی !!a{bijection} $f \colon A \to B$ موجود ہووے۔
+\end{defn}
+
+\begin{prop}\ollabel{equinumerosityisequi}
+ہم تعدادیت اک ہم ارزیت دا تعلق اے۔
+\end{prop}
+
+\begin{proof}
+سانوں وکھاؤنا اے کہ ہم تعدادیت انعکاسی، متناظر تے متعدی اے۔
+$A, B$ تے~$C$ سیٹ ہون۔
+
+\emph{انعکاسیت۔} شناختی نقشہ $\Id{A} \colon A \to A$، جتھے
+$\Id{A} (x) = x$ ہر $x \in A$ لئی، !!a{bijection} اے۔ سو
+$\cardeq{A}{A}$۔
+
+\emph{تناظر۔} فرض کرو $\cardeq{A}{B}$، یعنی کوئی
+!!a{bijection} $f\colon A \to B$ موجود اے۔ کیوں جے $f$،
+!!{bijective} اے، ایس لئی اوہدا اُلٹ $f^{-1}$ موجود اے تے اوہ وی
+!!{bijective} اے۔ ایس لئی $f^{-1}\colon B \to A$ اک
+!!a{bijection} اے، سو $\cardeq{B}{A}$۔
+
+\emph{تعدیت۔} فرض کرو کہ $\cardeq{A}{B}$ تے $\cardeq{B}{C}$، یعنی
+!!{bijection}s $f\colon A \to B$ تے $g\colon B \to C$ موجود نیں۔
+فیر ترکیب $\comp{f}{g}\colon A \to C$، !!{bijective} اے، سو
+$\cardeq{A}{C}$۔
+\end{proof}
+
+\begin{prop}
+جے $\cardeq{A}{B}$، تاں $A$، !!{enumerable} عین اوس ویلے اے جدوں
+$B$ اے۔
+\end{prop}
+
+\begin{editorial}
+اگلا ثبوت، جے \olref[enm]{sec} شامل ہووے، تاں
+\olref[enm]{defn:enumerable} ورتدا اے، تے ہور صورت وچ
+\olref[enm-alt]{defn:enumerable} ورتدا اے۔
+\end{editorial}
+
+\begin{proof}
+فرض کرو $\cardeq{A}{B}$، سو کوئی !!{bijection} $f \colon A
+\to B$ موجود اے، تے فرض کرو کہ $A$، !!{enumerable} اے۔
+\oliflabeldef{sfr:siz:enm:defn:enumerable}{
+  فیر یا تاں $A = \emptyset$ اے یا کوئی !!a{surjective} فنکشن
+  $g\colon \PosInt \to A$ موجود اے۔ جے $A = \emptyset$، تاں
+  $B = \emptyset$ وی اے (نہیں تاں کوئی !!a{element}~$y \in B$
+  ہوندا، پر کوئی $x \in A$ نہ ہوندا جیہدے لئی $f(x) = y$)۔ جے، دوجے
+  پاسے، $g\colon \PosInt \to A$، !!{surjective} اے، تاں
+  $\comp{g}{f} \colon \PosInt \to B$، !!{surjective} اے۔ ایہ ویکھن
+  لئی $y \in B$ لو۔ کیوں جے $f$، !!{surjective} اے، ایس لئی کوئی
+  $x \in A$ اے جیہدے لئی $f(x) = y$۔ کیوں جے $g$، !!{surjective}
+  اے، ایس لئی کوئی $n \in \PosInt$ اے جیہدے لئی $g(n) = x$۔ ایس لئی،
+\[
+(\comp{g}{f})(n) = f(g(n)) = f(x) = y
+\]
+تے سو $\comp{g}{f}$، !!{surjective} اے۔ ساڈے کول
+$\comp{g}{f}$،~$B$ دی اک گنتی وار فہرست اے، تے ایس لئی $B$،
+!!{enumerable} اے۔}
+{
+  فیر یا تاں $A = \emptyset$ اے یا کوئی !!a{bijection}~$g$ موجود
+  اے جیہدی حاصل قدراں دا سیٹ~$A$ اے تے جیہدا دائرۂ تعریف یا $\Nat$
+  اے یا قدرتی عدداں دا اک مُڈھلا سلسلہ اے۔ جے $A = \emptyset$، تاں
+  $B = \emptyset$ وی اے (نہیں تاں کوئی~$y \in B$ ہوندا جیہدے لئی
+  کوئی $x \in A$ ای نہ ہوندا کہ $f(x) = y$)۔ سو فرض کرو ساڈے کول
+  ساڈی !!{bijection}~$g$ اے۔ فیر $\comp{g}{f}$ اک !!a{bijection} اے
+  جیہدی حاصل قدراں دا سیٹ~$B$ اے تے جیہدا دائرۂ تعریف~$g$ والے دے
+  برابر اے (یعنی یا $\Nat$ یا اوہدا اک مُڈھلا ٹکڑا)، سو $B$،
+  !!{enumerable} اے۔}
+% OLSIZ-006 ماخذ دی درستی: خالی سیٹ والیاں دونیں مشروط شاخاں وچ f ہی زیرِ بحث مطابقت اے؛ انگریزی ماخذ اوتھے g(x)=y اوہدے تعارف توں پہلاں لکھدا سی۔
+
+جے $B$، !!{enumerable} اے، تاں اسی حاصل کردے آں کہ $A$،
+!!{enumerable} اے، دلیل نوں !!{bijection} $f^{-1}\colon B \to A$
+نال دُہرا کے،~$f$ دی بجائے۔
+\end{proof}
+
+\begin{prob}
+وکھاؤ کہ جے $\cardeq{A}{C}$ تے $\cardeq{B}{D}$، تے $A \cap B =
+C \cap D = \emptyset$، تاں $\cardeq{A \cup B}{C \cup D}$۔
+\end{prob}
+
+\begin{prob}
+وکھاؤ کہ جے $A$ لامتناہی تے !!{enumerable} اے، تاں
+$\cardeq{A}{\Nat}$۔
+\end{prob}
+
+\end{document}
