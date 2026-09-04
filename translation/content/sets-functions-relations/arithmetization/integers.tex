@@ -1,0 +1,117 @@
+% Part: sets-functions-relations
+% Chapter: arithmetization
+% Section: From N to Z
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+
+\begin{document}
+
+\olfileid{sfr}{arith}{int}
+\olsection{$\Nat$ توں $\Int$ ول}
+
+ایتھے دو بنیادی گلّاں نیں:
+	\begin{enumerate}
+		\item ہر صحیح عدد نوں $n - m$ دی صورت وچ لکھیا جا سکدا اے، جتھے $n, m \in\Nat$۔
+		\item اظہار $n - m$ وچ کوڈ کیتی معلومات نوں ترتیب وار جوڑے $\tuple{n, m}$ نال وی اوہو جیہے طور تے کوڈ کیتا جا سکدا اے۔
+	\end{enumerate}
+اسی پہلے ای جان دے آں کہ قدرتی عدداں دیاں ترتیب وار جوڑیاں
+$\Nat^2$ دے !!{element}s نیں۔ تے اسی فرض کر رہے آں کہ ساڈے نوں
+$\Nat$ دی سمجھ اے۔ سو ایہناں دوہاں گلّاں دے آسرے اک سادی تجویز ایہ
+اے: \emph{صحیح عدداں نوں قدرتی عدداں دیاں ترتیب وار جوڑیاں سمجھ لئیے}۔
+
+اصل وچ ایہ تجویز حدوں ودھ سادی اے۔ ظاہر اے کہ اسی ایہ چاہنے آں کہ
+$0- 2 = 4 - 6$ ہووے۔ پر صاف اے کہ $\tuple{0, 2 }\neq \tuple{4, 6}$۔
+سو اسی صرف ایہ نہیں آکھ سکدے کہ $\Nat^2$ صحیح عدداں دا سیٹ اے۔
+
+پچھلی مشکل نوں عام کر کے، ساڈی لوڑ ایہ اے:
+	$$a - b = c - d \text{ اُدوں تے صرف اُدوں جدوں }a + d = c + b$$
+(ایہ صاف ہونا چاہیدا اے کہ صحیح عدداں نے \emph{ایویں ای ورتاؤ کرنا}
+اے: بس دونیں پاسیاں وچ $b$ تے $d$ جمع کرو۔) ایس ورتاؤ دی ضمانت دا
+سوکھا طریقہ ایہ اے کہ ترتیب وار جوڑیاں وچکار ہم ارزیت دا تعلق
+$\Intequiv$ ایویں تعریف کر دئیے:
+$$\tuple{ a, b } \Intequiv \tuple{c, d}\text{ اُدوں تے صرف اُدوں جدوں }a + d = c + b$$
+ہُن ساڈے نوں وکھاؤنا اے کہ ایہ ہم ارزیت دا تعلق اے۔
+\begin{prop} $\Intequiv$ ہم ارزیت دا تعلق اے۔
+\end{prop}
+	\begin{proof}
+	ساڈے نوں وکھاؤنا اے کہ $\Intequiv$ انعکاسی، متناظر تے متعدی اے۔
+
+	\emph{انعکاسیت:} صاف اے کہ $\tuple{a, b} \Intequiv \tuple{a, b}$،
+کیوں جو $a + b = b + a$۔
+
+	\emph{تناظر:} فرض کرو کہ $\tuple{a, b} \Intequiv \tuple{c, d}$، سو
+$a + d = c + b$۔ فیر $c + b = a + d$، تے ایس لئی
+$\tuple{c, d} \Intequiv \tuple{a, b}$۔
+
+	\emph{تعدیت:} فرض کرو کہ $\tuple{a, b} \Intequiv \tuple{c, d}\Intequiv
+\tuple{m, n}$۔ سو $a + d = c + b$ تے $c + n = m + d$۔ ایس لئی
+$a + d + c + n = c + b + m + d$، تے فیر $a + n = m + b$۔
+لہٰذا $\tuple{a, b } \Intequiv \tuple{m, n}$۔
+\end{proof}
+
+ہُن اسی ایس ہم ارزیت دے تعلق نوں ورت کے ہم ارزیت دے طبقے لے سکدے آں:
+
+\begin{defn}
+		صحیح عدد، قدرتی عدداں دیاں ترتیب وار جوڑیاں دے $\Intequiv$ تحت
+		ہم ارزیت دے طبقے نیں؛ یعنی $\Int = \equivclass{\Nat^2}{\Intequiv}$۔
+\end{defn}
+
+ایس مقرر کیتی تعریف بارے کئی وکھ وکھ \emph{فلسفیانہ} ردعمل ہو سکدے نیں۔
+پر اوہناں ردعملاں اُتے غور کرن توں پہلاں، کجھ فنی باریکیاں نال اگے
+ودھنا فائدے مند اے۔
+
+صحیح عدد کی نیں، ایہ دَس کے، ساڈے نوں اوہناں اُتے بنیادی فنکشن تے تعلق
+تعریف کرنے پین گے۔ آؤ $\equivrep{m, n}{\Intequiv}$ اوس ہم ارزیت دے
+طبقے لئی لکھئیے جیہڑا $\Intequiv$ تحت اے تے جیہدے وچ
+$\tuple{m, n}$، !!a{element} اے۔\footnote{نوٹ: \olref[sfr][rel][eqv]{def:equivalenceclass}
+وچ متعارف کرائی علامت ورت کے اسی ایسے شے لئی
+$\equivrep{\tuple{m,n}}{\Intequiv}$ لکھدے۔ پر اوہ پڑھنا ذرا اوکھا اے۔}
+یعنی:
+	$$\equivrep{m, n}{\Intequiv} = \Setabs{\tuple{a, b} \in \Nat^2}{\tuple{a, b}\Intequiv \tuple{m, n}}$$
+سو ہُن اسی کجھ تعریفاں پیش کردے آں:
+	\begin{align*}
+		\equivrep{a, b}{\Intequiv} + \equivrep{c, d}{\Intequiv} &= \equivrep{a + c, b + d}{\Intequiv}\\
+		\equivrep{a, b}{\Intequiv} \times \equivrep{c, d}{\Intequiv} &= \equivrep{a c + b  d, a  d + b c}{\Intequiv}\\
+		\equivrep{a, b}{\Intequiv} \leq \equivrep{c, d}{\Intequiv} &\text{ اُدوں تے صرف اُدوں جدوں }a + d \leq b + c
+	\end{align*}
+(عام رواج مطابق، میں ”$ab$“ نوں ”$(a \times b)$“ دا مختصر روپ سمجھ
+کے ورت ریا واں، صرف ایس لئی کہ مسلّمے پڑھنے سوکھے رہن۔)
+% PNBARI-001 ماخذ دی نحوی درستی: انگریزی عبارت وچ “using ab to stand for” والا to چھڈیا ہویا اے؛ پنجابی صرف فوراً واضح کیتی مراد بیان کردی اے۔
+ہُن ساڈے نوں یقین کرنا پینا اے کہ ایہ تعریفاں اوہو جیہا ورتاؤ کردیاں نیں
+جیہو جیہا اوہناں نوں \emph{کرنا چاہیدا اے}۔ ایس گل نوں پورا کھولنا تے
+جانچنا کافی لمّا کم اے؛ تفصیلاں نوں اسی \olref[check]{sec} ول بھیج دے
+آں۔ پر مختصر گل ایہ اے: سب کجھ ٹھیک کم کردا اے!
+
+اک آخری گل رہندی اے۔ اسی قدرتی عدداں نوں ورت کے صحیح عدد بنائے نیں۔
+پر ایس دا مطلب ایہ ہووے گا کہ قدرتی عدد \emph{خود صحیح عدد نہیں ہون گے}۔
+اسی \olref[ref]{sec} وچ ایس دی فلسفیانہ اہمیت ول واپس آواں گے۔ پر خالص
+فنی پاسے توں ساڈے نوں کوئی طریقہ چاہیدا اے جیہدے نال قدرتی عدداں نوں
+صحیح عدد \emph{سمجھ کے} ورت سکئیے۔ خیال بڑا سوکھا اے: ہر $n \in \Nat$
+لئی اسی بس مقرر کر دیندے آں کہ $n_\Int = \equivrep{n, 0}{\Intequiv}$۔
+ساڈے نوں تصدیق کرنی اے کہ ایہ تعریف درست ورتاؤ کردی اے، یعنی ہر
+$m, n \in \Nat$ لئی
+\begin{align*}
+	(m + n)_\Int &= m_\Int + n_\Int\\
+	(m \times n)_\Int &= m_\Int \times n_\Int\\
+	m \leq n &\liff m_\Int \leq n_\Int
+\end{align*}
+پر ایہ سب کافی سیدھا اے۔ مثال لئی، ایہ وکھاؤن واسطے کہ ایہناں وچوں
+دوجی شرط پوری ہوندی اے، اسی قدرتی عدداں دے ورتاؤ نوں ورت کے ایویں
+دلیل دے سکدے آں:
+%\begin{proof}
+%	قدرتی عدداں دے ورتاؤ نوں ورتدے ہویاں، صاف اے:
+	\begin{align*}
+%		(m + n)_\Int  = \equivrep{m + n, 0}{\Intequiv} = \equivrep{m + n, 0 + 0}{\Intequiv} = \equivrep{m, 0}{\Intequiv} + \equivrep{n, 0}{\Intequiv} = m_\Int + n_\Int\\
+		(m \times n)_\Int  &= \equivrep{m \times n, 0}{\Intequiv} \\
+		&= \equivrep{m \times n + 0 \times 0, m \times 0 + 0 \times n}{\Intequiv} \\
+		&= \equivrep{m, 0}{\Intequiv} \times \equivrep{n, 0}{\Intequiv} \\
+		&= m_\Int \times n_\Int
+	\end{align*}
+%\end{proof}
+باقی دو شرطاں دی تصدیق مشق لئی چھڈدے آں۔
+\begin{prob}
+وکھاؤ کہ $(m + n)_\Int = m_\Int + n_\Int$ تے
+$m \leq n \liff m_\Int \leq n_\Int$، ہر $m, n \in \Nat$ لئی۔
+\end{prob}
+\end{document}

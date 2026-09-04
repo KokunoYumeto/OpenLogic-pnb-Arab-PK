@@ -1,0 +1,52 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0018",
+  "unit_ids": [
+    "OLP-0041",
+    "OLP-0042"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T22:56:35.0540555Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0041",
+      "source_path": "content/sets-functions-relations/arithmetization/arithmetization.tex",
+      "source_bytes": 549,
+      "source_sha256": "66101685650a7c53c6bdd3913ec5211699b0c747857882953e3413ef5f305331",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0042",
+      "source_path": "content/sets-functions-relations/arithmetization/integers.tex",
+      "source_bytes": 5572,
+      "source_sha256": "f93b142146b9527128437355d7e3922204eede2ca9c75a941d3c09a9a848ce77",
+      "read_in_full": true
+    }
+  ],
+  "shared_source_audit_status": {
+    "audit_id": "OLSIZ-20260904",
+    "relevant_findings_for_these_units": [],
+    "all_ten_findings_already_applied_through_OLP_0040": true,
+    "retracted_false_alert_OLSIZ_011_remains_excluded": true
+  },
+  "consultation_record": "2026-09-04: before drafting BATCH-0018, the current owner read the complete arithmetization.tex and integers.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The frozen source was checked directly for the ordered-pair quotient construction, equivalence-relation proof, induced arithmetic/order operations and natural-number embedding. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, reason-giving connectives and explanatory syntax only. It does not attest arithmetization, number-system construction, integer quotient, equivalence-class arithmetic or embedding terminology; these remain reversible definition-based and scholarly bridges."
+}
