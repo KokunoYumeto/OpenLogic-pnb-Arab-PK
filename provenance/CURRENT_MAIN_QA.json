@@ -4,57 +4,57 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 36,
-  "translated_range": "OLP-0001 through OLP-0036, contiguous",
-  "remaining_units": 686,
-  "aligned_blocks": 631,
-  "translated_linguistic_blocks": 419,
-  "unchanged_formal_blocks": 212,
+  "translated_and_source_aligned_units": 38,
+  "translated_range": "OLP-0001 through OLP-0038, contiguous",
+  "remaining_units": 684,
+  "aligned_blocks": 661,
+  "translated_linguistic_blocks": 441,
+  "unchanged_formal_blocks": 220,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
-  "current_chapter_progress": "Size of Sets through equinumerosity, cardinal comparison and Cantor's theorem, OLP-0036",
+  "current_chapter_progress": "Size of Sets through Schroder-Bernstein and the alternate set-theoretic enumeration presentation, OLP-0038",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 36,
-    "sha256": "abd200b8eebe8d51e98acda8b8c86a0495b477c04053a0632690829638de94a7",
+    "units": 38,
+    "sha256": "2dfa8980e476278b3d0088d726b1898eb4507eea7014415e9ca7352c883ef0b5",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0036.json",
-    "sha256": "136b6e2dbf9e67e686e37261cba072ba05762af33444e40afaceb225da58cf84",
+    "file": "AUDIT-REGRESSION-0038.json",
+    "sha256": "165264012be794fa614a6dcec70af7d0a89744d7f47344f6bfc1cc1a4acd2336",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 631,
-    "sha256": "bb238a550ae37805ae778aba3d1be06ce76e9dedd152a2564f4653a846875763",
+    "rows": 661,
+    "sha256": "f40ce39e54f6e84f5a7c8ec58c4844ab401c42edc5f27bf89fed32e3f5e018fe",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 42,
-    "sha256": "49581fc13421e352f90667043cf534ef4c03fe9a01ffdcdd317f0f49f7ae64b8"
+    "entries": 44,
+    "sha256": "b1e0a4954c46fbebcaba7c990757afe24131c44f3a8430c9b6a8817dd1d674b7"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 62,
-    "terminology_entries": 42,
-    "source_fidelity_entries": 20,
-    "sha256": "e82822f2fe84c5ceec308c3a9b4894e56b0d0c8243b37a48ea73d24df554fde2"
+    "entries": 65,
+    "terminology_entries": 44,
+    "source_fidelity_entries": 21,
+    "sha256": "f99a512db017aa891e84ca884c3c25d62377f635ccd95b8469f434f19f4eedf1"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 14,
-    "applied_and_audited": 14,
+    "entries": 15,
+    "applied_and_audited": 15,
     "pending_until_unit_translation": 0,
-    "sha256": "7be9d581fe53e5113e2a825ace85f2dca0db82ce9f1208d9598cbda9c0391c8f"
+    "sha256": "7bc50eecece8c73ceb0b68b444bb1f1d3d61e55ead816a304da2faf882fb9401"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",

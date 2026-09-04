@@ -1,0 +1,53 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0016",
+  "unit_ids": [
+    "OLP-0037",
+    "OLP-0038"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T22:18:40.5367850Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0037",
+      "source_path": "content/sets-functions-relations/size-of-sets/schroder-bernstein.tex",
+      "source_sha256": "7b99b3e032e24e425383734ce80ad9a5cc37d018c09205e02f37b927d50bb56a",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0038",
+      "source_path": "content/sets-functions-relations/size-of-sets/enumerability-alt.tex",
+      "source_sha256": "9a9060e57403586c0f8a81353c1d9c81049869e486b4dc032fbf32542023ba8f",
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issue_reviewed": [
+    {
+      "finding_id": "PNBSIZ-003",
+      "unit_id": "OLP-0038",
+      "source_locator": "opening prose after editorial, lines 21-32",
+      "finding": "The phrase 'We can specify finite set is by' is grammatically malformed; the displayed enumeration and following sentences determine 'We can specify a finite set by enumerating its elements.'",
+      "required_handling": "Render the contextually fixed grammatical meaning, add an adjacent Punjabi note, preserve the display and all mathematical content, and record the lane-local correction."
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0016, the current owner read the complete schroder-bernstein.tex and enumerability-alt.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The obvious PNBSIZ-003 grammar defect was checked against its immediately following display and explanation before translation. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest Schroder-Bernstein, mutual injection, set-theoretic enumeration, initial segment or zero-based indexing terminology; these remain reversible definition-based/scholarly bridges."
+}
