@@ -15,5 +15,7 @@ Accepted artifacts:
 - `OpenLogic-Sets-pnb-Arab-PK-naskh-v0.1.0.pdf` - 127664 bytes - SHA-256 `b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc`
 - `OpenLogic-Sets-pnb-Arab-PK-nastaliq-v0.1.0.pdf` - 183163 bytes - SHA-256 `c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50`
 - `OpenLogic-pnb-Arab-PK-editable-v0.1.0.zip` - 4464941 bytes - SHA-256 `bc32017d02d7586413d4eaa918c6cf262487c43bf18dbadecd151029f98d95ca`
+- `TERMINOLOGY_REVIEW_LOG-v0.1.0.jsonl` - 481278 bytes - SHA-256 `4fe09f91fe002f9d846ccf16f978df278fb2ed006f8f31b0ecc8c65b0300ae52`
+- `SOURCE_CORRECTIONS-v0.1.0.jsonl` - 4999 bytes - SHA-256 `cfaf8ab95dc30da707bc47fd0c20f53f326fcd3ec871a8e1667f61f9eaa0ea3d`
 
-`SHA256SUMS.txt` records these identities. The portable bundled-font generator is included but honestly marked unbuilt; the released PDFs come from the preserved reference-v3 inputs and toolchain.
+`SHA256SUMS.txt` records the two PDFs and source ZIP; `REVIEW_LOG_SHA256SUMS.txt` records the two directly downloadable review logs. The portable bundled-font generator is included but honestly marked unbuilt; the released PDFs come from the preserved reference-v3 inputs and toolchain.
