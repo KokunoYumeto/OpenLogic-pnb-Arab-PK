@@ -6,7 +6,7 @@ Independent machine translation and layout adaptation by Codex of **The Open Log
 
 ## Current scope
 
-The first reader tranche is the **complete Sets chapter**: seven source units, six sections, three original diagrams, definitions, proofs and exercises. It is not the whole book. The frozen source inventory contains 722 units; 21 units have source-aligned translations, and 701 still remain. This includes the complete Relations chapter's source translation, whose reader is not yet built. Other translated units in the editable tree are work in progress and are not included in this chapter PDF's layout acceptance.
+The v0.1.0 reader tranche is the **complete Sets chapter**: seven source units, six sections, three original diagrams, definitions, proofs and exercises. It is not the whole book. That release snapshot contains 21 source-aligned translations. Current `main` contains 26 reviewed source-aligned translations, leaving 696 of the frozen 722-unit inventory; the Relations and Functions chapters now have complete source translations. Their integrated readers are not yet built, and none of these later sources is included in the Sets PDF's layout acceptance. See `provenance/CURRENT_MAIN_QA.json` for the branch/release distinction.
 
 The chapter covers extensionality, subsets and power sets, important sets, unions and intersections, ordered pairs and products, and Russell's paradox. Both Naskh and Nastaliq reading profiles are provided. Punjabi prose is right-to-left; mathematical expressions preserve left-to-right order.
 

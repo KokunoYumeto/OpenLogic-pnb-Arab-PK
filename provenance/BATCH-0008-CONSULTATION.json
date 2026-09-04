@@ -1,0 +1,44 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0008",
+  "unit_ids": [
+    "OLP-0022",
+    "OLP-0023"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T17:15:56.6464102Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0022",
+      "source_path": "content/sets-functions-relations/functions/function-kinds.tex",
+      "source_sha256": "4d30902b7c66720afabb8b079294106a685aefba0dc02ca10d9921bb554db0ac",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0023",
+      "source_path": "content/sets-functions-relations/functions/functions-relations.tex",
+      "source_sha256": "e2e46c0270c44b6f54861a4565f3829b1b5f91a7f72dca84046361e5abf622c3",
+      "read_in_full": true
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0008, the current owner read both complete originals and freshly re-read the full exact P007 sequencing and P015 causal native-prose paragraphs through the hash-checking reader. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, causal explanation and grammatical framing only. It does not attest specialized function taxonomy, function-graph or restriction terminology; those labels remain explicit reversible definition-based/English-loan scholarly bridges."
+}

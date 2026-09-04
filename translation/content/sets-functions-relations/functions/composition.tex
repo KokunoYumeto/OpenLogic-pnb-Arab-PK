@@ -1,0 +1,70 @@
+% Part: sets-functions-relations
+% Chapter: functions
+% Section: composition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{fun}{cmp}
+\olsection{فنکشناں دی ترکیب}
+
+\begin{explain}
+\oliflabeldef{sfr:fun:inv:sec}{اسی \olref[inv]{sec} وچ ویکھیا سی
+کہ اُلٹ~$f^{-1}$، !!a{bijection}~$f$ دا، آپ وی اک فنکشن اے۔}{}
+فنکشناں اُتے ہور عمل ترکیب اے: اسی دو فنکشناں، $f$ تے~$g$، نوں
+ترتیب نال لاگو کرکے نواں فنکشن تعریف کر سکدے آں، یعنی پہلے $f$ تے
+فیر~$g$ لاگو کرکے۔ بے شک، ایہ صرف اوس ویلے ممکن اے جدوں حاصل قدراں
+دا سیٹ تے دائرۂ تعریف میل کھاندے ہون، یعنی~$f$ دا حاصل قدراں دا سیٹ
+~$g$ دے دائرۂ تعریف دا ذیلی سیٹ ہونا چاہیدا اے۔
+\oliflabeldef{sfr:rel:ops:sec}{فنکشناں اُتے ایہ عمل، تعلقاں اُتے
+\olref[rel][ops]{sec} والے نسبتی حاصل ضرب دے عمل دا مماثل اے۔}{}
+
+اک خاکہ ترکیب دا خیال سمجھاؤن وچ مدد دے سکدا اے۔
+\olref{fig:composition} وچ اسی دو فنکشن $f \colon A \to B$ تے
+$g \colon B \to C$، تے اوہناں دی ترکیب~$(\comp{f}{g})$ وکھاؤندے
+آں۔ فنکشن $(\comp{f}{g}) \colon A \to C$،~$A$ دے ہر !!{element}
+نوں~$C$ دے !!a{element} نال جوڑدا اے۔~$C$ دے کیہڑے !!{element}
+نال~$A$ دا !!a{element} جوڑیا جاندا اے، ایہ اسی ایویں طے کردے آں:
+انپٹ $x \in A$ دتا ہووے، تاں پہلے فنکشن $f$ نوں~$x$ اُتے لاگو
+کرو، جیہڑا کوئی $f(x) = y \in B$ آؤٹ پٹ دے گا؛ فیر فنکشن $g$ نوں
+~$y$ اُتے لاگو کرو، جیہڑا کوئی $g(f(x)) = g(y) = z \in C$ آؤٹ پٹ
+دے گا۔
+\begin{figure}
+  \olasset[2\olphotowidth]{assets/diagrams/composition.tikz}
+  \caption{ترکیب $g \circ f$، دو فنکشناں $f$ تے~$g$ دی۔}
+  \ollabel{fig:composition}
+\end{figure}
+\end{explain}
+
+\begin{defn}[ترکیب]
+من لو کہ $f\colon A \to B$ تے $g\colon B \to C$ فنکشن نیں۔
+~$f$ نال~$g$ دی \emph{ترکیب} $\comp{f}{g} \colon A \to C$ اے،
+جتھے $(\comp{f}{g})(x) = g(f(x))$۔
+\end{defn}
+
+\begin{ex}
+فنکشناں $f(x) = x + 1$ تے $g(x) = 2x$ اُتے غور کرو۔ کیوں جے
+$(\comp{f}{g})(x) = g(f(x))$، ہر انپٹ~$x$ لئی تہانوں پہلے اوہدا
+جانشین لینا پئے گا، فیر نتیجے نوں دو نال ضرب دینا پئے گا۔ سو اوہناں
+دی ترکیب $(\comp{f}{g})(x) = 2(x+1)$ نال دتی جاندی اے۔
+\end{ex}
+
+\begin{prob}
+وکھاؤ کہ جے $f \colon A \to B$ تے $g \colon B \to C$ دونیں
+!!{injective} ہون، تاں $\comp{f}{g}\colon A \to C$ وی
+!!{injective} اے۔
+\end{prob}
+
+\begin{prob}
+وکھاؤ کہ جے $f \colon A \to B$ تے $g \colon B \to C$ دونیں
+!!{surjective} ہون، تاں $\comp{f}{g}\colon A \to C$ وی
+!!{surjective} اے۔
+\end{prob}
+
+\begin{prob}
+من لو کہ $f \colon A \to B$ تے $g \colon B \to C$۔ وکھاؤ کہ
+$\comp{f}{g}$ دا گراف $R_f \mid R_g$ اے۔
+\end{prob}
+
+\end{document}

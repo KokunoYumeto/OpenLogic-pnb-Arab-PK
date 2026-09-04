@@ -1,0 +1,106 @@
+% Part: sets-functions-relations
+% Chapter: functions
+% Section: functions-relations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+
+\begin{document}
+
+\olfileid{sfr}{fun}{rel}
+
+\olsection{فنکشن تعلقاں دے طور تے}
+
+\begin{explain}
+اوہ فنکشن جیہڑا~$A$ دے !!{element}s نوں~$B$ دے !!{element}s نال
+جوڑدا اے، ظاہر اے کہ $A$ تے~$B$ دے وچکار اک تعلق تعریف کردا اے:
+اوہی تعلق جیہڑا $x$ تے $y$ دے وچکار عین اوس ویلے قائم اے جدوں
+$f(x) = y$ ہووے۔ اصل وچ، جے مثال لئی ساڈی دلچسپی ریاضی دے بنیادی
+اجزا گھٹاؤن وچ ہووے، تاں اسی فنکشن~$f$ نوں ایس تعلق نال، یعنی جوڑیاں
+دے اک سیٹ نال، \emph{اکو سمجھ} وی سکدے آں۔ فیر ایہ سوال پیدا ہوندا
+اے: کیہڑے تعلق ایس طریقے نال فنکشن تعریف کردے نیں؟
+\end{explain}
+
+\begin{defn}[فنکشن دا گراف] من لو کہ $f\colon A \to B$ اک فنکشن اے۔
+فنکشن~$f$ دا \emph{گراف} اوہ تعلق $R_f \subseteq A \times B$ اے
+جیہڑا ایویں تعریف ہوندا اے:
+\[
+R_f = \Setabs{\tuple{x,y}}{f(x) = y}.
+\]
+\end{defn}
+
+\begin{explain}
+عنصراں نال تعیّن دے اصول کرکے فنکشن دا گراف اکلوتے طور تے طے ہوندا
+اے۔ ہور ایہ کہ، سیٹاں اُتے عنصراں نال تعیّن دا اصول فنکشناں لئی
+ضمنی اصول نوں فوراً ثابت کردا اے: جے $f$ تے~$g$ دا دائرۂ تعریف تے
+ہدف سیٹ سانجھا ہووے، تاں ہر قدر اُتے متفق ہون دی صورت وچ اوہ اکو
+فنکشن نیں۔
+
+ایسے طرح، جے کوئی تعلق ``فنکشنی'' ہووے، تاں اوہ کسے فنکشن دا گراف اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:graph-function}
+من لو کہ $R \subseteq A \times B$ ایس طرح اے کہ:
+\begin{enumerate}
+\item جے $Rxy$ تے $Rxz$، تاں $y = z$؛ تے
+\item ہر $x \in A$ لئی کوئی $y \in B$ اے جیہدے لئی $\tuple{x,
+y} \in R$۔
+\end{enumerate}
+فیر $R$ اوس فنکشن $f\colon A \to B$ دا گراف اے جیہڑا
+$f(x) = y$ عین اوس ویلے جدوں $Rxy$ راہیں تعریف ہوندا اے۔
+\end{prop}
+
+\begin{proof}
+من لو کہ کوئی $y$ اے جیہدے لئی $Rxy$۔ جے کوئی ہور $z \neq y$ وی
+ہوندا جیہدے لئی $Rxz$، تاں~$R$ اُتے شرط دی خلاف ورزی ہوندی۔ ایس
+لئی جے کوئی $y$ اے جیہدے لئی $Rxy$، تاں ایہ $y$ اکلوتا اے، تے ایس
+واسطے $f$ صحیح طور تے تعریف شدہ اے۔ ظاہر اے کہ $R_f = R$۔
+\end{proof}
+
+\begin{explain}
+ہر فنکشن $f\colon A \to B$ دا اک گراف ہوندا اے، یعنی دائرۂ تعریف
+تے ہدف سیٹ دے وچکار اک تعلق (برابر طور تے $A \times B$ دا اک ذیلی سیٹ) جیہڑا
+$f(x) = y$ راہیں تعریف ہوندا اے۔ دوجے پاسے، ہر تعلق~$R
+\subseteq A \times B$ جیہدے وچ \olref{prop:graph-function} والیاں
+خاصیتاں ہون، اک فنکشن~$f \colon A \to B$ دا گراف اے۔ فنکشناں تے
+اوہناں دے گرافاں دے ایس نیڑے رشتے کرکے اسی فنکشن نوں بس اوہدا گراف
+سمجھ سکدے آں۔ ہور لفظاں وچ، فنکشناں نوں کجھ مخصوص تعلقاں، یعنی
+ٹپلاں دے کجھ مخصوص سیٹاں نال شناخت کیتا جا سکدا اے۔
+% Source correction OLFUN-004: relation between A and B / subset of A times B, not a relation on A times B.
+\oliflabeldef{sfr:rel:ref:sec}{پر ایہ یاد رکھو کہ ایس ``شناخت'' دی
+روح \olref[sfr][rel][ref]{sec} والی اے: ایہ فنکشناں دی مابعد الطبیعی
+حقیقت بارے دعویٰ نہیں، بلکہ ایہ مشاہدہ اے کہ فنکشناں نوں کجھ سیٹاں
+دے طور تے \emph{ورتنا} سوکھا اے۔ ایس سہولت دی اک وجہ ایہ اے کہ }{}
+ہُن اسی فنکشناں اُتے وی اوہو جہے عمل کر سکدے آں جیہڑے اسی تعلقاں
+اُتے کیتے سن (ویکھو \olref[sfr][rel][ops]{sec})۔ خاص طور تے:
+\end{explain}
+
+\begin{defn}\ollabel{defn:funimage}
+من لو کہ $f \colon A \to B$ اک فنکشن اے تے $C\subseteq A$۔
+
+فنکشن~$f$ دی~$C$ تک \emph{تحدید} اوہ
+فنکشن~$\funrestrictionto{f}{C}\colon C \to B$ اے جیہڑا
+$(\funrestrictionto{f}{C})(x) = f(x)$ راہیں ہر $x \in C$ لئی
+تعریف ہوندا اے۔ ہور لفظاں وچ، $\funrestrictionto{f}{C} =
+\Setabs{\tuple{x, y} \in R_f}{x \in C}$۔
+
+فنکشن~$f$ دا~$C$ اُتے \emph{اطلاق} $\funimage{f}{C} =
+\Setabs{f(x)}{x \in C}$ اے۔ اسی ایہنوں~$C$ دا~$f$ دے تحت
+\emph{عکس} وی آکھدے آں۔
+\end{defn}
+
+\begin{explain}
+ایہناں تعریفاں توں نکلدا اے کہ $\ran{f} =
+\funimage{f}{\dom{f}}$، ہر فنکشن~$f$ لئی۔
+\oliflabeldef{sfr:rel:ops:sec}{ایہ خیال تعلقاں نال فنکشناں دی شناخت
+تے \olref[sfr][rel][ops]{sec} دیاں تعریفاں نال اوہو طرح جُڑدے نیں
+جِویں توقع اے۔ پر اتھے فنکشن دی تحدید صرف دائرۂ تعریف نوں ذیلی سیٹ
+تک گھٹاؤندی اے تے ہدف سیٹ نوں اوہو رکھدی اے؛ ایس لئی ایہ پہلے
+دتے یکساں سیٹ اُتے تعلق دی دو پاسیاں والی تحدید دا حرف بہ حرف
+اوہی عمل نہیں۔ دوجے دو عمل---اُلٹے تے نسبتی حاصل ضرب---لئی کجھ ہور
+تفصیل دی لوڑ اے۔ اسی اوہ \olref[inv]{sec} تے
+\olref[cmp]{sec} وچ دیواں گے۔}{}
+% Source correction OLFUN-005: domain-only function restriction; earlier homogeneous relation restriction is two-sided.
+\end{explain}
+
+\end{document}

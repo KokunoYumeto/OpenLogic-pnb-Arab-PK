@@ -1,0 +1,121 @@
+% Part: sets-functions-relations
+% Chapter: functions
+% Section: kinds
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{fun}{kin}
+\olsection{فنکشناں دیاں قسماں}
+
+\begin{explain}
+ساڈے کم آوے گا جے اسی عام طور تے ملن والیاں فنکشناں دیاں کجھ
+قسماں دی درجہ بندی متعارف کرا دیئے۔
+
+شروع وچ اسی اوہناں فنکشناں اُتے غور کر سکدے آں جنہاں دے ہدف سیٹ
+دا ہر رکن فنکشن دی اک قدر ہوندا اے۔ ایہو جہے فنکشناں نوں
+!!{surjective} آکھیا جاندا اے، تے
+\olref{fig:surjective} وچ دتے خاکے وانگ وکھایا جا سکدا اے۔
+
+\begin{figure}
+  \olasset{assets/diagrams/surjective.tikz}
+  \caption{!!^a{surjective} فنکشن دے ہدف سیٹ دا ہر !!{element} اوہدی
+    اک قدر ہوندا اے۔}
+  \ollabel{fig:surjective}
+\end{figure}
+\end{explain}
+
+\begin{defn}[!!^{surjective} فنکشن]
+اک فنکشن $f \colon A \rightarrow B$ \emph{!!{surjective}} عین اوس
+ویلے اے جدوں $B$ وی~$f$ دا حاصل قدراں دا سیٹ ہووے، یعنی ہر
+$y \in B$ لئی گھٹ توں گھٹ اک $x \in A$ ہووے جیہدے لئی~$f(x) = y$؛
+علامتاں وچ:
+\[
+  (\forall y \in B)(\exists x \in A)f(x) = y.
+\]
+اسی ایہو جہے فنکشن نوں $A$ توں $B$ ول !!a{surjection} آکھدے آں۔
+\end{defn}
+
+\begin{explain}
+جے تسی وکھاؤنا چاہندے او کہ $f$ اک !!a{surjection} اے، تاں ایہ
+وکھاؤنا پئے گا کہ $f$ دے ہدف سیٹ دی ہر شے، $f(x)$ دی قدر اے، کسے
+انپٹ $x$ لئی۔
+
+خیال رکھو کہ ہر فنکشن اک !!a{surjection} \emph{پیدا کردا} اے۔ آخر،
+دتے ہوئے فنکشن $f \colon A \to B$ لئی $f' \colon A \to \ran{f}$ نوں
+$f'(x) = f(x)$ راہیں تعریف کرو۔ کیوں جے $\ran{f}$ نوں
+\emph{تعریف ای} $\Setabs{f(x) \in B}{x \in A}$ کیتا گیا اے، ایس
+لئی فنکشن $f'$ دا !!a{surjection} ہونا یقینی اے۔
+\end{explain}
+
+\begin{explain}
+ہُن ہر فنکشن ہر ممکن انپٹ نوں اک اکلوتے آؤٹ پٹ نال جوڑدا اے۔ پر
+ایہو جہے فنکشن وی نیں جیہڑے دو وکھ وکھ انپٹاں نوں کدے اکو آؤٹ پٹ
+نال نہیں جوڑدے۔ ایہو جہے فنکشناں نوں !!{injective} آکھیا جاندا اے،
+تے \olref{fig:injective} وچ دتے خاکے وانگ وکھایا جا سکدا اے۔
+\begin{figure}
+  \olasset{assets/diagrams/injective.tikz}
+  \caption{!!^a{injective} فنکشن دو وکھ وکھ دلیلاں نوں کدے اکو قدر
+    نال نہیں جوڑدا۔}
+  \ollabel{fig:injective}
+\end{figure}
+\end{explain}
+
+\begin{defn}[!!^{injective} فنکشن]
+اک فنکشن $f \colon A \rightarrow B$ \emph{!!{injective}} عین اوس
+ویلے اے جدوں ہر $y \in B$ لئی ودھ توں ودھ اک $x \in A$ ہووے جیہدے
+لئی~$f(x) = y$۔ اسی ایہو جہے فنکشن نوں $A$ توں~$B$ ول
+!!a{injection} آکھدے آں۔
+\end{defn}
+
+\begin{explain}
+جے تسی وکھاؤنا چاہندے او کہ $f$ اک !!a{injection} اے، تاں ایہ
+وکھاؤنا پئے گا کہ کنہاں وی !!{element}s $x$ تے $y$ لئی، جیہڑے
+$f$ دے دائرۂ تعریف وچ نیں، جے $f(x)=f(y)$ ہووے، تاں $x=y$ ہووے۔
+\end{explain}
+
+\begin{ex}
+مستقل فنکشن $f\colon \Nat \to \Nat$، جیہڑا $f(x) = 1$ نال دتا
+گیا اے، نہ !!{injective} اے، نہ !!{surjective}۔
+
+شناختی فنکشن $f\colon \Nat \to \Nat$، جیہڑا $f(x) = x$ نال دتا
+گیا اے، !!{injective} وی اے تے !!{surjective} وی۔
+
+جانشین فنکشن $f \colon \Nat \to \Nat$، جیہڑا $f(x) = x+1$ نال
+دتا گیا اے، !!{injective} اے پر !!{surjective} نہیں۔
+
+ایویں تعریف کیتا فنکشن $f \colon \Nat \to \Nat$:
+\[
+  f(x) =
+  \begin{cases}
+    \frac{x}{2} & \text{جے $x$ جفت اے} \\
+    \frac{x+1}{2} & \text{جے $x$ طاق اے۔}
+  \end{cases}
+\]
+!!{surjective} اے، پر !!{injective} نہیں۔
+\end{ex}
+
+\begin{explain}
+اکثر سانوں اوہناں فنکشناں اُتے غور کرنا ہوندا اے جیہڑے
+!!{injective} وی ہون تے !!{surjective} وی۔ اسی ایہو جہے فنکشناں نوں
+!!{bijective} آکھدے آں۔ اوہ \olref{fig:bijective} وچ وکھائے فنکشن
+وانگ ہوندے نیں۔ !!^{bijection}s نوں کدی کدی
+\emph{اک بہ اک مطابقتاں} وی آکھیا جاندا اے، کیوں جے اوہ ہدف سیٹ دے
+عنصراں نوں دائرۂ تعریف دے عنصراں نال اکلوتے طور تے جوڑدے نیں۔
+\begin{figure}
+  \olasset{assets/diagrams/bijective.tikz}
+  \caption{!!^a{bijective} فنکشن ہدف سیٹ دے عنصراں نوں دائرۂ تعریف
+    دے عنصراں نال اکلوتے طور تے جوڑدا اے۔}
+  \ollabel{fig:bijective}
+\end{figure}
+\end{explain}
+
+\begin{defn}[!!^{bijection}]
+اک فنکشن $f \colon A \to B$ \emph{!!{bijective}} عین اوس ویلے اے
+جدوں اوہ !!{surjective} وی ہووے تے !!{injective} وی۔ اسی ایہو جہے
+فنکشن نوں $A$ توں~$B$ ول (یا $A$ تے~$B$ دے وچکار) !!a{bijection}
+آکھدے آں۔
+\end{defn}
+
+\end{document}

@@ -1,0 +1,21 @@
+# BATCH-0009 source-aligned review
+
+OLP-0024 inverses.tex: source SHA-256 `96e36d8cd8dc4ec0e73e9507147ecfe33d7e4f368ecf46de92efb423a7d409c1`; target 9520 bytes, SHA-256 `6de52d3f73669eb0f3e24b3ef2e9c7d70206a58bfa511aa32dde183e2678e525`. OLP-0025 composition.tex: source SHA-256 `1733e9f6b7f1009f7d36cb47b3f11ec8cccc28ef173a379e4d69c3de352fcf28`; target 3318 bytes, SHA-256 `d0e96aa642287db31273b141eee8d52a6f361afcae52a1d7f970019b7f637de6`. Respectively 28 and 12 aligned blocks. Strict audit `work/batch-0009-audit.json`, SHA-256 `78e3dfd86bb8869c1b9a423fb2b250814c520b00fa3f590d0b1da6ae62b36f43`, passes every check. The first strict run rejected formal-island reorderings and a malformed piecewise row separator; all exact sites were corrected without weakening the checker.
+
+Current-owner semantic and reverse-paraphrase review:
+
+- Reversing a mapping depends on its domain and codomain: integer predecessor undoes integer successor, but predecessor is not a natural-to-natural function at zero. A two-sided inverse satisfies both `f(g(y))=y` and `g(f(x))=x`; it is not merely a reciprocal or a reversed arrow.
+- The candidate inverse sends a value `y` to the unique `x` with `f(x)=y`. Injectivity provides uniqueness, surjectivity provides existence for every codomain value, and both are needed for a two-sided inverse.
+- A left inverse satisfies `g(f(x))=x` and therefore undoes `f` after `f` has acted. A right inverse satisfies `f(h(y))=y`, so `f` undoes `h`. The exercises asking for the converse injective/surjective implications are retained.
+- The left-inverse construction sends attained values to their unique preimages and sends unattained codomain values to one fixed domain element. The corrected nonempty-domain hypothesis is precisely what permits choosing that fixed element. All case formulas and quantified domains remain in source order.
+- The right-inverse construction chooses one preimage for each codomain element. The full footnote retains the general dependence on the Axiom of Choice, the finite/natural and bijective special cases, and the fact that singleton fibers require no choice.
+- A bijection has a single two-sided inverse. The existence exercise, uniqueness via equality of a left and a right inverse, and the mild notation abuse for the inverse of the induced surjection onto the range are all preserved.
+- Function composition applies `f` first and then `g`, yielding `g(f(x))`. It is defined when the range of `f` is contained in the domain of `g`, and the diagram narrative tracks `x` in `A` through `y` in `B` to `z` in `C`.
+- Composition of injective functions is posed as injective; composition of surjective functions is posed as surjective. The final exercise identifies the function graph with the relation relative product in the same `f`-then-`g` order retained in OLP-0019.
+
+Source-fidelity and asset decisions:
+
+- OLFUN-001 is applied in OLP-0024 lines 62-76. The source's injection-implies-left-inverse proposition is false for an empty domain and nonempty codomain. The target adds the simple sufficient hypothesis that the domain is nonempty and the proof explicitly uses it before selecting `a ∈ A`. The exact existence condition—`A` nonempty or `B` empty—and the empty-to-singleton counterexample are recorded in `SOURCE_CORRECTIONS.jsonl`. An adjacent stable-ID comment discloses the repair; frozen source bytes and every source formula remain unchanged.
+- `composition.tikz` was read completely: it contains only geometry/formal drawing commands and no ordinary English labels. The original asset is 13,841 bytes, SHA-256 `d712231c90796b4b2987506502723cd756fa9c5b7f4111e65284d107a79d2d4b`; its path and import width remain unchanged. No Functions reader has yet been rendered or visually accepted.
+
+PNB-T026/T027 are reversible, definition-led scholarly bridges. PNB-P007/P015 were freshly read before drafting and support Punjabi prose sequencing only; no specialized inverse/composition attestation or dictionary acquisition is claimed. Source comments, identifiers, macros and `!!{...}` lexical tokens are documented non-prose exceptions. No independent human review, reader acceptance or full-edition completion is claimed. Source translation and semantic review PASS.

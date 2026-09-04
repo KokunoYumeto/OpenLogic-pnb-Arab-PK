@@ -1,0 +1,50 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0009",
+  "unit_ids": [
+    "OLP-0024",
+    "OLP-0025"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T18:04:07.1910300Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0024",
+      "source_path": "content/sets-functions-relations/functions/inverses.tex",
+      "source_sha256": "96e36d8cd8dc4ec0e73e9507147ecfe33d7e4f368ecf46de92efb423a7d409c1",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0025",
+      "source_path": "content/sets-functions-relations/functions/composition.tex",
+      "source_sha256": "1733e9f6b7f1009f7d36cb47b3f11ec8cccc28ef173a379e4d69c3de352fcf28",
+      "read_in_full": true
+    }
+  ],
+  "source_audit": {
+    "audit_id": "OLFUN-20260904",
+    "findings_sha256": "eee57facbea44f65a19a816fb12cbc86be0b18e21dcffeeed943f52f7e332960",
+    "relevant_finding": "OLFUN-001",
+    "current_owner_read_relevant_record": true
+  },
+  "consultation_record": "2026-09-04: before drafting BATCH-0009, the current owner read the complete inverses.tex and composition.tex originals, freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader, and read the primary OLFUN-001 finding and counterexample. No inherited linguistic consultation or QA claim.",
+  "limits": "The canon supports Punjabi sequencing and explanatory syntax only. It does not attest inverse-function, one-sided-inverse, Choice or composition terminology; those remain explicit reversible definition-based/scholarly bridges."
+}

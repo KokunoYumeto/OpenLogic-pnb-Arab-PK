@@ -1,0 +1,37 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0010",
+  "unit_ids": [
+    "OLP-0026"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T18:10:43.0715798Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0026",
+      "source_path": "content/sets-functions-relations/functions/partial-functions.tex",
+      "source_sha256": "0f638e25ad1f565b9256846fb8b293c03663072b69a2adc5f2cfea1e94d00933",
+      "read_in_full": true
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0010, the current owner read the complete partial-functions.tex original and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. No inherited consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing and explanatory syntax only. It does not attest partial/total function, definedness or serial-relation terminology; these remain reversible definition-based/scholarly bridges."
+}

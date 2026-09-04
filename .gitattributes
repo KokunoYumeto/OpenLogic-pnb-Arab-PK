@@ -1,3 +1,9 @@
 # This frozen manifest is a cryptographic provenance artifact. Keep its
 # authoritative CRLF bytes instead of applying Git text normalization.
 provenance/SOURCE_MANIFEST.jsonl -text
+
+# These current-main ledgers are also byte-addressed by their published QA
+# receipt. Preserve their generated CRLF bytes exactly on GitHub.
+provenance/ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl -text
+provenance/AUDIT-REGRESSION-0026.json -text
+provenance/TERMINOLOGY_REVIEW_LOG.jsonl -text

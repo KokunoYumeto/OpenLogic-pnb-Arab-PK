@@ -1,0 +1,54 @@
+{
+  "schema": "pnb-current-main-qa/1",
+  "date_utc": "2026-09-04",
+  "full_edition_complete": false,
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_units_total": 722,
+  "translated_and_source_aligned_units": 26,
+  "translated_range": "OLP-0001 through OLP-0026, contiguous",
+  "remaining_units": 696,
+  "aligned_blocks": 438,
+  "translated_linguistic_blocks": 286,
+  "unchanged_formal_blocks": 152,
+  "changed_blocks_without_canon": 0,
+  "completed_source_translation_chapters": [
+    "Sets",
+    "Relations",
+    "Functions"
+  ],
+  "accepted_reader_chapters": [
+    "Sets"
+  ],
+  "current_regression": {
+    "file": "AUDIT-REGRESSION-0026.json",
+    "sha256": "7576fd6123c84e641d2011c2dc1b656055f157ff7cfb94d6f7891e4bdef4db13",
+    "all_passed": true
+  },
+  "review_log": {
+    "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
+    "entries": 38,
+    "terminology_entries": 28,
+    "source_fidelity_entries": 10,
+    "sha256": "c2ea931441503446bd31f548b3b6dddb3268c3b7579d2e73bc1b2684fc0254b1"
+  },
+  "source_corrections": {
+    "file": "SOURCE_CORRECTIONS.jsonl",
+    "entries": 5,
+    "applied_and_audited": 5,
+    "sha256": "753785a0caa0ab6a93756319e21ced3a990b8532c6c9f645782868c1cb80e2fd"
+  },
+  "release_snapshot": {
+    "version": "v0.1.0",
+    "translated_units": 21,
+    "accepted_reader": "Complete Sets chapter only",
+    "release_assets_unchanged": true,
+    "github_release": "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/tag/v0.1.0",
+    "doi": "10.5281/zenodo.22308437"
+  },
+  "limits": [
+    "This branch checkpoint is not a new binary reader release.",
+    "Relations and Functions have source-aligned review but no integrated reader visual acceptance.",
+    "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
+    "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
+  ]
+}
