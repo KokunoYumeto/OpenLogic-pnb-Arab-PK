@@ -1,0 +1,729 @@
+% Punjabi Shahmukhi adaptation. Original mathematical macro meanings: OpenLogic,
+% revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0, CC BY 4.0.
+\documentclass[12pt,a4paper,oneside,openany]{book}
+\usepackage[margin=23mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,nicefrac}
+\usepackage{tikz,xcolor}
+\colorlet{oldiagcolorA}{black}
+\colorlet{oldiagcolorB}{gray}
+\definecolor{oldiagcolorC}{HTML}{a81c21}
+\usepackage{fontspec}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{arabic}
+\setmainfont{Noto Serif}
+\newfontfamily\arabicfont[Script=Arabic]{Noto Naskh Arabic}
+\newfontfamily\arabicfontsf[Script=Arabic]{Noto Naskh Arabic}
+\newfontfamily\arabicfonttt[Script=Arabic]{Noto Naskh Arabic}
+\usepackage{setspace,needspace}
+\hypersetup{pdftitle={OpenLogic: Sets - Punjabi Shahmukhi},pdfauthor={Open Logic Project; machine translation by Codex},pdfsubject={Provisional Punjabi Shahmukhi translation; seven source units, not the complete edition}}
+\setstretch{1.15}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+% Arabic scripts do not have a native italic style in these families.
+% Preserve emphasis with bold upright rather than silently losing font shape.
+\renewcommand{\emph}[1]{{\upshape\bfseries #1}}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\binoppenalty=10000
+\relpenalty=10000
+\emergencystretch=3em
+\pagestyle{plain}
+\let\phi\varphi
+\newcommand{\Setabs}[2]{\{#1:#2\}}
+\newcommand{\Pow}[1]{\wp(#1)}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\PosInt}{\mathbb{Z}^{+}}
+\newcommand{\Bin}{\mathbb{B}}
+\newcommand{\len}[1]{\operatorname{len}(#1)}
+\newcommand{\tuple}[1]{\langle #1\rangle}
+\newcommand{\lif}{\to}
+\newenvironment{tagblock}[1]{}{}
+\newenvironment{explain}{}{}
+\newenvironment{digress}{\par}{\par}
+\newcounter{statement}[section]
+\renewcommand{\thestatement}{\thesection.\arabic{statement}}
+\newcommand{\pnbstatement}[2]{\par\Needspace{4\baselineskip}\refstepcounter{statement}\textbf{#1 \textenglish{\thestatement}۔ #2}\par\nobreak}
+\newenvironment{defn}[1][]{\pnbstatement{تعریف}{#1}}{\par}
+\newenvironment{ex}[1][]{\pnbstatement{مثال}{#1}}{\par}
+\newenvironment{prop}[1][]{\pnbstatement{قضیہ}{#1}}{\par}
+\newenvironment{thm}[1][]{\pnbstatement{مسئلہ}{#1}}{\par}
+\newenvironment{prob}{\pnbstatement{مشق}{}}{\par}
+\newenvironment{proof}{\par\Needspace{4\baselineskip}\textbf{ثبوت۔}\par\nobreak}{\hfill\(\square\)\par}
+\newcommand{\pnbref}[2]{#1~\textenglish{\ref{#2}}}
+\renewcommand{\chaptername}{باب}
+\renewcommand{\figurename}{شکل}
+\renewcommand{\contentsname}{فہرست}
+\makeatletter
+\def\@seccntformat#1{\textenglish{\csname the#1\endcsname}\quad}
+\renewcommand{\fnum@figure}{\figurename~\textenglish{\thefigure}}
+\makeatother
+\begin{document}
+\begin{titlepage}
+\begin{Arabic}
+\centering
+\vspace*{18mm}
+{\Huge\bfseries سیٹ\par}
+\vspace{8mm}
+{\LARGE اوپن لاجک\par}
+\vspace{5mm}
+{\Large پنجابی شاہ مکھی ترجمہ\par}
+\vspace{16mm}
+ایس جلد وچ سیٹاں دا مکمل باب اے۔ ایہ پوری کتاب دا ترجمہ نہیں۔
+\par
+ایہ مشینی ترجمہ اے۔ خاص ریاضیاتی اصطلاحاں وچوں کجھ عارضی نیں؛
+اوہناں دے ماخذ تے فیصلے نال دتے گئے ریکارڈ وچ ویکھے جا سکدے نیں۔
+\vfill
+\end{Arabic}
+\begin{center}
+Open Logic Project\par
+Source revision \texttt{9620cc73f9c8e0ad003c514a5d3748f29611c4c0}\par
+Punjabi Shahmukhi adaptation by Codex. Independent machine translation.\par
+Source coverage: OLP-0004--OLP-0010 (7 of 722 source units).\par
+Typeface profile: naskh.\par
+\href{https://openlogicproject.org/}{openlogicproject.org}\par
+\href{https://github.com/KokunoYumeto/OpenLogic-translations}{OpenLogic translations hub}\par
+CC BY 4.0. Translation and layout modified; no upstream endorsement implied.
+\end{center}
+\end{titlepage}
+\mainmatter
+\begin{Arabic}
+\chapter{سیٹ}\label{sfr:set::chap}
+
+
+
+\section{عنصراں نال تعیّن}\label{sfr:set:bas:sec}
+
+\emph{سیٹ} شےواں دا اک اکٹھ اے، جہنوں {اکو} شے منّیا جاندا اے۔ سیٹ بناؤن والیاں
+شےواں نوں اوس سیٹ دے \emph{عنصر} یا \emph{رکن} آکھیا جاندا اے۔ جے $x$ سیٹ~$A$ دا
+عنصر ہووے، تاں اسی $x \in A$ لکھدے آں؛ جے نہ ہووے، تاں $x \notin A$
+لکھدے آں۔ جس سیٹ دے کوئی عنصر نہ ہون، اوہنوں \emph{خالی} سیٹ آکھدے نیں
+تے اوہنوں~«$\emptyset$» نال ظاہر کردے نیں۔
+
+\begin{explain}
+ایس گل نال کوئی فرق نہیں پیندا کہ اسی سیٹ نوں کِویں \emph{دسدے} آں، اوہدے
+عنصراں نوں کِہڑی \emph{ترتیب} وچ رکھدے آں، یا اوہدے عنصراں نوں
+\emph{کِنّی واری} گِندے آں۔ اصل گل صرف ایہ اے کہ اوہدے عنصر کِہڑے نیں۔
+اسی ایس گل نوں ہِیٹھلے اصول دی صورت وچ بیان کردے آں۔
+\end{explain}
+
+\begin{defn}[عنصراں نال تعیّن]
+  جے $A$ تے $B$ سیٹ نیں، تاں $A = B$ اُدوں تے صرف اُدوں ہوندا اے جدوں
+  $A$ دا ہر عنصر، $B$ دا وی عنصر ہووے، تے ایس توں اُلٹ وی۔
+\end{defn}
+
+عنصراں نال تعیّن دا اصول کجھ علامتاں ورتن دا جواز دیندا اے۔ عام طور تے، جدوں
+ساڈے کول کجھ شےواں $a_{1}$، \dots، $a_{n}$ ہون، تاں $\{a_{1}, \dots, a_{n}\}$
+\emph{اوہی} سیٹ اے جہدے عنصر، $a_1, \ldots, a_n$ نیں۔ اسی لفظ
+«\emph{اوہی}» اُتے زور دیندے آں، کیوں جو عنصراں نال تعیّن دا اصول دسدا اے کہ
+ایہو جہا سیٹ صرف \emph{اک} ہو سکدا اے۔ ایس اصول توں ایہ وی جائز اے:
+  \[
+    \{a, a, b\} = \{a, b\} = \{b,a\}.
+  \]
+ایس نال اوہ گل واضح ہوندی اے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں
+ہوندی کہ اوہناں دے عنصر دی ترتیب کی اے، یا اوہ کِنّی واری دسے گئے نیں۔
+
+\begin{tagblock}{novice}
+\begin{ex}
+جدوں وی تہاڈے کول کجھ شےواں ہون، تسیں اوہناں نوں اک سیٹ وچ اکٹھیاں کر سکدے او۔
+مثال لئی، رچرڈ دے بھین بھراواں دا سیٹ اک ایہو جہا سیٹ اے جہدے وچ اک بندہ اے،
+تے اسی اوہنوں $S=\{\text{\textenglish{Ruth}}\}$ لکھ سکدے آں۔ $4$ توں گھٹ مثبت صحیح
+اعداد دا سیٹ $\{1, 2, 3\}$ اے، پر اوہنوں $\{3, 2, 1\}$ یا
+$\{1, 2, 1, 2, 3\}$ وی لکھیا جا سکدا اے۔ عنصراں نال تعیّن دے اصول موجب ایہ
+سارے اکو سیٹ نیں۔ کیوں جو $\{1, 2, 3\}$ دا ہر عنصر،
+$\{3, 2, 1\}$ دا (تے $\{1, 2, 1, 2, 3\}$ دا وی) عنصر اے، تے ایس
+توں اُلٹ وی۔
+\end{ex}
+\end{tagblock}
+
+اکثر اسی سیٹ نوں اوہدے عنصر دی سانجھی خاصیت نال دسّاں گے۔ ایس لئی
+اسی ایہ مختصر علامتی لکھت ورتاں گے: $\Setabs{x}{\phi(x)}$، جتھے $\phi(x)$
+اوہ خاصیت اے جہڑی $x$ وچ ہونی چاہیدی اے تاں جو اوہ سیٹ دے عنصراں وچوں
+اک گنیا جا سکے۔
+
+\begin{tagblock}{novice}
+\begin{ex}
+اپنی مثال وچ اسی $S$ نوں ایویں وی دس سکدے ساں:
+\[
+S = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)} رچرڈ دی بھین یا اوہدا بھرا اے}}}.
+\]
+\end{ex}
+\end{tagblock}
+
+\begin{tagblock}{math}
+\begin{ex}
+کِسے عدد نوں \emph{کامل} اُدوں تے صرف اُدوں آکھدے نیں جدوں اوہ اپنے اوہناں
+ونڈن والے اعداد دے جوڑ دے برابر ہووے جو عدد نوں پورا ونڈدے ہون پر آپ اوہدے
+برابر نہ ہون۔ مثال لئی، $6$ کامل اے، کیوں جو اوہنوں ونڈن والے اعداد، جو آپ
+اوہدے برابر نہیں، $1$، $2$ تے~$3$ نیں، تے $6 = 1 + 2 + 3$ اے۔ دراصل،
+$6$، $10$ توں گھٹ اکو اک مثبت صحیح عدد اے جو کامل اے۔ سو، عنصراں نال تعیّن
+دا اصول ورت کے اسی آکھ سکدے آں:
+\[
+	\{6\} = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)} کامل اے تے \textenglish{\(0 \leq x \leq 10\)}}}}
+\]
+سجے پاسے دی علامتی لکھت نوں اسی ایویں پڑھدے آں: «اوہناں $x$ دا سیٹ جیہناں لئی
+$x$ کامل اے تے $0 \leq x \leq 10$»۔ ایتھے برابری دی ایہ لکھت تصدیق کردی
+اے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں ہوندی کہ اوہناں نوں کِویں
+دسیا گیا اے۔ ہور عام طور تے، عنصراں نال تعیّن دا اصول ایہ یقینی بناندا اے کہ
+اوہناں $x$ دا سیٹ جنہاں لئی $\phi(x)$ ہووے، ہمیشہ اکو ہوندا اے۔
+سو، عنصراں نال تعیّن دا اصول $\Setabs{x}{\phi(x)}$ نوں اوہناں $x$ دا
+\emph{اوہی} سیٹ آکھن دا جواز دیندا اے جنہاں لئی~$\phi(x)$ ہووے۔
+\end{ex}
+\end{tagblock}
+
+عنصراں نال تعیّن دا اصول ایہ وکھاؤن دا طریقہ دیندا اے کہ سیٹ اکو نیں: $A = B$
+وکھاؤن لئی ایہ وکھاؤ کہ جدوں وی $x \in A$ ہووے، تاں $x \in B$ وی ہووے،
+تے جدوں وی $y \in B$ ہووے، تاں $y \in A$ وی ہووے۔
+
+\begin{prob}
+ثابت کرو کہ ودھ توں ودھ اک خالی سیٹ ہو سکدا اے، یعنی ایہ وکھاؤ کہ جے $A$ تے
+$B$ ایہو جہے سیٹ نیں جنہاں دے کوئی عنصر نہیں، تاں $A = B$ اے۔
+\end{prob}
+
+
+
+
+
+
+\section{ذیلی سیٹ تے ذیلی سیٹاں دے سیٹ}\label{sfr:set:sub:sec}
+
+\begin{explain}
+سانوں اکثر سیٹاں دا آپس وچ ٹاکرا کرن دی لوڑ پئے گی۔ ٹاکرے دی اک صاف صورت
+ایہ اے: \emph{اک سیٹ وچ جیہڑی وی شے اے، اوہ دوجے وچ وی اے}۔ ایہ صورت اینی
+اہم اے کہ ایس لئی کجھ نویاں علامتاں متعارف کرائیاں جان۔
+\end{explain}
+
+\begin{defn}[ذیلی سیٹ]
+جے سیٹ $A$ دا ہر عنصر، $B$ دا وی عنصر ہووے، تاں اسی آکھدے آں
+کہ $A$، $B$ دا \emph{ذیلی سیٹ} اے، تے $A \subseteq B$ لکھدے آں۔ جے
+$A$، $B$ دا ذیلی سیٹ نہ ہووے، تاں اسی $A \not\subseteq B$ لکھدے آں۔
+جے $A \subseteq B$ ہووے پر $A \neq B$ ہووے، تاں اسی $A \subsetneq B$
+لکھدے آں تے آکھدے آں کہ $A$، $B$ دا \emph{حقیقی ذیلی سیٹ} اے۔
+\end{defn}
+
+\begin{ex}
+ہر سیٹ اپنے آپ دا ذیلی سیٹ اے، تے $\emptyset$ ہر سیٹ دا ذیلی سیٹ اے۔ قدرتی
+جفت اعداد دا سیٹ قدرتی اعداد دے سیٹ دا ذیلی سیٹ اے۔ ایس طرح
+$\{ a, b \} \subseteq \{ a, b, c \}$۔ پر $\{ a, b, e \}$،
+$\{ a, b, c \}$ دا ذیلی سیٹ نہیں اے۔
+\end{ex}
+
+\begin{ex}
+عدد $2$ صحیح اعداد دے سیٹ دا عنصر اے، جد کہ جفت اعداد دا سیٹ صحیح
+اعداد دے سیٹ دا ذیلی سیٹ اے۔ پر ایہ وی ہو سکدا اے کہ اک سیٹ کِسے ہور سیٹ
+دا عنصر وی ہووے تے اوہدا ذیلی سیٹ وی، یعنی \emph{دونوں} گلاں ہون؛
+مثال لئی، $\{0\} \in \{0, \{0\}\}$ تے نال ہی
+$\{0\} \subseteq \{0, \{0\}\}$۔
+\end{ex}
+
+عنصراں نال تعیّن دا اصول سیٹاں دے اکو ہون دی کسوٹی دیندا اے: $A = B$ اُدوں
+تے صرف اُدوں ہوندا اے جدوں $A$ دا ہر عنصر، $B$ دا وی عنصر
+ہووے تے ایس توں اُلٹ وی۔ «ذیلی سیٹ» دی تعریف $A \subseteq B$ نوں عین ایس
+کسوٹی دے پہلے ادھ دے طور تے دسدی اے: $A$ دا ہر عنصر، $B$ دا وی
+عنصر اے۔ بے شک، جے اسی $A$ تے $B$ نوں آپس وچ وٹا دیئیے، تاں وی
+تعریف لاگو ہوندی اے: یعنی $B \subseteq A$ اُدوں تے صرف اُدوں جدوں $B$ دا
+ہر عنصر، $A$ دا وی عنصر ہووے۔ تے ایہ عین عنصراں نال تعیّن
+دے اصول دا «ایس توں اُلٹ وی» والا حصہ اے۔ ہور لفظاں وچ، ایس اصول توں
+نکلدا اے کہ سیٹ اُدوں تے صرف اُدوں برابر نیں جدوں اوہ اک دوجے دے ذیلی سیٹ ہون۔
+
+\begin{prop}
+$A = B$ اُدوں تے صرف اُدوں ہوندا اے جدوں $A \subseteq B$ تے
+$B \subseteq A$، دونوں ہون۔
+\end{prop}
+
+ہُن کجھ ہور مددگار علامتاں متعارف کراؤن دا وی چنگا موقع اے۔ ایہ تعریف
+کردیاں کہ $A$، $B$ دا ذیلی سیٹ کدوں اے، اسی آکھیا سی کہ «$A$ دا ہر
+عنصر \dots اے»، تے «$\dots$» دی تھاں «$B$ دا عنصر»
+رکھیا سی۔ پر عبارت دی ایہ \emph{بنت} اینی عام اے کہ ایس لئی کجھ رسمی
+علامتاں متعارف کرانا مددگار ہووے گا۔
+
+\begin{defn}\label{sfr:set:sub:forallxina}
+$(\forall x \in A)\phi$، $\forall x(x \in A \lif
+\phi)$ دی مختصر لکھت اے۔ ایس طرح، $(\exists x \in A)\phi$،
+$\exists x(x \in A \land \phi)$ دی مختصر لکھت اے۔
+\end{defn}
+
+ایہ علامتاں ورت کے، اسی آکھ سکدے آں کہ $A \subseteq B$ اُدوں تے صرف اُدوں
+ہوندا اے جدوں $(\forall x \in A)x \in B$ ہووے۔
+
+ہُن اسی سیٹ دی اک خاص قسم ول آندے آں: کِسے دتے ہوئے سیٹ دے سارے ذیلی
+سیٹاں دا سیٹ۔
+
+\begin{defn}[ذیلی سیٹاں دا سیٹ]
+سیٹ~$A$ دے سارے ذیلی سیٹاں توں بنے سیٹ نوں $A$ دا \emph{ذیلی سیٹاں دا سیٹ}
+آکھدے نیں تے $\Pow{A}$ لکھدے نیں۔
+  \[
+    \Pow{A} = \Setabs{B}{B \subseteq A}
+  \]
+\end{defn}
+
+\begin{ex}
+$\{ a, b, c \}$ دے سارے ممکن ذیلی سیٹ کِہڑے نیں؟ اوہ ایہ نیں:
+$\emptyset$، $\{a \}$، $\{b\}$، $\{c\}$، $\{a, b\}$، $\{a, c\}$،
+$\{b, c\}$، $\{a, b, c\}$۔ ایہناں سارے ذیلی سیٹاں دا سیٹ
+$\Pow{\{a,b,c\}}$ اے:
+\[
+\Pow{\{ a, b, c \}} = \{\emptyset, \{a \}, \{b\}, \{c\}, \{a, b\},
+\{b, c\}, \{a, c\}, \{a, b, c\}\}
+\]
+\end{ex}
+
+\begin{prob}
+$\{a, b, c, d\}$ دے سارے ذیلی سیٹ لکھو۔
+\end{prob}
+
+\begin{prob}
+وکھاؤ کہ جے $A$ دے $n$ عنصر ہون، تاں $\Pow{A}$ دے $2^n$
+عنصر ہون گے۔
+\end{prob}
+
+
+
+
+
+
+\section{کجھ اہم سیٹ}\label{sfr:set:imp:sec}
+
+\begin{ex}
+ساڈا واسطہ زیادہ تر اوہناں سیٹاں نال پئے گا جیہناں دے عنصر ریاضی
+دیاں شےواں نیں۔ ایہو جہے چار سیٹ اینے اہم نیں کہ اوہناں دے خاص ناں نیں:
+\begin{multline*}
+    \Nat = \{0, 1, 2, 3, \ldots\} \\
+    \shoveright{\text{\textarabic{قدرتی اعداد دا سیٹ}}}\\
+    \shoveleft{\Int = \{\ldots, -2, -1, 0, 1, 2, \ldots\}} \\
+    \shoveright{\text{\textarabic{صحیح اعداد دا سیٹ}}}\\
+    \shoveleft{\Rat = \Setabs{\nicefrac{m}{n}}{\text{\textarabic{\textenglish{\(m, n \in \Int\)} تے \textenglish{\(n \neq 0\)}}}}}\\
+    \shoveright{\text{\textarabic{ناطق اعداد دا سیٹ}}}\\
+    \shoveleft{\Real = (-\infty, \infty)}\\
+    \text{\textarabic{حقیقی اعداد دا سیٹ (تسلسل)}}
+\end{multline*}
+ایہ سارے \emph{لامتناہی} سیٹ نیں، یعنی ہر اک دے عنصر دی گنتی
+لامتناہی اے۔
+
+ایہناں سیٹاں وچ اگے ودھدیاں، اسی اپنے کول \emph{ہور} عدد شامل کردے آں۔ ایہ
+صاف ہونا چاہیدا اے کہ $\Nat \subseteq \Int \subseteq \Rat \subseteq \Real$:
+آخر ہر قدرتی عدد صحیح عدد اے؛ ہر صحیح عدد ناطق عدد اے؛ تے ہر ناطق عدد
+حقیقی عدد اے۔ ایس طرح ایہ وی صاف ہونا چاہیدا اے کہ
+$\Nat \subsetneq \Int \subsetneq \Rat$، کیوں جو $-1$ صحیح عدد اے پر
+قدرتی عدد نہیں، تے $\nicefrac{1}{2}$ ناطق عدد اے پر صحیح عدد نہیں۔ ایہ گل
+اینی صاف نہیں کہ $\Rat \subsetneq \Real$، یعنی کجھ حقیقی عدد ایہو جہے
+نیں جو ناطق نہیں۔
+
+کدی کدی اسی مثبت صحیح اعداد دا سیٹ $\PosInt = \{1, 2, 3, \dots\}$ تے
+صرف پہلے دو قدرتی اعداد والا سیٹ $\Bin = \{0, 1\}$ وی ورتاں گے۔
+\end{ex}
+
+\begin{tagblock}{compsci}
+\begin{ex}[لڑیاں]
+اک ہور دلچسپ مثال سیٹ $A^{*}$ اے، جہڑا حرفاں دے مجموعے $A$ اُتے
+\emph{محدود لڑیاں} دا سیٹ اے: $A$ دے عنصراں دا کوئی وی محدود سلسلہ، $A$ اُتے
+اک لڑی اے۔ اسی \emph{خالی لڑی $\Lambda$} نوں وی $A$ اُتے بنن والیاں لڑیاں وچ
+شامل کردے آں، ہر حرفی مجموعے~$A$ لئی۔ مثال لئی،
+\begin{multline*}
+\Bin^*
+=\{\Lambda,0,1,00,01,10,11,\\
+000,001,010,011,100,101,110,111,0000,\ldots\}.
+\end{multline*}
+جے $x=x_{1}\ldots x_{n}\in A^{*}$ اک لڑی ہووے جہدے وچ $n$ «حرف» ہون،
+جو $A$ توں لئے گئے ہون، تاں اسی آکھدے آں کہ لڑی دی \emph{لمبائی}~$n$ اے تے
+$\len{x}=n$ لکھدے آں۔
+\end{ex}
+\end{tagblock}
+
+\begin{ex}[لامتناہی سلسلے]
+کِسے وی سیٹ $A$ لئی اسی اوہدے عنصراں دے لامتناہی سلسلیاں
+دا سیٹ~$A^\omega$ وی ویکھ سکدے آں، جتھے عنصر $A$ دے نیں۔ اک لامتناہی
+سلسلہ $a_1a_2a_3a_4\dots$ شےواں دی اک پاسے نوں لامتناہی فہرست اے، جہدی ہر
+شے $A$ دا عنصر اے۔
+\end{ex}
+
+
+
+
+
+
+\section{اتحاد تے اشتراک}\label{sfr:set:uni:sec}
+
+\begin{explain}
+\pnbref{حصہ}{sfr:set:bas:sec} وچ اسی خاصیت راہیں سیٹاں دی تعریف متعارف کرائی
+سی، یعنی $\Setabs{x}{\phi(x)}$ دی صورت والیاں تعریفاں۔ ایتھے اسی کوئی
+خاصیت~$\phi$ ورتدے آں، تے ایس خاصیت وچ اوہناں سیٹاں دا ذکر ہو سکدا اے
+جنہاں دی تعریف اسی پہلاں کر چکے آں۔ مثال لئی، جے $A$ تے~$B$ سیٹ نیں،
+تاں سیٹ $\Setabs{x}{x \in A \lor x \in B}$ اوہناں ساریاں شےواں دا بنیا اے
+جو $A$ یا~$B$ دے عنصر نیں؛ یعنی ایہ اوہ سیٹ اے جو $A$ تے~$B$ دے
+عنصراں نوں اکٹھے کردا اے۔ اسی ایہنوں \pnbref{شکل}{sfr:set:uni:fig:union}
+وانگ شکل وچ ویکھ سکدے آں، جتھے اُبھاریا ہویا علاقہ دوہاں سیٹاں $A$ تے~$B$
+دے عنصراں نوں اکٹھے ظاہر کردا اے۔
+
+\begin{figure}
+  \begin{LTR}\centering\input{C:/interlanguage-production/openlogic-pnb-Arab-PK/repo/upstream/assets/diagrams/union.tikz}\end{LTR}
+  \caption{دو سیٹاں دا اتحاد $A \cup B$، $A$ تے~$B$ دے
+   عنصراں نوں اکٹھے لے کے بنن والا سیٹ اے۔}
+  \label{sfr:set:uni:fig:union}
+\end{figure}
+
+سیٹاں اُتے ایہ عمل---اوہناں نوں اکٹھا کرنا---بہت فائدےمند تے عام اے، ایس
+لئی اسی ایہنوں اک رسمی ناں تے اک علامت دیندے آں۔
+\end{explain}
+
+\begin{defn}[اتحاد]
+دو سیٹاں $A$ تے $B$ دا \emph{اتحاد}، جہنوں $A \cup B$ لکھدے نیں،
+اوہناں ساریاں شےواں دا سیٹ اے جو $A$، $B$ یا دوہاں دے عنصر نیں۔
+\[
+A \cup B = \Setabs{x}{x \in A \lor x \in B}
+\]
+\end{defn}
+
+\begin{ex}
+کیوں جو عنصراں نوں وار وار گِنن دا کوئی فرق نہیں پیندا،
+دو ایہو جہے سیٹاں دا اتحاد جنہاں دا عنصر سانجھا ہووے، اوس
+عنصر نوں صرف اک واری رکھدا اے؛ مثال لئی،
+$\{ a, b, c\} \cup \{ a, 0, 1\} = \{a, b, c, 0, 1\}$۔
+
+کِسے سیٹ تے اوہدے کِسے ذیلی سیٹ دا اتحاد بس وڈا سیٹ ای اے:
+$\{a, b, c \} \cup \{a \} = \{a, b, c\}$۔
+
+سیٹ دا خالی سیٹ نال اتحاد اوہی سیٹ اے:
+$\{a, b, c \} \cup \emptyset = \{a, b, c \}$۔
+\end{ex}
+
+\begin{prob}
+ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں $A \cup B = B$ اے۔
+\end{prob}
+
+\begin{explain}
+اسی اتحاد دے «دوہرے ہم صورت» عمل اُتے وی غور کر سکدے آں۔ ایہ اوہ عمل
+اے جو سارے اوہناں عنصراں دا سیٹ بناندا اے جو
+$A$ دے عنصر وی ہون تے $B$ دے عنصر وی۔ ایس عمل نوں
+\emph{اشتراک} آکھدے نیں، تے ایہنوں \pnbref{شکل}{sfr:set:uni:fig:intersection} وانگ وکھایا
+جا سکدا اے۔
+\begin{figure}
+  \begin{LTR}\centering\input{C:/interlanguage-production/openlogic-pnb-Arab-PK/repo/upstream/assets/diagrams/intersection.tikz}\end{LTR}
+  \caption{دو سیٹاں دا اشتراک $A \cap B$ اوہناں دے سانجھے
+    عنصراں دا سیٹ اے۔}
+  \label{sfr:set:uni:fig:intersection}
+\end{figure}
+\end{explain}
+
+\begin{defn}[اشتراک]
+دو سیٹاں $A$ تے $B$ دا \emph{اشتراک}، جہنوں $A \cap B$ لکھدے نیں،
+اوہناں ساریاں شےواں دا سیٹ اے جو $A$ تے~$B$ دوہاں دے عنصر نیں۔
+\[
+A \cap B = \Setabs{x}{x \in A \land x \in B}
+\]
+دو سیٹاں نوں \emph{بے سانجھ} آکھدے نیں جے اوہناں دا اشتراک خالی ہووے۔
+ایس دا مطلب اے کہ اوہناں دے کوئی عنصر سانجھے نہیں۔
+\end{defn}
+
+\begin{ex}
+جے دو سیٹاں دے کوئی عنصر سانجھے نہ ہون، تاں اوہناں دا اشتراک
+خالی اے: $\{ a, b, c\} \cap \{ 0, 1\} = \emptyset$۔
+
+جے دو سیٹاں دے کجھ عنصر سانجھے ہون، تاں اوہناں دا اشتراک اوہناں
+ساریاں دا سیٹ اے: \[
+\{a, b, c \} \cap \{a, b, d \} = \{a, b\}\text{\textarabic{۔}}
+\]
+
+کِسے سیٹ دا اوہدے کِسے ذیلی سیٹ نال اشتراک بس چھوٹا سیٹ ای اے:
+$\{a, b, c\} \cap \{a, b\} = \{a, b\}$۔
+
+کِسے وی سیٹ دا خالی سیٹ نال اشتراک خالی اے:
+$\{a, b, c \} \cap \emptyset = \emptyset$۔
+\end{ex}
+
+\begin{prob}
+پوری منطقی پابندی نال ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں
+$A \cap B = A$ اے۔
+\end{prob}
+
+\begin{explain}
+اسی دو توں ودھ سیٹاں دا اتحاد یا اشتراک وی بنا سکدے آں۔ عام صورت وچ ایس
+لئی اک سوہنا طریقہ ایہ اے: منّ لو تسیں اوہناں سارے سیٹاں نوں اکو سیٹ
+وچ اکٹھا کر لیندے او جنہاں دا اتحاد (یا اشتراک) بنانا اے۔ فیر اسی اپنے
+اصل سیٹاں دے اتحاد نوں اوہناں ساریاں شےواں دے سیٹ دے طور تے متعین کر
+سکدے آں جو اکٹھے کیتے سیٹ دے گھٹ توں گھٹ اک عنصر وچ ہون، تے
+اشتراک نوں اوہناں ساریاں شےواں دے سیٹ دے طور تے جو اوہدے ہر عنصر
+وچ ہون۔
+\end{explain}
+
+\begin{defn}
+جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcup A$، سیٹ~$A$ دے
+عنصراں دے عنصراں دا سیٹ اے:
+\begin{align*}
+\bigcup A & = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)}، سیٹ \textenglish{\(A\)} دے کسے عنصر دا عنصر اے}}},
+\text{\textarabic{ یعنی،}}\\
+& = \Setabs{x}{\text{\textarabic{کوئی \textenglish{\(B \in A\)} ایہو جہا اے کہ \textenglish{\(x \in B\)}}}}
+\end{align*}
+\end{defn}
+
+\begin{defn}
+جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcap A$ اوہناں شےواں دا سیٹ اے جو
+$A$ دے سارے عنصراں وچ سانجھیاں نیں:
+\begin{align*}
+\bigcap A & = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)}، سیٹ \textenglish{\(A\)} دے ہر عنصر وچ اے}}},
+\text{\textarabic{ یعنی،}}\\
+ & = \Setabs{x}{\text{\textarabic{ہر \textenglish{\(B \in A, x \in B\)}}}}
+\end{align*}
+\end{defn}
+
+\begin{ex}
+منّ لو کہ $A = \{ \{ a, b \}, \{ a, d, e \}, \{ a, d \} \}$۔
+فیر $\bigcup A = \{ a, b, d, e \}$ تے $\bigcap A = \{ a \}$ اے۔
+\end{ex}
+\begin{prob}
+	وکھاؤ کہ جے $A$ اک سیٹ اے تے $A \in B$، تاں $A \subseteq \bigcup B$ اے۔
+\end{prob}
+
+اسی سیٹاں دے سلسلے $A_1$، $A_2$، \dots لئی وی ایہو کم کر سکدے آں:
+\begin{align*}
+\bigcup_i A_i & = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)}، سیٹاں \textenglish{\(A_i\)} وچوں کسے اک وچ شامل اے}}}\\
+\bigcap_i A_i & = \Setabs{x}{\text{\textarabic{\textenglish{\(x\)}، سیٹاں \textenglish{\(A_i\)} وچوں ہر اک وچ شامل اے}}}.
+\end{align*}
+
+جدوں ساڈے کول سیٹاں دا \emph{اشاریہ} ہووے، یعنی کوئی سیٹ $I$ جس لئی
+اسی $A_i$ اُتے غور کردے ہاں، ہر $i \in I$ لئی، تاں اسی ایہ مختصر
+لکھتاں وی ورت سکدے آں:
+\begin{align*}
+	\bigcup_{i \in I} A_i & = \bigcup \Setabs{A_i }{i \in I}\\
+	\bigcap_{i \in I} A_i & = \bigcap\Setabs{A_i}{i \in I}
+\end{align*}
+
+آخر وچ، اسی سارے اوہناں عنصراں دے سیٹ بارے سوچ سکدے
+آں جو $A$ وچ نیں پر $B$ وچ نہیں۔ ایہنوں \pnbref{شکل}{sfr:set:uni:difference} وانگ وکھایا
+جا سکدا اے۔
+
+\begin{figure}
+  \begin{LTR}\centering\input{C:/interlanguage-production/openlogic-pnb-Arab-PK/repo/upstream/assets/diagrams/difference.tikz}\end{LTR}
+  \caption{دو سیٹاں دا فرق $A \setminus B$ اوہناں عنصراں
+    دا سیٹ اے جو $A$ وچ نیں پر $B$ دے عنصر نہیں۔}
+  \label{sfr:set:uni:difference}
+\end{figure}
+
+\begin{defn}[فرق]
+\emph{سیٹاں دا فرق}~$A \setminus B$ سارے اوہناں عنصراں
+دا سیٹ اے جو $A$ وچ نیں پر $B$ دے عنصر نہیں، یعنی
+\[
+A\setminus B = \Setabs{x}{\text{\textarabic{\textenglish{\(x\in A\)} تے \textenglish{\(x \notin B\)}}}}.
+\]
+\end{defn}
+
+\begin{prob}
+	ثابت کرو کہ جے $A \subsetneq B$ ہووے، تاں $B \setminus A \neq \emptyset$ اے۔
+\end{prob}
+
+
+
+
+
+
+\section{جوڑے، ٹپل تے کارتیسی حاصلِ ضرب}\label{sfr:set:pai:sec}
+
+\begin{explain}
+عنصراں نال تعیّن دے اصول توں نکلدا اے کہ سیٹ دے عنصراں دی کوئی ترتیب نہیں
+ہوندی۔ سو، جے اسی ترتیب ظاہر کرنا چاہیئے، تاں \emph{ترتیب وار جوڑے}
+$\tuple{x, y}$ ورتدے آں۔ بے ترتیب جوڑے $\{x, y\}$ وچ ترتیب دا کوئی فرق
+نہیں پیندا: $\{x, y\} = \{y, x\}$۔ ترتیب وار جوڑے وچ فرق پیندا اے: جے
+$x \neq y$ ہووے، تاں $\tuple{x, y} \neq \tuple{y, x}$ اے۔
+
+سیٹاں دے نظریے وچ ترتیب وار جوڑیاں بارے ساڈا تصور کی ہونا چاہیدا اے؟ بنیادی
+گل ایہ اے کہ اسی ایہ خیال قائم رکھنا چاہندے آں کہ ترتیب وار جوڑے اُدوں تے
+صرف اُدوں اکو ہوندے نیں جدوں اوہناں دا پہلا عنصر اکو ہووے تے دوجا عنصر وی
+اکو ہووے، یعنی:
+\[
+  \tuple{a, b}= \tuple{c, d}\text{\textarabic{ اُدوں تے صرف اُدوں، جدوں دونوں }}a = c \text{\textarabic{ تے }}b=d.
+\]
+سیٹاں دے نظریے وچ اسی وینر--کوراتوسکی دی تعریف نال ترتیب وار جوڑے دی
+تعریف کر سکدے آں۔
+\end{explain}
+
+\begin{defn}[ترتیب وار جوڑا]\label{sfr:set:pai:wienerkuratowski}
+	$\tuple{a, b} = \{\{a\}, \{a, b\}\}$۔
+\end{defn}
+
+\begin{prob}
+	\pnbref{تعریف}{sfr:set:pai:wienerkuratowski} ورت کے ثابت کرو کہ
+	$\tuple{a, b}= \tuple{c, d}$ اُدوں تے صرف اُدوں ہوندا اے جدوں
+	$a = c$ تے $b=d$، دونوں ہون۔
+\end{prob}
+
+\begin{explain}
+ترتیب وار جوڑے دی تعریف طے کر کے اسی اوہنوں ہور سیٹاں دی تعریف لئی ورت
+سکدے آں۔ مثال لئی، کدی کدی سانوں دو توں ودھ شےواں دے ترتیب وار سلسلے وی
+چاہیدے ہوندے نیں، جیویں \emph{تِکے} $\tuple{x, y, z}$، \emph{چوکے}
+$\tuple{x, y, z, u}$، تے ایس طرح اگے۔ تِکیاں نوں اسی خاص ترتیب وار جوڑے
+سمجھ سکدے آں، جنہاں دا پہلا عنصر آپ اک ترتیب وار جوڑا اے:
+$\tuple{x, y, z}$، $\tuple{\tuple{x, y},z}$ اے۔ چوکیاں لئی وی ایہو گل اے:
+$\tuple{x,y,z,u}$، $\tuple{\tuple{\tuple{x,y},z},u}$ اے، تے ایس طرح اگے۔
+عام طور تے اسی \emph{ترتیب وار $n$-ٹپل} $\tuple{x_1, \dots, x_n}$ دی گل
+کردے آں۔
+
+ترتیب وار جوڑیاں، یا ہور ترتیب وار $n$-ٹپلاں دے کجھ سیٹ ساڈے کم آؤن گے۔
+\end{explain}
+
+\begin{defn}[کارتیسی حاصلِ ضرب]
+دتے ہوئے سیٹاں $A$ تے $B$ دا \emph{کارتیسی حاصلِ ضرب} $A \times B$ ایویں
+متعین ہوندا اے:
+\[
+  A \times B = \Setabs{\tuple{x, y}}{\text{\textarabic{\textenglish{\(x \in A\)} تے \textenglish{\(y \in B\)}}}}.
+\]
+\end{defn}
+
+\begin{ex}
+جے $A = \{0, 1\}$ تے $B = \{1, a, b\}$ ہون، تاں اوہناں دا حاصلِ ضرب اے:
+\[
+A \times B = \{ \tuple{0, 1}, \tuple{0, a}, \tuple{0, b},
+    \tuple{1, 1}, \tuple{1, a}, \tuple{1, b} \}.
+\]
+\end{ex}
+
+\begin{ex}
+جے $A$ اک سیٹ اے، تاں $A$ دا اپنے آپ نال حاصلِ ضرب، $A \times A$،
+$A^2$ وی لکھیا جاندا اے۔ ایہ اوہناں \emph{سارے} جوڑیاں $\tuple{x, y}$ دا
+سیٹ اے جنہاں لئی $x, y \in A$ اے۔ سارے تِکیاں $\tuple{x, y, z}$ دا
+سیٹ $A^3$ اے، تے ایس طرح اگے۔ اسی اک بازگشتی تعریف دے سکدے آں:
+\begin{align*}
+  A^1 & = A\\
+  A^{k+1} & = A^k \times A
+\end{align*}
+\end{ex}
+
+\begin{prob}
+سارے عنصر لکھو جو $\{1, 2, 3\}^3$ وچ نیں۔
+\end{prob}
+
+\begin{prop}\label{sfr:set:pai:cardnmprod}
+جے $A$ دے $n$ عنصر تے $B$ دے $m$ عنصر ہون، تاں
+$A \times B$ دے $n\cdot m$ عنصر ہون گے۔
+\end{prop}
+
+\begin{proof}
+ہر عنصر~$x$ لئی جو $A$ وچ اے، $m$ ایہو جہے عنصر نیں
+جنہاں دی صورت $\tuple{x, y} \in A \times B$ اے۔ منّ لو کہ
+$B_x = \Setabs{\tuple{x, y}}{y \in B}$۔ کیوں جو جدوں وی $x_1 \neq x_2$
+ہووے، تاں $\tuple{x_1, y} \neq \tuple{x_2, y}$ اے، ایس لئی
+$B_{x_1} \cap B_{x_2} = \emptyset$۔ پر جے $A = \{x_1, \dots, x_n\}$
+ہووے، تاں $A \times B = B_{x_1} \cup \dots \cup B_{x_n}$ اے، تے ایس لئی
+اوہدے $n\cdot m$ عنصر نیں۔
+
+ایس گل نوں شکل وچ ویکھن لئی، عنصراں نوں جو $A \times B$
+وچ نیں، قطاراں تے کالماں دے جال وچ ترتیب نال رکھو:
+\[
+\begin{array}{rcccc}
+  B_{x_1} = & \{\tuple{x_1, y_1} & \tuple{x_1, y_2} & \dots & \tuple{x_1, y_m}\}\\
+  B_{x_2} = & \{\tuple{x_2, y_1} & \tuple{x_2, y_2} & \dots & \tuple{x_2, y_m}\}\\
+  \vdots & & \vdots\\
+  B_{x_n} = & \{\tuple{x_n, y_1} & \tuple{x_n, y_2} & \dots & \tuple{x_n, y_m}\}
+\end{array}
+\]
+کیوں جو سارے $x_i$ وکھ وکھ نیں، تے سارے $y_j$ وی وکھ وکھ نیں، ایس جال
+وچ کوئی دو جوڑے اکو نہیں، تے اوہناں دی گنتی $n\cdot m$ اے۔
+\end{proof}
+
+\begin{prob}
+$k$ اُتے ریاضیاتی استقرا نال وکھاؤ کہ سارے $k \ge 1$ لئی، جے $A$ دے
+$n$ عنصر ہون، تاں $A^k$ دے $n^k$ عنصر ہون گے۔
+\end{prob}
+
+\begin{ex}
+جے $A$ اک سیٹ اے، تاں $A$ اُتے \emph{لفظ}، عنصراں دا
+کوئی وی سلسلہ اے جو $A$ توں لئے گئے ہون۔ سلسلے نوں اک $n$-ٹپل سمجھیا جا
+سکدا اے، جہدے عنصر، $A$ توں نیں۔ مثال لئی، جے $A = \{a, b, c\}$
+ہووے، تاں سلسلے «$bac$» نوں تِکّے~$\tuple{b, a, c}$ دے طور تے سمجھیا
+جا سکدا اے۔ لفظ، یعنی علامتاں دے سلسلے، کمپیوٹر سائنس وچ بنیادی اہمیت
+رکھدے نیں۔ رواج موجب، اسی عنصراں نوں جو $A$ وچ نیں،
+لمبائی~$1$ والے سلسلے گِندے آں، تے $\emptyset$ نوں لمبائی~$0$ والا سلسلہ۔
+فیر $A$ اُتے \emph{سارے} لفظاں دا سیٹ اے:
+\[
+A^* = \{\emptyset\} \cup A \cup A^2 \cup A^3 \cup \dots
+\]
+\end{ex}
+
+
+
+
+
+
+\section{رسل دا تضاد}\label{sfr:set:rus:sec}
+
+عنصراں نال تعیّن دا اصول علامتی لکھت $\Setabs{x}{\phi(x)}$ دا جواز دیندا
+اے، جہڑی اوہناں $x$ دا \emph{اوہی} سیٹ دسدی اے جنہاں لئی~$\phi(x)$
+ہووے۔ پر عنصراں نال تعیّن دا اصول \emph{اصل وچ} صرف ایس خیال دا جواز
+دیندا اے: \emph{جے} اک ایہو جہا سیٹ موجود ہووے جہدے رکن سارے اوہ تے صرف
+اوہ ہون جیہڑے $\phi$ نیں، \emph{تاں} ایہو جہا سیٹ اکو اے۔ ہور لفظاں وچ:
+کِسے~$\phi$ نوں طے کرن مگروں، سیٹ $\Setabs{x}{\phi(x)}$ یکتا اے،
+\emph{جے اوہ موجود ہووے}۔
+
+پر ایہ شرط بڑی اہم اے!{} بنیادی گل ایہ اے کہ ہر خاصیت توں
+\emph{سیٹ نہیں بنایا جا سکدا}۔ یعنی کجھ خاصیتاں سیٹ دی تعریف
+\emph{نہیں} کردیاں۔ جے ساریاں کردیاں، تاں اسی صاف تضاداں وچ پھس جاواں
+گے۔ ایس دی سب توں مشہور مثال رسل دا تضاد اے۔
+
+سیٹ ہور سیٹاں دے عنصر ہو سکدے نیں---مثال لئی، سیٹ~$A$ دا ذیلی
+سیٹاں دا سیٹ، سیٹاں توں ای بنیا ہوندا اے۔ سو ایہ پچھنا یا کھوجنا بجا اے
+کہ کوئی سیٹ دوجے سیٹ دا عنصر اے یا نہیں۔ کی کوئی سیٹ اپنے آپ دا
+رکن ہو سکدا اے؟ سیٹ دے خیال وچ کوئی گل ایس نوں روکندی نہیں لگدی۔ مثال
+لئی، جے \emph{سارے} سیٹ شےواں دا اک اکٹھ بناندے نیں، تاں کوئی ایہ سوچ
+سکدا اے کہ اوہناں نوں اکو سیٹ وچ اکٹھا کیتا جا سکدا اے---سارے سیٹاں دا
+سیٹ۔ تے اوہ، آپ اک سیٹ ہون پاروں، سارے سیٹاں دے سیٹ دا عنصر
+ہووے گا۔
+
+رسل دا تضاد اُدوں پیدا ہوندا اے جدوں اسی اپنے آپ نوں عنصر نہ
+رکھن دی خاصیت، یعنی \emph{اپنے آپ دا رکن نہ ہون} دی خاصیت، اُتے غور کردے
+آں۔ جے اسی منّ لئیے کہ اوہناں سارے سیٹاں دا سیٹ موجود اے جو اپنے آپ نوں
+عنصر نہیں رکھدے، تاں کی ہووے گا؟ کی
+\[
+R = \Setabs{x}{x \notin x}
+\]
+موجود اے؟ گل ایہ اے کہ اسی ثابت کر سکدے آں کہ ایہ موجود نہیں۔
+
+\begin{thm}[رسل دا تضاد]\label{sfr:set:rus:thm:russells-paradox}
+	کوئی سیٹ $R = \Setabs{x}{x \notin x}$ موجود نہیں۔
+\end{thm}
+
+\begin{proof}
+جے $R = \Setabs{x}{x \notin x}$ موجود ہووے، تاں
+$R \in R$ اُدوں تے صرف اُدوں جدوں $R \notin R$، تے ایہ اک تضاد اے۔
+\end{proof}
+
+\begin{tagblock}{novice}
+\begin{explain}
+آؤ ایس ثبوت نوں ہولی ہولی ویکھیئے۔ جے $R$ موجود اے، تاں ایہ پچھنا بجا اے
+کہ $R \in R$ اے یا نہیں۔ منّ لو کہ واقعی $R \in R$ اے۔ ہُن $R$ دی
+تعریف اوہناں سارے سیٹاں دے سیٹ دے طور تے کیتی گئی سی جو اپنے آپ دے
+عنصر نہیں۔ سو، جے $R \in R$، تاں $R$ آپ اوہ خاصیت نہیں رکھدا
+جس نال $R$ دی تعریف کیتی گئی اے۔ پر صرف اوہ سیٹ $R$ وچ نیں جو ایہ
+خاصیت رکھدے نیں، ایس لئی $R$، $R$ دا عنصر نہیں ہو سکدا، یعنی
+$R \notin R$۔ پر $R$، $R$ دا عنصر ہووے وی تے نہ وی ہووے، ایہ
+نہیں ہو سکدا؛ سو ساڈے کول اک تضاد اے۔
+
+کیوں جو ایہ فرض کرنا کہ $R \in R$ تضاد ول لے جاندا اے، ایس لئی
+$R \notin R$ اے۔ پر ایہ وی تضاد ول لے جاندا اے!{} کیوں جو جے $R \notin R$
+ہووے، تاں $R$ آپ اوہ خاصیت رکھدا اے جس نال $R$ دی تعریف کیتی گئی اے،
+تے ایس لئی $R$، $R$ دا عنصر ہووے گا، بالکل اوہناں ہور سیٹاں
+وانگ جو اپنے آپ دے رکن نہیں۔ تے فیر، ایہ نہیں ہو سکدا کہ اوہ $R$ دا
+عنصر نہ وی ہووے تے ہووے وی۔
+\end{explain}
+\end{tagblock}
+
+\begin{digress}
+اسی سیٹاں دا ایہو جہا نظریہ کِویں بنائیے جو رسل دے تضاد وچ نہ پھسے، یعنی
+ایہ \emph{بے مطابقت} دعویٰ نہ کرے کہ $R = \Setabs{x}{x \notin x}$
+موجود اے؟ ایس لئی سانوں مسلّمے مقرر کرنے پَین گے، جو ایہ دسن لئی بالکل
+درست شرطاں دین کہ سیٹ کدوں موجود ہوندے نیں (تے کدوں نہیں ہوندے)۔
+
+ایس باب وچ سیٹاں دے نظریے دا جیہڑا خاکہ دتا گیا اے، اوہ ایہ کم نہیں کردا۔
+ایہ \emph{واقعی سادہ فہم} نظریہ اے۔ ایہ صرف دسدا اے کہ سیٹ عنصراں نال
+تعیّن دے اصول اُتے چلدے نیں تے، جے تہاڈے کول کجھ سیٹ ہون، تاں تسیں اوہناں
+دا اتحاد، اشتراک وغیرہ بنا سکدے او۔ سیٹاں دے نظریے نوں ایس توں زیادہ
+سخت منطقی بنیاد اُتے اساریا جا سکدا اے۔ 
+\end{digress}
+
+
+
+\end{Arabic}
+\end{document}

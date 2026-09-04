@@ -1,0 +1,21 @@
+{
+  "schema": "pnb-reader-visual/1",
+  "build_variant": "reference-v3",
+  "all_pages_visually_inspected": true,
+  "passed": true,
+  "profiles": {
+    "naskh": {
+      "pages": 12,
+      "bytes": 127664,
+      "sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc"
+    },
+    "nastaliq": {
+      "pages": 16,
+      "bytes": 183163,
+      "sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50"
+    }
+  },
+  "evidence": "SETS-READER-V3-VISUAL.md; the current owner personally inspected all 28 fresh v3 PNGs in the preceding continuation. Exact source report and unchanged PDF hashes re-read/recomputed for release, not a summary-derived or portable-build acceptance.",
+  "visual_report_sha256": "0fa2151073b29da6c4aca14852f5ce9fd13717f731dcfeabcb90ba6bfb3b73e0",
+  "limits": "Only the exact reference-v3 PDFs accepted. Portable candidate is not built or visually accepted. No independent human review or full-edition completion claimed."
+}

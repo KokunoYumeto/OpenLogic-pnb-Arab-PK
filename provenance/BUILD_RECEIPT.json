@@ -1,0 +1,75 @@
+{
+  "schema": "pnb-reader-build/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "timeout_ms": 30000,
+  "acquired": true,
+  "abandoned_recovery": false,
+  "status": "reproduced_pending_visual_review",
+  "started_utc": "2026-09-04T16:03:15.9157602Z",
+  "processes": [
+    {
+      "profile": "naskh",
+      "pass": 1,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "08e8088c07cd71129e68fcdb96c7b432a4f2f9e56c759d2ed99e4bc4c5afbb75",
+      "pdf_sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc",
+      "pdf_bytes": 127664
+    },
+    {
+      "profile": "naskh",
+      "pass": 2,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "08e8088c07cd71129e68fcdb96c7b432a4f2f9e56c759d2ed99e4bc4c5afbb75",
+      "pdf_sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc",
+      "pdf_bytes": 127664
+    },
+    {
+      "profile": "naskh",
+      "pass": 3,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "08e8088c07cd71129e68fcdb96c7b432a4f2f9e56c759d2ed99e4bc4c5afbb75",
+      "pdf_sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc",
+      "pdf_bytes": 127664,
+      "reproduced": true
+    },
+    {
+      "profile": "nastaliq",
+      "pass": 1,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "2fcd66663141f4468beb47ad2935552ae3515976dec45e9c44344fabf22cb3f7",
+      "pdf_sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50",
+      "pdf_bytes": 183163
+    },
+    {
+      "profile": "nastaliq",
+      "pass": 2,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "2fcd66663141f4468beb47ad2935552ae3515976dec45e9c44344fabf22cb3f7",
+      "pdf_sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50",
+      "pdf_bytes": 183163
+    },
+    {
+      "profile": "nastaliq",
+      "pass": 3,
+      "tree_wait": "Start-Process -Wait",
+      "exit_code": 0,
+      "defects": [],
+      "log_sha256": "2fcd66663141f4468beb47ad2935552ae3515976dec45e9c44344fabf22cb3f7",
+      "pdf_sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50",
+      "pdf_bytes": 183163,
+      "reproduced": true
+    }
+  ],
+  "source_date_epoch": "1788470400",
+  "finished_utc": "2026-09-04T16:03:33.0832993Z"
+}

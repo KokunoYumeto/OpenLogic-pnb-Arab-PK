@@ -1,0 +1,9 @@
+% Punjabi Shahmukhi grammatical case for retained OpenLogic token identifiers.
+\ProvidesPackage{pnb-morphology}
+\newcommand{\pnboblique}[1]{\begingroup
+  \definetoken{p}{element}{عنصراں}%
+  #1\endgroup}
+% Load after original OpenLogic token definitions.
+\settexttoken{element}{عنصر}{عنصر}[عنصر][عنصر]
+\definetoken{a}{element}{}
+\definetoken{A}{element}{}

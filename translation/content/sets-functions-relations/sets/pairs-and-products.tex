@@ -1,0 +1,132 @@
+% Part: sets-functions-relations
+% Chapter: sets
+% Section: pairs-and-products
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{set}{pai}
+\olsection{جوڑے، ٹپل تے کارتیسی حاصلِ ضرب}
+
+\begin{explain}
+عنصراں نال تعیّن دے اصول توں نکلدا اے کہ سیٹ دے عنصراں دی کوئی ترتیب نہیں
+ہوندی۔ سو، جے اسی ترتیب ظاہر کرنا چاہیئے، تاں \emph{ترتیب وار جوڑے}
+$\tuple{x, y}$ ورتدے آں۔ بے ترتیب جوڑے $\{x, y\}$ وچ ترتیب دا کوئی فرق
+نہیں پیندا: $\{x, y\} = \{y, x\}$۔ ترتیب وار جوڑے وچ فرق پیندا اے: جے
+$x \neq y$ ہووے، تاں $\tuple{x, y} \neq \tuple{y, x}$ اے۔
+
+سیٹاں دے نظریے وچ ترتیب وار جوڑیاں بارے ساڈا تصور کی ہونا چاہیدا اے؟ بنیادی
+گل ایہ اے کہ اسی ایہ خیال قائم رکھنا چاہندے آں کہ ترتیب وار جوڑے اُدوں تے
+صرف اُدوں اکو ہوندے نیں جدوں اوہناں دا پہلا عنصر اکو ہووے تے دوجا عنصر وی
+اکو ہووے، یعنی:
+\[
+  \tuple{a, b}= \tuple{c, d}\text{ اُدوں تے صرف اُدوں، جدوں دونوں }a = c \text{ تے }b=d.
+\]
+سیٹاں دے نظریے وچ اسی وینر--کوراتوسکی دی تعریف نال ترتیب وار جوڑے دی
+تعریف کر سکدے آں۔
+\end{explain}
+
+\begin{defn}[ترتیب وار جوڑا]\ollabel{wienerkuratowski}
+	$\tuple{a, b} = \{\{a\}, \{a, b\}\}$۔
+\end{defn}
+
+\begin{prob}
+	\olref[sfr][set][pai]{wienerkuratowski} ورت کے ثابت کرو کہ
+	$\tuple{a, b}= \tuple{c, d}$ اُدوں تے صرف اُدوں ہوندا اے جدوں
+	$a = c$ تے $b=d$، دونوں ہون۔
+\end{prob}
+
+\begin{explain}
+ترتیب وار جوڑے دی تعریف طے کر کے اسی اوہنوں ہور سیٹاں دی تعریف لئی ورت
+سکدے آں۔ مثال لئی، کدی کدی سانوں دو توں ودھ شےواں دے ترتیب وار سلسلے وی
+چاہیدے ہوندے نیں، جیویں \emph{تِکے} $\tuple{x, y, z}$، \emph{چوکے}
+$\tuple{x, y, z, u}$، تے ایس طرح اگے۔ تِکیاں نوں اسی خاص ترتیب وار جوڑے
+سمجھ سکدے آں، جنہاں دا پہلا عنصر آپ اک ترتیب وار جوڑا اے:
+$\tuple{x, y, z}$، $\tuple{\tuple{x, y},z}$ اے۔ چوکیاں لئی وی ایہو گل اے:
+$\tuple{x,y,z,u}$، $\tuple{\tuple{\tuple{x,y},z},u}$ اے، تے ایس طرح اگے۔
+عام طور تے اسی \emph{ترتیب وار $n$-ٹپل} $\tuple{x_1, \dots, x_n}$ دی گل
+کردے آں۔
+
+ترتیب وار جوڑیاں، یا ہور ترتیب وار $n$-ٹپلاں دے کجھ سیٹ ساڈے کم آؤن گے۔
+\end{explain}
+
+\begin{defn}[کارتیسی حاصلِ ضرب]
+دتے ہوئے سیٹاں $A$ تے $B$ دا \emph{کارتیسی حاصلِ ضرب} $A \times B$ ایویں
+متعین ہوندا اے:
+\[
+  A \times B = \Setabs{\tuple{x, y}}{x \in A \text{ تے } y \in B}.
+\]
+\end{defn}
+
+\begin{ex}
+جے $A = \{0, 1\}$ تے $B = \{1, a, b\}$ ہون، تاں اوہناں دا حاصلِ ضرب اے:
+\[
+A \times B = \{ \tuple{0, 1}, \tuple{0, a}, \tuple{0, b},
+    \tuple{1, 1}, \tuple{1, a}, \tuple{1, b} \}.
+\]
+\end{ex}
+
+\begin{ex}
+جے $A$ اک سیٹ اے، تاں $A$ دا اپنے آپ نال حاصلِ ضرب، $A \times A$،
+$A^2$ وی لکھیا جاندا اے۔ ایہ اوہناں \emph{سارے} جوڑیاں $\tuple{x, y}$ دا
+سیٹ اے جنہاں لئی $x, y \in A$ اے۔ سارے تِکیاں $\tuple{x, y, z}$ دا
+سیٹ $A^3$ اے، تے ایس طرح اگے۔ اسی اک بازگشتی تعریف دے سکدے آں:
+\begin{align*}
+  A^1 & = A\\
+  A^{k+1} & = A^k \times A
+\end{align*}
+\end{ex}
+
+\begin{prob}
+سارے !!{element}s لکھو جو $\{1, 2, 3\}^3$ وچ نیں۔
+\end{prob}
+
+\begin{prop}\ollabel{cardnmprod}
+جے $A$ دے $n$ !!{element}s تے $B$ دے $m$ !!{element}s ہون، تاں
+$A \times B$ دے $n\cdot m$ عنصر ہون گے۔
+\end{prop}
+
+\begin{proof}
+ہر !!{element}~$x$ لئی جو $A$ وچ اے، $m$ ایہو جہے !!{element}s نیں
+جنہاں دی صورت $\tuple{x, y} \in A \times B$ اے۔ منّ لو کہ
+$B_x = \Setabs{\tuple{x, y}}{y \in B}$۔ کیوں جو جدوں وی $x_1 \neq x_2$
+ہووے، تاں $\tuple{x_1, y} \neq \tuple{x_2, y}$ اے، ایس لئی
+$B_{x_1} \cap B_{x_2} = \emptyset$۔ پر جے $A = \{x_1, \dots, x_n\}$
+ہووے، تاں $A \times B = B_{x_1} \cup \dots \cup B_{x_n}$ اے، تے ایس لئی
+اوہدے $n\cdot m$ !!{element}s نیں۔
+
+ایس گل نوں شکل وچ ویکھن لئی، \pnboblique{!!{element}s} نوں جو $A \times B$
+وچ نیں، قطاراں تے کالماں دے جال وچ ترتیب نال رکھو:
+\[
+\begin{array}{rcccc}
+  B_{x_1} = & \{\tuple{x_1, y_1} & \tuple{x_1, y_2} & \dots & \tuple{x_1, y_m}\}\\
+  B_{x_2} = & \{\tuple{x_2, y_1} & \tuple{x_2, y_2} & \dots & \tuple{x_2, y_m}\}\\
+  \vdots & & \vdots\\
+  B_{x_n} = & \{\tuple{x_n, y_1} & \tuple{x_n, y_2} & \dots & \tuple{x_n, y_m}\}
+\end{array}
+\]
+کیوں جو سارے $x_i$ وکھ وکھ نیں، تے سارے $y_j$ وی وکھ وکھ نیں، ایس جال
+وچ کوئی دو جوڑے اکو نہیں، تے اوہناں دی گنتی $n\cdot m$ اے۔
+\end{proof}
+
+\begin{prob}
+$k$ اُتے ریاضیاتی استقرا نال وکھاؤ کہ سارے $k \ge 1$ لئی، جے $A$ دے
+$n$ !!{element}s ہون، تاں $A^k$ دے $n^k$ !!{element}s ہون گے۔
+\end{prob}
+
+\begin{ex}
+جے $A$ اک سیٹ اے، تاں $A$ اُتے \emph{لفظ}، \pnboblique{!!{element}s} دا
+کوئی وی سلسلہ اے جو $A$ توں لئے گئے ہون۔ سلسلے نوں اک $n$-ٹپل سمجھیا جا
+سکدا اے، جہدے !!{element}s، $A$ توں نیں۔ مثال لئی، جے $A = \{a, b, c\}$
+ہووے، تاں سلسلے ``$bac$'' نوں تِکّے~$\tuple{b, a, c}$ دے طور تے سمجھیا
+جا سکدا اے۔ لفظ، یعنی علامتاں دے سلسلے، کمپیوٹر سائنس وچ بنیادی اہمیت
+رکھدے نیں۔ رواج موجب، اسی \pnboblique{!!{element}s} نوں جو $A$ وچ نیں،
+لمبائی~$1$ والے سلسلے گِندے آں، تے $\emptyset$ نوں لمبائی~$0$ والا سلسلہ۔
+فیر $A$ اُتے \emph{سارے} لفظاں دا سیٹ اے:
+\[
+A^* = \{\emptyset\} \cup A \cup A^2 \cup A^3 \cup \dots
+\]
+\end{ex}
+
+\end{document}

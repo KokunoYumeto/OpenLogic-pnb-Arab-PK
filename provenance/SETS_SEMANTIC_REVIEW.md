@@ -1,0 +1,31 @@
+Historical source-aligned semantic checkpoint. Its old build/remaining-unit statements describe that checkpoint only; RELEASE_QA.json and VISUAL_QA.json give the current release disposition.
+
+# First complete source chapter: semantic checkpoint
+
+Scope: OLP-0004 chapter driver and all six child units OLP-0005 through OLP-0010. This covers the source Sets chapter, not the whole part or edition. Seven translated source units out of 722; 715 remain. Model-authored and model-reviewed; no native expert review claimed or required as a release hold.
+
+All seven source units were read in full from the verified pristine English. Scholarly Punjabi syntax passages PNB-P002 and PNB-P004 were consulted before drafting this batch. PNB-P003 informed the general lexical-contact/prose approach, but is not claimed as mathematical authority. Specialized terms remain provisional, recorded in PNB-T003 through PNB-T013. No dictionary acquisition or consultation claimed. PILAC direct retry returned HttpResponseException after earlier web timeouts; no usable dictionary bytes obtained.
+
+## Semantic/reverse-paraphrase checks
+
+- OLP-0006: inclusion means every A-member is a B-member; proper subset additionally requires inequality. Element versus subset is kept distinct, including the singleton that is both. Equality requires both inclusions. Restricted universal expands using implication; restricted existential using conjunction, not interchanged. Power set contains all subsets, and its finite size exercise remains 2^n.
+- OLP-0007: naturals include zero. Integers extend naturals, rationals extend integers, reals extend rationals; strictness examples -1 and 1/2 remain. Rational denominator is nonzero. Strings are finite sequences over an alphabet, with empty Lambda; sequence length and one-way infinite sequence remain distinct. Conditional real-line reference is retained in editable source and omitted only by the isolated typography proof when its target is outside the proof.
+- OLP-0008: union uses inclusive OR (A, B, or both), intersection uses AND; no multiplicity is added. Superset union and subset intersection examples preserve direction. Disjoint means empty intersection, not empty operands. Family union uses existence of a member containing x; family intersection uses every member. Indexed forms preserve index domain I. Difference is A-members not in B, and proper-inclusion exercise uses B minus A nonempty.
+- OLP-0009: ordered-pair equality requires corresponding first and second coordinates, not crosswise equality. Wiener-Kuratowski representation stays {{a},{a,b}}. Triples and quadruples are left-nested in ordered pairs as upstream. Product construction and all six example pairs preserved. Grid proof has disjoint B_x rows for distinct x and exactly n*m entries. Induction quantifies k>=1. Word convention preserves upstream emptyset as length-zero word, despite Lambda used in the preceding unit; this is an inherited representational convention, not silently harmonized.
+- OLP-0010: the initial extensionality claim is conditional uniqueness, not existence for every property. Both assumptions R in R and R notin R lead to contradiction. Final digression keeps the need for exact existence axioms and describes the chapter's naive approach, without adding a formal axiomatic system or claiming the problem is solved by extensionality.
+
+## Explicit structural exceptions
+
+- All original identifiers, reference targets, asset paths, environment tags and formula symbol order are retained. Audit now checks multiple optional reference arguments, olchapter's two identity arguments, oliflabeldef targets and olasset paths, closing omissions in the initial generic checker.
+- `\pnboblique{!!{element}s}` is a target-only grammatical wrapper. Original inner token key remains intact; the nominative/oblique forms are عنصر/عنصراں. No other arbitrary macro is ignored.
+- OLP-0008 adds exactly four `\text` commands. Four explanatory clauses are split around the unchanged A or A_i variable so Punjabi genitives and postpositions can stay natural. The mathematical skeleton and its order are unchanged. Two clauses define x as an element of some/every member of A, and two define x as belonging to some/every indexed A_i. These are independently reverse-paraphrased above. Audit balances full text arguments (including original element tokens), checks token inventory separately, and removes only prose spans for symbolic comparison. It is not permission to discard mathematical variables inside text arguments.
+- Linguistic TeX quote/diacritic conventions and fixed formal comments differ in treatment: prose is translated; Part/Chapter/Section comments, tags, paths and IDs remain as code. Source na\"ive becomes Punjabi wording. Ruth inside math remains a proper-name exception; other prose names transliterated. No ordinary English exposition remains in the seven translated bodies on source-aligned model review.
+- Additional mixed-script drafting errors in columns/چلدے were rejected by the script gate and corrected before current structural acceptance. This recurrence is a concrete reason to retain script checks on every batch, not infer script purity from language ratio.
+
+## Typography limits and next actions
+
+Both first proofs were built under the global mutex and every one of 11 initial pages inspected. They are internal profiles for OLP-0005--0007 only, not full-chapter readers. Visual defects are recorded in QA.json; corrected generator inputs are ready, but bounded mutex calls have found the slot occupied. No foreign-worker inspection or intervention used.
+
+In addition to corrected len(x), inspection of the original config established Setabs uses a colon and Pow uses wp rather than the proof wrapper's alternative notation. Generator now matches these. This affects only next generated proofs, not source translation hashes. A complete chapter proof must still include union/intersection/difference figures, both later sections, exact local references and all captions before being considered a release candidate.
+
+No public release is ready or claimed at this checkpoint. Continue actual construction and deterministic QA, then publish a worthwhile coherent tranche while pursuing the whole 722-unit edition.

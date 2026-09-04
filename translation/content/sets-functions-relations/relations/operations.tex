@@ -1,0 +1,73 @@
+% Part: sets-functions-relations
+% Chapter: relations
+% Section: operations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{rel}{ops}
+\olsection{تعلقاں اُتے عمل}
+
+تعلقاں نوں بدلنا یا رلانا اکثر کم آؤندا اے۔
+\olref[sfr][rel][ord]{prop:stricttopartial} وچ اسی تعلقاں دے \emph{اتحاد}
+اُتے غور کیتا سی؛ ایہ بس دو تعلقاں نوں جوڑیاں دے سیٹ سمجھ کے اوہناں
+دا اتحاد لینا اے۔ ایس طرح \olref[sfr][rel][ord]{prop:partialtostrict}
+وچ اسی تعلقاں دے نسبتی فرق اُتے غور کیتا سی۔ ہُن تعلقاں اُتے کیتے جا
+سکن والے کجھ ہور عمل ایہ نیں۔
+
+\begin{defn}\ollabel{relationoperations} 
+من لو کہ $R$، $S$ تعلق نیں، تے $A$ کوئی وی سیٹ اے۔
+
+$R$ دا \emph{اُلٹا تعلق}، $R^{-1} = \Setabs{\tuple{y, x}}{\tuple{x,
+    y} \in R}$ اے۔
+
+$R$ تے $S$ دا \emph{نسبتی حاصل ضرب}، $(R \mid S) =
+\{\tuple{x, z} : \exists y(Rxy \land Syz)\}$ اے۔
+
+$R$ دی $A$ تک \emph{تحدید}، $\funrestrictionto{R}{A}= R
+\cap A^2$ اے۔
+
+$R$ دا $A$ اُتے \emph{اطلاق}، $\funimage{R}{A} = \{y :
+(\exists x \in A)Rxy\}$ اے۔
+\end{defn}
+
+\begin{ex}
+من لو کہ $S \subseteq \Int^2$، سیٹ~$\Int$ اُتے جانشین ہون دا تعلق اے،
+یعنی $S = \Setabs{\tuple{x, y} \in \Int^2}{x + 1 = y}$، سو $Sxy$ اُدوں
+تے صرف اُدوں جدوں $x + 1 = y$۔
+
+$S^{-1}$، سیٹ $\Int$ اُتے پیشرو ہون دا تعلق اے، یعنی
+$\Setabs{\tuple{x,y}\in\Int^2}{x -1 =y}$۔
+
+$S\mid S$ ایہ اے:
+$ \Setabs{\tuple{x,y}\in\Int^2}{x + 2 =y}$
+
+$\funrestrictionto{S}{\Nat}$، سیٹ~$\Nat$ اُتے جانشین ہون دا تعلق اے۔
+
+$\funimage{S}{\{1,2,3\}}$، سیٹ $\{2, 3, 4\}$ اے۔
+\end{ex}
+
+\begin{defn}[تعدی تکمیل]من لو کہ $R \subseteq A^2$ دو رکنی تعلق اے۔
+
+تعلق~$R$ دی \emph{تعدی تکمیل}، $R^+ = \bigcup_{0 < n \in
+\Nat} R^n$ اے، جتھے اسی بازگشتی طور تے $R^1 = R$ تے $R^{n+1} = R^n
+\mid R$ تعریف کردے آں۔
+
+$R$ دی \emph{انعکاسی تعدی تکمیل}، $R^* = R^+ \cup
+\Id{A}$ اے۔
+\end{defn}
+
+\begin{ex}
+جانشین ہون دا تعلق $S \subseteq \Int^2$ لو۔ $S^2xy$ اُدوں تے صرف
+اُدوں جدوں $x + 2 = y$، $S^3xy$ اُدوں تے صرف اُدوں جدوں $x + 3 = y$،
+وغیرہ۔ سو $S^+xy$ اُدوں تے صرف اُدوں جدوں $x + n = y$ کسے
+$n \geq 1$ لئی ہووے۔ ہور لفظاں وچ، $S^+xy$ اُدوں تے صرف اُدوں جدوں
+$x < y$، تے $S^*xy$ اُدوں تے صرف اُدوں جدوں $x \le y$۔
+\end{ex}
+
+\begin{prob}
+وکھاؤ کہ $R$ دی تعدی تکمیل واقعی متعدی اے۔
+\end{prob}
+
+\end{document}

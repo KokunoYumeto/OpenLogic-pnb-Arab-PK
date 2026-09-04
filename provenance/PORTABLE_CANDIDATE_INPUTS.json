@@ -1,0 +1,306 @@
+{
+  "schema": "pnb-sets-reader-inputs/1",
+  "source_units": [
+    {
+      "unit_id": "OLP-0004",
+      "source_path": "content/sets-functions-relations/sets/sets.tex",
+      "source_sha256": "98a8964a95d72ab3004decdef3ee74f1dd1f221dd06dfc0e6d44eff52104f277",
+      "translation_sha256": "ea5e38050032621910376183edf8fbe290bb9fafa91e621844e914cc74fb7fc9"
+    },
+    {
+      "unit_id": "OLP-0005",
+      "source_path": "content/sets-functions-relations/sets/basics.tex",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "translation_sha256": "8796af2603ecd61ca61d0e39ad471f7c6c15acba43acda2de7c65ffabdd7dd64"
+    },
+    {
+      "unit_id": "OLP-0006",
+      "source_path": "content/sets-functions-relations/sets/subsets.tex",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "translation_sha256": "8ece29ab14cc154397ed8f4ad45403cb79abd1de49a205fc57422454b61e7b90"
+    },
+    {
+      "unit_id": "OLP-0007",
+      "source_path": "content/sets-functions-relations/sets/important-sets.tex",
+      "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
+      "translation_sha256": "0104ebc3c8a1cffbdf84a703ceccc194f6d8d0a2c53ff2e1e3c8d35798628e7a"
+    },
+    {
+      "unit_id": "OLP-0008",
+      "source_path": "content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_sha256": "9e8d24edf6ff844d6fe494a4c6711f0627927e7f8b64fb9df7e7b87ba76ad048"
+    },
+    {
+      "unit_id": "OLP-0009",
+      "source_path": "content/sets-functions-relations/sets/pairs-and-products.tex",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_sha256": "c92adddb9fee4970a216a49b672dccbf17a727add81babe234b6feea798722fa"
+    },
+    {
+      "unit_id": "OLP-0010",
+      "source_path": "content/sets-functions-relations/sets/russells-paradox.tex",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "translation_sha256": "d2307bc120b306968703011abbd6036b46f8e4dfcbda58a387bec9b3666e8a5a"
+    }
+  ],
+  "body_sections": 6,
+  "chapter_driver_count": 1,
+  "reader_coverage_unit_ids": [
+    "OLP-0004",
+    "OLP-0005",
+    "OLP-0006",
+    "OLP-0007",
+    "OLP-0008",
+    "OLP-0009",
+    "OLP-0010"
+  ],
+  "references": [
+    {
+      "unit": "unions-and-intersections",
+      "target": "sfr:set:bas:sec",
+      "kind": "حصہ"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "target": "sfr:set:uni:fig:union",
+      "kind": "شکل"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "target": "sfr:set:uni:fig:intersection",
+      "kind": "شکل"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "target": "sfr:set:uni:difference",
+      "kind": "شکل"
+    },
+    {
+      "unit": "pairs-and-products",
+      "target": "sfr:set:pai:wienerkuratowski",
+      "kind": "تعریف"
+    }
+  ],
+  "label_kinds": {
+    "sfr:set:bas:sec": "حصہ",
+    "sfr:set:sub:sec": "حصہ",
+    "sfr:set:sub:forallxina": "قضیہ",
+    "sfr:set:imp:sec": "حصہ",
+    "sfr:set:uni:sec": "حصہ",
+    "sfr:set:uni:fig:union": "شکل",
+    "sfr:set:uni:fig:intersection": "شکل",
+    "sfr:set:uni:difference": "شکل",
+    "sfr:set:pai:sec": "حصہ",
+    "sfr:set:pai:wienerkuratowski": "تعریف",
+    "sfr:set:pai:cardnmprod": "قضیہ",
+    "sfr:set:rus:sec": "حصہ",
+    "sfr:set:rus:thm:russells-paradox": "مسئلہ"
+  },
+  "assets": [
+    {
+      "source_path": "assets/diagrams/union.tikz",
+      "bytes": 5031,
+      "sha256": "f9ca5508f0bac1f848271027572c4a59a6caba3db1f2c31bdd844f5bcea3e22e"
+    },
+    {
+      "source_path": "assets/diagrams/intersection.tikz",
+      "bytes": 3937,
+      "sha256": "d95d0e70278ddbdc46e76f94930b6f29aedec8b91a3550338e553ba35067464c"
+    },
+    {
+      "source_path": "assets/diagrams/difference.tikz",
+      "bytes": 4614,
+      "sha256": "c4214baef02f0261773a29b793a8221144fbe1d022ef1e753054c56080e4cdfc"
+    }
+  ],
+  "conditionals": [
+    {
+      "unit": "important-sets",
+      "label": "sfr:arith:real:realline",
+      "included_branch": "no",
+      "omitted_sha256": "4ba3d20fb699716d8bf5cbc93e65eb4575265f1d55700267b5006c1037ee382b",
+      "reason": "Exact source conditional evaluated against this complete chapter reader, not the whole edition."
+    },
+    {
+      "unit": "russells-paradox",
+      "label": "cumul:::part",
+      "included_branch": "no",
+      "omitted_sha256": "505ec593ea32e77d6c3c1a7c12e19c310e5d5c2adfbd7b5784b4525aa05cf145",
+      "reason": "Exact source conditional evaluated against this complete chapter reader, not the whole edition."
+    }
+  ],
+  "layout_overrides": [
+    {
+      "unit": "unions-and-intersections",
+      "formula": "\\{a, b, c \\} \\cap \\{a, b, d \\} = \\{a, b\\}",
+      "change": "inline to display; terminal punctuation retained",
+      "reason": "Naskh first complete build overfull hbox 37.1751pt; source translation bytes unchanged"
+    }
+  ],
+  "rtl_set_conditions": [
+    {
+      "unit": "basics",
+      "representative": "x",
+      "original_condition": "x \\text{ رچرڈ دی بھین یا اوہدا بھرا اے}",
+      "condition_sha256": "0c17017516348c69587ad6d106920bb98096dc6d61016f82ac97c52d33373715",
+      "formal_fragments_in_original_order": [
+        "x"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "basics",
+      "representative": "x",
+      "original_condition": "x\\text{ کامل اے تے }0 \\leq x \\leq 10",
+      "condition_sha256": "4a688948ba63f08d1ec46be83ccd786a881203820219555372ba84e3fd812dea",
+      "formal_fragments_in_original_order": [
+        "x",
+        "0 \\leq x \\leq 10"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "important-sets",
+      "representative": "\\nicefrac{m}{n}",
+      "original_condition": "m, n \\in \\Int\\text{ تے }n \\neq 0",
+      "condition_sha256": "9f47cc49e6b17493c88a1c3e48627a60b37098096eda6617ba752a76f887a94a",
+      "formal_fragments_in_original_order": [
+        "m, n \\in \\Int",
+        "n \\neq 0"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "x \\text{، سیٹ } A\\text{ دے کسے عنصر دا عنصر اے}",
+      "condition_sha256": "d8c2d37e1af66917b7b512668d0d77879e9fcedd83ff1a551357511e6a79e7cd",
+      "formal_fragments_in_original_order": [
+        "x",
+        "A"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "\\text{کوئی } B \\in A\n  \\text{ ایہو جہا اے کہ } x \\in B",
+      "condition_sha256": "ba646689761450873edadcae4df1f1df89dd96d41c1cd00b81d721d7ecd40b1a",
+      "formal_fragments_in_original_order": [
+        "B \\in A",
+        "x \\in B"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "x \\text{، سیٹ } A\\text{ دے ہر عنصر وچ اے}",
+      "condition_sha256": "747fdbb104547ae8a0fd3df7637cb80bc50526e0011d29b79eb48feac8e4e39b",
+      "formal_fragments_in_original_order": [
+        "x",
+        "A"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "\\text{ہر } B \\in A, x \\in B",
+      "condition_sha256": "7b47bd9a8242c12daca62709e1917e45de594cff07f8cd6cc2a10bd9158f9ac3",
+      "formal_fragments_in_original_order": [
+        "B \\in A, x \\in B"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "x \\text{، سیٹاں } A_i\\text{ وچوں کسے اک وچ شامل اے}",
+      "condition_sha256": "9b6a2260798c5e5cdc0a245d2d49f67fe253196d3c6ba2443dae7f54686b1ac4",
+      "formal_fragments_in_original_order": [
+        "x",
+        "A_i"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "x \\text{، سیٹاں } A_i\\text{ وچوں ہر اک وچ شامل اے}",
+      "condition_sha256": "33160e3c55267de27686d90f9ef80de5c238eff6a27007f39afe8fafb42df188",
+      "formal_fragments_in_original_order": [
+        "x",
+        "A_i"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "unions-and-intersections",
+      "representative": "x",
+      "original_condition": "x\\in A \\text{ تے } x \\notin B",
+      "condition_sha256": "2350bf1dcf508294c21c769ae6907bf7d82303df1db485553267bd881e790d09",
+      "formal_fragments_in_original_order": [
+        "x\\in A",
+        "x \\notin B"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    },
+    {
+      "unit": "pairs-and-products",
+      "representative": "\\tuple{x, y}",
+      "original_condition": "x \\in A \\text{ تے } y \\in B",
+      "condition_sha256": "2234b0286353ada2944f43339d50f64f91da8f995ec7ad619e54c1db6f1662fe",
+      "formal_fragments_in_original_order": [
+        "x \\in A",
+        "y \\in B"
+      ],
+      "rendering": "one RTL text clause with explicitly LTR formal islands"
+    }
+  ],
+  "number_direction": "Section and figure presentation numbers isolated LTR; stored label numbers unchanged.",
+  "emphasis_rendering": "Bold upright for native Arabic-script emphasis; no unavailable italic fallback. Nastaliq bold is explicitly synthetic weight.",
+  "nastaliq_font_sha256": "41d67104d4021b50691635c3b693bf20ab19290a9361c32e3ddcb3405278f8a5",
+  "builder_sha256": "f9b75bb667be6c46db17817e4d8123b9dbced8a8049f7ebce9a15f8e3e26432c",
+  "preamble_sha256": "d7d7c99cc277df864a1c919b11127a6e72dec57cd6e10308121fee7a76447f59",
+  "status": "tex_generated_no_pdf_acceptance",
+  "fonts": [
+    {
+      "file": "NotoNaskhArabic-Regular.ttf",
+      "bytes": 291980,
+      "sha256": "c9a039ce48a477243c1eb7d561b13de115cfd651d8a83fa42e2f4d63c2e11b00"
+    },
+    {
+      "file": "NotoNaskhArabic-Bold.ttf",
+      "bytes": 325232,
+      "sha256": "d328b92b6bb762fd61d6438dddb7b00dd0663115afb292a358101808efe117b2"
+    },
+    {
+      "file": "NotoSerif-Regular.ttf",
+      "bytes": 712444,
+      "sha256": "19e72cd8d595fae5bd74a5206f5d938512e1183d4fed7abb1ec1be1d7efa5f88"
+    },
+    {
+      "file": "NotoSerif-Bold.ttf",
+      "bytes": 747144,
+      "sha256": "96656aa5cec8f1d6fd0e804c1fad397e1a1cfa082e6642124e0bda68cd8363ce"
+    },
+    {
+      "file": "NotoSerif-Italic.ttf",
+      "bytes": 756796,
+      "sha256": "749e80e313ef711f9373c6cce17c72297ef05490b3dcda7967d1d5d90bf1183f"
+    },
+    {
+      "file": "NotoSerif-BoldItalic.ttf",
+      "bytes": 779236,
+      "sha256": "c710c5b9cf354ae46e7a10472a08019b28220fafeb5887a482a76856f8f6fc0b"
+    },
+    {
+      "file": "NotoNastaliqUrdu-Regular.ttf",
+      "bytes": 1033544,
+      "sha256": "41d67104d4021b50691635c3b693bf20ab19290a9361c32e3ddcb3405278f8a5"
+    }
+  ],
+  "acceptance": "Unbuilt work in progress; not the source of released PDF bytes."
+}

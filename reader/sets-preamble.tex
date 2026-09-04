@@ -1,0 +1,98 @@
+% Punjabi Shahmukhi adaptation. Original mathematical macro meanings: OpenLogic,
+% revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0, CC BY 4.0.
+\documentclass[12pt,a4paper,oneside,openany]{book}
+\usepackage[margin=23mm,headheight=16pt]{geometry}
+\usepackage{amsmath,amssymb,nicefrac}
+\usepackage{tikz,xcolor}
+\colorlet{oldiagcolorA}{black}
+\colorlet{oldiagcolorB}{gray}
+\definecolor{oldiagcolorC}{HTML}{a81c21}
+\usepackage{fontspec}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+\setotherlanguage{arabic}
+@@BASEFONT@@
+@@FONT@@
+@@SUPPORTFONT@@
+\usepackage{setspace,needspace}
+\hypersetup{pdftitle={OpenLogic: Sets - Punjabi Shahmukhi},pdfauthor={Open Logic Project; machine translation by Codex},pdfsubject={Provisional Punjabi Shahmukhi translation; seven source units, not the complete edition}}
+\setstretch{@@LEADING@@}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+% Arabic scripts do not have a native italic style in these families.
+% Preserve emphasis with bold upright rather than silently losing font shape.
+\renewcommand{\emph}[1]{{\upshape\bfseries #1}}
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\binoppenalty=10000
+\relpenalty=10000
+\emergencystretch=3em
+\pagestyle{plain}
+\let\phi\varphi
+\newcommand{\Setabs}[2]{\{#1:#2\}}
+\newcommand{\Pow}[1]{\wp(#1)}
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\Rat}{\mathbb{Q}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\PosInt}{\mathbb{Z}^{+}}
+\newcommand{\Bin}{\mathbb{B}}
+\newcommand{\len}[1]{\operatorname{len}(#1)}
+\newcommand{\tuple}[1]{\langle #1\rangle}
+\newcommand{\lif}{\to}
+\newenvironment{tagblock}[1]{}{}
+\newenvironment{explain}{}{}
+\newenvironment{digress}{\par}{\par}
+\newcounter{statement}[section]
+\renewcommand{\thestatement}{\thesection.\arabic{statement}}
+\newcommand{\pnbstatement}[2]{\par\Needspace{4\baselineskip}\refstepcounter{statement}\textbf{#1 \textenglish{\thestatement}۔ #2}\par\nobreak}
+\newenvironment{defn}[1][]{\pnbstatement{تعریف}{#1}}{\par}
+\newenvironment{ex}[1][]{\pnbstatement{مثال}{#1}}{\par}
+\newenvironment{prop}[1][]{\pnbstatement{قضیہ}{#1}}{\par}
+\newenvironment{thm}[1][]{\pnbstatement{مسئلہ}{#1}}{\par}
+\newenvironment{prob}{\pnbstatement{مشق}{}}{\par}
+\newenvironment{proof}{\par\Needspace{4\baselineskip}\textbf{ثبوت۔}\par\nobreak}{\hfill\(\square\)\par}
+\newcommand{\pnbref}[2]{#1~\textenglish{\ref{#2}}}
+\renewcommand{\chaptername}{باب}
+\renewcommand{\figurename}{شکل}
+\renewcommand{\contentsname}{فہرست}
+\makeatletter
+\def\@seccntformat#1{\textenglish{\csname the#1\endcsname}\quad}
+\renewcommand{\fnum@figure}{\figurename~\textenglish{\thefigure}}
+\makeatother
+\begin{document}
+\begin{titlepage}
+\begin{Arabic}
+\centering
+\vspace*{18mm}
+{\Huge\bfseries سیٹ\par}
+\vspace{8mm}
+{\LARGE اوپن لاجک\par}
+\vspace{5mm}
+{\Large پنجابی شاہ مکھی ترجمہ\par}
+\vspace{16mm}
+ایس جلد وچ سیٹاں دا مکمل باب اے۔ ایہ پوری کتاب دا ترجمہ نہیں۔
+\par
+ایہ مشینی ترجمہ اے۔ خاص ریاضیاتی اصطلاحاں وچوں کجھ عارضی نیں؛
+اوہناں دے ماخذ تے فیصلے نال دتے گئے ریکارڈ وچ ویکھے جا سکدے نیں۔
+\vfill
+\end{Arabic}
+\begin{center}
+Open Logic Project\par
+Source revision \texttt{9620cc73f9c8e0ad003c514a5d3748f29611c4c0}\par
+Punjabi Shahmukhi adaptation by Codex. Independent machine translation.\par
+Source coverage: OLP-0004--OLP-0010 (7 of 722 source units).\par
+Typeface profile: @@PROFILE@@.\par
+\href{https://openlogicproject.org/}{openlogicproject.org}\par
+\href{https://github.com/KokunoYumeto/OpenLogic-translations}{OpenLogic translations hub}\par
+CC BY 4.0. Translation and layout modified; no upstream endorsement implied.
+\end{center}
+\end{titlepage}
+\mainmatter
+\begin{Arabic}
+\chapter{@@CHAPTER@@}\label{sfr:set::chap}
+@@BODY@@
+\end{Arabic}
+\end{document}

@@ -1,0 +1,266 @@
+{
+  "schema": "pnb-audit-regression/1",
+  "auditor_sha256": "dc40c562e43b34946c2b1ad436f9f01be02572efc5b52611bbf1351a3a237c7e",
+  "units": [
+    {
+      "unit_id": "OLP-0001",
+      "target_sha256": "5aa154739a16723d0f0f75198c094d5b5ad81bbff1b015c552d44a9ba13ced57",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0002",
+      "target_sha256": "2aa17a6d55421a2a3601c7499bd7c712e6b1a0a98075393dff93b05684febdea",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0003",
+      "target_sha256": "c9ebad314c001c40a8e30b1d4ccdfbf19af98188e8833dc25e6744597a6055cd",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0004",
+      "target_sha256": "ea5e38050032621910376183edf8fbe290bb9fafa91e621844e914cc74fb7fc9",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0005",
+      "target_sha256": "8796af2603ecd61ca61d0e39ad471f7c6c15acba43acda2de7c65ffabdd7dd64",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0006",
+      "target_sha256": "8ece29ab14cc154397ed8f4ad45403cb79abd1de49a205fc57422454b61e7b90",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0007",
+      "target_sha256": "0104ebc3c8a1cffbdf84a703ceccc194f6d8d0a2c53ff2e1e3c8d35798628e7a",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0008",
+      "target_sha256": "9e8d24edf6ff844d6fe494a4c6711f0627927e7f8b64fb9df7e7b87ba76ad048",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0009",
+      "target_sha256": "c92adddb9fee4970a216a49b672dccbf17a727add81babe234b6feea798722fa",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0010",
+      "target_sha256": "d2307bc120b306968703011abbd6036b46f8e4dfcbda58a387bec9b3666e8a5a",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0011",
+      "target_sha256": "7c7c02d621c5ead6db37a7dc40427beb195d7ab7f5a9ff5b6e764730b9da0bfb",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0012",
+      "target_sha256": "3479f4d5797e0799d511b21901c4b7d1494eaa4c2a4fc7cffb0450f06661f171",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0013",
+      "target_sha256": "b5a1a3f3b98bcddb5937ae4a847bd25fc1c256d0a457e6fddee42753b6edee37",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0014",
+      "target_sha256": "4f5b9cc6e72d53009700044634609f82cf2f99ff14b12a865626d95d975dc95b",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0015",
+      "target_sha256": "ed5d3cad0cc09a773a6957a1e7e5b3d6981c4adbbd11b241a7c57367584b29b9",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0016",
+      "target_sha256": "b957b557e39645cb45ebec7d1220b261381561434389eb32c0e0f82670a80317",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0017",
+      "target_sha256": "ce38dee00c8b2fc272360e1b89cdc26881c93638f4dd70cb7578c1c87806fc81",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0018",
+      "target_sha256": "dbbed8326ed97abd2258641294a0d32401e89d5665fd218d6cd435e2f5589fce",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0019",
+      "target_sha256": "69d68cfcfc731e99de12763278ba5ead52e8c9a237a40f6af53622279a1c25af",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0020",
+      "target_sha256": "22a4487bc1db8672454968709cca096b76f3d6d548005ec9cff4ca2ad6c85b61",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    },
+    {
+      "unit_id": "OLP-0021",
+      "target_sha256": "246ad4e87f6a2022a077fd3f8626dff5a864adcd9a66c4a7a396637aad8fede1",
+      "checks": {
+        "source_hash": true,
+        "blocks": true,
+        "commands": true,
+        "protected": true,
+        "math": true,
+        "braces": true
+      }
+    }
+  ],
+  "intertext_prose_translation_allowed": true,
+  "intertext_formula_change_rejected": true,
+  "intertext_formula_swap_rejected": true,
+  "graph_edge_reversal_rejected": true,
+  "original_tikz_bodies_byte_identical": true,
+  "all_passed": true,
+  "original_tree_tikz_byte_identical": true,
+  "nested_text_formula_mutation_rejected": true
+}

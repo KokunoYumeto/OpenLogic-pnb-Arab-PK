@@ -1,0 +1,6 @@
+output/rebuild/
+*.aux
+*.log
+*.fls
+*.out
+__pycache__/

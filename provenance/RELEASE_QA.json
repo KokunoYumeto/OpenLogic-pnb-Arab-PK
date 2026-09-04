@@ -1,0 +1,54 @@
+{
+  "schema": "pnb-sets-release/1",
+  "version": "0.1.0",
+  "full_edition_complete": false,
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_units_total": 722,
+  "reader_units": [
+    "OLP-0004",
+    "OLP-0005",
+    "OLP-0006",
+    "OLP-0007",
+    "OLP-0008",
+    "OLP-0009",
+    "OLP-0010"
+  ],
+  "sections": 6,
+  "original_diagrams": 3,
+  "resolved_local_references": 5,
+  "source_conditionals": 2,
+  "source_aligned_blocks": 121,
+  "changed_linguistic_blocks": 86,
+  "changed_blocks_without_canon": 0,
+  "pdfs": [
+    {
+      "name": "OpenLogic-Sets-pnb-Arab-PK-naskh-v0.1.0.pdf",
+      "pages": 12,
+      "bytes": 127664,
+      "sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc"
+    },
+    {
+      "name": "OpenLogic-Sets-pnb-Arab-PK-nastaliq-v0.1.0.pdf",
+      "pages": 16,
+      "bytes": 183163,
+      "sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50"
+    }
+  ],
+  "engine_identity": "This is XeTeX, Version 3.141592653-2.6-0.999998 (MiKTeX 26.5) (preloaded format=xelatex 2026.8.22)  3 SEP 2026 21:20",
+  "checks": {
+    "source_aligned_semantic_review": true,
+    "reverse_paraphrase_samples": true,
+    "strict_structural_audit": true,
+    "all_pages_visually_inspected": true,
+    "same_toolchain_three_pass_byte_reproduction": true,
+    "tagged_pdf": false,
+    "independent_human_review_claimed": false
+  },
+  "limits": [
+    "Specialized terminology remains provisional; acquired native canon is prose/syntax evidence, not concept attestation.",
+    "Only Sets chapter reader accepted; other source-aligned translations are work in progress.",
+    "Full 722-unit reader and semantic HTML not complete.",
+    "Different toolchain versions require fresh reproduction and visual QA."
+  ],
+  "semantic_review": "SETS_SEMANTIC_REVIEW.md"
+}

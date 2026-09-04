@@ -1,0 +1,66 @@
+% Part: sets-functions-relations
+% Chapter: sets
+% Section: important-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{set}{imp}
+\olsection{کجھ اہم سیٹ}
+
+\begin{ex}
+ساڈا واسطہ زیادہ تر اوہناں سیٹاں نال پئے گا جیہناں دے !!{element}s ریاضی
+دیاں شےواں نیں۔ ایہو جہے چار سیٹ اینے اہم نیں کہ اوہناں دے خاص ناں نیں:
+\begin{multline*}
+    \Nat = \{0, 1, 2, 3, \ldots\} \\
+    \shoveright{\text{قدرتی اعداد دا سیٹ}}\\
+    \shoveleft{\Int = \{\ldots, -2, -1, 0, 1, 2, \ldots\}} \\
+    \shoveright{\text{صحیح اعداد دا سیٹ}}\\
+    \shoveleft{\Rat = \Setabs{\nicefrac{m}{n}}{m, n \in \Int\text{ تے }n \neq 0}}\\
+    \shoveright{\text{ناطق اعداد دا سیٹ}}\\
+    \shoveleft{\Real = (-\infty, \infty)}\\
+    \text{حقیقی اعداد دا سیٹ (تسلسل)}
+\end{multline*}
+ایہ سارے \emph{لامتناہی} سیٹ نیں، یعنی ہر اک دے !!{element}s دی گنتی
+لامتناہی اے۔
+
+ایہناں سیٹاں وچ اگے ودھدیاں، اسی اپنے کول \emph{ہور} عدد شامل کردے آں۔ ایہ
+صاف ہونا چاہیدا اے کہ $\Nat \subseteq \Int \subseteq \Rat \subseteq \Real$:
+آخر ہر قدرتی عدد صحیح عدد اے؛ ہر صحیح عدد ناطق عدد اے؛ تے ہر ناطق عدد
+حقیقی عدد اے۔ ایس طرح ایہ وی صاف ہونا چاہیدا اے کہ
+$\Nat \subsetneq \Int \subsetneq \Rat$، کیوں جو $-1$ صحیح عدد اے پر
+قدرتی عدد نہیں، تے $\nicefrac{1}{2}$ ناطق عدد اے پر صحیح عدد نہیں۔ ایہ گل
+اینی صاف نہیں کہ $\Rat \subsetneq \Real$، یعنی کجھ حقیقی عدد ایہو جہے
+نیں جو ناطق نہیں\oliflabeldef{sfr:arith:real:realline}{، پر اسی
+\olref[arith][real]{realline} وچ ایس ول مُڑ آواں گے}{}۔
+
+کدی کدی اسی مثبت صحیح اعداد دا سیٹ $\PosInt = \{1, 2, 3, \dots\}$ تے
+صرف پہلے دو قدرتی اعداد والا سیٹ $\Bin = \{0, 1\}$ وی ورتاں گے۔
+\end{ex}
+
+\begin{tagblock}{compsci}
+\begin{ex}[لڑیاں]
+اک ہور دلچسپ مثال سیٹ $A^{*}$ اے، جہڑا حرفاں دے مجموعے $A$ اُتے
+\emph{محدود لڑیاں} دا سیٹ اے: $A$ دے عنصراں دا کوئی وی محدود سلسلہ، $A$ اُتے
+اک لڑی اے۔ اسی \emph{خالی لڑی $\Lambda$} نوں وی $A$ اُتے بنن والیاں لڑیاں وچ
+شامل کردے آں، ہر حرفی مجموعے~$A$ لئی۔ مثال لئی،
+\begin{multline*}
+\Bin^*
+=\{\Lambda,0,1,00,01,10,11,\\
+000,001,010,011,100,101,110,111,0000,\ldots\}.
+\end{multline*}
+جے $x=x_{1}\ldots x_{n}\in A^{*}$ اک لڑی ہووے جہدے وچ $n$ ``حرف'' ہون،
+جو $A$ توں لئے گئے ہون، تاں اسی آکھدے آں کہ لڑی دی \emph{لمبائی}~$n$ اے تے
+$\len{x}=n$ لکھدے آں۔
+\end{ex}
+\end{tagblock}
+
+\begin{ex}[لامتناہی سلسلے]
+کِسے وی سیٹ $A$ لئی اسی اوہدے \pnboblique{!!{element}s} دے لامتناہی سلسلیاں
+دا سیٹ~$A^\omega$ وی ویکھ سکدے آں، جتھے عنصر $A$ دے نیں۔ اک لامتناہی
+سلسلہ $a_1a_2a_3a_4\dots$ شےواں دی اک پاسے نوں لامتناہی فہرست اے، جہدی ہر
+شے $A$ دا !!a{element} اے۔
+\end{ex}
+
+\end{document}

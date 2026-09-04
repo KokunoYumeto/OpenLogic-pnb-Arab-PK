@@ -1,0 +1,178 @@
+% Part: sets-functions-relations
+% Chapter: sets
+% Section: unions-and-intersections
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{set}{uni}
+\olsection{اتحاد تے اشتراک}
+
+\begin{explain}
+\olref[sfr][set][bas]{sec} وچ اسی خاصیت راہیں سیٹاں دی تعریف متعارف کرائی
+سی، یعنی $\Setabs{x}{\phi(x)}$ دی صورت والیاں تعریفاں۔ ایتھے اسی کوئی
+خاصیت~$\phi$ ورتدے آں، تے ایس خاصیت وچ اوہناں سیٹاں دا ذکر ہو سکدا اے
+جنہاں دی تعریف اسی پہلاں کر چکے آں۔ مثال لئی، جے $A$ تے~$B$ سیٹ نیں،
+تاں سیٹ $\Setabs{x}{x \in A \lor x \in B}$ اوہناں ساریاں شےواں دا بنیا اے
+جو $A$ یا~$B$ دے !!{element}s نیں؛ یعنی ایہ اوہ سیٹ اے جو $A$ تے~$B$ دے
+\pnboblique{!!{element}s} نوں اکٹھے کردا اے۔ اسی ایہنوں \olref{fig:union}
+وانگ شکل وچ ویکھ سکدے آں، جتھے اُبھاریا ہویا علاقہ دوہاں سیٹاں $A$ تے~$B$
+دے \pnboblique{!!{element}s} نوں اکٹھے ظاہر کردا اے۔
+
+\begin{figure}
+  \olasset{assets/diagrams/union.tikz}
+  \caption{دو سیٹاں دا اتحاد $A \cup B$، $A$ تے~$B$ دے
+   \pnboblique{!!{element}s} نوں اکٹھے لے کے بنن والا سیٹ اے۔}
+  \ollabel{fig:union}
+\end{figure}
+
+سیٹاں اُتے ایہ عمل---اوہناں نوں اکٹھا کرنا---بہت فائدےمند تے عام اے، ایس
+لئی اسی ایہنوں اک رسمی ناں تے اک علامت دیندے آں۔
+\end{explain}
+
+\begin{defn}[اتحاد]
+دو سیٹاں $A$ تے $B$ دا \emph{اتحاد}، جہنوں $A \cup B$ لکھدے نیں،
+اوہناں ساریاں شےواں دا سیٹ اے جو $A$، $B$ یا دوہاں دے !!{element}s نیں۔
+\[
+A \cup B = \Setabs{x}{x \in A \lor x \in B}
+\]
+\end{defn}
+
+\begin{ex}
+کیوں جو \pnboblique{!!{element}s} نوں وار وار گِنن دا کوئی فرق نہیں پیندا،
+دو ایہو جہے سیٹاں دا اتحاد جنہاں دا !!a{element} سانجھا ہووے، اوس
+!!{element} نوں صرف اک واری رکھدا اے؛ مثال لئی،
+$\{ a, b, c\} \cup \{ a, 0, 1\} = \{a, b, c, 0, 1\}$۔
+
+کِسے سیٹ تے اوہدے کِسے ذیلی سیٹ دا اتحاد بس وڈا سیٹ ای اے:
+$\{a, b, c \} \cup \{a \} = \{a, b, c\}$۔
+
+سیٹ دا خالی سیٹ نال اتحاد اوہی سیٹ اے:
+$\{a, b, c \} \cup \emptyset = \{a, b, c \}$۔
+\end{ex}
+
+\begin{prob}
+ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں $A \cup B = B$ اے۔
+\end{prob}
+
+\begin{explain}
+اسی اتحاد دے ``دوہرے ہم صورت'' عمل اُتے وی غور کر سکدے آں۔ ایہ اوہ عمل
+اے جو سارے اوہناں \pnboblique{!!{element}s} دا سیٹ بناندا اے جو
+$A$ دے !!{element}s وی ہون تے $B$ دے !!{element}s وی۔ ایس عمل نوں
+\emph{اشتراک} آکھدے نیں، تے ایہنوں \olref{fig:intersection} وانگ وکھایا
+جا سکدا اے۔
+\begin{figure}
+  \olasset{assets/diagrams/intersection.tikz}
+  \caption{دو سیٹاں دا اشتراک $A \cap B$ اوہناں دے سانجھے
+    \pnboblique{!!{element}s} دا سیٹ اے۔}
+  \ollabel{fig:intersection}
+\end{figure}
+\end{explain}
+
+\begin{defn}[اشتراک]
+دو سیٹاں $A$ تے $B$ دا \emph{اشتراک}، جہنوں $A \cap B$ لکھدے نیں،
+اوہناں ساریاں شےواں دا سیٹ اے جو $A$ تے~$B$ دوہاں دے !!{element}s نیں۔
+\[
+A \cap B = \Setabs{x}{x \in A \land x \in B}
+\]
+دو سیٹاں نوں \emph{بے سانجھ} آکھدے نیں جے اوہناں دا اشتراک خالی ہووے۔
+ایس دا مطلب اے کہ اوہناں دے کوئی !!{element}s سانجھے نہیں۔
+\end{defn}
+
+\begin{ex}
+جے دو سیٹاں دے کوئی !!{element}s سانجھے نہ ہون، تاں اوہناں دا اشتراک
+خالی اے: $\{ a, b, c\} \cap \{ 0, 1\} = \emptyset$۔
+
+جے دو سیٹاں دے کجھ !!{element}s سانجھے ہون، تاں اوہناں دا اشتراک اوہناں
+ساریاں دا سیٹ اے: $\{a, b, c \} \cap \{a, b, d \} = \{a, b\}$۔
+
+کِسے سیٹ دا اوہدے کِسے ذیلی سیٹ نال اشتراک بس چھوٹا سیٹ ای اے:
+$\{a, b, c\} \cap \{a, b\} = \{a, b\}$۔
+
+کِسے وی سیٹ دا خالی سیٹ نال اشتراک خالی اے:
+$\{a, b, c \} \cap \emptyset = \emptyset$۔
+\end{ex}
+
+\begin{prob}
+پوری منطقی پابندی نال ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں
+$A \cap B = A$ اے۔
+\end{prob}
+
+\begin{explain}
+اسی دو توں ودھ سیٹاں دا اتحاد یا اشتراک وی بنا سکدے آں۔ عام صورت وچ ایس
+لئی اک سوہنا طریقہ ایہ اے: منّ لو تسیں اوہناں سارے سیٹاں نوں اکو سیٹ
+وچ اکٹھا کر لیندے او جنہاں دا اتحاد (یا اشتراک) بنانا اے۔ فیر اسی اپنے
+اصل سیٹاں دے اتحاد نوں اوہناں ساریاں شےواں دے سیٹ دے طور تے متعین کر
+سکدے آں جو اکٹھے کیتے سیٹ دے گھٹ توں گھٹ اک !!{element} وچ ہون، تے
+اشتراک نوں اوہناں ساریاں شےواں دے سیٹ دے طور تے جو اوہدے ہر !!{element}
+وچ ہون۔
+\end{explain}
+
+\begin{defn}
+جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcup A$، سیٹ~$A$ دے
+\pnboblique{!!{element}s} دے \pnboblique{!!{element}s} دا سیٹ اے:
+\begin{align*}
+\bigcup A & = \Setabs{x}{x \text{، سیٹ } A\text{ دے کسے !!a{element} دا عنصر اے}},
+\text{ یعنی،}\\
+& = \Setabs{x}{\text{کوئی } B \in A
+  \text{ ایہو جہا اے کہ } x \in B}
+\end{align*}
+\end{defn}
+
+\begin{defn}
+جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcap A$ اوہناں شےواں دا سیٹ اے جو
+$A$ دے سارے عنصراں وچ سانجھیاں نیں:
+\begin{align*}
+\bigcap A & = \Setabs{x}{x \text{، سیٹ } A\text{ دے ہر !!{element} وچ اے}},
+\text{ یعنی،}\\
+ & = \Setabs{x}{\text{ہر } B \in A, x \in B}
+\end{align*}
+\end{defn}
+
+\begin{ex}
+منّ لو کہ $A = \{ \{ a, b \}, \{ a, d, e \}, \{ a, d \} \}$۔
+فیر $\bigcup A = \{ a, b, d, e \}$ تے $\bigcap A = \{ a \}$ اے۔
+\end{ex}
+\begin{prob}
+	وکھاؤ کہ جے $A$ اک سیٹ اے تے $A \in B$، تاں $A \subseteq \bigcup B$ اے۔
+\end{prob}
+
+اسی سیٹاں دے سلسلے $A_1$، $A_2$، \dots لئی وی ایہو کم کر سکدے آں:
+\begin{align*}
+\bigcup_i A_i & = \Setabs{x}{x \text{، سیٹاں } A_i\text{ وچوں کسے اک وچ شامل اے}}\\
+\bigcap_i A_i & = \Setabs{x}{x \text{، سیٹاں } A_i\text{ وچوں ہر اک وچ شامل اے}}.
+\end{align*}
+
+جدوں ساڈے کول سیٹاں دا \emph{اشاریہ} ہووے، یعنی کوئی سیٹ $I$ جس لئی
+اسی $A_i$ اُتے غور کردے ہاں، ہر $i \in I$ لئی، تاں اسی ایہ مختصر
+لکھتاں وی ورت سکدے آں:
+\begin{align*}
+	\bigcup_{i \in I} A_i & = \bigcup \Setabs{A_i }{i \in I}\\
+	\bigcap_{i \in I} A_i & = \bigcap\Setabs{A_i}{i \in I}
+\end{align*}
+
+آخر وچ، اسی سارے اوہناں \pnboblique{!!{element}s} دے سیٹ بارے سوچ سکدے
+آں جو $A$ وچ نیں پر $B$ وچ نہیں۔ ایہنوں \olref{difference} وانگ وکھایا
+جا سکدا اے۔
+
+\begin{figure}
+  \olasset{assets/diagrams/difference.tikz}
+  \caption{دو سیٹاں دا فرق $A \setminus B$ اوہناں \pnboblique{!!{element}s}
+    دا سیٹ اے جو $A$ وچ نیں پر $B$ دے !!{element}s نہیں۔}
+  \ollabel{difference}
+\end{figure}
+
+\begin{defn}[فرق]
+\emph{سیٹاں دا فرق}~$A \setminus B$ سارے اوہناں \pnboblique{!!{element}s}
+دا سیٹ اے جو $A$ وچ نیں پر $B$ دے !!{element}s نہیں، یعنی
+\[
+A\setminus B = \Setabs{x}{x\in A \text{ تے } x \notin B}.
+\]
+\end{defn}
+
+\begin{prob}
+	ثابت کرو کہ جے $A \subsetneq B$ ہووے، تاں $B \setminus A \neq \emptyset$ اے۔
+\end{prob}
+
+\end{document}

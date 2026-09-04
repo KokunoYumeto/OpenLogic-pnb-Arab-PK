@@ -1,0 +1,3 @@
+bc32017d02d7586413d4eaa918c6cf262487c43bf18dbadecd151029f98d95ca  OpenLogic-pnb-Arab-PK-editable-v0.1.0.zip
+b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc  OpenLogic-Sets-pnb-Arab-PK-naskh-v0.1.0.pdf
+c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50  OpenLogic-Sets-pnb-Arab-PK-nastaliq-v0.1.0.pdf
