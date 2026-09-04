@@ -1021,6 +1021,60 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0043",
+      "source_path": "content/sets-functions-relations/arithmetization/rationals.tex",
+      "source_sha256": "7140495368042fcbc55907e6ee568c5bc8b7066e44a01a50cbf4202acebe71d2",
+      "translation_sha256": "b875cf7c4626c01dee927ac7816c1b7ac05412393f0650744e50249853be7c39",
+      "translation_bytes": 4780,
+      "source_blocks": 9,
+      "translation_blocks": 9,
+      "source_corrections": [
+        "PNBARI-002"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0044",
+      "source_path": "content/sets-functions-relations/arithmetization/reals.tex",
+      "source_sha256": "3df30161417b836178ff701aa3d778b9ec7c1ba8e3a8a54f98b5584a7960f453",
+      "translation_sha256": "60a922d858d37cb2079c87669612a54b1dfabf2171f66fb50b8931ed1718a1e0",
+      "translation_bytes": 7202,
+      "source_blocks": 14,
+      "translation_blocks": 14,
+      "source_corrections": [
+        "PNBARI-003",
+        "PNBARI-004",
+        "PNBARI-005"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

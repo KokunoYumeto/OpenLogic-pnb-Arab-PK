@@ -4,57 +4,57 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 42,
-  "translated_range": "OLP-0001 through OLP-0042, contiguous",
-  "remaining_units": 680,
-  "aligned_blocks": 727,
-  "translated_linguistic_blocks": 489,
-  "unchanged_formal_blocks": 238,
+  "translated_and_source_aligned_units": 44,
+  "translated_range": "OLP-0001 through OLP-0044, contiguous",
+  "remaining_units": 678,
+  "aligned_blocks": 750,
+  "translated_linguistic_blocks": 506,
+  "unchanged_formal_blocks": 244,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
-  "current_chapter_progress": "Arithmetization through the ordered-pair equivalence-class construction of the integers, OLP-0042",
+  "current_chapter_progress": "Arithmetization through rational quotient construction and the real-line completeness motivation, OLP-0044",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 42,
-    "sha256": "7aefedf32828f47a02078437b8deb2d0fe8ca553fbc5e6c56ea219b7a85e3001",
+    "units": 44,
+    "sha256": "101249c5ea636bc7483f33754c36f86e97de3c008218f955c31ce49143fc3f2a",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0042.json",
-    "sha256": "1de39a197850c7f14a28a0894edf4ec0774684de0c33d4b1f90db0440ab427de",
+    "file": "AUDIT-REGRESSION-0044.json",
+    "sha256": "86df0845703ad8c69914d70ae7f2039990ba87cfc40e52204305e97fd8c5aabd",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 727,
-    "sha256": "c29a7cbf991476cc31ee8085f682f8354819e5309223beeb06602d0f79f22c41",
+    "rows": 750,
+    "sha256": "86ebe313b20bbacc7783e5be5704a82695faff80240517db3c5e4e4512db3ca2",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 47,
-    "sha256": "13406e9f96532930a67e90b904563d60eabddce14e794f0627948986426d446d"
+    "entries": 50,
+    "sha256": "79dc1901ea8826762a5ad9d269dd4cc51f5153d7736f5322fdb727cdbcbd6f8e"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 72,
-    "terminology_entries": 47,
-    "source_fidelity_entries": 25,
-    "sha256": "30fd3d3db7d9492fca4adaf9a509203dbe5083201f9083d6329fdbf6293cdb78"
+    "entries": 79,
+    "terminology_entries": 50,
+    "source_fidelity_entries": 29,
+    "sha256": "4be6c5c4311848d28524057fd3bb2de522df133b794427fd6dfc5e1a0f5907f4"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 19,
-    "applied_and_audited": 19,
+    "entries": 23,
+    "applied_and_audited": 23,
     "pending_until_unit_translation": 0,
-    "sha256": "76b212221bf4398bd0f2f1ba1f7a3c0f821a31c10fde7e5306ff4f71af9a2fcb"
+    "sha256": "82adc0597c2bbc26756467fe98a22efb235642e4c60a27b61b86b4bd31db143d"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",

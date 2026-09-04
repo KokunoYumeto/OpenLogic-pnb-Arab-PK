@@ -1,0 +1,79 @@
+% Part: sets-functions-relations
+% Chapter: arithmetization
+% Section: rationals
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{arith}{rat}
+\olsection{$\Int$ توں $\Rat$ ول}
+
+اسی ہُنّے ویکھیا کہ سادی سیٹ تھیوری ورت کے قدرتی عدداں توں صحیح عدد
+کِویں بنائے جا سکدے نیں۔ ہُن اسی ویکھاں گے کہ بالکل رلدے ملدے طریقے نال
+صحیح عدداں توں ناطق عدد کِویں بنائے جا سکدے نیں۔ ساڈیاں مُڈھلیاں گلّاں
+ایہ نیں:
+\begin{enumerate}
+	\item ہر ناطق عدد نوں $\nicefrac{i}{j}$ دی صورت وچ لکھیا جا سکدا اے،
+	جتھے $i$ تے $j$ دونیں صحیح عدد نیں، پر $j$ صفر نہیں۔
+	\item اظہار $\nicefrac{i}{j}$ وچ کوڈ کیتی معلومات نوں ترتیب وار جوڑے
+	$\tuple{ i, j}$ وچ وی اوہو جیہے طور تے کوڈ کیتا جا سکدا اے۔
+\end{enumerate}
+صاف طریقہ ایہ ہووے گا کہ ناطق عدداں نوں $\Int \times (\Int \setminus
+\{0_\Int\})$ توں چُنے ترتیب وار جوڑے \emph{سمجھیا} جاوے۔ پر پہلے وانگ
+ایہ وی ذرا حدوں ودھ سادہ ہووے گا، کیوں جو اسی چاہنے آں کہ
+$\nicefrac{3}{2} = \nicefrac{6}{4}$، پر $\tuple{ 3, 2}\neq \tuple{ 6,
+4}$۔ ہور عام طور تے ساڈی لوڑ ایہ اے:
+\[
+	\nicefrac{a}{b} = \nicefrac{c}{d} \text{ اُدوں تے صرف اُدوں جدوں } a \times d = b \times c
+\]
+ایہ حاصل کرن لئی اسی $\Int \times (\Int \setminus \{0_\Int\})$ اُتے
+اک {ہم ارزیت دا تعلق} ایویں تعریف کردے آں:
+\[
+	\tuple{ a, b }\Ratequiv \tuple{ c, d} \text{ اُدوں تے صرف اُدوں جدوں }a \times d = b \times c
+\]
+ساڈے نوں جانچنا پینا اے کہ ایہ ہم ارزیت دا تعلق اے۔ ایہ
+$\Intequiv$ والے معاملے نال بہت رلدا اے، تے اسی ایہنوں مشق لئی
+چھڈدے آں۔
+\begin{prob}
+وکھاؤ کہ $\Ratequiv$ ہم ارزیت دا تعلق اے۔
+\end{prob}
+پر ایس نال اسی ایہ آکھ سکدے آں:
+\begin{defn}
+ناطق عدد، صحیح عدداں دیاں جوڑیاں دے $\Ratequiv$ تحت ہم ارزیت دے طبقے
+نیں (جیہناں دا دوجا رکن صفر نہیں)۔ یعنی $\Rat =
+\equivclass{(\Int \times (\Int\setminus \{0_\Int\}))}{\Ratequiv}$۔
+\end{defn}
+
+صحیح عدداں وانگ، اسی کجھ بنیادی عمل وی تعریف کرنا چاہنے آں۔ جتھے
+$\equivrep{i,j}{\Ratequiv}$، $\Ratequiv$ تحت اوہ ہم ارزیت دا طبقہ اے
+جیہدے وچ $\tuple{i, j}$، !!a{element} اے، اسی آکھدے آں:
+\begin{align*}
+	\equivrep{a, b}{\Ratequiv} + \equivrep{c, d}{\Ratequiv} &= \equivrep{ad + bc,  bd}{\Ratequiv}\\
+	\equivrep{a, b}{\Ratequiv} \times \equivrep{c, d}{\Ratequiv} &= \equivrep{a  c, b d}{\Ratequiv}.
+\intertext{ایہناں ناطق عدداں اُتے $r \leq s$ تعریف کرن لئی اسی ایہ
+گل ورتدے آں کہ $r \le s$ اُدوں تے صرف اُدوں جدوں $s - r$ منفی نہیں،
+یعنی $s - r$ نوں $\nicefrac{i}{j}$ دی صورت وچ لکھیا جا سکدا اے، جتھے
+$i$ غیر منفی تے $j$ مثبت اے:}
+	\equivrep{a, b}{\Ratequiv} \leq \equivrep{c, d}{\Ratequiv} &\text{ اُدوں تے صرف اُدوں جدوں }
+	\equivrep{c, d}{\Ratequiv} - \equivrep{a, b}{\Ratequiv} =
+	\equivrep{i_\Int, j_\Int}{\Ratequiv}
+\end{align*}
+% PNBARI-002 ماخذ دی درستی: انگریزی وضاحت اک واری فرق نوں r-s آکھدی اے؛ اگلی تعریف تے پچھلا جملہ دونیں s-r مقرر کردے نیں۔
+کِسے $i \in \Nat$ تے $0 \neq j \in \Nat$ لئی۔
+
+فیر ساڈے نوں جانچنا پینا اے کہ ایہ تعریفاں اوہو جیہا ورتاؤ کردیاں نیں
+جیہو جیہا اوہناں نوں \emph{کرنا چاہیدا اے}؛ تے ایہ کم اسی
+\olref[check]{sec} ول بھیج دے آں۔ پر ایہ واقعی ایویں ای کردیاں نیں!{}
+آخر وچ اسی صحیح عدداں نوں ناطق عدد \emph{سمجھ کے} ورتن دا کوئی طریقہ
+چاہنے آں؛ سو ہر $i \in \Int$ لئی اسی مقرر کردے آں کہ $i_\Rat =
+\equivrep{i, 1_\Int}{\Ratequiv}$۔ فیر اسی \olref[check]{sec} وچ جانچدے
+آں کہ ایہ سارا کم درست ورتاؤ کردا اے۔
+
+\begin{prob}
+وکھاؤ کہ $(i + j)_\Rat = i_\Rat+ j_\Rat$ تے $(i \times j)_\Rat =
+i_\Rat \times j_\Rat$ تے $i \leq j \liff i_\Rat \leq j_\Rat$، ہر
+$i, j \in \Int$ لئی۔
+\end{prob}
+
+\end{document}

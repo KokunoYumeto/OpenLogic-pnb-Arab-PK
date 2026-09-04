@@ -1,0 +1,80 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0019",
+  "unit_ids": [
+    "OLP-0043",
+    "OLP-0044"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-04T23:11:05.8399052Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0043",
+      "source_path": "content/sets-functions-relations/arithmetization/rationals.tex",
+      "source_bytes": 3255,
+      "source_sha256": "7140495368042fcbc55907e6ee568c5bc8b7066e44a01a50cbf4202acebe71d2",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0044",
+      "source_path": "content/sets-functions-relations/arithmetization/reals.tex",
+      "source_bytes": 4654,
+      "source_sha256": "3df30161417b836178ff701aa3d778b9ec7c1ba8e3a8a54f98b5584a7960f453",
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBARI-002",
+      "unit_id": "OLP-0043",
+      "source_locator": "lines 53-58",
+      "classification": "confirmed_reversed_difference_in_order_explanation",
+      "finding": "The prose first correctly says r <= s iff s-r is nonnegative, then incorrectly calls the same difference r-s. The immediately following displayed definition again uses s-r.",
+      "required_handling": "Use s-r consistently in the explanatory prose and displayed definition, add an adjacent Punjabi note, and permit exactly the corresponding inline formula replacement."
+    },
+    {
+      "finding_id": "PNBARI-003",
+      "unit_id": "OLP-0044",
+      "source_locator": "lines 76-80",
+      "classification": "confirmed_stray_comparison_character_after_lexical_token",
+      "finding": "A stray less-than character follows the element lexical token before the words 'are all smaller than 3'. It has no syntactic or mathematical operand.",
+      "required_handling": "Omit only the stray prose-level character, retain the lexical token and bound 3, and add an adjacent Punjabi note."
+    },
+    {
+      "finding_id": "PNBARI-004",
+      "unit_id": "OLP-0044",
+      "source_locator": "lines 21-26",
+      "classification": "confirmed_principal_square_root_error_in_inactive_footnote",
+      "finding": "The commented footnote says sqrt(2) refers equally to positive and negative roots. Standard radical notation denotes the nonnegative principal root; the other solution is its negative.",
+      "required_handling": "Keep the footnote inactive and retain its single sqrt(2) formula, but state the correct principal-root convention in Punjabi and add an adjacent inactive Punjabi note."
+    },
+    {
+      "finding_id": "PNBARI-005",
+      "unit_id": "OLP-0044",
+      "source_locator": "lines 61-66",
+      "classification": "confirmed_stale_variable_in_inactive_derivation",
+      "finding": "After binding r by m=2r, the commented three-line derivation switches to q, which is not bound in the formal proof.",
+      "required_handling": "Keep the derivation inactive, replace only its three q occurrences with the already bound r, preserve every operation and equality, and add an adjacent inactive Punjabi note."
+    }
+  ],
+  "consultation_record": "2026-09-04: before drafting BATCH-0019, the current owner read the complete rationals.tex and reals.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The rational-order difference, stray comparison character, inactive square-root note and inactive stale proof variable were checked against their immediate formulas and surrounding arguments before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, reason-giving connectives and explanatory syntax only. It does not attest rational quotient constructions, ordered fields, irrationality, least-upper-bound completeness, continuum or geometric-infinite-descent terminology; these remain reversible definition-based and scholarly bridges."
+}
