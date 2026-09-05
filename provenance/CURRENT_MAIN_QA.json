@@ -4,12 +4,12 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 48,
-  "translated_range": "OLP-0001 through OLP-0048, contiguous",
-  "remaining_units": 674,
-  "aligned_blocks": 829,
-  "translated_linguistic_blocks": 576,
-  "unchanged_formal_blocks": 253,
+  "translated_and_source_aligned_units": 50,
+  "translated_range": "OLP-0001 through OLP-0050, contiguous",
+  "remaining_units": 672,
+  "aligned_blocks": 843,
+  "translated_linguistic_blocks": 583,
+  "unchanged_formal_blocks": 260,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
@@ -18,45 +18,45 @@
     "Size of Sets",
     "Arithmetization"
   ],
-  "current_chapter_progress": "Arithmetization complete through the ordered-ring checks and Cauchy-sequence construction of the reals, OLP-0048; Infinite begins at OLP-0049",
+  "current_chapter_progress": "Infinite through Hilbert's Hotel and the Dedekind-infinitude definition, OLP-0050",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 48,
-    "sha256": "2384fb7f331bb9b62da23aba7827958c6f6f6343fceffe5aa6a09dd4d2a1cc91",
+    "units": 50,
+    "sha256": "996318828dc5f27794d2b7ed7893feebbf56df077d2f10c5574ac0e45d9f3116",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0048.json",
-    "sha256": "5e15d2d0710c9ec807ac3ed5e14fc1cbe53b2bcf61dc2451ba23fb8800fb2390",
+    "file": "AUDIT-REGRESSION-0050.json",
+    "sha256": "16e4b93fe0fce3fbf81561ecff2358843a5877d4a49189237a29a1a7e9dd91e8",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 829,
-    "sha256": "3ca054ff0bbf2c7815c800bb54403b1fe07879918cfa94a516e403352da7b219",
+    "rows": 843,
+    "sha256": "5211b80a83da2536dc7a1e713bccd7324c88ba17cad698e3eb91a87defa56520",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 57,
-    "sha256": "348bf4c2df8685277c05c555b71b1d53fe2d9313c92f63fdf4cf5602a9e8c9a5"
+    "entries": 59,
+    "sha256": "13c6581efd066e06ada41489d19690b7229866c409e8bd31bf4808269ec12b2f"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 93,
-    "terminology_entries": 57,
-    "source_fidelity_entries": 36,
-    "sha256": "a9ddefd4311ef7c16299fb5a8ca69ee7ebdbd285fb5c2cff81f311cf8d1462cc"
+    "entries": 96,
+    "terminology_entries": 59,
+    "source_fidelity_entries": 37,
+    "sha256": "9c2a1be16ce7581ecc21b63cb55d8dfc7450cde672f2befa81a54bd60b2569f3"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 30,
-    "applied_and_audited": 30,
+    "entries": 31,
+    "applied_and_audited": 31,
     "pending_until_unit_translation": 0,
-    "sha256": "f512b2f63a056b06b0c8498b7f72b64aa94391c90d67276e9bc3f3e6575df89b"
+    "sha256": "694d406313b2a7650dd9e15fe0ef281e95a791600d8920ebe977a51fdb23da6c"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",

@@ -1,0 +1,58 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0022",
+  "unit_ids": [
+    "OLP-0049",
+    "OLP-0050"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T01:04:36.9813269Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0049",
+      "source_path": "content/sets-functions-relations/infinite/infinite.tex",
+      "source_bytes": 438,
+      "source_sha256": "6ea6bff5ac4f128338bfa6b1cb5b7c8bed6121210257e06f6aaa7b27d5cc4bbb",
+      "source_blocks": 7,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0050",
+      "source_path": "content/sets-functions-relations/infinite/hilberts-hotel.tex",
+      "source_bytes": 2551,
+      "source_sha256": "e9a73caefcc496d7074251a3ac15f66fd577415bd3a531dd23f79375502ee0ed",
+      "source_blocks": 7,
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBINF-001",
+      "unit_id": "OLP-0050",
+      "source_locator": "lines 12-16",
+      "classification": "confirmed_missing_infinitive_marker_in_first_step_clause",
+      "finding": "The clause 'our first step must be characterize an infinite set' is grammatically incomplete. Its subject 'our first step' and the following description fix the intended construction as 'must be to characterize an infinite set'.",
+      "required_handling": "State that the first step must be to characterize an infinite set without mentioning the natural numbers, preserve the surrounding motivation and Hilbert attribution, and add an adjacent Punjabi note. This is prose-only."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0022, the current owner read the complete infinite.tex and hilberts-hotel.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The missing infinitive marker was checked against the complete introductory sentence and the following Hilbert construction before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, reason-giving connectives, attributed quotation framing and qualification only. It does not attest Hilbert's Hotel, Dedekind infinitude, injections into proper subsets or range terminology; these remain reversible definition-based and scholarly bridges."
+}
