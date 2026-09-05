@@ -4,57 +4,57 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 44,
-  "translated_range": "OLP-0001 through OLP-0044, contiguous",
-  "remaining_units": 678,
-  "aligned_blocks": 750,
-  "translated_linguistic_blocks": 506,
-  "unchanged_formal_blocks": 244,
+  "translated_and_source_aligned_units": 46,
+  "translated_range": "OLP-0001 through OLP-0046, contiguous",
+  "remaining_units": 676,
+  "aligned_blocks": 777,
+  "translated_linguistic_blocks": 529,
+  "unchanged_formal_blocks": 248,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions"
   ],
-  "current_chapter_progress": "Arithmetization through rational quotient construction and the real-line completeness motivation, OLP-0044",
+  "current_chapter_progress": "Arithmetization through Dedekind cuts and the accompanying philosophical reflections, OLP-0046",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 44,
-    "sha256": "101249c5ea636bc7483f33754c36f86e97de3c008218f955c31ce49143fc3f2a",
+    "units": 46,
+    "sha256": "0515b87d678cc826ba8539c8eea32bd23c4ee094166655c86ba859fb5451d1bd",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0044.json",
-    "sha256": "86df0845703ad8c69914d70ae7f2039990ba87cfc40e52204305e97fd8c5aabd",
+    "file": "AUDIT-REGRESSION-0046.json",
+    "sha256": "33a6899a15b8fe2239690507328baffb477a213104c4cd161b5eeda0fbf71a01",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 750,
-    "sha256": "86ebe313b20bbacc7783e5be5704a82695faff80240517db3c5e4e4512db3ca2",
+    "rows": 777,
+    "sha256": "f3c76fddccecb1c025e8568f2ab2ab95823a9f817e338db094eb41c8a25408af",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 50,
-    "sha256": "79dc1901ea8826762a5ad9d269dd4cc51f5153d7736f5322fdb727cdbcbd6f8e"
+    "entries": 53,
+    "sha256": "e1403e427a075bdab41c96fe914736500e8c8d1ad61556087bc1e6d54281c9a6"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 79,
-    "terminology_entries": 50,
-    "source_fidelity_entries": 29,
-    "sha256": "4be6c5c4311848d28524057fd3bb2de522df133b794427fd6dfc5e1a0f5907f4"
+    "entries": 84,
+    "terminology_entries": 53,
+    "source_fidelity_entries": 31,
+    "sha256": "5994e535b1fed858d337d9a3aa4c64680491f66aa2181f394ad9f4d9e2c77e2b"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 23,
-    "applied_and_audited": 23,
+    "entries": 25,
+    "applied_and_audited": 25,
     "pending_until_unit_translation": 0,
-    "sha256": "82adc0597c2bbc26756467fe98a22efb235642e4c60a27b61b86b4bd31db143d"
+    "sha256": "3bfcef1a9ce14293b9d76c7a0c4e7aba7c03f7c02c6a6a9dd312c6a8a1ec439a"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",

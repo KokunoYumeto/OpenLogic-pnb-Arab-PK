@@ -1,0 +1,120 @@
+% Part: sets-functions-relations
+% Chapter: arithmetization
+% Section: cuts
+%
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{arith}{cuts}
+\olsection{$\Rat$ توں $\Real$ ول}
+
+اصل وچ تکمیلیت دی خاصیت ایہ وکھاؤندی اے کہ حقیقی خط دا ہر نقطہ
+$\alpha$ اوس خط نوں بالکل دو حصیاں وچ ونڈدا اے: اک اوہ جیہدی سب توں
+چھوٹی بالائی حد $\alpha$ اے، تے دوجا اوہ جیہدی سب توں وڈی زیریں حد
+$\alpha$ اے۔ ناطق عدداں توں حقیقی عدد \emph{بنان} لئی، ڈیڈیکائنڈ نے
+سجھایا کہ حقیقی عدداں نوں صرف اوہ \emph{کٹ} سمجھ لیا جاوے جیہڑے ناطق
+عدداں نوں ونڈدے نیں۔ یعنی اسی $\sqrt{2}$ نوں اوس \emph{کٹ} نال
+شناخت کردے آں جیہڑا $< \sqrt{2}$ ناطق عدداں نوں $> \sqrt{2}$ ناطق
+عدداں توں وکھ کردا اے۔
+
+آؤ ایس گل نوں صاف کر لئیے۔ جے اسی ناطق عدداں نوں دو حصیاں وچ ونڈئیے،
+تاں صرف اوہدے \emph{نچلے} حصے اُتے غور کر کے اسی اپنی کیتی ونڈ دی
+اکّی شناخت کر سکدے آں۔ سو پوری درستی نال اسی ایہ تعریف دیندے آں:
+
+\begin{defn}[کٹ]
+اک \emph{کٹ} $\alpha$ ناطق عدداں دا کوئی وی غیر خالی، حقیقی مُڈھلا
+ٹکڑا اے جیہدا کوئی سب توں وڈا رکن نہیں۔ یعنی $\alpha$ اک کٹ اُدوں تے
+صرف اُدوں اے جدوں:
+\begin{enumerate}
+	\item \emph{غیر خالی، حقیقی}: $\emptyset \neq \alpha \subsetneq \Rat$
+	\item \emph{مُڈھلا}: ہر $p,q \in \Rat$ لئی: جے $p < q \in \alpha$ تاں $p \in \alpha$
+	\item \emph{کوئی سب توں وڈا رکن نہیں}: ہر $p \in \alpha$ لئی کوئی $q \in \alpha$ اے جیہدے لئی $p < q$
+\end{enumerate}
+فیر $\Real$ کٹاں دا سیٹ اے۔
+\end{defn}
+
+سو ہُن اسی آکھ سکدے آں کہ $\sqrt{2} = \Setabs{p \in \Rat}{p^2 < 2\text{
+یا }p < 0}$۔ بے شک ساڈے نوں جانچنا پینا اے کہ ایہ واقعی اک کٹ
+\emph{اے}، پر اسی ایہ کم \olref[check]{sec} ول بھیج دے آں۔
+
+پہلے وانگ، کجھ ہستیاں نوں تعریف کرن توں بعد اگلا کم اوہناں اُتے بنیادی
+فنکشن تے تعلق تعریف کرنا اے۔ اسی اک سوکھے تعلق توں شروع کردے آں:
+\begin{align*}
+	\alpha \leq \beta \text{ اُدوں تے صرف اُدوں جدوں }\alpha \subseteq \beta
+\end{align*}
+ترتیب دی ایہ تعریف سانوں مرکزی نتیجہ \emph{بیان} کرن دی سہولت دیندی اے:
+کٹاں دے سیٹ کول تکمیلیت دی خاصیت اے۔ پوری طرح کھول کے بیان ایہ شکل
+رکھدا اے۔ جے $S$ کٹاں دا اک غیر خالی سیٹ اے جیہدی کوئی بالائی حد اے،
+تاں $S$ دی اک سب توں چھوٹی بالائی حد اے۔ ہور تفصیل نال: اک کٹ
+$\lambda$ اے جیہڑا $S$ دی بالائی حد اے، یعنی $(\forall \alpha \in S)\alpha \subseteq
+\lambda$، تے $\lambda$ ایسا سب توں چھوٹا کٹ اے، یعنی $(\forall \beta \in \Real)((\forall \alpha \in S)\alpha \subseteq \beta \lif \lambda \subseteq \beta)$۔ ہُن
+نتیجے دا ثبوت ایہ اے:
+
+\begin{thm}\ollabel{realcompleteness}
+کٹاں دے سیٹ کول تکمیلیت دی خاصیت اے۔
+\end{thm}
+
+\begin{proof}
+$S$ کٹاں دا کوئی وی غیر خالی سیٹ ہووے جیہدی بالائی حد اے۔ مقرر کرو کہ
+$\lambda = \bigcup S$۔
+%\Setabs{p \in \Rat}{(\exists \alpha \in S)p \in \alpha}$$
+پہلاں اسی دعویٰ کردے آں کہ $\lambda$ اک کٹ اے:
+\begin{enumerate}
+\item کیوں جو $S$ غیر خالی اے، ایس لئی گھٹ توں گھٹ اک کٹ $S$ وچ اے، سو
+$\emptyset \neq \lambda$۔
+% PNBARI-006 ماخذ دی درستی: ایتھے کٹ دی موجودگی بالائی حد توں نہیں بلکہ S دے غیر خالی ہون توں نکلدی اے۔
+کیوں جو $S$ کٹاں دا سیٹ اے، $\lambda \subseteq \Rat$۔ کیوں جو $S$ دی
+بالائی حد اے، کوئی $p \in \Rat$ ہر کٹ $\alpha \in S$ وچوں غائب اے۔
+سو $p\notin \lambda$، تے ایس لئی $\lambda \subsetneq \Rat$۔
+\item فرض کرو $p < q \in \lambda$۔ سو کوئی $\alpha \in S$ اے جیہدے
+لئی $q \in \alpha$۔ کیوں جو $\alpha$ اک کٹ اے، $p \in \alpha$۔ سو
+$p \in \lambda$۔
+\item فرض کرو $p \in \lambda$۔ سو کوئی $\alpha \in S$ اے جیہدے لئی
+$p \in \alpha$۔ کیوں جو $\alpha$ اک کٹ اے، کوئی $q \in \alpha$ اے
+جیہدے لئی $p < q$۔ سو $q \in \lambda$۔
+\end{enumerate}
+ایہ دعویٰ ثابت کردا اے۔ نال ای صاف اے کہ $(\forall \alpha \in S)\alpha
+\subseteq \bigcup S = \lambda$، یعنی $\lambda$، $S$ دی بالائی حد اے۔
+سو ہُن فرض کرو کہ $\beta \in \mathbb{R}$ وی اک بالائی حد اے، یعنی
+$(\forall \alpha \in S)\alpha \subseteq \beta$۔ ہر $p \in \Rat$ لئی،
+جے $p \in \lambda$، تاں کوئی $\alpha \in S$ اے جیہدے لئی $p \in
+\alpha$، سو $p \in \beta$۔ عام کر کے $\lambda \subseteq \beta$۔ سو
+$\lambda$، $S$ دی \emph{سب توں چھوٹی} بالائی حد اے۔
+\end{proof}
+
+سو ساڈے کول ہُن ہستیاں دا اک جتھا اے جیہڑا تکمیلیت دی خاصیت پوری کردا
+اے۔ ایس گل نوں بیان کرن دا اک طریقہ ایہ اے: ساڈے کٹاں وچ کوئی ”خلا“
+نہیں۔ (سو ناطق عدداں دی بجائے حقیقی عدداں دے ہور ”کٹ“ لین نال کوئی
+دلچسپ نویں شے نہیں ملے گی۔)
+
+اگے ساڈے نوں حقیقی عدداں اُتے کجھ عمل تعریف کرنے پینے نیں۔ اسی ایہ مقرر
+کر کے ناطق عدداں نوں حقیقی عدداں وچ سماؤندے آں کہ $p_\Real =
+\Setabs{q \in \Rat}{q < p}$، ہر $p \in \Rat$ لئی۔ فیر اسی تعریف کردے آں:
+\begin{align*}
+	\alpha + \beta &= \Setabs{p + q}{p \in \alpha \land q \in \beta}\\
+%	\alpha - \beta &\defis \Setabs{p - q}{p \in \alpha \land q \in \Rat \setminus \beta}\\
+	\alpha \times \beta &=
+	\Setabs{p \times q}{0 \leq p \in \alpha \land 0 \leq q \in \beta} \cup 0_\Real & \text{جے }\alpha, \beta \geq 0_\Real
+%	\alpha \div \beta &\defis
+%	\Setabs{\nicefrac{p}{q}}{p \in \alpha \land q \in \Rat \setminus \beta}  & \text{جے }\alpha \geq 0_\Real, \beta > 0_\Real
+\end{align*}
+% PNBARI-007 ماخذ دی درستی: ناطق p دی جاگذاری p_Real اے؛ ایس لئی ضرب وچ حقیقی صفر وی 0_Real اے، اک واری آیا 0^R نہیں۔
+ضرب دے دوجے معاملے سنبھالن لئی، پہلاں مقرر کرو: %کہ $0_\Real \times \alpha = 0_\Real = \alpha \times 0_\Real$، تے شامل کرو:
+\begin{align*}
+	-\alpha &= \Setabs{p - q}{p < 0 \land q \notin \alpha}
+\end{align*}
+تے فیر ایہ مقرر کرو:
+\begin{align*}
+	\alpha \times \beta &\defis
+	\begin{cases}
+		\mathord{-}\alpha \times \mathord{-}\beta &\text{جے }\alpha < 0_\Real\text{ تے }\beta < 0_\Real\\
+		\mathord{-}(\mathord{-}\alpha \times \beta) &\text{جے }\alpha < 0_\Real \text{ تے }\beta > 0_\Real\\
+		\mathord{-}(\alpha \times \mathord{-}\beta) &\text{جے }\alpha > 0_\Real \text{ تے }\beta < 0_\Real
+	\end{cases}
+\end{align*}
+فیر ساڈے نوں جانچنا پینا اے کہ ایہناں وچوں ہر تعریف ہمیشہ اک کٹ دیندی
+اے۔ آخر وچ ساڈے نوں اک سوکھا (پر لمبا چوڑا) مظاہرہ کرنا پینا اے کہ
+ایویں تعریف کیتے کٹ عین اوہو جیہا ورتاؤ کردے نیں جیہو جیہا اوہناں نوں
+کرنا چاہیدا اے۔ پر اسی ایہ سارا کم \olref[check]{sec} ول بھیج دے آں۔
+\end{document}

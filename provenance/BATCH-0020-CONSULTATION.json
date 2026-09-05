@@ -1,0 +1,64 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0020",
+  "unit_ids": [
+    "OLP-0045",
+    "OLP-0046"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T00:26:36.5328090Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0045",
+      "source_path": "content/sets-functions-relations/arithmetization/cuts.tex",
+      "source_bytes": 5825,
+      "source_sha256": "e7cb1029bcb0f0f1ac677c005af8d4e6a10df84bfff50c7483447b972324b44c",
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0046",
+      "source_path": "content/sets-functions-relations/arithmetization/reflections.tex",
+      "source_bytes": 5326,
+      "source_sha256": "01032be342b6892c970733acf0b553216c39c5e864c0378d25fea8c5eaa11ead",
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBARI-006",
+      "unit_id": "OLP-0045",
+      "source_locator": "lines 61-66",
+      "classification": "confirmed_wrong_premise_named_for_nonempty_union",
+      "finding": "The proof says that S contains at least one cut because S has an upper bound. The theorem premise separately says S is nonempty; boundedness alone does not imply nonemptiness, while nonemptiness is exactly what establishes that the union is nonempty.",
+      "required_handling": "Attribute the existence of a cut in S to the nonempty premise, preserve the rest of the union argument, and add an adjacent Punjabi note. This is prose-only."
+    },
+    {
+      "finding_id": "PNBARI-007",
+      "unit_id": "OLP-0045",
+      "source_locator": "lines 86-96",
+      "classification": "confirmed_wrong_embedding_marker_on_real_zero",
+      "finding": "The section explicitly defines the rational embedding with subscript notation p_Real and elsewhere uses 0_Real, but the nonnegative-cut multiplication formula uniquely switches to the exponent-like 0^mathbb{R}. The required union is with the real zero cut, so the one-off superscript is inconsistent with both the construction and local notation.",
+      "required_handling": "Use 0_Real in the multiplication formula, preserve the product set and nonnegative case condition, add an adjacent Punjabi note, and permit exactly the corresponding math-command replacement."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0020, the current owner read the complete cuts.tex and reflections.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The nonempty-union premise and real-zero embedding marker were checked against the theorem premise, rational embedding definition, adjacent case split and the section's other 0_Real occurrences before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, reason-giving connectives and philosophical qualification only. It does not attest Dedekind cuts, complete ordered fields, least-upper-bound proofs, embeddings, rival set-theoretic constructions or metaphysical-reduction terminology; these remain reversible definition-based and scholarly bridges."
+}
