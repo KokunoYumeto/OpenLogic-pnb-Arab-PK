@@ -1547,6 +1547,54 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0063",
+      "source_path": "content/first-order-logic/proof-systems/proof-systems.tex",
+      "source_sha256": "09977f6410bc57fcedf4428c2212ccf67b2bf0bf574413c4e2fdcf4de6cccab7",
+      "translation_sha256": "44bbd4054ee41ed59cc30a1915bb9b33afede64b9cd470933a654e6b7681bd9b",
+      "translation_bytes": 843,
+      "source_blocks": 12,
+      "translation_blocks": 12,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0064",
+      "source_path": "content/first-order-logic/proof-systems/introduction.tex",
+      "source_sha256": "148266281cc87fcd3e454249b9f6c42a117a9aed0733cc5a5f2e954ffd60bb58",
+      "translation_sha256": "5a98e25997d557ece3b2b9b2b0dee1ed01306a50f515191a24f1c87dbd1b5076",
+      "translation_bytes": 8023,
+      "source_blocks": 12,
+      "translation_blocks": 12,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

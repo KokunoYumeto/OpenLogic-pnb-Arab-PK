@@ -1,0 +1,81 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0029",
+  "unit_ids": [
+    "OLP-0063",
+    "OLP-0064"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T16:57:21.2755719Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0063",
+      "source_path": "content/first-order-logic/proof-systems/proof-systems.tex",
+      "source_bytes": 704,
+      "source_sha256": "09977f6410bc57fcedf4428c2212ccf67b2bf0bf574413c4e2fdcf4de6cccab7",
+      "source_blocks": 12,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0064",
+      "source_path": "content/first-order-logic/proof-systems/introduction.tex",
+      "source_bytes": 5203,
+      "source_sha256": "148266281cc87fcd3e454249b9f6c42a117a9aed0733cc5a5f2e954ffd60bb58",
+      "source_blocks": 12,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0063",
+      "finding": "The shared chapter driver selects first-order or propositional chapter identity under the FOL tag, gives an editorial reuse instruction, and imports the introduction plus four proof-system surveys before the chapter hook.",
+      "required_handling": "Preserve both tagged olchapter branches, every token key, the five-import order, the shared first-order source path and the final chapter hook. Translate the editorial guidance without changing its optional textbook-insertion scope."
+    },
+    {
+      "unit_id": "OLP-0064",
+      "finding": "The introduction contrasts semantics with finite mechanically checkable derivations, surveys axiomatic and tree-shaped proof systems, defines theoremhood and derivability against validity and entailment, explains soundness and completeness, and relates syntactic consistency to semantic satisfiability.",
+      "required_handling": "Preserve the finite/mechanical conditions, the strengths and weaknesses of each named system, every Proves/Entails formula and iff direction, the soundness/completeness direction labels, Gödel attribution and date, the explosive inconsistency criterion, and both directions of consistency versus satisfiability."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0063",
+      "locator": "shared path, tagged chapter identity and imports",
+      "observation": "The file lives under first-order-logic but deliberately emits either fol/prf or pl/prf identity according to the FOL tag; the propositional part imports this shared path while the tag is false.",
+      "handling": "Keep the path, both tag branches and all imports exact. The Punjabi wording must remain suitable for both uses; no duplicate propositional-only source unit is invented."
+    },
+    {
+      "unit_id": "OLP-0064",
+      "locator": "consistency paragraph",
+      "observation": "The source misspells 'unsatisfiability' once as 'unsatisfiablity', but the surrounding consistency/satisfiability equivalence fixes the intended ordinary word.",
+      "handling": "Translate the intended semantic term consistently while preserving all formal content and both logical directions. This is ordinary-language normalization, not a source correction."
+    },
+    {
+      "unit_id": "OLP-0064",
+      "locator": "first-order historical statements inside shared introduction",
+      "observation": "Although the section is reused by the propositional part, it explicitly discusses the historically first systems for first-order logic and Gödel's first-order completeness result.",
+      "handling": "Preserve those first-order qualifications and the 1929 dissertation attribution exactly; do not generalize them into claims about every logic merely because of the shared import."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0029, the current owner read the complete proof-systems.tex and proof-systems/introduction.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Tagged shared chapter identity, import order, semantic/syntactic contrast, finite mechanical verification, axiomatic and tree proof systems, theoremhood, derivability, soundness, completeness, consistency and satisfiability were checked before translation. Shared-path and ordinary-spelling observations were bounded without altering frozen formulas or adding a target correction. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest proof systems, derivability, soundness, completeness, consistency, natural deduction, tableaux, sequent calculus or resolution; those remain reversible source-governed scholarly bridges."
+}

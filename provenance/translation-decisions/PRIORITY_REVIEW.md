@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **124 of 126** current decisions.
+This view contains only urgent/high-priority decisions: **129 of 131** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -1887,6 +1887,121 @@ Authorities checked:
 Alternatives:
 
 - معنوی استلزام; یک سمتی توسیع; قطع; معنوی قضیۂ استنباط — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T085`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: derivation system; purely syntactic finite derivation; mechanical verification
+- Intended sense: derivation system; purely syntactic finite derivation; mechanical verification
+- Chosen Shahmukhi rendering/treatment: ثبوتی نظام؛ سراسر نحوی محدود اخذ؛ مشینی طریقے نال درستی دی جانچ
+- Rationale: The shared driver gathers derivation-system material under tagged first-order or propositional identity, while the introduction characterizes a derivation as a finite syntactic sequence or arrangement whose correctness is mechanically checkable. The Punjabi preserves both tag branches, the finite-object restriction and verification criterion.
+- Why expert review helps: No native Punjabi proof-theory attestation was acquired. ثبوتی نظام, نحوی اخذ and مشینی جانچ are reversible source-governed bridges; the shared import graph, token inventory and finite mechanical criterion govern.
+- Please double-check: **Does ثبوتی نظام remain distinct from semantics, and do سراسر نحوی, محدود نحوی شے and مشینی جانچ retain the finite mechanically verifiable criterion?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0064-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- نظامِ استنتاج; خالص نحوی محدود ثبوت; الگورتھمی تصدیق — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T086`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: axiomatic derivation; axiom; inference rule; metatheoretical handling
+- Intended sense: axiomatic derivation; axiom; inference rule; metatheoretical handling
+- Chosen Shahmukhi rendering/treatment: مسلّمی اخذ؛ مسلّمہ؛ استنباطی قاعدہ؛ ماورائے نظریاتی سنبھال
+- Rationale: A formula sequence counts as an axiomatic derivation exactly when each member is an axiom or follows from earlier members by a fixed inference rule, with both conditions mechanically checkable. The source then contrasts easy description and metatheory with difficult production and readability; the Punjabi retains that entire contrast.
+- Why expert review helps: No native Punjabi proof-theory attestation was acquired. مسلّمی, مسلّمہ, استنباطی قاعدہ and ماورائے نظریاتی are reversible sequence- and rule-governed bridges; the member-by-member criterion and stated tradeoff govern.
+- Please double-check: **Do مسلّمی, مسلّمہ and استنباطی قاعدہ keep the axiom-versus-earlier-rule alternatives exhaustive, while ماورائے نظریاتی preserves the source’s ease/readability tradeoff?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0013-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مسلّمی ثبوت; اصول; قاعدۂ استنتاج; فوق نظری جانچ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T087`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: natural deduction; truth tree or tableaux proof; sequent calculus; resolution method; tree-shaped dependency
+- Intended sense: natural deduction; truth tree or tableaux proof; sequent calculus; resolution method; tree-shaped dependency
+- Chosen Shahmukhi rendering/treatment: فطری استنباط؛ صداقتی درخت یا تابلو ثبوت؛ سیکوئنٹ حساب؛ ریزولیوشن دا طریقہ؛ درختی انحصار
+- Rationale: The survey names three systems intended to improve construction or readability, identifies resolution as easy to mechanize but hard to understand, and explains that tree representation exposes dependency among derivation parts. The Punjabi keeps every system distinct and preserves the sequence-versus-tree comparison.
+- Why expert review helps: No native Punjabi proof-system attestation was acquired. فطری استنباط, تابلو, سیکوئنٹ and ریزولیوشن are reversible named-system bridges; the explicit construction, readability, mechanization and dependency statements govern.
+- Please double-check: **Are فطری استنباط, صداقتی درخت/تابلو, سیکوئنٹ حساب and ریزولیوشن recognizable and distinct, with the sequence/tree dependency contrast still clear?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0064-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- استنتاجِ طبیعی; صدقی درخت/تابلو; حسابِ متوالیات; ریزولیوشن — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T088`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: theoremhood and derivability; validity; soundness; completeness; Proves versus Entails
+- Intended sense: theoremhood and derivability; validity; soundness; completeness; Proves versus Entails
+- Chosen Shahmukhi rendering/treatment: قضیہ ہونا تے اخذ ہون جوگتا؛ منطقی اعتبار؛ صحت مندی؛ تمامیت؛ نحوی Proves دے مقابل معنوی Entails
+- Rationale: The introduction pairs theoremhood with validity and derivability from Gamma with entailment from Gamma. It names the Proves-to-Entails directions soundness and the converses completeness, then preserves Gödel's first-order completeness attribution. The Punjabi keeps both displayed biconditionals and every direction explicit.
+- Why expert review helps: No native Punjabi proof-theory attestation was acquired. قضیہ, اخذ ہون جوگ, منطقی اعتبار, صحت مندی and تمامیت are reversible formula-governed bridges; Proves, Entails, the two iff displays and the 1929 attribution govern.
+- Please double-check: **Do قضیہ, اخذ ہون جوگتا, منطقی اعتبار, صحت مندی and تمامیت preserve both Proves/Entails biconditionals and the only-if/if directions without swapping soundness and completeness?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0018-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قضیت; قابلِ اخذ; اعتبار; صحت; تمامیت — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T089`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: consistency and inconsistency; syntactic counterpart of satisfiability and unsatisfiability; explosive derivability
+- Intended sense: consistency and inconsistency; syntactic counterpart of satisfiability and unsatisfiability; explosive derivability
+- Chosen Shahmukhi rendering/treatment: بے تضادی تے تضاد؛ پورا ہون جوگتا تے پورا ہون جوگ نہ ہونا دا نحوی ہم منصب؛ ہر شے دا اخذ
+- Rationale: A sentence set is inconsistent exactly when anything whatsoever is derivable from it and consistent otherwise. The source requires consistency iff satisfiability, identifies consistent-to-satisfiable with completeness and satisfiable-to-consistent with soundness, and says the corresponding classical first-order versions are equivalent. The Punjabi preserves all directions and qualifications.
+- Why expert review helps: No native Punjabi proof-theory attestation was acquired. بے تضادی, متضاد and نحوی ہم منصب are reversible explosion- and equivalence-governed renderings; the derive-anything criterion, iff statement and direction explanations govern.
+- Please double-check: **Do بے تضادی and متضاد express the derive-anything criterion, and does the consistency iff satisfiability discussion keep the completeness and soundness directions exact?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0064-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- عدمِ تناقض; تناقض; معنوی قابلِ اشباع ہونے کا نحوی قرینہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---
