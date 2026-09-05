@@ -4,12 +4,12 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 56,
-  "translated_range": "OLP-0001 through OLP-0056, contiguous",
-  "remaining_units": 666,
-  "aligned_blocks": 940,
-  "translated_linguistic_blocks": 643,
-  "unchanged_formal_blocks": 297,
+  "translated_and_source_aligned_units": 58,
+  "translated_range": "OLP-0001 through OLP-0058, contiguous",
+  "remaining_units": 664,
+  "aligned_blocks": 986,
+  "translated_linguistic_blocks": 677,
+  "unchanged_formal_blocks": 309,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
@@ -19,45 +19,71 @@
     "Arithmetization",
     "Infinite"
   ],
-  "current_chapter_progress": "Propositional Logic through the part driver and Syntax and Semantics chapter driver, OLP-0056",
+  "current_chapter_progress": "Propositional Logic through the Syntax and Semantics introduction and formulas section, OLP-0058",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 56,
-    "sha256": "cb018dfb51b3592428f0ab222f7adbd274a5a422738888f415628d77030fa155",
+    "units": 58,
+    "sha256": "71b9b7287ec0b10e5bda2ae4f07e14b687b49384eedd22ed96bad8d18aaf148f",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0056.json",
-    "sha256": "12f63844b97a6bc1d4a96862a4a0c6ff305af8595f8f392dcd7d2738a6743d4e",
+    "file": "AUDIT-REGRESSION-0058.json",
+    "sha256": "d5c95c3c9681e4cf348f67a5dcd2a091e51dc05ee4c8875b8c765f9286ce8e38",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 940,
-    "sha256": "5be81b4ec11acd4a870941231a8dd335429b408edeee065cbf4f2e35ade4c155",
+    "rows": 986,
+    "sha256": "7fc27c828ac12179e0a53cd62835df7f4f20b383de4ec442fbdbb149d82d8452",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 68,
-    "sha256": "687869258c747dedba03145064c53a9f428583de37b52eb00e42213c46cbae3c"
+    "entries": 74,
+    "sha256": "cdd315b8b7ccb04c1d93859ddd020170c5e12b73921660169d5fea38f16ddc3a"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 108,
-    "terminology_entries": 68,
-    "source_fidelity_entries": 40,
-    "sha256": "59623609dd54b5aeea181aa89c22a9a7ba0ca49fe3f9207c685047a643ba07ef"
+    "entries": 116,
+    "terminology_entries": 74,
+    "source_fidelity_entries": 42,
+    "sha256": "98ee4b86609f197de7f286037ecaf89eccaf01fb0917ece181cdc95a7d3e511a",
+    "occurrence_source_target_line_ranges": true,
+    "structural_section_scope": true,
+    "language_script_locale": "Punjabi / Arabic (Shahmukhi) / pnb-Arab-PK",
+    "confidence_and_priority_fields": true,
+    "printed_page_policy": "Exact artifact/profile/page is populated only after accepted pagination; otherwise explicitly pending."
+  },
+  "translation_decision_surfaces": {
+    "directory": "translation-decisions",
+    "shared_schema_sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
+    "decisions": 116,
+    "occurrences": 2262,
+    "high_priority_decisions": 114,
+    "occurrences_with_accepted_reader_pages": 220,
+    "occurrences_pending_reader_pages": 2042,
+    "decisions_json_sha256": "c059a0cf0b525f010f204e97a17046b8e7782433f203cb4e528fa28820b104e7",
+    "qa_sha256": "186e6875b07e2d5ae654a525c1bb2c0b5b1aa757d659ac40ebd5357c1b0fa483",
+    "surfaces": [
+      "START_HERE.md",
+      "TRANSLATION_DECISIONS_FULL.md",
+      "PRIORITY_REVIEW.md",
+      "DECISION_OCCURRENCES.csv",
+      "DECISIONS.json",
+      "translation-decision.schema.json",
+      "TRANSLATION_DECISION_QA.json"
+    ],
+    "reversible_source_record": "TERMINOLOGY_REVIEW_LOG.jsonl"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 34,
-    "applied_and_audited": 34,
+    "entries": 36,
+    "applied_and_audited": 36,
     "pending_until_unit_translation": 0,
-    "sha256": "d20a8a6751e20a21c1a30bc52eb5e9dee705613c5301bff98a739a0825e600d8"
+    "sha256": "aaf32ef5727795e041f3911b6a20dcfcb326ccca750fd9ef8986e73ec16b4946"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
@@ -113,7 +139,7 @@
   },
   "limits": [
     "This branch checkpoint is not a new binary reader release.",
-    "Relations, Functions, Size of Sets, Arithmetization, Infinite and the current Propositional Logic drivers have source-aligned review but no integrated reader visual acceptance.",
+    "Relations, Functions, Size of Sets, Arithmetization, Infinite and the current Propositional Logic units have source-aligned review but no integrated reader visual acceptance.",
     "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ]

@@ -12,6 +12,7 @@ provenance/TERM_DECISIONS.jsonl -text
 provenance/ALL_TRANSLATION_AUDITS.json -text
 provenance/CURRENT_MAIN_QA.json -text
 provenance/OLSIZ-SHARED-AUDIT-ADOPTION.json -text
+provenance/translation-decisions/** -text
 
 # Frozen upstream sources are byte-addressed by SOURCE_MANIFEST.jsonl. Never
 # normalize their line endings in the Git object database.

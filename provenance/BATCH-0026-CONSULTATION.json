@@ -1,0 +1,78 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0026",
+  "unit_ids": [
+    "OLP-0057",
+    "OLP-0058"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T11:37:46.3109664Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0057",
+      "source_path": "content/propositional-logic/syntax-and-semantics/introduction.tex",
+      "source_bytes": 4148,
+      "source_sha256": "3040499782b5cc91adab39a5ba93031d4daf6d05ad084e97937d6f84ebed432c",
+      "source_blocks": 10,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0058",
+      "source_path": "content/propositional-logic/syntax-and-semantics/formulas.tex",
+      "source_bytes": 7021,
+      "source_sha256": "f05ab9c5e23b362dbee9f6063f096f52ebc9e7f97b29acc9c07f18788f1f8f48",
+      "source_blocks": 36,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0057",
+      "finding": "The introduction motivates two-valued truth-functional propositional logic, distinguishes material conditionals from contested natural-language conditionals, explains inductive and uniquely readable syntax, and defines valuation satisfaction before tautology, entailment and satisfiability.",
+      "required_handling": "Preserve the exact connective list and order, true/false formulas, epistemic/modal/temporal exclusions, material-conditional qualification, inductive-definition direction, structure-of-formula satisfaction clause, all semantic formulas and the quantifier direction of each semantic notion."
+    },
+    {
+      "unit_id": "OLP-0058",
+      "finding": "The formulas section conditionally presents primitive constants and connectives, alternative notation, the inductive formation clauses, stage construction, defined-operator expansions and syntactic identity of symbol strings.",
+      "required_handling": "Translate all prose and connective names; preserve every tag condition, token, label, formula, symbol list and clause order. Apply only the two separately logged, mechanically local source repairs below."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBPL-001",
+      "unit_id": "OLP-0058",
+      "source_locator": "lines 37-47, especially line 47",
+      "classification": "confirmed_missing_empty_false_branch_for_nested_iftag",
+      "finding": "The inner defTrue conditional ends after its true branch and immediately closes the surrounding conditional, so the required third argument of the three-argument iftag macro is missing.",
+      "required_handling": "Insert exactly one empty false branch for the inner defTrue iftag in the target and disclose the repair in an adjacent Punjabi source note; preserve the outer conditional and punctuation."
+    },
+    {
+      "finding_id": "PNBPL-002",
+      "unit_id": "OLP-0058",
+      "source_locator": "lines 158-159",
+      "classification": "confirmed_unmatched_closing_parenthesis_in_defined_conditional",
+      "finding": "The disjunctive expansion of the defined conditional ends with a closing parenthesis but has no matching opening parenthesis inside its math expression.",
+      "required_handling": "Add the missing opening parenthesis so the branch reads the fully parenthesized disjunction of not-A and B; preserve the alternative conjunction branch and every surrounding tag/formula."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0026, the current owner read the complete introduction.tex and formulas.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The truth-functional scope, modal/epistemic/temporal exclusions, material-conditional qualification, inductive syntax, valuation semantics, semantic-notion quantifiers, conditional tag graph, formation clauses, defined expansions and syntactic-identity account were checked before translation. Two exact local source defects in OLP-0058 were identified before drafting and bounded as PNBPL-001/002. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi institutional prose, ordering, contrast and qualification only. It does not attest propositional variables/connectives, truth-functionality, material conditionals, valuation satisfaction, tautology, entailment, satisfiability, inductive formation, Polish notation or syntactic identity; those remain reversible source-governed scholarly bridges."
+}

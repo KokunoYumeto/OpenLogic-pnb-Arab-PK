@@ -1,0 +1,183 @@
+% Part: propositional-logic
+% Chapter: syntax-and-semantics
+% Section: formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{fml}
+
+\olsection{قضیاتی \usetoken{P}{formula}}
+
+قضیاتی منطق دے !!^{formula}s
+\emph{!!{propositional
+    variable}s} توں
+\iftag{prvFalse}{\iftag{prvTrue}{،}{ تے} قضیاتی مستقل~$\lfalse$}{}
+\iftag{prvTrue}{\iftag{prvFalse}{ تے}{} قضیاتی مستقل~$\ltrue$}{}
+\emph{منطقی رابطیاں} نال بنائے جاندے نیں۔
+
+\begin{enumerate}
+\item !!^a{denumerable} سیٹ~$\PVar$، جیہڑا !!{propositional variable}s
+  $\Obj p_0$، $\Obj p_1$، \dots دا اے۔
+\tagitem{prvFalse}{!!{falsity} دا قضیاتی مستقل~$\lfalse$۔}{}
+\tagitem{prvTrue}{!!{truth} دا قضیاتی مستقل~$\ltrue$۔}{}
+\item منطقی رابطے:
+  \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (شرطیہ، !!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (دو شرطیہ، !!{biconditional})}{}%
+\item رموزِ اوقاف: (، )، تے کوما۔
+\end{enumerate}
+
+اسیں قضیاتی منطق دی ایس زبان نوں $\Lang L_0$ نال ظاہر کردے آں۔
+
+\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}{%
+اُتے متعارف کرائے ابتدائی رابطیاں دے نال نال، اسیں ایہ
+\emph{تعریف شدہ} علامات وی ورتدے آں:
+\startycommalist
+  \iftag{defNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{defAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{defOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{defIf}{\ycomma $\lif$ (شرطیہ، !!{conditional})}{}%
+  \iftag{defIff}{\ycomma $\liff$ (دو شرطیہ، !!{biconditional})}{}%
+  \iftag{defFalse}{\ycomma $\lfalse$ (کذب، !!{falsity})}{}%
+% PNBPL-001 ماخذ دی درستی: اندرلے defTrue شرطی حکم دی خالی تیسری شاخ ماخذ وچ رہ گئی اے؛ ایتھے اوہ عین خالی شاخ شامل اے۔
+  \iftag{defTrue}{\ycomma $\ltrue$ (صدق، !!{truth})}{}}{}۔
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+\begin{explain}
+تعریف شدہ علامت باقاعدہ طور تے زبان دا حصہ نہیں ہُندی، بلکہ اک غیر رسمی
+مخفف دے طور تے متعارف کرائی جاندی اے: ایہ سانوں اوہناں فارمولیاں نوں
+مختصر لکھن دی سہولت دیندی اے جیہڑے صرف ابتدائی علامات نال لکھے جان تاں
+خاصے لمّے ہو جان۔ ایہ صاف طور تے اک فائدہ اے۔ پر ایہ توں وڈا فائدہ ایہ
+اے کہ ثبوت چھوٹے ہو جاندے نیں۔ جے کوئی علامت ابتدائی ہووے، تاں ثبوتاں
+وچ اوہنوں وکھرے طور تے ورتنا پیندا اے۔ ایس لئی جِنّیاں زیادہ ابتدائی
+علامتاں ہون، ساڈے ثبوت اونّے ای لمّے ہون گے۔
+\end{explain}
+\end{tagblock}
+
+% Alternate symbols
+
+\begin{intro}
+ہو سکدا اے تُسی اُتّے ساڈی ورتی اصطلاح تے علامات توں وکھری اصطلاح تے
+علامتاں نال واقف ہووو۔ منطق دیاں کتاباں (تے استاد) ``نفی'' لئی عام طور
+تے $\sim$، $\neg$ تے~!\ ورتدے نیں، تے ``عطف'' لئی $\wedge$،
+$\cdot$ تے $\&$۔ ``شرطیہ'' یا ``لزوم'' لئی عام ورتیاں جان والیاں
+علامتاں $\rightarrow$، $\Rightarrow$ تے $\supset$ نیں۔
+\iftag{prvIff,defIff}{``دو شرطیہ''، ``دو طرفہ لزوم'' یا ``(مادی) ہم
+  ارزی'' دیاں علامات $\leftrightarrow$، $\Leftrightarrow$ تے
+  $\equiv$ نیں۔}{}
+\iftag{prvFalse,defFalse}{$\lfalse$ دی علامت نوں وکھ وکھ تھاواں اُتے
+  ``کذب''، ``کاذب''، ``محال'' یا ``زیریں'' آکھیا جاندا اے۔}{}
+\iftag{prvTrue,defTrue}{$\ltrue$ دی علامت نوں وکھ وکھ تھاواں اُتے
+  ``صدق''، ``صادق'' یا ``بالائی'' آکھیا جاندا اے۔}{}
+\end{intro}
+
+\begin{defn}[فارمولا]
+\ollabel{defn:formulas}
+قضیاتی منطق دے \emph{!!{formula}s} دا سیٹ~$\Frm[L_0]$ استقرائی طور تے
+اینج تعریف کیتا جاندا اے:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ اک ایٹمی !!{formula} اے۔}{}
+
+\tagitem{prvTrue}{$\ltrue$ اک ایٹمی !!{formula} اے۔}{}
+
+\item ہر !!{propositional variable}~$\Obj p_i$ اک ایٹمی
+  !!{formula} اے۔
+
+\tagitem{prvNot}{جے $!A$، !!a{formula} اے، تاں $\lnot !A$ وی
+  !!a{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvOr}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{prvIf}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{prvIff}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \liff !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں اے۔}{}
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+!!{formula}s دی تعریف اک
+\emph{استقرائی تعریف} اے۔ بنیادی طور تے اسیں !!{formula}s دا سیٹ
+لامتناہی مرحلیاں وچ بناؤندے آں۔ پہلے مرحلے وچ اسیں سارے ایٹمی
+فارمولیاں نوں فارمولے قرار دیندے آں؛ ایہ تعریف دیاں پہلیاں کجھ صورتاں،
+یعنی
+\iftag{prvTrue}{$\ltrue$، }{}%
+\iftag{prvFalse}{$\lfalse$، }{}%
+$\Obj p_i$ والیاں صورتاں دے مطابق اے۔ ایس طرح ``ایٹمی !!{formula}''
+دا مطلب ایس روپ دا کوئی وی !!{formula} اے۔
+
+تعریف دیاں ہور صورتاں پہلے بنائے !!{formula}s توں نویں !!{formula}s
+بناؤن دے قاعدے دیندیاں نیں۔ دوجے مرحلے وچ اسیں ایہناں قاعدیاں نال ایٹمی
+!!{formula}s توں !!{formula}s بنا سکدے آں۔ تیجے مرحلے وچ اسیں ایٹمی
+فارمولیاں تے دوجے مرحلے وچ ملے فارمولیاں توں نویں فارمولے بناؤندے آں،
+تے ایویں ای اگے۔ !!{formula} اوہو شے اے جیہڑی آخرکار کسے ایہو جہے
+مرحلے اُتے بنائی جاوے، تے ہور کوئی شے نہیں۔
+\end{explain}
+
+فارمولا $(!B \ast !C)$، جیہڑا $!B$، $!C$ توں دو-تھاں
+رابطے~$\ast$ نال بنیا اے، لکھدے ہویاں، اسیں اکثر سب توں باہری قوسین
+دی جوڑی چھڈ کے صرف
+$!B \ast !C$ لکھاں گے۔
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+\begin{defn}
+تعریف شدہ عامل ورت کے بنائے فارمولیاں نوں اینج سمجھیا جاوے:
+
+\begin{tagenumerate}{defTrue,defFalse,defNot,defOr,defAnd,defIf,defIff,defEx,defAll}
+
+\tagitem{defTrue}{$\ltrue$،
+  \iftag{prvFalse}{$\lnot\lfalse$}{$(!A \lor \lnot !A)$، کسے مقرر
+    ایٹمی !!{formula}~$!A$ لئی} دا مخفف اے۔}{}
+
+\tagitem{defFalse}{$\lfalse$،
+  \iftag{prvTrue}{$\lnot\ltrue$}{$(!A \land \lnot !A)$، کسے مقرر
+    ایٹمی !!{formula}~$!A$ لئی} دا مخفف اے۔}{}
+
+\tagitem{defNot}{$\lnot !A$، $!A \lif \lfalse$ دا مخفف اے۔}{}
+
+\tagitem{defOr}{$!A \lor !B$،
+  \iftag{prvAnd}{$\lnot(\lnot !A \land \lnot !B)$}{$\lnot !A \lif
+    !B$} دا مخفف اے۔}{}
+
+\tagitem{defAnd}{$!A \land !B$،
+  \iftag{prvOr}{$\lnot(\lnot !A \lor \lnot !B)$}{$\lnot (!A \lif
+    \lnot !B)$} دا مخفف اے۔}{}
+
+% PNBPL-002 ماخذ دی درستی: پہلی متبادل عبارت دے آخری قوس دی شروع والی قوس ماخذ وچ رہ گئی اے؛ ایتھے پوری جوڑی شامل اے۔
+\tagitem{defIf}{$!A \lif !B$،
+  \iftag{prvOr}{$(\lnot !A \lor !B)$}{$\lnot (!A \land \lnot !B)$}
+  دا مخفف اے۔}{}
+
+\tagitem{defIff}{$!A \liff !B$، $(!A \lif !B) \land (!B
+  \lif !A)$ دا مخفف اے۔}{}
+\end{tagenumerate}
+\end{defn}
+\end{tagblock}
+
+\begin{defn}[نحوی یکسانیت]
+علامت $\ident$، علامتاں دیاں لڑیاں وچ نحوی یکسانیت ظاہر کردی اے، یعنی
+$!A \ident !B$ اُدوں تے صرف اُدوں جدوں $!A$ تے $!B$ علامتاں دیاں
+اکّو لمبائی دیاں لڑیاں ہون تے ہر مقام اُتے اکّو علامت رکھدیاں ہون۔
+\end{defn}
+
+علامت $\ident$ دے دونیں پاسے جوڑ نال ملیاں لڑیاں آ سکدیاں نیں؛ مثلاً
+$!A \ident (!B \lor !C)$ دا مطلب اے: علامتاں دی لڑی~$!A$ اوہی لڑی
+اے جیہڑی، ایس ترتیب نال، اک کھلدی قوس، لڑی $!B$، علامت $\lor$،
+لڑی~$!C$ تے اک بند ہُندی قوس نوں جوڑ کے ملدی اے۔ جے ایہ گل اے، تاں
+سانوں پتا اے کہ $!A$ دی پہلی علامت اک کھلدی قوس اے، $!A$ وچ $!B$ اک
+ذیلی لڑی دے طور تے شامل اے (دوجی علامت توں شروع ہوندی اے)، اوس ذیلی
+لڑی دے بعد $\lor$ آؤندا اے، وغیرہ۔
+
+\end{document}

@@ -1,0 +1,105 @@
+{
+  "schema": "pnb-translation-decision-surfaces-qa/1",
+  "status": "PASS",
+  "scope": {
+    "translated_units": 58,
+    "source_units_total": 722,
+    "decisions": 116,
+    "occurrences": 2262
+  },
+  "shared_contract": {
+    "commit": "811091d54be4989918864732073279a588340e6f",
+    "bytes": 10787,
+    "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
+    "draft": "2020-12",
+    "schema_validation": "PASS"
+  },
+  "adapter": {
+    "recording_mode": "derived",
+    "legacy_review_log_sha256": "98ee4b86609f197de7f286037ecaf89eccaf01fb0917ece181cdc95a7d3e511a",
+    "term_decisions_sha256": "cdd315b8b7ccb04c1d93859ddd020170c5e12b73921660169d5fea38f16ddc3a",
+    "segment_canon_use_sha256": "7fc27c828ac12179e0a53cd62835df7f4f20b383de4ec442fbdbb149d82d8452",
+    "source_corrections_sha256": "aaf32ef5727795e041f3911b6a20dcfcb326ccca750fd9ef8986e73ec16b4946",
+    "accepted_translation_reworded_by_adapter": false
+  },
+  "checks": {
+    "unique_decision_ids": true,
+    "unique_occurrence_ids": true,
+    "unique_locus_per_decision": true,
+    "source_target_files_hashes_and_line_byte_spans_resolve": true,
+    "terminology_occurrences_link_to_segment_term_decisions": true,
+    "all_translated_linguistic_segments_have_canon_passages": true,
+    "markdown_csv_json_projection_agreement": true,
+    "no_placeholders_or_silent_page_guesses": true,
+    "no_gurmukhi_devanagari_replacement_presentation_forms": true,
+    "cumulative_formula_citation_identifier_link_hierarchy_unicode_bidi_regression": "PASS",
+    "aggregate_batch_audits": "PASS"
+  },
+  "reader_pages": {
+    "occurrences_with_accepted_profile_pages": 220,
+    "occurrences_pending_reader_pagination": 2042,
+    "profiles": [
+      "Naskh",
+      "Nastaliq"
+    ],
+    "semantic_text_identity": "one pnb-Arab-PK Shahmukhi edition; profiles change typography only",
+    "naskh_pdf_sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc",
+    "nastaliq_pdf_sha256": "c124153ed3f721b5ac22078a933e7304e8aadd4d4f832614122be9f42cc8ae50",
+    "mapping_method": "Exact accepted PDF bytes visually inspected at rendered paragraph boundaries; printed pages and assembled PDF pages distinguished."
+  },
+  "regression": {
+    "path_or_uri": "provenance/AUDIT-REGRESSION-0058.json",
+    "bytes": 24181,
+    "sha256": "d5c95c3c9681e4cf348f67a5dcd2a091e51dc05ee4c8875b8c765f9286ce8e38",
+    "version_or_ref": "through-OLP-0058"
+  },
+  "aggregate_audits": {
+    "path_or_uri": "provenance/ALL_TRANSLATION_AUDITS.json",
+    "bytes": 53357,
+    "sha256": "71b9b7287ec0b10e5bda2ae4f07e14b687b49384eedd22ed96bad8d18aaf148f",
+    "version_or_ref": "through-OLP-0058"
+  },
+  "generator": {
+    "path_or_uri": "durable:work/build_decision_surfaces.py",
+    "bytes": 32204,
+    "sha256": "4a90893aef506e21316e008baabd1cebebe9463eadf7b67a27ec732d8525c88d",
+    "version_or_ref": "through-OLP-0058"
+  },
+  "artifacts": [
+    {
+      "path": "START_HERE.md",
+      "bytes": 2095,
+      "sha256": "381743e9e84eb94ebcaa2b34d6dbcd295009259cda6996cc07659c13784095a2"
+    },
+    {
+      "path": "TRANSLATION_DECISIONS_FULL.md",
+      "bytes": 943823,
+      "sha256": "87e81f8c201aabcccc825e4f6236d1ff1e865dca461e37b554594e58b022af12"
+    },
+    {
+      "path": "PRIORITY_REVIEW.md",
+      "bytes": 280937,
+      "sha256": "c11a528e1c969fb20f6e5ce9bfe9a96e03ece8a60b0c6a7e1a839c30da9f05f3"
+    },
+    {
+      "path": "DECISION_OCCURRENCES.csv",
+      "bytes": 1534182,
+      "sha256": "3e15be1365cb54eae37be9e21a2e24f66e6a02c1f53d9e5ac00057019c4be8da"
+    },
+    {
+      "path": "DECISIONS.json",
+      "bytes": 10954914,
+      "sha256": "c059a0cf0b525f010f204e97a17046b8e7782433f203cb4e528fa28820b104e7"
+    },
+    {
+      "path": "translation-decision.schema.json",
+      "bytes": 10787,
+      "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90"
+    }
+  ],
+  "limits": [
+    "This package covers translated material only; untranslated units have no decision occurrences yet.",
+    "No independent human review is claimed.",
+    "The current-main decision package has not been retroactively added to the immutable v0.1.0 Zenodo files."
+  ]
+}

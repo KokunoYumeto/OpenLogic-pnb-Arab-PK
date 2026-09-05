@@ -1381,6 +1381,57 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0057",
+      "source_path": "content/propositional-logic/syntax-and-semantics/introduction.tex",
+      "source_sha256": "3040499782b5cc91adab39a5ba93031d4daf6d05ad084e97937d6f84ebed432c",
+      "translation_sha256": "5da9eabad288b1d6b8ccbff37cbc877a255ba8b8cdc8a2fc39a7e471d1489d73",
+      "translation_bytes": 6361,
+      "source_blocks": 10,
+      "translation_blocks": 10,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0058",
+      "source_path": "content/propositional-logic/syntax-and-semantics/formulas.tex",
+      "source_sha256": "f05ab9c5e23b362dbee9f6063f096f52ebc9e7f97b29acc9c07f18788f1f8f48",
+      "translation_sha256": "c70d51dc9a96299b79567e9d2540c53fc4995986aa538e2e6eb9a5f1f22165c3",
+      "translation_bytes": 9468,
+      "source_blocks": 36,
+      "translation_blocks": 36,
+      "source_corrections": [
+        "PNBPL-001",
+        "PNBPL-002"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,
