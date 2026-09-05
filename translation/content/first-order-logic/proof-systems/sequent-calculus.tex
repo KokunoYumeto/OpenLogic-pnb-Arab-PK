@@ -1,0 +1,66 @@
+% Part: first-order-logic
+% Chapter: proof-systems
+% Section: seqeunt-calculus
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{prf}{seq}}
+      {\olfileid{pl}{prf}{seq}}
+
+\olsection{سیکوئنٹ حساب}
+
+بھاویں بہت سارے !!{derivation} نظام !!{sentence}s دے بندوبستاں نال کم
+کردے نیں، سیکوئنٹ حساب \emph{سیکوئنٹاں} نال کم کردا اے۔ سیکوئنٹ ایس
+روپ دی اک عبارت اے
+\[
+!A_1, \dots, !A_m \Sequent !B_1, \dots, !B_m,
+\]
+یعنی !!{sentence}s دے سلسلیاں دی اک جوڑی، جہنوں سیکوئنٹ دی
+علامت~$\Sequent$ وکھ کردی اے۔ دونیں سلسلیاں وچوں کوئی وی خالی ہو سکدا
+اے۔ سیکوئنٹ حساب وچ !!^a{derivation} سیکوئنٹاں دا اک درخت ہُندا اے،
+جتھے سب توں اُتّے والے سیکوئنٹ خاص روپ دے ہُندے نیں (اوہناں نوں
+``ابتدائی سیکوئنٹ'' یا ``مسلّماں'' آکھیا جاندا اے) تے ہر ہور سیکوئنٹ
+استنباط دے قاعدیاں وچوں کسے اک راہیں اپنے عین اُتّے والے سیکوئنٹاں توں
+نکلدا اے۔ استنباط دے قاعدے یا تاں سیکوئنٹاں اندر !!{sentence}s نوں
+بدلدے نیں (کھبے یا سجے پاسے اوہناں نوں شامل، خارج یا اگے پچھے کر کے)،
+یا قاعدے دے نتیجے وچ اک مرکب !!{formula} متعارف کراؤندے نیں۔ مثال لئی،
+$\LeftR{\land}$ دا قاعدہ $!A,
+\Gamma \Sequent \Delta$ توں $!A \land !B, \Gamma \Sequent \Delta$ دا
+استنباط کرن دی اجازت دیندا اے، تے $\RightR{\lif}$ دا قاعدہ $!A, \Gamma \Sequent
+\Delta, !B$ توں $\Gamma \Sequent \Delta, !A \lif !B$ دا، ہر $\Gamma$،
+$\Delta$، $!A$ تے~$!B$ لئی۔ (خاص طور تے، $\Gamma$ تے~$\Delta$ خالی
+وی ہو سکدے نیں۔)
+
+سیکوئنٹ حساب اُتے مبنی $\Proves$ تعلق دی تعریف ایویں کیتی جاندی اے:
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں کوئی سلسلہ $\Gamma_0$ ایہو
+جہا ہووے کہ ہر $!A$ جیہڑا $\Gamma_0$ وچ اے،~$\Gamma$ وچ ہووے، تے اک
+!!{derivation} ہووے جہدی جڑ اُتے سیکوئنٹ~$\Gamma_0 \Sequent !A$ ہووے۔
+$!A$ سیکوئنٹ حساب وچ اک قضیہ اے جے سیکوئنٹ~$\Sequent !A$ دا
+!!a{derivation} ہووے۔ مثال لئی، ایہ !!a{derivation} وکھاؤندا اے کہ
+$\Proves (!A \land !B) \lif !A$:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B \fCenter !A$
+  \RightLabel{\RightR{\lif}}
+  \UnaryInf$\fCenter (!A \land !B) \lif !A$
+\end{prooftree}
+
+سیکوئنٹ حساب وچ سیٹ $\Gamma$ متضاد اے جے $\Gamma_0 \Sequent$ دا
+!!a{derivation} ہووے (جتھے ہر $!A \in \Gamma_0$،~$\Gamma$
+وچ ہووے تے سیکوئنٹ دا سجا پاسا خالی ہووے)۔ قاعدہ
+\RightR{\Weakening} ورت کے، کسے متضاد سیٹ توں ہر !!{sentence} نوں
+!!{derive} کیتا جا سکدا اے۔
+
+سیکوئنٹ حساب نوں 1930 دی دہائی وچ Gerhard Gentzen نے ایجاد کیتا۔
+اپنی منظم تے متناظر بناوٹ پاروں ایہ !!{derivation}s دا نظریہ تیار کرن
+لئی بہت فائدہ مند رسمی ڈھانچا اے۔ سیکوئنٹ حساب وچ !!{derivation}s لبھنے
+نسبتاً سَوکھے نیں، پر ایہ !!{derivation}s اکثر پڑھن وچ اوکھے ہُندے نیں
+تے ثبوتاں نال اوہناں دا تعلق ویکھنا کدی کدی سَوکھا نہیں ہُندا۔ ایس دے باوجود
+ایہ !!{derivation} نظاماں دا بہت سلیقے والا طریقہ ثابت ہویا اے، تے بہت
+ساریاں منطقاں دے سیکوئنٹ حسابی نظام نیں۔
+
+\end{document}

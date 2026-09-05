@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **129 of 131** current decisions.
+This view contains only urgent/high-priority decisions: **135 of 137** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -2002,6 +2002,144 @@ Authorities checked:
 Alternatives:
 
 - عدمِ تناقض; تناقض; معنوی قابلِ اشباع ہونے کا نحوی قرینہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T090`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: sequent; sequent calculus; pair of possibly empty sentence sequences
+- Intended sense: sequent; sequent calculus; pair of possibly empty sentence sequences
+- Chosen Shahmukhi rendering/treatment: سیکوئنٹ؛ سیکوئنٹ حساب؛ ممکنہ طور تے خالی جملہ-سلسلیاں دی جوڑی
+- Rationale: The source defines a sequent by its displayed two-sided expression and then as a pair of sentence sequences separated by the sequent symbol, explicitly allowing either sequence to be empty. The Punjabi preserves the display, both sequence roles and the empty-side possibility while using a stable transliterated system name.
+- Why expert review helps: No native Punjabi proof-theory attestation was acquired. سیکوئنٹ and سیکوئنٹ حساب are reversible display-governed bridges; the exact Sequent expression and two-sequence definition govern.
+- Please double-check: **Do سیکوئنٹ and سیکوئنٹ حساب name the displayed two-sided object and its calculus clearly, with either sentence sequence still allowed to be empty?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0064-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- متوالیہ; حسابِ متوالیات; دو ممکنہ خالی جملہ-سلسلے — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T091`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: initial sequent or axiom; derivation root; left and right side; weakening
+- Intended sense: initial sequent or axiom; derivation root; left and right side; weakening
+- Chosen Shahmukhi rendering/treatment: ابتدائی سیکوئنٹ یا مسلّمہ؛ اخذ دی جڑ؛ کھبا تے سجا پاسا؛ کمزور کرن دا قاعدہ
+- Rationale: A sequent-calculus derivation is a tree whose top sequents are initial or axiomatic, whose remaining sequents follow immediately by rules, and whose bottom root determines derivability or theoremhood. The inconsistency clause requires an empty right side and weakening then yields every sentence. The Punjabi keeps every orientation and rule consequence distinct.
+- Why expert review helps: No native Punjabi sequent-calculus attestation was acquired. ابتدائی سیکوئنٹ, جڑ and the side vocabulary are reversible tree- and formula-governed bridges; the prooftree, root sequents and empty-right-side criterion govern.
+- Please double-check: **Do ابتدائی سیکوئنٹ, جڑ and کھبا/سجا پاسا preserve the tree orientation, and does the empty-right-side plus Weakening account retain explosive inconsistency?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0065-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- ابتدائی متوالیہ; اصل/جڑ; بایاں/دایاں طرف; قاعدۂ تضعیف — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T092`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: natural deduction; proof by cases; indirect proof; conditional proof; introduction and elimination rules
+- Intended sense: natural deduction; proof by cases; indirect proof; conditional proof; introduction and elimination rules
+- Chosen Shahmukhi rendering/treatment: فطری استنباط؛ صورتاں راہیں ثبوت؛ بالواسطہ ثبوت؛ شرطیہ ثبوت؛ تعارفی تے اخراجی قاعدے
+- Rationale: The source presents natural deduction as formalizing ordinary proof patterns and maps case proof, conditional proof and conjunction elimination to exact rule macros. Each connective and quantifier has an introduction and elimination rule. The Punjabi preserves each example, connective, premise and conclusion rather than treating the names as free-standing equivalents.
+- Why expert review helps: No native Punjabi natural-deduction attestation was acquired. The proof-pattern names and تعارفی/اخراجی distinction are reversible rule-governed bridges; the Intro and Elim macros and examples govern.
+- Please double-check: **Do the chosen natural-proof pattern names remain distinct, and do تعارفی/اخراجی قاعدے match the exact Intro/Elim examples without changing premise or conclusion?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0064-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- استنتاجِ طبیعی; ثبوت بالتقسیم; برہانِ خلف; شرطی ثبوت; قواعدِ ادخال و اخراج — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T093`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: premise and conclusion; antecedent and consequent; disjunct
+- Intended sense: premise and conclusion; antecedent and consequent; disjunct
+- Chosen Shahmukhi rendering/treatment: مقدمہ تے نتیجہ؛ مقدم تے تالی؛ فصلی جز
+- Rationale: The natural-reasoning examples distinguish the disjunctive premise from its disjuncts, the conclusion established in each case, and the antecedent and consequent of conditional proof. The Punjabi assigns a separate stable role-word to each while every formula and rule correspondence fixes the intended relation.
+- Why expert review helps: No specialist Punjabi logic attestation was acquired. مقدمہ, نتیجہ, مقدم, تالی and فصلی جز are reversible argument-role bridges; the surrounding case and conditional proof descriptions govern.
+- Please double-check: **Do مقدمہ and نتیجہ distinguish argument roles while مقدم, تالی and فصلی جز retain the conditional and disjunction structures in each proof pattern?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0066-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مقدمہ/نتیجہ; مقدم/تالی; جزوِ فصل — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T094`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: assumption; temporary hypothetical assumption; discharge and undischarged assumption
+- Intended sense: assumption; temporary hypothetical assumption; discharge and undischarged assumption
+- Chosen Shahmukhi rendering/treatment: مفروضہ؛ وقتی مفروضہ؛ مفروضہ خارج کرنا تے خارج نہ کیتا مفروضہ
+- Rationale: The source locates assumptions at derivation leaves, permits some to serve temporarily, marks discharge at a numbered inference, and defines derivability by undischarged leaves but theoremhood by discharge of all assumptions. The Punjabi preserves these four roles and the exact conditional-introduction example.
+- Why expert review helps: No native Punjabi natural-deduction attestation was acquired. مفروضہ and خارج کرنا are reversible tree- and scope-governed renderings; the leaf/root structure, numbered Discharge macro and Proves definitions govern.
+- Please double-check: **Do مفروضہ, خارج کرنا and the undischarged wording clearly distinguish leaf assumptions, temporary use, numbered discharge and premises remaining at the conclusion?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0066-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مفروضہ; عارضی قیاس; رفعِ مفروضہ; غیر مرفوع مفروضہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T095`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: proof-theoretic semantics; natural-deduction rules taken to give meanings of logical operators
+- Intended sense: proof-theoretic semantics; natural-deduction rules taken to give meanings of logical operators
+- Chosen Shahmukhi rendering/treatment: ثبوتی-نظریاتی معنیات؛ فطری استنباط دے قاعدیاں راہیں منطقی رابطیاں دے معنی
+- Rationale: The closing paragraph reports a qualified position in philosophy of logic: natural-deduction rules have sometimes been taken to give the meanings of logical operators. The Punjabi retains both the attributional setting and 'sometimes' qualification and does not state the position as an unqualified fact.
+- Why expert review helps: No native Punjabi proof-theoretic-semantics attestation was acquired. ثبوتی-نظریاتی معنیات is a reversible source-governed scholarly bridge; the reported-view grammar and qualification govern.
+- Please double-check: **Does ثبوتی-نظریاتی معنیات read as a recognizable scholarly bridge while the Punjabi keeps the source’s “sometimes taken” philosophical qualification?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0066-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- معنیاتِ نظریۂ ثبوت; قواعد سے معانی کی تحدید — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---

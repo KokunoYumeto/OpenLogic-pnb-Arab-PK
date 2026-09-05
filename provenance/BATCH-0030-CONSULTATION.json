@@ -1,0 +1,87 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0030",
+  "unit_ids": [
+    "OLP-0065",
+    "OLP-0066"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T17:16:42.5101640Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0065",
+      "source_path": "content/first-order-logic/proof-systems/sequent-calculus.tex",
+      "source_bytes": 2919,
+      "source_sha256": "5448a91da184ef1d41e40ec2d56b74db63d49412d8b96b3f2a39a101b0191bad",
+      "source_blocks": 10,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0066",
+      "source_path": "content/first-order-logic/proof-systems/natural-deduction.tex",
+      "source_bytes": 4534,
+      "source_sha256": "77b5d31c7b63f657e0d5492d83810bfdc21af0169a9b38ccd5302e0e4cdefdfe",
+      "source_blocks": 11,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0065",
+      "finding": "The survey defines sequent-calculus derivations, illustrates left-conjunction and right-conditional rules, defines theoremhood and derivability through root sequents, characterizes inconsistency by an empty right side, and gives the Gentzen history and usability tradeoff.",
+      "required_handling": "Preserve both tagged identities, the two possibly empty sentence sequences, root orientation, all rule examples and metavariable scopes, the Gamma-zero membership restriction, theorem and inconsistency criteria, weakening consequence, attribution, decade and stated readability tradeoff."
+    },
+    {
+      "unit_id": "OLP-0066",
+      "finding": "The survey connects natural deduction to ordinary mathematical reasoning, pairs connectives and quantifiers with introduction/elimination rules, develops temporary assumptions and discharge, defines theoremhood and derivability, characterizes inconsistency via falsity, and records its history and proof-theoretic-semantic use.",
+      "required_handling": "Preserve every proof pattern and corresponding rule, tree root and leaf roles, temporary-assumption examples, discharge labels and scope, the distinction between discharged and undischarged assumptions, both Proves definitions, proof-tree commands, falsity/explosion criterion, attributions and philosophical qualification."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0065",
+      "locator": "non-rendered Section metadata comment",
+      "observation": "The source comment spells the section key 'seqeunt-calculus'; the rendered section title and source path use the intended sequent-calculus spelling.",
+      "handling": "Preserve the frozen non-rendered metadata comment exactly. Translate the rendered title normally and do not record a semantic source correction."
+    },
+    {
+      "unit_id": "OLP-0065",
+      "locator": "opening displayed sequent and rule examples",
+      "observation": "The displayed general sequent uses m on both the left and right sequences, while the prose only requires a pair of sequences and permits either to be empty. The later Gamma and Delta metavariables independently cover arbitrary contexts.",
+      "handling": "Preserve the displayed indices exactly rather than silently changing the right endpoint. Preserve every later context and the explicit possibility that Gamma and Delta are empty."
+    },
+    {
+      "unit_id": "OLP-0066",
+      "locator": "assumption discharge discussion",
+      "observation": "The source distinguishes leaf assumptions used only temporarily from assumptions left undischarged, and defines derivability by undischarged leaves but theoremhood by discharge of every assumption.",
+      "handling": "Keep leaf, root and last-sentence roles separate; retain the numbered discharge bookkeeping and do not collapse temporary use, discharge and ordinary premise membership into one notion."
+    },
+    {
+      "unit_id": "OLP-0066",
+      "locator": "historical and philosophical closing paragraph",
+      "observation": "The source attributes development to Gentzen and Jaskowski in the 1930s, later work to Prawitz and Fitch, and only says natural-deduction rules have sometimes been taken to give logical-operator meanings.",
+      "handling": "Preserve all names, the decade, textbook and philosopher claims, and the qualified 'sometimes' scope of proof-theoretic semantics; do not turn it into a universal definition."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0030, the current owner read the complete sequent-calculus.tex and natural-deduction.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Tagged shared identities, sequence and tree structure, rule examples, root/leaf roles, derivability, theoremhood, inconsistency, temporary assumptions, discharge, history and proof-theoretic semantics were checked before translation. Non-rendered spelling and displayed-index observations were bounded without altering frozen formulas or adding a target correction. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest sequent calculus, natural deduction, inference rules, introduction or elimination, discharge, weakening, proof by cases, indirect proof, conditional proof or proof-theoretic semantics; those remain reversible source-governed scholarly bridges."
+}
