@@ -1,0 +1,90 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0021",
+  "unit_ids": [
+    "OLP-0047",
+    "OLP-0048"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T00:40:53.9924234Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0047",
+      "source_path": "content/sets-functions-relations/arithmetization/checking-details.tex",
+      "source_bytes": 8707,
+      "source_sha256": "d791c146f159c8e43368c12cd1a10e61a53f501baf9f3d2c606c7bd589c0ae01",
+      "source_blocks": 28,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0048",
+      "source_path": "content/sets-functions-relations/arithmetization/cauchy.tex",
+      "source_bytes": 10928,
+      "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
+      "source_blocks": 24,
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBARI-008",
+      "unit_id": "OLP-0047",
+      "source_locator": "lines 145-151",
+      "classification": "confirmed_missing_noun_in_checking_clause",
+      "finding": "The clause 'run through the (tedious) of checking' lacks the noun governed by 'the ... of'. The surrounding appendix repeatedly describes the required checking as laborious work.",
+      "required_handling": "State the tedious work of checking that the reals form an ordered field, preserve the cross-reference and mathematical claim, and add an adjacent Punjabi note. This is prose-only."
+    },
+    {
+      "finding_id": "PNBARI-012",
+      "unit_id": "OLP-0047",
+      "source_locator": "lines 170-173, referring back to OLP-0045 lines 89-95",
+      "classification": "confirmed_reference_to_inactive_operation_definitions",
+      "finding": "The checking appendix asks readers to verify that real subtraction and division yield cuts, but the only displayed subtraction and division definitions in cuts.tex are commented out and therefore inactive in the compiled source.",
+      "required_handling": "Preserve the checking request and its formulas, add an adjacent Punjabi disclosure that the referenced definitions are inactive source comments, and do not silently activate or invent those operations."
+    },
+    {
+      "finding_id": "PNBARI-009",
+      "unit_id": "OLP-0048",
+      "source_locator": "lines 109-125",
+      "classification": "confirmed_relation_class_category_error",
+      "finding": "After defining an equivalence relation on Cauchy sequences, the source says to identify real numbers with equivalence relations. The next sentence and all later representative notation instead define reals as equivalence classes under that relation.",
+      "required_handling": "Identify reals with equivalence classes, preserve the relation definition and following quotient construction, and add an adjacent Punjabi note. This is prose-only."
+    },
+    {
+      "finding_id": "PNBARI-010",
+      "unit_id": "OLP-0048",
+      "source_locator": "lines 149-154",
+      "classification": "confirmed_wrong_number_system_zero_in_real_class_test",
+      "finding": "The positivity definition compares a real equivalence class [f] with 0_Rat. The section has already embedded rational q as q_Real and the order is being defined on real classes, so the typed zero is 0_Real.",
+      "required_handling": "Use 0_Real in the nonzero conjunct, preserve the eventual-positivity condition and order definition, add an adjacent Punjabi note, and permit exactly the Rat-to-Real command replacement."
+    },
+    {
+      "finding_id": "PNBARI-011",
+      "unit_id": "OLP-0048",
+      "source_locator": "lines 160-181",
+      "classification": "confirmed_quotient_objects_misstated_as_raw_sequences",
+      "finding": "The operations and order are defined on Realequiv equivalence classes, but the theorem, exercise and completeness theorem call raw Cauchy sequences the ordered-field objects. Raw sequences include distinct representatives of one real and are not the objects on which the displayed operations were defined.",
+      "required_handling": "State each result for equivalence classes of Cauchy sequences, retain every theorem label, proof, exercise and formula, and add an adjacent Punjabi note covering the repeated prose normalization."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0021, the current owner read the complete checking-details.tex and cauchy.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The missing checking noun, inactive subtraction/division reference, relation/class category, typed zero and sequence/class theorem subjects were checked against the preceding quotient construction, constant-sequence embedding, displayed operations/order and later representative formulas before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, proof narration, reason-giving connectives and qualification only. It does not attest commutative/ordered ring and field axioms, Cauchy sequences, epsilon bounds, recursive bisection, monotonicity or quotient-field terminology; these remain reversible definition-based and scholarly bridges."
+}
