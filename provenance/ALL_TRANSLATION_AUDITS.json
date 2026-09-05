@@ -1691,6 +1691,54 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0069",
+      "source_path": "content/first-order-logic/sequent-calculus/sequent-calculus.tex",
+      "source_sha256": "f7e79d7b3f181c61d3defb24c630db20ceaf12a3ec237c9b0a2ab1f7855494fb",
+      "translation_sha256": "a838b79fcc63958e48e56d79751a6641a80c3e206597e26a8dccfabb6fbffed7",
+      "translation_bytes": 1201,
+      "source_blocks": 20,
+      "translation_blocks": 20,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0070",
+      "source_path": "content/first-order-logic/sequent-calculus/rules-and-proofs.tex",
+      "source_sha256": "73a554964d7a3fc35a116f63e658340a8c89f9915c3f27e23f7ebd762df35859",
+      "translation_sha256": "e77c111773757d8cc1d9120ffc5868c9140b79ecde994b5ce09f5455dc106227",
+      "translation_bytes": 4190,
+      "source_blocks": 12,
+      "translation_blocks": 12,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

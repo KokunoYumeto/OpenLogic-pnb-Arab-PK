@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **141 of 143** current decisions.
+This view contains only urgent/high-priority decisions: **147 of 149** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -2278,6 +2278,144 @@ Authorities checked:
 Alternatives:
 
 - فریگ/ہلبرٹ نظام; نظریاتی سہولت اور عملی دشواری — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T102`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Gentzen's standard sequent calculus LK; classical first-order logic; prfLK proof-system material tag
+- Intended sense: Gentzen's standard sequent calculus LK; classical first-order logic; prfLK proof-system material tag
+- Chosen Shahmukhi rendering/treatment: Gentzen دا معیاری سیکوئنٹ حساب LK؛ کلاسیکی پہلے درجے دی منطق؛ prfLK ثبوتی-نظام مواد ٹیگ
+- Rationale: The driver identifies Gentzen's standard LK system and its classical first-order scope, while the editorial uses literal tag prfLK to select proof-system-related material and says more examples and exercises are still wanted. The Punjabi preserves the name, scope, literal tag and unmet editorial modality.
+- Why expert review helps: No native Punjabi LK attestation was acquired. سیکوئنٹ حساب is the existing reversible system bridge; Gentzen, LK and prfLK remain literal source identifiers, and the exact import graph governs scope.
+- Please double-check: **Does معیاری سیکوئنٹ حساب LK preserve the named Gentzen system, and does the untranslated prfLK tag remain clearly a material-selection control rather than a logical symbol?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0069-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- معیاری LK حساب; کلاسیکی منطق; prfLK مواد ٹیگ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T103`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: finite possibly empty sequent sides; antecedent; succedent
+- Intended sense: finite possibly empty sequent sides; antecedent; succedent
+- Chosen Shahmukhi rendering/treatment: محدود، ممکنہ طور تے خالی سیکوئنٹ پاسے؛ مقدم؛ تالی
+- Rationale: A sequent is exactly Gamma sequent Delta with both Gamma and Delta finite, possibly empty sentence sequences. The source names the left sequence antecedent and the right sequence succedent; the Punjabi uses مقدم and تالی while retaining the display and both sequence qualifications.
+- Why expert review helps: No native Punjabi sequent-side attestation was acquired. مقدم and تالی are reversible display-governed scholarly bridges and should not be assumed to name only single formulas; the sequence definition controls their scope.
+- Please double-check: **Do مقدم and تالی naturally name the whole left and right sequences while the finite, possibly-empty qualification remains attached to both sides?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0070-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مقدم/تالی; محدود ممکنہ خالی جملہ سلسلے — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T104`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: intuitive sequent truth condition; empty antecedent; empty succedent; valid sequent
+- Intended sense: intuitive sequent truth condition; empty antecedent; empty succedent; valid sequent
+- Chosen Shahmukhi rendering/treatment: مقدم دے سارے جملے تاں تالی دا گھٹ توں گھٹ اک جملہ؛ خالی مقدم؛ خالی تالی؛ معتبر سیکوئنٹ
+- Rationale: The intuitive reading universally requires antecedent sentences but existentially requires at least one succedent sentence. The displayed conditional fixes that direction; an empty antecedent reduces to the succedent disjunction, an empty succedent to negation of the antecedent conjunction, and sequent validity follows the corresponding sentence.
+- Why expert review helps: No native Punjabi sequent-validity attestation was acquired. معتبر is a reversible formula-governed bridge; the all/at-least-one contrast, m/n roles and both empty-side equivalences govern.
+- Please double-check: **Does the Punjabi keep all antecedent sentences versus at least one succedent sentence, and do the two empty-side cases yield respectively a disjunction and a negated conjunction?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- سیکوئنٹ کی صدقی تعبیر; خالی مقدم/تالی; اعتبار — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T105`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: append to right or left end of a sequence; concatenation in Gamma-then-Delta order
+- Intended sense: append to right or left end of a sequence; concatenation in Gamma-then-Delta order
+- Chosen Shahmukhi rendering/treatment: سلسلے دے سجے یا کھبے سرے اُتے شامل کرنا؛ Gamma فیر Delta سلسلیاں دا جوڑ
+- Rationale: The source distinguishes Gamma-comma-A from A-comma-Gamma by which abstract sequence end receives A, then defines Gamma-comma-Delta as concatenation of the two sequences in that order. The Punjabi preserves every inline expression and endpoint before naming the combined sequence join.
+- Why expert review helps: No native Punjabi formal-language concatenation attestation was acquired. سجا/کھبا سرا and جوڑ are reversible notation-governed descriptions; they refer to sequence position, not RTL page direction.
+- Please double-check: **Do سجا سرا, کھبا سرا and سلسلیاں دا جوڑ make append direction and Gamma-then-Delta concatenation recoverable without importing page-reading direction?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0070-B009` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- دائیں/بائیں سرے پر اضافہ; الحاقِ سلسلہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T106`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: initial sequent; identity form; tagged truth-right and falsity-left initial forms
+- Intended sense: initial sequent; identity form; tagged truth-right and falsity-left initial forms
+- Chosen Shahmukhi rendering/treatment: ابتدائی سیکوئنٹ؛ A sequent A روپ؛ prvTrue نال سجے صدق تے prvFalse نال کھبے کذب دے روپ
+- Rationale: The identity initial sequent A sequent A is available in both branches. Only the prvTrue or prvFalse tagged branch opens the enumeration that may add an empty-left truth sequent or an empty-right falsity sequent. The target preserves every tag, empty side, formula and fallback.
+- Why expert review helps: No native Punjabi initial-sequent attestation was acquired. ابتدائی سیکوئنٹ is a reversible tag- and display-governed bridge; tag configuration determines the extra forms and the target does not make them unconditional.
+- Please double-check: **Does ابتدائی سیکوئنٹ preserve A sequent A unconditionally while keeping truth-right and falsity-left forms conditional on their exact prvTrue/prvFalse tags?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0070-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- ابتدائی سیکوئنٹ; صدق دائیں/کذب بائیں ٹیگ شدہ صورتیں — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T107`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: logical and structural rules; main operator in lower sequent; left and right rule versions
+- Intended sense: logical and structural rules; main operator in lower sequent; left and right rule versions
+- Chosen Shahmukhi rendering/treatment: منطقی تے ساختی قاعدے؛ ہِٹھلے سیکوئنٹ دا مرکزی عامل؛ کھبے تے سجے روپ
+- Rationale: LK rules divide into logical and structural types. Logical rules are named for the main operator of the A- and/or B-containing sentence in the lower sequent, and each has versions placing the operator-bearing sentence on the left or right. The Punjabi retains lower-tree orientation and both versions.
+- Why expert review helps: No native Punjabi LK-rule taxonomy attestation was acquired. ساختی قاعدہ and مرکزی عامل are reversible rule- and formula-governed bridges; later exact rule schemata must continue to control their use.
+- Please double-check: **Do منطقی/ساختی قاعدے, ہِٹھلا سیکوئنٹ and مرکزی عامل preserve rule classification, lower-conclusion orientation and the distinct left/right rule versions?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0070-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- منطقی/ساختی قاعدے; زیریں سیکوئنٹ; مرکزی عامل — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---

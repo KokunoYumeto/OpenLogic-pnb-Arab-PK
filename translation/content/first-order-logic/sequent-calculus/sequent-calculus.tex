@@ -1,0 +1,56 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{seq}{سیکوئنٹ حساب}}
+      {\olchapter{pl}{seq}{سیکوئنٹ حساب}}
+
+\begin{editorial}
+  ایہ باب کلاسیکی پہلے درجے دی منطق لئی Gentzen دا معیاری سیکوئنٹ
+  حساب LK پیش کردا اے۔ ایہنوں ہور مثالاں تے مشقاں دی لوڑ اے۔ سیکوئنٹ
+  حساب نوں اک ثبوتی نظام وجوں متعلقہ مواد شامل یا خارج کرن لئی
+  ``prfLK'' ٹیگ ورتو۔
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{propositional-rules}
+
+\iftag{FOL}{%
+  \olimport{quantifier-rules}
+}{}
+
+\olimport{structural-rules}
+
+\olimport{derivations}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{%
+  \olimport{identity}
+  \olimport{soundness-identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

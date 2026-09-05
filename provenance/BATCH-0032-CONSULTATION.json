@@ -1,0 +1,87 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0032",
+  "unit_ids": [
+    "OLP-0069",
+    "OLP-0070"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T20:46:16.5395318Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0069",
+      "source_path": "content/first-order-logic/sequent-calculus/sequent-calculus.tex",
+      "source_bytes": 1074,
+      "source_sha256": "f7e79d7b3f181c61d3defb24c630db20ceaf12a3ec237c9b0a2ab1f7855494fb",
+      "source_blocks": 20,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0070",
+      "source_path": "content/first-order-logic/sequent-calculus/rules-and-proofs.tex",
+      "source_bytes": 2810,
+      "source_sha256": "73a554964d7a3fc35a116f63e658340a8c89f9915c3f27e23f7ebd762df35859",
+      "source_blocks": 12,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0069",
+      "finding": "The chapter driver identifies Gentzen's standard LK calculus for classical first-order logic, flags missing examples and exercises, documents the prfLK proof-system tag, and imports common and FOL-only sections in a fixed order.",
+      "required_handling": "Preserve both chapter-identity branches, the editorial limitations and tag name, every import path and order, all four FOL-only gates, and the final chapter hook. Translate the editorial prose without converting a planned improvement into completed content."
+    },
+    {
+      "unit_id": "OLP-0070",
+      "finding": "The section fixes four finite sequence metavariables, defines a sequent and its antecedent and succedent, explains the corresponding conditional and both empty-side cases, defines append and concatenation, conditionally extends initial sequents through tags, and introduces logical versus structural LK rules.",
+      "required_handling": "Preserve finite and possibly empty scopes, all/either semantic directions, m/n endpoint roles, conjunction/conditional/disjunction structure, both empty-side equivalences, right/left append order, tagged initial-sequent alternatives, tree orientation, one-or-two-premise scope and lower-sequent main-operator naming."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0069",
+      "locator": "editorial environment and import graph",
+      "observation": "The editorial says the chapter could use more examples and exercises and names the literal tag `prfLK`; quantifier, quantifier-proof, quantifier-provability, identity and soundness-identity material is gated by FOL while common material remains unconditional.",
+      "handling": "Retain the improvement statement as unmet editorial modality, keep `prfLK` literal, and preserve exact conditional wrappers and import ordering rather than translating import names."
+    },
+    {
+      "unit_id": "OLP-0070",
+      "locator": "intuitive sequent explanation",
+      "observation": "The general case uses m antecedent formulas and n succedent formulas; an empty antecedent leaves a disjunction, while an empty succedent yields the negation of the antecedent conjunction.",
+      "handling": "Keep m and n distinct, retain at-least-one rather than all on the succedent, and preserve both empty-side equivalences and validity criterion exactly."
+    },
+    {
+      "unit_id": "OLP-0070",
+      "locator": "initial-sequent tagged definition",
+      "observation": "Under either prvFalse or prvTrue the definition opens an enumeration containing A sequent A and then conditionally includes truth-right or falsity-left forms; otherwise it gives only A sequent A.",
+      "handling": "Preserve every nested tag, empty side, enumeration branch and fallback form; do not make either tagged initial sequent unconditional."
+    },
+    {
+      "unit_id": "OLP-0070",
+      "locator": "logical-rule naming paragraph",
+      "observation": "Rules are named for the main operator in the sentence containing A and/or B in the lower sequent, and each logical rule has left and right versions.",
+      "handling": "Keep lower-sequent orientation, A-and/or-B scope and the two-version left/right contrast; do not infer names from premises above."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0032, the current owner read the complete sequent-calculus driver and rules-and-proofs original and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. LK scope, editorial modality, tag-gated import graph, finite sequent sides, the corresponding conditional, both empty-side cases, append and concatenation, tagged initial sequents and logical/structural rule orientation were checked before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest LK, antecedent or succedent, initial sequents, sequent validity, sequence concatenation, structural rules or main operators; those remain reversible source- and formula-governed scholarly bridges."
+}

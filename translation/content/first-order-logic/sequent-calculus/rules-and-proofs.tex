@@ -1,0 +1,78 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{rul}}
+      {\olfileid{pl}{seq}{rul}}
+
+\olsection{قاعدے تے \usetoken{P}{derivation}}
+
+اگلی بحث لئی، منّ لو کہ $\Gamma, \Delta, \Pi, \Lambda$، !!{sentence}s
+دے محدود سلسلے ظاہر کردے نیں۔
+
+\begin{defn}[سیکوئنٹ]
+\emph{سیکوئنٹ} ایس روپ دی اک عبارت اے
+\[
+\Gamma \Sequent \Delta
+\]
+جتھے $\Gamma$ تے $\Delta$، زبان $\Lang L$ دے !!{sentence}s دے محدود
+(ممکنہ طور تے خالی) سلسلے نیں۔ $\Gamma$ نوں \emph{مقدم} آکھیا جاندا
+اے، جد کہ $\Delta$ نوں \emph{تالی} آکھیا جاندا اے۔
+\end{defn}
+
+\begin{explain}
+سیکوئنٹ دے پچھے بدیہی خیال ایہ اے: جے مقدم وچ سارے !!{sentence}s
+قائم ہون تاں تالی دے !!{sentence}s وچوں گھٹ توں گھٹ اک قائم ہووے۔ یعنی، جے
+$\Gamma = \tuple{!A_1, \dots, !A_m}$ تے
+$\Delta = \tuple{!B_1, \dots, !B_n}$، تاں $\Gamma \Sequent \Delta$
+اُدوں تے صرف اُدوں قائم ہُندا اے جدوں
+\[
+(!A_1 \land \cdots \land !A_m) \lif (!B_1 \lor \cdots \lor
+!B_n)
+\]
+قائم ہُندا اے۔ دو خاص صورتاں نیں: اک جتھے $\Gamma$ خالی اے تے دوجی
+جدوں $\Delta$~خالی اے۔ جدوں $\Gamma$ خالی اے، یعنی $m = 0$، $\quad
+\Sequent \Delta$ اُدوں تے صرف اُدوں قائم ہُندا اے جدوں $!B_1 \lor
+\dots \lor !B_n$ قائم ہُندا اے۔ جدوں $\Delta$ خالی اے، یعنی $n = 0$،
+$\Gamma \Sequent \quad$ اُدوں تے صرف اُدوں قائم ہُندا اے جدوں
+$\lnot(!A_1 \land \dots \land !A_m)$ قائم ہُندا اے۔ اسیں آکھدے آں
+کہ کوئی سیکوئنٹ اُدوں تے صرف اُدوں معتبر اے جدوں اوہدے مطابق
+!!{sentence} معتبر اے۔
+\end{explain}
+
+جے $\Gamma$، !!{sentence}s دا اک سلسلہ اے، تاں اسیں $\Gamma, !A$ اوس
+نتیجے نوں لکھدے آں جیہڑا $!A$ نوں~$\Gamma$ دے سجے سرے اُتے شامل کرن
+نال ملدا اے (تے $!A, \Gamma$ اوس نتیجے نوں جیہڑا $!A$ نوں~$\Gamma$
+دے کھبے سرے اُتے شامل کرن نال ملدا اے)۔ جے $\Delta$ وی
+!!{sentence}s دا اک سلسلہ اے، تاں $\Gamma, \Delta$ ایس لکھی ترتیب نال
+دونیں سلسلیاں نوں جوڑ کے بنیا سلسلہ اے۔
+
+\begin{defn}[ابتدائی سیکوئنٹ]
+\emph{ابتدائی سیکوئنٹ} اک ایہو جہا سیکوئنٹ اے
+\iftag{prvFalse,prvTrue}{جیہڑا اگلے روپاں وچوں کسے اک دا ہووے:
+  \begin{enumerate}
+    \item $!A \Sequent !A$
+    \tagitem{prvTrue}{$\quad \Sequent \ltrue$}{}
+    \tagitem{prvFalse}{$\lfalse \Sequent \quad$}{}
+  \end{enumerate}}
+{جیہڑا $!A \Sequent !A$ دے روپ دا ہووے}، زبان دے کسے وی
+!!{sentence} $!A$ لئی۔
+\end{defn}
+
+سیکوئنٹ حساب وچ !!^{derivation}s سیکوئنٹاں دے کجھ خاص درخت نیں، جتھے
+سب توں اُتّے والے سیکوئنٹ ابتدائی سیکوئنٹ ہُندے نیں، تے جے کوئی
+سیکوئنٹ اک یا دو ہور سیکوئنٹاں دے تھلّے آوے تاں اوہ استنباط دے کسے
+قاعدے راہیں درست طور تے اوہناں توں نکلنا چاہیدا اے۔ $\Log{LK}$ دے
+قاعدیاں دیاں دو وڈیاں قسماں نیں:
+\emph{منطقی} قاعدے تے \emph{ساختی} قاعدے۔ منطقی قاعدیاں دے ناں ہِٹھلے
+سیکوئنٹ وچ $!A$ تے/یا $!B$ والے !!{sentence} دے !!{main
+  operator} دے ناں اُتے رکھے جاندے نیں۔ ہر اک دے دو روپ ہُندے نیں:
+اک اوس سیکوئنٹ دا استنباط کرن لئی جیہدے کھبے پاسے !!{operator} والا
+!!{sentence} ہووے، تے اک اوس لئی جیہدے سجے پاسے ایہ !!{sentence} ہووے۔
+
+\end{document}
