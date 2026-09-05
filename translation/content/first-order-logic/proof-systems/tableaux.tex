@@ -1,0 +1,88 @@
+% Part: first-order-logic
+% Chapter: proof-systems
+% Section: tableaux
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{prf}{tab}}
+      {\olfileid{pl}{prf}{tab}}
+
+\olsection{\usetoken{P}{tableau}}
+
+بھاویں بہت سارے !!{derivation} نظام !!{sentence}s دے بندوبستاں نال کم
+کردے نیں، !!{tableau}s !!{signed formula}s نال کم کردے نیں۔
+!!^a{signed formula} اک جوڑی اے جیہڑی صداقتی قدر دی اک علامت
+($\True$ یا $\False$) تے !!a{sentence} اُتے مشتمل ہُندی اے
+\[
+\sFmla{\True}{!A} \text{ یا } \sFmla{\False}{!A}.
+\]
+!!^a{tableau} وچ !!{signed formula}s نوں ہِٹھاں ول شاخاں کڈھن والے
+درخت دے روپ وچ ترتیب دتا جاندا اے۔ ایہ کجھ \emph{مفروضیاں} نال شروع
+ہُندا اے تے اوہناں !!{signed formula}s نال اگے ودھدا اے جیہڑے استنباط
+دے قاعدیاں وچوں کوئی اک لاگو کر کے اپنے توں اُتّے والے
+!!{signed formula}s وچوں کسے اک توں حاصل ہُندے نیں۔ ہر قاعدہ سانوں کسے شاخ دے سرے
+اُتے اک یا ودھ !!{signed formula}s، یا نال نال دو !!{signed formula}s
+شامل کرن دی اجازت دیندا اے---ایس دوجی صورت وچ شاخ دو حصیاں وچ ونڈی
+جاندی اے تے شامل کیتے دو !!{signed
+  formula}s اوہناں دو شاخاں دے سرے بن جاندے نیں۔
+
+کسی مرکب !!{signed formula} اُتے لاگو کیتا قاعدہ اوہ !!{signed formula}s
+شامل کردا اے جیہڑے عین ذیلی !!{formula}s ہُندے نیں۔ ایہ
+قاعدے جوڑیاں وچ آؤندے نیں، دوہاں علامتاں وچوں ہر اک لئی اک قاعدہ۔
+مثال لئی، $\TRule{\True}{\land}$ دا قاعدہ
+$\sFmla{\True}{!A \land !B}$ اُتے لاگو ہُندا اے، تے ایہ
+دونیں !!{signed formula}s $\sFmla{\True}{!A}$ تے~$\sFmla{\True}{!B}$
+نوں $\sFmla{\True}{!A \land !B}$ والی کسے وی شاخ دے سرے اُتے شامل
+کرن دی اجازت دیندا اے؛ تے $\TRule{\False}{!A \land !B}$ دا قاعدہ
+$\sFmla{\False}{!A}$ تے $\sFmla{\False}{!B}$ نوں نال نال شامل کر کے
+شاخ نوں دو حصیاں وچ ونڈن دی اجازت دیندا اے۔ !!^a{tableau} بند اے جے
+اوہدی ہر اک شاخ وچ !!{signed formula}s دی اک میل کھاندی جوڑی
+$\sFmla{\True}{!A}$ تے $\sFmla{\False}{!A}$ شامل ہووے۔
+
+!!{tableau}s اُتے مبنی $\Proves$ تعلق دی تعریف ایویں کیتی جاندی اے:
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں کوئی محدود سیٹ~$\Gamma_0 = \{!B_1,
+\dots, !B_n\} \subseteq \Gamma$ ایہو جہا ہووے کہ مفروضیاں
+\[
+\{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+\]
+لئی کوئی بند !!{tableau} ہووے۔ مثال لئی، ایہ بند !!{tableau} وکھاؤندا
+اے کہ $\Proves (!A \land !B) \lif !A$:
+\begin{oltableau}
+  [\sFmla{\False}{(\formula{A} \land \formula{B}) \lif \formula{A}}, just = \TAss
+    [\sFmla{\True}{\formula{A} \land \formula{B}}, just = {\TRule{\False}{\lif}[1]}
+      [\sFmla{\False}{\formula{A}}, just = {\TRule{\False}{\lif}[1]}
+        [\sFmla{\True}{\formula{A}}, just = {\TRule{\True}{\lif}[2]}
+          [\sFmla{\True}{\formula{B}}, just = {\TRule{\True}{\lif}[2]}, close]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+!!{tableau} حساب وچ سیٹ $\Gamma$ متضاد اے جے مفروضیاں
+\[
+\{\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+\]
+لئی، کسے $!B_i \in \Gamma$ واسطے، کوئی بند !!{tableau} ہووے۔
+
+!!^{tableau}s نوں 1950 دی دہائی وچ Evert Beth تے Jaakko Hintikka
+نے اک دوجے توں آزاد ہو کے ایجاد کیتا، تے Raymond Smullyan نے اوہناں
+نوں سادہ بنا کے عام کیتا۔ ایہ ورتن وچ بہت سَوکھے نیں، کیوں جو
+!!a{tableau} بنانا بہت منظم کارروائی اے۔ !!{tableau}s دی منظم نوعیت
+پاروں ایہناں نوں کمپیوٹر راہیں لاگو کرنا وی سَوکھا اے۔ پر
+!!a{tableau} اکثر پڑھن وچ اوکھا ہُندا اے تے اوہناں دا ثبوتاں نال تعلق
+ویکھنا کدی کدی سَوکھا نہیں ہُندا۔ ایہ طریقہ کافی عام وی اے تے بہت
+ساریاں منطقاں دے !!{tableau} نظام نیں۔ !!^{tableau}s سانوں اوہ
+!!{structure}s لبھن وچ وی مدد دیندے نیں جیہڑے دتے ہوئے !!{sentence}s
+(یا اوہناں دے سیٹاں) نوں پورا کردے نیں: جے سیٹ پورا ہون جوگ اے تاں
+اوہدے لئی کوئی بند !!{tableau} نہیں ہووے گا، یعنی ہر !!{tableau} وچ
+اک کھلی شاخ ہووے گی۔ پورا کرن والی !!{structure} نوں کسے کھلی شاخ
+توں ``پڑھ کے کڈھیا'' جا سکدا اے، بشرطیکہ اوس شاخ اُتے ہر اوہ قاعدہ
+لاگو کیتا جا چکیا ہووے جیہڑا لاگو ہو سکدا اے۔ سیکوئنٹ حساب نال وی
+ایس دا بہت نیڑا تعلق اے: بنیادی طور تے، بند !!{tableau} سیکوئنٹ حساب
+دا اک مختصر کیتا !!{derivation} اے جیہڑا اُلٹا لکھیا ہُندا اے۔
+
+\end{document}

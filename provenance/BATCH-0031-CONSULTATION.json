@@ -1,0 +1,87 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0031",
+  "unit_ids": [
+    "OLP-0067",
+    "OLP-0068"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T17:32:36.6086810Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0067",
+      "source_path": "content/first-order-logic/proof-systems/tableaux.tex",
+      "source_bytes": 3914,
+      "source_sha256": "8c9db50bcbc7a4aa757b8d57796b2e51df04b1cabb61f46756a79f72a1780b8f",
+      "source_blocks": 11,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0068",
+      "source_path": "content/first-order-logic/proof-systems/axiomatic-deduction.tex",
+      "source_bytes": 3937,
+      "source_sha256": "b9637a6a1cee29ebba2f8d2cdf238d4567d8ec4b7995607abcb0ee1aef0570b9",
+      "source_blocks": 11,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0067",
+      "finding": "The survey defines signed formulas and downward-branching tableaux, contrasts same-branch and split-branch signed-conjunction rules, defines closure by matching signs on every branch, defines Proves by a finite premise subset and closed tableau, characterizes inconsistency, and connects saturated open branches to satisfying structures and closed tableaux to inverted sequent derivations.",
+      "required_handling": "Preserve every truth sign, branch direction and split, the true/false conjunction contrast, universal branch-closure condition, finite-subset and assumption signs, complete tableau example, the source's exact existential inconsistency wording, historical attributions, saturation qualification and upside-down sequent-calculus comparison."
+    },
+    {
+      "unit_id": "OLP-0068",
+      "finding": "The survey defines axiomatic derivation sequences by three justification cases, explains axiom schemas and primitive-sensitive minimality, gives modus ponens as an earlier-line rule, defines Proves and theoremhood, works a three-line example, characterizes inconsistency and explosion, and records the Frege/Russell/Hilbert history and usability tradeoff.",
+      "required_handling": "Preserve all three enumerated cases, formula schemas and connective assignments, the sufficient-condition and earlier-line scope of modus ponens, Gamma's exact clause-(2) role, all proof-example formulas and reversed substitutions, the complete-system qualification on explosion, dates, titles, system names and practical/metatheoretical contrast."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0067",
+      "locator": "false-conjunction tableau rule macro",
+      "observation": "The source writes the second rule name as `\\TRule{\\False}{!A \\land !B}` rather than passing only the connective as in the preceding true-conjunction rule.",
+      "handling": "Preserve the exact rule macro, its arguments and the displayed signed formulas. Do not normalize a protected formal expression without independent authority."
+    },
+    {
+      "unit_id": "OLP-0067",
+      "locator": "tableau-calculus inconsistency paragraph",
+      "observation": "After displaying assumptions for B_1 through B_n, the source says 'for some B_i in Gamma' rather than explicitly quantifying every displayed assumption or naming a finite subset.",
+      "handling": "Preserve the exact existential formula and avoid silently strengthening it to an all-i condition. Record the wording in semantic review as a source ambiguity, not a target correction."
+    },
+    {
+      "unit_id": "OLP-0067",
+      "locator": "open-branch model extraction",
+      "observation": "The satisfying structure can be read from an open branch only under the explicit qualification that every applicable rule has been applied on that branch.",
+      "handling": "Keep satisfiable, not-closed, open-branch and saturation claims separate and retain the qualification before the upside-down sequent comparison."
+    },
+    {
+      "unit_id": "OLP-0068",
+      "locator": "three-line derivation explanation",
+      "observation": "Line 1 instantiates one axiom with A and B roles reversed; line 2 instantiates another; line 3 then follows by modus ponens after abbreviating it as D and line 1 as C.",
+      "handling": "Preserve every displayed line and the explanatory formula order exactly. Do not simplify away the reversed-role explanation or change which earlier line is C."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0031, the current owner read the complete tableaux.tex and axiomatic-deduction.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Signed formulas, tree branching and closure, finite assumptions, tableau inconsistency and model extraction, the three axiomatic justification cases, schemas, modus ponens, theoremhood, explosion, examples and histories were checked before translation. Formal-rule and existential-scope observations were bounded without altering frozen formulas or adding a target correction. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest signed formulas, tableau closure, open-branch model extraction, axiom schemas, modus ponens, Frege or Hilbert systems, or proof-system metatheory; those remain reversible source-governed scholarly bridges."
+}

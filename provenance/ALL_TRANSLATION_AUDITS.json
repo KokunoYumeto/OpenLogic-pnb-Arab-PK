@@ -1643,6 +1643,54 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0067",
+      "source_path": "content/first-order-logic/proof-systems/tableaux.tex",
+      "source_sha256": "8c9db50bcbc7a4aa757b8d57796b2e51df04b1cabb61f46756a79f72a1780b8f",
+      "translation_sha256": "c3aca63b6d1adb2a7397583b75cbd39b3fa0307705ed59e03bde37696fb2daa7",
+      "translation_bytes": 5536,
+      "source_blocks": 11,
+      "translation_blocks": 11,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0068",
+      "source_path": "content/first-order-logic/proof-systems/axiomatic-deduction.tex",
+      "source_sha256": "b9637a6a1cee29ebba2f8d2cdf238d4567d8ec4b7995607abcb0ee1aef0570b9",
+      "translation_sha256": "78597c1a2dbb820ee5db25d86aa9b299bfab1fdffff09127d5b7902dacb80c83",
+      "translation_bytes": 5834,
+      "source_blocks": 11,
+      "translation_blocks": 11,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

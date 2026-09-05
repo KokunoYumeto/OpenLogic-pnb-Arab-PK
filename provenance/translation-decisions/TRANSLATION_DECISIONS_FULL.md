@@ -1,7 +1,7 @@
 # Punjabi Shahmukhi Translation Decisions — Complete Index
 
 This complete current-main index is a reversible projection of the durable decision ledger into the shared OpenLogic contract.
-It covers **137 decisions** and **2570 exact source-target occurrences** through `OLP-0066`. It does not imply completion or human review of the remaining corpus.
+It covers **143 decisions** and **2638 exact source-target occurrences** through `OLP-0068`. It does not imply completion or human review of the remaining corpus.
 Naskh and Nastaliq page references are artifact-specific typography profiles over the same Shahmukhi segment text. Unknown future-reader pages remain explicitly pending.
 
 ## `pnb-Arab-PK:PNB-T001`
@@ -24,7 +24,7 @@ Alternatives:
 - logic (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (31):
+Occurrences (34):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -59,6 +59,9 @@ Occurrences (31):
 | `pnb-Arab-PK:PNB-T001:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0066-B007` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:33-58` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:31-55` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0066-B010` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:81-88` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:79-85` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 
 ---
 
@@ -130,7 +133,7 @@ Alternatives:
 - مجموعہ; a definition-led descriptive set label — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (282):
+Occurrences (288):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -416,6 +419,12 @@ Occurrences (282):
 | `pnb-Arab-PK:PNB-T003:OLP-0064-B011` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:82-99` | `translation/content/first-order-logic/proof-systems/introduction.tex:80-95` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0065-B008` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0066-B009` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:77-79` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:75-77` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0067-B008` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:44-63` | `translation/content/first-order-logic/proof-systems/tableaux.tex:45-63` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0067-B009` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:65-70` | `translation/content/first-order-logic/proof-systems/tableaux.tex:65-69` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0068-B009` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:66-68` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:68-70` | pending |
 
 ---
 
@@ -440,7 +449,7 @@ Alternatives:
 - رکن versus عنصر; definition-led member wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (149):
+Occurrences (150):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -593,6 +602,7 @@ Occurrences (149):
 | `pnb-Arab-PK:PNB-T004:OLP-0052-B007` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:23-27` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:23-30` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0053-B010` | `OLP-0053` / sets-functions-relations / infinite / dedekinds-proof | `upstream/content/sets-functions-relations/infinite/dedekinds-proof.tex:73-86` | `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:67-79` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0053-B012` | `OLP-0053` / sets-functions-relations / infinite / dedekinds-proof | `upstream/content/sets-functions-relations/infinite/dedekinds-proof.tex:92-98` | `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:85-91` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
 
 ---
 
@@ -660,7 +670,7 @@ Alternatives:
 - a set with no members, stated in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (37):
+Occurrences (38):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -701,6 +711,7 @@ Occurrences (37):
 | `pnb-Arab-PK:PNB-T006:OLP-0058-B009` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:37-47` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:37-48` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0065-B006` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0065-B008` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
 
 ---
 
@@ -725,7 +736,7 @@ Alternatives:
 - جے تے صرف جے; explicit two-direction formulation — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (52):
+Occurrences (54):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -781,6 +792,8 @@ Occurrences (52):
 | `pnb-Arab-PK:PNB-T007:OLP-0065-B007` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0066-B009` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:77-79` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:75-77` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0067-B008` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:44-63` | `translation/content/first-order-logic/proof-systems/tableaux.tex:45-63` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
 
 ---
 
@@ -805,7 +818,7 @@ Alternatives:
 - perfect number as an explicit English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (15):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -822,6 +835,8 @@ Occurrences (13):
 | `pnb-Arab-PK:PNB-T008:OLP-0037-B010` | `OLP-0037` / sets-functions-relations / sets / schroder-bernstein | `upstream/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:44-53` | `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:41-50` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0045-B004` | `OLP-0045` / sets-functions-relations / arithmetization / cuts | `upstream/content/sets-functions-relations/arithmetization/cuts.tex:12-19` | `translation/content/sets-functions-relations/arithmetization/cuts.tex:12-19` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0045-B005` | `OLP-0045` / sets-functions-relations / arithmetization / cuts | `upstream/content/sets-functions-relations/arithmetization/cuts.tex:21-24` | `translation/content/sets-functions-relations/arithmetization/cuts.tex:21-23` | pending |
+| `pnb-Arab-PK:PNB-T008:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T008:OLP-0067-B007` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:31-42` | `translation/content/first-order-logic/proof-systems/tableaux.tex:32-43` | pending |
 
 ---
 
@@ -910,7 +925,7 @@ Alternatives:
 - English number-class bridges and explicit sequence descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (198):
+Occurrences (199):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1112,6 +1127,7 @@ Occurrences (198):
 | `pnb-Arab-PK:PNB-T010:OLP-0064-B008` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:38-48` | `translation/content/first-order-logic/proof-systems/introduction.tex:37-46` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0065-B006` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0065-B007` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
 
 ---
 
@@ -1136,7 +1152,7 @@ Alternatives:
 - ترتیب وار جوڑی; Cartesian product with English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (67):
+Occurrences (69):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1207,6 +1223,8 @@ Occurrences (67):
 | `pnb-Arab-PK:PNB-T011:OLP-0058-B032` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:158-159` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:158-161` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0058-B035` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:173-180` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:175-181` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0065-B006` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0067-B007` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:31-42` | `translation/content/first-order-logic/proof-systems/tableaux.tex:32-43` | pending |
 
 ---
 
@@ -1232,7 +1250,7 @@ Alternatives:
 - paradox/comprehension with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (62):
+Occurrences (68):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1298,6 +1316,12 @@ Occurrences (62):
 | `pnb-Arab-PK:PNB-T012:OLP-0065-B008` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0066-B009` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:77-79` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:75-77` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0067-B009` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:65-70` | `translation/content/first-order-logic/proof-systems/tableaux.tex:65-69` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0068-B005` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0068-B009` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:66-68` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:68-70` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 
 ---
 
@@ -1389,7 +1413,7 @@ Alternatives:
 - relation with explicit English bridge; expanded irreflexivity wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (129):
+Occurrences (134):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1522,6 +1546,11 @@ Occurrences (129):
 | `pnb-Arab-PK:PNB-T014:OLP-0065-B007` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0065-B009` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:58-65` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:58-64` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0067-B008` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:44-63` | `translation/content/first-order-logic/proof-systems/tableaux.tex:45-63` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
 
 ---
 
@@ -1547,7 +1576,7 @@ Alternatives:
 - metalogic/predicate/reductionism as explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (37):
+Occurrences (38):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1588,6 +1617,7 @@ Occurrences (37):
 | `pnb-Arab-PK:PNB-T015:OLP-0065-B009` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:58-65` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:58-64` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
+| `pnb-Arab-PK:PNB-T015:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
 
 ---
 
@@ -1847,7 +1877,7 @@ Alternatives:
 - tree terminology with expanded immediate-successor descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (41):
+Occurrences (44):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1892,6 +1922,9 @@ Occurrences (41):
 | `pnb-Arab-PK:PNB-T020:OLP-0065-B007` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0066-B007` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:33-58` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:31-55` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0067-B007` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:31-42` | `translation/content/first-order-logic/proof-systems/tableaux.tex:32-43` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
 
 ---
 
@@ -1957,7 +1990,7 @@ Alternatives:
 - syntax/completeness/computability with English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (32):
+Occurrences (39):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1993,6 +2026,13 @@ Occurrences (32):
 | `pnb-Arab-PK:PNB-T022:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0066-B007` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:33-58` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:31-55` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0068-B005` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0068-B007` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:38-44` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:39-45` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 
 ---
 
@@ -2897,7 +2937,7 @@ Alternatives:
 - نا منفی; truth-table terminology; finite-complement wording in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (15):
+Occurrences (16):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2916,6 +2956,7 @@ Occurrences (15):
 | `pnb-Arab-PK:PNB-T035:OLP-0061-B009` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:119-131` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:120-132` | pending |
 | `pnb-Arab-PK:PNB-T035:OLP-0064-B008` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:38-48` | `translation/content/first-order-logic/proof-systems/introduction.tex:37-46` | pending |
 | `pnb-Arab-PK:PNB-T035:OLP-0064-B009` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:50-71` | `translation/content/first-order-logic/proof-systems/introduction.tex:48-69` | pending |
+| `pnb-Arab-PK:PNB-T035:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
 
 ---
 
@@ -3864,7 +3905,7 @@ Alternatives:
 - recursive bisection and monotone two-sided approximation governed by the recurrence — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (14):
+Occurrences (15):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -3882,6 +3923,7 @@ Occurrences (14):
 | `pnb-Arab-PK:PNB-T057:OLP-0048-B022` | `OLP-0048` / sets-functions-relations / arithmetization / cauchy | `upstream/content/sets-functions-relations/arithmetization/cauchy.tex:215-224` | `translation/content/sets-functions-relations/arithmetization/cauchy.tex:209-220` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0048-B023` | `OLP-0048` / sets-functions-relations / arithmetization / cauchy | `upstream/content/sets-functions-relations/arithmetization/cauchy.tex:226-227` | `translation/content/sets-functions-relations/arithmetization/cauchy.tex:222-230` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0052-B013` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:66-80` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:68-81` | pending |
+| `pnb-Arab-PK:PNB-T057:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
 
 ---
 
@@ -4221,7 +4263,7 @@ Alternatives:
 - classical sentential logic; deductive calculi; completeness with explicit retained token identifiers — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (9):
+Occurrences (10):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4234,6 +4276,7 @@ Occurrences (9):
 | `pnb-Arab-PK:PNB-T067:OLP-0064-B010` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:73-80` | `translation/content/first-order-logic/proof-systems/introduction.tex:71-78` | pending |
 | `pnb-Arab-PK:PNB-T067:OLP-0064-B011` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:82-99` | `translation/content/first-order-logic/proof-systems/introduction.tex:80-95` | pending |
 | `pnb-Arab-PK:PNB-T067:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
+| `pnb-Arab-PK:PNB-T067:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
 
 ---
 
@@ -4289,7 +4332,7 @@ Alternatives:
 - قضی متغیر; صدق-تابع; مادی لزوم with the full contrast stated descriptively — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (5):
+Occurrences (6):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4298,6 +4341,7 @@ Occurrences (5):
 | `pnb-Arab-PK:PNB-T069:OLP-0057-B007` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:37-50` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:36-49` | pending |
 | `pnb-Arab-PK:PNB-T069:OLP-0057-B008` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:52-62` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51-61` | pending |
 | `pnb-Arab-PK:PNB-T069:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
+| `pnb-Arab-PK:PNB-T069:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
 
 ---
 
@@ -4322,7 +4366,7 @@ Alternatives:
 - اشباع; کلی صدق; استلزام; قابلِ اشباع, each paired with its full valuation quantifier — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (7):
+Occurrences (8):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4333,6 +4377,7 @@ Occurrences (7):
 | `pnb-Arab-PK:PNB-T070:OLP-0062-B012` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:70-73` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:72-75` | pending |
 | `pnb-Arab-PK:PNB-T070:OLP-0064-B006` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:15-24` | `translation/content/first-order-logic/proof-systems/introduction.tex:15-23` | pending |
 | `pnb-Arab-PK:PNB-T070:OLP-0064-B011` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:82-99` | `translation/content/first-order-logic/proof-systems/introduction.tex:80-95` | pending |
+| `pnb-Arab-PK:PNB-T070:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
 
 ---
 
@@ -4388,7 +4433,7 @@ Alternatives:
 - نفی; اتصال; انفصال; لزوم; تکافؤ, with every exact symbol retained — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (39):
+Occurrences (40):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4431,6 +4476,7 @@ Occurrences (39):
 | `pnb-Arab-PK:PNB-T072:OLP-0064-B006` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:15-24` | `translation/content/first-order-logic/proof-systems/introduction.tex:15-23` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0066-B006` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:15-31` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:15-29` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0066-B007` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:33-58` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:31-55` | pending |
+| `pnb-Arab-PK:PNB-T072:OLP-0068-B007` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:38-44` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:39-45` | pending |
 
 ---
 
@@ -4880,7 +4926,7 @@ Alternatives:
 - مسلّمی ثبوت; اصول; قاعدۂ استنتاج; فوق نظری جانچ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (4):
+Occurrences (9):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4888,6 +4934,11 @@ Occurrences (4):
 | `pnb-Arab-PK:PNB-T086:OLP-0064-B007` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:26-36` | `translation/content/first-order-logic/proof-systems/introduction.tex:25-35` | pending |
 | `pnb-Arab-PK:PNB-T086:OLP-0064-B009` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:50-71` | `translation/content/first-order-logic/proof-systems/introduction.tex:48-69` | pending |
 | `pnb-Arab-PK:PNB-T086:OLP-0065-B006` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:15-35` | pending |
+| `pnb-Arab-PK:PNB-T086:OLP-0068-B005` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:13-13` | pending |
+| `pnb-Arab-PK:PNB-T086:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+| `pnb-Arab-PK:PNB-T086:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
+| `pnb-Arab-PK:PNB-T086:OLP-0068-B009` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:66-68` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:68-70` | pending |
+| `pnb-Arab-PK:PNB-T086:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 
 ---
 
@@ -4912,7 +4963,7 @@ Alternatives:
 - استنتاجِ طبیعی; صدقی درخت/تابلو; حسابِ متوالیات; ریزولیوشن — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (14):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4929,6 +4980,7 @@ Occurrences (13):
 | `pnb-Arab-PK:PNB-T087:OLP-0066-B008` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:60-75` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:57-73` | pending |
 | `pnb-Arab-PK:PNB-T087:OLP-0066-B009` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:77-79` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:75-77` | pending |
 | `pnb-Arab-PK:PNB-T087:OLP-0066-B010` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:81-88` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:79-85` | pending |
+| `pnb-Arab-PK:PNB-T087:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
 
 ---
 
@@ -4953,7 +5005,7 @@ Alternatives:
 - قضیت; قابلِ اخذ; اعتبار; صحت; تمامیت — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (7):
+Occurrences (8):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4964,6 +5016,7 @@ Occurrences (7):
 | `pnb-Arab-PK:PNB-T088:OLP-0064-B009` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:50-71` | `translation/content/first-order-logic/proof-systems/introduction.tex:48-69` | pending |
 | `pnb-Arab-PK:PNB-T088:OLP-0064-B010` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:73-80` | `translation/content/first-order-logic/proof-systems/introduction.tex:71-78` | pending |
 | `pnb-Arab-PK:PNB-T088:OLP-0064-B011` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:82-99` | `translation/content/first-order-logic/proof-systems/introduction.tex:80-95` | pending |
+| `pnb-Arab-PK:PNB-T088:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
 
 ---
 
@@ -4988,13 +5041,15 @@ Alternatives:
 - عدمِ تناقض; تناقض; معنوی قابلِ اشباع ہونے کا نحوی قرینہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (3):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T089:OLP-0064-B011` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:82-99` | `translation/content/first-order-logic/proof-systems/introduction.tex:80-95` | pending |
 | `pnb-Arab-PK:PNB-T089:OLP-0065-B008` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | pending |
 | `pnb-Arab-PK:PNB-T089:OLP-0066-B009` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:77-79` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:75-77` | pending |
+| `pnb-Arab-PK:PNB-T089:OLP-0067-B009` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:65-70` | `translation/content/first-order-logic/proof-systems/tableaux.tex:65-69` | pending |
+| `pnb-Arab-PK:PNB-T089:OLP-0068-B009` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:66-68` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:68-70` | pending |
 
 ---
 
@@ -5019,7 +5074,7 @@ Alternatives:
 - متوالیہ; حسابِ متوالیات; دو ممکنہ خالی جملہ-سلسلے — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (6):
+Occurrences (7):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -5029,6 +5084,7 @@ Occurrences (6):
 | `pnb-Arab-PK:PNB-T090:OLP-0065-B007` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:37-50` | pending |
 | `pnb-Arab-PK:PNB-T090:OLP-0065-B008` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:52-56` | pending |
 | `pnb-Arab-PK:PNB-T090:OLP-0065-B009` | `OLP-0065` / first-order-logic / proof-systems / seqeunt-calculus | `upstream/content/first-order-logic/proof-systems/sequent-calculus.tex:58-65` | `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:58-64` | pending |
+| `pnb-Arab-PK:PNB-T090:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
 
 ---
 
@@ -5186,6 +5242,186 @@ Occurrences (1):
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T095:OLP-0066-B010` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:81-88` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:79-85` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T096`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: signed formula; truth-value sign; tableau; downward-branching tree
+- Intended sense: signed formula; truth-value sign; tableau; downward-branching tree
+- Chosen Shahmukhi rendering/treatment: علامت لایا فارمولا؛ صداقتی قدر دی علامت؛ تابلو؛ ہِٹھاں ول شاخاں کڈھن والا درخت
+- Rationale: The source defines a signed formula as exactly a truth-value sign, True or False, paired with a sentence, then arranges such objects in a downward-branching tableau. The Punjabi keeps the pair components, signs and tree orientation explicit while retaining the protected lexical tokens.
+- Why expert review helps: No native Punjabi tableau-calculus attestation was acquired. علامت لایا فارمولا and تابلو are reversible definition- and tree-governed bridges; the signed-formula display and branch construction govern.
+- Please double-check: **Do علامت لایا فارمولا, صداقتی قدر دی علامت and ہِٹھاں ول شاخاں کڈھن والا درخت keep the sign-plus-sentence pair distinct from an unsigned formula and preserve the tableau orientation?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- علامت زدہ فارمولا; صدقی قدر کی علامت; شاخ دار درخت — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T096:OLP-0067-B006` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:15-29` | `translation/content/first-order-logic/proof-systems/tableaux.tex:15-30` | pending |
+| `pnb-Arab-PK:PNB-T096:OLP-0067-B007` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:31-42` | `translation/content/first-order-logic/proof-systems/tableaux.tex:32-43` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T097`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: closed and open tableau; matching signed pair; saturated open branch; satisfying structure read-off
+- Intended sense: closed and open tableau; matching signed pair; saturated open branch; satisfying structure read-off
+- Chosen Shahmukhi rendering/treatment: بند تے کھلا تابلو؛ میل کھاندی علامتی جوڑی؛ سارے قابلِ اطلاق قاعدیاں والی کھلی شاخ؛ پورا کرن والی بناوٹ پڑھ کے کڈھنا
+- Rationale: Closure requires every branch to contain the same formula with both signs. A satisfiable set leaves an open branch in any tableau, and a satisfying structure can be read from that branch only after every applicable rule has been applied there. The Punjabi preserves the universal branch scope and saturation condition.
+- Why expert review helps: No native Punjabi model-extraction terminology was acquired. بند, کھلا, میل کھاندی جوڑی and پڑھ کے کڈھنا are reversible formula- and qualification-governed renderings; no algorithm beyond the source claim is implied.
+- Please double-check: **Do بند, کھلی شاخ, میل کھاندی جوڑی and پڑھ کے کڈھیا clearly retain every-branch closure and the all-applicable-rules qualification on extracting a satisfying structure?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- بند/کھلا تابلو; متقابل علامتی جوڑا; مکمل شاخ سے نمونہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (4):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T097:OLP-0067-B007` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:31-42` | `translation/content/first-order-logic/proof-systems/tableaux.tex:32-43` | pending |
+| `pnb-Arab-PK:PNB-T097:OLP-0067-B008` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:44-63` | `translation/content/first-order-logic/proof-systems/tableaux.tex:45-63` | pending |
+| `pnb-Arab-PK:PNB-T097:OLP-0067-B009` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:65-70` | `translation/content/first-order-logic/proof-systems/tableaux.tex:65-69` | pending |
+| `pnb-Arab-PK:PNB-T097:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T098`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: tableau derivability from a finite premise subset; false goal and true premises; tableau inconsistency
+- Intended sense: tableau derivability from a finite premise subset; false goal and true premises; tableau inconsistency
+- Chosen Shahmukhi rendering/treatment: محدود مقدماتی ذیلی سیٹ توں تابلو اخذ؛ نتیجے اُتے کذب تے مقدمیاں اُتے صدق؛ تابلو حساب وچ تضاد
+- Rationale: Tableau Proves is fixed by existence of a finite Gamma-zero subset of Gamma and a closed tableau whose assumptions sign the goal False and each selected premise True. The target also preserves the later inconsistency display and its literal existential 'some B_i in Gamma' wording without strengthening it.
+- Why expert review helps: The source inconsistency sentence is unusually scoped: it displays B_1 through B_n but says 'for some B_i in Gamma.' This decision records faithful preservation, not endorsement or silent repair; specialist review of the source wording remains welcome.
+- Please double-check: **Does the Punjabi preserve the false goal, true premises and finite Gamma-zero subset in Proves, while leaving the source’s unusual existential B_i inconsistency wording exactly as written?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تابلو اخذ; محدود مقدماتی ذیلی مجموعہ; عدمِ سازگاری — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T098:OLP-0067-B008` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:44-63` | `translation/content/first-order-logic/proof-systems/tableaux.tex:45-63` | pending |
+| `pnb-Arab-PK:PNB-T098:OLP-0067-B009` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:65-70` | `translation/content/first-order-logic/proof-systems/tableaux.tex:65-69` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T099`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: axiom schema; governing connective; primitive connective; minimal or single-axiom system
+- Intended sense: axiom schema; governing connective; primitive connective; minimal or single-axiom system
+- Chosen Shahmukhi rendering/treatment: مسلّمہ خاکہ؛ رابطے اُتے لاگو مسلّمہ؛ ابتدائی رابطہ؛ گھٹ توں گھٹ یا اک مسلّمے والا نظام
+- Rationale: An axiom must instantiate one of fixed sentence schemas; schema sets may be organized by the connectives they govern or minimize axiom count, and the possibility of one axiom depends on which connectives are primitive. The Punjabi retains all formula schemas, connective assignments and the dependency qualification.
+- Why expert review helps: No native Punjabi axiom-schema attestation was acquired. مسلّمہ خاکہ and ابتدائی رابطہ are reversible formula- and system-choice-governed bridges; 'single axiom' is not generalized beyond the qualified source claim.
+- Please double-check: **Do مسلّمہ خاکہ, ابتدائی رابطہ and گھٹ توں گھٹ distinguish a formula schema, a primitive connective and minimal axiom count without implying that one fixed schema set is mandatory?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- اصولی خاکہ; ابتدائی رابطہ; کم سے کم اصول — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T099:OLP-0068-B006` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-36` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:15-37` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T100`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: rule of inference; sufficient condition for justification; modus ponens; earlier-line scope
+- Intended sense: rule of inference; sufficient condition for justification; modus ponens; earlier-line scope
+- Chosen Shahmukhi rendering/treatment: استنباط دا قاعدہ؛ جواز لئی کافی شرط؛ قاعدۂ اثباتِ مقدم؛ پہلاں جواز پائیاں سطراں
+- Rationale: The source defines an inference rule as a sufficient condition for a sentence's justification and states modus ponens using already justified A and A conditional B. The Punjabi then requires both formulas to occur before the B line and preserves the three-line example's C and D identifications.
+- Why expert review helps: No native Punjabi proof-rule attestation was acquired. قاعدۂ اثباتِ مقدم is a reversible formula-governed scholarly bridge; the exact premise formulas, earlier-line requirement and worked example control its sense.
+- Please double-check: **Is قاعدۂ اثباتِ مقدم recognizable for modus ponens, and does the Punjabi require both A and A conditional B to be justified earlier rather than merely appearing anywhere?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قاعدۂ اثباتِ مقدم; سابقہ سطروں سے جواز — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T100:OLP-0068-B007` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:38-44` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:39-45` | pending |
+| `pnb-Arab-PK:PNB-T100:OLP-0068-B008` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:46-64` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:47-66` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T101`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Frege system; Hilbert system; metatheoretical ease versus practical proof difficulty
+- Intended sense: Frege system; Hilbert system; metatheoretical ease versus practical proof difficulty
+- Chosen Shahmukhi rendering/treatment: فریگ نظام؛ ہلبرٹ نظام؛ نظام بارے ثبوت دی نسبتاً سَوکھ؛ عملی ثبوت لبھن تے لکھن دی اوکھ
+- Rationale: The history attributes the first systems to Frege, later perfection to Whitehead, Russell, Hilbert and students, and records the two common system names. The concluding assessment distinguishes versatile system design and relatively easy proofs about simple derivations from difficult practical proof discovery and writing.
+- Why expert review helps: No native Punjabi historical proof-theory attestation was acquired. The Shahmukhi name forms are reversible transliterations alongside source-spelled first mentions; the dates, titles and explicit metatheory/practice contrast govern.
+- Please double-check: **Do فریگ نظام and ہلبرٹ نظام remain recognizable, and does the closing contrast retain easy metatheoretical reasoning but difficult practical proof discovery and writing?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- فریگ/ہلبرٹ نظام; نظریاتی سہولت اور عملی دشواری — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T101:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 
 ---
 

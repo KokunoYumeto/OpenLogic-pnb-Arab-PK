@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **135 of 137** current decisions.
+This view contains only urgent/high-priority decisions: **141 of 143** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -2140,6 +2140,144 @@ Authorities checked:
 Alternatives:
 
 - معنیاتِ نظریۂ ثبوت; قواعد سے معانی کی تحدید — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T096`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: signed formula; truth-value sign; tableau; downward-branching tree
+- Intended sense: signed formula; truth-value sign; tableau; downward-branching tree
+- Chosen Shahmukhi rendering/treatment: علامت لایا فارمولا؛ صداقتی قدر دی علامت؛ تابلو؛ ہِٹھاں ول شاخاں کڈھن والا درخت
+- Rationale: The source defines a signed formula as exactly a truth-value sign, True or False, paired with a sentence, then arranges such objects in a downward-branching tableau. The Punjabi keeps the pair components, signs and tree orientation explicit while retaining the protected lexical tokens.
+- Why expert review helps: No native Punjabi tableau-calculus attestation was acquired. علامت لایا فارمولا and تابلو are reversible definition- and tree-governed bridges; the signed-formula display and branch construction govern.
+- Please double-check: **Do علامت لایا فارمولا, صداقتی قدر دی علامت and ہِٹھاں ول شاخاں کڈھن والا درخت keep the sign-plus-sentence pair distinct from an unsigned formula and preserve the tableau orientation?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- علامت زدہ فارمولا; صدقی قدر کی علامت; شاخ دار درخت — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T097`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: closed and open tableau; matching signed pair; saturated open branch; satisfying structure read-off
+- Intended sense: closed and open tableau; matching signed pair; saturated open branch; satisfying structure read-off
+- Chosen Shahmukhi rendering/treatment: بند تے کھلا تابلو؛ میل کھاندی علامتی جوڑی؛ سارے قابلِ اطلاق قاعدیاں والی کھلی شاخ؛ پورا کرن والی بناوٹ پڑھ کے کڈھنا
+- Rationale: Closure requires every branch to contain the same formula with both signs. A satisfiable set leaves an open branch in any tableau, and a satisfying structure can be read from that branch only after every applicable rule has been applied there. The Punjabi preserves the universal branch scope and saturation condition.
+- Why expert review helps: No native Punjabi model-extraction terminology was acquired. بند, کھلا, میل کھاندی جوڑی and پڑھ کے کڈھنا are reversible formula- and qualification-governed renderings; no algorithm beyond the source claim is implied.
+- Please double-check: **Do بند, کھلی شاخ, میل کھاندی جوڑی and پڑھ کے کڈھیا clearly retain every-branch closure and the all-applicable-rules qualification on extracting a satisfying structure?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- بند/کھلا تابلو; متقابل علامتی جوڑا; مکمل شاخ سے نمونہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T098`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: tableau derivability from a finite premise subset; false goal and true premises; tableau inconsistency
+- Intended sense: tableau derivability from a finite premise subset; false goal and true premises; tableau inconsistency
+- Chosen Shahmukhi rendering/treatment: محدود مقدماتی ذیلی سیٹ توں تابلو اخذ؛ نتیجے اُتے کذب تے مقدمیاں اُتے صدق؛ تابلو حساب وچ تضاد
+- Rationale: Tableau Proves is fixed by existence of a finite Gamma-zero subset of Gamma and a closed tableau whose assumptions sign the goal False and each selected premise True. The target also preserves the later inconsistency display and its literal existential 'some B_i in Gamma' wording without strengthening it.
+- Why expert review helps: The source inconsistency sentence is unusually scoped: it displays B_1 through B_n but says 'for some B_i in Gamma.' This decision records faithful preservation, not endorsement or silent repair; specialist review of the source wording remains welcome.
+- Please double-check: **Does the Punjabi preserve the false goal, true premises and finite Gamma-zero subset in Proves, while leaving the source’s unusual existential B_i inconsistency wording exactly as written?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0067-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تابلو اخذ; محدود مقدماتی ذیلی مجموعہ; عدمِ سازگاری — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T099`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: axiom schema; governing connective; primitive connective; minimal or single-axiom system
+- Intended sense: axiom schema; governing connective; primitive connective; minimal or single-axiom system
+- Chosen Shahmukhi rendering/treatment: مسلّمہ خاکہ؛ رابطے اُتے لاگو مسلّمہ؛ ابتدائی رابطہ؛ گھٹ توں گھٹ یا اک مسلّمے والا نظام
+- Rationale: An axiom must instantiate one of fixed sentence schemas; schema sets may be organized by the connectives they govern or minimize axiom count, and the possibility of one axiom depends on which connectives are primitive. The Punjabi retains all formula schemas, connective assignments and the dependency qualification.
+- Why expert review helps: No native Punjabi axiom-schema attestation was acquired. مسلّمہ خاکہ and ابتدائی رابطہ are reversible formula- and system-choice-governed bridges; 'single axiom' is not generalized beyond the qualified source claim.
+- Please double-check: **Do مسلّمہ خاکہ, ابتدائی رابطہ and گھٹ توں گھٹ distinguish a formula schema, a primitive connective and minimal axiom count without implying that one fixed schema set is mandatory?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- اصولی خاکہ; ابتدائی رابطہ; کم سے کم اصول — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T100`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: rule of inference; sufficient condition for justification; modus ponens; earlier-line scope
+- Intended sense: rule of inference; sufficient condition for justification; modus ponens; earlier-line scope
+- Chosen Shahmukhi rendering/treatment: استنباط دا قاعدہ؛ جواز لئی کافی شرط؛ قاعدۂ اثباتِ مقدم؛ پہلاں جواز پائیاں سطراں
+- Rationale: The source defines an inference rule as a sufficient condition for a sentence's justification and states modus ponens using already justified A and A conditional B. The Punjabi then requires both formulas to occur before the B line and preserves the three-line example's C and D identifications.
+- Why expert review helps: No native Punjabi proof-rule attestation was acquired. قاعدۂ اثباتِ مقدم is a reversible formula-governed scholarly bridge; the exact premise formulas, earlier-line requirement and worked example control its sense.
+- Please double-check: **Is قاعدۂ اثباتِ مقدم recognizable for modus ponens, and does the Punjabi require both A and A conditional B to be justified earlier rather than merely appearing anywhere?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قاعدۂ اثباتِ مقدم; سابقہ سطروں سے جواز — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T101`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Frege system; Hilbert system; metatheoretical ease versus practical proof difficulty
+- Intended sense: Frege system; Hilbert system; metatheoretical ease versus practical proof difficulty
+- Chosen Shahmukhi rendering/treatment: فریگ نظام؛ ہلبرٹ نظام؛ نظام بارے ثبوت دی نسبتاً سَوکھ؛ عملی ثبوت لبھن تے لکھن دی اوکھ
+- Rationale: The history attributes the first systems to Frege, later perfection to Whitehead, Russell, Hilbert and students, and records the two common system names. The concluding assessment distinguishes versatile system design and relatively easy proofs about simple derivations from difficult practical proof discovery and writing.
+- Why expert review helps: No native Punjabi historical proof-theory attestation was acquired. The Shahmukhi name forms are reversible transliterations alongside source-spelled first mentions; the dates, titles and explicit metatheory/practice contrast govern.
+- Please double-check: **Do فریگ نظام and ہلبرٹ نظام remain recognizable, and does the closing contrast retain easy metatheoretical reasoning but difficult practical proof discovery and writing?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0068-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- فریگ/ہلبرٹ نظام; نظریاتی سہولت اور عملی دشواری — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---

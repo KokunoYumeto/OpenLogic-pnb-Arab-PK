@@ -2,10 +2,10 @@
   "schema": "pnb-translation-decision-surfaces-qa/1",
   "status": "PASS",
   "scope": {
-    "translated_units": 66,
+    "translated_units": 68,
     "source_units_total": 722,
-    "decisions": 137,
-    "occurrences": 2570
+    "decisions": 143,
+    "occurrences": 2638
   },
   "shared_contract": {
     "commit": "811091d54be4989918864732073279a588340e6f",
@@ -16,9 +16,9 @@
   },
   "adapter": {
     "recording_mode": "derived",
-    "legacy_review_log_sha256": "3d1b2866692c91bee870ce031a8c4c464cac0044df662a03742488c270edffc0",
-    "term_decisions_sha256": "c2907b2dbdd87577f865434682a900301414cd78a86145f8d52c2d2bb49323b6",
-    "segment_canon_use_sha256": "ef7c9586ca2b20ff8d83ca3db6da4a628a1a744e003f593042de96cb954bfe7b",
+    "legacy_review_log_sha256": "947c23e4c217d3a8b58b88528af76262d825ede44b347b920637930fdb588d8c",
+    "term_decisions_sha256": "b3b79a8114e492d2192338b89046809b235f99c6ff71f05099e19c05a0248c25",
+    "segment_canon_use_sha256": "d02b5a4bb59969975c4a9734c27c951ace953280bd0d849f7c646cdfa4968dd0",
     "source_corrections_sha256": "aaf32ef5727795e041f3911b6a20dcfcb326ccca750fd9ef8986e73ec16b4946",
     "accepted_translation_reworded_by_adapter": false
   },
@@ -37,7 +37,7 @@
   },
   "reader_pages": {
     "occurrences_with_accepted_profile_pages": 243,
-    "occurrences_pending_reader_pagination": 2327,
+    "occurrences_pending_reader_pagination": 2395,
     "profiles": [
       "Naskh",
       "Nastaliq"
@@ -48,48 +48,48 @@
     "mapping_method": "Exact accepted PDF bytes visually inspected at rendered paragraph boundaries; printed pages and assembled PDF pages distinguished."
   },
   "regression": {
-    "path_or_uri": "provenance/AUDIT-REGRESSION-0066.json",
-    "bytes": 28061,
-    "sha256": "585f87fbe8eeb1eaf059197f71487eddcce92cd52393a5227b8311d9c713302a",
-    "version_or_ref": "through-OLP-0066"
+    "path_or_uri": "provenance/AUDIT-REGRESSION-0068.json",
+    "bytes": 29098,
+    "sha256": "fdb07be7d6fc84e3a3c0a57ab1814b8cb46d92b1fcc913317f85d7e19f5edb87",
+    "version_or_ref": "through-OLP-0068"
   },
   "aggregate_audits": {
     "path_or_uri": "provenance/ALL_TRANSLATION_AUDITS.json",
-    "bytes": 61288,
-    "sha256": "0f67d2367146d1f7d31b70c47dcfec64ebc693bb7caf1f92aee3b238ac6c4330",
-    "version_or_ref": "through-OLP-0066"
+    "bytes": 63107,
+    "sha256": "81f5f0ce5f67f7c38af407423d13c1be9e853debc99ada72652412c6185ea55a",
+    "version_or_ref": "through-OLP-0068"
   },
   "generator": {
     "path_or_uri": "durable:work/build_decision_surfaces.py",
     "bytes": 32204,
     "sha256": "4a90893aef506e21316e008baabd1cebebe9463eadf7b67a27ec732d8525c88d",
-    "version_or_ref": "through-OLP-0066"
+    "version_or_ref": "through-OLP-0068"
   },
   "artifacts": [
     {
       "path": "START_HERE.md",
       "bytes": 2095,
-      "sha256": "f3d4dc312116f4885136e5c3521dfb3f04d22ab6e5bb04dd35cb663f859f8d69"
+      "sha256": "6525b424bd74c22d90db8b5a8d7f5b86605b5989d59504a3dea9f218f717572d"
     },
     {
       "path": "TRANSLATION_DECISIONS_FULL.md",
-      "bytes": 1091968,
-      "sha256": "42689527f609a6ebcf954729f6bc93e69671a6a84c9d86df3f7903e4f202bb6b"
+      "bytes": 1128002,
+      "sha256": "665408af966226cc7ec8e7a0a5d5855e10ed8f98d9dcc0044f3d61801e2a5cc8"
     },
     {
       "path": "PRIORITY_REVIEW.md",
-      "bytes": 338391,
-      "sha256": "c648e832d4c52e416c3f9c74474e88cefe3726c9a4f84d2b2cad50c1fbd16c9b"
+      "bytes": 354969,
+      "sha256": "61b41319d21d0c315215a0473f6cdce58809c1236a77f08d0a2226dc458312c8"
     },
     {
       "path": "DECISION_OCCURRENCES.csv",
-      "bytes": 1762096,
-      "sha256": "5591fc441e0559dd6f3ffe73454cb91765b356560efc6b0cdab2e6eea657d667"
+      "bytes": 1809128,
+      "sha256": "eb57c95024dae16fdecd928ba1d30cc8f1b101f4cd14b4c1d0cdce19bffdf83d"
     },
     {
       "path": "DECISIONS.json",
-      "bytes": 12639343,
-      "sha256": "942228e92c0055a00f7756e1d1a4c6d3885d1a1877ea5c28df84044d014b46a0"
+      "bytes": 13040463,
+      "sha256": "6b0e1c04de55dcf7abd97d86f34391e974521a3973e238c2f35dd51ceae97e1b"
     },
     {
       "path": "translation-decision.schema.json",
