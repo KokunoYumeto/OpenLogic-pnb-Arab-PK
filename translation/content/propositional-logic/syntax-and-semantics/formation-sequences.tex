@@ -1,0 +1,150 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: formation-sequences
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{fseq}
+
+\olsection{تشکیل دے سلسلے}
+
+!!{formula}s نوں استقرائی تعریف راہیں تعریف کرنا، تے نال دی نال
+!!{formula}s دیاں خاصیتاں نوں استقرا راہیں ثابت کرن دی تکنیک، اک سوہنا
+تے کارگر طریقہ اے۔ پر !!{formula}s دی بناوٹ نوں ہِٹھوں اُتّے ول، قدم
+بہ قدم طریقے نال ویکھنا وی فائدہ مند ہو سکدا اے؛ ایتھے اسیں ایہ کم
+\emph{تشکیل دے سلسلے} دے تصور نال کردے آں۔
+
+\begin{defn}[فارمولیاں لئی تشکیل دے سلسلے]
+\ollabel{defn:fseq-frm}
+علامتاں دی لڑیواں دا محدود سلسلہ $\tuple{!A_0,\dotsc,!A_n}$، جیہڑا
+زبان~$\Lang L_0$ توں اے، $!A$ لئی \emph{تشکیل دا سلسلہ} اے جے
+$!A \ident !A_n$، تے ہر $i \leq n$ لئی یا تاں $!A_i$ ایٹمی فارمولا
+اے، یا ایہو جہے $j,k < i$ موجود نیں کہ اگلیاں وچوں کوئی اک گل پوری
+ہُندی اے:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A_i \ident \lnot !A_j$۔}{}%
+    \tagitem{prvAnd}{$!A_i \ident (!A_j \land !A_k)$۔}{}%
+    \tagitem{prvOr}{$!A_i \ident (!A_j \lor !A_k)$۔}{}%
+    \tagitem{prvIf}{$!A_i \ident (!A_j \lif !A_k)$۔}{}%
+    \tagitem{prvIff}{$!A_i \ident (!A_j \liff !A_k)$۔}{}%
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+\[
+\tuple{
+    \Obj p_0,
+    \Obj p_1,
+    (\Obj p_1 \land \Obj p_0),
+    \lnot (\Obj p_1 \land \Obj p_0)
+}
+\]
+$\lnot (\Obj p_1 \land \Obj p_0)$ لئی تشکیل دا اک سلسلہ اے، تے ایہ وی
+اے:
+\[
+\tuple{
+    \Obj p_0,
+    \Obj p_1,
+    \Obj p_0,
+    (\Obj p_1 \land \Obj p_0),
+    (\Obj p_0 \lif \Obj p_1),
+    \lnot (\Obj p_1 \land \Obj p_0)
+}.
+\]
+%
+دوجی مثال توں ویکھیا جا سکدا اے کہ تشکیل دے سلسلیاں وچ `فالتو مال'
+وی آ سکدا اے: اوہ فارمولے جیہڑے وادھو ہون یا بناوٹ وچ کوئی حصہ نہ
+پاؤن۔
+\end{ex}
+
+\begin{prop}
+\ollabel{prop:formed}
+ہر !!{formula}~$!A$، جیہڑا~$\Frm[L_0]$ وچ اے، اوہدے لئی تشکیل دا کوئی
+سلسلہ موجود اے۔
+\end{prop}
+
+\begin{proof}
+منّو $!A$ ایٹمی اے۔ تاں سلسلہ~$\tuple{!A}$، $!A$ لئی تشکیل دا سلسلہ
+اے۔
+%
+ہُن منّو کہ $!B$ تے~$!C$ دے تشکیل دے سلسلے ترتیب وار
+$\tuple{!B_0,\dotsc,!B_n}$ تے $\tuple{!C_0,\dotsc,!C_m}$ نیں۔
+%
+\begin{enumerate}
+  \tagitem{prvNot}{جے $!A \ident \lnot !B$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,\lnot !B_n}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvAnd}{جے $!A \ident (!B \land !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \land !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvOr}{جے $!A \ident (!B \lor !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lor !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvIf}{جے $!A \ident (!B \lif !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lif !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvIff}{جے $!A \ident (!B \liff !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \liff !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+\end{enumerate}
+!!{formula}s اُتے استقرا دے اصول نال، ہر !!{formula} دا کوئی تشکیل دا
+سلسلہ اے۔
+\end{proof}
+
+اسیں اُلٹا رخ وی ثابت کر سکدے آں۔ ایہ گل اہم اے، کیوں جے ایہ وکھاؤندی
+اے کہ فارمولیاں نوں تعریف کرن دے ساڈے دونیں طریقے ہم ارز نیں: دونیں
+اکّو نتیجے دیندے نیں۔ ایہدا مطلب ایہ وی اے کہ اسیں تشکیل دے سلسلیاں
+دی لمبائی اُتے عام استقرا ورت کے فارمولیاں بارے قضیے ثابت کر سکدے آں۔
+
+\begin{lem}
+\ollabel{lem:fseq-init}
+منّو کہ $\tuple{!A_0,\dotsc,!A_n}$،~$!A_n$ لئی تشکیل دا سلسلہ اے، تے
+$k \leq n$۔ تاں $\tuple{!A_0,\dotsc,!A_k}$،~$!A_k$ لئی تشکیل دا سلسلہ
+اے۔
+\end{lem}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{thm}
+\ollabel{thm:fseq-frm-equiv}
+$\Frm[L_0]$، زبان~$\Lang L_0$ وچ علامتاں دیاں اوہناں ساریاں لڑیواں
+دا سیٹ اے جنہاں دا کوئی تشکیل دا سلسلہ اے۔
+\end{thm}
+
+\begin{proof}
+$F$ نوں زبان~$\Lang L_0$ وچ علامتاں دیاں اوہناں ساریاں لڑیواں دا سیٹ
+منّو جنہاں دا کوئی تشکیل دا سلسلہ اے۔ اسیں
+\olref[pl][syn][fseq]{prop:formed} وچ ویکھ چکے آں کہ
+$\Frm[L_0] \subseteq F$، سو ہُن اسیں اُلٹا رخ ثابت کردے آں۔
+
+منّو $!A$ دا تشکیل دا سلسلہ $\tuple{!A_0,\dotsc,!A_n}$ اے۔ اسیں ثابت
+کردے آں کہ $!A \in \Frm[L_0]$، تے ایہ کم~$n$ اُتے مضبوط استقرا نال
+کردے آں۔ ساڈا
+استقرائی مفروضہ اے کہ علامتاں دی ہر اوہ لڑی جیہدے تشکیل دے سلسلے دی
+لمبائی $m < n$ اے،~$\Frm[L_0]$ وچ اے۔ تشکیل دے سلسلے دی تعریف موجب
+یا تاں $!A_n$ ایٹمی اے، یا ایہو جہے $j,k < n$ لازماً موجود نیں کہ
+اگلیاں وچوں کوئی اک صورت اے:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A_n \ident \lnot !A_j$۔}{}%
+    \tagitem{prvAnd}{$!A_n \ident (!A_j \land !A_k)$۔}{}%
+    \tagitem{prvOr}{$!A_n \ident (!A_j \lor !A_k)$۔}{}%
+    \tagitem{prvIf}{$!A_n \ident (!A_j \lif !A_k)$۔}{}%
+    \tagitem{prvIff}{$!A_n \ident (!A_j \liff !A_k)$۔}{}%
+\end{enumerate}
+ہُن اسیں صورتاں نال دلیل دیندے آں۔ جے $!A_n$ ایٹمی اے تاں
+$!A_n \in \Frm[L_0]$۔ ایس دی بجائے منّو کہ $!A \equiv
+(!A_j \land !A_k)$۔ \olref[pl][syn][fseq]{lem:fseq-init} موجب،
+$\tuple{!A_0,\dotsc,!A_j}$ تے $\tuple{!A_0,\dotsc,!A_k}$ ترتیب وار
+$!A_j$ تے~$!A_k$ لئی تشکیل دے سلسلے نیں۔ کیوں جے ایہ~$!A$ دے تشکیل دے
+سلسلے دے پورے توں چھوٹے مُڈھلے ذیلی سلسلے نیں، ایس لئی دونیں دی
+لمبائی~$n$ توں گھٹ اے۔ سو استقرائی مفروضے موجب $!A_j$ تے~$!A_k$،
+$\Frm[L_0]$ وچ نیں، تے ایس لئی !!a{formula} دی تعریف موجب
+$(!A_j \land !A_k)$ وی اوہدے وچ اے۔ ہور صورتاں ایسّے برابر دلیل نال
+ملدیاں نیں۔
+\end{proof}
+
+\end{document}

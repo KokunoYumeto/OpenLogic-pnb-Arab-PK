@@ -1,0 +1,120 @@
+% Part: propositional-logic
+% Chapter: propositional-logic
+% Section: preliminaries
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{pre}
+
+\olsection{مُڈھلیاں گلاں}
+
+\begin{thm}[\emph{!!{formula}s اُتے استقرا دا اصول}]
+  \ollabel{thm:induction}
+  جے کوئی خاصیت~$P$ سارے ایٹمی !!{formula}s لئی پوری ہُندی اے تے
+  اینج اے کہ
+  \begin{enumerate}
+    \tagitem{prvNot}{ایہ $\lnot !A$ لئی پوری ہُندی اے جدوں وی ایہ
+      ~$!A$ لئی پوری ہُندی اے؛}{}
+    \tagitem{prvAnd}{ایہ $(!A \land !B)$ لئی پوری ہُندی اے
+      جدوں وی ایہ $!A$ تے~$!B$ لئی پوری ہُندی اے؛}{}
+    \tagitem{prvOr}{ایہ $(!A \lor !B)$ لئی پوری ہُندی اے
+      جدوں وی ایہ $!A$ تے~$!B$ لئی پوری ہُندی اے؛}{}
+    \tagitem{prvIf}{ایہ $(!A \lif !B)$ لئی پوری ہُندی اے
+      جدوں وی ایہ $!A$ تے~$!B$ لئی پوری ہُندی اے؛}{}
+    \tagitem{prvIff}{ایہ $(!A \liff !B)$ لئی پوری ہُندی اے
+      جدوں وی ایہ $!A$ تے~$!B$ لئی پوری ہُندی اے؛}{}
+  \end{enumerate}
+  تاں $P$ سارے !!{formula}s لئی پوری ہُندی اے۔
+\end{thm}
+
+\begin{proof}
+  $S$ نوں اوہناں سارے !!{formula}s دی جماعت منّو جنہاں وچ
+  خاصیت~$P$ اے۔ صاف اے کہ $S \subseteq \Frm[L_0]$۔ $S$،
+  \olref[fml]{defn:formulas} دیاں ساریاں شرطاں پوری کردا اے: ایہدے وچ
+  سارے ایٹمی !!{formula}s نیں تے ایہ !!{operator}s تحت بند اے۔
+  $\Frm[L_0]$ ایہو جہی سب توں چھوٹی جماعت اے، سو
+  $\Frm[L_0] \subseteq S$۔ ایس لئی $\Frm[L_0] = S$، تے ہر فارمولے
+  وچ خاصیت~$P$ اے۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:balanced}
+   $\Frm[L_0]$ وچ ہر !!{formula} \emph{متوازن} اے، یعنی اوہدے وچ
+   کھبیاں قوساں اونّیاں ای نیں جِنّیاں سجیاں قوساں۔
+\end{prop}
+
+\begin{prob}
+\olref[pl][syn][pre]{prop:balanced} ثابت کرو۔
+\end{prob}
+
+\begin{prop} \ollabel{prop:noinit}
+کسی !!a{formula} دا پورے توں چھوٹا مُڈھلا ٹکڑا !!a{formula} نہیں ہُندا۔
+\end{prop}
+
+\begin{prob}
+  \olref[pl][syn][pre]{prop:noinit} ثابت کرو۔
+\end{prob}
+
+\begin{prop}[اکّو طرح نال پڑھت]
+ہر !!{formula}~$!A$، جیہڑا $ \Frm[L_0]$ وچ اے، اوہدا اگلیاں صورتاں
+وچوں کسے اک دے طور تے تجزیہ ٹھیک اکّو طریقے نال ہُندا اے:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$۔}{}
+
+\tagitem{prvTrue}{$\ltrue$۔}{}
+
+\item $\Obj p_n$، کسے $\Obj p_n \in  \PVar$ لئی۔
+
+\tagitem{prvNot}{$\lnot !B$، کسے !!{formula}~$!B$ لئی۔}{}
+
+\tagitem{prvAnd}{$(!B \land !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+
+\tagitem{prvOr}{$(!B \lor !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+
+\tagitem{prvIf}{$(!B \lif !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+
+\tagitem{prvIff}{$(!B \liff !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+\end{enumerate}
+ہور ایہ تجزیاتی پڑھت \emph{اکّو ای} ہُندی اے۔
+\end{prop}
+
+\begin{proof}
+$!A$ اُتے استقرا نال۔ مثال لئی، منّو کہ $!A$ دیاں دو وکھریاں پڑھتاں
+$(!B \lif !C)$ تے $(!B' \lif !C')$ نیں۔ تاں $!B$ تے $!B'$ لازماً
+اکّو ہون گے (نہیں تاں اک دوجے دا پورے توں چھوٹا مُڈھلا ٹکڑا ہُندا)؛ سو
+جے $!A$ دیاں دونیں پڑھتاں وکھریاں نیں تاں وجہ ایہو ہو سکدی اے کہ
+$!C$ تے $!C'$ علامتاں دی اکّو لڑی دیاں وکھریاں پڑھتاں نیں، جیہڑی گل
+استقرائی مفروضے موجب ناممکن اے۔
+\end{proof}
+
+\begin{defn}[یکساں بدل]
+جے $!A$ تے $!B$، !!{formula}s نیں، تے $\Obj p_i$ اک !!{propositional
+variable} اے، تاں $\Subst{!A}{!B}{\Obj p_i}$ اوہ نتیجہ ظاہر کردا اے
+جیہڑا $\Obj p_i$ دی ہر واری آمد نوں $!B$ دی اک آمد نال $!A$ وچ بدل
+کے ملدا اے؛ ایسّے طرح $\Obj p_1$، \dots،~$\Obj p_n$ نوں اکّو ویلے
+!!{formula}s $!B_1$، \dots،~$!B_n$ نال بدلنا
+$\SSubst{!A}{\subst{!B_1}{\Obj p_1},\dots,\subst{!B_n}{\Obj p_n}}$
+نال ظاہر کیتا جاندا اے۔
+\end{defn}
+
+\begin{prob} تھلے دتے پنجاں !!{formula}s وچوں ہر اک لئی طے کرو کہ کی
+ اوہ !!{formula} بدل \( \Subst{!A}{!B}{\Obj p_i} \) دے روپ وچ لکھیا
+ جا سکدا اے، جتھے \( !A \) ایہ اے: (i) \( \Obj p_0 \)؛ (ii)
+ \( ( \lnot \Obj p_0 \land \Obj p_1) \)؛ تے (iii)
+ \( ( ( \lnot \Obj p_0 \lif \Obj p_1 ) \land \Obj p_2 ) \)۔ ہر
+ صورت وچ متعلق بدل صاف صاف دسو۔
+  \begin{enumerate}
+    \item \( \Obj p_1 \)
+    \item \( ( \lnot \Obj p_0 \land \Obj p_0 ) \)
+    \item \( ( ( \Obj p_0 \lor \Obj p_1 ) \land \Obj p_2 )  \)
+    \item \( \lnot ( ( \Obj p_0 \lif \Obj p_1 ) \land \Obj p_2 ) \)
+    \item \( (( \lnot ( \Obj p_0 \lif \Obj p_1 ) \lif ( \Obj p_0 \lor \Obj p_1 )) \land \lnot ( \Obj p_0 \land \Obj p_1 )) \)
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+استقرا نال $\Subst{!A}{!B}{p}$ دی ریاضیاتی طور تے ٹھوس تعریف دیو۔
+\end{prob}
+
+\end{document}

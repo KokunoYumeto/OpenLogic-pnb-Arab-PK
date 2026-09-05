@@ -8,6 +8,7 @@
       "translation_bytes": 2311,
       "source_blocks": 4,
       "translation_blocks": 4,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -31,6 +32,7 @@
       "translation_bytes": 3116,
       "source_blocks": 26,
       "translation_blocks": 26,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -54,6 +56,7 @@
       "translation_bytes": 870,
       "source_blocks": 12,
       "translation_blocks": 12,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -77,6 +80,7 @@
       "translation_bytes": 358,
       "source_blocks": 12,
       "translation_blocks": 12,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -100,6 +104,7 @@
       "translation_bytes": 6133,
       "source_blocks": 15,
       "translation_blocks": 15,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -123,6 +128,7 @@
       "translation_bytes": 5179,
       "source_blocks": 19,
       "translation_blocks": 19,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -146,6 +152,7 @@
       "translation_bytes": 3523,
       "source_blocks": 10,
       "translation_blocks": 10,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -169,6 +176,7 @@
       "translation_bytes": 8263,
       "source_blocks": 30,
       "translation_blocks": 30,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -192,6 +200,7 @@
       "translation_bytes": 6581,
       "source_blocks": 20,
       "translation_blocks": 20,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -215,6 +224,7 @@
       "translation_bytes": 5935,
       "source_blocks": 15,
       "translation_blocks": 15,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -238,6 +248,7 @@
       "translation_bytes": 409,
       "source_blocks": 14,
       "translation_blocks": 14,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -261,6 +272,7 @@
       "translation_bytes": 7654,
       "source_blocks": 13,
       "translation_blocks": 13,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -284,6 +296,7 @@
       "translation_bytes": 6016,
       "source_blocks": 9,
       "translation_blocks": 9,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -307,6 +320,7 @@
       "translation_bytes": 4772,
       "source_blocks": 16,
       "translation_blocks": 16,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -330,6 +344,7 @@
       "translation_bytes": 4865,
       "source_blocks": 16,
       "translation_blocks": 16,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -353,6 +368,7 @@
       "translation_bytes": 9043,
       "source_blocks": 30,
       "translation_blocks": 30,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -376,6 +392,7 @@
       "translation_bytes": 4078,
       "source_blocks": 10,
       "translation_blocks": 10,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -399,6 +416,7 @@
       "translation_bytes": 7549,
       "source_blocks": 21,
       "translation_blocks": 21,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -422,6 +440,7 @@
       "translation_bytes": 2914,
       "source_blocks": 21,
       "translation_blocks": 21,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,
@@ -1418,6 +1437,54 @@
         "PNBPL-001",
         "PNBPL-002"
       ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0059",
+      "source_path": "content/propositional-logic/syntax-and-semantics/preliminaries.tex",
+      "source_sha256": "32b55f3fdc69170d1c4856c5abd86e8845d1d4993b8e649a0501475ad0c5a9dc",
+      "translation_sha256": "a0a54b2517b07f83165b3d7c0bb6e5e9eb609fd14b21683a4a7107e93dad1cc8",
+      "translation_bytes": 5504,
+      "source_blocks": 24,
+      "translation_blocks": 24,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0060",
+      "source_path": "content/propositional-logic/syntax-and-semantics/formation-sequences.tex",
+      "source_sha256": "fff70555c1ef515d9092e72c91496aa898f74e4dd41e4cadc82f49a30c5850f5",
+      "translation_sha256": "b79bdcd0f7593b328d3b349804df0d10b923fe96379f301e36957dcdcf15a7cd",
+      "translation_bytes": 6903,
+      "source_blocks": 17,
+      "translation_blocks": 17,
+      "source_corrections": [],
       "checks": {
         "pristine_source_hash": true,
         "paragraph_block_count": true,

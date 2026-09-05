@@ -2,9 +2,9 @@
 
 Start with `PRIORITY_REVIEW.md` for focused expert questions or `TRANSLATION_DECISIONS_FULL.md` for the complete readable register. `DECISION_OCCURRENCES.csv` is the one-row-per-occurrence view; `DECISIONS.json` is the canonical machine projection validated by `translation-decision.schema.json`.
 
-Current scope: 116 decisions, 2262 exact source-target occurrences, and 58 of 722 source units translated through `OLP-0058`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
+Current scope: 121 decisions, 2380 exact source-target occurrences, and 60 of 722 source units translated through `OLP-0060`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
 
-Exact accepted-reader pages are present for 220 occurrences in the seven-unit Sets reader. Page values name both Naskh and Nastaliq when available; they are typography profiles over exactly the same `pnb-Arab-PK` Shahmukhi semantic text. All other pages are explicitly pending until a reader is accepted—none are guessed from source order.
+Exact accepted-reader pages are present for 243 occurrences in the seven-unit Sets reader. Page values name both Naskh and Nastaliq when available; they are typography profiles over exactly the same `pnb-Arab-PK` Shahmukhi semantic text. All other pages are explicitly pending until a reader is accepted—none are guessed from source order.
 
 The durable `TERMINOLOGY_REVIEW_LOG.jsonl` remains the reversible source record. This package adapts it to the shared schema without retranslating accepted prose or inventing earlier consultation. Provisional decisions remain open to correction, but missing specialist dictionary evidence is not used as a reason to leave source text untranslated.
 

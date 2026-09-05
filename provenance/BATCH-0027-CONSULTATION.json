@@ -1,0 +1,75 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0027",
+  "unit_ids": [
+    "OLP-0059",
+    "OLP-0060"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T16:06:14.7406471Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0059",
+      "source_path": "content/propositional-logic/syntax-and-semantics/preliminaries.tex",
+      "source_bytes": 4151,
+      "source_sha256": "32b55f3fdc69170d1c4856c5abd86e8845d1d4993b8e649a0501475ad0c5a9dc",
+      "source_blocks": 24,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0060",
+      "source_path": "content/propositional-logic/syntax-and-semantics/formation-sequences.tex",
+      "source_bytes": 5278,
+      "source_sha256": "fff70555c1ef515d9092e72c91496aa898f74e4dd41e4cadc82f49a30c5850f5",
+      "source_blocks": 17,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0059",
+      "finding": "The preliminaries state structural induction over formulas, derive it from the least inductively closed class, ask for balanced-parenthesis and proper-prefix proofs, state unique readability with every tagged primitive case, and define uniform and simultaneous substitution before two exercises.",
+      "required_handling": "Preserve the five connective closure clauses and their tag order, optional truth/falsity base cases, the least-class inclusion proof, exact proper-initial-segment claim, all unique-readability cases, the conditional example, substitution argument order, five exercise formulas and three proposed source patterns."
+    },
+    {
+      "unit_id": "OLP-0060",
+      "finding": "The section gives a bottom-up formation-sequence definition, two exact examples including redundant junk, proves every formula has such a sequence by formula induction, and proves the converse by initial prefixes and strong induction on the terminal index.",
+      "required_handling": "Preserve every tuple and ident expression, j/k inequalities, duplicate and irrelevant example entries, five tagged cases in both definition and proofs, all cross-references, the ordinary-versus-strong induction distinction, and the final conjunction case without silently completing omitted parallel cases."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0060",
+      "locator": "source header comments",
+      "observation": "The non-rendered Part comment says first-order-logic although the path, olfileid and surrounding chapter are propositional logic.",
+      "handling": "Preserve the frozen comment exactly as metadata; do not treat it as the semantic part identity and do not create a translation-source correction for a non-rendered header comment."
+    },
+    {
+      "unit_id": "OLP-0060",
+      "locator": "final theorem proof",
+      "observation": "The proof speaks of sequence length m<n while conducting induction on the terminal index n of a tuple indexed from zero, and uses equivilence-style notation once where the section otherwise uses syntactic identity.",
+      "handling": "Follow the source statement, parameter and formula exactly. The intended prefix argument is recoverable from j,k<n, but the available evidence does not authorize altering its notation or indexing convention."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0027, the current owner read the complete preliminaries.tex and formation-sequences.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Structural induction, least-class reasoning, balanced parentheses, proper initial segments, unique readability, uniform and simultaneous substitution, formation-sequence construction, junk entries, prefix closure, strong induction and the converse equivalence were checked before translation. Two source-level observations were bounded without altering frozen formulas or adding a target correction. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest structural induction on formulas, unique parsing, uniform substitution, formation sequences, proper prefixes or strong induction; those remain reversible source-governed scholarly bridges."
+}
