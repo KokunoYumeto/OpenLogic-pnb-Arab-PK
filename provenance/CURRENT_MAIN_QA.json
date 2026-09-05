@@ -88,6 +88,18 @@
     "current_global_rank_claimed": false,
     "companions_count_toward_722": false
   },
+  "upstream_git_blob_integrity": {
+    "policy": "upstream/** -text",
+    "repair_record": "UPSTREAM-EOL-REPAIR.json",
+    "pre_repair_commit": "b841fac587eb78fa12c183524e45e1c82c9e0eeb",
+    "pre_repair_codeload_bytes": 9587101,
+    "pre_repair_codeload_sha256": "11f944bab6965a9e6f5ecc90346a7ef815b1e57d93fe808635688356eb644b61",
+    "pre_repair_manifest_matches": 638,
+    "pre_repair_newline_only_mismatches": 84,
+    "authoritative_local_matches_before_staging": 722,
+    "staged_git_blob_manifest_matches": 722,
+    "semantic_source_corrections_added": 0
+  },
   "release_snapshot": {
     "version": "v0.1.0",
     "translated_units": 21,
@@ -98,8 +110,7 @@
   },
   "limits": [
     "This branch checkpoint is not a new binary reader release.",
-    "Relations and Functions have source-aligned review but no integrated reader visual acceptance.",
-    "Size of Sets is incomplete and has no integrated reader visual acceptance.",
+    "Relations, Functions, Size of Sets, Arithmetization and the current Infinite units have source-aligned review but no integrated reader visual acceptance.",
     "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ]

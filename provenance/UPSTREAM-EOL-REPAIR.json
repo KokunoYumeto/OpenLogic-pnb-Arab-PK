@@ -1,0 +1,45 @@
+{
+  "schema": "pnb-upstream-eol-repair/1",
+  "date_utc": "2026-09-05",
+  "classification": "git_object_line_ending_normalization_only_not_semantic_source_correction",
+  "frozen_source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_manifest": {
+    "path": "SOURCE_MANIFEST.jsonl",
+    "units": 722,
+    "bytes": 356467,
+    "sha256": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155"
+  },
+  "pre_repair_public_state": {
+    "commit": "b841fac587eb78fa12c183524e45e1c82c9e0eeb",
+    "anonymous_codeload": {
+      "bytes": 9587101,
+      "sha256": "11f944bab6965a9e6f5ecc90346a7ef815b1e57d93fe808635688356eb644b61",
+      "file_count": 924
+    },
+    "manifest_exact_matches": 638,
+    "newline_only_mismatches": 84,
+    "other_mismatches": 0,
+    "missing": 0,
+    "classification_check": "Every mismatching public LF blob reconstructs exactly to its manifest byte count and SHA-256 after LF-to-CRLF conversion.",
+    "mismatching_unit_ids": [
+      "OLP-0037", "OLP-0042", "OLP-0043", "OLP-0044", "OLP-0045", "OLP-0046", "OLP-0047", "OLP-0048", "OLP-0050", "OLP-0051", "OLP-0052", "OLP-0053", "OLP-0054", "OLP-0531", "OLP-0532", "OLP-0533", "OLP-0534", "OLP-0535", "OLP-0536", "OLP-0538", "OLP-0539", "OLP-0540", "OLP-0541", "OLP-0542", "OLP-0543", "OLP-0544", "OLP-0545", "OLP-0546", "OLP-0549", "OLP-0550", "OLP-0551", "OLP-0552", "OLP-0553", "OLP-0554", "OLP-0555", "OLP-0556", "OLP-0557", "OLP-0559", "OLP-0560", "OLP-0561", "OLP-0562", "OLP-0563", "OLP-0564", "OLP-0567", "OLP-0568", "OLP-0569", "OLP-0570", "OLP-0571", "OLP-0576", "OLP-0577", "OLP-0578", "OLP-0579", "OLP-0581", "OLP-0582", "OLP-0583", "OLP-0584", "OLP-0585", "OLP-0587", "OLP-0588", "OLP-0589", "OLP-0590", "OLP-0591", "OLP-0594", "OLP-0595", "OLP-0596", "OLP-0597", "OLP-0598", "OLP-0599", "OLP-0600", "OLP-0603", "OLP-0604", "OLP-0605", "OLP-0606", "OLP-0607", "OLP-0608", "OLP-0609", "OLP-0611", "OLP-0612", "OLP-0634", "OLP-0635", "OLP-0636", "OLP-0637", "OLP-0638", "OLP-0639"
+    ],
+    "translated_through_0052_affected": [
+      "OLP-0037", "OLP-0042", "OLP-0043", "OLP-0044", "OLP-0045", "OLP-0046", "OLP-0047", "OLP-0048", "OLP-0050", "OLP-0051", "OLP-0052"
+    ]
+  },
+  "repair": {
+    "gitattributes_rule": "upstream/** -text",
+    "authoritative_local_source_matches_before_staging": 722,
+    "restaged_upstream_files": 722,
+    "changed_git_blobs": 84,
+    "staged_git_blob_manifest_matches": 722,
+    "staged_git_blob_other_mismatches": 0,
+    "translation_files_changed": 0,
+    "semantic_source_corrections_added": 0,
+    "tex_operations": 0,
+    "release_assets_changed": false
+  },
+  "post_commit_verification": "Anonymous commit-addressed codeload byte verification is recorded in the durable publication receipt after this commit, avoiding a circular commit/hash dependency.",
+  "limits": "This repairs Git object representation only. Frozen authoritative source content, translations, canon decisions, formulas, v0.1.0 assets and the Zenodo record are unchanged."
+}
