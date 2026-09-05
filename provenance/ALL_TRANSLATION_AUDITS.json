@@ -1333,6 +1333,54 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0055",
+      "source_path": "content/propositional-logic/propositional-logic.tex",
+      "source_sha256": "1af59702eeba2337e42385ae40315eb7761ca569b0991f0afe69ad74bd5258aa",
+      "translation_sha256": "1c797bced719e017d034a938026d497864f4ece503eacb0723e731e9f8264d47",
+      "translation_bytes": 1785,
+      "source_blocks": 17,
+      "translation_blocks": 17,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0056",
+      "source_path": "content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex",
+      "source_sha256": "d99022091f0fa2b689b3a3e845c3908dd45c8a9c36c74f3d9c589d17d629f805",
+      "translation_sha256": "983874dbef0e56634a5844688e088effdfc7b76e23f5460ea7945b31e3585eeb",
+      "translation_bytes": 725,
+      "source_blocks": 13,
+      "translation_blocks": 13,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

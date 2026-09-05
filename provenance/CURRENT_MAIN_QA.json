@@ -4,52 +4,53 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 54,
-  "translated_range": "OLP-0001 through OLP-0054, contiguous",
-  "remaining_units": 668,
-  "aligned_blocks": 910,
-  "translated_linguistic_blocks": 638,
-  "unchanged_formal_blocks": 272,
+  "translated_and_source_aligned_units": 56,
+  "translated_range": "OLP-0001 through OLP-0056, contiguous",
+  "remaining_units": 666,
+  "aligned_blocks": 940,
+  "translated_linguistic_blocks": 643,
+  "unchanged_formal_blocks": 297,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
     "Functions",
     "Size of Sets",
-    "Arithmetization"
+    "Arithmetization",
+    "Infinite"
   ],
-  "current_chapter_progress": "Infinite through Dedekind's reflection and the closure proof of Schröder-Bernstein, OLP-0054",
+  "current_chapter_progress": "Propositional Logic through the part driver and Syntax and Semantics chapter driver, OLP-0056",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 54,
-    "sha256": "a011776088dd6287b7fb8434cd5bf7df01780b273deab5fb63a1d5ccd663b12d",
+    "units": 56,
+    "sha256": "cb018dfb51b3592428f0ab222f7adbd274a5a422738888f415628d77030fa155",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0054.json",
-    "sha256": "db8cd5c25fe6f8a2eeaba91c3471fa061439de7d69905d69eb00cb76061670e8",
+    "file": "AUDIT-REGRESSION-0056.json",
+    "sha256": "12f63844b97a6bc1d4a96862a4a0c6ff305af8595f8f392dcd7d2738a6743d4e",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 910,
-    "sha256": "ea8f734301847abcef0009f34deddaea1f8cba0b75439bf99184ddb0df16136c",
+    "rows": 940,
+    "sha256": "5be81b4ec11acd4a870941231a8dd335429b408edeee065cbf4f2e35ade4c155",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 66,
-    "sha256": "d5eb2f7957c9cf3db74fe6b573474cb137e10a015934dab042214ce0753a00e9"
+    "entries": 68,
+    "sha256": "687869258c747dedba03145064c53a9f428583de37b52eb00e42213c46cbae3c"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 106,
-    "terminology_entries": 66,
+    "entries": 108,
+    "terminology_entries": 68,
     "source_fidelity_entries": 40,
-    "sha256": "0f8a65b9eae00b274f4885df5c92b757d974b7bcbfb647d17f9308e28404f7a4"
+    "sha256": "2ccaaf148e4dec24c24c1c89d72956526164c8bba7b5f62afdbaf7eda38e74c9"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
@@ -112,7 +113,7 @@
   },
   "limits": [
     "This branch checkpoint is not a new binary reader release.",
-    "Relations, Functions, Size of Sets, Arithmetization and the current Infinite units have source-aligned review but no integrated reader visual acceptance.",
+    "Relations, Functions, Size of Sets, Arithmetization, Infinite and the current Propositional Logic drivers have source-aligned review but no integrated reader visual acceptance.",
     "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ]

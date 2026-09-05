@@ -1,0 +1,61 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0025",
+  "unit_ids": [
+    "OLP-0055",
+    "OLP-0056"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T03:21:57.0295042Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0055",
+      "source_path": "content/propositional-logic/propositional-logic.tex",
+      "source_bytes": 1442,
+      "source_sha256": "1af59702eeba2337e42385ae40315eb7761ca569b0991f0afe69ad74bd5258aa",
+      "source_blocks": 17,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0056",
+      "source_path": "content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex",
+      "source_bytes": 579,
+      "source_sha256": "d99022091f0fa2b689b3a3e845c3908dd45c8a9c36c74f3d9c589d17d629f805",
+      "source_blocks": 13,
+      "read_in_full": true
+    }
+  ],
+  "driver_scope_reviewed": [
+    {
+      "unit_id": "OLP-0055",
+      "finding": "The part driver describes classical propositional logic, marks the opening chapter as a terse definition/result summary, imports selected first-order proof-system and completeness material under a false FOL tag, and explicitly replaces structures by valuations while excluding predicate, term and quantifier material.",
+      "required_handling": "Translate both editorial paragraphs, the part title and the structure/valuation contrast; preserve all seven manifest imports, four proof-system conditionals, both FOL tag transitions, protected identifiers and formulas exactly."
+    },
+    {
+      "unit_id": "OLP-0056",
+      "finding": "The chapter driver contains one editorial limitation and six imports. It promises future expansion toward a gentle introduction to induction on formulas and more examples; it does not claim that such expansion already exists.",
+      "required_handling": "Translate the chapter title and editorial note without upgrading the planned content; preserve all six imports and the chapter hook exactly."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0025, the current owner read the complete propositional-logic.tex and syntax-and-semantics.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The driver import graph, FOL tag scope, structure-to-valuation substitution, current editorial limitations and future-work modality were checked before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi institutional prose, ordering, qualification and future-plan modality only. It does not attest propositional logic, proof systems, completeness, logical structures, valuations, syntax/semantics or induction on formulas; those remain reversible source-governed and scholarly bridges."
+}
