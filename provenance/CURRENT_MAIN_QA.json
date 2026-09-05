@@ -14,9 +14,11 @@
   "completed_source_translation_chapters": [
     "Sets",
     "Relations",
-    "Functions"
+    "Functions",
+    "Size of Sets",
+    "Arithmetization"
   ],
-  "current_chapter_progress": "Arithmetization through the ordered-ring checks and Cauchy-sequence construction of the reals, OLP-0048",
+  "current_chapter_progress": "Arithmetization complete through the ordered-ring checks and Cauchy-sequence construction of the reals, OLP-0048; Infinite begins at OLP-0049",
   "accepted_reader_chapters": [
     "Sets"
   ],
