@@ -1,0 +1,75 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0028",
+  "unit_ids": [
+    "OLP-0061",
+    "OLP-0062"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T16:34:50.4995787Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0061",
+      "source_path": "content/propositional-logic/syntax-and-semantics/valuations-sat.tex",
+      "source_bytes": 5992,
+      "source_sha256": "9f0b5ecd5a8462ab5d970546602a1a0b0e46e5908c6a0f46369f93543583f882",
+      "source_blocks": 23,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0062",
+      "source_path": "content/propositional-logic/syntax-and-semantics/semantic-notions.tex",
+      "source_bytes": 2962,
+      "source_sha256": "992456e01aa355799eabea11dc7d2a49a5f1a0f0ebeef05d36f86603c0f06d39",
+      "source_blocks": 18,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0061",
+      "finding": "The section defines two-valued valuations and their inductive evaluation functions, gives all enabled connective truth clauses and tables, asks for a ternary truth table, proves local determination, and then defines satisfaction for formulas and sets before relating satisfaction to the value True.",
+      "required_handling": "Preserve the exact True/False codomain, variable assignment type, every tagged evaluation clause and truth-table row, the ternary connective's branch order, local-determination quantifier direction, the distinction between negative satisfaction notation and negated prose, all eight tagged satisfaction cases, set satisfaction, and the final equivalence proposition."
+    },
+    {
+      "unit_id": "OLP-0062",
+      "finding": "The section defines satisfiable, unsatisfiable, tautological and contingent formulas, semantic entailment and satisfiable formula sets; it then gives four exact classification exercises, five semantic facts, the unsatisfiability characterization of entailment, and the semantic deduction theorem.",
+      "required_handling": "Preserve every existential or universal quantifier direction, the distinction between formulas and sets, all four exercise formulas, the order and hypotheses of tautology, semantic modus ponens, finite-subset satisfiability, monotonicity and Cut, both iff results, all labels and all proof-as-exercise statements."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0061",
+      "locator": "Local Determination theorem statement",
+      "observation": "After fixing the displayed formula metavariable A, the source says a propositional variable occurs in 'some formula A'; the governing equality and conclusion make the intended scope the already displayed A.",
+      "handling": "Render the theorem's fixed-A scope plainly without changing any metavariable, equality, quantifier condition or conclusion. This is ordinary prose normalization, not a semantic source correction."
+    },
+    {
+      "unit_id": "OLP-0062",
+      "locator": "semantic-facts proposition",
+      "observation": "The source labels the fifth fact 'Transitivity' while its displayed premise/conclusion is the standard Cut pattern and separately labels the fourth fact monotonicity.",
+      "handling": "Preserve the source label, hypotheses, unions and conclusion exactly; do not rename the item or infer a stronger or weaker rule."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0028, the current owner read the complete valuations-sat.tex and semantic-notions.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Two-valued assignments, recursive evaluation, every truth table, the ternary connective, local determination, satisfaction, satisfiability, tautology, contingency, entailment, monotonicity, Cut, unsatisfiability and semantic deduction were checked before translation. Two prose/label observations were bounded without changing frozen formulas or adding a target correction. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest valuation theory, truth tables, local determination, semantic satisfaction, entailment, monotonicity, Cut or semantic deduction; those remain reversible source-governed scholarly bridges."
+}

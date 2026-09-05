@@ -1,7 +1,7 @@
 # Punjabi Shahmukhi Translation Decisions — Complete Index
 
 This complete current-main index is a reversible projection of the durable decision ledger into the shared OpenLogic contract.
-It covers **121 decisions** and **2380 exact source-target occurrences** through `OLP-0060`. It does not imply completion or human review of the remaining corpus.
+It covers **126 decisions** and **2432 exact source-target occurrences** through `OLP-0062`. It does not imply completion or human review of the remaining corpus.
 Naskh and Nastaliq page references are artifact-specific typography profiles over the same Shahmukhi segment text. Unknown future-reader pages remain explicitly pending.
 
 ## `pnb-Arab-PK:PNB-T001`
@@ -24,7 +24,7 @@ Alternatives:
 - logic (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (21):
+Occurrences (22):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -49,6 +49,7 @@ Occurrences (21):
 | `pnb-Arab-PK:PNB-T001:OLP-0058-B008` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:35-35` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:35-35` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0058-B012` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:63-76` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:64-77` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0058-B013` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:78-83` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:79-84` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
 
 ---
 
@@ -119,7 +120,7 @@ Alternatives:
 - مجموعہ; a definition-led descriptive set label — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (274):
+Occurrences (278):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -397,6 +398,10 @@ Occurrences (274):
 | `pnb-Arab-PK:PNB-T003:OLP-0058-B022` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:109-118` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:110-119` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0060-B014` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:114-118` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:112-116` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0060-B015` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:120-124` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:118-122` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0061-B019` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:177-184` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:181-188` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0062-B009` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:45-60` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:47-62` | pending |
 
 ---
 
@@ -704,7 +709,7 @@ Alternatives:
 - جے تے صرف جے; explicit two-direction formulation — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (37):
+Occurrences (47):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -745,6 +750,16 @@ Occurrences (37):
 | `pnb-Arab-PK:PNB-T007:OLP-0054-B014` | `OLP-0054` / — | `upstream/content/sets-functions-relations/infinite/card-sb.tex:75-78` | `translation/content/sets-functions-relations/infinite/card-sb.tex:75-79` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0057-B008` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:52-62` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51-61` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0058-B034` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:167-171` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:169-173` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B014` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:158-159` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:162-163` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B015` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:161-163` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:165-167` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B016` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:165-167` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:169-171` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B017` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:169-171` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:173-175` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B018` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:173-175` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:177-179` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B019` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:177-184` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:181-188` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0061-B020` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:186-188` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:190-192` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0062-B009` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:45-60` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:47-62` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0062-B012` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:70-73` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:72-75` | pending |
 
 ---
 
@@ -810,7 +825,7 @@ Alternatives:
 - proper subset as unequal included set; power set described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (35):
+Occurrences (36):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -849,6 +864,7 @@ Occurrences (35):
 | `pnb-Arab-PK:PNB-T009:OLP-0051-B006` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:41-46` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:41-48` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0052-B007` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:23-27` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:23-30` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0054-B007` | `OLP-0054` / — | `upstream/content/sets-functions-relations/infinite/card-sb.tex:25-33` | `translation/content/sets-functions-relations/infinite/card-sb.tex:24-33` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0062-B009` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:45-60` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:47-62` | pending |
 
 ---
 
@@ -1189,7 +1205,7 @@ Alternatives:
 - paradox/comprehension with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (51):
+Occurrences (55):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1244,6 +1260,10 @@ Occurrences (51):
 | `pnb-Arab-PK:PNB-T012:OLP-0060-B010` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:68-95` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:68-94` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0060-B011` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:97-101` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:96-99` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0060-B016` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:126-151` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:124-148` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0061-B007` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:21-57` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:21-58` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0061-B011` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:142-144` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:145-147` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0061-B012` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:146-153` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:149-157` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0061-B021` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:190-192` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:194-196` | pending |
 
 ---
 
@@ -1489,7 +1509,7 @@ Alternatives:
 - metalogic/predicate/reductionism as explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (29):
+Occurrences (30):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1522,6 +1542,7 @@ Occurrences (29):
 | `pnb-Arab-PK:PNB-T015:OLP-0055-B005` | `OLP-0055` / propositional-logic | `upstream/content/propositional-logic/propositional-logic.tex:9-18` | `translation/content/propositional-logic/propositional-logic.tex:9-17` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0057-B007` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:37-50` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:36-49` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0058-B010` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:49-59` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:50-60` | pending |
+| `pnb-Arab-PK:PNB-T015:OLP-0062-B015` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:83-86` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:85-88` | pending |
 
 ---
 
@@ -1927,7 +1948,7 @@ Alternatives:
 - دائرۂ وصول for codomain; range as attained outputs in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (157):
+Occurrences (159):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2088,6 +2109,8 @@ Occurrences (157):
 | `pnb-Arab-PK:PNB-T023:OLP-0057-B006` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:13-35` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:13-34` | pending |
 | `pnb-Arab-PK:PNB-T023:OLP-0057-B007` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:37-50` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:36-49` | pending |
 | `pnb-Arab-PK:PNB-T023:OLP-0057-B008` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:52-62` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51-61` | pending |
+| `pnb-Arab-PK:PNB-T023:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
+| `pnb-Arab-PK:PNB-T023:OLP-0061-B007` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:21-57` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:21-58` | pending |
 
 ---
 
@@ -2633,7 +2656,7 @@ Alternatives:
 - ترتیبی نمبر; تکرار; recursively as an explicit stepwise rule — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (22):
+Occurrences (23):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2659,6 +2682,7 @@ Occurrences (22):
 | `pnb-Arab-PK:PNB-T031:OLP-0052-B013` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:66-80` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:68-81` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0053-B009` | `OLP-0053` / sets-functions-relations / infinite / dedekinds-proof | `upstream/content/sets-functions-relations/infinite/dedekinds-proof.tex:66-71` | `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:61-65` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0058-B034` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:167-171` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:169-173` | pending |
+| `pnb-Arab-PK:PNB-T031:OLP-0061-B010` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:133-140` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:134-143` | pending |
 
 ---
 
@@ -2713,7 +2737,7 @@ Alternatives:
 - صف/ستون/محور; diagonal traversal described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (19):
+Occurrences (21):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2736,6 +2760,8 @@ Occurrences (19):
 | `pnb-Arab-PK:PNB-T033:OLP-0039-B012` | `OLP-0039` / sets-functions-relations / size-of-sets / non-enumerability-alt | `upstream/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:61-97` | `translation/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:61-100` | pending |
 | `pnb-Arab-PK:PNB-T033:OLP-0039-B014` | `OLP-0039` / sets-functions-relations / size-of-sets / non-enumerability-alt | `upstream/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:105-111` | `translation/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:108-114` | pending |
 | `pnb-Arab-PK:PNB-T033:OLP-0039-B017` | `OLP-0039` / sets-functions-relations / size-of-sets / non-enumerability-alt | `upstream/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:131-152` | `translation/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:136-157` | pending |
+| `pnb-Arab-PK:PNB-T033:OLP-0061-B008` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:59-117` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:60-118` | pending |
+| `pnb-Arab-PK:PNB-T033:OLP-0061-B009` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:119-131` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:120-132` | pending |
 
 ---
 
@@ -2801,7 +2827,7 @@ Alternatives:
 - نا منفی; truth-table terminology; finite-complement wording in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (10):
+Occurrences (13):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2815,6 +2841,9 @@ Occurrences (10):
 | `pnb-Arab-PK:PNB-T035:OLP-0057-B006` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:13-35` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:13-34` | pending |
 | `pnb-Arab-PK:PNB-T035:OLP-0057-B007` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:37-50` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:36-49` | pending |
 | `pnb-Arab-PK:PNB-T035:OLP-0057-B008` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:52-62` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51-61` | pending |
+| `pnb-Arab-PK:PNB-T035:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
+| `pnb-Arab-PK:PNB-T035:OLP-0061-B008` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:59-117` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:60-118` | pending |
+| `pnb-Arab-PK:PNB-T035:OLP-0061-B009` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:119-131` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:120-132` | pending |
 
 ---
 
@@ -4179,7 +4208,7 @@ Alternatives:
 - قضی متغیر; صدق-تابع; مادی لزوم with the full contrast stated descriptively — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (4):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -4187,6 +4216,7 @@ Occurrences (4):
 | `pnb-Arab-PK:PNB-T069:OLP-0057-B006` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:13-35` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:13-34` | pending |
 | `pnb-Arab-PK:PNB-T069:OLP-0057-B007` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:37-50` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:36-49` | pending |
 | `pnb-Arab-PK:PNB-T069:OLP-0057-B008` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:52-62` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51-61` | pending |
+| `pnb-Arab-PK:PNB-T069:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
 
 ---
 
@@ -4211,11 +4241,15 @@ Alternatives:
 - اشباع; کلی صدق; استلزام; قابلِ اشباع, each paired with its full valuation quantifier — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (1):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T070:OLP-0057-B009` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:64-76` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:63-75` | pending |
+| `pnb-Arab-PK:PNB-T070:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
+| `pnb-Arab-PK:PNB-T070:OLP-0062-B008` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:34-43` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:36-45` | pending |
+| `pnb-Arab-PK:PNB-T070:OLP-0062-B009` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:45-60` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:47-62` | pending |
+| `pnb-Arab-PK:PNB-T070:OLP-0062-B012` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:70-73` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:72-75` | pending |
 
 ---
 
@@ -4548,6 +4582,164 @@ Occurrences (3):
 | `pnb-Arab-PK:PNB-T079:OLP-0060-B011` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:97-101` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:96-99` | pending |
 | `pnb-Arab-PK:PNB-T079:OLP-0060-B015` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:120-124` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:118-122` | pending |
 | `pnb-Arab-PK:PNB-T079:OLP-0060-B016` | `OLP-0060` / first-order-logic / syntax-and-semantics / formation-sequences | `upstream/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:126-151` | `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:124-148` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T080`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: valuation; evaluation function; two truth values; truth table
+- Intended sense: valuation; evaluation function; two truth values; truth table
+- Chosen Shahmukhi rendering/treatment: قدر بندی؛ قدر معلوم کرن والا فنکشن؛ دو صداقتی قدراں؛ صداقتی جدول
+- Rationale: The source types a valuation from propositional variables to the two-value set, extends it inductively to every formula, and gives exact truth tables for every enabled connective. The Punjabi wording keeps the assignment/evaluation distinction, codomains, tagged clauses and all table rows.
+- Why expert review helps: No native Punjabi logic attestation was acquired. قدر بندی, قدر معلوم کرن والا فنکشن and صداقتی جدول are reversible type- and table-governed bridges; the displayed function arrows, cases and tables govern.
+- Please double-check: **Do قدر بندی and قدر معلوم کرن والا فنکشن remain visibly distinct, and do دو صداقتی قدراں plus صداقتی جدول preserve the exact function types and every truth-table row?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0031-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تعیینِ صدق; تابعِ قدر; دو صدقی قدریں; جدولِ صدق — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (5):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T080:OLP-0031-B013` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:79-84` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:80-85` | pending |
+| `pnb-Arab-PK:PNB-T080:OLP-0057-B006` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:13-35` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:13-34` | pending |
+| `pnb-Arab-PK:PNB-T080:OLP-0061-B006` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:13-19` | pending |
+| `pnb-Arab-PK:PNB-T080:OLP-0061-B008` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:59-117` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:60-118` | pending |
+| `pnb-Arab-PK:PNB-T080:OLP-0061-B009` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:119-131` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:120-132` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T081`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: local determination; agreement on occurring propositional variables
+- Intended sense: local determination; agreement on occurring propositional variables
+- Chosen Shahmukhi rendering/treatment: مقامی تعیین؛ فارمولے وچ آون والے قضیاتی متغیراں اُتے اتفاق
+- Rationale: The theorem says that two valuations assigning the same values to every propositional variable occurring in one fixed formula must give that formula the same evaluated value. The Punjabi retains the restricted variable condition, both assignments, the fixed formula and the exact equality conclusion.
+- Why expert review helps: No native Punjabi semantic-logic attestation was acquired. مقامی تعیین and متفق are reversible theorem-governed renderings; the occurrence condition and displayed equalities govern.
+- Please double-check: **Does مقامی تعیین clearly say that a formula’s value depends only on variables actually occurring in it, without extending agreement to all propositional variables?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0061-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مقامی تعین; متعلقہ قضی متغیروں پر اتفاق — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T081:OLP-0061-B010` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:133-140` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:134-143` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T082`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: inductive satisfaction of a formula; negative satisfaction notation; satisfaction of a formula set
+- Intended sense: inductive satisfaction of a formula; negative satisfaction notation; satisfaction of a formula set
+- Chosen Shahmukhi rendering/treatment: فارمولے دا قدر بندی نال پورا اترنا؛ منفی پورا اترن دی علامت؛ فارمولیاں دے سیٹ دا اکٹھا پورا اترنا
+- Rationale: The definition gives tagged recursive satisfaction clauses for constants, atoms and five connectives, separately explains the negative pSat slash notation, extends satisfaction to every member of a formula set, and proves equivalence with evaluation to True. The Punjabi keeps all three levels distinct and preserves every iff direction.
+- Why expert review helps: No native Punjabi model-theoretic attestation was acquired. پورا اترنا, منفی علامت and اکٹھا پورا اترنا are reversible recursive-clause-governed phrases; pSat, the eight cases, set quantification and final equivalence govern.
+- Please double-check: **Does پورا اترنا keep the formula, valuation and formula-set roles distinct, including the slash notation and the universal condition over every member of Gamma?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0061-B012` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- اشباعِ صیغہ; عدمِ اشباع کی علامت; مجموعے کا مشترک اشباع — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T082:OLP-0061-B012` | `OLP-0061` / propositional-logic / syntax-and-semantics / valuations-sat | `upstream/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:146-153` | `translation/content/propositional-logic/syntax-and-semantics/valuations-sat.tex:149-157` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T083`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: satisfiable; unsatisfiable; tautology; contingent formula
+- Intended sense: satisfiable; unsatisfiable; tautology; contingent formula
+- Chosen Shahmukhi rendering/treatment: پورا ہون جوگ؛ پورا ہون جوگ نہیں؛ ہمیشہ صادق فارمولا؛ اتفاقی فارمولا
+- Rationale: The source separates existence of a satisfying valuation, absence of every such valuation, truth under all valuations, and satisfiable-but-not-tautological status, then asks for all three classifications on four exact formulas. The Punjabi keeps each existential, negative and universal boundary explicit.
+- Why expert review helps: No native Punjabi semantic-logic attestation was acquired. پورا ہون جوگ, پورا ہون جوگ نہیں, ہمیشہ صادق and اتفاقی are reversible quantifier-governed renderings; the five definition items and four classification exercises govern.
+- Please double-check: **Do پورا ہون جوگ, پورا ہون جوگ نہیں, ہمیشہ صادق and اتفاقی keep the some/none/all/some-but-not-all valuation conditions sharply distinct?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0057-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قابلِ اشباع; ناقابلِ اشباع; کلی صدق; امکان — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (4):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T083:OLP-0057-B006` | `OLP-0057` / propositional-logic / syntax-and-semantics / introduction | `upstream/content/propositional-logic/syntax-and-semantics/introduction.tex:13-35` | `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:13-34` | pending |
+| `pnb-Arab-PK:PNB-T083:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
+| `pnb-Arab-PK:PNB-T083:OLP-0062-B008` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:34-43` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:36-45` | pending |
+| `pnb-Arab-PK:PNB-T083:OLP-0062-B012` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:70-73` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:72-75` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T084`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: semantic entailment; monotonicity; Transitivity or Cut; semantic deduction theorem
+- Intended sense: semantic entailment; monotonicity; Transitivity or Cut; semantic deduction theorem
+- Chosen Shahmukhi rendering/treatment: منطقی نتیجہ؛ یک رُخیت؛ تعدیت یا کٹ؛ معنوی استنباط دا قضیہ
+- Rationale: Entailment is governed by every valuation satisfying the premise set; the proposition then states semantic modus ponens, finite-subset preservation, monotonicity and a Cut-shaped item labelled Transitivity, followed by unsatisfiability and deduction-theorem equivalences. The Punjabi preserves every premise set, inclusion, union, inserted formula and iff direction while retaining the source labels.
+- Why expert review helps: No native Punjabi logic attestation was acquired. منطقی نتیجہ, یک رُخیت, تعدیت and معنوی استنباط are reversible rule-governed bridges; Entails and the exact displayed hypotheses and conclusions govern. The source's Transitivity label for the Cut pattern is not silently renamed.
+- Please double-check: **Do منطقی نتیجہ, یک رُخیت, تعدیت and معنوی استنباط preserve every premise-set direction, and does the Punjabi retain the source’s Transitivity label for its exact Cut-shaped rule?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0014-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- معنوی استلزام; یک سمتی توسیع; قطع; معنوی قضیۂ استنباط — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (7):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T084:OLP-0014-B007` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:28-31` | `translation/content/sets-functions-relations/relations/special-properties.tex:28-31` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0016-B022` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:124-130` | `translation/content/sets-functions-relations/relations/orders.tex:119-124` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0035-B012` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:51-55` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:51-55` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0042-B010` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:36-37` | `translation/content/sets-functions-relations/arithmetization/integers.tex:47-51` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0062-B009` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:45-60` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:47-62` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0062-B015` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:83-86` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:85-88` | pending |
 
 ---
 

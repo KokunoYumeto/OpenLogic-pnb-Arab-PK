@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **119 of 121** current decisions.
+This view contains only urgent/high-priority decisions: **124 of 126** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -1772,6 +1772,121 @@ Authorities checked:
 Alternatives:
 
 - ابتدائی تشکیلی ذیلی سلسلہ; عکس سمت; قوی استقرا — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T080`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: valuation; evaluation function; two truth values; truth table
+- Intended sense: valuation; evaluation function; two truth values; truth table
+- Chosen Shahmukhi rendering/treatment: قدر بندی؛ قدر معلوم کرن والا فنکشن؛ دو صداقتی قدراں؛ صداقتی جدول
+- Rationale: The source types a valuation from propositional variables to the two-value set, extends it inductively to every formula, and gives exact truth tables for every enabled connective. The Punjabi wording keeps the assignment/evaluation distinction, codomains, tagged clauses and all table rows.
+- Why expert review helps: No native Punjabi logic attestation was acquired. قدر بندی, قدر معلوم کرن والا فنکشن and صداقتی جدول are reversible type- and table-governed bridges; the displayed function arrows, cases and tables govern.
+- Please double-check: **Do قدر بندی and قدر معلوم کرن والا فنکشن remain visibly distinct, and do دو صداقتی قدراں plus صداقتی جدول preserve the exact function types and every truth-table row?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0031-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تعیینِ صدق; تابعِ قدر; دو صدقی قدریں; جدولِ صدق — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T081`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: local determination; agreement on occurring propositional variables
+- Intended sense: local determination; agreement on occurring propositional variables
+- Chosen Shahmukhi rendering/treatment: مقامی تعیین؛ فارمولے وچ آون والے قضیاتی متغیراں اُتے اتفاق
+- Rationale: The theorem says that two valuations assigning the same values to every propositional variable occurring in one fixed formula must give that formula the same evaluated value. The Punjabi retains the restricted variable condition, both assignments, the fixed formula and the exact equality conclusion.
+- Why expert review helps: No native Punjabi semantic-logic attestation was acquired. مقامی تعیین and متفق are reversible theorem-governed renderings; the occurrence condition and displayed equalities govern.
+- Please double-check: **Does مقامی تعیین clearly say that a formula’s value depends only on variables actually occurring in it, without extending agreement to all propositional variables?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0061-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مقامی تعین; متعلقہ قضی متغیروں پر اتفاق — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T082`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: inductive satisfaction of a formula; negative satisfaction notation; satisfaction of a formula set
+- Intended sense: inductive satisfaction of a formula; negative satisfaction notation; satisfaction of a formula set
+- Chosen Shahmukhi rendering/treatment: فارمولے دا قدر بندی نال پورا اترنا؛ منفی پورا اترن دی علامت؛ فارمولیاں دے سیٹ دا اکٹھا پورا اترنا
+- Rationale: The definition gives tagged recursive satisfaction clauses for constants, atoms and five connectives, separately explains the negative pSat slash notation, extends satisfaction to every member of a formula set, and proves equivalence with evaluation to True. The Punjabi keeps all three levels distinct and preserves every iff direction.
+- Why expert review helps: No native Punjabi model-theoretic attestation was acquired. پورا اترنا, منفی علامت and اکٹھا پورا اترنا are reversible recursive-clause-governed phrases; pSat, the eight cases, set quantification and final equivalence govern.
+- Please double-check: **Does پورا اترنا keep the formula, valuation and formula-set roles distinct, including the slash notation and the universal condition over every member of Gamma?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0061-B012` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- اشباعِ صیغہ; عدمِ اشباع کی علامت; مجموعے کا مشترک اشباع — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T083`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: satisfiable; unsatisfiable; tautology; contingent formula
+- Intended sense: satisfiable; unsatisfiable; tautology; contingent formula
+- Chosen Shahmukhi rendering/treatment: پورا ہون جوگ؛ پورا ہون جوگ نہیں؛ ہمیشہ صادق فارمولا؛ اتفاقی فارمولا
+- Rationale: The source separates existence of a satisfying valuation, absence of every such valuation, truth under all valuations, and satisfiable-but-not-tautological status, then asks for all three classifications on four exact formulas. The Punjabi keeps each existential, negative and universal boundary explicit.
+- Why expert review helps: No native Punjabi semantic-logic attestation was acquired. پورا ہون جوگ, پورا ہون جوگ نہیں, ہمیشہ صادق and اتفاقی are reversible quantifier-governed renderings; the five definition items and four classification exercises govern.
+- Please double-check: **Do پورا ہون جوگ, پورا ہون جوگ نہیں, ہمیشہ صادق and اتفاقی keep the some/none/all/some-but-not-all valuation conditions sharply distinct?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0057-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قابلِ اشباع; ناقابلِ اشباع; کلی صدق; امکان — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T084`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: semantic entailment; monotonicity; Transitivity or Cut; semantic deduction theorem
+- Intended sense: semantic entailment; monotonicity; Transitivity or Cut; semantic deduction theorem
+- Chosen Shahmukhi rendering/treatment: منطقی نتیجہ؛ یک رُخیت؛ تعدیت یا کٹ؛ معنوی استنباط دا قضیہ
+- Rationale: Entailment is governed by every valuation satisfying the premise set; the proposition then states semantic modus ponens, finite-subset preservation, monotonicity and a Cut-shaped item labelled Transitivity, followed by unsatisfiability and deduction-theorem equivalences. The Punjabi preserves every premise set, inclusion, union, inserted formula and iff direction while retaining the source labels.
+- Why expert review helps: No native Punjabi logic attestation was acquired. منطقی نتیجہ, یک رُخیت, تعدیت and معنوی استنباط are reversible rule-governed bridges; Entails and the exact displayed hypotheses and conclusions govern. The source's Transitivity label for the Cut pattern is not silently renamed.
+- Please double-check: **Do منطقی نتیجہ, یک رُخیت, تعدیت and معنوی استنباط preserve every premise-set direction, and does the Punjabi retain the source’s Transitivity label for its exact Cut-shaped rule?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0014-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- معنوی استلزام; یک سمتی توسیع; قطع; معنوی قضیۂ استنباط — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---

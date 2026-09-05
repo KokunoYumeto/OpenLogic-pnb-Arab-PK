@@ -1,0 +1,98 @@
+% Part: propositional-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{sem}
+
+\olsection{معنوی تصورات}
+
+اسیں اگلے معنوی تصورات دی تعریف کردے آں:
+
+\begin{defn}
+\begin{enumerate}
+\item !!^a{formula}~$!A$
+  \emph{پورا ہون جوگ} اے جے کسے~$\pAssign{v}$ لئی
+  $\pSat{v}{!A}$ ہووے؛ ایہ \emph{پورا ہون جوگ نہیں} جے کسے وی
+  $\pAssign{v}$ لئی $\pSat{v}{!A}$ نہ ہووے؛
+\item !!^a{formula}~$!A$ اک \emph{ہمیشہ صادق فارمولا} اے جے
+  $\pSat{v}{!A}$ ساریاں !!{valuation}s~$\pAssign{v}$ لئی ہووے؛
+\item !!^a{formula}~$!A$ \emph{اتفاقی} اے جے اوہ پورا ہون جوگ اے پر
+  ہمیشہ صادق فارمولا نہیں؛
+\item جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں $\Gamma \Entails !A$
+  (``$\Gamma$ توں $!A$ منطقی طور تے نکلدا اے'') اُدوں تے صرف اُدوں
+  جدوں $\pSat{v}{!A}$ ہر اوہ !!{valuation}~$\pAssign{v}$ لئی ہووے
+  جیہدے لئی $\pSat{v}{\Gamma}$۔
+\item جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں $\Gamma$
+  \emph{پورا ہون جوگ} اے جے کوئی ایہو جہی
+  !!a{valuation}~$\pAssign{v}$ اے جیہدے لئی $\pSat{v}{\Gamma}$ ہووے؛
+  نہیں تاں $\Gamma$ \emph{پورا ہون جوگ نہیں}۔
+\end{enumerate}
+\end{defn}
+
+\begin{prob}
+ اگلے چار !!{formula}s وچوں ہر اک لئی طے کرو کہ کی اوہ
+ (a)~پورا ہون جوگ، (b)~ہمیشہ صادق فارمولا، تے (c)~اتفاقی اے۔
+\begin{enumerate}
+  \item \( ( \Obj p_0 \lif ( \lnot \Obj p_1 \lif \lnot \Obj p_0 ) ) \).
+  \item \( ( ( \Obj p_0 \land \lnot \Obj p_1 ) \lif ( \lnot \Obj p_0 \land \Obj p_2 )) \liff ( ( \Obj p_2 \lif \Obj p_0 ) \lif ( \Obj p_0 \lif \Obj p_1 )) \).
+  \item \( ( \Obj p_0 \liff \Obj p_1 ) \lif ( \Obj p_2 \liff \lnot \Obj p_1 ) \).
+  \item \( (( \Obj p_0 \liff ( \lnot \Obj p_1 \land \Obj p_2 )) \lor ( \Obj p_2 \lif ( \Obj p_0 \liff \Obj p_1 ))) \).
+\end{enumerate}
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:semanticalfacts}
+\begin{enumerate}
+\item $!A$ اُدوں تے صرف اُدوں ہمیشہ صادق فارمولا اے جدوں
+  $\emptyset \Entails !A$؛
+\item جے $\Gamma \Entails !A$ تے $\Gamma \Entails !A \lif !B$ تاں
+  $\Gamma \Entails !B$؛
+\item جے $\Gamma$ پورا ہون جوگ اے تاں $\Gamma$ دا ہر محدود ذیلی سیٹ وی
+  پورا ہون جوگ اے؛
+\item \ollabel{def:monotonicity} یک رُخیت: جے $\Gamma \subseteq \Delta$
+  تے $\Gamma \Entails !A$ تاں $\Delta \Entails !A$ وی؛
+\item \ollabel{def:Cut} تعدیت: جے $\Gamma \Entails !A$ تے
+  $\Delta \cup \{ !A\} \Entails !B$ تاں $\Gamma \cup \Delta \Entails
+  !B$۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{prop:semanticalfacts} ثابت کرو۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:entails-unsat}
+  $\Gamma \Entails !A$ اُدوں تے صرف اُدوں جدوں
+  $\Gamma \cup \{\lnot !A\}$ پورا ہون جوگ نہیں۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{prop:entails-unsat} ثابت کرو۔
+\end{prob}
+
+\begin{thm}[معنوی استنباط دا قضیہ]
+  \ollabel{thm:sem-deduction} $\Gamma \Entails !A \lif !B$ اُدوں تے صرف
+  اُدوں جدوں $\Gamma \cup \{!A\} \Entails !B$۔
+\end{thm}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{thm:sem-deduction} ثابت کرو۔
+\end{prob}
+
+\end{document}
