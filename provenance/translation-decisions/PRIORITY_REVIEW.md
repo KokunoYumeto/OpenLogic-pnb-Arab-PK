@@ -1,6 +1,6 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **147 of 149** current decisions.
+This view contains only urgent/high-priority decisions: **153 of 155** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
 
@@ -2416,6 +2416,144 @@ Authorities checked:
 Alternatives:
 
 - منطقی/ساختی قاعدے; زیریں سیکوئنٹ; مرکزی عامل — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T108`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: propositional LK left/right rule schemata and asymmetric premise shapes
+- Intended sense: propositional LK left/right rule schemata and asymmetric premise shapes
+- Chosen Shahmukhi rendering/treatment: قضیاتی قاعدے؛ نفی، عطف، فصل تے شرطیہ دے کھبے/سجے قاعدے؛ اک یا دو مقدمیاں والے روپ
+- Rationale: The section gives the complete displayed left/right schemata for negation, conjunction, disjunction and the conditional. The Punjabi translates only the headings and preserves the asymmetric unary/binary premise patterns, duplicated conjunction-left and disjunction-right alternatives, side placement and every context sequence exactly.
+- Why expert review helps: No native Punjabi LK-schema terminology attestation was acquired. The connective names extend earlier decisions, while exact proof trees, LeftR/RightR labels and premise counts govern all rule senses.
+- Please double-check: **Do قضیاتی قاعدے and the exact displayed trees preserve every left/right side, unary/binary premise count, duplicated alternative and distinct context sequence?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0071-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قضیاتی LK قاعدے; غیر متقارن یک/دو مقدماتی شکلیں — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T109`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: closed term; term containing no variables
+- Intended sense: closed term; term containing no variables
+- Chosen Shahmukhi rendering/treatment: بند ٹرم؛ اوہ ٹرم جیہدے وچ متغیر نہ ہون
+- Rationale: The universal-left and existential-right rules permit t exactly when it is a closed term, immediately glossed as containing no variables. The Punjabi retains that parenthetical definition and keeps t distinct from the fresh constant a used by the opposite rule pair.
+- Why expert review helps: No native Punjabi closed-term attestation was acquired. بند ٹرم is a reversible definition- and formula-governed bridge; it must not be weakened to an arbitrary open term or conflated with a constant.
+- Please double-check: **Does بند ٹرم, with its immediate variable-free gloss, remain distinct from both an arbitrary open term and the fresh constant used in the opposite rule pair?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0072-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- بند ٹرم; متغیر سے خالی ٹرم — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T110`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: eigenvariable; formally a fresh constant absent from the lower sequent; historical name
+- Intended sense: eigenvariable; formally a fresh constant absent from the lower sequent; historical name
+- Chosen Shahmukhi rendering/treatment: ایگن متغیر؛ ہِٹھلے سیکوئنٹ وچ نہ آؤن والا مستقل؛ تاریخی ناں
+- Rationale: For universal-right and existential-left, a is formally a constant that occurs nowhere in the lower sequent. The source nevertheless calls it an eigenvariable for historical reasons; the Punjabi preserves both the formal constant classification and the historical label rather than silently reconciling them.
+- Why expert review helps: No native Punjabi eigenvariable attestation was acquired. ایگن متغیر is a reversible transliterated bridge whose exact freshness scope, constant status and historical explanation must accompany first use.
+- Please double-check: **Does ایگن متغیر remain recognizable while the Punjabi explicitly preserves that a is formally a constant absent from the lower sequent and that the variable name is historical?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0072-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- ایگن متغیر; تازہ مستقل; تاریخی تسمیہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T111`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: A(x), A(t), capture-aware substitution notation, and one-or-more but not necessarily all reverse occurrence replacement
+- Intended sense: A(x), A(t), capture-aware substitution notation, and one-or-more but not necessarily all reverse occurrence replacement
+- Chosen Shahmukhi rendering/treatment: A(x) آزاد x والا فارمولا؛ A(t) بطور Subst؛ اک یا ودھ پر لازمی نہیں ساریاں t دیاں آمدواں نوں پابند x نال بدلنا
+- Rationale: The explanatory block fixes A(x) as a formula with free x and A(t) as shorthand for Subst(A,t,x). Read in reverse for existential-right, an already occurring t may supply one or more, not necessarily all, occurrences newly bound as x; the Punjabi preserves that bounded choice and the P(t,x)/P(t,t) example.
+- Why expert review helps: No native Punjabi substitution-metanotation attestation was acquired. The literal A(x), A(t), Subst and atom example govern the bridge; it does not license unrestricted textual replacement or require replacing every t.
+- Please double-check: **Do A(x), A(t) and Subst retain their exact roles, and does اک یا ودھ، تے لازمی نہیں کہ ساریاں preserve one-or-more but not necessarily all t occurrences?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0072-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- استبدال; آزاد متغیر; جزوی انتخابِ ظہور — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T112`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: unrestricted closed-term pair versus eigenvariable freshness in lower and upper sequents
+- Intended sense: unrestricted closed-term pair versus eigenvariable freshness in lower and upper sequents
+- Chosen Shahmukhi rendering/treatment: بند t اُتے کوئی ہور پابندی نہیں؛ ایگن مستقل a ہِٹھلے سیکوئنٹ وچ غیر حاضر تے اُتّے والے سیکوئنٹ وچ A(a) توں باہر غیر حاضر
+- Rationale: Existential-right and universal-left impose no further restriction on the already closed t. Existential-left and universal-right instead require a to be absent from the lower sequent, equivalently nowhere outside A(a) in the upper sequent. The Punjabi keeps both rule pairs and both stated scopes distinct.
+- Why expert review helps: The no-further-restriction statement presupposes the earlier closed-term requirement; it is not a license for open t. The upper-sequent outside-A(a) formulation is preserved as the source’s stronger explanatory restatement.
+- Please double-check: **Does کوئی ہور پابندی نہیں remain scoped to already-closed t, while the lower-sequent and upper-sequent-outside-A(a) freshness formulations stay equivalent and rule-pair specific?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0072-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- بند ٹرم کی باقی آزادی; ایگن مستقل کی زیریں/بالائی شرط — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNB-T113`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: soundness necessity of the eigenvariable condition and invalid existential-to-universal sequent
+- Intended sense: soundness necessity of the eigenvariable condition and invalid existential-to-universal sequent
+- Chosen Shahmukhi rendering/treatment: صحت مندی لئی ایگن متغیر دی شرط؛ صرف معتبر سیکوئنٹ اخذ کرنا؛ وجودی A توں کلی A والا غیر معتبر سیکوئنٹ
+- Rationale: The source says freshness is necessary for system soundness, glossed as deriving only valid sequents. It demonstrates the failure with both starred rule orders from the valid identity premise to the same existential-to-universal conclusion, then explicitly declares that final sequent invalid. The Punjabi preserves all stages and does not call the identity premise invalid.
+- Why expert review helps: No native Punjabi proof-theoretic soundness attestation was acquired. صحت مندی and معتبر remain reversible derivation- and countermodel-governed bridges; the two exact proof trees delimit the claim.
+- Please double-check: **Does صحت مندی mean deriving only valid sequents here, and do both starred derivations end at the same explicitly invalid existential-to-universal sequent without misclassifying the identity premise?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0072-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- صحت مندی; شرطِ ایگن متغیر; وجودی سے کلی نامعتبر نتیجہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---

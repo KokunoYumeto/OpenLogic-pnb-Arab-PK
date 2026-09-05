@@ -1,0 +1,87 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0033",
+  "unit_ids": [
+    "OLP-0071",
+    "OLP-0072"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T21:02:49.0313236Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0071",
+      "source_path": "content/first-order-logic/sequent-calculus/propositional-rules.tex",
+      "source_bytes": 2016,
+      "source_sha256": "0bf253cf8afedca1478fb820770b04ab708dbe8cfd3344377a0d14ae91889276",
+      "source_blocks": 14,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0072",
+      "source_path": "content/first-order-logic/sequent-calculus/quantifier-rules.tex",
+      "source_bytes": 3852,
+      "source_sha256": "e0047087b88b91ba65c23a76f7c8f230c4161785f4d83f07d14461341b66d90e",
+      "source_blocks": 15,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0071",
+      "finding": "The section gives the complete left/right LK rule schemata for negation, conjunction, disjunction and the conditional; its only ordinary prose is the section and connective-specific headings.",
+      "required_handling": "Translate every heading, preserve both FOL/PL file identities, and retain every proof command, premise count, left/right label, formula, side-sequence order, duplicated one-premise variants and distinct Gamma/Delta/Pi/Lambda contexts byte-for-command and formula exact."
+    },
+    {
+      "unit_id": "OLP-0072",
+      "finding": "The section gives universal and existential left/right rules, distinguishes unrestricted closed terms from fresh constants, defines eigenvariables and their condition, explains substitution notation and partial reverse replacement, and proves the freshness condition necessary for soundness by an invalid existential-to-universal counterexample.",
+      "required_handling": "Preserve all four rule schemata and sides, closed-term and lower-sequent freshness scopes, the source's historical eigenvariable-for-a-constant explanation, A(x)/A(t)/Subst correspondence, one-or-more-not-necessarily-all occurrence replacement, the stronger upper-sequent outside-A(a) formulation, both starred invalid proof paths and the final nonvalid sequent."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0071",
+      "locator": "four propositional rule groups",
+      "observation": "Negation has one unary rule per side; conjunction has two separate unary left variants and one binary right rule; disjunction has one binary left rule and two unary right variants; conditional has a two-context binary left rule and a unary right rule.",
+      "handling": "Keep every premise count, duplicated variant and lower-sequent position exact. Do not summarize the formal blocks or make the conjunction/disjunction patterns artificially symmetric."
+    },
+    {
+      "unit_id": "OLP-0072",
+      "locator": "universal and existential prose conditions",
+      "observation": "Left universal and right existential use an unrestricted closed term t, while right universal and left existential use a constant a absent from the lower sequent and call it an eigenvariable despite its formal constant status.",
+      "handling": "Keep the two rule pairs distinct, retain closed as variable-free, preserve the lower-sequent absence requirement and report the historical naming explanation without reclassifying a as a variable."
+    },
+    {
+      "unit_id": "OLP-0072",
+      "locator": "substitution and occurrence-replacement explanation",
+      "observation": "A(t) abbreviates substitution of t for free x in A. Read in reverse for right existential, one or more but not necessarily all premise occurrences of an already present t may correspond to newly bound x occurrences.",
+      "handling": "Preserve every substitution argument and example atom, the correct inference, the one-or-more lower bound and the not-all qualification; do not state unrestricted textual replacement."
+    },
+    {
+      "unit_id": "OLP-0072",
+      "locator": "soundness counterexample",
+      "observation": "The later formulation requires a to occur nowhere outside A(a) in the upper sequent. Without it, either starred rule order derives existential A sequent universal A, which the source declares not valid.",
+      "handling": "Preserve the outside-A(a) scope, necessity-for-soundness claim, both complete starred derivations and the final nonvalidity statement. Do not call the intermediate initial sequent invalid."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0033, the current owner read the complete propositional-rules.tex and quantifier-rules.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Every propositional and quantifier left/right schema, premise count, side sequence, closed-term and fresh-constant restriction, historical eigenvariable naming, substitution direction, partial occurrence replacement, upper/lower sequent scopes, soundness rationale and invalid counterexample was checked before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest LK rule names, closed terms, constants, eigenvariables, eigenvariable conditions, substitution metanotation or soundness counterexamples; those remain reversible exact-formula- and rule-governed scholarly bridges."
+}
