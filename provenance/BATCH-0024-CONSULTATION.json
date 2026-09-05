@@ -1,0 +1,65 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0024",
+  "unit_ids": [
+    "OLP-0053",
+    "OLP-0054"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T02:57:42.3569158Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0053",
+      "source_path": "content/sets-functions-relations/infinite/dedekinds-proof.tex",
+      "source_bytes": 5886,
+      "source_sha256": "a7c41cebb6b7b0e2bed0d187777be4ba69fecdb17baa070975a0ca5c5c55b8bf",
+      "source_blocks": 15,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0054",
+      "source_path": "content/sets-functions-relations/infinite/card-sb.tex",
+      "source_bytes": 4143,
+      "source_sha256": "88534a3f2be736a704ab31343e45933edb9712fa5b4411eb102c0f4a12d656e9",
+      "source_blocks": 18,
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBINF-004",
+      "unit_id": "OLP-0054",
+      "source_locator": "lines 25-43",
+      "classification": "confirmed_missing_endofunction_carrier_scope_for_set_generated_closure",
+      "finding": "The generalized closure definition quantifies over every set B and function f, while the displayed intersection, closure lemma and later application require a carrier C on which f is an endofunction, B is a subset of C and X ranges over carrier subsets. In the Schröder-Bernstein helper the needed scope is present because f maps C into A and A is a subset of C.",
+      "required_handling": "State the carrier/self-map and B-subset scope in Punjabi prose, range X over carrier subsets, preserve the displayed closure formula and all lemma formulas in their source order, and add an adjacent Punjabi disclosure. Frozen source remains unchanged."
+    }
+  ],
+  "proof_observations": [
+    {
+      "unit_id": "OLP-0054",
+      "source_locator": "lines 77-83",
+      "observation": "The helper's range-equality paragraph explicitly proves that every element of B is attained. The reverse inclusion is immediate from C minus B being contained in F together with f[F] being contained in A and A being contained in B; it is implicit rather than a formula-changing source correction. The target preserves the source proof order and does not invent a new displayed step."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0024, the current owner read the complete dedekinds-proof.tex and card-sb.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The philosophical argument was checked against the preceding arithmetization reflection and Dedekind-algebra sections; the closure-based Schröder-Bernstein proof was checked from its carrier scope through the helper's piecewise bijection and final image-chain application. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, attributed philosophical qualification, proof narration and reason-giving connectives only. It does not attest structuralism, logicism, psychological-object criticism, generated closure of a set or the closure proof of Schröder-Bernstein; those remain reversible source-governed and scholarly bridges."
+}

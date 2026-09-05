@@ -1,0 +1,106 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{infinite}{card-sb}
+
+\olsection{ضمیمہ: شروڈر-برنسٹین دا ثبوت}
+
+سادی سیٹ تھیوری توں وداع ہون توں پہلاں، ساڈے کول غور کرن لئی اک آخری
+سادہ (پر نفیس!) ثبوت اے۔ ایہ شروڈر-برنسٹین
+(\olref[sfr][siz][sb]{thm:schroder-bernstein}) دا ثبوت اے: جے
+$\cardle{A}{B}$ تے $\cardle{B}{A}$ تاں $\cardeq{A}{B}$؛ یعنی
+!!{injection}s $f \colon A \to B$ تے $g \colon B \to A$ دِتے ہوون،
+تاں !!a{bijection} $h \colon A \to B$ موجود اے۔
+
+ایس باب وچ اسی ڈیڈیکائنڈ دی \emph{بندشاں} دا تصور اپنایا۔ اصل وچ
+ڈیڈیکائنڈ نے ایس تصور نال شروڈر-برنسٹین دا اک سوہنا ثبوت دِتا سی، تے
+اسی اوہ ایتھے پیش کراں گے۔ جے تسی ذرا وکھرا پر بنیادی طور تے رلدا ملدا
+بیان چاہندے او، تاں ایہ ثبوت \citet[pp.~157--8]{Potter2004} دے بہت
+نیڑے چلدا اے۔ گوگل اُتے تھوڑی تلاش وی تہانوں قائل کر دے گی کہ
+$\sqrt{2}$ دی غیر ناطقیت وانگ، ایس قضیے دے \emph{کئی} دلچسپ تے وکھرے
+ثبوت موجود نیں۔
+
+\olref[sfr][infinite][dedekind]{Closure} ورگی علامت بندی ورتدیاں، حامل
+سیٹ C اُتے خود نقشے f تے اوس حامل دے ذیلی سیٹ B لئی رکھو
+\[
+\Closureofunder{f}{B} = \bigcap \Setabs{X}{B \subseteq X
+\text{ تے $X$، $f$-بند اے}}
+\]
+ہر ایسے سیٹ $B$ تے فنکشن~$f$ لئی۔ ایویں تعریف کیتا
+$\Closureofunder{f}{B}$ سب توں چھوٹا $f$-بند سیٹ اے جیہدے وچ~$B$
+شامل اے، ایس معنٰی وچ کہ:
+% PNBINF-004 ماخذ دی درستی: f نوں حامل C دا خود نقشہ، B نوں C دا ذیلی سیٹ تے X نوں حامل دے ذیلی سیٹاں وچ چلدا سمجھیا اے؛ ماخذ دی بے قید ”ہر فنکشن“ والی عبارت بندش دے وجود تے اگلے اطلاق لئی لازم حامل دائرہ نہیں دیندی۔
+
+\begin{lem}\ollabel{Closureprops}
+	ہر ایسے فنکشن $f$ تے ہر $B$ لئی:
+	\begin{enumerate}
+		\item\ollabel{Closurehaselem} $B \subseteq \Closureofunder{f}{B}$؛ تے
+		\item\ollabel{Closureclosed} $\Closureofunder{f}{B}$، $f$-بند اے؛ تے
+		\item\ollabel{Closuresmallest} جے $X$، $f$-بند اے تے $B
+		\subseteq X$، تاں $\Closureofunder{f}{B} \subseteq X$۔
+	\end{enumerate}
+\end{lem}
+
+\begin{proof}
+عین \olref[sfr][infinite][dedekind]{closureproperties} وانگ۔
+\end{proof}
+
+شروڈر-برنسٹین تک پہنچن لئی سانوں اک آخری حقیقت چاہیدی اے:
+
+\begin{prop}\ollabel{sbhelper}
+جے $A \subseteq B \subseteq C$ تے $A \approx C$، تاں $\cardeq{\cardeq{A}{B}}{C}$۔
+\end{prop}
+
+\begin{proof}
+!!a{bijection} $f \colon C \to A$ دِتا ہووے، تاں $F =
+\Closureofunder{f}{C \setminus B}$ لو، تے فنکشن $g$، جیہدا دائرۂ
+تعریف $C$ اے، دو صورتاں وچ ایویں تعریف کرو:
+\[
+	g(x) =
+	\begin{cases}
+			f(x) &\text{جے $x \in F$}\\
+			x & \text{نہیں تاں}
+	\end{cases}
+\]
+اسی وکھاواں گے کہ $g$، نقشہ بندی $C \to B$ دے طور تے !!a{bijection} اے؛ ایس توں
+$\comp{f^{-1}}{g} \colon A \to B$ دا !!a{bijection} ہونا نکلے گا، تے
+ثبوت پورا ہو جاوے گا۔
+
+پہلاں ساڈا دعویٰ اے کہ جے $x \in F$ پر $y\notin F$، تاں $g(x) \neq
+g(y)$۔ برہانِ خلف لئی الٹ فرض کرو، سو $y = g(y) = g(x) =
+f(x)$۔ کیوں جو $x \in F$ تے \olref{Closureprops} مطابق $F$، $f$-بند
+اے، ایس لئی $y = f(x) \in F$، جیہڑا تضاد اے۔
+
+ہُن فرض کرو $g(x) = g(y)$۔ سو اُتلے نتیجے مطابق $x \in F$ اُدوں تے
+صرف اُدوں اے جدوں $y \in F$۔ جے $x, y \in F$، تاں $f(x) = g (x) =
+g(y) = f(y)$، تے ایس لئی $x = y$، کیوں جو $f$ اک !!a{bijection} اے۔
+جے $x, y \notin F$، تاں $x = g(x) = g(y) = y$۔ سو $g$ اک
+!!a{injection} اے۔
+
+ہُن صرف ایہ وکھاؤنا رہندا اے کہ $\ran{g} = B$۔ سو $x \in B
+\subseteq C$ پکا کرو۔ جے $x \notin F$، تاں $g(x) = x$۔ جے $x \in
+F$، تاں $x = f(y)$، کسے $y \in F$ لئی؛ کیوں جو نہیں تاں $F
+\setminus \{x\}$، $f$-بند ہوندا تے $C\setminus B$ نوں اپنے وچ شامل رکھدا، جیہڑا
+\olref{Closureprops} مطابق ناممکن اے؛ ہُن $g(y) = f(y) = x$۔
+\end{proof}
+
+آخر وچ مرکزی نتیجے دا ثبوت ایہ اے۔ فنکشن دے عکس سیٹ لئی یاد کرو کہ
+فنکشن $h$ تے سیٹ $D$ دِتے ہوون، تاں اسی $\funimage{h}{D} = \Setabs{h(x)}{x
+\in D}$ تعریف کردے آں۔
+
+\begin{proof}[شروڈر-برنسٹین دا ثبوت] $f \colon A \to B$
+تے $g \colon B \to A$ نوں !!{injection}s منو۔ کیوں جو $\funimage{f}{A}
+\subseteq B$، ایس لئی $\funimage{g}{\funimage{f}{A}} \subseteq
+g[B] \subseteq A$۔ نال ای $\comp{f}{g} \colon A \to
+\funimage{g}{\funimage{f}{A}}$ اک !!{injection} اے، کیوں جو $g$ تے
+$f$ دونیں انجیکشن نیں؛ بلکہ ہدف سیٹ دی ساڈی تعریف دے باعث
+$\comp{f}{g}$ اک !!a{bijection} اے۔ سو
+$\cardeq{\funimage{g}{\funimage{f}{A}}}{A}$، تے ایس لئی
+\olref{sbhelper} مطابق !!a{bijection} $h \colon A \to
+\funimage{g}{B}$ موجود اے۔ ہور، $g^{-1}$ اک !!a{bijection}
+$\funimage{g}{B} \to B$ اے۔ سو $\comp{h}{g^{-1}} \colon A \to B$
+اک !!a{bijection} اے۔
+\end{proof}
+
+\end{document}

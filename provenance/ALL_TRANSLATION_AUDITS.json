@@ -1283,6 +1283,56 @@
         "no_placeholders": true
       },
       "passed": true
+    },
+    {
+      "unit_id": "OLP-0053",
+      "source_path": "content/sets-functions-relations/infinite/dedekinds-proof.tex",
+      "source_sha256": "a7c41cebb6b7b0e2bed0d187777be4ba69fecdb17baa070975a0ca5c5c55b8bf",
+      "translation_sha256": "192053703c68a60904d1a3120aae846ebd3fd1ff1009b9bbe2d18fa85576b7a9",
+      "translation_bytes": 8740,
+      "source_blocks": 15,
+      "translation_blocks": 15,
+      "source_corrections": [],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
+    },
+    {
+      "unit_id": "OLP-0054",
+      "source_path": "content/sets-functions-relations/infinite/card-sb.tex",
+      "source_sha256": "88534a3f2be736a704ab31343e45933edb9712fa5b4411eb102c0f4a12d656e9",
+      "translation_sha256": "8421d718c7b88009ca9bce1377806658661df86df504da9b5fe76e14c4e8ddc0",
+      "translation_bytes": 5836,
+      "source_blocks": 18,
+      "translation_blocks": 18,
+      "source_corrections": [
+        "PNBINF-004"
+      ],
+      "checks": {
+        "pristine_source_hash": true,
+        "paragraph_block_count": true,
+        "command_multiset": true,
+        "protected_arguments": true,
+        "formula_order_and_content": true,
+        "token_multiset": true,
+        "balanced_braces": true,
+        "no_gurmukhi_or_devanagari": true,
+        "no_replacement_or_presentation_forms": true,
+        "no_hidden_bidi_controls": true,
+        "no_placeholders": true
+      },
+      "passed": true
     }
   ],
   "all_passed": true,

@@ -4,12 +4,12 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 52,
-  "translated_range": "OLP-0001 through OLP-0052, contiguous",
-  "remaining_units": 670,
-  "aligned_blocks": 877,
-  "translated_linguistic_blocks": 612,
-  "unchanged_formal_blocks": 265,
+  "translated_and_source_aligned_units": 54,
+  "translated_range": "OLP-0001 through OLP-0054, contiguous",
+  "remaining_units": 668,
+  "aligned_blocks": 910,
+  "translated_linguistic_blocks": 638,
+  "unchanged_formal_blocks": 272,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
@@ -18,45 +18,45 @@
     "Size of Sets",
     "Arithmetization"
   ],
-  "current_chapter_progress": "Infinite through Dedekind algebras and arithmetical induction, OLP-0052",
+  "current_chapter_progress": "Infinite through Dedekind's reflection and the closure proof of Schröder-Bernstein, OLP-0054",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 52,
-    "sha256": "676d7edf5d00d764576ba9cd1d1a04047f6c5d55a5b20d07e64d51df95a4afc6",
+    "units": 54,
+    "sha256": "a011776088dd6287b7fb8434cd5bf7df01780b273deab5fb63a1d5ccd663b12d",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0052.json",
-    "sha256": "a29a9ef89521b239c2122f7896aec11bad67cc3728ec63fbb1d2cee1fd0104ab",
+    "file": "AUDIT-REGRESSION-0054.json",
+    "sha256": "db8cd5c25fe6f8a2eeaba91c3471fa061439de7d69905d69eb00cb76061670e8",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 877,
-    "sha256": "8f14afc80460ed5a44ccc5ed2eccfc725cf8ff89455d770797626f65a9ad22b6",
+    "rows": 910,
+    "sha256": "ea8f734301847abcef0009f34deddaea1f8cba0b75439bf99184ddb0df16136c",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 62,
-    "sha256": "4fab3a8b9e8514d12e23495af97aa0fd1b61a1a7c54b72385a55dc23b9a76a5d"
+    "entries": 66,
+    "sha256": "d5eb2f7957c9cf3db74fe6b573474cb137e10a015934dab042214ce0753a00e9"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 101,
-    "terminology_entries": 62,
-    "source_fidelity_entries": 39,
-    "sha256": "d5c9c6d5270e9a95bc40233565efdf0bbc3a49162bff72408b4c539833fc1657"
+    "entries": 106,
+    "terminology_entries": 66,
+    "source_fidelity_entries": 40,
+    "sha256": "0f8a65b9eae00b274f4885df5c92b757d974b7bcbfb647d17f9308e28404f7a4"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 33,
-    "applied_and_audited": 33,
+    "entries": 34,
+    "applied_and_audited": 34,
     "pending_until_unit_translation": 0,
-    "sha256": "6f630cf77618e958d7683dcb4875f70b711ed460c8705c82fe7c9afc6d5f143c"
+    "sha256": "d20a8a6751e20a21c1a30bc52eb5e9dee705613c5301bff98a739a0825e600d8"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
@@ -91,13 +91,15 @@
   "upstream_git_blob_integrity": {
     "policy": "upstream/** -text",
     "repair_record": "UPSTREAM-EOL-REPAIR.json",
-    "pre_repair_commit": "b841fac587eb78fa12c183524e45e1c82c9e0eeb",
-    "pre_repair_codeload_bytes": 9587101,
-    "pre_repair_codeload_sha256": "11f944bab6965a9e6f5ecc90346a7ef815b1e57d93fe808635688356eb644b61",
-    "pre_repair_manifest_matches": 638,
-    "pre_repair_newline_only_mismatches": 84,
-    "authoritative_local_matches_before_staging": 722,
-    "staged_git_blob_manifest_matches": 722,
+    "repair_record_sha256": "b4d72a4f2cd63322679fdde96833ced018ce0a032a899278d6d41eafafddd9ed",
+    "repair_commit": "76acf2bb135cca8d8559bd94fb1d1e30fa355a4a",
+    "repair_commit_anonymous_codeload_bytes": 9591575,
+    "repair_commit_anonymous_codeload_sha256": "fa337cebb5d86b2dc3fb82a76df16dc9eef98fbd9d07664abcf62e90f5938d32",
+    "repair_commit_codeload_file_count": 925,
+    "repair_commit_manifest_matches": 722,
+    "repair_commit_mismatches": 0,
+    "durable_readback": "work/GITHUB-UPSTREAM-EOL-READBACK-0052.json",
+    "durable_readback_sha256": "c49f06ef9b8243a0fdaa1592a7476fde35494607c85cbc4b13657887fce15798",
     "semantic_source_corrections_added": 0
   },
   "release_snapshot": {
