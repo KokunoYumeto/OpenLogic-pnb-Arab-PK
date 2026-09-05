@@ -1,0 +1,66 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0023",
+  "unit_ids": [
+    "OLP-0051",
+    "OLP-0052"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T01:16:08.4083034Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e8148ab107876e2eddf1fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0051",
+      "source_path": "content/sets-functions-relations/infinite/dedekind-algebra.tex",
+      "source_bytes": 5072,
+      "source_sha256": "9cee716bb8cb3bfd507ed5c17bbd4477d05995af6f8f8d411087793bdaa86036",
+      "source_blocks": 20,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0052",
+      "source_path": "content/sets-functions-relations/infinite/dedekind-induction.tex",
+      "source_bytes": 3486,
+      "source_sha256": "ea5f6c80d70abca6f5598de3e221c2f60524c40cbf533ae8a5336d5bb7186537",
+      "source_blocks": 14,
+      "read_in_full": true
+    }
+  ],
+  "lane_local_source_issues_reviewed": [
+    {
+      "finding_id": "PNBINF-002",
+      "unit_id": "OLP-0051",
+      "source_locator": "lines 41-65",
+      "classification": "confirmed_missing_endofunction_scope_and_undefined_carrier",
+      "finding": "The closure definition ranges over 'any function f' and 'any o', while the lemma then requires o in an otherwise undefined A and the proof claims ran(f) union {o} is f-closed. That witness is f-closed only under the intended self-map scope: f maps a carrier A to itself and o lies in A. The later Dedekind-algebra and theorem uses have exactly that scope.",
+      "required_handling": "State the self-map/carrier scope in Punjabi prose without adding, deleting or reordering any source formula; identify A in the lemma as the carrier, preserve the closure display and witness proof, and add an adjacent Punjabi note. Frozen source remains unchanged."
+    },
+    {
+      "finding_id": "PNBINF-003",
+      "unit_id": "OLP-0052",
+      "source_locator": "lines 21-25, relative to the arbitrary-set theorem at lines 14-19",
+      "classification": "confirmed_ambient_carrier_gap_in_induction_proof",
+      "finding": "The theorem correctly quantifies over any set X and restricts the successor condition to N intersect X. The proof then treats X itself as s-closed, although s is an endofunction on N and X may contain objects outside that carrier. The needed s-closed carrier subset is N intersect X, which contains o and is closed by the theorem hypothesis.",
+      "required_handling": "Apply the least-closure result in prose to the intersection of N and X, preserve the theorem hypothesis and every source formula in its original order, and add an adjacent Punjabi note. Frozen source remains unchanged."
+    }
+  ],
+  "consultation_record": "2026-09-05: before drafting BATCH-0023, the current owner read the complete dedekind-algebra.tex and dedekind-induction.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. The closure scope was checked against its definition, lemma, ran(f)-union-{o} witness, later Dedekind-algebra endofunction and restriction proof; the induction proof was checked against its arbitrary-X theorem premise and the N-intersect-X successor restriction before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi sequencing, proof narration, reason-giving connectives and qualification only. It does not attest successor algebras, closure under a function, arithmetic induction schemas, parameters or recursive arithmetic; these remain reversible definition-based and scholarly bridges."
+}

@@ -1,0 +1,128 @@
+% Part: sets-functions-relations
+% Chapter: infinite
+% Section: dedekind
+%
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{infinite}{dedekind}
+\olsection{ڈیڈیکائنڈ الجبرے}
+
+اسی قدرتی عدداں نوں صرف لامتناہی نہیں چاہندے؛ اسی چاہندے آں کہ اوہناں
+کول کجھ (الجبری) خاصیتاں وی ہون: اوہناں نوں جمع، ضرب وغیرہ تحت درست
+ورتاؤ کرنا چاہیدا اے۔
+
+ڈیڈیکائنڈ دا خیال ایہ سی کہ \emph{جانشین فنکشن} دے خیال نوں بنیادی
+منیا جاوے، تے فیر عدداں دی خاصیت ایہناں شرطاں نال دَسی جاوے:
+\begin{enumerate}
+	\item اک عدد $0$ اے جیہڑا کسے عدد دا جانشین نہیں
+	\\i.e., $0 \notin \ran{s}$
+	\\i.e., $\forall x\ s(x) \neq 0$
+	\item وکھرے عدداں دے وکھرے جانشین ہوندے نیں
+	\\i.e., $s$ اک !!a{injection} اے
+	\\i.e., $\forall x \forall y (s(x) = s(y) \lif x = y)$
+	\item\ollabel{repeatedapplication} ہر عدد، جانشین فنکشن نوں وار وار
+	لاگو کر کے $0$ توں حاصل ہوندا اے۔
+\end{enumerate}
+پہلیاں دو شرطاں نوں پہلے درجے دی منطق نال سنبھالنا سوکھا اے (اُتّے
+ویکھو)۔ پر صرف پہلے درجے دی منطق نال اسی
+\olref{repeatedapplication} نوں نہیں سنبھال سکدے۔ ڈیڈیکائنڈ دی وڈی
+پیش رفت ایہ سی کہ شرط \olref{repeatedapplication} نوں سیٹ تھیوری دے
+لفظاں وچ ایویں نواں بیان کیتا جاوے:
+\begin{enumerate}
+	\item[3$'$.] قدرتی عدد اوہ سب توں چھوٹا سیٹ نیں جیہڑا
+	جانشین فنکشن \emph{تحت بند} اے: یعنی جے اسی سیٹ دے کسے وی
+	!!{element} اُتے $s$ لاگو کریے، تاں سانوں سیٹ دا اک ہور
+	!!{element} ملدا اے۔
+\end{enumerate}
+پر سانوں ایہ گل ہولی ہولی کھولنی پینی اے۔
+
+\begin{defn}\ollabel{Closure}
+	اپنے ہی حامل سیٹ اندر نقشہ کردے ہر فنکشن $f$ لئی، اوس حامل دا ذیلی سیٹ $X$،
+	$f$-\emph{بند} {اُدوں تے صرف اُدوں} اے جدوں
+	$(\forall x \in X)f(x) \in X$۔ ہُن اوس حامل دے ہر $o$ لئی تعریف کرو:
+	$$\closureofunder{f}{o} = \bigcap\Setabs{X}{o \in X\text{ تے }X
+\text{، $f$-بند اے}}$$
+\end{defn}
+% PNBINF-002 ماخذ دی درستی: تعریف وچ f نوں اپنے حامل سیٹ دا خود نقشہ، X نوں حامل دا ذیلی سیٹ تے o نوں اوس حامل دا رکن سمجھیا اے؛ ایس دائرے بناں اگلی سطر دا A بے تعارف تے حاصل قدراں دا گواہ لازماً بند نہیں۔
+
+سو $\closureofunder{f}{o}$ اوہناں سارے $f$-بند سیٹاں دا اشتراک اے
+جیہناں وچ $o$، !!a{element} اے۔ فیر بدیہی طور تے
+$\closureofunder{f}{o}$ اوہ \emph{سب توں چھوٹا} $f$-بند سیٹ اے جیہدے
+وچ $o$، !!a{element} اے۔ اگلا نتیجہ ایس بدیہی خیال نوں پوری درستی
+دیندا اے:
+\begin{lem}\ollabel{closureproperties}
+	ہر ایسے فنکشن $f$ تے ہر $o \in A$ لئی، جتھے A اوس فنکشن دا حامل سیٹ اے:
+	\begin{enumerate}
+		\item\ollabel{closurehaselem} $o \in \closureofunder{f}{o}$؛ تے
+		\item\ollabel{closureclosed} $\closureofunder{f}{o}$، $f$-بند اے؛ تے
+		\item\ollabel{closuresmallest} جے $X$، $f$-بند اے تے $o \in
+		X$، تاں $\closureofunder{f}{o} \subseteq X$
+	\end{enumerate}
+\end{lem}
+
+\begin{proof}
+نوٹ کرو کہ گھٹ توں گھٹ اک $f$-بند سیٹ اے جیہدے وچ $o$،
+!!a{element} اے، یعنی $\ran{f}\cup \{o\}$۔ سو
+$\closureofunder{f}{o}$، ایسے \emph{سارے} سیٹاں دا اشتراک، موجود اے۔ ہُن سانوں
+\olref{closurehaselem}--\olref{closuresmallest} جانچنے نیں۔
+
+\olref{closurehaselem} بارے: $o \in \closureofunder{f}{o}$، کیوں جو
+ایہ اوہناں سیٹاں دا اشتراک اے جیہناں ساریاں وچ $o$، !!a{element} اے۔
+
+\olref{closureclosed} بارے: فرض کرو $x \in \closureofunder{f}{o}$۔
+سو جے $o \in X$ تے $X$، $f$-بند اے، تاں $x \in X$، تے ہُن
+$f(x) \in X$، کیوں جو $X$، $f$-بند اے۔ سو
+$f(x) \in \closureofunder{f}{o}$۔
+
+\olref{closuresmallest} بارے: عام طور تے، جے $X
+\in C$، تاں $\bigcap C \subseteq X$۔
+\end{proof}
+
+ایہنوں ورت کے اسی آکھ سکدے آں:
+
+\begin{defn}
+اک \emph{ڈیڈیکائنڈ الجبرا} اک سیٹ $A$ اے جیہدے نال فنکشن $f
+\colon A \to A$ تے کوئی $o \in A$ ایویں دِتے گئے نیں کہ:
+	\begin{enumerate}
+		\item \ollabel{ded:proper} $o \notin \ran{f}$
+		\item \ollabel{ded:injection} $f$ اک !!a{injection} اے
+		\item \ollabel{ded:closure} $A = \closureofunder{f}{o}$
+	\end{enumerate}
+\end{defn}
+
+کیوں جو $A = \closureofunder{f}{o}$، ساڈا پہلا نتیجہ دَسدا اے کہ
+$A$ اوہ سب توں چھوٹا $f$-بند سیٹ اے جیہدے وچ $o$، !!a{element} اے۔
+صاف اے کہ ڈیڈیکائنڈ الجبرا ڈیڈیکائنڈ لامتناہی اے؛ تعریف دیاں شرطاں
+\olref{ded:proper} تے \olref{ded:injection} ویکھ لو۔ پر ہور دلچسپ حقیقت
+ایہ اے کہ ہر ڈیڈیکائنڈ لامتناہی سیٹ نوں ڈیڈیکائنڈ الجبرا بنایا جا
+سکدا اے۔
+
+\begin{thm}\ollabel{thm:DedekindInfiniteAlgebra}
+جے کوئی ڈیڈیکائنڈ لامتناہی سیٹ اے، تاں کوئی ڈیڈیکائنڈ الجبرا اے۔
+\end{thm}
+
+\begin{proof}
+$D$ نوں ڈیڈیکائنڈ لامتناہی لو۔ سو اک انجیکشن $g \colon D \to D$ تے
+اک رکن $o  \in D \setminus \ran{g}$ اے۔ ہُن $A =
+\closureofunder{g}{o}$ لو؛ \olref{closureproperties} مطابق $A$ موجود اے
+تے $o \in A$۔ $f = \funrestrictionto{g}{A}$ لو۔ اسی وکھاواں گے کہ
+$A, f, o$ رل کے اک ڈیڈیکائنڈ الجبرا بناؤندے نیں۔
+
+\olref{ded:proper} بارے: $o \notin \ran{g}$ تے $\ran{f}
+\subseteq \ran{g}$، سو $o\notin \ran{f}$۔
+
+\olref{ded:injection} بارے: $g$، $D$ اُتے اک انجیکشن اے؛ سو $f
+\subseteq g$ لازماً اک انجیکشن اے۔
+
+\olref{ded:closure} بارے: \olref{closureproperties} مطابق $A$،
+$g$-بند اے؛ ایس توں ہور وی صاف اے کہ $A$، $f$-بند اے۔ سو
+$\closureofunder{f}{o} \subseteq A$، \olref{closureproperties} مطابق۔
+کیوں جو $\closureofunder{f}{o}$ وی $f$-بند اے تے
+$f = \funrestrictionto{g}{A}$، ایس لئی $\closureofunder{f}{o}$،
+$g$-بند اے۔ سو $A \subseteq \closureofunder{f}{o}$،
+\olref{closureproperties} مطابق۔
+\end{proof}
+
+\end{document}

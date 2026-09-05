@@ -6,7 +6,7 @@ Independent machine translation and layout adaptation by Codex of **The Open Log
 
 ## Current scope
 
-The v0.1.0 reader tranche is the **complete Sets chapter**: seven source units, six sections, three original diagrams, definitions, proofs and exercises. It is not the whole book. That release snapshot contains 21 source-aligned translations. Current `main` contains 50 reviewed source-aligned translations, leaving 672 of the frozen 722-unit inventory; the Relations, Functions, Size of Sets and Arithmetization chapters have complete source translations, including both alternate non-enumerability presentations and both constructions of the reals, while Infinite now continues through Hilbert's Hotel and the Dedekind-infinitude definition. Their integrated readers are not yet built, and none of these later sources is included in the Sets PDF's layout acceptance. See `provenance/CURRENT_MAIN_QA.json` for the branch/release distinction.
+The v0.1.0 reader tranche is the **complete Sets chapter**: seven source units, six sections, three original diagrams, definitions, proofs and exercises. It is not the whole book. That release snapshot contains 21 source-aligned translations. Current `main` contains 52 reviewed source-aligned translations, leaving 670 of the frozen 722-unit inventory; the Relations, Functions, Size of Sets and Arithmetization chapters have complete source translations, including both alternate non-enumerability presentations and both constructions of the reals, while Infinite now continues through Dedekind algebras and arithmetical induction. Their integrated readers are not yet built, and none of these later sources is included in the Sets PDF's layout acceptance. See `provenance/CURRENT_MAIN_QA.json` for the branch/release distinction.
 
 The chapter covers extensionality, subsets and power sets, important sets, unions and intersections, ordered pairs and products, and Russell's paradox. Both Naskh and Nastaliq reading profiles are provided. Punjabi prose is right-to-left; mathematical expressions preserve left-to-right order.
 
@@ -21,6 +21,8 @@ Release files include the two PDF profiles, an editable-source ZIP, and a SHA-25
 ## Evidence and limitations
 
 This is model-authored and model-reviewed translation. It has not received independent native-speaker review; no such review is claimed. Source-aligned semantic checks and reverse-paraphrase samples are recorded alongside strict formula, identifier, citation/reference, structural and Unicode checks. Every changed source-aligned block has recorded pre-draft canon consultation.
+
+No current global benefit or priority rank is claimed. The 722-unit denominator measures frozen-source coverage only, not audience size or learning effect, and a census label such as “Punjabi” is not treated as an exact Shahmukhi readership denominator. Any future catch-up, foundational, pronunciation or oral companion must have its own manifest and receives no credit toward this corpus.
 
 `provenance/TERMINOLOGY_REVIEW_LOG.jsonl` gives exact source/target block locations, current choices, evidence actually checked, retrospective alternatives, uncertainties and precise questions for asynchronous expert review. `provenance/SOURCE_CORRECTIONS.jsonl` separately records upstream wording/mathematical corrections by stable finding ID. These logs cover translated material only and do not imply review or completion of the untranslated remainder. Provisional choices stay open to correction; expert response is not a publication hold.
 
