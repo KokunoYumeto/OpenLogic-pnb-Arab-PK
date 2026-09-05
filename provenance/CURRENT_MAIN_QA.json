@@ -50,7 +50,7 @@
     "entries": 108,
     "terminology_entries": 68,
     "source_fidelity_entries": 40,
-    "sha256": "2ccaaf148e4dec24c24c1c89d72956526164c8bba7b5f62afdbaf7eda38e74c9"
+    "sha256": "59623609dd54b5aeea181aa89c22a9a7ba0ca49fe3f9207c685047a643ba07ef"
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
