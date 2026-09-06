@@ -1,7 +1,7 @@
 # Punjabi Shahmukhi Translation Decisions — Complete Index
 
 This complete current-main index is a reversible projection of the durable decision ledger into the shared OpenLogic contract.
-It covers **155 decisions** and **2687 exact source-target occurrences** through `OLP-0072`. It does not imply completion or human review of the remaining corpus.
+It covers **164 decisions** and **2724 exact source-target occurrences** through `OLP-0074`. It does not imply completion or human review of the remaining corpus.
 Naskh and Nastaliq page references are artifact-specific typography profiles over the same Shahmukhi segment text. Unknown future-reader pages remain explicitly pending.
 
 ## `pnb-Arab-PK:PNB-T001`
@@ -24,7 +24,7 @@ Alternatives:
 - logic (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (36):
+Occurrences (37):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -64,6 +64,7 @@ Occurrences (36):
 | `pnb-Arab-PK:PNB-T001:OLP-0068-B010` | `OLP-0068` / first-order-logic / proof-systems / axiomatic-deduction | `upstream/content/first-order-logic/proof-systems/axiomatic-deduction.tex:70-81` | `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:72-82` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0069-B005` | `OLP-0069` / first-order-logic / sequent-calculus | `upstream/content/first-order-logic/sequent-calculus/sequent-calculus.tex:12-17` | `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:12-17` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0070-B011` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:63-72` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:67-76` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
 
 ---
 
@@ -1996,7 +1997,7 @@ Alternatives:
 - syntax/completeness/computability with English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (43):
+Occurrences (47):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -2043,6 +2044,10 @@ Occurrences (43):
 | `pnb-Arab-PK:PNB-T022:OLP-0070-B005` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:13-13` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:13-13` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0070-B011` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:63-72` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:67-76` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0071-B005` | `OLP-0071` / first-order-logic / sequent-calculus / propositional-rules | `upstream/content/first-order-logic/sequent-calculus/propositional-rules.tex:13-13` | `translation/content/first-order-logic/sequent-calculus/propositional-rules.tex:13-13` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0073-B014` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:68-78` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:69-80` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -3594,7 +3599,7 @@ Alternatives:
 - Dedekind lower cut; expand through all three defining conditions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (64):
+Occurrences (65):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -3662,6 +3667,7 @@ Occurrences (64):
 | `pnb-Arab-PK:PNB-T051:OLP-0054-B006` | `OLP-0054` / — | `upstream/content/sets-functions-relations/infinite/card-sb.tex:16-23` | `translation/content/sets-functions-relations/infinite/card-sb.tex:16-22` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0063-B005` | `OLP-0063` / first-order-logic / proof-systems | `upstream/content/first-order-logic/proof-systems/proof-systems.tex:12-17` | `translation/content/first-order-logic/proof-systems/proof-systems.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0064-B010` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:73-80` | `translation/content/first-order-logic/proof-systems/introduction.tex:71-78` | pending |
+| `pnb-Arab-PK:PNB-T051:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -4974,7 +4980,7 @@ Alternatives:
 - استنتاجِ طبیعی; صدقی درخت/تابلو; حسابِ متوالیات; ریزولیوشن — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (24):
+Occurrences (28):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -5002,6 +5008,10 @@ Occurrences (24):
 | `pnb-Arab-PK:PNB-T087:OLP-0072-B011` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:48-50` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:48-50` | pending |
 | `pnb-Arab-PK:PNB-T087:OLP-0072-B012` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:52-54` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:52-54` | pending |
 | `pnb-Arab-PK:PNB-T087:OLP-0072-B014` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:79-102` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:79-101` | pending |
+| `pnb-Arab-PK:PNB-T087:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
+| `pnb-Arab-PK:PNB-T087:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T087:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+| `pnb-Arab-PK:PNB-T087:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -5096,7 +5106,7 @@ Alternatives:
 - متوالیہ; حسابِ متوالیات; دو ممکنہ خالی جملہ-سلسلے — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (9):
+Occurrences (12):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -5109,6 +5119,9 @@ Occurrences (9):
 | `pnb-Arab-PK:PNB-T090:OLP-0067-B010` | `OLP-0067` / first-order-logic / proof-systems / tableaux | `upstream/content/first-order-logic/proof-systems/tableaux.tex:72-87` | `translation/content/first-order-logic/proof-systems/tableaux.tex:71-86` | pending |
 | `pnb-Arab-PK:PNB-T090:OLP-0069-B004` | `OLP-0069` / first-order-logic / sequent-calculus | `upstream/content/first-order-logic/sequent-calculus/sequent-calculus.tex:8-10` | `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:8-10` | pending |
 | `pnb-Arab-PK:PNB-T090:OLP-0070-B011` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:63-72` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:67-76` | pending |
+| `pnb-Arab-PK:PNB-T090:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T090:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+| `pnb-Arab-PK:PNB-T090:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -5133,7 +5146,7 @@ Alternatives:
 - ابتدائی متوالیہ; اصل/جڑ; بایاں/دایاں طرف; قاعدۂ تضعیف — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (6):
+Occurrences (9):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -5143,6 +5156,9 @@ Occurrences (6):
 | `pnb-Arab-PK:PNB-T091:OLP-0066-B007` | `OLP-0066` / first-order-logic / proof-systems / natural-deduction | `upstream/content/first-order-logic/proof-systems/natural-deduction.tex:33-58` | `translation/content/first-order-logic/proof-systems/natural-deduction.tex:31-55` | pending |
 | `pnb-Arab-PK:PNB-T091:OLP-0070-B010` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:52-61` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:55-65` | pending |
 | `pnb-Arab-PK:PNB-T091:OLP-0070-B011` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:63-72` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:67-76` | pending |
+| `pnb-Arab-PK:PNB-T091:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T091:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+| `pnb-Arab-PK:PNB-T091:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -5561,11 +5577,12 @@ Alternatives:
 - دائیں/بائیں سرے پر اضافہ; الحاقِ سلسلہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (1):
+Occurrences (2):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T105:OLP-0070-B009` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:46-50` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:48-53` | pending |
+| `pnb-Arab-PK:PNB-T105:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
 
 ---
 
@@ -5590,12 +5607,15 @@ Alternatives:
 - ابتدائی سیکوئنٹ; صدق دائیں/کذب بائیں ٹیگ شدہ صورتیں — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (2):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T106:OLP-0070-B010` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:52-61` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:55-65` | pending |
 | `pnb-Arab-PK:PNB-T106:OLP-0070-B011` | `OLP-0070` / first-order-logic / sequent-calculus / rules-and-proofs | `upstream/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:63-72` | `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:67-76` | pending |
+| `pnb-Arab-PK:PNB-T106:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T106:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+| `pnb-Arab-PK:PNB-T106:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 
@@ -5620,7 +5640,7 @@ Alternatives:
 - منطقی/ساختی قاعدے; زیریں سیکوئنٹ; مرکزی عامل — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (4):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -5628,6 +5648,7 @@ Occurrences (4):
 | `pnb-Arab-PK:PNB-T107:OLP-0072-B008` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:27-32` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:27-32` | pending |
 | `pnb-Arab-PK:PNB-T107:OLP-0072-B011` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:48-50` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:48-50` | pending |
 | `pnb-Arab-PK:PNB-T107:OLP-0072-B012` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:52-54` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:52-54` | pending |
+| `pnb-Arab-PK:PNB-T107:OLP-0073-B005` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:13-13` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:13-13` | pending |
 
 ---
 
@@ -5807,6 +5828,274 @@ Occurrences (1):
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T113:OLP-0072-B014` | `OLP-0072` / first-order-logic / sequent-calculus / quantifier-rules | `upstream/content/first-order-logic/sequent-calculus/quantifier-rules.tex:79-102` | `translation/content/first-order-logic/sequent-calculus/quantifier-rules.tex:79-101` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T114`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: structural rules; rearrangement needed to place acted-on sentences at a far sequent end
+- Intended sense: structural rules; rearrangement needed to place acted-on sentences at a far sequent end
+- Chosen Shahmukhi rendering/treatment: ساختی قاعدے؛ سیکوئنٹ پاسیاں نوں مُڑ ترتیب دینا؛ عامل جملے نوں بالکل کھبے یا سجے سرے اُتے لیانا
+- Rationale: The motivation distinguishes structural rules from logical rules: they rearrange or change multiplicity on sequent sides so the sentence acted on by a logical rule can stand at the required far left or far right. The Punjabi treats these as abstract sequence endpoints, not RTL page directions.
+- Why expert review helps: No native Punjabi structural-rule attestation was acquired. ساختی قاعدہ and the endpoint explanation are reversible exact-schema-governed bridges; their use does not imply that all structural rules merely permute formulas.
+- Please double-check: **Does ساختی قاعدے plus مُڑ ترتیب clearly explain why acted-on sentences must reach a far sequence end without confusing abstract sequent sides with RTL page direction?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- ساختی قواعد; ترتیبِ اطراف; انتہائی مقام — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T114:OLP-0073-B005` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:13-13` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:13-13` | pending |
+| `pnb-Arab-PK:PNB-T114:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T115`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Weakening; add an arbitrary sentence on the left or right sequent side
+- Intended sense: Weakening; add an arbitrary sentence on the left or right sequent side
+- Chosen Shahmukhi rendering/treatment: کمزور کرنا (Weakening)؛ کھبے یا سجے پاسے اک جملہ شامل کرنا
+- Rationale: Both Weakening displays add A to one side while preserving Gamma and Delta. The worked derivation instantiates left Weakening with D over the identity sequent C to C. The Punjabi heading uses کمزور کرنا while the literal source macro and every schema control the technical sense.
+- Why expert review helps: No native Punjabi proof-theoretic Weakening attestation was acquired. کمزور کرنا is a reversible named-rule bridge and must not be read as deleting, replacing or semantically weakening the added sentence.
+- Please double-check: **Is کمزور کرنا recognizable for Weakening when paired with the literal macro and exact add-A schemata, without suggesting deletion or semantic weakening?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تضعیف; کسی بھی طرف جملہ شامل کرنا — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T115:OLP-0073-B007` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:23-23` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:24-24` | pending |
+| `pnb-Arab-PK:PNB-T115:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T116`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Contraction; combine two identical sentence occurrences into one on either sequent side
+- Intended sense: Contraction; combine two identical sentence occurrences into one on either sequent side
+- Chosen Shahmukhi rendering/treatment: سکیڑنا (Contraction)؛ دو اکّو جیہے جملیاں نوں اک آمد وچ ملا دینا
+- Rationale: The left and right Contraction schemata each reduce two adjacent identical A occurrences to one without changing sides or contexts. The Punjabi motivation explicitly says two identical sentences become one and the heading supplies a compact transparent label.
+- Why expert review helps: No native Punjabi Contraction attestation was acquired. سکیڑنا is reversible only with its duplicated-A schema; it does not license removing a lone or nonidentical sentence.
+- Please double-check: **Does سکیڑنا clearly reduce exactly two identical A occurrences to one on the same side, without licensing deletion of a lone or different sentence?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- انقباض; دو یکساں ظہور کو ایک کرنا — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T116:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
+| `pnb-Arab-PK:PNB-T116:OLP-0073-B009` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:37-37` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:38-38` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T117`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Exchange; swap adjacent sentences within one sequent side while preserving contexts
+- Intended sense: Exchange; swap adjacent sentences within one sequent side while preserving contexts
+- Chosen Shahmukhi rendering/treatment: تبادلہ (Exchange)؛ اکّے پاسے نال نال آؤندے جملیاں دی تھاں آپو وچ بدلنا
+- Rationale: Both Exchange schemata swap adjacent A and B on one fixed side and retain Gamma/Pi or Delta/Lambda context order. The worked example uses left Exchange with empty Gamma and Pi to change D,C to C,D. The Punjabi does not describe movement across the turnstile.
+- Why expert review helps: No native Punjabi Exchange-rule attestation was acquired. تبادلہ is a reversible exact-order-governed bridge; context sequences and the unchanged proof trees delimit which positions exchange.
+- Please double-check: **Does تبادلہ preserve the adjacent A/B swap and surrounding context order on one fixed sequent side, including the worked empty-context instance?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تبادلہ; ایک ہی طرف متصل جملوں کی جگہ بدلنا — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (4):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T117:OLP-0073-B006` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:15-22` | pending |
+| `pnb-Arab-PK:PNB-T117:OLP-0073-B011` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:51-51` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:52-52` | pending |
+| `pnb-Arab-PK:PNB-T117:OLP-0073-B013` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:65-66` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:66-67` | pending |
+| `pnb-Arab-PK:PNB-T117:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T118`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: double inference lines as shorthand for a series of weakening, contraction and exchange inferences
+- Intended sense: double inference lines as shorthand for a series of weakening, contraction and exchange inferences
+- Chosen Shahmukhi rendering/treatment: دُہریاں استنباطی لیکاں؛ کمزور کرن، سکیڑن تے تبادلے دے استنباطاں دے سلسلے دا مختصر اشارہ
+- Rationale: The source assigns double inference lines a precise conventional meaning: an often-unspecified series of Weakening, Contraction and Exchange inferences. The Punjabi preserves the plurality, all three rule families and the fact that this is an indication rather than a new inference rule.
+- Why expert review helps: No native Punjabi attestation for this proof-tree display convention was acquired. The wording is a reversible source-defined bridge and should not be generalized to every double line in unrelated calculi.
+- Please double-check: **Do دُہریاں استنباطی لیکاں clearly abbreviate a series drawn only from Weakening, Contraction and Exchange here, rather than introducing a new primitive rule?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- دوہری استنباطی سطریں; ساختی سلسلے کا اختصار — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T118:OLP-0073-B013` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:65-66` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:66-67` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T119`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: Cut rule; reuse and combine derivations; eliminate the shared cut sentence between two premises
+- Intended sense: Cut rule; reuse and combine derivations; eliminate the shared cut sentence between two premises
+- Chosen Shahmukhi rendering/treatment: کٹ دا قاعدہ (Cut)؛ اخذاں نوں مُڑ ورتنا تے اکٹھیاں کرنا؛ سانجھے A نوں وچوں کڈھنا
+- Rationale: Cut is qualified as not strictly necessary but useful for reuse and combination. Its exact binary schema places A in the first succedent and second antecedent, then omits it while concatenating Gamma/Pi and Delta/Lambda in fixed order. The Punjabi retains the qualification and formula roles.
+- Why expert review helps: No native Punjabi Cut-rule attestation was acquired. کٹ is a reversible literal-name bridge governed by the displayed binary schema; no cut-elimination theorem is asserted in this section.
+- Please double-check: **Is کٹ recognizable for Cut, and does the Punjabi preserve its not-strictly-necessary qualification plus the exact A, Gamma/Pi and Delta/Lambda roles?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0073-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- قاعدۂ قطع; مشترک صیغہ; اخذوں کا امتزاج — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T119:OLP-0073-B014` | `OLP-0073` / first-order-logic / sequent-calculus / structural-rules | `upstream/content/first-order-logic/sequent-calculus/structural-rules.tex:68-78` | `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:69-80` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T120`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: LK derivation; inductive generation; finite sequent tree; end-sequent; derivable in LK
+- Intended sense: LK derivation; inductive generation; finite sequent tree; end-sequent; derivable in LK
+- Chosen Shahmukhi rendering/treatment: LK اخذ؛ استقرائی بناوٹ؛ سیکوئنٹاں دا محدود درخت؛ آخرلا سیکوئنٹ؛ LK وچ اخذ ہون جوگ
+- Rationale: The source first generates derivations from an initial sequent or one/two preceding derivations followed by an inference, then defines an LK derivation of S as a finite sequent tree with initial sequents at the top, S at the bottom and every other node serving as a premise of a correct rule application directly below. The Punjabi preserves both accounts and names S the last/end sequent.
+- Why expert review helps: No native Punjabi LK-derivation attestation was acquired. اخذ, محدود درخت and آخرلا سیکوئنٹ are reversible definition- and orientation-governed bridges; top and bottom follow the proof tree, not reading direction.
+- Please double-check: **Do استقرائی بناوٹ, محدود درخت and آخرلا سیکوئنٹ preserve every initial/top, target/bottom and direct-premise condition, and keep derivability distinct from semantic validity?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0074-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- LK اخذ; استقرائی محدود درخت; آخری متوالیہ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T120:OLP-0074-B006` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:15-21` | pending |
+| `pnb-Arab-PK:PNB-T120:OLP-0074-B007` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:23-35` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:23-36` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T121`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: rule-schema instantiation by premise matching; metavariable roles; empty sequence contexts
+- Intended sense: rule-schema instantiation by premise matching; metavariable roles; empty sequence contexts
+- Chosen Shahmukhi rendering/treatment: قاعدے دے عام روپ نال مقدمے دا میل؛ علامتی تھاواں وچ خاص جملے رکھنا؛ خالی Gamma/Pi/Delta سیاق
+- Rationale: The worked example explains a generic schema by matching its premise to a derivation’s last sequent and assigning concrete sequences or sentences to Gamma, Delta, Pi, A and B. Some context metavariables are explicitly empty. The Punjabi preserves every assignment, order and conclusion instead of treating the displayed letters as fixed object-language symbols.
+- Why expert review helps: No native Punjabi metasyntactic schema-matching attestation was acquired. میل کھانا and تھاں رکھنا are reversible example-governed descriptions; they do not license arbitrary substitution that violates a rule’s premise shape.
+- Please double-check: **Do میل کھانا and تھاں رکھنا make each concrete Gamma/Delta/Pi/A/B assignment recoverable, including explicitly empty sequences, without treating metavariables as fixed formulas?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0074-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- خاکۂ قاعدہ; مقدمے سے تطبیق; فوق لسانی متغیر — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T121:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T122`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Source term/construction: combine two derivations by right conjunction; premise order determines conjunct order
+- Intended sense: combine two derivations by right conjunction; premise order determines conjunct order
+- Chosen Shahmukhi rendering/treatment: دو اخذاں نوں سجے عطف نال اکٹھیاں کرنا؛ مقدمیاں دی ترتیب نال C عطف D یا D عطف C
+- Rationale: The example combines two derivations using right conjunction only after both last sequents match the rule’s premises with the same Gamma and Delta. In the first order A=C and B=D, yielding C conjunction D; reversing the premises gives A=D and B=C, yielding D conjunction C. The Punjabi retains the syntactic order despite semantic commutativity.
+- Why expert review helps: No native Punjabi derivation-combination attestation was acquired. The exact two final proof trees govern the bridge; it does not assert that premise order is semantically significant beyond the displayed conclusion syntax.
+- Please double-check: **Does the Punjabi show that the same two derivations yield syntactically C-and-D or D-and-C according to binary-premise order, while making no stronger semantic noncommutativity claim?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0074-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- دو اخذوں کا دایاں عطف; ترتیبِ مقدمات و اجزائے عطف — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T122:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
 
 ---
 

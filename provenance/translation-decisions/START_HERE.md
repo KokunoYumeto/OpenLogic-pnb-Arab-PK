@@ -2,7 +2,7 @@
 
 Start with `PRIORITY_REVIEW.md` for focused expert questions or `TRANSLATION_DECISIONS_FULL.md` for the complete readable register. `DECISION_OCCURRENCES.csv` is the one-row-per-occurrence view; `DECISIONS.json` is the canonical machine projection validated by `translation-decision.schema.json`.
 
-Current scope: 155 decisions, 2687 exact source-target occurrences, and 72 of 722 source units translated through `OLP-0072`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
+Current scope: 164 decisions, 2724 exact source-target occurrences, and 74 of 722 source units translated through `OLP-0074`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
 
 Exact accepted-reader pages are present for 243 occurrences in the seven-unit Sets reader. Page values name both Naskh and Nastaliq when available; they are typography profiles over exactly the same `pnb-Arab-PK` Shahmukhi semantic text. All other pages are explicitly pending until a reader is accepted—none are guessed from source order.
 

@@ -1,0 +1,93 @@
+{
+  "schema": "pnb-batch-consultation/1",
+  "batch_id": "BATCH-0034",
+  "unit_ids": [
+    "OLP-0073",
+    "OLP-0074"
+  ],
+  "consulted_before_drafting": true,
+  "consulted_at_utc": "2026-09-05T21:21:39.0840755Z",
+  "passage_ids": [
+    "PNB-P007",
+    "PNB-P015"
+  ],
+  "source_checks": [
+    {
+      "source_id": "PNB-C004",
+      "sha256": "31880244e24591f07bd2a8038825a4c765443168d37cbc84e17d45ef61cf13f0",
+      "paragraph_sha256": "8fc9179e93f25479d018b503af4431e120fd0778a4d9148ab107876e2eddf1fc",
+      "locator": "normalized visible line 45 (duplicate line 73 also verified)"
+    },
+    {
+      "source_id": "PNB-C006",
+      "sha256": "004d82c40a5a86f1ce4363543996668d4d5303b7973abe3d69acc0a1989e9b85",
+      "paragraph_sha256": "493c1b16a6e78397262021a2dc823b6e455d3fa7e814f1608990ce11fcf1413a",
+      "locator": "normalized visible line 38"
+    }
+  ],
+  "original_checks": [
+    {
+      "unit_id": "OLP-0073",
+      "source_path": "content/first-order-logic/sequent-calculus/structural-rules.tex",
+      "source_bytes": 2157,
+      "source_sha256": "5c13d5312a8b2287b54d67d2fadc6247ba499bd9b6a71255ea04891307689b06",
+      "source_blocks": 15,
+      "read_in_full": true
+    },
+    {
+      "unit_id": "OLP-0074",
+      "source_path": "content/first-order-logic/sequent-calculus/derivations.tex",
+      "source_bytes": 4239,
+      "source_sha256": "25897d850b211443621f31a1166f443c1e00c6bcbf13002bc1b9281ca4300371",
+      "source_blocks": 9,
+      "read_in_full": true
+    }
+  ],
+  "unit_scope_reviewed": [
+    {
+      "unit_id": "OLP-0073",
+      "finding": "The section motivates and displays both-sided Weakening, Contraction and Exchange rules, explains double inference lines as a shorthand for structural-rule series, and gives the binary Cut rule with its reuse-and-combination role.",
+      "required_handling": "Translate the motivation, headings and two closing explanations; preserve both FOL/PL identities and every rule body, side, sentence multiplicity, context sequence, unary/binary arity, label and display command exactly."
+    },
+    {
+      "unit_id": "OLP-0074",
+      "finding": "The section defines LK derivations inductively and as finite trees, names the end-sequent and derivability relation, then works from initial sequents through weakening, exchange and right conjunction to two conclusions whose conjunct order follows the order assigned to the binary premises.",
+      "required_handling": "Preserve both FOL/PL identities, all three finite-tree conditions and top/bottom orientation, every metasyntactic assignment, all eight proof trees, empty-context claims, premise matching, sentence order, conjunction order and literal source punctuation."
+    }
+  ],
+  "source_observations_reviewed": [
+    {
+      "unit_id": "OLP-0073",
+      "locator": "opening motivation and Weakening/Contraction/Exchange displays",
+      "observation": "Logical rules require acted-on sentences at a far end, so Exchange moves adjacent A/B positions; Contraction combines two identical copies; Weakening adds an arbitrary sentence on either side.",
+      "handling": "Keep the operational roles and both-sided displays distinct. Do not describe Exchange as moving between sequent sides, Contraction as deletion of an arbitrary sentence, or Weakening as replacement."
+    },
+    {
+      "unit_id": "OLP-0073",
+      "locator": "double-line and Cut paragraphs",
+      "observation": "Double inference lines abbreviate a series of weakening, contraction and exchange inferences. Cut is said not to be strictly necessary but useful for reusing and combining derivations, and eliminates the shared formula A between two premises.",
+      "handling": "Retain the abbreviation scope, non-necessity qualification, reuse/combine rationale, binary premise contexts and exact lower concatenation order."
+    },
+    {
+      "unit_id": "OLP-0074",
+      "locator": "inductive explanation and LK-derivation definition",
+      "observation": "A derivation is either an initial sequent alone or one/two derivations followed by an inference; equivalently it is a finite sequent tree with initial sequents at the top, designated S at the bottom and every other node serving as a premise of a correct rule application immediately below it.",
+      "handling": "Keep both formulations, finiteness, all three enumerated conditions, one-or-two premise arity, tree orientation, end-sequent and derivable terminology exact."
+    },
+    {
+      "unit_id": "OLP-0074",
+      "locator": "worked weakening and exchange sequence",
+      "observation": "The generic weakening rule is instantiated from C sequent C with A played by D and both Gamma/Delta played by C; the exchange instance then has Gamma/Pi empty, Delta=C, A=D and B=C. The generic exchange display contains a literal comma inside its concluding math expression.",
+      "handling": "Preserve each role assignment, empty context, sentence order and every displayed tree. Retain the source comma rather than silently editing formal punctuation in this translation batch."
+    },
+    {
+      "unit_id": "OLP-0074",
+      "locator": "binary conjunction combination and reversed-premise example",
+      "observation": "The first combination matches Gamma to C,D, empty Delta, A=C and B=D, yielding C,D sequent C-and-D. Reversing the binary premises swaps A/B roles and yields D-and-C, while the antecedent stays C,D.",
+      "handling": "Keep the last sequents as the rule premises, preserve every empty-context statement, and do not use commutativity to normalize the two visibly different conjunction conclusions."
+    }
+  ],
+  "lane_local_source_issues_reviewed": [],
+  "consultation_record": "2026-09-05: before drafting BATCH-0034, the current owner read the complete structural-rules.tex and derivations.tex originals and freshly re-read the full exact P007/P015 Punjabi paragraphs through the hash-checking reader. Every structural-rule side and multiplicity, double-line abbreviation, Cut qualification, inductive/tree condition, top/bottom orientation, proof tree, metasyntactic role assignment, empty context, premise match and conjunction-order consequence was checked before translation. No inherited translation, consultation or QA claim.",
+  "limits": "The canon supports native Punjabi ordering, qualification and reason-giving syntax only. It does not attest structural-rule names, Cut, derivation trees, end-sequents, rule instantiation or metasyntactic premise matching; those remain reversible exact-rule- and proof-tree-governed scholarly bridges."
+}

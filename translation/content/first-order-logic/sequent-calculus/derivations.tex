@@ -1,0 +1,122 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{der}}
+      {\olfileid{pl}{seq}{der}}
+
+\olsection{\usetoken{P}{derivation}}
+
+\begin{explain}
+اسیں دَس چکے آں کہ ابتدائی سیکوئنٹ کیہو جہا ہُندا اے، تے استنباط دے
+قاعدے وی دے چکے آں۔ سیکوئنٹ حساب وچ !!^{derivation}s ایہناں توں
+استقرائی طور تے بنائے جاندے نیں: ہر !!{derivation} یا تاں اپنے آپ وچ
+اک ابتدائی سیکوئنٹ ہُندا اے، یا اک یا دو !!{derivation}s تے اوہناں دے
+بعد اک استنباط اُتے مشتمل ہُندا اے۔
+\end{explain}
+
+\begin{defn}[$\Log{LK}$ !!{derivation}]
+اک \emph{$\Log{LK}$-!!{derivation}} جیہڑی سیکوئنٹ~$S$ دی اے،
+سیکوئنٹاں دا اک محدود درخت اے جیہڑا ہِٹھ دتیاں شرطاں پوری کردا اے:
+\begin{enumerate}
+\item درخت دے سب توں اُتلے سیکوئنٹ ابتدائی سیکوئنٹ ہُندے نیں۔
+\item درخت دا سب توں ہِٹھلا سیکوئنٹ~$S$ اے۔
+\item درخت وچ $S$ توں سوا ہر سیکوئنٹ، استنباط دے قاعدے دی کسے درست
+  ورتوں دا مقدمہ اے، جیہدا نتیجہ درخت وچ اوس سیکوئنٹ دے عین ہِٹھاں
+  کھلوتا اے۔
+\end{enumerate}
+فیر اسیں $S$ نوں !!{derivation} دا \emph{آخرلا سیکوئنٹ} آکھدے آں تے
+ایہ وی آکھدے آں کہ $S$، \emph{$\Log{LK}$ وچ !!{derivable} اے} (یا
+$\Log{LK}$-!!{derivable} اے)۔
+\end{defn}
+
+\begin{ex}
+ہر ابتدائی سیکوئنٹ، مثلاً $!C \Sequent !C$، اک !!a{derivation} اے۔
+اس اُتے، من لو، $\LeftR{\Weakening}$ قاعدہ لا کے اسیں اک نویں
+!!{derivation} حاصل کر سکدے آں،
+\begin{prooftree}
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\end{prooftree}
+پر ایہ قاعدہ عام روپ وچ ورتن لئی اے: قاعدے وچلے $!A$ دی تھاں اسیں
+کوئی وی !!{sentence} رکھ سکدے آں، مثلاً~$!D$ وی۔ جے مقدمہ ساڈے
+ابتدائی سیکوئنٹ $!C \Sequent !C$ نال میل کھاندا اے، تاں ایس دا مطلب
+اے کہ $\Gamma$ تے $\Delta$ دونیں صرف~$!C$ نیں، تے نتیجہ فیر
+$!D, !C \Sequent !C$ ہووے گا۔ سو ہِٹھ لکھی شے اک !!a{derivation} اے:
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\end{prooftree}
+ہُن اسیں کوئی ہور قاعدہ، من لو $\LeftR{\Exchange}$، لا سکدے آں،
+جیہڑا سانوں کھبے پاسے دے دو !!{sentence}s نوں آپو وچ بدل دین دی
+اجازت دیندا اے۔ سو ہِٹھ لکھی شے وی اک درست !!{derivation} اے:
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\end{prooftree}
+ایس قاعدے دی ورتوں وچ—قاعدہ ایویں دِتا گیا سی—
+\begin{prooftree}
+\Axiom$ \Gamma, !A, !B, \Pi \fCenter \Delta $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ \Gamma, !B, !A, \Pi \fCenter \Delta,$
+\end{prooftree}
+$\Gamma$ تے $\Pi$ دونیں خالی سن، $\Delta$، $!C$ اے، تے $!A$ تے
+$!B$ دے کردار ترتیب وار $!D$ تے~$!C$ نے نبھائے نیں۔ لگ بھگ
+ایسے طریقے نال اسیں ایہ وی ویکھدے آں کہ
+\begin{prooftree}
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\end{prooftree}
+اک !!a{derivation} اے۔ ہُن اسیں ایہناں دوناں !!{derivation}s نوں لے
+کے $\RightR{\land}$ نال اکٹھیاں کر سکدے آں۔ اوہ قاعدہ ایہ سی
+\begin{prooftree}
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\end{prooftree}
+ساڈے معاملے وچ، مقدمیاں نوں اوہناں !!{derivation}s دے آخرلے سیکوئنٹاں
+نال میل کھانا چاہیدا اے جیہڑے ایہناں مقدمیاں اُتے ختم ہُندے نیں۔ ایس دا مطلب
+اے کہ $\Gamma$، $!C, !D$ اے، $\Delta$ خالی اے، $!A$، $!C$ اے تے
+$!B$، $!D$ اے۔ سو جے استنباط درست ہونا اے، تاں نتیجہ $!C, !D \Sequent !C
+\land !D$ اے۔
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ !C, !D \fCenter !C \land !D $
+\end{prooftree}
+یقیناً، اسیں مقدمیاں دی ترتیب اُلٹ وی سکدے آں؛ فیر $!A$، $!D$
+ہووے گا تے $!B$،~$!C$ ہووے گا۔
+\begin{prooftree}
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ !C, !D \fCenter !D \land !C $
+\end{prooftree}
+\end{ex}
+
+\end{document}

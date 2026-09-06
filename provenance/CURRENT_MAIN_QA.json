@@ -4,12 +4,12 @@
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
-  "translated_and_source_aligned_units": 72,
-  "translated_range": "OLP-0001 through OLP-0072, contiguous",
-  "remaining_units": 650,
-  "aligned_blocks": 1196,
-  "translated_linguistic_blocks": 792,
-  "unchanged_formal_blocks": 404,
+  "translated_and_source_aligned_units": 74,
+  "translated_range": "OLP-0001 through OLP-0074, contiguous",
+  "remaining_units": 648,
+  "aligned_blocks": 1220,
+  "translated_linguistic_blocks": 802,
+  "unchanged_formal_blocks": 418,
   "changed_blocks_without_canon": 0,
   "completed_source_translation_chapters": [
     "Sets",
@@ -19,38 +19,38 @@
     "Arithmetization",
     "Infinite"
   ],
-  "current_chapter_progress": "Propositional Logic through the detailed Sequent Calculus chapter driver, rules-and-proofs foundation, propositional rules and quantifier rules, OLP-0072",
+  "current_chapter_progress": "Propositional Logic through the detailed Sequent Calculus chapter driver, rule foundations, propositional and quantifier rules, structural rules and worked derivations, OLP-0074",
   "accepted_reader_chapters": [
     "Sets"
   ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
-    "units": 72,
-    "sha256": "9ed024aa525efab54c5f0f61dd7784429a607f4c5e76b040dab3ce132ceb1215",
+    "units": 74,
+    "sha256": "7d492657829cf55c9519ececcf093d332f7922da47bb44606312d89bd62be6fb",
     "all_passed": true
   },
   "current_regression": {
-    "file": "AUDIT-REGRESSION-0072.json",
-    "sha256": "bfbbcb1070fa8c2b006c32b750eb385506d5e285fac4ae301a487ed16f3fa527",
+    "file": "AUDIT-REGRESSION-0074.json",
+    "sha256": "d4972f2740c9c2407fcb77b91700c33f81649cbe1d0744b7aa78a4dcc27ace42",
     "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "rows": 1196,
-    "sha256": "6a3fde289336a02e7360a5ff295ccaad71a4b71362aa5823290d3752ca2f424e",
+    "rows": 1220,
+    "sha256": "8b8e743d0135a7b803c69302e139fb3846bfac116bb63c7c062e814121d7155c",
     "canonical_unit_block_order": true
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 113,
-    "sha256": "6f5cb987f1304445f8053776409e43b7d3f5506df43be82283988b3e15d71f0d"
+    "entries": 122,
+    "sha256": "bfa053546c346ad86ba378676816398175c9ec76306f43cd05e4e8fce8cd87ad"
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 155,
-    "terminology_entries": 113,
+    "entries": 164,
+    "terminology_entries": 122,
     "source_fidelity_entries": 42,
-    "sha256": "8735e9d514f4eb209514df46384791d4033004549ad95f6ad6c8da8c365332e4",
+    "sha256": "dc74cb30fb3550fda67b724e45b0a6847b9f65c35e4347f237819bff1a2e80fe",
     "occurrence_source_target_line_ranges": true,
     "structural_section_scope": true,
     "language_script_locale": "Punjabi / Arabic (Shahmukhi) / pnb-Arab-PK",
@@ -60,13 +60,13 @@
   "translation_decision_surfaces": {
     "directory": "translation-decisions",
     "shared_schema_sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "decisions": 155,
-    "occurrences": 2687,
-    "high_priority_decisions": 153,
+    "decisions": 164,
+    "occurrences": 2724,
+    "high_priority_decisions": 162,
     "occurrences_with_accepted_reader_pages": 243,
-    "occurrences_pending_reader_pages": 2444,
-    "decisions_json_sha256": "0df8c33fe07042b451cf26cb98e9856c5176b8f39de137b673d55e24b8ed46bd",
-    "qa_sha256": "32ffb6a41d69644d1b47299ad3e68b3226294dda8445e22849b6706c806c0bc4",
+    "occurrences_pending_reader_pages": 2481,
+    "decisions_json_sha256": "24f224fd555b87db493b6de0f39e52ec3e76d00ea196ff392b92376db93c9ea8",
+    "qa_sha256": "1e9603eda8c468ed345e13806706963ae4f5e5b35f1ff65ca9d2254d0b6de8e0",
     "surfaces": [
       "START_HERE.md",
       "TRANSLATION_DECISIONS_FULL.md",

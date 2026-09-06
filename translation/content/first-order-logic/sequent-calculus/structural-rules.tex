@@ -1,0 +1,82 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: structural-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{srl}}
+      {\olfileid{pl}{seq}{srl}}
+
+\olsection{ساختی قاعدے}
+
+سانوں کجھ ایہو جیہے قاعدیاں دی وی لوڑ اے جیہڑے سیکوئنٹ دے کھبے تے
+سجے پاسے !!{sentence}s نوں مُڑ ترتیب دین دی اجازت دیندے نیں۔ چونکہ
+منطقی قاعدیاں دا تقاضا اے کہ مقدمے وچ اوہ !!{sentence}s، جِنہاں اُتے
+قاعدہ لاگو ہُندا اے، یا تاں بالکل کھبے سرے یا بالکل سجے سرے اُتے ہون،
+ایس لئی سانوں اک ``تبادلے'' دے قاعدے دی لوڑ اے جیہڑا !!{sentence}s
+نوں ٹھیک تھاں اُتے لے جان دی اجازت دیندا اے۔ کدی کدی دو اکّو جیہے
+!!{sentence}s نوں اک وچ ملا سکنا، تے کسے وی پاسے اک !!a{sentence}
+شامل کر سکنا وی ضروری اے۔
+
+\subsection{کمزور کرنا}
+
+\begin{defish}
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\end{defish}
+
+\subsection{سکیڑنا}
+
+\begin{defish}
+\Axiom$ !A, !A, \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A, !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\end{defish}
+
+\subsection{تبادلہ}
+
+\begin{defish}
+\Axiom$ \Gamma, !A, !B, \Pi \fCenter \Delta $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ \Gamma, !B, !A, \Pi \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A, !B, \Lambda$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ \Gamma \fCenter \Delta, !B, !A, \Lambda$
+\DisplayProof
+\end{defish}
+
+کمزور کرن، سکیڑن تے تبادلے دے کئی لگاتار استنباط اکثر دُہریاں
+استنباطی لیکاں نال وکھائے جان گے۔
+
+ہِٹھلا قاعدہ، جہنوں ``کٹ'' آکھیا جاندا اے، سختی نال ویکھیا جاوے تاں
+ضروری نہیں، پر !!{derivation}s نوں مُڑ ورتن تے اکٹھیاں کرن نوں بہت
+سَوکھا بنا دیندا اے۔
+\begin{defish}
+\[
+\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !A, \Pi \fCenter \Lambda $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+\end{defish}
+
+\end{document}
