@@ -5,6 +5,10 @@ provenance/SOURCE_MANIFEST.jsonl -text
 # These current-main ledgers are also byte-addressed by their published QA
 # receipt. Preserve their generated CRLF bytes exactly on GitHub.
 provenance/ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl -text whitespace=cr-at-eol
+provenance/SEGMENT_CANON_USE.jsonl -text whitespace=cr-at-eol
+provenance/REPAIRED_PREFIX_QA.json -text whitespace=cr-at-eol
+provenance/EXTENSIONALITY_ADJUDICATION.json -text whitespace=cr-at-eol
+provenance/OLP0018_THEOREM_REPAIR.json -text whitespace=cr-at-eol
 provenance/AUDIT-REGRESSION-*.json -text
 provenance/TERMINOLOGY_REVIEW_LOG.jsonl -text
 provenance/SOURCE_CORRECTIONS.jsonl -text
