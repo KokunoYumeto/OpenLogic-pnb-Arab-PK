@@ -1,28 +1,38 @@
 {
-  "schema": "pnb-portable-candidate-smoke-qa/1",
+  "schema": "pnb-portable-candidate-smoke-qa/2",
   "date_utc": "2026-09-07",
-  "created_utc": "2026-09-07T16:52:42.654257Z",
-  "status": "REPRODUCED_FULL_PAGE_VISUAL_SMOKE_PASS_NOT_RELEASED",
+  "created_utc": "2026-09-07T19:51:30.655226Z",
+  "status": "REPRODUCED_FULL_PAGE_VISUAL_PASS_NOT_RELEASED",
   "scope": {
     "reader": "Complete seven-unit Sets chapter portable candidate",
-    "semantic_acceptance": "Only OLP-0001 through OLP-0008 is semantically accepted; this reader also contains historical-draft OLP-0009 and OLP-0010.",
-    "release_effect": "None. The immutable v0.1.0 reference-v3 PDFs and Zenodo record are unchanged.",
-    "claim_limit": "This is local reproducibility and layout evidence, not corpus completion, cross-platform byte reproducibility, or reader semantic acceptance."
+    "semantic_acceptance": "OLP-0001 through OLP-0010 is the validated semantically accepted provisional prefix.",
+    "release_effect": "None. The immutable v0.1.0 PDFs and Zenodo record are unchanged.",
+    "claim_limit": "This is local reproducibility and complete-page layout evidence, not corpus completion, cross-platform byte reproducibility, or a released reader."
   },
   "inputs": {
     "builder": {
-      "bytes": 12116,
-      "sha256": "fac10925664a7cd03574ea8a40834676926c439264f0e6e5eb324a211760923c",
+      "bytes": 12121,
+      "sha256": "eb80ef24c8ed36546857cc21e54bbb8e4b42f45cdeab12c8e235ab4cb54ae16b",
       "file": "../tools/build_sets_reader.py"
     },
     "manifest": {
-      "bytes": 23031,
-      "sha256": "301c214b9d45c518f3bb99fc32bf3de1816bc6464cec380d99e8593568547576",
+      "bytes": 29715,
+      "sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b",
       "file": "PORTABLE_CANDIDATE_INPUTS.json"
     },
     "manifest_matches_exact_scratch_build_input": true,
     "source_units": 7,
-    "english_bridge_isolations": 41,
+    "source_unit_ids": [
+      "OLP-0004",
+      "OLP-0005",
+      "OLP-0006",
+      "OLP-0007",
+      "OLP-0008",
+      "OLP-0009",
+      "OLP-0010"
+    ],
+    "english_bridge_isolations": 65,
+    "russell_bridge_isolations": 2,
     "single_variable_parenthetical_false_positives": 0
   },
   "build": {
@@ -35,35 +45,208 @@
     "builder_detected_defects": 0,
     "pass_2_equals_pass_3_both_profiles": true,
     "source_date_epoch": "1788470400",
-    "started_utc": "2026-09-07T16:37:18.6355130Z",
-    "finished_utc": "2026-09-07T16:37:32.8577114Z",
-    "local_build_receipt": {
-      "bytes": 2711,
-      "sha256": "d85d014d7c5aa6036251c5d70b5b2cbc37e283d381424b7d53ee3404d6b18633",
+    "started_utc": "2026-09-07T18:22:31.6843795Z",
+    "finished_utc": "2026-09-07T18:22:49.9470616Z",
+    "final_local_build_receipt": {
+      "bytes": 2713,
+      "sha256": "f37815dcd736256a7d58f99432e53ec09a5bfc2291df2eb5689e52e4a45bdfeb",
+      "file": "BUILD-20260907T182231681Z.json",
       "published": false
+    },
+    "first_attempt_slot_busy_no_tex_launched": {
+      "bytes": 348,
+      "sha256": "84af18a7945e68c8fd36e1be58e4aa2d0622fec5e9d1ee98e028759f1dfa31c4",
+      "file": "BUILD-20260907T181828297Z.json",
+      "status": "slot_busy"
     }
+  },
+  "visual_correction_history": {
+    "superseded_candidate_build_receipt": {
+      "bytes": 2715,
+      "sha256": "8a797cb29eecd153f971d84e393cca07849d86659ff5606f3109cd221d0f61c8",
+      "file": "BUILD-20260907T181844139Z.json"
+    },
+    "detected_defect": "Bare apostrophe prevented the explicit Russell's Paradox parenthetical from being isolated as one LTR bridge, reversing its parentheses and words in the RTL heading.",
+    "repair": "The reader bridge recognizer now admits straight and curly apostrophes; the exact source parenthetical becomes one textenglish run.",
+    "source_translation_changed_by_layout_repair": false,
+    "superseded_naskh_sha256": "79624d538e4f15bd1b59a20b86a45d88e45724d2a16f5cb752ac0e07d9260ee6",
+    "superseded_nastaliq_sha256": "271d53af5ef12917aeb6e6493f5d50928b090de50444ef0df695a5e9d32b5e28",
+    "corrected_heading_visually_rechecked_in_both_profiles": true
   },
   "profiles": {
     "naskh": {
-      "bytes": 134085,
-      "sha256": "9b5cefdf973eac5615e2b111c528b75469b6836a38df31327d15d8f737d189a4",
+      "bytes": 136127,
+      "sha256": "1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313",
       "file": "scratch:sets-naskh.pdf",
       "pages": 12,
-      "reproduced": true
+      "reproduced": true,
+      "all_fonts_embedded": true,
+      "embedded_font_rows": 16,
+      "rendered_pages": [
+        {
+          "bytes": 138922,
+          "sha256": "2e260b5201ecb2142af382d4aebde9b2613c66a85322f83c3c44f84d9cf20439",
+          "file": "scratch:render-all-naskh/page-01.png"
+        },
+        {
+          "bytes": 249351,
+          "sha256": "9604256636ca016cc4a561d0942468840dc526f82083afe1d5a882f6cc2c85e1",
+          "file": "scratch:render-all-naskh/page-02.png"
+        },
+        {
+          "bytes": 306208,
+          "sha256": "f8070d555650369062ff74b43280d9a9108d97e662097cbe8acbfd065521c919",
+          "file": "scratch:render-all-naskh/page-03.png"
+        },
+        {
+          "bytes": 285830,
+          "sha256": "9935d9a74f72eda89e72cda527afa0f720eaa13ce6b99ede63c541160f1e8867",
+          "file": "scratch:render-all-naskh/page-04.png"
+        },
+        {
+          "bytes": 255544,
+          "sha256": "f6689ec6bf0fae3c5c833b8ada639200d9bd495062575b98cd1ef39295293b75",
+          "file": "scratch:render-all-naskh/page-05.png"
+        },
+        {
+          "bytes": 273035,
+          "sha256": "c6921ad2ab993292877faf4c817b04c5435ae7951c8ea9ffe1dce0ea2835d384",
+          "file": "scratch:render-all-naskh/page-06.png"
+        },
+        {
+          "bytes": 219184,
+          "sha256": "e5dd41f0b7c6247917dcbdafa3d3f5bd5bb28c37fbc4bf91833b9bb1730e9ddd",
+          "file": "scratch:render-all-naskh/page-07.png"
+        },
+        {
+          "bytes": 225266,
+          "sha256": "f36d847ff43631b67bb9553ec03d3f94ce0526a9e906b0e8364879d2bd512662",
+          "file": "scratch:render-all-naskh/page-08.png"
+        },
+        {
+          "bytes": 220970,
+          "sha256": "5eaee151edc0c7a5d736557cf06da1ec5e2a603a7ae1ef17eceee11d885bd696",
+          "file": "scratch:render-all-naskh/page-09.png"
+        },
+        {
+          "bytes": 277499,
+          "sha256": "05c8e49755743380166ddf8ab5b233bbf2b77c1a4d4ed02d3a177c45c925f2a0",
+          "file": "scratch:render-all-naskh/page-10.png"
+        },
+        {
+          "bytes": 306917,
+          "sha256": "24e8ce6df576da011e047ab101dacf835122abe8981de55fd4c428dbbeb304a0",
+          "file": "scratch:render-all-naskh/page-11.png"
+        },
+        {
+          "bytes": 268704,
+          "sha256": "913f87ccd8033043159a5649eb83d2c87e627398f83bb86c2f9bad902788779a",
+          "file": "scratch:render-all-naskh/page-12.png"
+        }
+      ]
     },
     "nastaliq": {
-      "bytes": 190020,
-      "sha256": "2870c4d8de897e7af481d597b951f5e2bb5bc5dd6a0231ceb2edbd6612f71b3e",
+      "bytes": 192407,
+      "sha256": "c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7",
       "file": "scratch:sets-nastaliq.pdf",
       "pages": 17,
-      "reproduced": true
+      "reproduced": true,
+      "all_fonts_embedded": true,
+      "embedded_font_rows": 18,
+      "rendered_pages": [
+        {
+          "bytes": 151679,
+          "sha256": "dfc9dea8dbbae9885362de7daf2d45e698c85df6658f9f1f8fdf77ed2cac6b7f",
+          "file": "scratch:render-all-nastaliq/page-01.png"
+        },
+        {
+          "bytes": 220154,
+          "sha256": "a154ba34a2c80871230c087dd8310df6b42724b7bbdd2526c19fb752a9fe2ea0",
+          "file": "scratch:render-all-nastaliq/page-02.png"
+        },
+        {
+          "bytes": 291594,
+          "sha256": "e370356f748ce89689fbfcb30570c25a829408c083ddb4350a64e9e657087975",
+          "file": "scratch:render-all-nastaliq/page-03.png"
+        },
+        {
+          "bytes": 257089,
+          "sha256": "295ab01aa3ad8f5d944c20141556d8e2c130d51b569c25d6f11299cffaa7b28f",
+          "file": "scratch:render-all-nastaliq/page-04.png"
+        },
+        {
+          "bytes": 286284,
+          "sha256": "fff57537144435fbb092591d87ca92d29fb622ac8a48534a399f82737fd48560",
+          "file": "scratch:render-all-nastaliq/page-05.png"
+        },
+        {
+          "bytes": 165380,
+          "sha256": "1bdd94a5d5b0ef2e73f0e015f8a230e9aadc55255f1f9532e84ec4e94f1f624f",
+          "file": "scratch:render-all-nastaliq/page-06.png"
+        },
+        {
+          "bytes": 268323,
+          "sha256": "b796fa8076778bd6b91de3502af0ee29b4e9417a9027f90219ed8ad1cfbf4582",
+          "file": "scratch:render-all-nastaliq/page-07.png"
+        },
+        {
+          "bytes": 223118,
+          "sha256": "1e9773299a3378bdc2c51bb3649716cd5237a9a0d60fb32f504e9152da3c0d5d",
+          "file": "scratch:render-all-nastaliq/page-08.png"
+        },
+        {
+          "bytes": 228847,
+          "sha256": "9aa60a58c80853bb8df1d6f88f414d803b7dd10b8f663db9ea44a2a22f895394",
+          "file": "scratch:render-all-nastaliq/page-09.png"
+        },
+        {
+          "bytes": 190337,
+          "sha256": "54aae7541bb2e1a34a6c38fecf58dbc11f9f461d8c1bfb1f3a3886e310feb7e9",
+          "file": "scratch:render-all-nastaliq/page-10.png"
+        },
+        {
+          "bytes": 172642,
+          "sha256": "b7c4439173c4e4f2e0d7f042df71d0384c6e3e408a6cb3a39d886743865652eb",
+          "file": "scratch:render-all-nastaliq/page-11.png"
+        },
+        {
+          "bytes": 182496,
+          "sha256": "811efc2f781b1edc7a1e27ebb359d0d753f40317bbaf237f372d2d02f9ebed20",
+          "file": "scratch:render-all-nastaliq/page-12.png"
+        },
+        {
+          "bytes": 257303,
+          "sha256": "6f5f8a655f8e249206b5837f584775a52e5526519a6112cd725243b666dc0310",
+          "file": "scratch:render-all-nastaliq/page-13.png"
+        },
+        {
+          "bytes": 165885,
+          "sha256": "bc974f3c33b676fbadcad9aaa53f5e28d9c4d7b3393d665d93924f8ec7a88b0a",
+          "file": "scratch:render-all-nastaliq/page-14.png"
+        },
+        {
+          "bytes": 252521,
+          "sha256": "32261441a4bc79188974a51079eca7be8ba19dd61e8c6e2c3155620ca833094f",
+          "file": "scratch:render-all-nastaliq/page-15.png"
+        },
+        {
+          "bytes": 299390,
+          "sha256": "2b6faf61831e80473d529d82d478acacb2a75ba733f088203fa1015ef13cfc47",
+          "file": "scratch:render-all-nastaliq/page-16.png"
+        },
+        {
+          "bytes": 200177,
+          "sha256": "3b1fe6925a04e1ca5a2437839dad310c3af8be760462492530c77a7fa9bc2cf9",
+          "file": "scratch:render-all-nastaliq/page-17.png"
+        }
+      ]
     }
   },
   "visual_review": {
     "renderer": "Poppler pdftoppm",
-    "render_dpi": 140,
+    "render_dpi": 180,
     "all_pages_rendered": 29,
-    "all_pages_inspected_using_full_contact_sheets": true,
+    "all_pages_inspected_using_complete_labeled_contact_sheets": true,
     "naskh_pages_inspected": [
       1,
       2,
@@ -97,50 +280,67 @@
       16,
       17
     ],
-    "individual_original_resolution_pages": {
+    "individual_original_render_recheck": {
+      "profile": "naskh",
+      "printed_page": 10,
+      "assembled_pdf_page_1based": 11
+    },
+    "contact_sheets": {
       "naskh": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
+        {
+          "bytes": 973512,
+          "sha256": "e08594494bf23e014924956c017cf74c49de6788e939b77daf2c0ed4343ae49f",
+          "file": "scratch:contact-naskh-01.png"
+        },
+        {
+          "bytes": 1603868,
+          "sha256": "0a27498c366dbb6622f1c5371ade3a872480f2b25c49e5c74430439789dc479d",
+          "file": "scratch:contact-naskh-02.png"
+        },
+        {
+          "bytes": 1745790,
+          "sha256": "08e81bdf3a2e42d8c641bf474922540b5ff136d9d840e658f005bf6511f1a120",
+          "file": "scratch:contact-naskh-03.png"
+        }
       ],
       "nastaliq": [
-        4,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17
+        {
+          "bytes": 938444,
+          "sha256": "c5dff845b45618805c0a6afe1ea4400622d7573658a23ace3ac72dab6e6f670d",
+          "file": "scratch:contact-nastaliq-01.png"
+        },
+        {
+          "bytes": 1600453,
+          "sha256": "75346eb42ceb267c2532d4f51eef182bfb3cf7a3f3c60f902a11bfb766d11d16",
+          "file": "scratch:contact-nastaliq-02.png"
+        },
+        {
+          "bytes": 1343180,
+          "sha256": "b81219de46814ebf3314fa0662b9204b0feaeed94a0338bd11faf07d76f3bb16",
+          "file": "scratch:contact-nastaliq-03.png"
+        },
+        {
+          "bytes": 982714,
+          "sha256": "6d2649a7c60435b832f6764e63f7884c09dcd83b1ae126c674167cc03dda75b5",
+          "file": "scratch:contact-nastaliq-04.png"
+        },
+        {
+          "bytes": 236395,
+          "sha256": "d2eb003db1e84b9bdbe8e00107edf4d464e551765b3127c4b17d17fe9597422c",
+          "file": "scratch:contact-nastaliq-05.png"
+        }
       ]
-    },
-    "targeted_300_dpi_footer_checks": {
-      "nastaliq": [
-        12,
-        14
-      ]
-    },
-    "contact_sheet_sha256": {
-      "naskh": "e9d1019d0c01a4219f136924a7e229581ea2e875d89b960b93167957d2ddf793",
-      "nastaliq": "16bc1a7beba700e6f1d6b4a178a49996d704f29c1b6726dbd7fb8296add834b3"
     },
     "checks": [
       "page completeness and margins",
       "overlap, clipping and overflow",
       "Arabic-script glyph shaping and missing-glyph boxes",
       "LTR mathematical formula order",
-      "LTR order inside all explicit English terminology bridges",
+      "LTR order inside explicit English terminology bridges",
       "section, definition, example, exercise and figure numbering",
       "three retained source diagrams",
-      "page-number legibility"
+      "page-number legibility",
+      "embedded fonts in both profiles"
     ],
     "visible_defects": [],
     "result": "PASS"

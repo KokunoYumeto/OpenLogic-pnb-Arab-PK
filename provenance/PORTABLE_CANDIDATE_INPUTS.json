@@ -35,13 +35,13 @@
       "unit_id": "OLP-0009",
       "source_path": "content/sets-functions-relations/sets/pairs-and-products.tex",
       "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
-      "translation_sha256": "c92adddb9fee4970a216a49b672dccbf17a727add81babe234b6feea798722fa"
+      "translation_sha256": "0492517400d9fe7b4ac77558bf2028dd61f101646bd2068c774bbc9b10624c5e"
     },
     {
       "unit_id": "OLP-0010",
       "source_path": "content/sets-functions-relations/sets/russells-paradox.tex",
       "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
-      "translation_sha256": "d2307bc120b306968703011abbd6036b46f8e4dfcbda58a387bec9b3666e8a5a"
+      "translation_sha256": "c6a36353f264aaeb76a3db74efef7aa7e5f3f9fabe1038b26822d2c2dee1914b"
     }
   ],
   "body_sections": 6,
@@ -126,7 +126,7 @@
       "unit": "russells-paradox",
       "label": "cumul:::part",
       "included_branch": "no",
-      "omitted_sha256": "505ec593ea32e77d6c3c1a7c12e19c310e5d5c2adfbd7b5784b4525aa05cf145",
+      "omitted_sha256": "ee06fae6f537663f1b07e03e0cf6a65e37452bd7a31bc64ae2d9f892a3f5d2d9",
       "reason": "Exact source conditional evaluated against this complete chapter reader, not the whole edition."
     }
   ],
@@ -546,12 +546,180 @@
       "source": "(set difference)",
       "rendering": "\\textenglish{(set difference)}",
       "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "Pairs, Tuples, Cartesian Products",
+      "source": "(Pairs, Tuples, Cartesian Products)",
+      "rendering": "\\textenglish{(Pairs, Tuples, Cartesian Products)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "ordered pairs",
+      "source": "(ordered pairs)",
+      "rendering": "\\textenglish{(ordered pairs)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "unordered pair",
+      "source": "(unordered pair)",
+      "rendering": "\\textenglish{(unordered pair)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "Ordered pair",
+      "source": "(Ordered pair)",
+      "rendering": "\\textenglish{(Ordered pair)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "ordered sequences",
+      "source": "(ordered sequences)",
+      "rendering": "\\textenglish{(ordered sequences)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "triples",
+      "source": "(triples)",
+      "rendering": "\\textenglish{(triples)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "quadruples",
+      "source": "(quadruples)",
+      "rendering": "\\textenglish{(quadruples)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "ordered n-tuples",
+      "source": "(ordered n-tuples)",
+      "rendering": "\\textenglish{(ordered n-tuples)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "Cartesian product",
+      "source": "(Cartesian product)",
+      "rendering": "\\textenglish{(Cartesian product)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "Cartesian product",
+      "source": "(Cartesian product)",
+      "rendering": "\\textenglish{(Cartesian product)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "recursive definition",
+      "source": "(recursive definition)",
+      "rendering": "\\textenglish{(recursive definition)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "grid",
+      "source": "(grid)",
+      "rendering": "\\textenglish{(grid)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "mathematical induction",
+      "source": "(mathematical induction)",
+      "rendering": "\\textenglish{(mathematical induction)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "word",
+      "source": "(word)",
+      "rendering": "\\textenglish{(word)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "pairs-and-products",
+      "text": "sequence",
+      "source": "(sequence)",
+      "rendering": "\\textenglish{(sequence)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "Russell's Paradox",
+      "source": "(Russell's Paradox)",
+      "rendering": "\\textenglish{(Russell's Paradox)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "unique",
+      "source": "(unique)",
+      "rendering": "\\textenglish{(unique)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "comprehension",
+      "source": "(comprehension)",
+      "rendering": "\\textenglish{(comprehension)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "non-self-membered",
+      "source": "(non-self-membered)",
+      "rendering": "\\textenglish{(non-self-membered)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "Russell's Paradox",
+      "source": "(Russell's Paradox)",
+      "rendering": "\\textenglish{(Russell's Paradox)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "contradiction",
+      "source": "(contradiction)",
+      "rendering": "\\textenglish{(contradiction)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "inconsistent",
+      "source": "(inconsistent)",
+      "rendering": "\\textenglish{(inconsistent)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "axioms",
+      "source": "(axioms)",
+      "rendering": "\\textenglish{(axioms)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "russells-paradox",
+      "text": "genuinely naive",
+      "source": "(genuinely naive)",
+      "rendering": "\\textenglish{(genuinely naive)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
     }
   ],
   "number_direction": "Section and figure presentation numbers isolated LTR; stored label numbers unchanged.",
   "emphasis_rendering": "Bold upright for native Arabic-script emphasis; no unavailable italic fallback. Nastaliq bold is explicitly synthetic weight.",
   "nastaliq_font_sha256": "41d67104d4021b50691635c3b693bf20ab19290a9361c32e3ddcb3405278f8a5",
-  "builder_sha256": "fac10925664a7cd03574ea8a40834676926c439264f0e6e5eb324a211760923c",
+  "builder_sha256": "eb80ef24c8ed36546857cc21e54bbb8e4b42f45cdeab12c8e235ab4cb54ae16b",
   "preamble_sha256": "d7d7c99cc277df864a1c919b11127a6e72dec57cd6e10308121fee7a76447f59",
   "status": "tex_generated_no_pdf_acceptance",
   "fonts": [

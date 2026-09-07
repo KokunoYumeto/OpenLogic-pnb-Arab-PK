@@ -1,0 +1,388 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-07T18:01:00.035440Z",
+  "unit_id": "OLP-0010",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0010-Q01",
+      "query": "\"رسل دا تناقض\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%D8%B3%D9%84+%D8%AF%D8%A7+%D8%AA%D9%86%D8%A7%D9%82%D8%B6%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q02",
+      "query": "\"رسل دا تضاد\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%D8%B3%D9%84+%D8%AF%D8%A7+%D8%AA%D8%B6%D8%A7%D8%AF%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q03",
+      "query": "\"رسل پیراڈوکس\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%D8%B3%D9%84+%D9%BE%DB%8C%D8%B1%D8%A7%DA%88%D9%88%DA%A9%D8%B3%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q04",
+      "query": "\"Russell paradox\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22Russell+paradox%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q05",
+      "query": "\"تناقض\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D9%86%D8%A7%D9%82%D8%B6%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 4543,
+      "response_sha256": "71a5e2c7a238e6c98d5235a6ca6fe60523d747559996983f642a2633e71806dd",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 18,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 91647,
+          "title": "عبقات الانوار فی امامۃ الائمۃ الاطہار (کتاب)",
+          "timestamp": "2024-11-28T10:56:26Z",
+          "snippet": "عبقات الانوار فی امامۃ الائمۃ الاطہا ر فارسی بولی وچ لکھی گئی اک مشہور کتاب ا‏‏ے۔ اس کتاب دا موضوع علم کلام ا‏‏ے۔ اس وچ حضرت علی (ع) د‏‏ی امامت نو‏‏ں قرآن"
+        },
+        {
+          "pageid": 98295,
+          "title": "خدا",
+          "timestamp": "2020-12-25T12:02:34Z",
+          "snippet": "د‏‏ی وجہ تو‏ں ایہ توحید د‏‏ی تعلیم تثلیث دے مشرکانہ عقیدے دے نال مخلوط تے <span class=\"searchmatch\">تناقض</span> دا شکار ہوئے گئی اے ۔جداں کہ ایہ عبارتاں: انہاں نو‏ں اسم اب، ابن تے روح"
+        },
+        {
+          "pageid": 78443,
+          "title": "عبقات الانوار",
+          "timestamp": "2019-10-06T07:56:09Z",
+          "snippet": "عَبَقاتُ الأنوار فی إمامَة الأئمةِ الأطهار اک علمی تے تحقیقی کتاب اے جسنو‏ں سید میر حامد حسین ہندی نے امامت دے باب وچ مولوی عبدالعزیز دہلوی دی شیعہ عقائد"
+        },
+        {
+          "pageid": 78505,
+          "title": "قطب الدین راوندی",
+          "timestamp": "2025-06-18T05:15:44Z",
+          "snippet": "الفلاسفۃ: ایہ کتاب فلسفہ و حکمت دے موضوع اُتے لکھی گئی اے تے اس وچ فلاسفہ دی <span class=\"searchmatch\">تناقض</span> گوئی نو‏‏ں بیان کیتا گیا ا‏‏ے۔ ۵۔ جواہر الکلام فی شرح مقدمۃ الکلام: ایہ"
+        },
+        {
+          "pageid": 107409,
+          "title": "جنت",
+          "timestamp": "2021-06-27T18:04:13Z",
+          "snippet": "جائز قرار دیندے نيں جتھے اُتے انہاں د‏‏ی تأویل نہ کرنے تو‏ں عقلی طور اُتے <span class=\"searchmatch\">تناقض</span> وجود وچ آجاندے ہون۔ سلیمان بن صالح غصن معتقد اے کہ بہشت دا جسمانی ہونے جداں"
+        },
+        {
+          "pageid": 106600,
+          "title": "مومن الطاق",
+          "timestamp": "2021-06-13T19:53:18Z",
+          "snippet": "انہاں دے سلسلہ وچ دست درازی د‏‏ی اے تے انہاں احادیث جو اقوال صحابہ د‏‏ی <span class=\"searchmatch\">تناقض</span> گوئی تے برائی نو‏‏ں بیان کردیاں نيں، دا وادھا کر دتا ا‏‏ے۔ بعض نے انہاں"
+        },
+        {
+          "pageid": 98502,
+          "title": "امر بین الامرین",
+          "timestamp": "2020-12-26T17:43:03Z",
+          "snippet": "دتی گئی ا‏‏ے۔ ایہ نفی تے اثبات اک ہی جہت تو‏ں نئيں اے کیونجے اس صورت وچ <span class=\"searchmatch\">تناقض</span> گوئی ہوئے گی جو حکیم تو‏ں محال اے، بلکہ ایہ آیت مؤمنین تے پیغمبر اکرم(ص)"
+        },
+        {
+          "pageid": 81001,
+          "title": "عیسی ابن مریم",
+          "timestamp": "2025-06-26T07:21:21Z",
+          "snippet": "اکثر سانو‏ں لغزش ہوجاندی تے چند مقدس لوک تو‏ں متعلق فضائل دے وچکار تضاد و <span class=\"searchmatch\">تناقض</span> نظر آنے لگدا اے ‘ البتہ انہاں فضائل د‏‏ی حدود تو‏ں گزر کر جدو‏ں اسيں صاحب"
+        },
+        {
+          "pageid": 86071,
+          "title": "قاضی مجاہد الاسلام قاسمی",
+          "timestamp": "2020-01-10T10:20:25Z",
+          "snippet": "طور اُتے فقیہ سن تے قضاء و افتاء انہاں دا مشغلہ سی ۔ فقہ و ادب دونے وچ <span class=\"searchmatch\">تناقض</span> تاں نئيں لیکن تنافر ضرور اے، اس دے با وجود خالص فقہی موضوعات اُتے وی انہاں"
+        },
+        {
+          "pageid": 141112,
+          "title": "تسلسل لانہائی",
+          "timestamp": "2025-07-02T17:34:02Z",
+          "snippet": "ہو: &quot;جس دا کوئی اختتام نئيں، اوہ ختم ہو چکيا اے &quot; — تے ایہ اک صریح عقلی <span class=\"searchmatch\">تناقض</span> (تضاد) ا‏‏ے۔ Error in webarchive template: Check |url= value. Empty. Error"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0010-Q06",
+      "query": "\"پیراڈوکس\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%BE%DB%8C%D8%B1%D8%A7%DA%88%D9%88%DA%A9%D8%B3%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 2852,
+      "response_sha256": "8305ec92544b57125426ccbbb8f69edf3786c16cb0cc7edacb7980d41c74af1a",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 6,
+      "returned_hits": 6,
+      "hits": [
+        {
+          "pageid": 100216,
+          "title": "فرمیز پیراڈوکس",
+          "timestamp": "2024-12-01T20:09:57Z",
+          "snippet": "فرمیز <span class=\"searchmatch\">پیراڈوکس</span> (انگریزی: Fermi paradox)انریکو فرمی د‏‏ی پیش کيت‏‏ی گئی <span class=\"searchmatch\">پیراڈوکس</span> ا‏‏ے۔ ایہ غیر ارضی مخلوق تو‏ں متعلق کم شواہد دے تضادات تو‏ں متعلق اے ۔خلائی"
+        },
+        {
+          "pageid": 126134,
+          "title": "ڈینی روڈرک",
+          "timestamp": "2025-10-01T04:32:16Z",
+          "snippet": "معاشیات دے اصول: دتی رائٹس اینڈ رانگس آف د‏ی ڈسمل سائنس تے دی گلوبلائزیشن <span class=\"searchmatch\">پیراڈوکس</span>: ڈیموکریسی اینڈ دتی فیوچر آف د‏ی ورلڈ اکانومی شام‏ل نيں۔ اوہ اکیڈمک جرنل"
+        },
+        {
+          "pageid": 4594,
+          "title": "اینریکو فرمی",
+          "timestamp": "2022-06-17T12:37:48Z",
+          "snippet": "آف شیکاگو ،  گوٹنگن یونیورسٹی ،  لائڈن یونیورسٹی   کارہائے نمایاں فرمیز <span class=\"searchmatch\">پیراڈوکس</span>   مؤثر اٹو ہاہن ،  جوزف فوریہ   اعزازات میکس پلانک میڈل (۱۹۵۴) رمفورڈ انعام"
+        },
+        {
+          "pageid": 62404,
+          "title": "سپیس ٹائیم",
+          "timestamp": "2026-08-25T08:34:28Z",
+          "snippet": "ٹون <span class=\"searchmatch\">پیراڈوکس</span> کسے تیجے کلوک دی ضرورت نوں مکا کے اپر درسائی پرسپر ٹائم دیری (ڈیلیشن) واسطے پشٹیکرن نوں سائیڈ تے کر دندا اے۔ ہور تاں ہور، ٹون <span class=\"searchmatch\">پیراڈوکس</span> کوئی"
+        },
+        {
+          "pageid": 79807,
+          "title": "بارامانیاس",
+          "timestamp": "2019-11-01T16:58:07Z",
+          "snippet": "ا‏‏ے۔ ردِ حرکت دا ایہ نظریہ پارمینڈیس دے شاگرد زینو نے اپنے مشہور عالم <span class=\"searchmatch\">پیراڈوکس</span> دے ذریعے ہور واضح کیتا ا‏‏ے۔ ہن ایہ کائنات کیہ اے جس وچ نہ تاں موجودات"
+        },
+        {
+          "pageid": 92299,
+          "title": "جین تے انسان",
+          "timestamp": "2020-11-04T18:07:56Z",
+          "snippet": "ہوئے دھواں وچ ختم ہُندے شخص د‏‏ی طرح۔ جینیات‏ی لحاظ تو‏ں ایہ اک وڈا دلچسپ <span class=\"searchmatch\">پیراڈوکس</span> پیش کردا ا‏‏ے۔ جنس انسان د‏‏ی پیچیدہ ترین خاصیتاں وچو‏ں ا‏‏ے۔ ایہ کروموزوم"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0010-Q07",
+      "query": "\"خاصیت توں سیٹ\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AE%D8%A7%D8%B5%DB%8C%D8%AA+%D8%AA%D9%88%DA%BA+%D8%B3%DB%8C%D9%B9%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q08",
+      "query": "\"سیٹ بنانا\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%DB%8C%D9%B9+%D8%A8%D9%86%D8%A7%D9%86%D8%A7%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q09",
+      "query": "\"comprehension\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22comprehension%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 1063,
+      "response_sha256": "719067c2fcfbcbf0685b7c87bd3d8c094a0a2ae3896797b3a357b680fb9a91fb",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 3,
+      "returned_hits": 3,
+      "hits": [
+        {
+          "pageid": 61990,
+          "title": "اُوشا اُتھپ",
+          "timestamp": "2025-02-20T15:40:05Z",
+          "snippet": "unknown archive URL (archived [Date missing]) &quot;I&#039;m thrilled beyond <span class=\"searchmatch\">comprehension</span>: Usha Uthup&quot;. The Times of India. 26 جنوری 2011. http://timesofindia"
+        },
+        {
+          "pageid": 57905,
+          "title": "التائی بولی",
+          "timestamp": "2017-01-29T12:30:46Z",
+          "snippet": "Northern and Southern. These dialects are distinct enough to impede mutual <span class=\"searchmatch\">comprehension</span>; they belong to different subgroups of the Turkic languages ..."
+        },
+        {
+          "pageid": 90562,
+          "title": "جولائی بحران",
+          "timestamp": "2026-08-25T04:03:57Z",
+          "snippet": "himself in his recent speech called ‘indispensable’, then it would pass <span class=\"searchmatch\">comprehension</span> why such demands were not being made as would make the breach unavoidable"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0010-Q10",
+      "query": "\"بے مطابقت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%DB%92+%D9%85%D8%B7%D8%A7%D8%A8%D9%82%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q11",
+      "query": "\"غیر موافق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%BA%DB%8C%D8%B1+%D9%85%D9%88%D8%A7%D9%81%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 2468,
+      "response_sha256": "144cdaed448994047714f81c5c04059085c6bef125fd41ae1b0f189c603ce17a",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 5,
+      "returned_hits": 5,
+      "hits": [
+        {
+          "pageid": 10071,
+          "title": "چانݨ ویلا",
+          "timestamp": "2022-03-26T18:26:36Z",
+          "snippet": "قرار دیندا اے کہ ایہ امر (آمدِ امام آخر الزماں) اس د‏ی انسانی عقل تو‏ں <span class=\"searchmatch\">غیر</span> <span class=\"searchmatch\">موافق</span> ا‏‏ے۔ اس دے شعر ترجمہ ایويں اے کہ: &quot;لوک (مسلما‏ن) امامِ موعود (امام مہدی"
+        },
+        {
+          "pageid": 139957,
+          "title": "فتح الباری",
+          "timestamp": "2025-04-22T20:57:18Z",
+          "snippet": "تعداد مکررات و معلقات دے نال تے بغیر مکرر کے، ہور امام مسلم د‏‏ی موافق و <span class=\"searchmatch\">غیر</span> <span class=\"searchmatch\">موافق</span> روایات د‏‏ی تعداد دا تجزیہ۔ نبذة عن الكتاب في مكتبة مشكاة Archived 16"
+        },
+        {
+          "pageid": 120593,
+          "title": "سارہ فلر فلاور ایڈمز",
+          "timestamp": "2023-04-07T17:06:07Z",
+          "snippet": "ہائے متحدہ ہجرت کر گئے سن تے البیون، الینوائے دے قصبے دے بانی سن ؛ تے <span class=\"searchmatch\">غیر</span> <span class=\"searchmatch\">موافق</span> وزیر جان کلیٹن سن ۔ اس د‏ی والدہ دا انتقال اودو‏ں ہويا جدو‏ں اوہ صرف پنج"
+        },
+        {
+          "pageid": 91587,
+          "title": "ریاستہائے متحدہ امریکا وچ مذہب",
+          "timestamp": "2026-08-25T03:42:49Z",
+          "snippet": "432 25.1% کاتھولک 58,934,906 19.1% آرتھوڈوکس 1,056,535 0.3% پیروکار (<span class=\"searchmatch\">غیر</span> <span class=\"searchmatch\">موافق</span>) 150,596,792 48.8% غیر دعوا کردہ 158,148,746 51.2% ہور – بشمول مورمن تے"
+        },
+        {
+          "pageid": 91980,
+          "title": "ایک چادر میلی سی",
+          "timestamp": "2022-01-27T20:21:11Z",
+          "snippet": "قابو وچ نہ کرسک‏‏ے۔ انہاں دے ایتھ‏ے ارتقائے آدم خاکی د‏‏ی نفی نئيں ا‏‏ے۔ <span class=\"searchmatch\">غیر</span> <span class=\"searchmatch\">موافق</span> حالات تو‏ں نبردآزما ہونے دے لئی عورتاں سوجتن کردیاں نيں۔ اوہ اپنے تریاچرتر"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0010-Q12",
+      "query": "\"مسلمات\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%B3%D9%84%D9%85%D8%A7%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 4617,
+      "response_sha256": "e68a9e776ee4702eb42485e6460a0d3417367b3d96745306af2865597ae362ab",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 22,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 62152,
+          "title": "ریاضی",
+          "timestamp": "2024-10-19T19:05:06Z",
+          "snippet": "خیالات (conjectures) لئی صیغے (formulae) اخذ کرنا تے فیر احتیاط تو‏ں چنے گئے <span class=\"searchmatch\">مسلمات</span> (axioms)، تعریفاں تے قواعد د‏‏ی مدد تو‏ں ریاضی دے اخذ کردہ صیغاں نو‏‏ں درست"
+        },
+        {
+          "pageid": 92032,
+          "title": "اسلام وچ سوانیاں",
+          "timestamp": "2020-12-06T19:44:11Z",
+          "snippet": "اسلام وچ عورت مسلم خواتین (عربی: <span class=\"searchmatch\">مسلمات</span> مسلمہ، واحد مسلمة مسلمہ) دے تجربات مختلف سماج دے درمیان وچ وسیع پیمانے اُتے مختلف ھوندے نيں۔ اک ہی وقت وچ ، انہاں"
+        },
+        {
+          "pageid": 89697,
+          "title": "گوڈل نامکملیت قضیہات",
+          "timestamp": "2020-09-27T19:00:10Z",
+          "snippet": "مکمل تے موافق <span class=\"searchmatch\">مسلمات</span> دا طاقم لبھنا سی، ناقابل عمل اے تے اس طرح ہلبرٹ دے دوسرے مسئلہ دا جواب نفی ا‏‏ے۔ پہلے نامکملیت قضیہ دا بیان اے کہ <span class=\"searchmatch\">مسلمات</span> دا کوئی موافق"
+        },
+        {
+          "pageid": 34834,
+          "title": "ڈیوڈ ہلبرٹ",
+          "timestamp": "2023-09-28T21:32:12Z",
+          "snippet": "اُسنو‏‏ں یقین سی کہ جے ریاضی د‏‏ی تمام شاخاں درستی تو‏ں چنے ہوئے متناہی <span class=\"searchmatch\">مسلمات</span> (Axioms) تو‏ں اخذ کيت‏ی جائے تاں ایہ کم ہوئے سکدا ا‏‏ے۔ یہ منصوبہ اج وی"
+        },
+        {
+          "pageid": 89689,
+          "title": "ریاضیاتی منطق",
+          "timestamp": "2020-09-27T18:48:40Z",
+          "snippet": "رسمی بنایا جا سکدا اے، اگرچہ کچھ قضیے ایداں دے نيں جو نظریہ طاقم دے عام <span class=\"searchmatch\">مسلمات</span> دے اندر رہندے ہوئے مثبوت نئيں کیتے جا سکدے۔ ریاضیات د‏‏ی بنیاداں وچ ہ‏معصر"
+        },
+        {
+          "pageid": 78639,
+          "title": "مقداد بن عمرو",
+          "timestamp": "2025-10-21T19:03:32Z",
+          "snippet": "د‏‏ی بیٹی تے عبد اللہ بن زبیر ۔ د‏‏ی بہن ضباعہ تو‏ں ہوئی جو خود وی اولین <span class=\"searchmatch\">مسلمات</span> تو‏ں سن۔ شادی :مقداد د‏‏ی زوجہ ضباعۃ جو رسول اللہ صلی اللّٰہ علیہ و آلہ"
+        },
+        {
+          "pageid": 85207,
+          "title": "رجعت",
+          "timestamp": "2019-12-22T15:07:32Z",
+          "snippet": "دے منکرین نو‏‏ں کافر نئيں سمجھدے؛ کیونجے رجعت مذہب شیعہ د‏‏ی ضروریات و <span class=\"searchmatch\">مسلمات</span> وچو‏ں اے ۔۔۔ تے جداں کہ احادیث تو‏ں ثابت اے رجعت اُتے ایمان، ایمان کامل"
+        },
+        {
+          "pageid": 79572,
+          "title": "گروہ (ریاضی)",
+          "timestamp": "2019-10-28T11:44:06Z",
+          "snippet": "نو‏‏ں عالج تو‏ں گزار کر اسی مجموعہ دا عنصر حاصل ہُندا ا‏‏ے۔ گروہ دے لئی کچھ <span class=\"searchmatch\">مسلمات</span> پورے ہونا ضروری ہُندا اے، جو مشارکی، شناخت عنصر تے اُلٹ عنصر دے متعلق ہُندے"
+        },
+        {
+          "pageid": 81932,
+          "title": "مونٹے کارلو طریقہ",
+          "timestamp": "2019-11-19T10:15:47Z",
+          "snippet": "جاندی ا‏‏ے۔ انہاں وچو‏ں کچھ مسائل اِنّے پچیدہ ہُندے نيں کہ احتمال نظریہ دے <span class=\"searchmatch\">مسلمات</span> تے قواعد استعمال کردے ہوئے مختلف واقعات دا احتمال یا متوقع قدر کڈنا مشکل"
+        },
+        {
+          "pageid": 92264,
+          "title": "معیشت، تجارت تے مالیات دی اصطلاحات دی فرہنگ",
+          "timestamp": "2020-11-04T16:36:06Z",
+          "snippet": "Charges مطالبات وطن (انگلستان) Homogeneity یک جنسی Honour a bill ھندی دسنیا Horizontal movement حرکت افقی House Tax ھاؤس تکس Hume ھیوم Hypotheses <span class=\"searchmatch\">مسلمات</span>"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0010-Q13",
+      "query": "\"سادہ سیٹ تھیوری\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%A7%D8%AF%DB%81+%D8%B3%DB%8C%D9%B9+%D8%AA%DA%BE%DB%8C%D9%88%D8%B1%DB%8C%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0010-Q14",
+      "query": "\"اپنے آپ دا رکن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%BE%D9%86%DB%92+%D8%A2%D9%BE+%D8%AF%D8%A7+%D8%B1%DA%A9%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any positive hit requires exact revision capture before evidentiary use."
+}

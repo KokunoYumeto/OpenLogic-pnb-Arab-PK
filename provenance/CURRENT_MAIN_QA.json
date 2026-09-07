@@ -20,43 +20,41 @@
     "Infinite"
   ],
   "current_chapter_progress": "Propositional Logic through the detailed Sequent Calculus chapter driver, rule foundations, propositional and quantifier rules, structural rules and worked derivations, OLP-0074",
-  "accepted_reader_chapters": [],
+  "visually_accepted_local_candidate_chapters": [
+    "Sets"
+  ],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
     "units": 74,
     "sha256": "7d492657829cf55c9519ececcf093d332f7922da47bb44606312d89bd62be6fb",
-    "historical_checkpoint": true,
-    "all_passed_at_historical_checkpoint": true,
-    "semantic_acceptance_superseded": true
+    "all_passed": true
   },
   "current_regression": {
     "file": "AUDIT-REGRESSION-0074.json",
     "sha256": "d4972f2740c9c2407fcb77b91700c33f81649cbe1d0744b7aa78a4dcc27ace42",
-    "historical_checkpoint": true,
-    "all_passed_at_historical_checkpoint": true,
-    "current_target_identity_superseded_by": "REPAIRED_PREFIX_QA.json plus the isolated extensionality and OLP0018 repair receipts"
+    "all_passed": true
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
+    "bytes": 1128644,
+    "sha256": "bc899221d5ab8ae433be6bc0cb05fe0ea1997f1cd2a08af8bbf12a841397d49a",
     "rows": 1220,
-    "bytes": 1114509,
-    "sha256": "1f4be28c11614ed56201434e730c5a6606e250e45782dd1c82b1f2bbc4847434",
     "canonical_unit_block_order": true,
-    "scope": "Exact owner projection; records consultation and repair state but does not itself grant semantic acceptance."
+    "scope": "Exact owner projection; records consultation and repair state but grants semantic acceptance only through the validated prefix."
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 128,
-    "bytes": 134742,
-    "sha256": "e9be344a3e08e5f8b1016703d75bcd97e6c492d3071bfe548b0e2801baa5fdd0",
+    "bytes": 141439,
+    "sha256": "e7b9a116af453e42bdd9674d51db8674bf3ce3762349c82429a7cd32e423fd21",
+    "entries": 130,
     "scope": "Provisional decision inventory; community usage is distinguished from peer-reviewed scholarly attestation."
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 164,
-    "terminology_entries": 122,
+    "entries": 172,
+    "terminology_entries": 130,
     "source_fidelity_entries": 42,
-    "sha256": "dc74cb30fb3550fda67b724e45b0a6847b9f65c35e4347f237819bff1a2e80fe",
+    "sha256": "5cd5f55e593dfa8dad0124995de9e8b84e10f1319952698958a9a2824e09cc87",
     "occurrence_source_target_line_ranges": true,
     "structural_section_scope": true,
     "language_script_locale": "Punjabi / Arabic (Shahmukhi) / pnb-Arab-PK",
@@ -66,13 +64,13 @@
   "translation_decision_surfaces": {
     "directory": "translation-decisions",
     "shared_schema_sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "decisions": 164,
+    "decisions": 172,
     "occurrences": 2724,
-    "high_priority_decisions": 162,
-    "occurrences_with_accepted_reader_pages": 243,
-    "occurrences_pending_reader_pages": 2481,
-    "decisions_json_sha256": "24f224fd555b87db493b6de0f39e52ec3e76d00ea196ff392b92376db93c9ea8",
-    "qa_sha256": "1e9603eda8c468ed345e13806706963ae4f5e5b35f1ff65ca9d2254d0b6de8e0",
+    "high_priority_decisions": 146,
+    "occurrences_with_accepted_reader_pages": 0,
+    "occurrences_pending_reader_pages": 2724,
+    "decisions_json_sha256": "ae3ca877ccf8071999a9ab94f222800380f1aa0af78836007ed2ceaf7d97e24d",
+    "qa_sha256": "26dd3671e10683163e3e0cadf02ae9ab4fc5272ebb4ed3b16bbf00d57c1a0e4a",
     "surfaces": [
       "START_HERE.md",
       "TRANSLATION_DECISIONS_FULL.md",
@@ -141,118 +139,113 @@
     "accepted_reader": "Complete Sets chapter only",
     "release_assets_unchanged": true,
     "github_release": "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/tag/v0.1.0",
-    "doi": "10.5281/zenodo.22308437",
-    "semantic_acceptance_superseded": true,
-    "immutable": true
+    "doi": "10.5281/zenodo.22308437"
   },
   "limits": [
     "This corrective branch checkpoint is not a new binary reader release.",
-    "Semantic acceptance is limited to the validated repaired prefix OLP-0001 through OLP-0008; isolated later repairs do not accept their units.",
+    "Semantic acceptance is limited to the validated repaired prefix OLP-0001 through OLP-0010; isolated later repairs do not accept their units.",
     "Revision-bound community Shahmukhi mathematical usage is not peer-reviewed scholarly canon; unattested specialist terminology remains explicit, reversible and definition/source-governed.",
-    "The historical v0.1.0 reader remains immutable and its layout evidence remains historical; no complete reader chapter currently has post-revalidation semantic acceptance.",
+    "The historical v0.1.0 reader and Zenodo record remain immutable. The new portable candidate is locally reproducible and visually accepted but not released.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ],
-  "status": "CANON_REPAIR_IN_PROGRESS_VALIDATED_PREFIX_ONLY",
+  "status": "CURRENT_MAIN_SOURCE_AND_PROVENANCE_CHECKPOINT_PUBLICATION_PENDING",
   "historical_main_commit": "6c4b2f319903b3ec36af7841b108bfc74ebadf58",
+  "previous_public_main_commit": "3e1d82bf1f32d3a8dc5940ec93db2b01e327708d",
   "publication_commit": null,
-  "publication_commit_policy": "The corrective commit is recorded in external durable and anonymous readback receipts after publication; it is not self-embedded in this commit-addressed file.",
-  "historical_reader_layout_accepted_chapters": [
-    "Sets"
-  ],
+  "publication_commit_policy": "Set only after push and anonymous raw plus codeload verification.",
+  "semantic_repair_choices": {
+    "file": "SEMANTIC_REPAIR_CHOICES.jsonl",
+    "bytes": 823845,
+    "sha256": "42b65c2f3f6dca096b34549b60bd24afa447ab099b0bab667ef572ca097bd8ca",
+    "entries": 110,
+    "scope": "Exact choice-level repair records; provisional resolution is not conventional-term attestation or corpus-wide acceptance."
+  },
+  "current_identity_verifier": {
+    "file": "../tools/verify_source_identity.py",
+    "bytes": 7861,
+    "sha256": "253a4a5b2f5c9ac3d2cd35b5a172806b55b9fd966230bc91c1d4fa27d4712094",
+    "scope": "Verifies 722 frozen sources, all 74 current target identities against historical or exact repair receipts, repaired-prefix structural gates, and current portable-candidate evidence; it does not expand semantic acceptance beyond OLP-0010."
+  },
   "semantic_status": {
-    "forensic_audit": {
-      "audit_id": "CANON-REVALIDATION-pnb-Arab-PK-20260906",
+    "forensic_baseline": {
+      "audit": "CANON-REVALIDATION-pnb-Arab-PK-20260906",
       "choice_groups": 1221,
       "formal_invariants": 430,
       "unsupported": 776,
       "needs_revision": 1,
       "contentious": 14,
-      "supported": 0,
-      "supported_provisional": 0,
-      "result": "COMPLETE_AUDIT_REPAIR_REQUIRED",
-      "choices_sha256": "07ae6bbc81bd4f61fd26c8e2fcc371a16c8130b5386e2a2e065dbcf79292ed8a"
-    },
-    "historical_translation": {
-      "units": 74,
-      "range": "OLP-0001 through OLP-0074",
-      "classification": "historically and provenancially accepted, semantically unaccepted draft except for the validated repaired prefix"
+      "immutable": true
     },
     "validated_repaired_prefix": {
-      "range": "OLP-0001 through OLP-0008",
-      "units": 8,
-      "choice_groups": 128,
-      "formal_invariants": 60,
-      "supported_provisional": 68,
+      "range": "OLP-0001 through OLP-0010",
+      "units": 10,
+      "choice_groups": 163,
+      "formal_invariants": 68,
+      "supported_provisional": 95,
       "unsupported": 0,
       "needs_revision": 0,
       "contentious": 0,
       "errors": 0,
-      "report": "REPAIRED_PREFIX_QA.json",
-      "report_bytes": 42954,
-      "report_sha256": "3cd3676645b5939abdf9666946d5316e21c30df751c82d2a856bb6f5887126be"
+      "file": "REPAIRED_PREFIX_QA.json",
+      "bytes": 56839,
+      "sha256": "fdc814cee014ea39453aaf1f7160a6274d79c311d48de7cf07fee53da60b29ec"
     },
-    "next_repair_choice": "pnb-Arab-PK:OLP-0009-B004:C001",
-    "forward_authoring_after_OLP_0074_frozen": true,
-    "corpus_semantic_acceptance": false,
     "isolated_or_superseded_repairs": {
       "extensionality_choices_total": 14,
-      "extensionality_choices_within_prefix_superseded_by_full_records": 7,
-      "extensionality_choices_still_isolated_outside_prefix": 7,
-      "extensionality_receipt": "EXTENSIONALITY_ADJUDICATION.json",
-      "extensionality_receipt_sha256": "bf7d3cbb689d2590ad7346f0619418ae46fd090cfed779967da0206e8e755810",
-      "olp0018_receipt": "OLP0018_THEOREM_REPAIR.json",
-      "olp0018_receipt_sha256": "9f5fe0e8dc0c04ce6671c4509ccbc80e0c6db467a34c931d61b29da5d7713277",
-      "semantic_acceptance_effect": "The seven OLP-0005/0006 extensionality rows are superseded by complete full-choice prefix records; all other isolated records remain choice-level only until the contiguous lane reaches their units."
-    }
-  },
-  "current_identity_verifier": {
-    "file": "../tools/verify_source_identity.py",
-    "sha256": "4aa0d0e431e57831b4588bd7cbcb6aea22f58d9df36a45a6f9775c25117d85d7",
-    "scope": "Verifies 722 frozen sources, all 74 current target identities against historical or exact repair receipts, recorded structural gates, and the public portable-candidate smoke-QA identities; it does not expand semantic acceptance beyond OLP-0008."
-  },
-  "semantic_repair_choices": {
-    "file": "SEMANTIC_REPAIR_CHOICES.jsonl",
-    "entries": 83,
-    "bytes": 580107,
-    "sha256": "a163874dd3c4d6a79c3ca6bbfabd0debc0c0a068275c9c70f725797832b263fa",
-    "scope": "Exact choice-level repair records; provisional resolution is not conventional-term attestation or corpus-wide acceptance."
+      "extensionality_choices_within_prefix_superseded_by_full_records": 8,
+      "extensionality_choices_still_isolated_outside_prefix": 6,
+      "olp0018_theorem_choice_still_isolated_outside_prefix": true,
+      "semantic_acceptance_effect": "Only full choice records inside the contiguous prefix accept units; isolated later repairs do not."
+    },
+    "evidence_counts": {
+      "canon_sources": 15,
+      "canon_passages": 31
+    },
+    "community_evidence_limit": "Revision-bound actual Shahmukhi technical usage, not peer-reviewed scholarly canon.",
+    "effective_remaining_unresolved_choices": 690,
+    "next_repair_choice": "pnb-Arab-PK:OLP-0011-B004:C001",
+    "corpus_semantic_acceptance": false,
+    "forward_authoring_after_OLP_0074_frozen": true
   },
   "portable_candidate": {
-    "status": "reproduced_and_full_page_visually_smoke_tested_not_released",
+    "status": "reproduced_and_all_pages_visually_accepted_not_released",
     "builder": {
-      "bytes": 12116,
-      "sha256": "fac10925664a7cd03574ea8a40834676926c439264f0e6e5eb324a211760923c",
+      "bytes": 12121,
+      "sha256": "eb80ef24c8ed36546857cc21e54bbb8e4b42f45cdeab12c8e235ab4cb54ae16b",
       "file": "../tools/build_sets_reader.py"
     },
     "inputs": {
-      "bytes": 23031,
-      "sha256": "301c214b9d45c518f3bb99fc32bf3de1816bc6464cec380d99e8593568547576",
-      "file": "PORTABLE_CANDIDATE_INPUTS.json"
+      "file": "PORTABLE_CANDIDATE_INPUTS.json",
+      "bytes": 29715,
+      "sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b"
     },
     "qa": {
-      "bytes": 3912,
-      "sha256": "40e79b46b715bb8b375f8e8e2193a1121ff1544c63a4b1754c2f0a1573b36e65",
-      "file": "PORTABLE_CANDIDATE_QA.json"
+      "file": "PORTABLE_CANDIDATE_QA.json",
+      "bytes": 12245,
+      "sha256": "de746469c5394b295ddf40ac2db1898b1503c126197581f943b3ef949d4aacce"
     },
-    "english_bridge_isolations": 41,
+    "english_bridge_isolations": 65,
     "profiles": {
       "naskh": {
-        "bytes": 134085,
-        "sha256": "9b5cefdf973eac5615e2b111c528b75469b6836a38df31327d15d8f737d189a4",
+        "bytes": 136127,
+        "sha256": "1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313",
         "file": "scratch:sets-naskh.pdf",
         "pages": 12,
-        "reproduced": true
+        "reproduced": true,
+        "all_fonts_embedded": true
       },
       "nastaliq": {
-        "bytes": 190020,
-        "sha256": "2870c4d8de897e7af481d597b951f5e2bb5bc5dd6a0231ceb2edbd6612f71b3e",
+        "bytes": 192407,
+        "sha256": "c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7",
         "file": "scratch:sets-nastaliq.pdf",
         "pages": 17,
-        "reproduced": true
+        "reproduced": true,
+        "all_fonts_embedded": true
       }
     },
     "visual_pages_inspected": 29,
+    "bidi_defect_caught_and_corrected_before_acceptance": true,
     "release_assets_changed": false,
-    "semantic_acceptance_effect": "None; OLP-0009 and OLP-0010 remain historical semantically unaccepted draft within this chapter candidate."
+    "semantic_acceptance_effect": "The candidate covers all seven Sets units, exactly the current OLP-0004 through OLP-0010 source, within the validated OLP-0001 through OLP-0010 prefix."
   }
 }

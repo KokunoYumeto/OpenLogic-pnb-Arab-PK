@@ -1,263 +1,8 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **162 of 164** current decisions.
+This view contains only urgent/high-priority decisions: **146 of 172** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
-
-## `pnb-Arab-PK:PNB-T003`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: set
-- Intended sense: set
-- Chosen Shahmukhi rendering/treatment: سیٹ
-- Rationale: Retain explicit English loan with Punjabi inflection and define in Punjabi. Avoid presenting مجموعہ as verified native technical usage; initial sources only support grammar. No Gurmukhi projection used.
-- Why expert review helps: Native Pakistani Punjabi set-theory attestation not found in bounded initial search; revisit with a verified mathematics/curriculum witness.
-- Please double-check: **Does سیٹ with oblique سیٹاں clearly distinguish a mathematical set from an ordered collection?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0003-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P003` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_prose; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- مجموعہ; a definition-led descriptive set label — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T004`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: element / member of a set
-- Intended sense: element / member of a set
-- Chosen Shahmukhi rendering/treatment: عنصر / رکن
-- Rationale: Arabic-origin terms shared with Urdu/English-mediated mathematics; specialized native Punjabi sense is NOT attested by current canon. Chosen provisionally with an explicit Punjabi definition.
-- Why expert review helps: Compare future native/curriculum usage; do not claim dictionary establishes this concept.
-- Please double-check: **Are عنصر/عنصراں and رکن used with natural Punjabi inflection while keeping element distinct from subset?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0005-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- رکن versus عنصر; definition-led member wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T005`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: extensionality
-- Intended sense: extensionality
-- Chosen Shahmukhi rendering/treatment: عنصراں نال تعیّن
-- Rationale: A transparent phrase indicating that elements determine a set; chosen over unverified technical transliterations or an unqualified وسعت. Native syntax supported, technical phrase coined here.
-- Why expert review helps: Not an attested conventional Punjabi technical term; future replacement remains reversible.
-- Please double-check: **Does عنصراں نال تعیّن express uniqueness by members without implying that every condition determines an existing set?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0005-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- English extensionality bridge; same-members criterion as full phrase — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T006`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: empty set
-- Intended sense: empty set
-- Chosen Shahmukhi rendering/treatment: خالی سیٹ
-- Rationale: See the existing decision record and definition.
-- Why expert review helps: Compound not attested in acquired native mathematical source; defined explicitly.
-- Please double-check: **Does خالی سیٹ unambiguously mean zero members rather than a blank diagram or an unknown set?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0005-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- a set with no members, stated in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T007`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: if and only if
-- Intended sense: if and only if
-- Chosen Shahmukhi rendering/treatment: اُدوں تے صرف اُدوں ... جدوں
-- Rationale: Preserve both implication directions in native temporal-correlative construction used as mathematical conditional. Never shorten to one-way جے.
-- Why expert review helps: Mathematical collocation not attested in acquired sources.
-- Please double-check: **Does اُدوں تے صرف اُدوں ... جدوں clearly convey both directions, unlike the purpose construction تاں جے?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0005-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- جے تے صرف جے; explicit two-direction formulation — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T008`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: perfect number; proper divisor
-- Intended sense: perfect number; proper divisor
-- Chosen Shahmukhi rendering/treatment: کامل عدد؛ اوہ ونڈن والا عدد جو اوس عدد دے برابر نہ ہووے
-- Rationale: کامل عدد is a transparent shared scholarly compound, not claimed as native attestation. Proper divisor uses descriptive Punjabi to preserve exclusion of the number itself.
-- Why expert review helps: Terminology provisional; mathematical examples unchanged.
-- Please double-check: **Does کامل عدد preserve equality with the sum of proper divisors, excluding the number itself?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0001-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P003` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_prose; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- perfect number as an explicit English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T009`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: subset / proper subset / power set
-- Intended sense: subset / proper subset / power set
-- Chosen Shahmukhi rendering/treatment: ذیلی سیٹ / حقیقی ذیلی سیٹ / ذیلی سیٹاں دا سیٹ
-- Rationale: ذیلی and حقیقی are shared scholarly vocabulary, not native technical attestation. Power set is rendered descriptively as the set of subsets, with its exact source definition preserving all subsets.
-- Why expert review helps: Specialized Pakistani Punjabi mathematical witnesses still absent; no dictionary-only authority claimed.
-- Please double-check: **Do حقیقی ذیلی سیٹ and ذیلی سیٹاں دا سیٹ avoid conflating element membership, inclusion, strict inclusion and numerical powers?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0006-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- proper subset as unequal included set; power set described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T010`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: natural / integer / rational / real; infinite; string; sequence
-- Intended sense: natural / integer / rational / real; infinite; string; sequence
-- Chosen Shahmukhi rendering/treatment: قدرتی عدد / صحیح عدد / ناطق عدد / حقیقی عدد؛ لامتناہی؛ لڑی؛ سلسلہ
-- Rationale: Numerical class terms are shared Urdu/Arabic mathematical vocabulary, explicitly provisional for Punjabi; لڑی and سلسلہ describe string/sequence with native prose. All mathematical classes defined by unchanged formulas; naturals include zero.
-- Why expert review helps: Not attested in the acquired native literary canon; future curriculum/native technical evidence may revise labels.
-- Please double-check: **Are number-class and string/sequence labels natural while retaining zero in the naturals and finite versus infinite sequence distinctions?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0003-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- English number-class bridges and explicit sequence descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T011`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: ordered pair / n-tuple / Cartesian product
-- Intended sense: ordered pair / n-tuple / Cartesian product
-- Chosen Shahmukhi rendering/treatment: ترتیب وار جوڑا / ترتیب وار n-ٹپل / کارتیسی حاصلِ ضرب
-- Rationale: Native descriptive جوڑا with order qualifier; tuple uses explicit English bridge; Cartesian name and multiplication phrase are scholarly bridges, not alleged native attestation.
-- Why expert review helps: Native technical attestation pending; ordered components and nesting govern meaning, not term choice.
-- Please double-check: **Is masculine جوڑا with its Punjabi case endings preferable to جوڑی here, while preserving coordinate order and product structure?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0005-B012` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- ترتیب وار جوڑی; Cartesian product with English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T012`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: paradox / comprehension / inconsistent / axiom / induction
-- Intended sense: paradox / comprehension / inconsistent / axiom / induction
-- Chosen Shahmukhi rendering/treatment: تضاد / خاصیت توں سیٹ بنانا / بے مطابقت / مسلّمہ / ریاضیاتی استقرا
-- Rationale: Comprehension rendered descriptively to avoid implying mere understanding; mathematical induction explicitly qualified. Paradox rendered تضاد with Russell name; actual contradiction is explained in proof.
-- Why expert review helps: No specialized Punjabi logic sense attested by acquired canon. Maintain distinction between a paradox's name, contradiction in a proof, and inconsistency of a theory.
-- Please double-check: **Does تضاد in the Russell context preserve the paradox/inconsistency distinction and the conditional, not unrestricted, existence claim?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0009-B018` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- paradox/comprehension with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T013`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: union / intersection / disjoint / set difference / index
-- Intended sense: union / intersection / disjoint / set difference / index
-- Chosen Shahmukhi rendering/treatment: اتحاد / اشتراک / بے سانجھ / سیٹاں دا فرق / اشاریہ
-- Rationale: اتحاد, اشتراک, فرق, اشاریہ are shared scholarly words, not verified native mathematical senses. بے سانجھ is a transparent native descriptor, defined by empty intersection. English source provides all concept constraints, including inclusive union and all-member intersection.
-- Why expert review helps: Native specialized attestation still absent; no inference from generic dictionary or adjacent-language prose.
-- Please double-check: **Do اتحاد/اشتراک preserve inclusive-or versus and, and does بے سانجھ avoid implying that either operand must be empty?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0001-B002` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- اکٹھا کیتا سیٹ; سانجھے عنصراں دا سیٹ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
 
 ## `pnb-Arab-PK:PNB-T014`
 
@@ -271,7 +16,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0011-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -294,7 +39,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B002` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0013-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
@@ -362,7 +107,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B003` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0016-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -442,29 +187,6 @@ Alternatives:
 
 ---
 
-## `pnb-Arab-PK:PNB-T022`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: syntax tree; completeness theorem; propositional logic; first-order logic; computability theory; derivation
-- Intended sense: syntax tree; completeness theorem; propositional logic; first-order logic; computability theory; derivation
-- Chosen Shahmukhi rendering/treatment: نحوی درخت؛ تمامیت دا مسئلہ؛ قضیاتی منطق؛ پہلے درجے دی منطق؛ قابلِ حسابیت دا نظریہ؛ اخذ
-- Rationale: Preserve references to formal syntax, logical completeness and computability without replacing them by ordinary grammatical correctness, completion or calculational speed. Original formula/derivation lexical tokens are retained in editable source.
-- Why expert review helps: These labels have not been established as native Punjabi technical attestation by current prose canon; full topic definitions later in OpenLogic govern their detailed senses.
-- Please double-check: **Do these early cross-domain labels avoid confusing logical completeness with finishing a task, or computability with calculation speed?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0018-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- syntax/completeness/computability with English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
 ## `pnb-Arab-PK:PNB-T023`
 
 - Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
@@ -500,7 +222,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0010-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0022-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -603,52 +325,6 @@ Alternatives:
 
 ---
 
-## `pnb-Arab-PK:PNB-T029`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: size/cardinality of a set; finite; infinite; actual infinity
-- Intended sense: size/cardinality of a set; finite; infinite; actual infinity
-- Chosen Shahmukhi rendering/treatment: سیٹ دا سائز/کارڈینیلٹی؛ متناہی؛ لامتناہی؛ بالفعل لامتناہیت
-- Rationale: Size compares how many elements sets have and will be governed by the chapter's later bijection/injection definitions, not geometric volume. Finite and infinite distinguish whether listing terminates; actual infinity names a completed infinite collection in Cantor's historical framing. The familiar loan سائز is kept reversible with کارڈینیلٹی for later formal use.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. Current canon supports syntax only; later exact OpenLogic definitions govern cardinal comparison and may motivate revising the bridge wording.
-- Please double-check: **Does سائز clearly mean number of elements rather than geometric volume, and do متناہی/لامتناہی plus بالفعل لامتناہیت preserve the finite, infinite and actual-infinity distinctions?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0003-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- سیٹ دی گنتی/قوت; finite and infinite described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T030`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: enumeration; enumerable; countable/uncountable; list
-- Intended sense: enumeration; enumerable; countable/uncountable; list
-- Chosen Shahmukhi rendering/treatment: گنتی وار فہرست؛ گنتی وار فہرست بنن جوگ؛ قابلِ شمار/ناقابلِ شمار؛ لسٹ/فہرست
-- Rationale: The elementary presentation treats an enumeration as an infinite list or a surjection from positive integers; the abstract alternative uses a bijection with the naturals or an initial segment. Descriptive گنتی وار فہرست keeps listability visible, while قابلِ شمار/ناقابلِ شمار remains a reversible scholarly bridge. These versions must not be silently conflated.
-- Why expert review helps: No native technical attestation was acquired. The chapter's alternative definitions and exact formulas govern; terminology remains open to correction and does not imply that every infinite set is listable.
-- Please double-check: **Does گنتی وار فہرست remain natural across the list/surjection and bijection presentations, while قابلِ شمار/ناقابلِ شمار stays definition-governed?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0001-B003` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- شمار بندی; شمار پذیر/ناشمار; explicit list and bijection descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
 ## `pnb-Arab-PK:PNB-T031`
 
 - Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
@@ -661,7 +337,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0019-B017` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -707,7 +383,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B017` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0012-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -902,29 +578,6 @@ Alternatives:
 
 ---
 
-## `pnb-Arab-PK:PNB-T042`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: Cantor's theorem; diagonal subset; extensionality; arbitrary element
-- Intended sense: Cantor's theorem; diagonal subset; extensionality; arbitrary element
-- Chosen Shahmukhi rendering/treatment: کانتور دا قضیہ؛ قطری ذیلی سیٹ؛ توسیعیت؛ من مانا رکن
-- Rationale: Cantor's theorem states that every set is strictly smaller than its power set. The diagonal subset contains exactly those x not belonging to g(x), so it differs extensionally from every value g(x). The corrected proof quantifies over every arbitrary x in A, not merely elements of the diagonal subset.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. The set-builder formula, extensionality step and OLSIZ-007 domain correction govern; these concise labels remain reversible.
-- Please double-check: **Do کانتور دا قضیہ, قطری ذیلی سیٹ and توسیعیت remain understandable when paired with the exact power-set and membership-flip construction?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0036-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- Cantor/diagonal-set/extensionality labels expanded through the proof — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
 ## `pnb-Arab-PK:PNB-T043`
 
 - Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
@@ -1063,29 +716,6 @@ Alternatives:
 
 ---
 
-## `pnb-Arab-PK:PNB-T049`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: ordered field; irrational number; nonnegative principal square root; even and odd; geometric infinite descent
-- Intended sense: ordered field; irrational number; nonnegative principal square root; even and odd; geometric infinite descent
-- Chosen Shahmukhi rendering/treatment: ترتیب دار میدان؛ غیر ناطق عدد؛ غیر منفی اصل جذر؛ جفت تے طاق؛ ہندسی نزولی دلیل
-- Rationale: The source contrasts ordered rational and real fields, defines irrationality by exclusion from the rationals, uses the principal square root of two, and presents geometric and parity-based descent arguments. The Punjabi labels stay adjacent to the governing formulas and full proof steps rather than carrying the concepts alone.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. میدان, اصل جذر and ہندسی نزولی دلیل are reversible scholarly bridges; the exact formulas, parity implications and corrected inactive note govern and remain open to expert correction.
-- Please double-check: **Do ترتیب دار میدان, غیر ناطق, اصل جذر, جفت/طاق and ہندسی نزولی دلیل preserve their distinct roles across the two sqrt(2) proofs?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0006-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- ordered field, irrationality, principal root, parity and geometric descent as definition-governed bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
 ## `pnb-Arab-PK:PNB-T050`
 
 - Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
@@ -1121,7 +751,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B001` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1144,7 +774,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0008-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0012-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1328,7 +958,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0008-B009` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0022-B016` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1374,7 +1004,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0048-B021` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1604,7 +1234,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0002-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 

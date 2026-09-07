@@ -1,8 +1,8 @@
 # Punjabi Shahmukhi Translation Decisions — Complete Index
 
 This complete current-main index is a reversible projection of the durable decision ledger into the shared OpenLogic contract.
-It covers **164 decisions** and **2724 exact source-target occurrences** through `OLP-0074`. It does not imply completion or human review of the remaining corpus.
-Naskh and Nastaliq page references are artifact-specific typography profiles over the same Shahmukhi segment text. Unknown future-reader pages remain explicitly pending.
+It covers **172 decisions** and **2724 exact source-target occurrences** through `OLP-0074`. It does not imply completion or human review of the remaining corpus.
+Reader pages are attached only when a public artifact has byte-identical current repaired text. Historical v0.1.0 page references are not reused; all current occurrences therefore remain explicitly pending.
 
 ## `pnb-Arab-PK:PNB-T001`
 
@@ -24,15 +24,12 @@ Alternatives:
 - logic (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (37):
+Occurrences (34):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T001:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
-| `pnb-Arab-PK:PNB-T001:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
-| `pnb-Arab-PK:PNB-T001:OLP-0008-B019` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:95-97` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:97-100` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T001:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
 | `pnb-Arab-PK:PNB-T001:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0031-B013` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:79-84` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:80-85` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0051-B005` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | pending |
@@ -88,14 +85,13 @@ Alternatives:
 - mathematics (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (19):
+Occurrences (18):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T002:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0001-B003` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:11-19` | `translation/content/open-logic-about.tex:11-17` | pending |
-| `pnb-Arab-PK:PNB-T002:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T002:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:113-116` | Naskh 10; Nastaliq 13 |
+| `pnb-Arab-PK:PNB-T002:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0021-B007` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:23-26` | `translation/content/sets-functions-relations/functions/function-basics.tex:23-26` | pending |
@@ -116,97 +112,101 @@ Occurrences (19):
 
 ## `pnb-Arab-PK:PNB-T003`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **high**; provisional: **no**; review priority: **normal**.
 - Source term/construction: set
 - Intended sense: set
 - Chosen Shahmukhi rendering/treatment: سیٹ
-- Rationale: Retain explicit English loan with Punjabi inflection and define in Punjabi. Avoid presenting مجموعہ as verified native technical usage; initial sources only support grammar. No Gurmukhi projection used.
-- Why expert review helps: Native Pakistani Punjabi set-theory attestation not found in bounded initial search; revisit with a verified mathematics/curriculum witness.
+- Rationale: PNB-P023 directly uses سیٹ تھیوری and explains سیٹ/سیٹاں as collections of objects; PNB-P019 independently places سیٹ نظریہ among mathematical-logic fields. These revision-bound Shahmukhi records establish actual community mathematical usage of the English loan with Punjabi inflection.
+- Why expert review helps: The witnesses are community-edited reference pages, not peer-reviewed Pakistani Punjabi mathematical scholarship. They support actual usage but do not prove an exclusive or universal convention; the choice remains reversible pending stronger evidence.
 - Please double-check: **Does سیٹ with oblique سیٹاں clearly distinguish a mathematical set from an ordered collection?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0003-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P003` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_prose; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P019` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_topic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - مجموعہ; a definition-led descriptive set label — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (288):
+Occurrences (293):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T003:OLP-0003-B004` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:7-7` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:7-7` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0004-B004` | `OLP-0004` / sets-functions-relations / sets | `upstream/content/sets-functions-relations/sets/sets.tex:8-8` | `translation/content/sets-functions-relations/sets/sets.tex:8-8` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-16` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:18-23` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:25-28` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:30-39` | Naskh 1; Nastaliq 1–2 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:41-52` | Naskh 1; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:54-57` | Naskh 2; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:89-91` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:93-96` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B004` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:9-10` | `translation/content/sets-functions-relations/sets/subsets.tex:9-10` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B005` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:12-17` | `translation/content/sets-functions-relations/sets/subsets.tex:12-16` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-24` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:26-31` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:33-39` | Naskh 3; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:41-49` | Naskh 3; Nastaliq 3–4 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:56-60` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B014` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:72-73` | `translation/content/sets-functions-relations/sets/subsets.tex:71-72` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B015` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:75-81` | `translation/content/sets-functions-relations/sets/subsets.tex:74-80` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B016` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:83-92` | `translation/content/sets-functions-relations/sets/subsets.tex:82-91` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T003:OLP-0006-B017` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:94-96` | `translation/content/sets-functions-relations/sets/subsets.tex:93-95` | Naskh 3; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B004` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:9-10` | `translation/content/sets-functions-relations/sets/important-sets.tex:9-10` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B007` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:40-43` | `translation/content/sets-functions-relations/sets/important-sets.tex:38-40` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-57` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T003:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:59-64` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | Naskh 5; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B007` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:42-46` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:48-49` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:51-53` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:59-71` | Naskh 5–6; Nastaliq 7–8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:73-81` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:83-85` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:87-88` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:90-91` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:93-95` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:102-110` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B021` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:109-118` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:112-121` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:123-131` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B023` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:130-136` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:133-139` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B024` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:138-142` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:141-145` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B025` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:144-150` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:147-153` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B026` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:152-153` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:155-157` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:159-164` | Naskh 8; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T003:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:166-172` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:19-28` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:40-49` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B010` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:49-50` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:51-52` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:54-60` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:70-79` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T003:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:118-130` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B006` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:21-25` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:21-24` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:26-33` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:35-42` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B009` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:44-46` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:53-62` | Naskh 10–11; Nastaliq 14–15 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:64-71` | Naskh 11; Nastaliq 15 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:73-77` | Naskh 11; Nastaliq 15 |
-| `pnb-Arab-PK:PNB-T003:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
+| `pnb-Arab-PK:PNB-T003:OLP-0004-B004` | `OLP-0004` / sets-functions-relations / sets | `upstream/content/sets-functions-relations/sets/sets.tex:8-8` | `translation/content/sets-functions-relations/sets/sets.tex:8-8` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:20-25` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:27-31` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:33-42` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:44-55` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:57-61` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:98-101` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B004` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:9-10` | `translation/content/sets-functions-relations/sets/subsets.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B005` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:12-17` | `translation/content/sets-functions-relations/sets/subsets.tex:12-16` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-25` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:27-33` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:43-51` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:58-62` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B014` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:72-73` | `translation/content/sets-functions-relations/sets/subsets.tex:73-74` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B015` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:75-81` | `translation/content/sets-functions-relations/sets/subsets.tex:76-82` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0006-B016` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:83-92` | `translation/content/sets-functions-relations/sets/subsets.tex:84-93` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B004` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:9-10` | `translation/content/sets-functions-relations/sets/important-sets.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B007` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:40-43` | `translation/content/sets-functions-relations/sets/important-sets.tex:38-40` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-58` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:24-29` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B007` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:31-33` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:43-47` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:49-50` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:52-54` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:60-72` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:74-82` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:91-92` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:103-111` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B021` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:109-118` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:113-122` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:124-132` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B023` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:130-136` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:134-140` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B024` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:138-142` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:142-146` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B025` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:144-150` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:148-154` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B026` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:152-153` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:156-158` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:160-165` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:167-173` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:20-29` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:41-51` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B010` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:49-50` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:53-54` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:56-62` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B012` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:60-66` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:64-70` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:72-82` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B014` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:79-81` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B015` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:83-86` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:88-91` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:116-120` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B006` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:21-25` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:22-25` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B009` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B010` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:49-52` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:49-53` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:55-64` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:66-73` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:75-80` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0012-B004` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0012-B005` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
@@ -433,19 +433,18 @@ Occurrences (288):
 
 ## `pnb-Arab-PK:PNB-T004`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: element / member of a set
 - Intended sense: element / member of a set
 - Chosen Shahmukhi rendering/treatment: عنصر / رکن
-- Rationale: Arabic-origin terms shared with Urdu/English-mediated mathematics; specialized native Punjabi sense is NOT attested by current canon. Chosen provisionally with an explicit Punjabi definition.
-- Why expert review helps: Compare future native/curriculum usage; do not claim dictionary establishes this concept.
+- Rationale: The OLP-0005 source defines elements/members as the objects making up a set. The target retains عنصر/رکن and now prints (element/member) at first use, making the unattested pair explicit, searchable and reversible.
+- Why expert review helps: PNB-P023 supports the set concept only; no acquired Punjabi set-theory passage attests either عنصر or رکن for membership. The exact source definition, not external lexical authority, controls the provisional choice.
 - Please double-check: **Are عنصر/عنصراں and رکن used with natural Punjabi inflection while keeping element distinct from subset?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0005-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0005-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -456,53 +455,53 @@ Occurrences (150):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B004` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:9-10` | `translation/content/sets-functions-relations/sets/basics.tex:9-10` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-16` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:18-23` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:25-28` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:30-39` | Naskh 1; Nastaliq 1–2 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:41-52` | Naskh 1; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:54-57` | Naskh 2; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:89-91` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T004:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:93-96` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T004:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-24` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T004:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:33-39` | Naskh 3; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T004:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:41-49` | Naskh 3; Nastaliq 3–4 |
-| `pnb-Arab-PK:PNB-T004:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:56-60` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T004:OLP-0006-B018` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:98-101` | `translation/content/sets-functions-relations/sets/subsets.tex:97-100` | Naskh 3; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T004:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T004:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-57` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T004:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:59-64` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | Naskh 5; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:42-46` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:59-71` | Naskh 5–6; Nastaliq 7–8 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:73-81` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:83-85` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:87-88` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:102-110` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B021` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:109-118` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:112-121` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:123-131` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B026` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:152-153` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:155-157` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:159-164` | Naskh 8; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T004:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:166-172` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:19-28` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:40-49` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B014` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:79-81` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:81-83` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B015` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:83-86` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:85-88` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:90-97` | Naskh 9; Nastaliq 12–13 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:99-111` | Naskh 9; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:113-116` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T004:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:118-130` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:26-33` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:35-42` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:53-62` | Naskh 10–11; Nastaliq 14–15 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:64-71` | Naskh 11; Nastaliq 15 |
-| `pnb-Arab-PK:PNB-T004:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:20-25` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:27-31` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:33-42` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:44-55` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:57-61` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:98-101` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-25` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:43-51` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:58-62` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0006-B018` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:98-101` | `translation/content/sets-functions-relations/sets/subsets.tex:99-102` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-58` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:24-29` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:43-47` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:60-72` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:74-82` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:103-111` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B021` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:109-118` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:113-122` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:124-132` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B023` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:130-136` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:134-140` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B026` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:152-153` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:156-158` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:160-165` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:167-173` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:20-29` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:41-51` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:56-62` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:72-82` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B014` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:79-81` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B015` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:83-86` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:88-91` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:102-114` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:116-120` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:55-64` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:66-73` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0012-B005` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0012-B007` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:34-46` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:34-45` | pending |
@@ -611,19 +610,19 @@ Occurrences (150):
 
 ## `pnb-Arab-PK:PNB-T005`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: extensionality
 - Intended sense: extensionality
-- Chosen Shahmukhi rendering/treatment: عنصراں نال تعیّن
-- Rationale: A transparent phrase indicating that elements determine a set; chosen over unverified technical transliterations or an unqualified وسعت. Native syntax supported, technical phrase coined here.
-- Why expert review helps: Not an attested conventional Punjabi technical term; future replacement remains reversible.
+- Chosen Shahmukhi rendering/treatment: عنصراں نال تعیّن دا اصول
+- Rationale: The source definition says sets are identical exactly when they have the same elements. The descriptive Punjabi phrase names that criterion and the first-use English bridge keeps it reversible. Eight bounded Shahmukhi corpus queries found no actual occurrence of توسیعیت, عنصراں نال تعیّن, Extensionality or the tested loan/definition variants; the broad سیٹاں دی برابری query returned eight unrelated token matches.
+- Why expert review helps: No qualified or community Shahmukhi set-theory passage attests a conventional term for extensionality. PNB-P023 attests only سیٹ تھیوری and the generic set concept. This is a definition-governed provisional phrase, not a claimed convention; replace it if exact stronger evidence appears.
 - Please double-check: **Does عنصراں نال تعیّن express uniqueness by members without implying that every condition determines an existing set?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0005-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -634,16 +633,16 @@ Occurrences (15):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B004` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:9-10` | `translation/content/sets-functions-relations/sets/basics.tex:9-10` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:25-28` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:30-39` | Naskh 1; Nastaliq 1–2 |
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:41-52` | Naskh 1; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T005:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:89-91` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T005:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:41-49` | Naskh 3; Nastaliq 3–4 |
-| `pnb-Arab-PK:PNB-T005:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T005:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T005:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B004` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:9-10` | `translation/content/sets-functions-relations/sets/basics.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:27-31` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:33-42` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:44-55` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0005-B013` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:94-96` | `translation/content/sets-functions-relations/sets/basics.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:43-51` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:145-146` | pending |
@@ -654,36 +653,36 @@ Occurrences (15):
 
 ## `pnb-Arab-PK:PNB-T006`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: empty set
 - Intended sense: empty set
 - Chosen Shahmukhi rendering/treatment: خالی سیٹ
-- Rationale: See the existing decision record and definition.
-- Why expert review helps: Compound not attested in acquired native mathematical source; defined explicitly.
+- Rationale: The OLP-0005 source defines the empty set as the set with no elements and supplies ∅. The target retains خالی سیٹ with the visible first-use bridge (empty set).
+- Why expert review helps: No acquired Punjabi set-theory passage attests the compound. PNB-P023 supports only سیٹ; the no-elements definition and ∅ control the reversible provisional wording.
 - Please double-check: **Does خالی سیٹ unambiguously mean zero members rather than a blank diagram or an unknown set?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0005-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - a set with no members, stated in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (37):
+Occurrences (38):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T006:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-16` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T006:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:93-96` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T006:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-57` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T006:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:51-53` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T006:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:73-81` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T006:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:83-85` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T006:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:93-95` | Naskh 6; Nastaliq 8 |
+| `pnb-Arab-PK:PNB-T006:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0005-B014` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:98-101` | `translation/content/sets-functions-relations/sets/basics.tex:98-101` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:52-54` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:74-82` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0008-B029` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:170-172` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:175-177` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
@@ -719,37 +718,37 @@ Occurrences (37):
 
 ## `pnb-Arab-PK:PNB-T007`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: if and only if
 - Intended sense: if and only if
 - Chosen Shahmukhi rendering/treatment: اُدوں تے صرف اُدوں ... جدوں
-- Rationale: Preserve both implication directions in native temporal-correlative construction used as mathematical conditional. Never shorten to one-way جے.
-- Why expert review helps: Mathematical collocation not attested in acquired sources.
+- Rationale: The OLP-0005 definition states both implication directions, and the target uses اُدوں تے صرف اُدوں ... جدوں with the first-use bridge (if and only if).
+- Why expert review helps: PNB-P018 supports mathematical-logic register but does not attest this biconditional collocation. The two explicit directions make the provisional expression semantically auditable.
 - Please double-check: **Does اُدوں تے صرف اُدوں ... جدوں clearly convey both directions, unlike the purpose construction تاں جے?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0005-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P018` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_mathematical_logic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - جے تے صرف جے; explicit two-direction formulation — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (55):
+Occurrences (56):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T007:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:25-28` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T007:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T007:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:41-49` | Naskh 3; Nastaliq 3–4 |
-| `pnb-Arab-PK:PNB-T007:OLP-0006-B010` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:52-54` | `translation/content/sets-functions-relations/sets/subsets.tex:51-54` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T007:OLP-0006-B013` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:69-70` | `translation/content/sets-functions-relations/sets/subsets.tex:68-69` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T007:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:19-28` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T007:OLP-0009-B008` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:33-36` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:34-38` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T007:OLP-0010-B010` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:49-52` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:48-51` | Naskh 10; Nastaliq 14 |
+| `pnb-Arab-PK:PNB-T007:OLP-0005-B007` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:26-30` | `translation/content/sets-functions-relations/sets/basics.tex:27-31` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:43-51` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0006-B010` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:52-54` | `translation/content/sets-functions-relations/sets/subsets.tex:53-56` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0006-B013` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:69-70` | `translation/content/sets-functions-relations/sets/subsets.tex:70-71` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:20-29` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0009-B008` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:33-36` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:35-39` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0010-B010` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:49-52` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:49-53` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0012-B007` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:34-46` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:34-45` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0012-B008` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:48-53` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:47-52` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
@@ -802,31 +801,29 @@ Occurrences (55):
 
 ## `pnb-Arab-PK:PNB-T008`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: perfect number; proper divisor
 - Intended sense: perfect number; proper divisor
 - Chosen Shahmukhi rendering/treatment: کامل عدد؛ اوہ ونڈن والا عدد جو اوس عدد دے برابر نہ ہووے
-- Rationale: کامل عدد is a transparent shared scholarly compound, not claimed as native attestation. Proper divisor uses descriptive Punjabi to preserve exclusion of the number itself.
-- Why expert review helps: Terminology provisional; mathematical examples unchanged.
+- Rationale: OLP-0005 defines a perfect number by equality to the sum of divisors other than itself and verifies 6=1+2+3. The target retains کامل and a descriptive divisor phrase with explicit (perfect number) and (proper divisors) bridges.
+- Why expert review helps: PNB-P017 supports definition/formula/proof register only; no acquired Punjabi number-theory passage attests either specialist term. The definition and example, not a convention claim, control both choices.
 - Please double-check: **Does کامل عدد preserve equality with the sum of proper divisors, excluding the number itself?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P003` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_prose; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0005-B012` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - perfect number as an explicit English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (12):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T008:OLP-0001-B004` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:21-28` | `translation/content/open-logic-about.tex:19-24` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
+| `pnb-Arab-PK:PNB-T008:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
@@ -843,40 +840,48 @@ Occurrences (13):
 
 ## `pnb-Arab-PK:PNB-T009`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: subset / proper subset / power set
 - Intended sense: subset / proper subset / power set
 - Chosen Shahmukhi rendering/treatment: ذیلی سیٹ / حقیقی ذیلی سیٹ / ذیلی سیٹاں دا سیٹ
-- Rationale: ذیلی and حقیقی are shared scholarly vocabulary, not native technical attestation. Power set is rendered descriptively as the set of subsets, with its exact source definition preserving all subsets.
-- Why expert review helps: Specialized Pakistani Punjabi mathematical witnesses still absent; no dictionary-only authority claimed.
+- Rationale: OLP-0006 defines subset by universal element inclusion, proper subset by inclusion plus inequality, and power set as the set of all subsets. The first uses retain Subset, proper subset and Power Set bridges.
+- Why expert review helps: PNB-P023 attests only سیٹ/سیٹاں. No acquired Punjabi set-theory passage attests the three specialist labels; exact formulas and English bridges control the reversible provisional choice.
 - Please double-check: **Do حقیقی ذیلی سیٹ and ذیلی سیٹاں دا سیٹ avoid conflating element membership, inclusion, strict inclusion and numerical powers?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0006-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - proper subset as unequal included set; power set described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (36):
+Occurrences (45):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B004` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:9-10` | `translation/content/sets-functions-relations/sets/subsets.tex:9-10` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-24` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:26-31` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:33-39` | Naskh 3; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:41-49` | Naskh 3; Nastaliq 3–4 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:56-60` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B015` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:75-81` | `translation/content/sets-functions-relations/sets/subsets.tex:74-80` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B016` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:83-92` | `translation/content/sets-functions-relations/sets/subsets.tex:82-91` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T009:OLP-0006-B017` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:94-96` | `translation/content/sets-functions-relations/sets/subsets.tex:93-95` | Naskh 3; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T009:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:48-49` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T009:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:90-91` | Naskh 6; Nastaliq 8 |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B004` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:9-10` | `translation/content/sets-functions-relations/sets/subsets.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-25` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:27-33` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B009` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:42-50` | `translation/content/sets-functions-relations/sets/subsets.tex:43-51` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B010` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:52-54` | `translation/content/sets-functions-relations/sets/subsets.tex:53-56` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:58-62` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B013` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:69-70` | `translation/content/sets-functions-relations/sets/subsets.tex:70-71` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B014` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:72-73` | `translation/content/sets-functions-relations/sets/subsets.tex:73-74` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B015` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:75-81` | `translation/content/sets-functions-relations/sets/subsets.tex:76-82` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B016` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:83-92` | `translation/content/sets-functions-relations/sets/subsets.tex:84-93` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B017` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:94-96` | `translation/content/sets-functions-relations/sets/subsets.tex:95-97` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0006-B018` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:98-101` | `translation/content/sets-functions-relations/sets/subsets.tex:99-102` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:49-50` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B012` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:54-56` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:56-58` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:91-92` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B019` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:95-97` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:98-101` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B023` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:130-136` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:134-140` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0008-B029` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:170-172` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:175-177` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B008` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:48-53` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:47-52` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B009` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:55-59` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:54-58` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
@@ -907,43 +912,43 @@ Occurrences (36):
 
 ## `pnb-Arab-PK:PNB-T010`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: natural / integer / rational / real; infinite; string; sequence
 - Intended sense: natural / integer / rational / real; infinite; string; sequence
 - Chosen Shahmukhi rendering/treatment: قدرتی عدد / صحیح عدد / ناطق عدد / حقیقی عدد؛ لامتناہی؛ لڑی؛ سلسلہ
-- Rationale: Numerical class terms are shared Urdu/Arabic mathematical vocabulary, explicitly provisional for Punjabi; لڑی and سلسلہ describe string/sequence with native prose. All mathematical classes defined by unchanged formulas; naturals include zero.
-- Why expert review helps: Not attested in the acquired native literary canon; future curriculum/native technical evidence may revise labels.
+- Rationale: PNB-P022 directly uses قدرتی اعداد. PNB-P026 uses حقیقی in the mathematical compound حقیقی-قدری فنکشن but does not attest حقیقی اعداد. OLP-0007 now prints exact English bridges beside every number-class, infinity, string and sequence label that lacks direct support.
+- Why expert review helps: Both witnesses are community-edited rather than peer-reviewed. They support only قدرتی اعداد and the mathematical حقیقی component respectively; they do not license integers, rationals, real numbers, continuum, infinite, string or sequence as conventional Punjabi labels.
 - Please double-check: **Are number-class and string/sequence labels natural while retaining zero in the naturals and finite versus infinite sequence distinctions?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0003-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P022` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_logic_theorem_statement; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P026` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_calculus_theorem_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P030` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_sequence_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - English number-class bridges and explicit sequence descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (202):
+Occurrences (201):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T010:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:41-52` | Naskh 1; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T010:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T010:OLP-0006-B006` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:19-25` | `translation/content/sets-functions-relations/sets/subsets.tex:18-24` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T010:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:26-31` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T010:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:33-39` | Naskh 3; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T010:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T010:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T010:OLP-0007-B007` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:40-43` | `translation/content/sets-functions-relations/sets/important-sets.tex:38-40` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T010:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-57` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T010:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:59-64` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T010:OLP-0008-B024` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:138-142` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:141-145` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T010:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:40-49` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T010:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:118-130` | Naskh 10; Nastaliq 13 |
+| `pnb-Arab-PK:PNB-T010:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:44-55` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:27-33` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0007-B007` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:40-43` | `translation/content/sets-functions-relations/sets/important-sets.tex:38-40` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-58` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0008-B024` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:138-142` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:142-146` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:41-51` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0012-B007` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:34-46` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:34-45` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
@@ -1137,40 +1142,46 @@ Occurrences (202):
 
 ## `pnb-Arab-PK:PNB-T011`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: ordered pair / n-tuple / Cartesian product
-- Intended sense: ordered pair / n-tuple / Cartesian product
-- Chosen Shahmukhi rendering/treatment: ترتیب وار جوڑا / ترتیب وار n-ٹپل / کارتیسی حاصلِ ضرب
-- Rationale: Native descriptive جوڑا with order qualifier; tuple uses explicit English bridge; Cartesian name and multiplication phrase are scholarly bridges, not alleged native attestation.
-- Why expert review helps: Native technical attestation pending; ordered components and nesting govern meaning, not term choice.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: ordered pair / unordered pair / n-tuple / Cartesian product
+- Intended sense: ordered pair / unordered pair / n-tuple / Cartesian product
+- Chosen Shahmukhi rendering/treatment: ترتیب وار جوڑا / بے ترتیب جوڑا / ترتیب وار n-ٹپل / کارتیسی حاصلِ ضرب
+- Rationale: PNB-P029 directly uses n-ٹپل in connected Shahmukhi mathematical prose, while PNB-P007 supports ترتیب وار only in ordinary ordered exposition. OLP-0009 itself defines ordered-pair equality by corresponding components, defines the Wiener--Kuratowski representation and defines Cartesian product by the exact A×B formula. Every unattested specialist label is visibly bridged.
+- Why expert review helps: PNB-P029 is a single community-edited reference passage, not peer-reviewed scholarship. No acquired passage attests ترتیب وار جوڑا, بے ترتیب جوڑا or کارتیسی حاصلِ ضرب as conventional Punjabi terms; the definitions, formulas and English bridges control those reversible choices.
 - Please double-check: **Is masculine جوڑا with its Punjabi case endings preferable to جوڑی here, while preserving coordinate order and product structure?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0005-B012` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0009-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P029` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=493040 — community_n_tuple_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - ترتیب وار جوڑی; Cartesian product with English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (70):
+Occurrences (74):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T011:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:68-87` | Naskh 2; Nastaliq 2–3 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B004` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:9-10` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:9-10` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:19-28` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B007` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:29-31` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:30-32` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:40-49` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B010` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:49-50` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:51-52` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:54-60` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:70-79` | Naskh 9; Nastaliq 12 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:99-111` | Naskh 9; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T011:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:118-130` | Naskh 10; Nastaliq 13 |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B004` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:9-10` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B006` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:19-27` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:20-29` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B007` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:29-31` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:31-33` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B008` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:33-36` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:35-39` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:41-51` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B010` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:49-50` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:53-54` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:56-62` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B012` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:60-66` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:64-70` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:72-82` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B014` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:79-81` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B015` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:83-86` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:88-91` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:102-114` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0012-B007` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:34-46` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:34-45` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0012-B008` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:48-53` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:47-52` | pending |
@@ -1235,20 +1246,21 @@ Occurrences (70):
 
 ## `pnb-Arab-PK:PNB-T012`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: paradox / comprehension / inconsistent / axiom / induction
-- Intended sense: paradox / comprehension / inconsistent / axiom / induction
-- Chosen Shahmukhi rendering/treatment: تضاد / خاصیت توں سیٹ بنانا / بے مطابقت / مسلّمہ / ریاضیاتی استقرا
-- Rationale: Comprehension rendered descriptively to avoid implying mere understanding; mathematical induction explicitly qualified. Paradox rendered تضاد with Russell name; actual contradiction is explained in proof.
-- Why expert review helps: No specialized Punjabi logic sense attested by acquired canon. Maintain distinction between a paradox's name, contradiction in a proof, and inconsistency of a theory.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: paradox / contradiction / comprehension / consistent / inconsistent / axiom / mathematical induction
+- Intended sense: paradox / contradiction / comprehension / consistent / inconsistent / axiom / mathematical induction
+- Chosen Shahmukhi rendering/treatment: پیراڈوکس / تضاد / خاصیت توں سیٹ بنانا / موافق / غیر موافق / مسلّمہ / ریاضیاتی استقرا
+- Rationale: PNB-P031 directly uses پیراڈوکس for a named paradox and تضاد/تضادات for its contradiction(s), so the edition now preserves that source-critical distinction. PNB-P017 uses مسلمات for axioms, and PNB-P021 uses موافق for a consistent axiomatic system. Comprehension remains a descriptive source-defined phrase; غیر موافق is the transparent negative; OLP-0009 keeps an English bridge for mathematical induction.
+- Why expert review helps: All witnesses are community-edited, not peer-reviewed. No acquired source attests Russell-specific wording, خاصیت توں سیٹ بنانا, غیر موافق in this exact logical use, or the chosen ریاضیاتی استقرا; the definitions, proof and visible bridges govern those reversible terms.
 - Please double-check: **Does تضاد in the Russell context preserve the paradox/inconsistency distinction and the conditional, not unrestricted, existence claim?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0009-B018` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P021` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_logic_theorem_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P028` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_induction_term_variant; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P031` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=677354 — community_paradox_contradiction_distinction; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -1259,16 +1271,16 @@ Occurrences (68):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T012:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:113-116` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B004` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:10-11` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:10-11` | Naskh 10; Nastaliq 13 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B006` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:21-25` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:21-24` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:35-42` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B009` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:44-46` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B010` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:49-52` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:48-51` | Naskh 10; Nastaliq 14 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:53-62` | Naskh 10–11; Nastaliq 14–15 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:64-71` | Naskh 11; Nastaliq 15 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:73-77` | Naskh 11; Nastaliq 15 |
-| `pnb-Arab-PK:PNB-T012:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
+| `pnb-Arab-PK:PNB-T012:OLP-0009-B018` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:110-113` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:116-120` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B004` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:10-11` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:10-11` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B006` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:21-25` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:22-25` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B009` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B010` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:49-52` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:49-53` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:55-64` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:66-73` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:75-80` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0016-B021` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:118-122` | `translation/content/sets-functions-relations/relations/orders.tex:114-117` | pending |
@@ -1332,52 +1344,56 @@ Occurrences (68):
 
 ## `pnb-Arab-PK:PNB-T013`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: union / intersection / disjoint / set difference / index
 - Intended sense: union / intersection / disjoint / set difference / index
 - Chosen Shahmukhi rendering/treatment: اتحاد / اشتراک / بے سانجھ / سیٹاں دا فرق / اشاریہ
-- Rationale: اتحاد, اشتراک, فرق, اشاریہ are shared scholarly words, not verified native mathematical senses. بے سانجھ is a transparent native descriptor, defined by empty intersection. English source provides all concept constraints, including inclusive union and all-member intersection.
-- Why expert review helps: Native specialized attestation still absent; no inference from generic dictionary or adjacent-language prose.
+- Rationale: OLP-0008 defines union by inclusive disjunction, intersection by conjunction, disjoint by empty intersection, set difference by membership in A and nonmembership in B, and indexed families by exact big-union/big-intersection formulas. Every named label is visibly bridged at first use.
+- Why expert review helps: PNB-P017 supports mathematical definition/proof register and PNB-P023 supports set usage only. Neither attests اتحاد, اشتراک, بے سانجھ, فرق or اشاریہ in these specialist senses; the formulas and English bridges control the reversible choices.
 - Please double-check: **Do اتحاد/اشتراک preserve inclusive-or versus and, and does بے سانجھ avoid implying that either operand must be empty?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B002` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0008-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - اکٹھا کیتا سیٹ; سانجھے عنصراں دا سیٹ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (39):
+Occurrences (43):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T013:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
-| `pnb-Arab-PK:PNB-T013:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
-| `pnb-Arab-PK:PNB-T013:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:18-23` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T013:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:54-57` | Naskh 2; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B004` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | Naskh 5; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:42-46` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:48-49` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:51-53` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:59-71` | Naskh 5–6; Nastaliq 7–8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:73-81` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:83-85` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:87-88` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:90-91` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:93-95` | Naskh 6; Nastaliq 8 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:102-110` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:123-131` | Naskh 7; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B025` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:144-150` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:147-153` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:159-164` | Naskh 8; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T013:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:166-172` | Naskh 7; Nastaliq 10 |
-| `pnb-Arab-PK:PNB-T013:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T013:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B004` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:24-29` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B007` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:31-33` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:35-41` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:43-47` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:49-50` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:52-54` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B012` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:54-56` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:56-58` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:60-72` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B014` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:71-79` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:74-82` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B015` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:81-83` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:84-86` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B016` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:85-86` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B017` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:88-89` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:91-92` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B018` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:91-93` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:94-96` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B019` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:95-97` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:98-101` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:103-111` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B021` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:109-118` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:113-122` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B022` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:120-128` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:124-132` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B023` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:130-136` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:134-140` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B024` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:138-142` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:142-146` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B025` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:144-150` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:148-154` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B026` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:152-153` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:156-158` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B027` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:155-160` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:160-165` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B028` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:162-168` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:167-173` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0008-B029` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:170-172` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:175-177` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
@@ -1409,7 +1425,7 @@ Occurrences (39):
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0011-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1418,16 +1434,10 @@ Alternatives:
 - relation with explicit English bridge; expanded irreflexivity wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (135):
+Occurrences (129):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T014:OLP-0001-B004` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:21-28` | `translation/content/open-logic-about.tex:19-24` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0005-B006` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:19-24` | `translation/content/sets-functions-relations/sets/basics.tex:18-23` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T014:OLP-0005-B008` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:32-43` | `translation/content/sets-functions-relations/sets/basics.tex:30-39` | Naskh 1; Nastaliq 1–2 |
-| `pnb-Arab-PK:PNB-T014:OLP-0009-B005` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:12-17` | Naskh 8; Nastaliq 11 |
-| `pnb-Arab-PK:PNB-T014:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:99-111` | Naskh 9; Nastaliq 13 |
 | `pnb-Arab-PK:PNB-T014:OLP-0011-B004` | `OLP-0011` / sets-functions-relations / relations-complete | `upstream/content/sets-functions-relations/relations/relations-complete.tex:8-8` | `translation/content/sets-functions-relations/relations/relations-complete.tex:8-8` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B004` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B005` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | pending |
@@ -1572,7 +1582,7 @@ Occurrences (135):
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B002` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0013-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
@@ -1582,13 +1592,10 @@ Alternatives:
 - metalogic/predicate/reductionism as explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (38):
+Occurrences (35):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T015:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
-| `pnb-Arab-PK:PNB-T015:OLP-0006-B011` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:56-61` | `translation/content/sets-functions-relations/sets/subsets.tex:56-60` | Naskh 3; Nastaliq 4 |
-| `pnb-Arab-PK:PNB-T015:OLP-0008-B007` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | Naskh 5; Nastaliq 7 |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B004` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:12-19` | `translation/content/sets-functions-relations/relations/reflections.tex:12-18` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
@@ -1763,7 +1770,7 @@ Occurrences (25):
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B003` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0016-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1772,11 +1779,10 @@ Alternatives:
 - preorder/partial/linear order with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (29):
+Occurrences (28):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T018:OLP-0001-B003` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:11-19` | `translation/content/open-logic-about.tex:11-17` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0016-B006` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:22-25` | `translation/content/sets-functions-relations/relations/orders.tex:22-25` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-29` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:31-34` | pending |
@@ -1978,19 +1984,23 @@ Occurrences (13):
 
 ## `pnb-Arab-PK:PNB-T022`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: syntax tree; completeness theorem; propositional logic; first-order logic; computability theory; derivation
 - Intended sense: syntax tree; completeness theorem; propositional logic; first-order logic; computability theory; derivation
-- Chosen Shahmukhi rendering/treatment: نحوی درخت؛ تمامیت دا مسئلہ؛ قضیاتی منطق؛ پہلے درجے دی منطق؛ قابلِ حسابیت دا نظریہ؛ اخذ
-- Rationale: Preserve references to formal syntax, logical completeness and computability without replacing them by ordinary grammatical correctness, completion or calculational speed. Original formula/derivation lexical tokens are retained in editable source.
-- Why expert review helps: These labels have not been established as native Punjabi technical attestation by current prose canon; full topic definitions later in OpenLogic govern their detailed senses.
+- Chosen Shahmukhi rendering/treatment: نحوی درخت؛ تمامیت دا قضیہ؛ قضیاتی منطق؛ پہلے درجے دی منطق؛ قابلِ حسابیت دا نظریہ؛ اخذ
+- Rationale: The source says completeness theorem, not problem. Exact revision-bound Shahmukhi mathematical-logic pages use قضیہ/قضیہات for theorems and separately use مسئلہ/مسائل for problems (PNB-P021 and PNB-P027); PNB-P018–P022 also attest the surrounding logic register. Therefore تمامیت دا قضیہ is the reversible source-faithful choice and مسئلہ is rejected for this sense. Other terms bundled in this row remain source-governed provisional bridges.
+- Why expert review helps: The acquired witnesses are exact native-script community technical usage, not peer-reviewed Pakistani Punjabi scholarship. They do not establish a universal convention, and no qualified Shahmukhi foundations source yet attests the full phrase تمامیت دا قضیہ. Retain the choice as explicit, reversible provisional terminology pending such a source.
 - Please double-check: **Do these early cross-domain labels avoid confusing logical completeness with finishing a task, or computability with calculation speed?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0018-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P018` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_mathematical_logic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P019` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_topic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P020` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_exposition; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P021` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_logic_theorem_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P022` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_logic_theorem_statement; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P027` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_theorem_problem_distinction; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -2250,7 +2260,7 @@ Occurrences (159):
 
 Authorities checked:
 
-- `FROZEN-OLP-0010-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0022-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2259,11 +2269,10 @@ Alternatives:
 - international loan labels alone; longer quantified descriptions at every use — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (101):
+Occurrences (100):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T024:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:73-77` | Naskh 11; Nastaliq 15 |
 | `pnb-Arab-PK:PNB-T024:OLP-0022-B006` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:16-19` | `translation/content/sets-functions-relations/functions/function-kinds.tex:16-19` | pending |
 | `pnb-Arab-PK:PNB-T024:OLP-0022-B007` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:21-27` | `translation/content/sets-functions-relations/functions/function-kinds.tex:21-27` | pending |
 | `pnb-Arab-PK:PNB-T024:OLP-0022-B008` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:29-37` | `translation/content/sets-functions-relations/functions/function-kinds.tex:29-38` | pending |
@@ -2542,17 +2551,17 @@ Occurrences (24):
 
 ## `pnb-Arab-PK:PNB-T029`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: size/cardinality of a set; finite; infinite; actual infinity
 - Intended sense: size/cardinality of a set; finite; infinite; actual infinity
 - Chosen Shahmukhi rendering/treatment: سیٹ دا سائز/کارڈینیلٹی؛ متناہی؛ لامتناہی؛ بالفعل لامتناہیت
-- Rationale: Size compares how many elements sets have and will be governed by the chapter's later bijection/injection definitions, not geometric volume. Finite and infinite distinguish whether listing terminates; actual infinity names a completed infinite collection in Cantor's historical framing. The familiar loan سائز is kept reversible with کارڈینیلٹی for later formal use.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. Current canon supports syntax only; later exact OpenLogic definitions govern cardinal comparison and may motivate revising the bridge wording.
+- Rationale: OLP-0007 defines infinite extensionally by having infinitely many elements and prints لامتناہی (infinite). Later OLP-0027/0028 definitions govern finite size, cardinal comparison and actual infinity; no geometric-size reading is intended.
+- Why expert review helps: No acquired Punjabi mathematical passage directly attests the infinite/cardinality bundle. Existing passages support general scholarly syntax only; the exact definitions and visible English bridge keep the terms reversible.
 - Please double-check: **Does سائز clearly mean number of elements rather than geometric volume, and do متناہی/لامتناہی plus بالفعل لامتناہیت preserve the finite, infinite and actual-infinity distinctions?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0003-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0007-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2561,14 +2570,12 @@ Alternatives:
 - سیٹ دی گنتی/قوت; finite and infinite described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (73):
+Occurrences (71):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T029:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T029:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:59-64` | Naskh 4; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T029:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:48-49` | Naskh 5; Nastaliq 7 |
+| `pnb-Arab-PK:PNB-T029:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
@@ -2643,17 +2650,17 @@ Occurrences (73):
 
 ## `pnb-Arab-PK:PNB-T030`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: enumeration; enumerable; countable/uncountable; list
 - Intended sense: enumeration; enumerable; countable/uncountable; list
 - Chosen Shahmukhi rendering/treatment: گنتی وار فہرست؛ گنتی وار فہرست بنن جوگ؛ قابلِ شمار/ناقابلِ شمار؛ لسٹ/فہرست
-- Rationale: The elementary presentation treats an enumeration as an infinite list or a surjection from positive integers; the abstract alternative uses a bijection with the naturals or an initial segment. Descriptive گنتی وار فہرست keeps listability visible, while قابلِ شمار/ناقابلِ شمار remains a reversible scholarly bridge. These versions must not be silently conflated.
-- Why expert review helps: No native technical attestation was acquired. The chapter's alternative definitions and exact formulas govern; terminology remains open to correction and does not imply that every infinite set is listable.
+- Rationale: OLP-0007 identifies an infinite sequence with an اک پاسے ول لامتناہی فہرست (one-way infinite list). Later enumeration/countability formulas govern the related bundled terms and must not be silently conflated.
+- Why expert review helps: No acquired Punjabi mathematical passage directly attests the list/enumeration/countability bundle. The English bridge and exact A^omega construction make the present list phrase reversible.
 - Please double-check: **Does گنتی وار فہرست remain natural across the list/surjection and bijection presentations, while قابلِ شمار/ناقابلِ شمار stays definition-governed?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B003` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0007-B009` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2662,12 +2669,11 @@ Alternatives:
 - شمار بندی; شمار پذیر/ناشمار; explicit list and bijection descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (91):
+Occurrences (90):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T030:OLP-0001-B003` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:11-19` | `translation/content/open-logic-about.tex:11-17` | pending |
-| `pnb-Arab-PK:PNB-T030:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:59-64` | Naskh 4; Nastaliq 6 |
+| `pnb-Arab-PK:PNB-T030:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0012-B012` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:120-123` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:119-122` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0021-B016` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:82-89` | `translation/content/sets-functions-relations/functions/function-basics.tex:82-88` | pending |
@@ -2772,7 +2778,7 @@ Occurrences (91):
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0019-B017` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2781,11 +2787,10 @@ Alternatives:
 - ترتیبی نمبر; تکرار; recursively as an explicit stepwise rule — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (23):
+Occurrences (22):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T031:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:70-79` | Naskh 9; Nastaliq 12 |
 | `pnb-Arab-PK:PNB-T031:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0027-B016` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:37-47` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:38-49` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0029-B008` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:27-32` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:28-33` | pending |
@@ -2853,7 +2858,7 @@ Occurrences (2):
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B017` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0012-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2862,11 +2867,10 @@ Alternatives:
 - صف/ستون/محور; diagonal traversal described in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (21):
+Occurrences (20):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T033:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:99-111` | Naskh 9; Nastaliq 13 |
 | `pnb-Arab-PK:PNB-T033:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T033:OLP-0029-B020` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:140-162` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:141-164` | pending |
 | `pnb-Arab-PK:PNB-T033:OLP-0030-B005` | `OLP-0030` / sets-functions-relations / size-of-sets / zig-zag | `upstream/content/sets-functions-relations/size-of-sets/zig-zag.tex:11-11` | `translation/content/sets-functions-relations/size-of-sets/zig-zag.tex:11-11` | pending |
@@ -3234,12 +3238,12 @@ Occurrences (2):
 
 ## `pnb-Arab-PK:PNB-T042`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: Cantor's theorem; diagonal subset; extensionality; arbitrary element
 - Intended sense: Cantor's theorem; diagonal subset; extensionality; arbitrary element
-- Chosen Shahmukhi rendering/treatment: کانتور دا قضیہ؛ قطری ذیلی سیٹ؛ توسیعیت؛ من مانا رکن
-- Rationale: Cantor's theorem states that every set is strictly smaller than its power set. The diagonal subset contains exactly those x not belonging to g(x), so it differs extensionally from every value g(x). The corrected proof quantifies over every arbitrary x in A, not merely elements of the diagonal subset.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. The set-builder formula, extensionality step and OLSIZ-007 domain correction govern; these concise labels remain reversible.
+- Chosen Shahmukhi rendering/treatment: کانتور دا قضیہ؛ قطری ذیلی سیٹ؛ عنصراں نال تعیّن دا اصول؛ من مانا رکن
+- Rationale: Cantor's theorem and diagonal-subset wording remain source/formula governed. The lone unattested توسیعیت label is replaced by the same explicit definition-transparent extensionality phrase used at first definition. The bounded Shahmukhi search produced no candidate attestation; PNB-P023 supports only the surrounding generic set-theory register.
+- Why expert review helps: No exact Punjabi witness establishes the extensionality phrase or the other specialist terms in this bundled row as conventions. Every label remains reversible provisional terminology, and the OLSIZ-007 source-domain correction continues to govern the proof.
 - Please double-check: **Do کانتور دا قضیہ, قطری ذیلی سیٹ and توسیعیت remain understandable when paired with the exact power-set and membership-flip construction?**
 
 Authorities checked:
@@ -3247,6 +3251,7 @@ Authorities checked:
 - `FROZEN-OLP-0036-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -3471,12 +3476,12 @@ Occurrences (7):
 
 ## `pnb-Arab-PK:PNB-T049`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
 - Source term/construction: ordered field; irrational number; nonnegative principal square root; even and odd; geometric infinite descent
 - Intended sense: ordered field; irrational number; nonnegative principal square root; even and odd; geometric infinite descent
 - Chosen Shahmukhi rendering/treatment: ترتیب دار میدان؛ غیر ناطق عدد؛ غیر منفی اصل جذر؛ جفت تے طاق؛ ہندسی نزولی دلیل
 - Rationale: The source contrasts ordered rational and real fields, defines irrationality by exclusion from the rationals, uses the principal square root of two, and presents geometric and parity-based descent arguments. The Punjabi labels stay adjacent to the governing formulas and full proof steps rather than carrying the concepts alone.
-- Why expert review helps: No native Punjabi mathematical attestation was acquired. میدان, اصل جذر and ہندسی نزولی دلیل are reversible scholarly bridges; the exact formulas, parity implications and corrected inactive note govern and remain open to expert correction.
+- Why expert review helps: Only جفت/طاق have direct community usage evidence, and that evidence is not peer-reviewed. Every other bundled specialist label remains governed by its exact definition/formula and reversible bridges.
 - Please double-check: **Do ترتیب دار میدان, غیر ناطق, اصل جذر, جفت/طاق and ہندسی نزولی دلیل preserve their distinct roles across the two sqrt(2) proofs?**
 
 Authorities checked:
@@ -3484,6 +3489,7 @@ Authorities checked:
 - `FROZEN-OLP-0006-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P025` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=548022 — community_mathematics_theorem_label; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -3494,8 +3500,8 @@ Occurrences (28):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T049:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:26-31` | Naskh 2; Nastaliq 3 |
-| `pnb-Arab-PK:PNB-T049:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:33-39` | Naskh 3; Nastaliq 3 |
+| `pnb-Arab-PK:PNB-T049:OLP-0006-B007` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:27-32` | `translation/content/sets-functions-relations/sets/subsets.tex:27-33` | pending |
+| `pnb-Arab-PK:PNB-T049:OLP-0006-B008` | `OLP-0006` / sets-functions-relations / sets / subsets | `upstream/content/sets-functions-relations/sets/subsets.tex:34-40` | `translation/content/sets-functions-relations/sets/subsets.tex:35-41` | pending |
 | `pnb-Arab-PK:PNB-T049:OLP-0021-B020` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:123-138` | `translation/content/sets-functions-relations/functions/function-basics.tex:123-138` | pending |
 | `pnb-Arab-PK:PNB-T049:OLP-0022-B017` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:86-95` | `translation/content/sets-functions-relations/functions/function-kinds.tex:88-97` | pending |
 | `pnb-Arab-PK:PNB-T049:OLP-0029-B009` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:34-66` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:35-67` | pending |
@@ -3590,7 +3596,7 @@ Occurrences (25):
 
 Authorities checked:
 
-- `FROZEN-OLP-0001-B001` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3599,23 +3605,10 @@ Alternatives:
 - Dedekind lower cut; expand through all three defining conditions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (65):
+Occurrences (52):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T051:OLP-0001-B001` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:1-2` | `translation/content/open-logic-about.tex:1-2` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0001-B003` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:11-19` | `translation/content/open-logic-about.tex:11-17` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0001-B004` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:21-28` | `translation/content/open-logic-about.tex:19-24` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0002-B005` | `OLP-0002` / — | `upstream/content/content.tex:10-15` | `translation/content/content.tex:10-15` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0005-B005` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:12-17` | `translation/content/sets-functions-relations/sets/basics.tex:12-16` | Naskh 1; Nastaliq 1 |
-| `pnb-Arab-PK:PNB-T051:OLP-0005-B009` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:45-56` | `translation/content/sets-functions-relations/sets/basics.tex:41-52` | Naskh 1; Nastaliq 2 |
-| `pnb-Arab-PK:PNB-T051:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | Naskh 5; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T051:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T051:OLP-0008-B007` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:30-32` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T051:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:102-110` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T051:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:26-33` | Naskh 10; Nastaliq 14 |
 | `pnb-Arab-PK:PNB-T051:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0014-B010` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:44-55` | `translation/content/sets-functions-relations/relations/special-properties.tex:44-54` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0014-B014` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:74-77` | `translation/content/sets-functions-relations/relations/special-properties.tex:73-76` | pending |
@@ -3683,7 +3676,7 @@ Occurrences (65):
 
 Authorities checked:
 
-- `FROZEN-OLP-0008-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0012-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3692,19 +3685,10 @@ Alternatives:
 - rational embedding and union least-upper-bound proof stated through their exact maps — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (22):
+Occurrences (13):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B004` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:9-10` | Naskh 5; Nastaliq 6 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B006` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:23-28` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B008` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:34-40` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:42-46` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B010` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:47-48` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:48-49` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B011` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:50-52` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:51-53` | Naskh 5; Nastaliq 7 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B013` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:58-69` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:59-71` | Naskh 5–6; Nastaliq 7–8 |
-| `pnb-Arab-PK:PNB-T052:OLP-0008-B020` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:99-107` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:102-110` | Naskh 6; Nastaliq 9 |
-| `pnb-Arab-PK:PNB-T052:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | Naskh 11; Nastaliq 15 |
 | `pnb-Arab-PK:PNB-T052:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T052:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
 | `pnb-Arab-PK:PNB-T052:OLP-0031-B016` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:99-104` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:102-107` | pending |
@@ -3921,12 +3905,11 @@ Alternatives:
 - recursive bisection and monotone two-sided approximation governed by the recurrence — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (14):
+Occurrences (13):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T057:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | Naskh 4; Nastaliq 5 |
-| `pnb-Arab-PK:PNB-T057:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:70-79` | Naskh 9; Nastaliq 12 |
+| `pnb-Arab-PK:PNB-T057:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0029-B031` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:233-242` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:237-248` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0044-B011` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:74-74` | `translation/content/sets-functions-relations/arithmetization/reals.tex:80-85` | pending |
@@ -4021,7 +4004,7 @@ Occurrences (8):
 
 Authorities checked:
 
-- `FROZEN-OLP-0008-B009` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0022-B016` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4030,11 +4013,10 @@ Alternatives:
 - successor closure expanded through the self-map condition, intersection and three least-closure properties — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (16):
+Occurrences (15):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T060:OLP-0008-B009` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:42-45` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:42-46` | Naskh 5; Nastaliq 7 |
 | `pnb-Arab-PK:PNB-T060:OLP-0022-B016` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:83-84` | `translation/content/sets-functions-relations/functions/function-kinds.tex:85-86` | pending |
 | `pnb-Arab-PK:PNB-T060:OLP-0024-B005` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:12-16` | `translation/content/sets-functions-relations/functions/inverses.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T060:OLP-0028-B007` | `OLP-0028` / sets-functions-relations / size-of-sets / introduction | `upstream/content/sets-functions-relations/size-of-sets/introduction.tex:21-26` | `translation/content/sets-functions-relations/size-of-sets/introduction.tex:21-27` | pending |
@@ -4105,7 +4087,7 @@ Occurrences (12):
 
 Authorities checked:
 
-- `FROZEN-OLP-0009-B013` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0048-B021` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4114,11 +4096,10 @@ Alternatives:
 - arithmetic induction schema, parameters and recursive operations governed by the displayed formulas — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (7):
+Occurrences (6):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T062:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:70-79` | Naskh 9; Nastaliq 12 |
 | `pnb-Arab-PK:PNB-T062:OLP-0048-B021` | `OLP-0048` / sets-functions-relations / arithmetization / cauchy | `upstream/content/sets-functions-relations/arithmetization/cauchy.tex:187-213` | `translation/content/sets-functions-relations/arithmetization/cauchy.tex:181-207` | pending |
 | `pnb-Arab-PK:PNB-T062:OLP-0052-B004` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:9-10` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T062:OLP-0052-B006` | `OLP-0052` / sets-functions-relations / infinite / dedekind-induction | `upstream/content/sets-functions-relations/infinite/dedekind-induction.tex:16-21` | `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:16-21` | pending |
@@ -4441,7 +4422,7 @@ Occurrences (3):
 
 Authorities checked:
 
-- `FROZEN-OLP-0002-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4450,11 +4431,10 @@ Alternatives:
 - نفی; اتصال; انفصال; لزوم; تکافؤ, with every exact symbol retained — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (40):
+Occurrences (39):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T072:OLP-0002-B007` | `OLP-0002` / — | `upstream/content/content.tex:27-34` | `translation/content/content.tex:26-32` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0015-B005` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
@@ -6096,6 +6076,260 @@ Occurrences (1):
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T122:OLP-0074-B008` | `OLP-0074` / first-order-logic / sequent-calculus / derivations | `upstream/content/first-order-logic/sequent-calculus/derivations.tex:37-119` | `translation/content/first-order-logic/sequent-calculus/derivations.tex:38-120` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T123`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: formal meta-logic; formal methods
+- Intended sense: formal meta-logic; formal methods
+- Chosen Shahmukhi rendering/treatment: رسمی ماورائے منطق (formal meta-logic)؛ رسمی طریقہ کار (formal methods)
+- Rationale: PNB-P001 and PNB-P018/P019 attest logic, mathematical-logic and formal-system register, but not the two exact source fields. Descriptive Punjabi forms preserve the distinction and the parenthetical English names make both provisional choices reversible.
+- Why expert review helps: No qualified Shahmukhi Punjabi passage acquired for either exact field label; do not cite the community witnesses as direct term attestation.
+- Please double-check: **Do رسمی ماورائے منطق and رسمی طریقہ کار preserve the distinction between reasoning about formal logic and the wider family of formal methods without claiming direct specialist attestation?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0001-B002` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P018` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_mathematical_logic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P019` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_topic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- رسمی ماورائے منطق; رسمی طریقہ کار; exact English field bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T123:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T124`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: logical operator; primitive
+- Intended sense: logical operator; primitive
+- Chosen Shahmukhi rendering/treatment: منطقی عامل (logical operators)؛ بنیادی مانیا گیا (primitive)
+- Rationale: The source itself explains that all operators are taken as primitives and all cases are carried through. The Punjabi wording explains primitive as basic and bridges the unverified logical-operator label to the source term.
+- Why expert review helps: Actual Shahmukhi math/logic prose is present, but neither exact specialist label is attested in the acquired passages.
+- Please double-check: **Does منطقی عامل remain distinct from a mathematical arithmetic operator, and does بنیادی مانیا گیا convey that primitive operators are taken as basic rather than proved or historically first?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0002-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P018` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_mathematical_logic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- منطقی عامل; بنیادی مانیا گیا; source explanation beside English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T124:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T125`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: sample driver file (LaTeX project)
+- Intended sense: sample driver file (LaTeX project)
+- Chosen Shahmukhi rendering/treatment: نمونے دی ڈرائیور فائل (sample driver file)
+- Rationale: The protected URL identifies the concrete sample driver artifact. The transliterated role plus exact English bridge is more faithful than the previous interpretive ‘central build file’ wording.
+- Why expert review helps: No qualified Shahmukhi Punjabi software/LaTeX passage was acquired for driver file; retain as a reversible repository term.
+- Please double-check: **Does نمونے دی ڈرائیور فائل naturally identify the concrete LaTeX orchestration artifact without importing the stronger earlier gloss “central build file”?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0002-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P005` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P006` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- نمونے دی ڈرائیور فائل; exact repository link and English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T125:OLP-0002-B007` | `OLP-0002` / — | `upstream/content/content.tex:27-34` | `translation/content/content.tex:26-32` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T126`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: Naive Set Theory
+- Intended sense: Naive Set Theory
+- Chosen Shahmukhi rendering/treatment: سادہ سیٹ تھیوری (Naive Set Theory)
+- Rationale: PNB-P019/P023 attest سیٹ تھیوری as actual community Shahmukhi mathematical usage. سادہ carries the source qualifier, while the exact English field title remains visible because no qualified witness establishes the conventional full term.
+- Why expert review helps: Community-reference field usage is not peer-reviewed attestation, and naive may have a different established Shahmukhi rendering in sources not yet acquired.
+- Please double-check: **Does سادہ preserve the technical qualifier “naive” without sounding merely easy, while the explicit English title and surrounding scope prevent overclaiming a conventional Punjabi field name?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0003-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P019` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_topic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- سادہ سیٹ تھیوری; full Naive Set Theory bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (2):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T126:OLP-0003-B004` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:7-7` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:7-7` | pending |
+| `pnb-Arab-PK:PNB-T126:OLP-0003-B005` | `OLP-0003` / sets-functions-relations-complete | `upstream/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | `translation/content/sets-functions-relations/sets-functions-relations-complete.tex:9-14` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T127`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: set-builder notation
+- Intended sense: set-builder notation
+- Chosen Shahmukhi rendering/treatment: مختصر علامتی لکھت (set-builder notation)
+- Rationale: The Punjabi phrase describes the notation's function; the visible English bridge and unchanged schema keep it exact, searchable and reversible.
+- Why expert review helps: PNB-P017 supports formula-oriented mathematical prose and PNB-P023 the set domain, but neither attests a conventional Punjabi label for set-builder notation.
+- Please double-check: **Does مختصر علامتی لکھت clearly denote the displayed set-builder form rather than arbitrary abbreviated notation, while comprehension remains a separately introduced principle?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0005-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- مختصر علامتی لکھت; exact set-builder schema and English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (4):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T127:OLP-0005-B010` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:58-62` | `translation/content/sets-functions-relations/sets/basics.tex:57-61` | pending |
+| `pnb-Arab-PK:PNB-T127:OLP-0008-B005` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:12-21` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T127:OLP-0009-B011` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:52-58` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:56-62` | pending |
+| `pnb-Arab-PK:PNB-T127:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T128`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: alphabet; finite string; empty string; string length; finite sequence; infinite sequence; one-way infinite list
+- Intended sense: alphabet; finite string; empty string; string length; finite sequence; infinite sequence; one-way infinite list
+- Chosen Shahmukhi rendering/treatment: حرفاں دا مجموعہ؛ محدود لڑی؛ خالی لڑی؛ لڑی دی لمبائی؛ محدود سلسلہ؛ لامتناہی سلسلہ؛ اک پاسے ول لامتناہی فہرست
+- Rationale: The exact A-star construction defines finite strings over alphabet A, includes Lambda as the empty string and fixes length by len(x)=n. The A^omega construction defines infinite sequences as one-way infinite lists of A-elements. Every specialist label is printed with an English bridge at its definition.
+- Why expert review helps: PNB-P030 directly uses متناہی متوالیہ for a finite sequence in one community-edited calculus passage. It does not attest the edition's محدود سلسلہ or formal-language sense; PNB-P017 supports formula-oriented prose and PNB-P023 set usage only. All choices remain reversible pending qualified Shahmukhi Punjabi evidence.
+- Please double-check: **Do the alphabet, string, empty-string, length and sequence phrases preserve finiteness, one-way infinitude and element order, with the displayed A-star/A-omega definitions controlling each provisional label?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0007-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P030` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_sequence_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- حرفاں دا مجموعہ; محدود/لامتناہی لڑی تے سلسلہ; exact A-star and A-omega definitions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (3):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T128:OLP-0007-B008` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:45-60` | `translation/content/sets-functions-relations/sets/important-sets.tex:42-58` | pending |
+| `pnb-Arab-PK:PNB-T128:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
+| `pnb-Arab-PK:PNB-T128:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T129`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: triple / quadruple / recursive definition / grid / word over a set
+- Intended sense: triple / quadruple / recursive definition / grid / word over a set
+- Chosen Shahmukhi rendering/treatment: تِن-ٹپل / چار-ٹپل / بازگشتی تعریف / قطاراں تے کالماں والا جال / سیٹ اُتے لفظ
+- Rationale: Three- and four-tuples are transparent numerical extensions of the exact community n-ٹپل form and are fixed by the source's nested ordered-pair equations. The two recurrence equations define بازگشتی تعریف; the displayed array defines the row/column grid; and the prose plus A* equation define a word as a finite sequence over A. Visible English bridges keep every label reversible.
+- Why expert review helps: No peer-reviewed Punjabi mathematical source attests this bundle. PNB-P029 supports only n-ٹپل, PNB-P030 supplies an alternative finite-sequence term, PNB-P023 supports only sets, and PNB-P017 only the mathematical exposition register. Triple, quadruple, recursive definition, grid and formal-language word remain exact-source-governed provisional choices.
+- Please double-check: **Do the transparent numerical tuple forms, recursive-definition wording, row-and-column grid description and word-over-a-set phrase preserve each exact source construction while their English bridges remain reversible?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0009-B009` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P029` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=493040 — community_n_tuple_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P030` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_sequence_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- تِن-ٹپل/چار-ٹپل; بازگشتی تعریف; قطاراں تے کالماں والا جال; سیٹ اُتے لفظ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (4):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T129:OLP-0009-B009` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:38-47` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:41-51` | pending |
+| `pnb-Arab-PK:PNB-T129:OLP-0009-B013` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:68-77` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:72-82` | pending |
+| `pnb-Arab-PK:PNB-T129:OLP-0009-B017` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:96-108` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:102-114` | pending |
+| `pnb-Arab-PK:PNB-T129:OLP-0009-B019` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:115-127` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:122-135` | pending |
+
+---
+
+## `pnb-Arab-PK:PNB-T130`
+
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: self-membered / non-self-membered / set of all sets / naive set theory / rigour
+- Intended sense: self-membered / non-self-membered / set of all sets / naive set theory / rigour
+- Chosen Shahmukhi rendering/treatment: اپنے آپ دا رکن / اپنے آپ دا رکن نہ ہون / سارے سیٹاں دا سیٹ / سادہ سیٹ نظریہ / باقاعدگی
+- Rationale: The source asks the self-membership question, defines the non-self-membered property by x∉x, hypothesizes the set of all sets, and explicitly characterizes the chapter's theory as naive pending a more rigorous treatment. The Punjabi phrases are transparent and the uncertain technical labels are bridged.
+- Why expert review helps: No acquired Punjabi source attests self-membered, non-self-membered, the universal set phrase, naive set theory or rigour as conventional terms. PNB-P031 supports only the paradox/contradiction distinction; formulas and argument scope govern every choice.
+- Please double-check: **Do the self-membership phrases and all-sets hypothesis preserve Russell’s two-case contradiction, while سادہ and باقاعدگی describe the source’s provisional-theory contrast without implying a formal axiom system not yet introduced?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0010-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P019` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558891 — community_logic_foundations_topic_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P031` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=677354 — community_paradox_contradiction_distinction; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+
+Alternatives:
+
+- اپنے آپ دا رکن; سارے سیٹاں دا سیٹ; سادہ سیٹ نظریہ; باقاعدگی — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (8):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B006` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:21-25` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:22-25` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B007` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:27-34` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B008` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:36-43` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B009` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:45-47` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B011` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:54-62` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:55-64` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B012` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:64-70` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:66-73` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B013` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:72-77` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:75-80` | pending |
+| `pnb-Arab-PK:PNB-T130:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 
 ---
 

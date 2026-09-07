@@ -1,0 +1,41 @@
+{
+  "schema": "pnb-exact-community-witness-capture/1",
+  "captured_at_utc": "2026-09-07T18:02:45.940592Z",
+  "unit_id": "OLP-0010",
+  "discovery_receipt": {
+    "file": "SEARCH.json",
+    "bytes": 25937,
+    "sha256": "179ee967faa73f99464921e6695d9d05d454e578c38712e97054fe8d89007e85",
+    "query_id": "OLP0010-Q06"
+  },
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&rvlimit=1&format=json&formatversion=2&pageids=100216",
+  "response": {
+    "file": "PNB-MATH-W09-revision-677354.json",
+    "bytes": 2714,
+    "sha256": "0d2c1d00b4116e58d933bcfaa97766aa5cad74d44117df6244fe88e7b46db8dc"
+  },
+  "page": {
+    "pageid": 100216,
+    "title": "فرمیز پیراڈوکس",
+    "revision_id": 677354,
+    "parent_id": 577687,
+    "revision_timestamp": "2024-12-01T20:09:57Z",
+    "mediawiki_sha1": "7f503feaeae5d48eabf307b0a91b1d1c847602a0",
+    "permanent_url": "https://pnb.wikipedia.org/w/index.php?oldid=677354"
+  },
+  "matching_lines": [
+    {
+      "line_1based": 1,
+      "line_utf8_bytes": 806,
+      "line_utf8_sha256": "a4d850904a870d5a9c1dfbe29ed90ad43f5236058e11f3b0bc1e33ad4d8c7582",
+      "text": "'''فرمیز پیراڈوکس''' {{ہور نام|انگریزی=Fermi paradox}}[[انریکو فرمی]] د‏‏ی پیش کيت‏‏ی گئی پیراڈوکس ا‏‏ے۔ ایہ غیر ارضی مخلوق تو‏ں متعلق کم شواہد دے تضادات تو‏ں متعلق اے ۔خلائی مخلوق د‏‏ی موجودگی تو‏ں وابستہ عظیم امکان تے اس امکان دے مشاہدتی انکار تے اس تو‏ں پیدا ہونے والے تضاد نو‏‏ں فرمی پیراڈاکس کہیا جاندا اے ۔اس پیراڈوکس دا آسان لفظاں وچ کہیا جا سکدا اے \"اگر 'وہ' نيں تاں اوہ کتھے نيں؟\"۔ اس پیراڈاکس دے جوابات وچ درجناں تاویلات دتی گئیاں نيں جداں کہ"
+    }
+  ],
+  "rights": {
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "site_rights_response": "../shahmukhi-mathematical-witnesses-20260906/PNB-WIKIPEDIA-RIGHTS.json",
+    "site_rights_response_sha256": "5fb26e893bb12b19426a1ad062f97648c3b0e30925524f7a0874a4bfb4f5d35d"
+  },
+  "evidentiary_limit": "Exact revision-bound community use of the loan پیراڈوکس only; not peer-reviewed scholarship and not specific attestation of Russell's paradox."
+}

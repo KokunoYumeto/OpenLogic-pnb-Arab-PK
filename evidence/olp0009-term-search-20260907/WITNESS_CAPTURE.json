@@ -1,0 +1,41 @@
+{
+  "schema": "pnb-exact-community-witness-capture/1",
+  "captured_at_utc": "2026-09-07T17:26:19.078234Z",
+  "unit_id": "OLP-0009",
+  "discovery_receipt": {
+    "file": "SEARCH.json",
+    "bytes": 16653,
+    "sha256": "7fe3664169449acc117afc2e44044485f84fc06608e28f0d6ef008ba64a62cb4",
+    "query_id": "OLP0009-Q09"
+  },
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&rvlimit=1&format=json&formatversion=2&pageids=63078",
+  "response": {
+    "file": "PNB-MATH-W08-revision-493040.json",
+    "bytes": 4975,
+    "sha256": "89935ab753a0aa7c6c19c4903eefbe438a5dbe1adce5548e2cfdb3e22b8ff051"
+  },
+  "page": {
+    "pageid": 63078,
+    "title": "ویکٹر فیلڈ",
+    "revision_id": 493040,
+    "parent_id": 493039,
+    "revision_timestamp": "2017-09-13T19:24:20Z",
+    "mediawiki_sha1": "1d69cadd7b2a8215dccee84985c54384fe6d5cbf",
+    "permanent_url": "https://pnb.wikipedia.org/w/index.php?oldid=493040"
+  },
+  "matching_lines": [
+    {
+      "line_1based": 7,
+      "line_utf8_bytes": 1062,
+      "line_utf8_sha256": "cafd00046369133a6a0795d6384582164d4b24b4052434afe3d98fffb0dea0fc",
+      "text": "سمتاں وچ، n-ڈمینسنل [[اقلیدسی سپیس]] اندر کسے ڈومین اتے کوئی ویکٹر فیلڈ نوں کسے [[ویکٹر-ملر فنکشن]] دے طور تے ظاہر  کیتا جا سکدا اے جو ڈومین دے ہریک نقطہ نال اصلی نمبراں دے اک n-ٹپل نوں جوڑدا اے۔ کسے ویکٹر فیلڈ دی ایہہ حالت سمتی سسٹم اتے انحصار کردی اے، اتے اک سمتی سسٹم توں دوجے کسے ہور سمتی سسٹم تک لنگھن لئی اک چنگی طرحاں متاثر کیتا جان والا [[ٹرانسفورمیشن اصول]] ہندا اے۔ ویکٹر فیلڈاں نوں اکثر اقلیدسی سپیس دے [[اوپن سیٹ|کھلے سب-سیٹاں]] اتے وچاریا جاندا اے، پر ستہاں ورگے ہور سب-سیٹاں اتے وی گل سمجھ وچ آؤندی ہن، جتھے ایہہ ہریک نقطہ اتے سطح متعلق  اک سپرش تیر (اک [[ٹینجینٹ ویکٹر]]) نال متعلق ہندے ہن۔"
+    }
+  ],
+  "rights": {
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "site_rights_response": "../shahmukhi-mathematical-witnesses-20260906/PNB-WIKIPEDIA-RIGHTS.json",
+    "site_rights_response_sha256": "5fb26e893bb12b19426a1ad062f97648c3b0e30925524f7a0874a4bfb4f5d35d"
+  },
+  "evidentiary_limit": "Exact revision-bound community usage only; not peer-reviewed scholarship and not proof that n-ٹپل is a field-wide conventional Punjabi term."
+}

@@ -11,9 +11,11 @@ provenance/SEMANTIC_REPAIR_CHOICES.jsonl -text whitespace=cr-at-eol
 provenance/EXTENSIONALITY_ADJUDICATION.json -text whitespace=cr-at-eol
 provenance/OLP0018_THEOREM_REPAIR.json -text whitespace=cr-at-eol
 provenance/AUDIT-REGRESSION-*.json -text
-provenance/TERMINOLOGY_REVIEW_LOG.jsonl -text
+provenance/TERMINOLOGY_REVIEW_LOG.jsonl -text whitespace=cr-at-eol
 provenance/SOURCE_CORRECTIONS.jsonl -text
 provenance/TERM_DECISIONS.jsonl -text
+provenance/CANON_SOURCES.jsonl -text
+provenance/CANON_PASSAGES.jsonl -text
 provenance/ALL_TRANSLATION_AUDITS.json -text
 provenance/CURRENT_MAIN_QA.json -text
 provenance/PORTABLE_CANDIDATE_INPUTS.json -text whitespace=cr-at-eol
@@ -26,6 +28,9 @@ provenance/translation-decisions/** -text
 translation/**/*.tex -text whitespace=cr-at-eol
 tools/build_sets_reader.py -text whitespace=cr-at-eol
 tools/verify_source_identity.py -text whitespace=cr-at-eol
+
+# Revision-bound public witness/search receipts are byte-addressed evidence.
+evidence/**/*.json -text whitespace=cr-at-eol
 
 # Frozen upstream sources are byte-addressed by SOURCE_MANIFEST.jsonl. Never
 # normalize their line endings in the Git object database.

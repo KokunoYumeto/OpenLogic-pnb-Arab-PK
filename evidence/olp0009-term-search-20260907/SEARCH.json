@@ -1,0 +1,267 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-07T17:21:57.958594Z",
+  "unit_id": "OLP-0009",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0009-Q01",
+      "query": "\"Cartesian product\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22Cartesian+product%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q02",
+      "query": "\"کارتیسی حاصل ضرب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C%D8%B3%DB%8C+%D8%AD%D8%A7%D8%B5%D9%84+%D8%B6%D8%B1%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q03",
+      "query": "\"کارتیسی ضرب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C%D8%B3%DB%8C+%D8%B6%D8%B1%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q04",
+      "query": "\"کارتیشی حاصل ضرب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D8%A7%D8%B1%D8%AA%DB%8C%D8%B4%DB%8C+%D8%AD%D8%A7%D8%B5%D9%84+%D8%B6%D8%B1%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q05",
+      "query": "\"ordered pair\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22ordered+pair%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q06",
+      "query": "\"مرتب جوڑا\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%B1%D8%AA%D8%A8+%D8%AC%D9%88%DA%91%D8%A7%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q07",
+      "query": "\"ترتیب وار جوڑا\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8+%D9%88%D8%A7%D8%B1+%D8%AC%D9%88%DA%91%D8%A7%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q08",
+      "query": "\"tuple\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22tuple%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 397,
+      "response_sha256": "ec83e5041261ea4e78e02552d32c8b85e85fae648c5a094baa1788144374ca45",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 91740,
+          "title": "گرڈ کمپیوٹنگ",
+          "timestamp": "2024-12-19T16:39:50Z",
+          "snippet": "Rajkumar Buyya, A Novel Architecture for Realizing Grid Workflow using <span class=\"searchmatch\">Tuple</span> Spaces, Proceeding of Fifth IEEE/ACM International Workshop on Grid Computing"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0009-Q09",
+      "query": "\"ٹپل\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%B9%D9%BE%D9%84%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 932,
+      "response_sha256": "4e08316772edd453d9b5b421e404cdc43da6a59c53ece6b4b6f3ec3d0d05d0a6",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 2,
+      "returned_hits": 2,
+      "hits": [
+        {
+          "pageid": 63078,
+          "title": "ویکٹر فیلڈ",
+          "timestamp": "2017-09-13T19:24:20Z",
+          "snippet": "طور تے ظاہر کیتا جا سکدا اے جو ڈومین دے ہریک نقطہ نال اصلی نمبراں دے اک n-<span class=\"searchmatch\">ٹپل</span> نوں جوڑدا اے۔ کسے ویکٹر فیلڈ دی ایہہ حالت سمتی سسٹم اتے انحصار کردی اے، اتے"
+        },
+        {
+          "pageid": 88819,
+          "title": "دوسری چیچن جنگ",
+          "timestamp": "2026-06-20T23:32:09Z",
+          "snippet": "ہپب پ ہ تبا کپ بہ پتا پت ہ پتہا پت ت ٹل ٹ ل پہ ب تب ت ٹپ ل ت پہ ب پ ٹ ل <span class=\"searchmatch\">ٹپل</span> ت پتتہا غتب اکتباک پہ تہ ہا ا ہ ہ اش لہ ہس تاک جای ٹتل پہا بک تبک بک تجا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0009-Q10",
+      "query": "\"mathematical induction\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22mathematical+induction%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "reused_existing_exact_response_after_interrupted_bounded_run",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q11",
+      "query": "\"ریاضیاتی استقرا\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7%D8%AA%DB%8C+%D8%A7%D8%B3%D8%AA%D9%82%D8%B1%D8%A7%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q12",
+      "query": "\"ریاضیا تی تحریض\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7+%D8%AA%DB%8C+%D8%AA%D8%AD%D8%B1%DB%8C%D8%B6%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0009-Q13",
+      "query": "\"ریاضیا‏تی تحریض\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7%E2%80%8F%D8%AA%DB%8C+%D8%AA%D8%AD%D8%B1%DB%8C%D8%B6%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 547,
+      "response_sha256": "60d85b5897290b474599ed19b0c8e75e91ccb6e643e906c3fc3f87840d0bea54",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "حل دے دوران، اس نے تکامل انجام دتا تاکہ مکافی مجسم دا حجم کڈ سک‏‏ے۔ <span class=\"searchmatch\">ریاضیا‏تی</span> <span class=\"searchmatch\">تحریض</span> دے استعمال تو‏ں اس نے چوتھے درجہ تک دے کثیر رقمی دے تکامل دا کلیہ اخذ"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0009-Q14",
+      "query": "\"قطاراں\" \"کالماں\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%82%D8%B7%D8%A7%D8%B1%D8%A7%DA%BA%22+%22%DA%A9%D8%A7%D9%84%D9%85%D8%A7%DA%BA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 4917,
+      "response_sha256": "39b87c9e5bd2cf42b023525d2b34968fb653811c8cc51af79c2f2853cc52da83",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 13,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 109922,
+          "title": "مقبرہ سائرس اعظم",
+          "timestamp": "2021-12-11T21:59:15Z",
+          "snippet": "لمبائی 30 میٹر اے تے انہاں دو <span class=\"searchmatch\">قطاراں</span> دے کھڑے <span class=\"searchmatch\">کالماں</span> د‏‏ی قطار د‏‏ی لمبائی 32 میٹر ا‏‏ے۔ اندرونی دیوار تو‏ں دو مخالف <span class=\"searchmatch\">قطاراں</span> د‏‏ی لمبائی 35 میٹر تے اندرونی"
+        },
+        {
+          "pageid": 109805,
+          "title": "ساٹھ گنبدی مسجد",
+          "timestamp": "2025-12-22T22:56:43Z",
+          "snippet": "خلیجاں وچ 60 پتلے پتھر دے <span class=\"searchmatch\">کالماں</span> دے جنگل تو‏ں تقسیم کيتا گیا اے، جتھو‏ں گنبداں نو‏‏ں سہارا دیندے ہوئے لامتناہی محراباں د‏‏ی <span class=\"searchmatch\">قطاراں</span> نکلدی نيں۔ 1.8 میٹر (6"
+        },
+        {
+          "pageid": 91400,
+          "title": "ایس کیو ایل",
+          "timestamp": "2024-03-06T22:30:30Z",
+          "snippet": "اک کوئری وچ SELECT کلیدی لفظاں دے فورا بعد دے نتائج وچ شامل کرنے دے لئی <span class=\"searchmatch\">کالماں</span> د‏‏ی اک لسٹ شامل رہندی ا‏‏ے۔ ایہ وضاحت کرنے دے لئی کہ کیوری جدول دے تمام"
+        },
+        {
+          "pageid": 88936,
+          "title": "مقبرہ محمد باشرع",
+          "timestamp": "2020-09-24T10:09:43Z",
+          "snippet": "ہال اُتے مشتمل اے ، جس دے دونے طرف (کبھے تے سجے طرف) والٹ دے احاطے د‏‏ی <span class=\"searchmatch\">قطاراں</span> ني‏‏‏‏ں۔ انہاں نو‏‏ں دو محوراں دے نال گروپ کيت‏‏ا گیا اے ، جو وسط وسطی محور"
+        },
+        {
+          "pageid": 122055,
+          "title": "مشہد ریلوے اسٹیشن",
+          "timestamp": "2026-01-21T14:28:44Z",
+          "snippet": "اسٹیشن دا اک لمبا منصوبہ اے جس وچ دو محوراں اُتے بیضوی کنکریٹ دے <span class=\"searchmatch\">کالماں</span> د‏‏ی دو <span class=\"searchmatch\">قطاراں</span> نيں، تے انہاں اُتے لہراندی چھت نصب ا‏‏ے۔ خلا دے اندر دو چوڑے سائڈ"
+        },
+        {
+          "pageid": 116412,
+          "title": "ستارہویں صدی وچ پیرس",
+          "timestamp": "2022-11-15T16:15:30Z",
+          "snippet": "تو‏ں تن گنیاوڈا اے )، جس وچ وسط وچ اک چشمہ اے تے دونے طرف درختاں د‏‏ی لمبی <span class=\"searchmatch\">قطاراں</span> نيں۔ ۱۷ ويں صدی دے پہلے حصے وچ ، رچیلیو نے پیرس وچ اک نواں مذہبی تعمیرا‏تی"
+        },
+        {
+          "pageid": 106321,
+          "title": "عظیم حمام، موہن جو دڑو",
+          "timestamp": "2026-01-12T12:39:16Z",
+          "snippet": "لگایا گیا ہوئے گا۔ اِٹاں د‏‏ی <span class=\"searchmatch\">قطاراں</span> شمالی، مشرقی تے جنوبی کنارےآں دے نیڑے ڈھکيت‏یاں ہوئیاں نيں۔ محفوظ کيتے گئے <span class=\"searchmatch\">کالماں</span> نو‏‏ں کنارےآں تو‏ں اک قسم د‏‏ی"
+        },
+        {
+          "pageid": 126410,
+          "title": "جامع مسجد بورصہ",
+          "timestamp": "2023-07-11T13:26:54Z",
+          "snippet": "ا‏‏ے۔ اولو جاما وچ ویہہ گنبد نيں جو چار <span class=\"searchmatch\">قطاراں</span> وچ ترتیب دتے گئے نيں، ہر صف وچ پنج گنبد نيں، جنہاں د‏‏ی حمایت 12 <span class=\"searchmatch\">کالماں</span> اُتے مشتمل ا‏‏ے۔ 61 گنبداں د‏‏ی تقسیم"
+        },
+        {
+          "pageid": 90118,
+          "title": "جرمناں دا فرار و اخراج (1944–1950)",
+          "timestamp": "2026-05-27T01:03:03Z",
+          "snippet": "سرما دے دوران حالات انتشار دا شکار ہوگئے جدو‏ں مہاجرین د‏‏ی کلومیٹر لمبی <span class=\"searchmatch\">قطاراں</span> اپنی گڈیاں نو‏‏ں برف دے راستے اگے ودھیا رہیاں سن تاکہ اگے ودھنے والی ریڈ"
+        },
+        {
+          "pageid": 149655,
+          "title": "باب الظاھر",
+          "timestamp": "2026-08-23T06:51:14Z",
+          "snippet": "دوستی دے شکریے تے سپاس گزاری نيں اُتے جوش حصہ لیا، اخبارات نے بالعموم اپنے <span class=\"searchmatch\">کالماں</span> وچ اس خبر نو‏‏ں نہایت نمایاں طور اُتے شائع کيتا تے اس مخلصانہ تعلق د‏‏ی"
+        }
+      ]
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any hit requires exact revision capture before evidentiary use."
+}

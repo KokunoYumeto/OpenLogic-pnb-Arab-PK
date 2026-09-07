@@ -71,7 +71,7 @@ def isolate_english_bridges(body, unit, records):
     Bare Latin parentheticals inside Arabic paragraphs can reorder their
     parentheses and words. TeX/math and Punjabi parentheticals are untouched.
     """
-    pattern=re.compile(r'\(([A-Za-z][A-Za-z0-9\s/&,-]*[A-Za-z0-9])\)')
+    pattern=re.compile(r"\(([A-Za-z][A-Za-z0-9\s/&,'’\-]*[A-Za-z0-9])\)")
     def replace(match):
         text=match.group(1)
         records.append({'unit':unit,'text':text,'source':'('+text+')','rendering':r'\textenglish{('+text+')}','reason':'Prevent bidirectional reordering of an explicit source-language terminology bridge.'})
