@@ -1,0 +1,123 @@
+{
+  "schema": "pnb-extensionality-bounded-search/1",
+  "search_id": "PNB-EXTENSIONALITY-SEARCH-20260906",
+  "source": "Western Punjabi Wikipedia MediaWiki API",
+  "scope": "Eight exact candidate/definition-like queries in main namespace, maximum 50 results each.",
+  "records": [
+    {
+      "search_id": "PNB-EXT-Q01",
+      "query": "توسیعیت",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%AA%D9%88%D8%B3%DB%8C%D8%B9%DB%8C%D8%AA&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q01-search.json",
+      "bytes": 73,
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q02",
+      "query": "عنصراں نال تعیّن",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D9%86%D8%B5%D8%B1%D8%A7%DA%BA+%D9%86%D8%A7%D9%84+%D8%AA%D8%B9%DB%8C%D9%91%D9%86&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q02-search.json",
+      "bytes": 181,
+      "sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q03",
+      "query": "extensionality",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=extensionality&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q03-search.json",
+      "bytes": 73,
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q04",
+      "query": "سیٹاں دی عنصری برابری",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B3%DB%8C%D9%B9%D8%A7%DA%BA+%D8%AF%DB%8C+%D8%B9%D9%86%D8%B5%D8%B1%DB%8C+%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q04-search.json",
+      "bytes": 208,
+      "sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q05",
+      "query": "اکسٹینشنلٹی",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%A7%DA%A9%D8%B3%D9%B9%DB%8C%D9%86%D8%B4%D9%86%D9%84%D9%B9%DB%8C&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q05-search.json",
+      "bytes": 73,
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q06",
+      "query": "اصول توسیعیت",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%A7%D8%B5%D9%88%D9%84+%D8%AA%D9%88%D8%B3%DB%8C%D8%B9%DB%8C%D8%AA&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q06-search.json",
+      "bytes": 73,
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q07",
+      "query": "سیٹاں دی برابری",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B3%DB%8C%D9%B9%D8%A7%DA%BA+%D8%AF%DB%8C+%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q07-search.json",
+      "bytes": 4655,
+      "sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 8,
+      "returned_hits": 8,
+      "titles": [
+        "کانشی رام",
+        "امریکا",
+        "2026 فیفا ورلڈ کپ دا فائنل",
+        "جمہوریہ ہند دی تریخ (1947 تا حال)",
+        "سپیشل ریلیٹیوٹی",
+        "جرمنی دی تریخ",
+        "سپیس ٹائیم",
+        "منکووسکی سپیس"
+      ],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    },
+    {
+      "search_id": "PNB-EXT-Q08",
+      "query": "عنصراں نال مقرر سیٹ",
+      "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%D8%B9%D9%86%D8%B5%D8%B1%D8%A7%DA%BA+%D9%86%D8%A7%D9%84+%D9%85%D9%82%D8%B1%D8%B1+%D8%B3%DB%8C%D9%B9&srnamespace=0&srlimit=50&format=json&formatversion=2",
+      "local_file": "PNB-EXT-Q08-search.json",
+      "bytes": 73,
+      "sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "content_type": "application/json; charset=utf-8",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "titles": [],
+      "interpretation": "Scoped exact full-text search of the pinned response only; zero hits cannot prove absence from Punjabi as a whole."
+    }
+  ],
+  "adjudication_limit": "Results can establish actual community-reference hits or scoped no-hits only. They are not peer-reviewed evidence and do not establish a universal terminology convention.",
+  "comparative_discovery_note": "Separate targeted discovery searches of Punjab University/HEC and the open web found no qualified Shahmukhi Punjabi mathematical source for these candidates; irrelevant Urdu senses and unqualified machine/news pages were excluded, not treated as negative corpus proof."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "pnb-semantic-repair-receipt/1",
+  "repair_id": "PNB-REPAIR-OLP-0018-B005-C001-20260906",
+  "status": "repaired_source_category_explicit_reversible_provisional_community_usage_only",
+  "semantic_acceptance": false,
+  "artifacts": {
+    "target": {
+      "bytes": 7545,
+      "sha256": "f1cab5845034c9cc3a7551fc71123f83d78fc88644698bdc20ebd91510304c5b"
+    },
+    "owner_term_decisions": {
+      "bytes": 123535,
+      "sha256": "dc4c35985d1ae29968b70e9cc124a01eb67fe8f16b54e6412931fa1d8ee394d8"
+    },
+    "public_term_decisions": {
+      "bytes": 123535,
+      "sha256": "dc4c35985d1ae29968b70e9cc124a01eb67fe8f16b54e6412931fa1d8ee394d8"
+    },
+    "owner_segment_ledger": {
+      "bytes": 1084629,
+      "sha256": "2a40fa144ee655c8c8b8861a62a5bbc2db7e6b3f8c39f9bf380ea8304bb50bc9"
+    },
+    "owner_repair_ledger": {
+      "bytes": 9822,
+      "sha256": "d8fa41d4359d5b84e904f4ee5db79778a6eec3f4a3c42d3d2db73cfea4e168f5"
+    },
+    "public_repair_ledger": {
+      "bytes": 9822,
+      "sha256": "d8fa41d4359d5b84e904f4ee5db79778a6eec3f4a3c42d3d2db73cfea4e168f5"
+    }
+  },
+  "formal_checks": {
+    "source_blocks": 21,
+    "target_blocks": 21,
+    "block_count_equal": true,
+    "command_multiset_equal": true,
+    "protected_arguments_equal": true,
+    "formula_order_and_content_equal": true,
+    "placeholder_token_multiset_equal": true,
+    "balanced_braces": true,
+    "old_wrong_phrase_occurrences": 0,
+    "new_repaired_phrase_occurrences": 1,
+    "no_forbidden_bidi_or_replacement_forms": true
+  },
+  "limits": "Specific source-category defect repaired; neither full segment nor any contiguous prefix is declared semantically accepted by this receipt."
+}

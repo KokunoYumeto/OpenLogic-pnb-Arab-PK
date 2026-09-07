@@ -1,6 +1,6 @@
 {
   "schema": "pnb-current-main-qa/1",
-  "date_utc": "2026-09-05",
+  "date_utc": "2026-09-07",
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
@@ -20,30 +20,36 @@
     "Infinite"
   ],
   "current_chapter_progress": "Propositional Logic through the detailed Sequent Calculus chapter driver, rule foundations, propositional and quantifier rules, structural rules and worked derivations, OLP-0074",
-  "accepted_reader_chapters": [
-    "Sets"
-  ],
+  "accepted_reader_chapters": [],
   "aggregate_translation_audits": {
     "file": "ALL_TRANSLATION_AUDITS.json",
     "units": 74,
     "sha256": "7d492657829cf55c9519ececcf093d332f7922da47bb44606312d89bd62be6fb",
-    "all_passed": true
+    "historical_checkpoint": true,
+    "all_passed_at_historical_checkpoint": true,
+    "semantic_acceptance_superseded": true
   },
   "current_regression": {
     "file": "AUDIT-REGRESSION-0074.json",
     "sha256": "d4972f2740c9c2407fcb77b91700c33f81649cbe1d0744b7aa78a4dcc27ace42",
-    "all_passed": true
+    "historical_checkpoint": true,
+    "all_passed_at_historical_checkpoint": true,
+    "current_target_identity_superseded_by": "REPAIRED_PREFIX_QA.json plus the isolated extensionality and OLP0018 repair receipts"
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
     "rows": 1220,
-    "sha256": "8b8e743d0135a7b803c69302e139fb3846bfac116bb63c7c062e814121d7155c",
-    "canonical_unit_block_order": true
+    "bytes": 1094042,
+    "sha256": "36f5307e72681179952cb2ca638c1a6a7f27832340a5f45eda4bb0b3c997f2a3",
+    "canonical_unit_block_order": true,
+    "scope": "Exact owner projection; records consultation and repair state but does not itself grant semantic acceptance."
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "entries": 122,
-    "sha256": "bfa053546c346ad86ba378676816398175c9ec76306f43cd05e4e8fce8cd87ad"
+    "entries": 127,
+    "bytes": 130380,
+    "sha256": "31076b52a8dcfc920a74f7aeab03cefc13d547d07129c8f2af5e2fa8b0374dc1",
+    "scope": "Provisional decision inventory; community usage is distinguished from peer-reviewed scholarly attestation."
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
@@ -135,12 +141,71 @@
     "accepted_reader": "Complete Sets chapter only",
     "release_assets_unchanged": true,
     "github_release": "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/tag/v0.1.0",
-    "doi": "10.5281/zenodo.22308437"
+    "doi": "10.5281/zenodo.22308437",
+    "semantic_acceptance_superseded": true,
+    "immutable": true
   },
   "limits": [
-    "This branch checkpoint is not a new binary reader release.",
-    "Relations, Functions, Size of Sets, Arithmetization, Infinite and the current Propositional Logic units have source-aligned review but no integrated reader visual acceptance.",
-    "Specialized terminology remains provisional and definition-governed; no independent human review is claimed.",
+    "This corrective branch checkpoint is not a new binary reader release.",
+    "Semantic acceptance is limited to the validated repaired prefix OLP-0001 through OLP-0005; isolated later repairs do not accept their units.",
+    "Revision-bound community Shahmukhi mathematical usage is not peer-reviewed scholarly canon; unattested specialist terminology remains explicit, reversible and definition/source-governed.",
+    "The historical v0.1.0 reader remains immutable and its layout evidence remains historical; no complete reader chapter currently has post-revalidation semantic acceptance.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
-  ]
+  ],
+  "status": "CANON_REPAIR_IN_PROGRESS_VALIDATED_PREFIX_ONLY",
+  "historical_main_commit": "6c4b2f319903b3ec36af7841b108bfc74ebadf58",
+  "publication_commit": null,
+  "publication_commit_policy": "The corrective commit is recorded in external durable and anonymous readback receipts after publication; it is not self-embedded in this commit-addressed file.",
+  "historical_reader_layout_accepted_chapters": [
+    "Sets"
+  ],
+  "semantic_status": {
+    "forensic_audit": {
+      "audit_id": "CANON-REVALIDATION-pnb-Arab-PK-20260906",
+      "choice_groups": 1221,
+      "formal_invariants": 430,
+      "unsupported": 776,
+      "needs_revision": 1,
+      "contentious": 14,
+      "supported": 0,
+      "supported_provisional": 0,
+      "result": "COMPLETE_AUDIT_REPAIR_REQUIRED",
+      "choices_sha256": "07ae6bbc81bd4f61fd26c8e2fcc371a16c8130b5386e2a2e065dbcf79292ed8a"
+    },
+    "historical_translation": {
+      "units": 74,
+      "range": "OLP-0001 through OLP-0074",
+      "classification": "historically and provenancially accepted, semantically unaccepted draft except for the validated repaired prefix"
+    },
+    "validated_repaired_prefix": {
+      "range": "OLP-0001 through OLP-0005",
+      "units": 5,
+      "choice_groups": 69,
+      "formal_invariants": 48,
+      "supported_provisional": 21,
+      "unsupported": 0,
+      "needs_revision": 0,
+      "contentious": 0,
+      "errors": 0,
+      "report": "REPAIRED_PREFIX_QA.json",
+      "report_bytes": 20480,
+      "report_sha256": "45d4ce01a364c88bcf6a2c99c1ae26b7a7c1db01bb53013d6460552621043abe"
+    },
+    "isolated_later_repairs": {
+      "extensionality_choices": 14,
+      "extensionality_receipt": "EXTENSIONALITY_ADJUDICATION.json",
+      "extensionality_receipt_sha256": "bf7d3cbb689d2590ad7346f0619418ae46fd090cfed779967da0206e8e755810",
+      "olp0018_receipt": "OLP0018_THEOREM_REPAIR.json",
+      "olp0018_receipt_sha256": "9f5fe0e8dc0c04ce6671c4509ccbc80e0c6db467a34c931d61b29da5d7713277",
+      "semantic_acceptance_effect": "No later unit acceptance; choice-level corrections only until reached by the contiguous repair lane."
+    },
+    "next_repair_choice": "pnb-Arab-PK:OLP-0006-B004:C001",
+    "forward_authoring_after_OLP_0074_frozen": true,
+    "corpus_semantic_acceptance": false
+  },
+  "current_identity_verifier": {
+    "file": "../tools/verify_source_identity.py",
+    "sha256": "a24120668f9e1a6fe7f49aaaa0a54ed3a5299025964f423aa2820b7db9463ce8",
+    "scope": "Verifies 722 frozen sources, all 74 current target identities against historical or exact repair receipts, and recorded structural gates; does not expand semantic acceptance beyond OLP-0005."
+  }
 }

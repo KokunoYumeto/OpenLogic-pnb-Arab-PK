@@ -1,0 +1,2459 @@
+{
+  "schema": "pnb-extensionality-adjudication/1",
+  "adjudication_id": "PNB-EXTENSIONALITY-0014-20260906",
+  "choice_count": 14,
+  "resolved_provisional": 14,
+  "text_changes": 6,
+  "text_reaffirmations": 8,
+  "term_policy": {
+    "chosen": "عنصراں نال تعیّن دا اصول",
+    "first_use": "عنصراں نال تعیّن دا اصول (Extensionality)",
+    "set_theory_usage": "Use the descriptive principle with appropriate case marking.",
+    "extensionality_like_order_result": "عنصراں نال تعیّن دے اصول ورگی اک خاصیت (distinct analogy, not the set axiom).",
+    "function_scope": "Name the underlying set principle and explicitly distinguish the induced pointwise principle for functions.",
+    "status": "supported-provisional_definition-governed_no_conventional-attestation"
+  },
+  "search_receipt": {
+    "bytes": 6934,
+    "sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6"
+  },
+  "structural_unit_checks": {
+    "OLP-0005": {
+      "source_path": "content/sets-functions-relations/sets/basics.tex",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "target_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+      "target_bytes": 6178,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0006": {
+      "source_path": "content/sets-functions-relations/sets/subsets.tex",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "target_sha256": "8ece29ab14cc154397ed8f4ad45403cb79abd1de49a205fc57422454b61e7b90",
+      "target_bytes": 5179,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0009": {
+      "source_path": "content/sets-functions-relations/sets/pairs-and-products.tex",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "target_sha256": "c92adddb9fee4970a216a49b672dccbf17a727add81babe234b6feea798722fa",
+      "target_bytes": 6581,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0010": {
+      "source_path": "content/sets-functions-relations/sets/russells-paradox.tex",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "target_sha256": "d2307bc120b306968703011abbd6036b46f8e4dfcbda58a387bec9b3666e8a5a",
+      "target_bytes": 5935,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0013": {
+      "source_path": "content/sets-functions-relations/relations/reflections.tex",
+      "source_sha256": "75047e8806a58c0a0c07ae2e55554d9ad2affb9d5297b1d5585ebe0b2f3de651",
+      "target_sha256": "143a69cbb2a84b1d4e85cdd3196b64216c16f318f3c1c44dcd86822796ae6942",
+      "target_bytes": 6030,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0015": {
+      "source_path": "content/sets-functions-relations/relations/equivalence-relations.tex",
+      "source_sha256": "d9531aa5cd774c12090fbd5c9fb289181e93cf7e9a96ecf7d4fd3fcdf5d250c7",
+      "target_sha256": "85f34a1640383197d5100503955a698ad8dba96a24b50b7826225d0d78aa1392",
+      "target_bytes": 4879,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0016": {
+      "source_path": "content/sets-functions-relations/relations/orders.tex",
+      "source_sha256": "79593789022fef31c0609b9c94856e2aef5cd5e88e92864e782bb6e6e5f4bce4",
+      "target_sha256": "3cb3896e797ad8cf15dfc96a34e11eeef44a9d8fd2b69e98792fc8a27dd72988",
+      "target_bytes": 9057,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0023": {
+      "source_path": "content/sets-functions-relations/functions/functions-relations.tex",
+      "source_sha256": "e2e46c0270c44b6f54861a4565f3829b1b5f91a7f72dca84046361e5abf622c3",
+      "target_sha256": "5afa6f1118768aa6ad6812132c29c6ef0a78d33a0f63e936b99bce50afe2d9f4",
+      "target_bytes": 6075,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    },
+    "OLP-0036": {
+      "source_path": "content/sets-functions-relations/size-of-sets/comparing-size.tex",
+      "source_sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+      "target_sha256": "4d5f757e90bf5ae8afc686eab335c88120621fdee923596fcf78aee0a9b32ce7",
+      "target_bytes": 9923,
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_forbidden_bidi_or_replacement_forms": true
+      }
+    }
+  },
+  "artifacts": {
+    "owner_term_decisions": {
+      "bytes": 124533,
+      "sha256": "d103da8feba0f7379f5295ffae72c9ff69cf0f6d446e665b493d511a072ca806"
+    },
+    "public_term_decisions": {
+      "bytes": 124533,
+      "sha256": "d103da8feba0f7379f5295ffae72c9ff69cf0f6d446e665b493d511a072ca806"
+    },
+    "owner_segment_ledger": {
+      "bytes": 1090411,
+      "sha256": "d16dbe68e634bae5d8d5189538c5615674061f28518e5c6c60b837ee63562b82"
+    },
+    "public_segment_ledger": {
+      "bytes": 86243,
+      "sha256": "be906828d894dace69505eb8709bfba43c168785c8b9d5c8917f494919609e3c"
+    },
+    "owner_repair_ledger": {
+      "bytes": 131796,
+      "sha256": "87b190b17e0ecb2b2ead3c61192d19934ffdbc61727a879d18ff77d13127c556"
+    },
+    "public_repair_ledger": {
+      "bytes": 131796,
+      "sha256": "87b190b17e0ecb2b2ead3c61192d19934ffdbc61727a879d18ff77d13127c556"
+    }
+  },
+  "repairs": [
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B004-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B004:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B004",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 4,
+        "span_sha256": "8f2b2c5e3e0860d1f8494e5f82dedfedea4f95788ac314cc39f330e525e7f11b",
+        "text": "\\olfileid{sfr}{set}{bas}\n\\olsection{Extensionality}",
+        "current_raw_block_sha256": "8f2b2c5e3e0860d1f8494e5f82dedfedea4f95788ac314cc39f330e525e7f11b",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "388e7a048a27d8ddb7c81698bebfb5c6da2b2101570ea2d2c5153e4bdcda762f",
+        "text": "\\olfileid{sfr}{set}{bas}\n\\olsection{عنصراں نال تعیّن}"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 4,
+        "span_sha256": "516d2e26c2700a4cd93a96bcf45d782630e0e5601bfd788e417f8bd05644b452",
+        "text": "\\olfileid{sfr}{set}{bas}\n\\olsection{عنصراں نال تعیّن دا اصول (Extensionality)}"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "This is the first visible label. The definition-transparent Punjabi phrase is retained and the source term Extensionality is added in parentheses so the unattested coinage remains reversible and searchable.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B007-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B007:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B007",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 7,
+        "span_sha256": "e11052d2c0bf7cbc8a4f5a8ba67c1a51676dec652e3b9a0e73b06a25711d8da5",
+        "text": "\\begin{defn}[Extensionality]\n  If $A$ and $B$ are sets, then $A = B$ iff\n  every !!{element} of~$A$ is also !!a{element} of~$B$, and vice\n  versa.\n\\end{defn}",
+        "current_raw_block_sha256": "e11052d2c0bf7cbc8a4f5a8ba67c1a51676dec652e3b9a0e73b06a25711d8da5",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "d7f9b082dacf12616a0ce38132d6f10aab24005a3e979ac691dc2ae04935db2c",
+        "text": "\\begin{defn}[عنصراں نال تعیّن]\n  جے $A$ تے $B$ سیٹ نیں، تاں $A = B$ اُدوں تے صرف اُدوں ہوندا اے جدوں\n  $A$ دا ہر !!{element}، $B$ دا وی !!a{element} ہووے، تے ایس توں اُلٹ وی۔\n\\end{defn}"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 7,
+        "span_sha256": "afe4cc924e29eaa229f87e7ba0ba406d0f6f6b9d69d202d1799121663707b8b5",
+        "text": "\\begin{defn}[عنصراں نال تعیّن دا اصول]\n  جے $A$ تے $B$ سیٹ نیں، تاں $A = B$ اُدوں تے صرف اُدوں ہوندا اے جدوں\n  $A$ دا ہر !!{element}، $B$ دا وی !!a{element} ہووے، تے ایس توں اُلٹ وی۔\n\\end{defn}"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The definition says two sets are equal exactly when they have the same elements; adding دا اصول makes the descriptive label explicitly a principle rather than an alleged lexicalized convention.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B008-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B008:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B008",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 8,
+        "span_sha256": "b5d013669b63f3ed661db66c9fb21ba6deed1d13d92f99221e9f10011d9923fd",
+        "text": "Extensionality licenses some notation. In general, when we have some\nobjects $a_{1}$, \\dots, $a_{n}$, then $\\{a_{1}, \\dots, a_{n}\\}$ is\n\\emph{the} set whose !!{element}s are $a_1, \\ldots, a_n$. We emphasise\nthe word ``\\emph{the}'', since extensionality tells us that there can\nbe only \\emph{one} such set. Indeed, extensionality also licenses the\nfollowing:\n  \\[\n    \\{a, a, b\\} = \\{a, b\\} = \\{b,a\\}.\n  \\] \nThis delivers on the point that, when we consider sets, we don't care\nabout the order of their !!{element}s, or how many times they are\nspecified.",
+        "current_raw_block_sha256": "b5d013669b63f3ed661db66c9fb21ba6deed1d13d92f99221e9f10011d9923fd",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "f823ddfe16fe686bf154843d9aa2d286cf2b2a2f780a263a744b64e8a27cfb8f",
+        "text": "عنصراں نال تعیّن دا اصول کجھ علامتاں ورتن دا جواز دیندا اے۔ عام طور تے، جدوں\nساڈے کول کجھ شےواں $a_{1}$، \\dots، $a_{n}$ ہون، تاں $\\{a_{1}, \\dots, a_{n}\\}$\n\\emph{اوہی} سیٹ اے جہدے !!{element}s، $a_1, \\ldots, a_n$ نیں۔ اسی لفظ\n``\\emph{اوہی}'' اُتے زور دیندے آں، کیوں جو عنصراں نال تعیّن دا اصول دسدا اے کہ\nایہو جہا سیٹ صرف \\emph{اک} ہو سکدا اے۔ ایس اصول توں ایہ وی جائز اے:\n  \\[\n    \\{a, a, b\\} = \\{a, b\\} = \\{b,a\\}.\n  \\]\nایس نال اوہ گل واضح ہوندی اے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں\nہوندی کہ اوہناں دے !!{element}s دی ترتیب کی اے، یا اوہ کِنّی واری دسے گئے نیں۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 8,
+        "span_sha256": "f823ddfe16fe686bf154843d9aa2d286cf2b2a2f780a263a744b64e8a27cfb8f",
+        "text": "عنصراں نال تعیّن دا اصول کجھ علامتاں ورتن دا جواز دیندا اے۔ عام طور تے، جدوں\nساڈے کول کجھ شےواں $a_{1}$، \\dots، $a_{n}$ ہون، تاں $\\{a_{1}, \\dots, a_{n}\\}$\n\\emph{اوہی} سیٹ اے جہدے !!{element}s، $a_1, \\ldots, a_n$ نیں۔ اسی لفظ\n``\\emph{اوہی}'' اُتے زور دیندے آں، کیوں جو عنصراں نال تعیّن دا اصول دسدا اے کہ\nایہو جہا سیٹ صرف \\emph{اک} ہو سکدا اے۔ ایس اصول توں ایہ وی جائز اے:\n  \\[\n    \\{a, a, b\\} = \\{a, b\\} = \\{b,a\\}.\n  \\]\nایس نال اوہ گل واضح ہوندی اے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں\nہوندی کہ اوہناں دے !!{element}s دی ترتیب کی اے، یا اوہ کِنّی واری دسے گئے نیں۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The passage repeatedly invokes the just-defined equality-by-elements principle. Reaffirming the descriptive label preserves that explanation without importing the opaque unattested توسیعیت.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B009-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B009:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B009",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 9,
+        "span_sha256": "bd3ae60c0e0ba6ad739f049444eae56ab64b9186cd58ffc2ce96ac4780673c7f",
+        "text": "\\begin{tagblock}{novice}\n\\begin{ex}\nWhenever you have a bunch of objects, you can collect them together in\na set. The set of Richard's siblings, for instance, is a set that\ncontains one person, and we could write it as $S=\\{\\textrm{Ruth}\\}$.\nThe set of positive integers less than $4$ is $\\{1, 2, 3\\}$, but it\ncan also be written as $\\{3, 2, 1\\}$ or even as $\\{1, 2, 1, 2, 3\\}$.\nThese are all the same set, by extensionality. For every !!{element}\nof $\\{1, 2, 3\\}$ is also !!a{element} of $\\{3, 2, 1\\}$ (and of $\\{1,\n2, 1, 2, 3\\}$), and vice versa.\n\\end{ex} \n\\end{tagblock}",
+        "current_raw_block_sha256": "bd3ae60c0e0ba6ad739f049444eae56ab64b9186cd58ffc2ce96ac4780673c7f",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "76ec5ea9f482d8b01202aed8d1670d0f62d2fdcd0ace14580fa51b822b642ba3",
+        "text": "\\begin{tagblock}{novice}\n\\begin{ex}\nجدوں وی تہاڈے کول کجھ شےواں ہون، تسیں اوہناں نوں اک سیٹ وچ اکٹھیاں کر سکدے او۔\nمثال لئی، رچرڈ دے بھین بھراواں دا سیٹ اک ایہو جہا سیٹ اے جہدے وچ اک بندہ اے،\nتے اسی اوہنوں $S=\\{\\textrm{Ruth}\\}$ لکھ سکدے آں۔ $4$ توں گھٹ مثبت صحیح\nاعداد دا سیٹ $\\{1, 2, 3\\}$ اے، پر اوہنوں $\\{3, 2, 1\\}$ یا\n$\\{1, 2, 1, 2, 3\\}$ وی لکھیا جا سکدا اے۔ عنصراں نال تعیّن دے اصول موجب ایہ\nسارے اکو سیٹ نیں۔ کیوں جو $\\{1, 2, 3\\}$ دا ہر !!{element}،\n$\\{3, 2, 1\\}$ دا (تے $\\{1, 2, 1, 2, 3\\}$ دا وی) !!a{element} اے، تے ایس\nتوں اُلٹ وی۔\n\\end{ex}\n\\end{tagblock}"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 9,
+        "span_sha256": "76ec5ea9f482d8b01202aed8d1670d0f62d2fdcd0ace14580fa51b822b642ba3",
+        "text": "\\begin{tagblock}{novice}\n\\begin{ex}\nجدوں وی تہاڈے کول کجھ شےواں ہون، تسیں اوہناں نوں اک سیٹ وچ اکٹھیاں کر سکدے او۔\nمثال لئی، رچرڈ دے بھین بھراواں دا سیٹ اک ایہو جہا سیٹ اے جہدے وچ اک بندہ اے،\nتے اسی اوہنوں $S=\\{\\textrm{Ruth}\\}$ لکھ سکدے آں۔ $4$ توں گھٹ مثبت صحیح\nاعداد دا سیٹ $\\{1, 2, 3\\}$ اے، پر اوہنوں $\\{3, 2, 1\\}$ یا\n$\\{1, 2, 1, 2, 3\\}$ وی لکھیا جا سکدا اے۔ عنصراں نال تعیّن دے اصول موجب ایہ\nسارے اکو سیٹ نیں۔ کیوں جو $\\{1, 2, 3\\}$ دا ہر !!{element}،\n$\\{3, 2, 1\\}$ دا (تے $\\{1, 2, 1, 2, 3\\}$ دا وی) !!a{element} اے، تے ایس\nتوں اُلٹ وی۔\n\\end{ex}\n\\end{tagblock}"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The example identifies reordered/repeated listings as the same set because their elements coincide. The descriptive principle directly tracks this source reasoning.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B012-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B012:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B012",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 12,
+        "span_sha256": "c0c079a49b7ae943c120dde448047b64a278eadfbccfb2fab0b3db8b16ff35ff",
+        "text": "\\begin{tagblock}{math}\n\\begin{ex}\nA number is called \\emph{perfect} iff it is equal to the sum of its\nproper divisors (i.e., numbers that evenly divide it but aren't\nidentical to the number). For instance, $6$ is perfect because its\nproper divisors are $1$, $2$, and~$3$, and $6 = 1 + 2 + 3$. In fact,\n$6$ is the only positive integer less than $10$ that is perfect. So,\nusing extensionality, we can say:\n\\[\n\t\\{6\\} = \\Setabs{x}{x\\text{ is perfect and }0 \\leq x \\leq 10}\n\\]\nWe read the notation on the right as ``the set of $x$'s such that $x$\nis perfect and $0 \\leq x \\leq 10$''. The identity here confirms that,\nwhen we consider sets, we don't care about how they are specified.\nAnd, more generally, extensionality guarantees that there is always\nonly one set of $x$'s such that $\\phi(x)$.\nSo, extensionality justifies calling \n$\\Setabs{x}{\\phi(x)}$ \\emph{the} set of $x$'s such that~$\\phi(x)$.\n\\end{ex}\n\\end{tagblock}",
+        "current_raw_block_sha256": "c0c079a49b7ae943c120dde448047b64a278eadfbccfb2fab0b3db8b16ff35ff",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "ca058213be27ae7aa0595f6d89b52662379919ac524027590d0c0101b029d9f8",
+        "text": "\\begin{tagblock}{math}\n\\begin{ex}\nکِسے عدد نوں \\emph{کامل} اُدوں تے صرف اُدوں آکھدے نیں جدوں اوہ اپنے اوہناں\nونڈن والے اعداد دے جوڑ دے برابر ہووے جو عدد نوں پورا ونڈدے ہون پر آپ اوہدے\nبرابر نہ ہون۔ مثال لئی، $6$ کامل اے، کیوں جو اوہنوں ونڈن والے اعداد، جو آپ\nاوہدے برابر نہیں، $1$، $2$ تے~$3$ نیں، تے $6 = 1 + 2 + 3$ اے۔ دراصل،\n$6$، $10$ توں گھٹ اکو اک مثبت صحیح عدد اے جو کامل اے۔ سو، عنصراں نال تعیّن\nدا اصول ورت کے اسی آکھ سکدے آں:\n\\[\n\t\\{6\\} = \\Setabs{x}{x\\text{ کامل اے تے }0 \\leq x \\leq 10}\n\\]\nسجے پاسے دی علامتی لکھت نوں اسی ایویں پڑھدے آں: ``اوہناں $x$ دا سیٹ جیہناں لئی\n$x$ کامل اے تے $0 \\leq x \\leq 10$''۔ ایتھے برابری دی ایہ لکھت تصدیق کردی\nاے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں ہوندی کہ اوہناں نوں کِویں\nدسیا گیا اے۔ ہور عام طور تے، عنصراں نال تعیّن دا اصول ایہ یقینی بناندا اے کہ\nاوہناں $x$ دا سیٹ جنہاں لئی $\\phi(x)$ ہووے، ہمیشہ اکو ہوندا اے۔\nسو، عنصراں نال تعیّن دا اصول $\\Setabs{x}{\\phi(x)}$ نوں اوہناں $x$ دا\n\\emph{اوہی} سیٹ آکھن دا جواز دیندا اے جنہاں لئی~$\\phi(x)$ ہووے۔\n\\end{ex}\n\\end{tagblock}"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 12,
+        "span_sha256": "ca058213be27ae7aa0595f6d89b52662379919ac524027590d0c0101b029d9f8",
+        "text": "\\begin{tagblock}{math}\n\\begin{ex}\nکِسے عدد نوں \\emph{کامل} اُدوں تے صرف اُدوں آکھدے نیں جدوں اوہ اپنے اوہناں\nونڈن والے اعداد دے جوڑ دے برابر ہووے جو عدد نوں پورا ونڈدے ہون پر آپ اوہدے\nبرابر نہ ہون۔ مثال لئی، $6$ کامل اے، کیوں جو اوہنوں ونڈن والے اعداد، جو آپ\nاوہدے برابر نہیں، $1$، $2$ تے~$3$ نیں، تے $6 = 1 + 2 + 3$ اے۔ دراصل،\n$6$، $10$ توں گھٹ اکو اک مثبت صحیح عدد اے جو کامل اے۔ سو، عنصراں نال تعیّن\nدا اصول ورت کے اسی آکھ سکدے آں:\n\\[\n\t\\{6\\} = \\Setabs{x}{x\\text{ کامل اے تے }0 \\leq x \\leq 10}\n\\]\nسجے پاسے دی علامتی لکھت نوں اسی ایویں پڑھدے آں: ``اوہناں $x$ دا سیٹ جیہناں لئی\n$x$ کامل اے تے $0 \\leq x \\leq 10$''۔ ایتھے برابری دی ایہ لکھت تصدیق کردی\nاے کہ سیٹاں بارے سوچدیاں سانوں ایہدی پرواہ نہیں ہوندی کہ اوہناں نوں کِویں\nدسیا گیا اے۔ ہور عام طور تے، عنصراں نال تعیّن دا اصول ایہ یقینی بناندا اے کہ\nاوہناں $x$ دا سیٹ جنہاں لئی $\\phi(x)$ ہووے، ہمیشہ اکو ہوندا اے۔\nسو، عنصراں نال تعیّن دا اصول $\\Setabs{x}{\\phi(x)}$ نوں اوہناں $x$ دا\n\\emph{اوہی} سیٹ آکھن دا جواز دیندا اے جنہاں لئی~$\\phi(x)$ ہووے۔\n\\end{ex}\n\\end{tagblock}"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The perfect-number example uses uniqueness of a set determined by a condition. The descriptive principle remains transparent and explicitly provisional.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0005-B013-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0005-B013:C001",
+      "unit_id": "OLP-0005",
+      "segment_id": "OLP-0005-B013",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+        "block_1based": 13,
+        "span_sha256": "28184c7ab892cd4bc67dd80b4e4e387a63f01cbb3f5167c57b5c396e63c1b574",
+        "text": "Extensionality gives us a way for showing that sets are identical: to\nshow that $A = B$, show that whenever $x \\in A$ then also $x \\in B$,\nand whenever $y \\in B$ then also $y \\in A$.",
+        "current_raw_block_sha256": "28184c7ab892cd4bc67dd80b4e4e387a63f01cbb3f5167c57b5c396e63c1b574",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "c75f828e7807902cdca4fcf9fb20bc9472ee0379e46d9efe4e415fa9fae85fc2",
+        "text": "عنصراں نال تعیّن دا اصول ایہ وکھاؤن دا طریقہ دیندا اے کہ سیٹ اکو نیں: $A = B$\nوکھاؤن لئی ایہ وکھاؤ کہ جدوں وی $x \\in A$ ہووے، تاں $x \\in B$ وی ہووے،\nتے جدوں وی $y \\in B$ ہووے، تاں $y \\in A$ وی ہووے۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/basics.tex",
+        "file_sha256": "fb4602973503ce675101ff93ec874c3f6d741de9e5bd2332f490adb734fd0c15",
+        "block_1based": 13,
+        "span_sha256": "c75f828e7807902cdca4fcf9fb20bc9472ee0379e46d9efe4e415fa9fae85fc2",
+        "text": "عنصراں نال تعیّن دا اصول ایہ وکھاؤن دا طریقہ دیندا اے کہ سیٹ اکو نیں: $A = B$\nوکھاؤن لئی ایہ وکھاؤ کہ جدوں وی $x \\in A$ ہووے، تاں $x \\in B$ وی ہووے،\nتے جدوں وی $y \\in B$ ہووے، تاں $y \\in A$ وی ہووے۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source gives the standard two-inclusion proof method for set equality. The chosen phrase names exactly that source-defined criterion.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0006-B009-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0006-B009:C001",
+      "unit_id": "OLP-0006",
+      "segment_id": "OLP-0006-B009",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/subsets.tex",
+        "file_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+        "block_1based": 9,
+        "span_sha256": "2e75907e57836259c06bd4f9b854fdf7fa7590050c53a61b383852759be3bfd8",
+        "text": "Extensionality gives a criterion of identity for sets: $A = B$ iff\nevery !!{element} of~$A$ is also !!a{element} of~$B$ and vice versa.\nThe definition of ``subset'' defines $A \\subseteq B$ precisely as the\nfirst half of this criterion: every !!{element} of~$A$ is also\n!!a{element} of~$B$. Of course the definition also applies if we\nswitch $A$ and $B$: that is, $B \\subseteq A$ iff every !!{element}\nof~$B$ is also !!a{element} of~$A$. And that, in turn, is exactly the\n``vice versa'' part of extensionality. In other words, extensionality\nentails that sets are equal iff they are subsets of one another.",
+        "current_raw_block_sha256": "2e75907e57836259c06bd4f9b854fdf7fa7590050c53a61b383852759be3bfd8",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "71f3f913c2cb63ff6203490e01762737e38f99dccff235369267cb1c9401d9e3",
+        "text": "عنصراں نال تعیّن دا اصول سیٹاں دے اکو ہون دی کسوٹی دیندا اے: $A = B$ اُدوں\nتے صرف اُدوں ہوندا اے جدوں $A$ دا ہر !!{element}، $B$ دا وی !!a{element}\nہووے تے ایس توں اُلٹ وی۔ ``ذیلی سیٹ'' دی تعریف $A \\subseteq B$ نوں عین ایس\nکسوٹی دے پہلے ادھ دے طور تے دسدی اے: $A$ دا ہر !!{element}، $B$ دا وی\n!!a{element} اے۔ بے شک، جے اسی $A$ تے $B$ نوں آپس وچ وٹا دیئیے، تاں وی\nتعریف لاگو ہوندی اے: یعنی $B \\subseteq A$ اُدوں تے صرف اُدوں جدوں $B$ دا\nہر !!{element}، $A$ دا وی !!a{element} ہووے۔ تے ایہ عین عنصراں نال تعیّن\nدے اصول دا ``ایس توں اُلٹ وی'' والا حصہ اے۔ ہور لفظاں وچ، ایس اصول توں\nنکلدا اے کہ سیٹ اُدوں تے صرف اُدوں برابر نیں جدوں اوہ اک دوجے دے ذیلی سیٹ ہون۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/subsets.tex",
+        "file_sha256": "8ece29ab14cc154397ed8f4ad45403cb79abd1de49a205fc57422454b61e7b90",
+        "block_1based": 9,
+        "span_sha256": "71f3f913c2cb63ff6203490e01762737e38f99dccff235369267cb1c9401d9e3",
+        "text": "عنصراں نال تعیّن دا اصول سیٹاں دے اکو ہون دی کسوٹی دیندا اے: $A = B$ اُدوں\nتے صرف اُدوں ہوندا اے جدوں $A$ دا ہر !!{element}، $B$ دا وی !!a{element}\nہووے تے ایس توں اُلٹ وی۔ ``ذیلی سیٹ'' دی تعریف $A \\subseteq B$ نوں عین ایس\nکسوٹی دے پہلے ادھ دے طور تے دسدی اے: $A$ دا ہر !!{element}، $B$ دا وی\n!!a{element} اے۔ بے شک، جے اسی $A$ تے $B$ نوں آپس وچ وٹا دیئیے، تاں وی\nتعریف لاگو ہوندی اے: یعنی $B \\subseteq A$ اُدوں تے صرف اُدوں جدوں $B$ دا\nہر !!{element}، $A$ دا وی !!a{element} ہووے۔ تے ایہ عین عنصراں نال تعیّن\nدے اصول دا ``ایس توں اُلٹ وی'' والا حصہ اے۔ ہور لفظاں وچ، ایس اصول توں\nنکلدا اے کہ سیٹ اُدوں تے صرف اُدوں برابر نیں جدوں اوہ اک دوجے دے ذیلی سیٹ ہون۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source derives equality from mutual subsethood. The chosen descriptive principle preserves the biconditional criterion and does not claim external conventionality.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0009-B005-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0009-B005:C001",
+      "unit_id": "OLP-0009",
+      "segment_id": "OLP-0009-B005",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/pairs-and-products.tex",
+        "file_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+        "block_1based": 5,
+        "span_sha256": "5e30f7b43b4f0a9b8393d52ef924775b303445ec836c905f7ab97f0b6c85ab22",
+        "text": "\\begin{explain}\nIt follows from extensionality that sets have no order to their\nelements. So if we want to represent order, we use \\emph{ordered\npairs} $\\tuple{x, y}$. In an unordered pair $\\{x, y\\}$, the order does\nnot matter: $\\{x, y\\} = \\{y, x\\}$. In an ordered pair, it does: if $x\n\\neq y$, then $\\tuple{x, y} \\neq \\tuple{y, x}$.",
+        "current_raw_block_sha256": "5e30f7b43b4f0a9b8393d52ef924775b303445ec836c905f7ab97f0b6c85ab22",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "c58bf8ed1e12641544ba53e592f7bab57a6d0bb48a448b5653d9db7b62b04c1e",
+        "text": "\\begin{explain}\nعنصراں نال تعیّن دے اصول توں نکلدا اے کہ سیٹ دے عنصراں دی کوئی ترتیب نہیں\nہوندی۔ سو، جے اسی ترتیب ظاہر کرنا چاہیئے، تاں \\emph{ترتیب وار جوڑے}\n$\\tuple{x, y}$ ورتدے آں۔ بے ترتیب جوڑے $\\{x, y\\}$ وچ ترتیب دا کوئی فرق\nنہیں پیندا: $\\{x, y\\} = \\{y, x\\}$۔ ترتیب وار جوڑے وچ فرق پیندا اے: جے\n$x \\neq y$ ہووے، تاں $\\tuple{x, y} \\neq \\tuple{y, x}$ اے۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/pairs-and-products.tex",
+        "file_sha256": "c92adddb9fee4970a216a49b672dccbf17a727add81babe234b6feea798722fa",
+        "block_1based": 5,
+        "span_sha256": "c58bf8ed1e12641544ba53e592f7bab57a6d0bb48a448b5653d9db7b62b04c1e",
+        "text": "\\begin{explain}\nعنصراں نال تعیّن دے اصول توں نکلدا اے کہ سیٹ دے عنصراں دی کوئی ترتیب نہیں\nہوندی۔ سو، جے اسی ترتیب ظاہر کرنا چاہیئے، تاں \\emph{ترتیب وار جوڑے}\n$\\tuple{x, y}$ ورتدے آں۔ بے ترتیب جوڑے $\\{x, y\\}$ وچ ترتیب دا کوئی فرق\nنہیں پیندا: $\\{x, y\\} = \\{y, x\\}$۔ ترتیب وار جوڑے وچ فرق پیندا اے: جے\n$x \\neq y$ ہووے، تاں $\\tuple{x, y} \\neq \\tuple{y, x}$ اے۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source uses extensionality to explain that a set has no ordering or multiplicity. The descriptive label retains the element-based rationale.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0010-B005-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0010-B005:C001",
+      "unit_id": "OLP-0010",
+      "segment_id": "OLP-0010-B005",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/sets/russells-paradox.tex",
+        "file_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+        "block_1based": 5,
+        "span_sha256": "2d87e00f082b79799a46407ccdf8809c81f3a10c4d1cf1a3d8ca018f497db4f3",
+        "text": "Extensionality licenses the notation $\\Setabs{x}{\\phi(x)}$, for\n\\emph{the} set of $x$'s such that~$\\phi(x)$. However, all that\nextensionality \\emph{really} licenses is the following thought.\n\\emph{If} there is a set whose members are all and only the $\\phi$'s,\n\\emph{then} there is only one such set. Otherwise put: having fixed\nsome~$\\phi$, the set $\\Setabs{x}{\\phi(x)}$ is unique, \\emph{if it\nexists}.",
+        "current_raw_block_sha256": "2d87e00f082b79799a46407ccdf8809c81f3a10c4d1cf1a3d8ca018f497db4f3",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "07a3171dae272f95ed73d7b2ca982d5cd44782f95aca923a1579b41966c23082",
+        "text": "عنصراں نال تعیّن دا اصول علامتی لکھت $\\Setabs{x}{\\phi(x)}$ دا جواز دیندا\nاے، جہڑی اوہناں $x$ دا \\emph{اوہی} سیٹ دسدی اے جنہاں لئی~$\\phi(x)$\nہووے۔ پر عنصراں نال تعیّن دا اصول \\emph{اصل وچ} صرف ایس خیال دا جواز\nدیندا اے: \\emph{جے} اک ایہو جہا سیٹ موجود ہووے جہدے رکن سارے اوہ تے صرف\nاوہ ہون جیہڑے $\\phi$ نیں، \\emph{تاں} ایہو جہا سیٹ اکو اے۔ ہور لفظاں وچ:\nکِسے~$\\phi$ نوں طے کرن مگروں، سیٹ $\\Setabs{x}{\\phi(x)}$ یکتا اے،\n\\emph{جے اوہ موجود ہووے}۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/sets/russells-paradox.tex",
+        "file_sha256": "d2307bc120b306968703011abbd6036b46f8e4dfcbda58a387bec9b3666e8a5a",
+        "block_1based": 5,
+        "span_sha256": "07a3171dae272f95ed73d7b2ca982d5cd44782f95aca923a1579b41966c23082",
+        "text": "عنصراں نال تعیّن دا اصول علامتی لکھت $\\Setabs{x}{\\phi(x)}$ دا جواز دیندا\nاے، جہڑی اوہناں $x$ دا \\emph{اوہی} سیٹ دسدی اے جنہاں لئی~$\\phi(x)$\nہووے۔ پر عنصراں نال تعیّن دا اصول \\emph{اصل وچ} صرف ایس خیال دا جواز\nدیندا اے: \\emph{جے} اک ایہو جہا سیٹ موجود ہووے جہدے رکن سارے اوہ تے صرف\nاوہ ہون جیہڑے $\\phi$ نیں، \\emph{تاں} ایہو جہا سیٹ اکو اے۔ ہور لفظاں وچ:\nکِسے~$\\phi$ نوں طے کرن مگروں، سیٹ $\\Setabs{x}{\\phi(x)}$ یکتا اے،\n\\emph{جے اوہ موجود ہووے}۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source limits what extensionality licenses about set-builder notation. A transparent principle label is safer than an unattested calque and stays tied to the explanation.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0013-B005-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0013-B005:C001",
+      "unit_id": "OLP-0013",
+      "segment_id": "OLP-0013-B005",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/relations/reflections.tex",
+        "file_sha256": "75047e8806a58c0a0c07ae2e55554d9ad2affb9d5297b1d5585ebe0b2f3de651",
+        "block_1based": 5,
+        "span_sha256": "ae9fbc2ad76104ad2a0fcb7678fa6e45d5732124a32fe7b8e0e68d06fec7836a",
+        "text": "First: in \\olref[set][pai]{wienerkuratowski}, we defined $\\tuple{a, b} =\n\\{\\{a\\}, \\{a, b\\}\\}$. Consider instead the definition $\\lVert a,\nb\\rVert = \\{\\{b\\}, \\{a, b\\}\\} = \\tuple{b,a}$. When $a \\neq b$, we have\nthat $\\tuple{a, b} \\neq \\lVert a,b\\rVert$. But we could equally have\nregarded $\\lVert a,b\\rVert$ as our definition of an ordered pair,\nrather than $\\tuple{a,b}$. Both definitions would have worked equally\nwell. So now we have two equally good candidates to ``be'' the order\nrelation on the natural numbers, namely:\n\\begin{align*}\n\t\tR &= \\Setabs{\\tuple{n,m}}{n, m \\in \\Nat \\text{ and }n < m}\\\\\n\t\tS &= \\Setabs{\\lVert n,m\\rVert}{n, m \\in \\Nat \\text{ and }n < m}.\n\\end{align*}\nSince $R \\neq S$, by extensionality, it is clear that they cannot\n\\emph{both} be identical to the order relation on~$\\Nat$. But it would\njust be arbitrary, and hence a bit embarrassing, to claim that $R$\nrather than $S$ (or vice versa) \\emph{is} the ordering relation, as a\nmatter of fact. (This is a very simple instance of an argument against\nset-theoretic reductionism which Benacerraf made famous in\n\\citeyear{Benacerraf1965}. We will revisit it several times.)",
+        "current_raw_block_sha256": "ae9fbc2ad76104ad2a0fcb7678fa6e45d5732124a32fe7b8e0e68d06fec7836a",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "5da219205341c47b56d3152034c01d7a59f1780b5429af9aefc2f126b0eb85e3",
+        "text": "پہلی: \\olref[set][pai]{wienerkuratowski} وچ اسی $\\tuple{a, b} =\n\\{\\{a\\}, \\{a, b\\}\\}$ دی تعریف کیتی سی۔ ایہدی تھاں ایہ تعریف ویکھو:\n$\\lVert a, b\\rVert = \\{\\{b\\}, \\{a, b\\}\\} = \\tuple{b,a}$۔ جدوں $a \\neq b$ ہووے،\nتاں $\\tuple{a, b} \\neq \\lVert a,b\\rVert$ ہوندا اے۔ پر اسی $\\lVert a,b\\rVert$\nنوں وی ترتیب وار جوڑے دی اپنی تعریف منّ سکدے ساں، بجائے $\\tuple{a,b}$ دے۔\nدونویں تعریفاں اکو جِنّیاں چنگیاں طرح کم کردیاں۔ سو ہن ساڈے کول قدرتی عدداں\nاُتے ترتیبی تعلق ``ہون'' دے دو اکو جِنّے چنگے امیدوار نیں، یعنی:\n\\begin{align*}\n\t\tR &= \\Setabs{\\tuple{n,m}}{n, m \\in \\Nat \\text{ تے }n < m}\\\\\n\t\tS &= \\Setabs{\\lVert n,m\\rVert}{n, m \\in \\Nat \\text{ تے }n < m}.\n\\end{align*}\nعنصراں نال تعیّن دی بنا اُتے $R \\neq S$ اے؛ سو صاف اے کہ اوہ\n\\emph{دونویں} $\\Nat$ اُتے ترتیبی تعلق دے نال اکو نہیں ہو سکدے۔ پر ایہ\nدعویٰ کرنا کہ دراصل $R$، نہ کہ $S$ (یا ایہدے اُلٹ)، ترتیبی تعلق\n\\emph{اے}، محض من مرضی دی گل ہووے گی، تے ایس لئی کجھ شرمندگی والی وی۔\n(ایہ سیٹ نظریاتی تحویلیت دے خلاف اوس دلیل دی اک بہت سادہ مثال اے جیہنوں\nبیناسیراف نے \\citeyear{Benacerraf1965} وچ مشہور کیتا سی۔ اسی ایہنوں کئی\nواری مُڑ ویکھاں گے۔)"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/relations/reflections.tex",
+        "file_sha256": "143a69cbb2a84b1d4e85cdd3196b64216c16f318f3c1c44dcd86822796ae6942",
+        "block_1based": 5,
+        "span_sha256": "079bc6faa434170e2e7b9920c86f325d2b30af1e3157dd4fb6677475fabb68f4",
+        "text": "پہلی: \\olref[set][pai]{wienerkuratowski} وچ اسی $\\tuple{a, b} =\n\\{\\{a\\}, \\{a, b\\}\\}$ دی تعریف کیتی سی۔ ایہدی تھاں ایہ تعریف ویکھو:\n$\\lVert a, b\\rVert = \\{\\{b\\}, \\{a, b\\}\\} = \\tuple{b,a}$۔ جدوں $a \\neq b$ ہووے،\nتاں $\\tuple{a, b} \\neq \\lVert a,b\\rVert$ ہوندا اے۔ پر اسی $\\lVert a,b\\rVert$\nنوں وی ترتیب وار جوڑے دی اپنی تعریف منّ سکدے ساں، بجائے $\\tuple{a,b}$ دے۔\nدونویں تعریفاں اکو جِنّیاں چنگیاں طرح کم کردیاں۔ سو ہن ساڈے کول قدرتی عدداں\nاُتے ترتیبی تعلق ``ہون'' دے دو اکو جِنّے چنگے امیدوار نیں، یعنی:\n\\begin{align*}\n\t\tR &= \\Setabs{\\tuple{n,m}}{n, m \\in \\Nat \\text{ تے }n < m}\\\\\n\t\tS &= \\Setabs{\\lVert n,m\\rVert}{n, m \\in \\Nat \\text{ تے }n < m}.\n\\end{align*}\nعنصراں نال تعیّن دے اصول دی بنا اُتے $R \\neq S$ اے؛ سو صاف اے کہ اوہ\n\\emph{دونویں} $\\Nat$ اُتے ترتیبی تعلق دے نال اکو نہیں ہو سکدے۔ پر ایہ\nدعویٰ کرنا کہ دراصل $R$، نہ کہ $S$ (یا ایہدے اُلٹ)، ترتیبی تعلق\n\\emph{اے}، محض من مرضی دی گل ہووے گی، تے ایس لئی کجھ شرمندگی والی وی۔\n(ایہ سیٹ نظریاتی تحویلیت دے خلاف اوس دلیل دی اک بہت سادہ مثال اے جیہنوں\nبیناسیراف نے \\citeyear{Benacerraf1965} وچ مشہور کیتا سی۔ اسی ایہنوں کئی\nواری مُڑ ویکھاں گے۔)"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source infers that two differently coded relation sets are unequal by their elements. Adding دے اصول removes an elliptical form and makes the shared policy explicit.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0015-B012-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0015-B012:C001",
+      "unit_id": "OLP-0015",
+      "segment_id": "OLP-0015-B012",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/relations/equivalence-relations.tex",
+        "file_sha256": "d9531aa5cd774c12090fbd5c9fb289181e93cf7e9a96ecf7d4fd3fcdf5d250c7",
+        "block_1based": 12,
+        "span_sha256": "2cd64c68f15c2b361a1fbcac2dccb1f5db7b336f7d12de8df752964785c06924",
+        "text": "\\begin{proof}\nFor the left-to-right direction, suppose $Rxy$, and let $z \\in\n\\equivrep{x}{R}$. By definition, then, $Rxz$. Since $R$ is an\nequivalence relation, $Ryz$. (Spelling this out: as $Rxy$ and~$R$ is\nsymmetric we have $Ryx$, and as $Rxz$ and~$R$ is transitive we\nhave~$Ryz$.) So $z \\in \\equivrep{y}{R}$. Generalising,\n$\\equivrep{x}{R} \\subseteq \\equivrep{y}{R}$. But exactly similarly,\n$\\equivrep{y}{R} \\subseteq \\equivrep{x}{R}$. So $\\equivrep{x}{R} =\n\\equivrep{y}{R}$, by extensionality.",
+        "current_raw_block_sha256": "2cd64c68f15c2b361a1fbcac2dccb1f5db7b336f7d12de8df752964785c06924",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "c8d447f4c4d98f05e078494a9cebb479b1ede619da3b820af644054c9bdd0765",
+        "text": "\\begin{proof}\nکھبے توں سجے پاسے دی سمت لئی، فرض کرو کہ $Rxy$، تے $z \\in\n\\equivrep{x}{R}$ لو۔ تعریف مطابق فیر $Rxz$ اے۔ کیوں جو $R$ ہم ارزیت دا\nتعلق اے، ایس لئی $Ryz$ اے۔ (کھول کے دسیے: کیوں جو $Rxy$ اے تے $R$\nمتناظر اے، ساڈے کول $Ryx$ اے؛ تے کیوں جو $Rxz$ اے تے $R$ متعدی اے،\nساڈے کول $Ryz$ اے۔) سو $z \\in \\equivrep{y}{R}$۔ ایس گل نوں عام کر کے،\n$\\equivrep{x}{R} \\subseteq \\equivrep{y}{R}$۔ پر بالکل ایسے طرح\n$\\equivrep{y}{R} \\subseteq \\equivrep{x}{R}$ وی اے۔ سو عنصراں نال تعیّن\nمطابق $\\equivrep{x}{R} = \\equivrep{y}{R}$۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/relations/equivalence-relations.tex",
+        "file_sha256": "85f34a1640383197d5100503955a698ad8dba96a24b50b7826225d0d78aa1392",
+        "block_1based": 12,
+        "span_sha256": "6d8611959cd732bfadc1a66ddf21e2f45460c11fe0696435a5e2d4e2e58ce910",
+        "text": "\\begin{proof}\nکھبے توں سجے پاسے دی سمت لئی، فرض کرو کہ $Rxy$، تے $z \\in\n\\equivrep{x}{R}$ لو۔ تعریف مطابق فیر $Rxz$ اے۔ کیوں جو $R$ ہم ارزیت دا\nتعلق اے، ایس لئی $Ryz$ اے۔ (کھول کے دسیے: کیوں جو $Rxy$ اے تے $R$\nمتناظر اے، ساڈے کول $Ryx$ اے؛ تے کیوں جو $Rxz$ اے تے $R$ متعدی اے،\nساڈے کول $Ryz$ اے۔) سو $z \\in \\equivrep{y}{R}$۔ ایس گل نوں عام کر کے،\n$\\equivrep{x}{R} \\subseteq \\equivrep{y}{R}$۔ پر بالکل ایسے طرح\n$\\equivrep{y}{R} \\subseteq \\equivrep{x}{R}$ وی اے۔ سو عنصراں نال تعیّن دے اصول\nمطابق $\\equivrep{x}{R} = \\equivrep{y}{R}$۔"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The proof concludes equality of equivalence classes from mutual inclusion. Adding دے اصول makes the inference refer unambiguously to the set-equality principle.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0016-B027-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0016-B027:C001",
+      "unit_id": "OLP-0016",
+      "segment_id": "OLP-0016-B027",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/relations/orders.tex",
+        "file_sha256": "79593789022fef31c0609b9c94856e2aef5cd5e88e92864e782bb6e6e5f4bce4",
+        "block_1based": 27,
+        "span_sha256": "482e70b5ed250d53022ff40b60674a70fb7b96dca8be2bb7cdd8dd49796ef207",
+        "text": "The following simple result establishes that strict linear orders\nsatisfy an extensionality-like property:",
+        "current_raw_block_sha256": "482e70b5ed250d53022ff40b60674a70fb7b96dca8be2bb7cdd8dd49796ef207",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "dbe0ce626f436cb45f00c84b27b6c5959666c175cabe863b5acb41e1a0cc3e41",
+        "text": "اگلا سادہ نتیجہ ایہ ثابت کردا اے کہ سخت خطی ترتیباں، عنصراں نال تعیّن\nورگی اک خاصیت پوری کردیاں نیں:"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/relations/orders.tex",
+        "file_sha256": "3cb3896e797ad8cf15dfc96a34e11eeef44a9d8fd2b69e98792fc8a27dd72988",
+        "block_1based": 27,
+        "span_sha256": "9c893ecc3a56a7aaa562dfdf94883bf30b8f280f3714ec81ee99c8e066428a23",
+        "text": "اگلا سادہ نتیجہ ایہ ثابت کردا اے کہ سخت خطی ترتیباں، عنصراں نال تعیّن دے اصول\nورگی اک خاصیت پوری کردیاں نیں:"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source says extensionality-like, not that the order result is the set axiom. The revised wording دے اصول ورگی اک خاصیت preserves this analogy as distinct wording.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)? Does that source also support a distinct ‘extensionality-like’ order-theory expression rather than naming the set principle itself?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0023-B008-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0023-B008:C001",
+      "unit_id": "OLP-0023",
+      "segment_id": "OLP-0023-B008",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/functions/functions-relations.tex",
+        "file_sha256": "e2e46c0270c44b6f54861a4565f3829b1b5f91a7f72dca84046361e5abf622c3",
+        "block_1based": 8,
+        "span_sha256": "df94e9c07dd94d075d00936ba64cc4fe47e83384328ddea7c48ba6da85ff1dcc",
+        "text": "\\begin{explain}\nThe graph of a function is uniquely determined, by extensionality.\nMoreover, extensionality (on sets) will immediately vindicate the\nimplicit principle of extensionality for functions,\nwhereby if $f$ and~$g$ share a domain and codomain then they are\nidentical if they agree on all values.",
+        "current_raw_block_sha256": "d07c66282d23f78e71b429021ca583a1f471a62d3aa1101ea4d53222324a3987",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "fddb1f2458b465db6612b716b39bbfb1490e32520cf89c1c27f688a51fd53177",
+        "text": "\\begin{explain}\nعنصراں نال تعیّن دے اصول کرکے فنکشن دا گراف اکلوتے طور تے طے ہوندا\nاے۔ ہور ایہ کہ، سیٹاں اُتے عنصراں نال تعیّن دا اصول فنکشناں لئی\nضمنی اصول نوں فوراً ثابت کردا اے: جے $f$ تے~$g$ دا دائرۂ تعریف تے\nہدف سیٹ سانجھا ہووے، تاں ہر قدر اُتے متفق ہون دی صورت وچ اوہ اکو\nفنکشن نیں۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/functions/functions-relations.tex",
+        "file_sha256": "5afa6f1118768aa6ad6812132c29c6ef0a78d33a0f63e936b99bce50afe2d9f4",
+        "block_1based": 8,
+        "span_sha256": "fddb1f2458b465db6612b716b39bbfb1490e32520cf89c1c27f688a51fd53177",
+        "text": "\\begin{explain}\nعنصراں نال تعیّن دے اصول کرکے فنکشن دا گراف اکلوتے طور تے طے ہوندا\nاے۔ ہور ایہ کہ، سیٹاں اُتے عنصراں نال تعیّن دا اصول فنکشناں لئی\nضمنی اصول نوں فوراً ثابت کردا اے: جے $f$ تے~$g$ دا دائرۂ تعریف تے\nہدف سیٹ سانجھا ہووے، تاں ہر قدر اُتے متفق ہون دی صورت وچ اوہ اکو\nفنکشن نیں۔"
+      },
+      "text_changed": false,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The source distinguishes extensionality of sets from the induced principle for functions. The target already makes that scope explicit and is reaffirmed provisionally.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)? Does the same source or another exact function-theory passage license applying that label to the pointwise equality principle for functions?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    },
+    {
+      "schema": "pnb-semantic-repair-choice/1",
+      "repair_id": "PNB-REPAIR-OLP-0036-B012-C001-EXT-20260906",
+      "supersedes_audit_choice_id": "pnb-Arab-PK:OLP-0036-B012:C001",
+      "unit_id": "OLP-0036",
+      "segment_id": "OLP-0036-B012",
+      "source": {
+        "path": "upstream/content/sets-functions-relations/size-of-sets/comparing-size.tex",
+        "file_sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+        "block_1based": 12,
+        "span_sha256": "57adad7e33a51a9eb29dee24602a5dc4590dc7d01d02235da5acf2c977241cb4",
+        "text": "\\begin{proof}\nThe map $f(x) = \\{x\\}$ is !!a{injection} $f \\colon A \\to \\Pow{A}$,\nsince if $x \\neq y$, then also $\\{x\\} \\neq \\{y\\}$ by extensionality,\nand so $f(x) \\neq f(y)$. So we have that $\\cardle{A}{\\Pow{A}}$.",
+        "current_raw_block_sha256": "88084c6155286daad014720464e3669ccd2c621bff237e997968fae894467547",
+        "boundary_normalization": "Forensic span trims an upstream boundary space only when its raw block hash differs; source bytes remain untouched."
+      },
+      "target_before": {
+        "span_sha256": "bf4d438cfe8e692c4ec2e8c44a4c7b8e32ea6a6dc91f6abc4a01afe6b106624b",
+        "text": "\\begin{proof}\nنقشہ $f(x) = \\{x\\}$ اک !!a{injection} $f \\colon A \\to \\Pow{A}$ اے،\nکیوں جے جے $x \\neq y$، تاں توسیعیت موجب $\\{x\\} \\neq \\{y\\}$ وی اے،\nتے ایس لئی $f(x) \\neq f(y)$۔ سو ساڈے کول\n$\\cardle{A}{\\Pow{A}}$ اے۔"
+      },
+      "target_after": {
+        "path": "translation/content/sets-functions-relations/size-of-sets/comparing-size.tex",
+        "file_sha256": "4d5f757e90bf5ae8afc686eab335c88120621fdee923596fcf78aee0a9b32ce7",
+        "block_1based": 12,
+        "span_sha256": "02d02639d7b089ca80b3b22a70fc816b874d1b0519c20986edcb66a7bc09794b",
+        "text": "\\begin{proof}\nنقشہ $f(x) = \\{x\\}$ اک !!a{injection} $f \\colon A \\to \\Pow{A}$ اے،\nکیوں جے جے $x \\neq y$، تاں عنصراں نال تعیّن دے اصول موجب $\\{x\\} \\neq \\{y\\}$ وی اے،\nتے ایس لئی $f(x) \\neq f(y)$۔ سو ساڈے کول\n$\\cardle{A}{\\Pow{A}}$ اے۔"
+      },
+      "text_changed": true,
+      "exact_consulted_passages": [
+        {
+          "passage_id": "PNB-P023",
+          "source_id": "PNB-C010",
+          "source_sha256": "d4211742a055d7a3d45b85197898539ad662bdca51937264923ac693941a643c",
+          "locator": {
+            "type": "MediaWiki_revision_raw_wikitext_line",
+            "revision_id": 372811,
+            "line_1based": 2,
+            "line_utf8_sha256": "71999d0fb7a5e9e8d3e40fc5020372608d612d0018b1f14b4c8f73d6929d8ef4"
+          },
+          "quote": "'''سیٹ تھیوری''' [[میتھمیٹکس]] دا [[اک]] انگ اے جیدے ج سیٹاں نوں پڑھی دا اے سیٹ چیزاں دے اکٹھ نوں کیندے نیں۔",
+          "role": "community_set_theory_usage",
+          "observation": "Attests سیٹ تھیوری and explains a set as a collection of objects.",
+          "verified": "Exact revision-bound raw wikitext line read during canon repair 2026-09-06; community technical usage only, not peer-reviewed scholarly attestation.",
+          "rights": "CC BY-SA 4.0; attribution supplied by source title, permanent revision URL and publisher record.",
+          "use_limit_for_this_choice": "Attests only سیٹ تھیوری and a generic set definition; it does not attest either extensionality candidate."
+        }
+      ],
+      "bounded_search_evidence": {
+        "receipt_path": "evidence/shahmukhi-mathematical-witnesses-20260906/EXTENSIONALITY-SEARCH.json",
+        "receipt_sha256": "ae1898f220367f3d6ad512b4de350214788a13b1e8404bfa0b34f2ec9029e0f6",
+        "queries": [
+          {
+            "search_id": "PNB-EXT-Q01",
+            "query": "توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q02",
+            "query": "عنصراں نال تعیّن",
+            "response_sha256": "afc005eaa4e0dd5bb3a45897a8029d279aa5ec679efd2c74442f4592155d7d08",
+            "response_bytes": 181,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q03",
+            "query": "extensionality",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q04",
+            "query": "سیٹاں دی عنصری برابری",
+            "response_sha256": "93b7b734b4b26d6b665d030fa38e6dc0cd0e96215fe7052c7769ba16cba42b22",
+            "response_bytes": 208,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q05",
+            "query": "اکسٹینشنلٹی",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q06",
+            "query": "اصول توسیعیت",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          },
+          {
+            "search_id": "PNB-EXT-Q07",
+            "query": "سیٹاں دی برابری",
+            "response_sha256": "14ab4405b2591d7273afc5cea8f5a93402f5dc15bfef706fe254a54b6432b0e1",
+            "response_bytes": 4655,
+            "total_hits": 8,
+            "titles": [
+              "کانشی رام",
+              "امریکا",
+              "2026 فیفا ورلڈ کپ دا فائنل",
+              "جمہوریہ ہند دی تریخ (1947 تا حال)",
+              "سپیشل ریلیٹیوٹی",
+              "جرمنی دی تریخ",
+              "سپیس ٹائیم",
+              "منکووسکی سپیس"
+            ]
+          },
+          {
+            "search_id": "PNB-EXT-Q08",
+            "query": "عنصراں نال مقرر سیٹ",
+            "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+            "response_bytes": 73,
+            "total_hits": 0,
+            "titles": []
+          }
+        ],
+        "context_review": "Direct candidates توسیعیت, عنصراں نال تعیّن, extensionality, اکسٹینشنلٹی and اصول توسیعیت had zero hits. Two definition-like variants also had zero. The broad tokenized سیٹاں دی برابری search returned eight unrelated politics/seating/physics pages and no set-theory extensionality passage.",
+        "scope_limit": "Bounded pnb.wikipedia main-namespace search plus targeted Punjab University/HEC/open-web discovery; absence here is not global Punjabi absence."
+      },
+      "alternatives": [
+        {
+          "form": "عنصراں نال تعیّن دا اصول",
+          "disposition": "chosen_supported_provisional",
+          "reason": "Definition-transparent: the source itself says equality is determined by having the same elements; paired with an English first-use bridge."
+        },
+        {
+          "form": "توسیعیت",
+          "disposition": "rejected_pending_evidence",
+          "reason": "Opaque calque in this context, inconsistent with thirteen edition occurrences, and zero direct hits in the bounded Shahmukhi corpus."
+        },
+        {
+          "form": "اکسٹینشنلٹی",
+          "disposition": "unchosen_reversible_English_loan",
+          "reason": "Searchable but unattested in the bounded corpus; retained only as a future fallback if stronger evidence rejects the descriptive phrase."
+        },
+        {
+          "form": "سیٹ اوہدے عنصراں نال طے ہوندا اے",
+          "disposition": "explanatory_paraphrase_not_term",
+          "reason": "Useful prose explanation but too sentence-like for every heading and named-principle occurrence."
+        }
+      ],
+      "justification": "The lone توسیعیت occurrence was inconsistent and unattested. Replacing it with the same descriptive principle used in the defining section harmonizes the exact set-equality inference.",
+      "confidence": {
+        "source_meaning_preserved": 0.96,
+        "conventional_term_status": 0.18
+      },
+      "review_question": "Can a peer-reviewed Pakistani Punjabi Shahmukhi set-theory source be supplied with an exact page and passage for the conventional label of extensionality? If so, should it replace the explicit bridge عنصراں نال تعیّن دا اصول (Extensionality)?",
+      "status": "supported-provisional_definition-governed_no_conventional-attestation",
+      "support_basis": "authoritative source definition plus explicit reversible English bridge and bounded negative candidate evidence; not claimed external lexical attestation",
+      "choice_semantic_disposition": "resolved_provisional",
+      "unit_or_prefix_semantic_acceptance": false,
+      "unit_or_prefix_acceptance_reason": "This adjudicates only the indexed extensionality construction; other choices in the segment/unit remain subject to the contiguous repair pass beginning at OLP-0001-B001."
+    }
+  ],
+  "semantic_acceptance": false,
+  "publication_claim": "No semantic-success claim. The fourteen conflicts are resolved only as explicit reversible provisional choices; the contiguous repair prefix still begins at OLP-0001-B001."
+}

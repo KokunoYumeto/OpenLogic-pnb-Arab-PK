@@ -1,0 +1,584 @@
+{
+  "schema": "pnb-contiguous-repair-prefix-validation/1",
+  "through_unit": "OLP-0005",
+  "choice_groups": 69,
+  "effective_counts": {
+    "formal-invariant": 48,
+    "supported-provisional": 21
+  },
+  "semantic_blockers_unsupported_plus_needs_revision": 0,
+  "semantic_unresolved_including_contentious": 0,
+  "all_language_bearing_groups_have_exact_repair_records": true,
+  "formal_invariant_groups_reverified": 48,
+  "structural_unit_checks": {
+    "OLP-0001": {
+      "source_path": "content/open-logic-about.tex",
+      "target_bytes": 2351,
+      "target_sha256": "745972c87d16c380b4389da7fcf406a544f101e536a21b1bca3c0d77669e1678",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0002": {
+      "source_path": "content/content.tex",
+      "target_bytes": 3153,
+      "target_sha256": "7129fb2da1d16f7750b9ce3519521c6a1ba5bd8acacee31037e96193de3d5791",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0003": {
+      "source_path": "content/sets-functions-relations/sets-functions-relations-complete.tex",
+      "target_bytes": 879,
+      "target_sha256": "af1849fdea63616caf0bd46c9f88d2b30a7e8e9b94d4b7d984c7a566d01a1009",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0004": {
+      "source_path": "content/sets-functions-relations/sets/sets.tex",
+      "target_bytes": 358,
+      "target_sha256": "ea5e38050032621910376183edf8fbe290bb9fafa91e621844e914cc74fb7fc9",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0005": {
+      "source_path": "content/sets-functions-relations/sets/basics.tex",
+      "target_bytes": 6304,
+      "target_sha256": "57fe0ef1b8ede308916b19b3fed6574e34ea457c726e0214b1d7e34af1b447be",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    }
+  },
+  "choice_results": [
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0001-B001:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0001-B001-C001-PREFIX03-20260906",
+      "target_span_sha256": "9e6c73db2ea279958d4134b9f0691c8858d5e0f3b8bae077e2241ff7fc024159",
+      "passages": [
+        "PNB-P002"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0001-B002:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0001-B002-C001-PREFIX03-20260906",
+      "target_span_sha256": "fbf9b68398d9894019c11fc4648a433928550324811117ac3a9c52af4a60b52f",
+      "passages": [
+        "PNB-P001",
+        "PNB-P002",
+        "PNB-P018",
+        "PNB-P019"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0001-B003:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0001-B003-C001-PREFIX03-20260906",
+      "target_span_sha256": "247f5fc177c98949c50eab6b7f0ba40f1a559a807b312ebe6b0702671c3cc84a",
+      "passages": [
+        "PNB-P002",
+        "PNB-P005",
+        "PNB-P015"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0001-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0001-B004-C001-PREFIX03-20260906",
+      "target_span_sha256": "a150368a30d0c3243baf251609d3aa41a37a912852465b4fd1d872d74e4f3635",
+      "passages": [
+        "PNB-P002",
+        "PNB-P005",
+        "PNB-P006"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B004:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0002-B005-C001-PREFIX03-20260906",
+      "target_span_sha256": "f422e8d2f7f5966bff6ef6d56a9f3658c9543a4c676f72dffa09a64585661b49",
+      "passages": [
+        "PNB-P002",
+        "PNB-P005",
+        "PNB-P006"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B006:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0002-B006-C001-PREFIX03-20260906",
+      "target_span_sha256": "92af43af60c89ddfbd0316f66aad6c2dcf9e8fc72472172b5dae4672ab9615de",
+      "passages": [
+        "PNB-P006",
+        "PNB-P017",
+        "PNB-P018"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B007:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0002-B007-C001-PREFIX03-20260906",
+      "target_span_sha256": "1f6b44f59fc36737c9ea81f695a61563c24000dc2657aa911f39a71c1ada4666",
+      "passages": [
+        "PNB-P005",
+        "PNB-P006"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B008:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B009:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B010:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B011:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B012:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B013:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B014:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B015:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B016:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B017:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B018:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B019:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B020:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B021:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B022:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B023:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B024:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B025:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0002-B026:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0003-B004-C001-PREFIX03-20260906",
+      "target_span_sha256": "45a8ee21bf2b7ec3702b0d0d9a5559606f87dca9e374764d8ac398beb61844cb",
+      "passages": [
+        "PNB-P019",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0003-B005-C001-PREFIX03-20260906",
+      "target_span_sha256": "f3fa283ec5930d69f927be0854763a7488fcdf2105f472b52cca86a2dcb0fe37",
+      "passages": [
+        "PNB-P017",
+        "PNB-P019",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B006:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B007:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B008:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B009:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B010:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B011:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0003-B012:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0004-B004-C001-20260907",
+      "target_span_sha256": "ecc5b686db53e1318cd083c8fe1c3a47a4f1cb9595c8d22bec65d7f3a40ea447",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B005:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B006:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B007:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B008:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B009:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B010:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B011:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0004-B012:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B004:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B004-C001-FULL-20260907",
+      "target_span_sha256": "516d2e26c2700a4cd93a96bcf45d782630e0e5601bfd788e417f8bd05644b452",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B005-C001-FULL-20260907",
+      "target_span_sha256": "85f9f43492380aa69625c2f0b2ed6c1b34dceadfdc89eac5df5eeecfe1150efe",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B006:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B006-C001-FULL-20260907",
+      "target_span_sha256": "0b0939408a93dcc34003267ff1706b113685c15bb11321fc7e239a7cbcfc6e42",
+      "passages": [
+        "PNB-P023",
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B007:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B007-C001-FULL-20260907",
+      "target_span_sha256": "08c5320fd5da58db27bcf662b985bac5988e33725d8f3743178b1a76f0778c73",
+      "passages": [
+        "PNB-P023",
+        "PNB-P018"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B008:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B008-C001-FULL-20260907",
+      "target_span_sha256": "f823ddfe16fe686bf154843d9aa2d286cf2b2a2f780a263a744b64e8a27cfb8f",
+      "passages": [
+        "PNB-P023",
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B009:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B009-C001-FULL-20260907",
+      "target_span_sha256": "489f2fb75ffee595545219d7b9be57fa6b4504004e6d8b7d342927d965dbc81b",
+      "passages": [
+        "PNB-P023",
+        "PNB-P022"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B010:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B010-C001-FULL-20260907",
+      "target_span_sha256": "42af00d6f10ab9eaa114527883eb0bbfe0888deb365ead92753ba64bf2571dc9",
+      "passages": [
+        "PNB-P023",
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B011:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B011-C001-FULL-20260907",
+      "target_span_sha256": "a56852c67a9fc890c24a3d5346e9b62112e6ff9ffddbf56656597c2968b80a55",
+      "passages": [
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B012:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B012-C001-FULL-20260907",
+      "target_span_sha256": "05dbc8b08f9cbc1a3c2bd483f615ff9fb33b8ab8405db6620c4819f04ac6e383",
+      "passages": [
+        "PNB-P023",
+        "PNB-P017",
+        "PNB-P022"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B013:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B013-C001-FULL-20260907",
+      "target_span_sha256": "c75f828e7807902cdca4fcf9fb20bc9472ee0379e46d9efe4e415fa9fae85fc2",
+      "passages": [
+        "PNB-P023",
+        "PNB-P018"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B014:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0005-B014-C001-FULL-20260907",
+      "target_span_sha256": "8377157eaa65b001ea714a4483bc687c9ab6a8f945d6cede9f7f6edd9c4ee79f",
+      "passages": [
+        "PNB-P023",
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0005-B015:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    }
+  ],
+  "errors": [],
+  "valid": true,
+  "semantic_acceptance_scope": "Contiguous repaired prefix OLP-0001 through OLP-0005 only; provisional choices are explicit and reversible.",
+  "corpus_semantic_acceptance": false,
+  "historical_published_units": 74,
+  "forward_authoring_freeze_after_OLP_0074": true,
+  "next_repair_choice": "pnb-Arab-PK:OLP-0006-B004:C001",
+  "publication_gate": {
+    "prefix_zero_unsupported_and_needs_revision": true,
+    "prefix_zero_contentious": true,
+    "corpus_success_claim_allowed": false,
+    "release_performed": false
+  }
+}
