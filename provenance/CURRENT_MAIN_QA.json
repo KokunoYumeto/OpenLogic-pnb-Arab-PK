@@ -148,11 +148,11 @@
     "The historical v0.1.0 reader and Zenodo record remain immutable. The new portable candidate is locally reproducible and visually accepted but not released.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ],
-  "status": "CURRENT_MAIN_SOURCE_AND_PROVENANCE_CHECKPOINT_PUBLICATION_PENDING",
+  "status": "CANON_REPAIR_IN_PROGRESS_VALIDATED_PREFIX_ONLY",
   "historical_main_commit": "6c4b2f319903b3ec36af7841b108bfc74ebadf58",
   "previous_public_main_commit": "3e1d82bf1f32d3a8dc5940ec93db2b01e327708d",
   "publication_commit": null,
-  "publication_commit_policy": "Set only after push and anonymous raw plus codeload verification.",
+  "publication_commit_policy": "The final metadata commit is recorded in external durable and anonymous readback receipts after publication; its hash is not self-embedded in this commit-addressed file.",
   "semantic_repair_choices": {
     "file": "SEMANTIC_REPAIR_CHOICES.jsonl",
     "bytes": 823845,
@@ -205,7 +205,15 @@
     "effective_remaining_unresolved_choices": 690,
     "next_repair_choice": "pnb-Arab-PK:OLP-0011-B004:C001",
     "corpus_semantic_acceptance": false,
-    "forward_authoring_after_OLP_0074_frozen": true
+    "forward_authoring_after_OLP_0074_frozen": true,
+    "publication_state": {
+      "content_commit": "a699424d8e3c3beb7802faf448bd208836d0d12a",
+      "content_commit_anonymous_raw_paths_verified": 58,
+      "content_commit_codeload_frozen_sources_exact": 722,
+      "final_metadata_commit": "external durable receipt after publication",
+      "release_assets_changed": false,
+      "zenodo_changed": false
+    }
   },
   "portable_candidate": {
     "status": "reproduced_and_all_pages_visually_accepted_not_released",
@@ -247,5 +255,6 @@
     "bidi_defect_caught_and_corrected_before_acceptance": true,
     "release_assets_changed": false,
     "semantic_acceptance_effect": "The candidate covers all seven Sets units, exactly the current OLP-0004 through OLP-0010 source, within the validated OLP-0001 through OLP-0010 prefix."
-  }
+  },
+  "repair_content_commit": "a699424d8e3c3beb7802faf448bd208836d0d12a"
 }
