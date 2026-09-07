@@ -11,25 +11,25 @@
       "unit_id": "OLP-0005",
       "source_path": "content/sets-functions-relations/sets/basics.tex",
       "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
-      "translation_sha256": "8796af2603ecd61ca61d0e39ad471f7c6c15acba43acda2de7c65ffabdd7dd64"
+      "translation_sha256": "57fe0ef1b8ede308916b19b3fed6574e34ea457c726e0214b1d7e34af1b447be"
     },
     {
       "unit_id": "OLP-0006",
       "source_path": "content/sets-functions-relations/sets/subsets.tex",
       "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
-      "translation_sha256": "8ece29ab14cc154397ed8f4ad45403cb79abd1de49a205fc57422454b61e7b90"
+      "translation_sha256": "a43f274cfde6cfc699290f18825cd2dbbc34785b375ea242d2d2c88eb7690ca0"
     },
     {
       "unit_id": "OLP-0007",
       "source_path": "content/sets-functions-relations/sets/important-sets.tex",
       "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
-      "translation_sha256": "0104ebc3c8a1cffbdf84a703ceccc194f6d8d0a2c53ff2e1e3c8d35798628e7a"
+      "translation_sha256": "ddd8bf078a1af4c70ff0156d6e20bfdc6b096fc1a2ab54613042c583c709d2e0"
     },
     {
       "unit_id": "OLP-0008",
       "source_path": "content/sets-functions-relations/sets/unions-and-intersections.tex",
       "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
-      "translation_sha256": "9e8d24edf6ff844d6fe494a4c6711f0627927e7f8b64fb9df7e7b87ba76ad048"
+      "translation_sha256": "e082ec2cb505a12d1a6a82e7d89d4c460c179b589b17357ac0682b2f9f26bb2e"
     },
     {
       "unit_id": "OLP-0009",
@@ -174,8 +174,8 @@
     {
       "unit": "unions-and-intersections",
       "representative": "x",
-      "original_condition": "x \\text{، سیٹ } A\\text{ دے کسے عنصر دا عنصر اے}",
-      "condition_sha256": "d8c2d37e1af66917b7b512668d0d77879e9fcedd83ff1a551357511e6a79e7cd",
+      "original_condition": "x \\text{، دتے ہوئے سیٹ دے کسے عنصر دا عنصر اے: } A",
+      "condition_sha256": "b43ac5fb1581832b49a08fe312cd78cbc5c14ec2d18fef36534d4f7a0bace085",
       "formal_fragments_in_original_order": [
         "x",
         "A"
@@ -196,8 +196,8 @@
     {
       "unit": "unions-and-intersections",
       "representative": "x",
-      "original_condition": "x \\text{، سیٹ } A\\text{ دے ہر عنصر وچ اے}",
-      "condition_sha256": "747fdbb104547ae8a0fd3df7637cb80bc50526e0011d29b79eb48feac8e4e39b",
+      "original_condition": "x \\text{، دتے ہوئے سیٹ دے ہر عنصر وچ اے: } A",
+      "condition_sha256": "bb15556c322e3b16d48f7c088a9693ba4ab5f6e00882531bdc4358ee8c0037a3",
       "formal_fragments_in_original_order": [
         "x",
         "A"
@@ -217,8 +217,8 @@
     {
       "unit": "unions-and-intersections",
       "representative": "x",
-      "original_condition": "x \\text{، سیٹاں } A_i\\text{ وچوں کسے اک وچ شامل اے}",
-      "condition_sha256": "9b6a2260798c5e5cdc0a245d2d49f67fe253196d3c6ba2443dae7f54686b1ac4",
+      "original_condition": "x \\text{، دتے ہوئے سیٹاں وچوں کسے اک وچ شامل اے: } A_i",
+      "condition_sha256": "03065a0f1ad20537f2f1f2f5429f23fb257491ec28fb722f9548d5aaa82c303a",
       "formal_fragments_in_original_order": [
         "x",
         "A_i"
@@ -228,8 +228,8 @@
     {
       "unit": "unions-and-intersections",
       "representative": "x",
-      "original_condition": "x \\text{، سیٹاں } A_i\\text{ وچوں ہر اک وچ شامل اے}",
-      "condition_sha256": "33160e3c55267de27686d90f9ef80de5c238eff6a27007f39afe8fafb42df188",
+      "original_condition": "x \\text{، دتے ہوئے ہر سیٹ وچ شامل اے: } A_i",
+      "condition_sha256": "2675d9f72787b3a60c70a32bfa4e8c53ddcd83f02d5cff8d0d0680223ad0dfa6",
       "formal_fragments_in_original_order": [
         "x",
         "A_i"
@@ -259,10 +259,299 @@
       "rendering": "one RTL text clause with explicitly LTR formal islands"
     }
   ],
+  "english_bridge_isolations": [
+    {
+      "unit": "basics",
+      "text": "Extensionality",
+      "source": "(Extensionality)",
+      "rendering": "\\textenglish{(Extensionality)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "element/member",
+      "source": "(element/member)",
+      "rendering": "\\textenglish{(element/member)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "empty set",
+      "source": "(empty set)",
+      "rendering": "\\textenglish{(empty set)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "if and only if",
+      "source": "(if and only if)",
+      "rendering": "\\textenglish{(if and only if)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "positive integers",
+      "source": "(positive integers)",
+      "rendering": "\\textenglish{(positive integers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "set-builder notation",
+      "source": "(set-builder notation)",
+      "rendering": "\\textenglish{(set-builder notation)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "perfect number",
+      "source": "(perfect number)",
+      "rendering": "\\textenglish{(perfect number)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "basics",
+      "text": "proper divisors",
+      "source": "(proper divisors)",
+      "rendering": "\\textenglish{(proper divisors)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "Subsets and Power Sets",
+      "source": "(Subsets and Power Sets)",
+      "rendering": "\\textenglish{(Subsets and Power Sets)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "Subset",
+      "source": "(Subset)",
+      "rendering": "\\textenglish{(Subset)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "proper subset",
+      "source": "(proper subset)",
+      "rendering": "\\textenglish{(proper subset)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "even natural numbers",
+      "source": "(even natural numbers)",
+      "rendering": "\\textenglish{(even natural numbers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "integers",
+      "source": "(integers)",
+      "rendering": "\\textenglish{(integers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "Power Set",
+      "source": "(Power Set)",
+      "rendering": "\\textenglish{(Power Set)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "subsets",
+      "text": "power set",
+      "source": "(power set)",
+      "rendering": "\\textenglish{(power set)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "natural numbers",
+      "source": "(natural numbers)",
+      "rendering": "\\textenglish{(natural numbers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "integers",
+      "source": "(integers)",
+      "rendering": "\\textenglish{(integers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "rationals",
+      "source": "(rationals)",
+      "rendering": "\\textenglish{(rationals)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "real numbers",
+      "source": "(real numbers)",
+      "rendering": "\\textenglish{(real numbers)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "continuum",
+      "source": "(continuum)",
+      "rendering": "\\textenglish{(continuum)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "infinite",
+      "source": "(infinite)",
+      "rendering": "\\textenglish{(infinite)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "Strings",
+      "source": "(Strings)",
+      "rendering": "\\textenglish{(Strings)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "alphabet",
+      "source": "(alphabet)",
+      "rendering": "\\textenglish{(alphabet)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "finite strings",
+      "source": "(finite strings)",
+      "rendering": "\\textenglish{(finite strings)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "finite sequence",
+      "source": "(finite sequence)",
+      "rendering": "\\textenglish{(finite sequence)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "empty string",
+      "source": "(empty string)",
+      "rendering": "\\textenglish{(empty string)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "length",
+      "source": "(length)",
+      "rendering": "\\textenglish{(length)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "Infinite sequences",
+      "source": "(Infinite sequences)",
+      "rendering": "\\textenglish{(Infinite sequences)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "important-sets",
+      "text": "one-way infinite\nlist",
+      "source": "(one-way infinite\nlist)",
+      "rendering": "\\textenglish{(one-way infinite\nlist)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "Unions and Intersections",
+      "source": "(Unions and Intersections)",
+      "rendering": "\\textenglish{(Unions and Intersections)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "definition by abstraction",
+      "source": "(definition by abstraction)",
+      "rendering": "\\textenglish{(definition by abstraction)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "Union",
+      "source": "(Union)",
+      "rendering": "\\textenglish{(Union)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "union",
+      "source": "(union)",
+      "rendering": "\\textenglish{(union)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "dual operation",
+      "source": "(dual operation)",
+      "rendering": "\\textenglish{(dual operation)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "intersection",
+      "source": "(intersection)",
+      "rendering": "\\textenglish{(intersection)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "Intersection",
+      "source": "(Intersection)",
+      "rendering": "\\textenglish{(Intersection)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "intersection",
+      "source": "(intersection)",
+      "rendering": "\\textenglish{(intersection)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "disjoint",
+      "source": "(disjoint)",
+      "rendering": "\\textenglish{(disjoint)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "index",
+      "source": "(index)",
+      "rendering": "\\textenglish{(index)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "Difference",
+      "source": "(Difference)",
+      "rendering": "\\textenglish{(Difference)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    },
+    {
+      "unit": "unions-and-intersections",
+      "text": "set difference",
+      "source": "(set difference)",
+      "rendering": "\\textenglish{(set difference)}",
+      "reason": "Prevent bidirectional reordering of an explicit source-language terminology bridge."
+    }
+  ],
   "number_direction": "Section and figure presentation numbers isolated LTR; stored label numbers unchanged.",
   "emphasis_rendering": "Bold upright for native Arabic-script emphasis; no unavailable italic fallback. Nastaliq bold is explicitly synthetic weight.",
   "nastaliq_font_sha256": "41d67104d4021b50691635c3b693bf20ab19290a9361c32e3ddcb3405278f8a5",
-  "builder_sha256": "f9b75bb667be6c46db17817e4d8123b9dbced8a8049f7ebce9a15f8e3e26432c",
+  "builder_sha256": "fac10925664a7cd03574ea8a40834676926c439264f0e6e5eb324a211760923c",
   "preamble_sha256": "d7d7c99cc277df864a1c919b11127a6e72dec57cd6e10308121fee7a76447f59",
   "status": "tex_generated_no_pdf_acceptance",
   "fonts": [
@@ -301,6 +590,5 @@
       "bytes": 1033544,
       "sha256": "41d67104d4021b50691635c3b693bf20ab19290a9361c32e3ddcb3405278f8a5"
     }
-  ],
-  "acceptance": "Unbuilt work in progress; not the source of released PDF bytes."
+  ]
 }

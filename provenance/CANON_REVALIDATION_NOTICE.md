@@ -30,15 +30,17 @@ The audit therefore classified all 74 translated units as historically and prove
 
 ## Current validated prefix
 
-The contiguous repair validator covers OLP-0001 through OLP-0005 and reports:
+The contiguous repair validator covers OLP-0001 through OLP-0008 and reports:
 
-- 69/69 choice groups accounted for;
-- 48 reverified formal invariants;
-- 21 language-bearing groups with exact supported-provisional repair records;
+- 128/128 choice groups accounted for;
+- 60 reverified formal invariants;
+- 68 language-bearing groups with exact supported-provisional repair records;
 - 0 unsupported, 0 needs-revision, and 0 contentious groups;
 - no target-span, passage-identity, formula, command, protected-argument, placeholder-token, brace, Unicode, or source-manifest failures.
 
-OLP-0005 now includes visible first-use bridges for unattested `element/member`, `empty set`, `if and only if`, `positive integers`, `set-builder notation`, `perfect number`, and `proper divisors`; its definitions, examples, symbols, and formulae remain source-governed. This establishes semantic acceptance only for the repaired prefix OLP-0001–OLP-0005 under the documented provisional-term policy. It is not a claim that the 74-unit draft, the v0.1.0 reader, or the complete 722-unit edition is semantically accepted or complete. The next repair choice is `pnb-Arab-PK:OLP-0006-B004:C001`.
+OLP-0005 includes visible first-use bridges for unattested `element/member`, `empty set`, `if and only if`, `positive integers`, `set-builder notation`, `perfect number`, and `proper divisors`. OLP-0006 adds exact definition-governed bridges for `subset`, `proper subset`, `even natural numbers`, `integers`, and `power set`. OLP-0007 makes all number-class, infinity, string, alphabet, length, sequence, and one-way-list choices reversible at their definitions. OLP-0008 does the same for `definition by abstraction`, `union`, `dual operation`, `intersection`, `disjoint`, `index`, and `set difference`, and also repairs four latent TeX-command-count mismatches without changing mathematical-token order. This establishes semantic acceptance only for the repaired prefix OLP-0001–OLP-0008 under the documented provisional-term policy. It is not a claim that the 74-unit draft, the v0.1.0 reader, or the complete 722-unit edition is semantically accepted or complete. The next repair choice is `pnb-Arab-PK:OLP-0009-B004:C001`.
+
+The relocatable Sets-reader candidate was also rebuilt after this checkpoint. Three XeLaTeX passes in each profile reproduced stable Naskh and Nastaliq bytes, all 29 pages were rendered and visually inspected, and all 41 explicit English terminology bridges retained their internal LTR order. This is layout and reproducibility smoke evidence only: no PDF release changed, and the reader's historical-draft OLP-0009 and OLP-0010 content remains semantically unaccepted. Exact evidence is in [`PORTABLE_CANDIDATE_QA.json`](PORTABLE_CANDIDATE_QA.json).
 
 ## Evidence policy
 

@@ -65,6 +65,19 @@ def rtl_set_conditions(body, unit, records):
         pos=end
     return ''.join(result)
 
+def isolate_english_bridges(body, unit, records):
+    """Keep simple parenthetical English term bridges in one LTR run.
+
+    Bare Latin parentheticals inside Arabic paragraphs can reorder their
+    parentheses and words. TeX/math and Punjabi parentheticals are untouched.
+    """
+    pattern=re.compile(r'\(([A-Za-z][A-Za-z0-9\s/&,-]*[A-Za-z0-9])\)')
+    def replace(match):
+        text=match.group(1)
+        records.append({'unit':unit,'text':text,'source':'('+text+')','rendering':r'\textenglish{('+text+')}','reason':'Prevent bidirectional reordering of an explicit source-language terminology bridge.'})
+        return r'\textenglish{('+text+')}'
+    return pattern.sub(replace,body)
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--output-dir',type=Path,required=True)
@@ -100,6 +113,7 @@ def main():
     conditionals=[]
     layout_overrides=[]
     rtl_conditions=[]
+    english_bridge_isolations=[]
     bodies=[]
     for name,prefix,text in units:
         body=text.split(r'\begin{document}',1)[1].rsplit(r'\end{document}',1)[0]
@@ -138,6 +152,7 @@ def main():
         if '!!' in body: raise ValueError('Unexpanded lexical token')
         body=rtl_set_conditions(body,name,rtl_conditions)
         body=re.sub(r'\\text\{([^{}]*[\u0600-\u06ff][^{}]*)\}',lambda m:r'\text{\textarabic{'+m.group(1)+'}}',body)
+        body=isolate_english_bridges(body,name,english_bridge_isolations)
         body=body.replace(r'\textrm{Ruth}',r'\text{\textenglish{Ruth}}').replace('``','«').replace("''",'»')
         if name=='unions-and-intersections':
             # This complete atomic equality overflowed the RTL inline paragraph.
@@ -165,7 +180,7 @@ def main():
         ('nastaliq',r'\newfontfamily\arabicfont[Script=Arabic,Path='+Path(os.path.relpath(static.parent,out)).as_posix()+'/,BoldFont='+static.name+',BoldFeatures={FakeBold=1.8}]{'+static.name+'}','1.7')]:
         tex=preamble.replace('@@BASEFONT@@',basefont).replace('@@SUPPORTFONT@@',supportfont).replace('@@FONT@@',font).replace('@@LEADING@@',leading).replace('@@PROFILE@@',profile).replace('@@CHAPTER@@',title).replace('@@BODY@@','\n\n'.join(bodies))
         (out/f'sets-{profile}.tex').write_text(tex,encoding='utf-8')
-    receipt={'schema':'pnb-sets-reader-inputs/1','source_units':records,'body_sections':len(bodies),'chapter_driver_count':1,'reader_coverage_unit_ids':[x['unit_id'] for x in records],'references':refs,'label_kinds':label_kinds,'assets':assets,'conditionals':conditionals,'layout_overrides':layout_overrides,'rtl_set_conditions':rtl_conditions,'number_direction':'Section and figure presentation numbers isolated LTR; stored label numbers unchanged.','emphasis_rendering':'Bold upright for native Arabic-script emphasis; no unavailable italic fallback. Nastaliq bold is explicitly synthetic weight.','nastaliq_font_sha256':digest(static.read_bytes()),'builder_sha256':digest(Path(__file__).read_bytes()),'preamble_sha256':digest((REPO/'reader'/'sets-preamble.tex').read_bytes()),'status':'tex_generated_no_pdf_acceptance'}
+    receipt={'schema':'pnb-sets-reader-inputs/1','source_units':records,'body_sections':len(bodies),'chapter_driver_count':1,'reader_coverage_unit_ids':[x['unit_id'] for x in records],'references':refs,'label_kinds':label_kinds,'assets':assets,'conditionals':conditionals,'layout_overrides':layout_overrides,'rtl_set_conditions':rtl_conditions,'english_bridge_isolations':english_bridge_isolations,'number_direction':'Section and figure presentation numbers isolated LTR; stored label numbers unchanged.','emphasis_rendering':'Bold upright for native Arabic-script emphasis; no unavailable italic fallback. Nastaliq bold is explicitly synthetic weight.','nastaliq_font_sha256':digest(static.read_bytes()),'builder_sha256':digest(Path(__file__).read_bytes()),'preamble_sha256':digest((REPO/'reader'/'sets-preamble.tex').read_bytes()),'status':'tex_generated_no_pdf_acceptance'}
     receipt['fonts']=font_records
     (out/'INPUTS.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'units':len(records),'sections':len(bodies),'references':len(refs),'assets':len(assets),'conditional_branches':len(conditionals),'inputs_sha256':digest((out/'INPUTS.json').read_bytes())}))

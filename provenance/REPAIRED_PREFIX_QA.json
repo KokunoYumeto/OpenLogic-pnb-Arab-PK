@@ -1,15 +1,15 @@
 {
   "schema": "pnb-contiguous-repair-prefix-validation/1",
-  "through_unit": "OLP-0005",
-  "choice_groups": 69,
+  "through_unit": "OLP-0008",
+  "choice_groups": 128,
   "effective_counts": {
-    "formal-invariant": 48,
-    "supported-provisional": 21
+    "formal-invariant": 60,
+    "supported-provisional": 68
   },
   "semantic_blockers_unsupported_plus_needs_revision": 0,
   "semantic_unresolved_including_contentious": 0,
   "all_language_bearing_groups_have_exact_repair_records": true,
-  "formal_invariant_groups_reverified": 48,
+  "formal_invariant_groups_reverified": 60,
   "structural_unit_checks": {
     "OLP-0001": {
       "source_path": "content/open-logic-about.tex",
@@ -79,6 +79,54 @@
       "source_path": "content/sets-functions-relations/sets/basics.tex",
       "target_bytes": 6304,
       "target_sha256": "57fe0ef1b8ede308916b19b3fed6574e34ea457c726e0214b1d7e34af1b447be",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0006": {
+      "source_path": "content/sets-functions-relations/sets/subsets.tex",
+      "target_bytes": 5287,
+      "target_sha256": "a43f274cfde6cfc699290f18825cd2dbbc34785b375ea242d2d2c88eb7690ca0",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0007": {
+      "source_path": "content/sets-functions-relations/sets/important-sets.tex",
+      "target_bytes": 3736,
+      "target_sha256": "ddd8bf078a1af4c70ff0156d6e20bfdc6b096fc1a2ab54613042c583c709d2e0",
+      "checks": {
+        "source_manifest_hash": true,
+        "block_count_equal": true,
+        "command_multiset_equal": true,
+        "protected_arguments_equal": true,
+        "formula_order_and_content_equal": true,
+        "placeholder_token_multiset_equal": true,
+        "balanced_braces": true,
+        "no_gurmukhi_devanagari": true,
+        "no_bidi_replacement_presentation_forms": true
+      }
+    },
+    "OLP-0008": {
+      "source_path": "content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "target_bytes": 8451,
+      "target_sha256": "e082ec2cb505a12d1a6a82e7d89d4c460c179b589b17357ac0682b2f9f26bb2e",
       "checks": {
         "source_manifest_hash": true,
         "block_count_equal": true,
@@ -566,15 +614,588 @@
       "choice_id": "pnb-Arab-PK:OLP-0005-B015:C001",
       "original_status": "formal-invariant",
       "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B004-C001-FULL-20260907",
+      "target_span_sha256": "1dc4dc86c3cd72875fa048b1f73b64dd9209de5db38ad5965ea1aceb61044c2b",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B005-C001-FULL-20260907",
+      "target_span_sha256": "a8f3144b9ead958de19bf87e879ac9deb4ef1cd867f06e695180b6db0857e23c",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B006:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B006-C001-FULL-20260907",
+      "target_span_sha256": "db84c01a9de8ecc3dfa21ce8e1b8cecc1e9a4e1dc6a21c237e3a23d0357a15a4",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B007:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B007-C001-FULL-20260907",
+      "target_span_sha256": "dcfdfbd3f293f852253160f8b4b6cae6212fa611629d78638be9b20d3ab925ca",
+      "passages": [
+        "PNB-P023",
+        "PNB-P022",
+        "PNB-P025"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B008:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B008-C001-FULL-20260907",
+      "target_span_sha256": "6d0e9a456156b01e366b5c5a8d41d3e0b398916b67ba1ad3288251a59e64be49",
+      "passages": [
+        "PNB-P023",
+        "PNB-P022",
+        "PNB-P025"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B009:C001",
+      "original_status": "contentious-human-review",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B009-C001-FULL-20260907",
+      "target_span_sha256": "71f3f913c2cb63ff6203490e01762737e38f99dccff235369267cb1c9401d9e3",
+      "passages": [
+        "PNB-P023",
+        "PNB-P018"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B010:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B010-C001-FULL-20260907",
+      "target_span_sha256": "35400858b9a6a8eeab81f2c117409e6dc3bf2a0d6bcf00bf0fa4de235c4dddcb",
+      "passages": [
+        "PNB-P018",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B011:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B011-C001-FULL-20260907",
+      "target_span_sha256": "f3c1640bf3247c067169224207a70316bc3ec6641b4b2245623eaff3747de8d9",
+      "passages": [
+        "PNB-P017",
+        "PNB-P018",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B012:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B012-C001-FULL-20260907",
+      "target_span_sha256": "c9f48fe2e866f937dc78cbc12b37baebf50a1a5806a4d709d3a49317ef814755",
+      "passages": [
+        "PNB-P017",
+        "PNB-P018"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B013:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B013-C001-FULL-20260907",
+      "target_span_sha256": "98b5b5ffbca652d57ba87e2405796ae678fc7bd627ab4731bae519badf41498f",
+      "passages": [
+        "PNB-P018",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B014:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B014-C001-FULL-20260907",
+      "target_span_sha256": "7a14f59d52df60ac4b4c924008c63817e7b772a3383dabb7b08e39edfd87887a",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B015:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B015-C001-FULL-20260907",
+      "target_span_sha256": "11fa2c260b13ad738e2369b16bde3fcd3724054cacde3a3491cc57cf5f10b987",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B016:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B016-C001-FULL-20260907",
+      "target_span_sha256": "f58cd6477c3196964e97e951738964e1b43a57665e4d72364d6ba7b338a0e5ce",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B017:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B017-C001-FULL-20260907",
+      "target_span_sha256": "1be7ac15816ca9d8e0487f605eebb99cfce14e0d999efd0309fe4f03fbe02c61",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B018:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0006-B018-C001-FULL-20260907",
+      "target_span_sha256": "103274c89773a3f95149a52fb7bea735191df5bcf37e4f57f646a8a550a02292",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0006-B019:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B004-C001-FULL-20260907",
+      "target_span_sha256": "37ffc6334d4a8f3d4e1317cff642206f10be0463e9a3ce6e7ec4e498cc41451c",
+      "passages": [
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B005-C001-FULL-20260907",
+      "target_span_sha256": "64e90cf7ebd2e807e42cbfbae53150714adf87ceb0f2b544d4b59f17bd1fd235",
+      "passages": [
+        "PNB-P017",
+        "PNB-P022",
+        "PNB-P023",
+        "PNB-P026"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B006:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B006-C001-FULL-20260907",
+      "target_span_sha256": "d4f64bd40bcbb7c643725c1f490464e051e2d555ca608e8be3d99cb50395a2a9",
+      "passages": [
+        "PNB-P022",
+        "PNB-P023",
+        "PNB-P026"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B007:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B007-C001-FULL-20260907",
+      "target_span_sha256": "a91715a53f2478cec0e56a320aed3af5223ec32fcdb6413a28b45b1740ab4148",
+      "passages": [
+        "PNB-P022",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B008:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B008-C001-FULL-20260907",
+      "target_span_sha256": "1baccfe41e77fe7285753bdaf37b94c40ca07bafa2dcb51c2fdd4cbd8dda1f63",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B009:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0007-B009-C001-FULL-20260907",
+      "target_span_sha256": "868e554f4ac0263b635b2af8dea3ac43e8ae94e95190134b17ba12cfd082d493",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0007-B010:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B001:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B002:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B003:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B004:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B004-C001-FULL-20260907",
+      "target_span_sha256": "c9fca3d688d8366fb4c29232fd9424423cd47717c32804d85d3bf35025e007d5",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B005:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B005-C001-FULL-20260907",
+      "target_span_sha256": "f69b76659918ad4ce875bccc23928fc6358208f65d748a1378be378497110e05",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B006:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B006-C001-FULL-20260907",
+      "target_span_sha256": "565110f0dc39ceb7a75e07a26d5276733e82da820964de486b00fcf0b98fdd41",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B007:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B007-C001-FULL-20260907",
+      "target_span_sha256": "64d1a2976963f7bbf818b489034a35fe31f9061600bb9d437042e64016df9764",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B008:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B008-C001-FULL-20260907",
+      "target_span_sha256": "12a6e669280c12a761b16142f5c9a4f5e892f50808c4cfcdd4e73a6dc6764390",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B009:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B009-C001-FULL-20260907",
+      "target_span_sha256": "0c611e9d849851e61b26512eafdcee8f825789917335a13ce3e8f71693600aef",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B010:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B010-C001-FULL-20260907",
+      "target_span_sha256": "f2291a1a4712598397444b3f190f0e5f18dfb31077d440ef2823e3d23851ca43",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B011:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B011-C001-FULL-20260907",
+      "target_span_sha256": "c35cfa03f146b1c6662882650267fa9d4a6aea262b37a5069be4c2211859619a",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B012:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B012-C001-FULL-20260907",
+      "target_span_sha256": "a80c600ffa81053a54e8df49d1502bd9ecb6d657d84d926b7ece3df2bb5e7594",
+      "passages": [
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B013:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B013-C001-FULL-20260907",
+      "target_span_sha256": "e8c53e2536022bc48482c25b5f780bc69c7a25f0001953fc81b73d1e679adbea",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B014:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B014-C001-FULL-20260907",
+      "target_span_sha256": "5f2e4a3dbad998eb8d5e2e41584d84552e561fd38f286a2b03942e975dba73ac",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B015:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B015-C001-FULL-20260907",
+      "target_span_sha256": "26448e5c3cdee00c4f6bda56067e3d6e3df875d9b5bc4cf18d7b364e81b371e0",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B016:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B016-C001-FULL-20260907",
+      "target_span_sha256": "f0a76d5d596c8ab2c1f17236afef4a7043b084a3c12e094414576b5c4ac6ae4f",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B017:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B017-C001-FULL-20260907",
+      "target_span_sha256": "70b59f49baf539a86851ca02775de51e4c804c4c3ee25524816baf5411dbbb83",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B018:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B018-C001-FULL-20260907",
+      "target_span_sha256": "ab3da0ca38e24075addd678eb304c1fbbf404d597e830e326320c20fc704e3f2",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B019:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B019-C001-FULL-20260907",
+      "target_span_sha256": "8000e4c8b11b2384555c449de0f2b197b4bedbc7eb8b10e1b19b8da417e0f24e",
+      "passages": [
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B020:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B020-C001-FULL-20260907",
+      "target_span_sha256": "ca4377e48982c89f8e5e14ab28e8c0980b4d74ee19b072594b6aa445e8d773ba",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B021:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B021-C001-FULL-20260907",
+      "target_span_sha256": "845498c306afbc9541dfd7bf4ef5751dea97acb136be3f8fb645869dc815aa02",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B022:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B022-C001-FULL-20260907",
+      "target_span_sha256": "8f7015b67c7ef3c037adcab11574265d31bed0a319fc47616cf0140a6092007b",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B023:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B023-C001-FULL-20260907",
+      "target_span_sha256": "c8fcf5496281012f0340890f390098790e6a471044be3a767c177d5f1a1a7f9f",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B024:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B024-C001-FULL-20260907",
+      "target_span_sha256": "e5867c7a764bf1922472592c076fe949780270ccfab915e4de7a55ff15f17b00",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B025:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B025-C001-FULL-20260907",
+      "target_span_sha256": "88d606be88af6d3453364175c6ce9a74c4800e863c4852b17a7fcf0f6b7a373d",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B026:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B026-C001-FULL-20260907",
+      "target_span_sha256": "9ce41d413ddfb9ed650b30daf73ed6316664b89631335314c2957106e3e75127",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B027:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B027-C001-FULL-20260907",
+      "target_span_sha256": "31aa0071658bec86f3c2bc3d2eeee16a439a59259bd4e2862f81bfd90a3408dc",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B028:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B028-C001-FULL-20260907",
+      "target_span_sha256": "67787c77f082269d29648c32afdeed921cbb0ba87c352b4349d2a7003800d881",
+      "passages": [
+        "PNB-P017",
+        "PNB-P023"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B029:C001",
+      "original_status": "unsupported",
+      "effective_status": "supported-provisional",
+      "repair_id": "PNB-REPAIR-OLP-0008-B029-C001-FULL-20260907",
+      "target_span_sha256": "a84ad5c2ae393ed640334e1705c754f437e3959e6dccefd32550fc233c51c8ce",
+      "passages": [
+        "PNB-P017"
+      ]
+    },
+    {
+      "choice_id": "pnb-Arab-PK:OLP-0008-B030:C001",
+      "original_status": "formal-invariant",
+      "effective_status": "formal-invariant"
     }
   ],
   "errors": [],
   "valid": true,
-  "semantic_acceptance_scope": "Contiguous repaired prefix OLP-0001 through OLP-0005 only; provisional choices are explicit and reversible.",
+  "semantic_acceptance_scope": "Contiguous repaired prefix OLP-0001 through OLP-0008 only; provisional choices are explicit and reversible.",
   "corpus_semantic_acceptance": false,
   "historical_published_units": 74,
   "forward_authoring_freeze_after_OLP_0074": true,
-  "next_repair_choice": "pnb-Arab-PK:OLP-0006-B004:C001",
+  "next_repair_choice": "pnb-Arab-PK:OLP-0009-B004:C001",
   "publication_gate": {
     "prefix_zero_unsupported_and_needs_revision": true,
     "prefix_zero_contentious": true,

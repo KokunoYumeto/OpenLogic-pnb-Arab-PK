@@ -7,10 +7,11 @@
 \begin{document}
 
 \olfileid{sfr}{set}{uni}
-\olsection{اتحاد تے اشتراک}
+\olsection{اتحاد تے اشتراک (Unions and Intersections)}
 
 \begin{explain}
-\olref[sfr][set][bas]{sec} وچ اسی خاصیت راہیں سیٹاں دی تعریف متعارف کرائی
+\olref[sfr][set][bas]{sec} وچ اسی خاصیت راہیں سیٹاں دی تعریف
+(definition by abstraction) متعارف کرائی
 سی، یعنی $\Setabs{x}{\phi(x)}$ دی صورت والیاں تعریفاں۔ ایتھے اسی کوئی
 خاصیت~$\phi$ ورتدے آں، تے ایس خاصیت وچ اوہناں سیٹاں دا ذکر ہو سکدا اے
 جنہاں دی تعریف اسی پہلاں کر چکے آں۔ مثال لئی، جے $A$ تے~$B$ سیٹ نیں،
@@ -31,8 +32,8 @@
 لئی اسی ایہنوں اک رسمی ناں تے اک علامت دیندے آں۔
 \end{explain}
 
-\begin{defn}[اتحاد]
-دو سیٹاں $A$ تے $B$ دا \emph{اتحاد}، جہنوں $A \cup B$ لکھدے نیں،
+\begin{defn}[اتحاد (Union)]
+دو سیٹاں $A$ تے $B$ دا \emph{اتحاد (union)}، جہنوں $A \cup B$ لکھدے نیں،
 اوہناں ساریاں شےواں دا سیٹ اے جو $A$، $B$ یا دوہاں دے !!{element}s نیں۔
 \[
 A \cup B = \Setabs{x}{x \in A \lor x \in B}
@@ -57,10 +58,10 @@ $\{a, b, c \} \cup \emptyset = \{a, b, c \}$۔
 \end{prob}
 
 \begin{explain}
-اسی اتحاد دے ``دوہرے ہم صورت'' عمل اُتے وی غور کر سکدے آں۔ ایہ اوہ عمل
+اسی اتحاد دے مقابل اک ``دوہرا عمل'' (dual operation) وی ویکھ سکدے آں۔ ایہ اوہ عمل
 اے جو سارے اوہناں \pnboblique{!!{element}s} دا سیٹ بناندا اے جو
 $A$ دے !!{element}s وی ہون تے $B$ دے !!{element}s وی۔ ایس عمل نوں
-\emph{اشتراک} آکھدے نیں، تے ایہنوں \olref{fig:intersection} وانگ وکھایا
+\emph{اشتراک (intersection)} آکھدے نیں، تے ایہنوں \olref{fig:intersection} وانگ وکھایا
 جا سکدا اے۔
 \begin{figure}
   \olasset{assets/diagrams/intersection.tikz}
@@ -70,13 +71,13 @@ $A$ دے !!{element}s وی ہون تے $B$ دے !!{element}s وی۔ ایس عم�
 \end{figure}
 \end{explain}
 
-\begin{defn}[اشتراک]
-دو سیٹاں $A$ تے $B$ دا \emph{اشتراک}، جہنوں $A \cap B$ لکھدے نیں،
+\begin{defn}[اشتراک (Intersection)]
+دو سیٹاں $A$ تے $B$ دا \emph{اشتراک (intersection)}، جہنوں $A \cap B$ لکھدے نیں،
 اوہناں ساریاں شےواں دا سیٹ اے جو $A$ تے~$B$ دوہاں دے !!{element}s نیں۔
 \[
 A \cap B = \Setabs{x}{x \in A \land x \in B}
 \]
-دو سیٹاں نوں \emph{بے سانجھ} آکھدے نیں جے اوہناں دا اشتراک خالی ہووے۔
+دو سیٹاں نوں \emph{بے سانجھ (disjoint)} آکھدے نیں جے اوہناں دا اشتراک خالی ہووے۔
 ایس دا مطلب اے کہ اوہناں دے کوئی !!{element}s سانجھے نہیں۔
 \end{defn}
 
@@ -95,7 +96,7 @@ $\{a, b, c \} \cap \emptyset = \emptyset$۔
 \end{ex}
 
 \begin{prob}
-پوری منطقی پابندی نال ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں
+باقاعدہ دلیل دے کے ثابت کرو کہ جے $A \subseteq B$ ہووے، تاں
 $A \cap B = A$ اے۔
 \end{prob}
 
@@ -113,7 +114,7 @@ $A \cap B = A$ اے۔
 جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcup A$، سیٹ~$A$ دے
 \pnboblique{!!{element}s} دے \pnboblique{!!{element}s} دا سیٹ اے:
 \begin{align*}
-\bigcup A & = \Setabs{x}{x \text{، سیٹ } A\text{ دے کسے !!a{element} دا عنصر اے}},
+\bigcup A & = \Setabs{x}{x \text{، دتے ہوئے سیٹ دے کسے !!a{element} دا عنصر اے: } A},
 \text{ یعنی،}\\
 & = \Setabs{x}{\text{کوئی } B \in A
   \text{ ایہو جہا اے کہ } x \in B}
@@ -124,7 +125,7 @@ $A \cap B = A$ اے۔
 جے $A$ سیٹاں دا سیٹ اے، تاں $\bigcap A$ اوہناں شےواں دا سیٹ اے جو
 $A$ دے سارے عنصراں وچ سانجھیاں نیں:
 \begin{align*}
-\bigcap A & = \Setabs{x}{x \text{، سیٹ } A\text{ دے ہر !!{element} وچ اے}},
+\bigcap A & = \Setabs{x}{x \text{، دتے ہوئے سیٹ دے ہر !!{element} وچ اے: } A},
 \text{ یعنی،}\\
  & = \Setabs{x}{\text{ہر } B \in A, x \in B}
 \end{align*}
@@ -140,11 +141,11 @@ $A$ دے سارے عنصراں وچ سانجھیاں نیں:
 
 اسی سیٹاں دے سلسلے $A_1$، $A_2$، \dots لئی وی ایہو کم کر سکدے آں:
 \begin{align*}
-\bigcup_i A_i & = \Setabs{x}{x \text{، سیٹاں } A_i\text{ وچوں کسے اک وچ شامل اے}}\\
-\bigcap_i A_i & = \Setabs{x}{x \text{، سیٹاں } A_i\text{ وچوں ہر اک وچ شامل اے}}.
+\bigcup_i A_i & = \Setabs{x}{x \text{، دتے ہوئے سیٹاں وچوں کسے اک وچ شامل اے: } A_i}\\
+\bigcap_i A_i & = \Setabs{x}{x \text{، دتے ہوئے ہر سیٹ وچ شامل اے: } A_i}.
 \end{align*}
 
-جدوں ساڈے کول سیٹاں دا \emph{اشاریہ} ہووے، یعنی کوئی سیٹ $I$ جس لئی
+جدوں ساڈے کول سیٹاں دا \emph{اشاریہ (index)} ہووے، یعنی کوئی سیٹ $I$ جس لئی
 اسی $A_i$ اُتے غور کردے ہاں، ہر $i \in I$ لئی، تاں اسی ایہ مختصر
 لکھتاں وی ورت سکدے آں:
 \begin{align*}
@@ -163,8 +164,8 @@ $A$ دے سارے عنصراں وچ سانجھیاں نیں:
   \ollabel{difference}
 \end{figure}
 
-\begin{defn}[فرق]
-\emph{سیٹاں دا فرق}~$A \setminus B$ سارے اوہناں \pnboblique{!!{element}s}
+\begin{defn}[فرق (Difference)]
+\emph{سیٹاں دا فرق (set difference)}~$A \setminus B$ سارے اوہناں \pnboblique{!!{element}s}
 دا سیٹ اے جو $A$ وچ نیں پر $B$ دے !!{element}s نہیں، یعنی
 \[
 A\setminus B = \Setabs{x}{x\in A \text{ تے } x \notin B}.

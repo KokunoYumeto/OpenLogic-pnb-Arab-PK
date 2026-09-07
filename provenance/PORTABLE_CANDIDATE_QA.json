@@ -1,0 +1,148 @@
+{
+  "schema": "pnb-portable-candidate-smoke-qa/1",
+  "date_utc": "2026-09-07",
+  "created_utc": "2026-09-07T16:52:42.654257Z",
+  "status": "REPRODUCED_FULL_PAGE_VISUAL_SMOKE_PASS_NOT_RELEASED",
+  "scope": {
+    "reader": "Complete seven-unit Sets chapter portable candidate",
+    "semantic_acceptance": "Only OLP-0001 through OLP-0008 is semantically accepted; this reader also contains historical-draft OLP-0009 and OLP-0010.",
+    "release_effect": "None. The immutable v0.1.0 reference-v3 PDFs and Zenodo record are unchanged.",
+    "claim_limit": "This is local reproducibility and layout evidence, not corpus completion, cross-platform byte reproducibility, or reader semantic acceptance."
+  },
+  "inputs": {
+    "builder": {
+      "bytes": 12116,
+      "sha256": "fac10925664a7cd03574ea8a40834676926c439264f0e6e5eb324a211760923c",
+      "file": "../tools/build_sets_reader.py"
+    },
+    "manifest": {
+      "bytes": 23031,
+      "sha256": "301c214b9d45c518f3bb99fc32bf3de1816bc6464cec380d99e8593568547576",
+      "file": "PORTABLE_CANDIDATE_INPUTS.json"
+    },
+    "manifest_matches_exact_scratch_build_input": true,
+    "source_units": 7,
+    "english_bridge_isolations": 41,
+    "single_variable_parenthetical_false_positives": 0
+  },
+  "build": {
+    "engine": "XeLaTeX",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired_once_for_final_attempt": true,
+    "passes_per_profile": 3,
+    "processes": 6,
+    "nonzero_exit_codes": 0,
+    "builder_detected_defects": 0,
+    "pass_2_equals_pass_3_both_profiles": true,
+    "source_date_epoch": "1788470400",
+    "started_utc": "2026-09-07T16:37:18.6355130Z",
+    "finished_utc": "2026-09-07T16:37:32.8577114Z",
+    "local_build_receipt": {
+      "bytes": 2711,
+      "sha256": "d85d014d7c5aa6036251c5d70b5b2cbc37e283d381424b7d53ee3404d6b18633",
+      "published": false
+    }
+  },
+  "profiles": {
+    "naskh": {
+      "bytes": 134085,
+      "sha256": "9b5cefdf973eac5615e2b111c528b75469b6836a38df31327d15d8f737d189a4",
+      "file": "scratch:sets-naskh.pdf",
+      "pages": 12,
+      "reproduced": true
+    },
+    "nastaliq": {
+      "bytes": 190020,
+      "sha256": "2870c4d8de897e7af481d597b951f5e2bb5bc5dd6a0231ceb2edbd6612f71b3e",
+      "file": "scratch:sets-nastaliq.pdf",
+      "pages": 17,
+      "reproduced": true
+    }
+  },
+  "visual_review": {
+    "renderer": "Poppler pdftoppm",
+    "render_dpi": 140,
+    "all_pages_rendered": 29,
+    "all_pages_inspected_using_full_contact_sheets": true,
+    "naskh_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "nastaliq_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "individual_original_resolution_pages": {
+      "naskh": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "nastaliq": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "targeted_300_dpi_footer_checks": {
+      "nastaliq": [
+        12,
+        14
+      ]
+    },
+    "contact_sheet_sha256": {
+      "naskh": "e9d1019d0c01a4219f136924a7e229581ea2e875d89b960b93167957d2ddf793",
+      "nastaliq": "16bc1a7beba700e6f1d6b4a178a49996d704f29c1b6726dbd7fb8296add834b3"
+    },
+    "checks": [
+      "page completeness and margins",
+      "overlap, clipping and overflow",
+      "Arabic-script glyph shaping and missing-glyph boxes",
+      "LTR mathematical formula order",
+      "LTR order inside all explicit English terminology bridges",
+      "section, definition, example, exercise and figure numbering",
+      "three retained source diagrams",
+      "page-number legibility"
+    ],
+    "visible_defects": [],
+    "result": "PASS"
+  }
+}

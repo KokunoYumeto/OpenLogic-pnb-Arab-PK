@@ -84,4 +84,19 @@ if sha(REPO/'reader/sets-preamble.tex')!=candidate['preamble_sha256']:
     raise ValueError('Candidate preamble changed since recorded input generation')
 if sha(REPO/'tools/build_sets_reader.py')!=candidate['builder_sha256']:
     raise ValueError('Candidate builder changed since recorded input generation')
-print(json.dumps({'source_units_verified':len(manifest),'translation_units_verified':len(audits['units']),'historical_target_bytes_verified':historical_exact,'repair_receipt_target_bytes_verified':repair_exact,'repair_receipt_kinds':repair_kinds,'validated_semantic_prefix_through':prefix['through_unit'],'isolated_repairs_do_not_accept_later_units':True,'fonts_verified':len(inputs['font_bundle_capture']),'original_assets_verified':len(inputs['assets']),'exact_reference_tex_inputs_verified':len(inputs['generated_inputs']),'passed':True,'limit':'Identity and recorded structural-gate verification only; semantic acceptance is limited to the prefix named above, isolated later repairs do not accept their units, the portable candidate remains unbuilt, and no new visual acceptance is implied.'},ensure_ascii=False))
+candidate_qa_path=REPO/'provenance/PORTABLE_CANDIDATE_QA.json'
+candidate_qa=json.loads(candidate_qa_path.read_text('utf-8'))
+candidate_manifest_path=REPO/'provenance/PORTABLE_CANDIDATE_INPUTS.json'
+if candidate_qa['status']!='REPRODUCED_FULL_PAGE_VISUAL_SMOKE_PASS_NOT_RELEASED':
+    raise ValueError('Portable-candidate smoke status mismatch')
+if candidate_qa['inputs']['builder']['sha256']!=sha(REPO/'tools/build_sets_reader.py'):
+    raise ValueError('Portable-candidate QA builder identity mismatch')
+if candidate_qa['inputs']['manifest']['sha256']!=sha(candidate_manifest_path):
+    raise ValueError('Portable-candidate QA input identity mismatch')
+if candidate_qa['inputs']['english_bridge_isolations']!=len(candidate.get('english_bridge_isolations',[])) or len(candidate.get('english_bridge_isolations',[]))!=41:
+    raise ValueError('Portable-candidate bridge-isolation count mismatch')
+if candidate_qa['visual_review']['result']!='PASS' or candidate_qa['visual_review']['visible_defects'] or candidate_qa['visual_review']['all_pages_rendered']!=29:
+    raise ValueError('Portable-candidate visual smoke record mismatch')
+if candidate_qa['scope']['release_effect'].startswith('None.') is False:
+    raise ValueError('Portable-candidate QA release scope mismatch')
+print(json.dumps({'source_units_verified':len(manifest),'translation_units_verified':len(audits['units']),'historical_target_bytes_verified':historical_exact,'repair_receipt_target_bytes_verified':repair_exact,'repair_receipt_kinds':repair_kinds,'validated_semantic_prefix_through':prefix['through_unit'],'isolated_repairs_do_not_accept_later_units':True,'fonts_verified':len(inputs['font_bundle_capture']),'original_assets_verified':len(inputs['assets']),'exact_reference_tex_inputs_verified':len(inputs['generated_inputs']),'portable_candidate_smoke_qa_verified':True,'portable_candidate_smoke_pages':candidate_qa['visual_review']['all_pages_rendered'],'portable_candidate_released':False,'passed':True,'limit':'Identity and recorded structural-gate verification only; semantic acceptance is limited to the prefix named above. Isolated later repairs and a successful local portable-reader layout smoke test do not accept later units, release candidate PDFs, or establish cross-platform byte reproducibility.'},ensure_ascii=False))

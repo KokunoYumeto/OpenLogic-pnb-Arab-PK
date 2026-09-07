@@ -4,7 +4,7 @@
 
 Independent machine translation and layout adaptation by Codex of **The Open Logic Project**. This is an ongoing full-edition project for `pnb-Arab-PK`, not an official upstream edition or an endorsed translation.
 
-> **Canon-revalidation notice (2026-09-07):** The 74 translated units on the historical `main` checkpoint and the immutable v0.1.0/Zenodo artifacts remain available for provenance, but they are **not semantically accepted** after an independent choice-level audit found inadequate specialist Shahmukhi support. Forward translation is frozen while repair proceeds from OLP-0001. The currently validated repaired prefix is OLP-0001–OLP-0005 only: 69/69 choice groups, comprising 48 formal invariants and 21 explicit reversible supported-provisional choices, with zero unsupported, needs-revision, or contentious rows. This is a prefix result, not a corpus-success claim. See [the full notice](provenance/CANON_REVALIDATION_NOTICE.md) and [the repair ledger](provenance/SEMANTIC_REPAIR_CHOICES.jsonl).
+> **Canon-revalidation notice (2026-09-07):** The 74 translated units on the historical `main` checkpoint and the immutable v0.1.0/Zenodo artifacts remain available for provenance, but they are **not semantically accepted** after an independent choice-level audit found inadequate specialist Shahmukhi support. Forward translation is frozen while repair proceeds from OLP-0001. The currently validated repaired prefix is OLP-0001–OLP-0008 only: 128/128 choice groups, comprising 60 formal invariants and 68 explicit reversible supported-provisional choices, with zero unsupported, needs-revision, or contentious rows. This is a prefix result, not a corpus-success claim. See [the full notice](provenance/CANON_REVALIDATION_NOTICE.md) and [the repair ledger](provenance/SEMANTIC_REPAIR_CHOICES.jsonl).
 
 ## Current scope
 
@@ -36,13 +36,13 @@ The PDFs are not tagged accessible PDFs. A full semantic HTML reader, full-book 
 
 The released PDF bytes come from the verified **reference-v3 build**, not the newer portable candidate. Its exact generated TeX inputs are preserved unchanged in `reader/reference/`, including their original fixed asset/font paths. The reference environment is Windows and MiKTeX/XeLaTeX; Noto Serif and Noto Naskh Arabic were resolved as installed font families, with an explicit static Nastaliq file. The original checkout path was `C:/interlanguage-production/openlogic-pnb-Arab-PK/repo`, and the static Nastaliq file was `C:/interlanguage-task-state/openlogic-pnb-Arab-PK/work/fonts/NotoNastaliqUrdu-Regular.ttf`. Reproduction was verified within that recorded environment, not across arbitrary installations.
 
-The included OFL font bundle and relocatable generator are a **portable candidate, still unbuilt** because the shared TeX slot remained busy. Do not treat their inclusion as successful portability testing. All source, font, PDF and exact reference-input identities can be checked without TeX:
+The included OFL font bundle and relocatable generator remain a **portable candidate, not a release asset**. At the OLP-0008 checkpoint it built reproducibly in both Naskh and Nastaliq under the shared TeX mutex, and all 29 generated pages passed a local visual smoke review. The generator now isolates all 41 explicit English terminology bridges so their internal LTR order survives RTL paragraph layout. This evidence does not replace the immutable reference-v3 release, establish cross-platform byte reproducibility, or semantically accept the historical-draft OLP-0009/0010 sections contained in the chapter. See [`PORTABLE_CANDIDATE_QA.json`](provenance/PORTABLE_CANDIDATE_QA.json). All source, font, candidate-input and reference identities can be checked without TeX:
 
 ```powershell
 python tools/verify_source_identity.py
 ```
 
-The following commands generate and attempt the newer candidate, rather than asserting it produces the released bytes. They require Python 3, PowerShell 7 and installed MiKTeX packages listed in `reader/sets-preamble.tex`. Candidate fonts are loaded directly from the bundle, without system installation:
+The following commands generate the newer candidate; they do not produce or overwrite the released bytes. They require Python 3, PowerShell 7 and installed MiKTeX packages listed in `reader/sets-preamble.tex`. Candidate fonts are loaded directly from the bundle, without system installation:
 
 ```powershell
 python tools/build_sets_reader.py --output-dir output/rebuild --font-dir fonts
@@ -51,7 +51,7 @@ pwsh -NoProfile -File tools/build_reader.ps1 -InputDirectory output/rebuild
 
 The launcher acquires `Global\InterlanguageTeXSlotV1` once, waits at most 30 seconds, holds it continuously across the captured process trees, all passes and log checks, and releases it in `finally`. A busy slot launches no TeX process; do not substitute an unguarded engine command. The guard rejects output outside this checkout or this task's state directory. The verified byte-reproducibility claim is within the recorded reference toolchain; different TeX/package versions may change PDF bytes or pagination and require fresh QA.
 
-The generator inventories seven source identities, verifies pristine source hashes, checks references, preserves original TikZ assets and explicitly records direction/layout transformations. Arabic language selection in the typesetter is a shaping mechanism, not a claim that the prose is Arabic.
+The generator inventories seven source identities, verifies pristine source hashes, checks references, preserves original TikZ assets, isolates explicit English bridges, and records every direction/layout transformation. Arabic language selection in the typesetter is a shaping mechanism, not a claim that the prose is Arabic.
 
 ## License and attribution
 
