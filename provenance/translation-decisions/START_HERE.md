@@ -2,7 +2,7 @@
 
 Start with `PRIORITY_REVIEW.md` for focused expert questions or `TRANSLATION_DECISIONS_FULL.md` for the complete readable register. `DECISION_OCCURRENCES.csv` is the one-row-per-occurrence view; `DECISIONS.json` is the canonical machine projection validated by `translation-decision.schema.json`.
 
-Current scope: 172 decisions, 2724 exact source-target occurrences, and 74 of 722 source units translated through `OLP-0074`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
+Current scope: 173 decisions, 2727 exact source-target occurrences, and 74 of 722 source units translated through `OLP-0074`. This is a partial current-main checkpoint, not a claim that the full edition or independent human review is complete.
 
 Exact public-reader pages are present for 0 current occurrences. The historical v0.1.0 Sets PDFs predate the repaired source and their page locations are deliberately not reused. A through-OLP-0010 Naskh/Nastaliq candidate is reproducible and visually accepted but not released, so every current page locator remains explicitly pending—none is guessed from source order.
 

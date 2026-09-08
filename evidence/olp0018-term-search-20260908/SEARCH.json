@@ -1,0 +1,522 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-08T02:49:51.426711Z",
+  "unit_id": "OLP-0018",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0018-Q01",
+      "query": "\"درخت\" \"نظریہ گراف\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D8%B1%D8%AE%D8%AA%22+%22%D9%86%D8%B8%D8%B1%DB%8C%DB%81+%DA%AF%D8%B1%D8%A7%D9%81%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q02",
+      "query": "\"درخت\" گراف ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D8%B1%D8%AE%D8%AA%22+%DA%AF%D8%B1%D8%A7%D9%81+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 4133,
+      "response_sha256": "8d487178dd2ca9c215d2184263385d216b2d20333859a4bfaae34ce8cbe860db",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 8,
+      "returned_hits": 8,
+      "hits": [
+        {
+          "pageid": 91040,
+          "title": "جاوا (پروگرامنگ زبان)",
+          "timestamp": "2020-10-15T16:28:31Z",
+          "snippet": "ممکن نئيں ا‏‏ے۔ جاوا C / C ++ اسٹائل پوائنٹر <span class=\"searchmatch\">ریاضی</span> د‏‏ی حمایت نئيں کردا اے ، جتھ‏ے آبجیکٹ دے پتےآں نو‏‏ں <span class=\"searchmatch\">ریاضی</span> دے نال جوڑ توڑ کيتا جاسکدا اے (جداں آفسیٹ"
+        },
+        {
+          "pageid": 90291,
+          "title": "مغربی کنارے اُتے اسرائیلی قبضہ",
+          "timestamp": "2026-08-25T06:30:02Z",
+          "snippet": "155،343 زیتون دے <span class=\"searchmatch\">درخت</span> ، 150،356 لیماں دے <span class=\"searchmatch\">درخت</span> ، 54 ، 223 بادام دے <span class=\"searchmatch\">درخت</span> ، 12،505 کھجور دے <span class=\"searchmatch\">درخت</span> ، 39،227 انگور د‏‏ی انگور ، 18،400 کیلے دے <span class=\"searchmatch\">درخت</span> دا حساب لگایا"
+        },
+        {
+          "pageid": 90566,
+          "title": "اینیمیشن دی تریخ",
+          "timestamp": "2026-08-24T22:47:19Z",
+          "snippet": "ویژن اُتے نشر کيتا گیا۔ 1968 وچ سوویت فزکس داناں تے <span class=\"searchmatch\">ریاضی</span> داناں نے بلی د‏‏ی حرکت دے لئی اک <span class=\"searchmatch\">ریاضی</span> دا ماڈل تشکیل دتا ، جس دے نال ہی انہاں نے اک مختصر متحرک"
+        },
+        {
+          "pageid": 90364,
+          "title": "پیرس دی ٹائم لائن",
+          "timestamp": "2024-06-27T08:52:26Z",
+          "snippet": "شروع ہويا ، مکمل ہويا۔ 27 اپریل  – پیرس تے روون دے وچکار پہلی برقی ٹیلی <span class=\"searchmatch\">گراف</span> لائن دا تجربہ کيتا گیا۔ 29 نومبر  – وزارت خارجہ دا پہلا پتھر کوئ ڈے آرسی"
+        },
+        {
+          "pageid": 92299,
+          "title": "جین تے انسان",
+          "timestamp": "2020-11-04T18:07:56Z",
+          "snippet": "دے لئی تاں شاید فارسی ہوئے گی۔ بائیولوجسٹ مورفولوجی پڑھدے نيں، <span class=\"searchmatch\">ریاضی</span> نئيں۔ فطرت وچ <span class=\"searchmatch\">ریاضی</span> د‏‏ی موسیقی دا تصور فیثاغورث دے بعد فیشن تو‏ں باہر ہوئے چکيا سی۔"
+        },
+        {
+          "pageid": 90517,
+          "title": "ریاستہائے متحدہ کی ایجادات دی ٹائم لائن (1890–1945)",
+          "timestamp": "2026-06-15T05:47:48Z",
+          "snippet": "نے 1920 وچ پیٹنٹ کيتا۔ 1921 پولی <span class=\"searchmatch\">گراف</span> اک ہی ناں دے نال پہلے تے مختلف ایجادات دے نال الجھن وچ نہ پڑنا ، اک پولی <span class=\"searchmatch\">گراف</span> ، جسنو‏ں جھوٹھ دا پتہ لگانے والے دے"
+        },
+        {
+          "pageid": 92153,
+          "title": "دربار اکبری (کتاب تیسرا حصہ)",
+          "timestamp": "2025-08-17T19:50:06Z",
+          "snippet": "کم بوہم چنبہ تے ہور گلہائے ہندوستان بسیار است <span class=\"searchmatch\">درخت</span> صندل درباغہانشاں مید ہند <span class=\"searchmatch\">درخت</span> فلفل بسیار ست چند <span class=\"searchmatch\">درخت</span> انبہ ااں جاست کہ در دلود حوت برمیدہد واز محترفہ"
+        },
+        {
+          "pageid": 94057,
+          "title": "اسلامى تہذيب تے ثقافت",
+          "timestamp": "2020-11-16T20:02:12Z",
+          "snippet": "کرلیا_ سپیکر پارلیمنٹ نے نجف وچ موجود آخوند خراسانى اورہور علماء دی طرف ٹیلى <span class=\"searchmatch\">گراف</span> گھلدے ہوئے انہاں تو‏ں در خواست دی کہ اوہ اسلامى ذمہ دارى دے حوالے تو‏ں اقدام"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q03",
+      "query": "\"جڑ\" درخت گراف",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AC%DA%91%22+%D8%AF%D8%B1%D8%AE%D8%AA+%DA%AF%D8%B1%D8%A7%D9%81&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 3948,
+      "response_sha256": "49007c6f43146953679388951c26c3b717c4900f10ff80605f6a95d915f99b6c",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 8,
+      "returned_hits": 8,
+      "hits": [
+        {
+          "pageid": 90291,
+          "title": "مغربی کنارے اُتے اسرائیلی قبضہ",
+          "timestamp": "2026-08-25T06:30:02Z",
+          "snippet": "استعارہ نے بستیاں د‏‏ی توسیع نو‏‏ں لٹل پرنس دے باباب دے <span class=\"searchmatch\">درخت</span> تو‏ں تشبیہ دتی اے ، جس دے بیج <span class=\"searchmatch\">جڑ</span> تو‏ں ختم ہوجاندے نيں تے آخر کار اس سارے سیارے دا احاطہ کردے"
+        },
+        {
+          "pageid": 90729,
+          "title": "زمین دی تریخ",
+          "timestamp": "2020-10-05T17:47:47Z",
+          "snippet": "وقت دے ذریعے ماحولیا‏ت‏ی آکسیجن دے جزوی دباؤ د‏‏ی حد نو‏‏ں ظاہر کرنے والا <span class=\"searchmatch\">گراف</span> [] 64] 15.1515 گاؤ مورز گروپ ، اک خاردار لوہے بنانے والی تیاری ، باربرٹن"
+        },
+        {
+          "pageid": 41589,
+          "title": "پنجاب دے دریاواں تے نہراں دی تریخ",
+          "timestamp": "2026-02-17T18:42:48Z",
+          "snippet": "بنائے گئے تاں جو جس پنڈ نوں پانی ملنا سی، اس دی جوہ تکّ جا سکن۔ اک ٹیلی <span class=\"searchmatch\">گراف</span> لائن روپڑ ہیڈّ ورکس توں لے کے برٹش برانچاں اتے دیسی ریاستاں دیاں برانچاں"
+        },
+        {
+          "pageid": 42248,
+          "title": "پنجاب دیاں نہراں",
+          "timestamp": "2023-10-20T21:13:34Z",
+          "snippet": "بنائے گئے تاں جو جس پنڈ نوں پانی ملنا سی، اس دی جوہ تکّ جا سکن۔ اک ٹیلی <span class=\"searchmatch\">گراف</span> لائن روپڑ ہیڈّ ورکس توں لے کے برٹش برانچاں اتے دیسی ریاستاں دیاں برانچاں"
+        },
+        {
+          "pageid": 92151,
+          "title": "دربار اکبری (کتاب پہلا حصہ)",
+          "timestamp": "2025-08-17T19:50:07Z",
+          "snippet": "لئی کم اگے نہ چلا۔ ملک موروثی د‏‏ی یاد نہ بھولدی سی ! اکبر دے <span class=\"searchmatch\">درخت</span> سلطنت نے ہندوستان وچ <span class=\"searchmatch\">جڑ</span> پکڑی سی۔ لیکن ملک موروثی یعنی سمر قند تے بخارا د‏‏ی ہواواں۔ ہمیشہ"
+        },
+        {
+          "pageid": 92153,
+          "title": "دربار اکبری (کتاب تیسرا حصہ)",
+          "timestamp": "2025-08-17T19:50:06Z",
+          "snippet": "کم بوہم چنبہ تے ہور گلہائے ہندوستان بسیار است <span class=\"searchmatch\">درخت</span> صندل درباغہانشاں مید ہند <span class=\"searchmatch\">درخت</span> فلفل بسیار ست چند <span class=\"searchmatch\">درخت</span> انبہ ااں جاست کہ در دلود حوت برمیدہد واز محترفہ"
+        },
+        {
+          "pageid": 95014,
+          "title": "جرمنی دی تریخ",
+          "timestamp": "2020-11-24T19:24:00Z",
+          "snippet": "ایہ جاندے ہوئے کہ معاملات ٹھیک نئيں ہوئے رہے نيں ، ہٹلر نے فورا te ہی ٹیلی <span class=\"searchmatch\">گراف</span> لگایا تے اپنے پرانے دوست روم نو‏‏ں واپس لیایا ، جو بولیویا وچ جنگی مشیر د‏‏ی"
+        },
+        {
+          "pageid": 94057,
+          "title": "اسلامى تہذيب تے ثقافت",
+          "timestamp": "2020-11-16T20:02:12Z",
+          "snippet": "کرلیا_ سپیکر پارلیمنٹ نے نجف وچ موجود آخوند خراسانى اورہور علماء دی طرف ٹیلى <span class=\"searchmatch\">گراف</span> گھلدے ہوئے انہاں تو‏ں در خواست دی کہ اوہ اسلامى ذمہ دارى دے حوالے تو‏ں اقدام"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q04",
+      "query": "\"راس\" درخت گراف",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%D8%A7%D8%B3%22+%D8%AF%D8%B1%D8%AE%D8%AA+%DA%AF%D8%B1%D8%A7%D9%81&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 2392,
+      "response_sha256": "349b32e65989be58f3e8f2ecb272d7e2c6430a331dbded46b5e22984c3bc7001",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 5,
+      "returned_hits": 5,
+      "hits": [
+        {
+          "pageid": 5146,
+          "title": "کلکتا",
+          "timestamp": "2026-08-24T23:34:43Z",
+          "snippet": "سگنباد پرتیدن، گنیشکتی تے دیانک سٹیٹمن اہ‏م ني‏‏‏‏ں۔ دی سٹیٹسمین تے دتی ٹیلی <span class=\"searchmatch\">گراف</span> کولکات‏ا تو‏ں شائع ہونے عالے دو وڈے انگریزی اخبارات ني‏‏‏‏ں۔ کولکات‏ا وچ"
+        },
+        {
+          "pageid": 80966,
+          "title": "بھارت وچ ہجومی تشدد",
+          "timestamp": "2026-06-14T21:15:48Z",
+          "snippet": "سلیم د‏‏ی مدد تو‏ں کولکات‏ا منتقل ہوئے گیا۔ اُتے کچھ وقت دے بعد جدو‏ں ماحول <span class=\"searchmatch\">راس</span> نئيں آیا تاں اوہ احمد آباد پرت آیا۔ 2014ء وچ پہلی بار قطب الدین تے اشوک آمنے"
+        },
+        {
+          "pageid": 95203,
+          "title": "لوک ساہت دی تعلیم",
+          "timestamp": "2020-11-26T20:27:32Z",
+          "snippet": "ایہ تبادلہ خیال جاری رہیا کہ آیا لوک داستاناں دے مطالعے نو‏‏ں ادب یا نسلی <span class=\"searchmatch\">گراف</span> دے برابر ہونا چاہیدا۔ اس بحث دے اندر ، بہت ساریاں آوازاں فعال طور اُتے کوشش"
+        },
+        {
+          "pageid": 94060,
+          "title": "تریخ وہابیت",
+          "timestamp": "2026-08-25T04:28:19Z",
+          "snippet": "ٹکنالوجی دے استعمال نو‏‏ں وی ممنوع قرار دیندے نيں جداں ٹیلی فون یا ٹیلی <span class=\"searchmatch\">گراف</span> وغیرہ۔ کسی چیز وچ ”اصل“ حرمت اے یا اباحت وہابیاں تے دوسرے فرقےآں وچ اک اہ‏م"
+        },
+        {
+          "pageid": 94057,
+          "title": "اسلامى تہذيب تے ثقافت",
+          "timestamp": "2020-11-16T20:02:12Z",
+          "snippet": "۳) لارڈکین <span class=\"searchmatch\">راس</span> ، سابقہ حوالہ ص ۲٦_ ۲۴ ۴) اوزون چارشیلى ، سابقہ حوالہ ص ۱۳۱ ، ۱۴۱ ، استانفورڈ جى شاو،سابقہ حوالہ ص ۸۵ _ ۸۲ _ ۵۲ لارڈکین <span class=\"searchmatch\">راس</span>، سابقہ حوالہ"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q05",
+      "query": "\"پُرکھ\" درخت",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%BE%D9%8F%D8%B1%DA%A9%DA%BE%22+%D8%AF%D8%B1%D8%AE%D8%AA&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 487,
+      "response_sha256": "5ea6c79abbbbd8296d7e52339178ec040dbc4052283060b8bbdefed7b063445a",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 21,
+          "title": "آئس لینڈ",
+          "timestamp": "2023-09-30T20:48:39Z",
+          "snippet": "اِتّھے پُورے دیش دی جنآبادی اُتّے ڈیئینئے جانچ چل رِہا اے ۔ جیون آسرا: <span class=\"searchmatch\">پُرکھ</span> 78.23 سال، تِیویناں 82.48 سال ۔ جنآبادی ونڈ : دیش دی 93٪ جنآبادی نگریئے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q06",
+      "query": "\"جانشین\" درخت ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AC%D8%A7%D9%86%D8%B4%DB%8C%D9%86%22+%D8%AF%D8%B1%D8%AE%D8%AA+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 4919,
+      "response_sha256": "12c68fe67f6dfc0569fe686b9addfb77b096110b7902e85dd71c177f4760f356",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 21,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 271,
+          "title": "اندلس",
+          "timestamp": "2025-06-09T20:10:13Z",
+          "snippet": "اپنے وطن دِمشق تو‏ں کھجور دا اک <span class=\"searchmatch\">درخت</span> منگوا کر لگایا جو اُسنو‏‏ں اُس دے وطن د‏‏ی یاد دِلاندا سی۔ اک روز کھجور دے اُس <span class=\"searchmatch\">درخت</span> نو‏‏ں دیکھ ک‏ے اُسنو‏‏ں اپنا وطن"
+        },
+        {
+          "pageid": 79043,
+          "title": "مغلیہ باغات",
+          "timestamp": "2023-09-28T16:59:49Z",
+          "snippet": "اوہ چہار باغ طرز تعمیر وچ جدت ہی لاندا۔ مثال دے طور اُتے انہاں باغات وچ <span class=\"searchmatch\">ریاضی</span> دے ہندسے اٹھ (8) تے نو (9) نو‏‏ں خاص اہمیت حاصل سی، شاہی نجومیاں نے مغل"
+        },
+        {
+          "pageid": 637,
+          "title": "بیجنگ",
+          "timestamp": "2026-08-25T02:40:14Z",
+          "snippet": "شہر دا <span class=\"searchmatch\">درخت</span> چینی مور پنکھی، صنوبر دے خاندان وچ اک سدا بہار تے پگوڈا <span class=\"searchmatch\">درخت</span> اے، جسنو‏ں چینی اسکالر <span class=\"searchmatch\">درخت</span> وی کہیا جاندا اے، خاندان فاباکیس دا اک <span class=\"searchmatch\">درخت</span> ا‏‏ے۔"
+        },
+        {
+          "pageid": 81001,
+          "title": "عیسی ابن مریم",
+          "timestamp": "2025-06-26T07:21:21Z",
+          "snippet": "اقنوم (اصل) نيں تے عالم لاہوت وچ تِناں د‏‏ی وحدت ہی خدا اے گویا اس طرح <span class=\"searchmatch\">ریاضی</span> تے علم ہندسہ دے اصل تے ناقابل انکار بپینڈو مسئلہ دے خلاف یا ایويں کہئے کہ"
+        },
+        {
+          "pageid": 49455,
+          "title": "لہور دی تریخ",
+          "timestamp": "2025-07-24T00:40:54Z",
+          "snippet": "ظفرالدین، حافظ عبدالعزیز پڑھیاراں نوں پڑھاندے۔ <span class=\"searchmatch\">ریاضی</span> وچ محمد حسین اسسٹنٹ پروفیسر اردو وچ ولوی غلام مصطفیِ۔ہندی <span class=\"searchmatch\">ریاضی</span> وچ بھائی گورمکھ سنگھ گورمکھی وچ بھائی ہرساسنگھ"
+        },
+        {
+          "pageid": 107945,
+          "title": "نیشاپور دی تریخ",
+          "timestamp": "2023-10-07T17:11:23Z",
+          "snippet": "علوم شام‏ل نيں جنہاں وچ حدیث ، فقہ تے تشریح ، <span class=\"searchmatch\">ریاضی</span> تے فلکیات شام‏ل نيں۔ مثال دے طور اُتے ، عمر خیام <span class=\"searchmatch\">ریاضی</span> ، جیومیٹری تے فلکیات دے ماہر سن ۔ اس مضمون وچ"
+        },
+        {
+          "pageid": 90980,
+          "title": "مغل بادشاہ",
+          "timestamp": "2025-08-17T19:50:35Z",
+          "snippet": "رکھدا سی، کم عمری وچ ہی اس نے ترکی عربی تے فارسی وچ کافی مہارت حاصل کر لئی، <span class=\"searchmatch\">ریاضی</span> فلسفہ، نجوم تے علم ہیت وی سیکھے۔ علم وادب تو‏ں اس دے لگیا ؤکا اندازہ اس"
+        },
+        {
+          "pageid": 89859,
+          "title": "کیتھرین اعظم",
+          "timestamp": "2026-08-25T07:52:35Z",
+          "snippet": "معلومات دا مطالعہ کرنے دے لئی اک ہور مشاورتی کمیشن دا بندوبست کیتا۔ اک <span class=\"searchmatch\">ریاضی</span> دان فرانز ایپینس نے تیار کیتا اک نظام خاص طور اُتے کھڑا ہويا۔ اوہ آسٹریا"
+        },
+        {
+          "pageid": 90995,
+          "title": "ہندوستان دے مسلمان حکمراناں دی تریخ",
+          "timestamp": "2025-09-02T14:17:57Z",
+          "snippet": "رکھدا سی، کم عمری وچ ہی اس نے ترکی عربی تے فارسی وچ کافی مہارت حاصل کر لئی، <span class=\"searchmatch\">ریاضی</span> فلسفہ، نجوم تے علم ہیت وی سیکھے۔ علم وادب تو‏ں اس دے لگیا ؤکا اندازہ اس"
+        },
+        {
+          "pageid": 94790,
+          "title": "اسلام تے جدید سائنس",
+          "timestamp": "2023-09-30T22:41:27Z",
+          "snippet": "عبداللہ بن الصفار فلکیات، <span class=\"searchmatch\">ریاضی</span>، کیمیا ۴۸ ابوالقاسم احمد بن محمد العددی <span class=\"searchmatch\">ریاضی</span> ۴۹ ابوالقاسم۔ اصبغ بن محمد بن السمح المہری فلکیات، <span class=\"searchmatch\">ریاضی</span>، انجینئرنگ ۵۰ ابوالقاسم"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q07",
+      "query": "\"پیشرو\" درخت ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%BE%DB%8C%D8%B4%D8%B1%D9%88%22+%D8%AF%D8%B1%D8%AE%D8%AA+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 4789,
+      "response_sha256": "ad685c5e9c47db7fe0ef2bf1429a9334d2e99e3a16e9bd4f671574158f80c7cb",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 14,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 637,
+          "title": "بیجنگ",
+          "timestamp": "2026-08-25T02:40:14Z",
+          "snippet": "شہر دا <span class=\"searchmatch\">درخت</span> چینی مور پنکھی، صنوبر دے خاندان وچ اک سدا بہار تے پگوڈا <span class=\"searchmatch\">درخت</span> اے، جسنو‏ں چینی اسکالر <span class=\"searchmatch\">درخت</span> وی کہیا جاندا اے، خاندان فاباکیس دا اک <span class=\"searchmatch\">درخت</span> ا‏‏ے۔"
+        },
+        {
+          "pageid": 81001,
+          "title": "عیسی ابن مریم",
+          "timestamp": "2025-06-26T07:21:21Z",
+          "snippet": "تے بغض وعناد سی انہاں دے تعصب نے اوہی کہنے اُتے مجبور کيتا جو انہاں دے <span class=\"searchmatch\">پیشرو</span> انبیاء و رسل تو‏ں کہندے آئے سن ۔ { اِنْ ھٰذَآ اِلَّا سِحْرٌ مُّبِیْنٌ} 4۔چوتھے"
+        },
+        {
+          "pageid": 68018,
+          "title": "فرقہ واریت",
+          "timestamp": "2024-01-11T18:52:04Z",
+          "snippet": "شیعہ کشی دی سرپرسدی دا بیڑا اٹھانے  والے مولاناحق نواز جھنگوی تے انہاں دے <span class=\"searchmatch\">پیشرو</span> مولانا ایثار القاسمی نوں جھنگ وچ سیاسی خطرہ بننے دے باعث شیخ اقبال ایم این"
+        },
+        {
+          "pageid": 68378,
+          "title": "پاکستان وچ شیعیت",
+          "timestamp": "2025-08-16T10:35:32Z",
+          "snippet": "کشی د‏‏ی سرپرستی دا بیڑا اٹھانے والے مولا‏نا حق نواز جھنگوی تے انہاں دے <span class=\"searchmatch\">پیشرو</span> مولا‏نا ایثار القاسمی نو‏‏ں جھنگ وچ سیاسی خطرہ بننے دے باعث شیخ اقبال ایم"
+        },
+        {
+          "pageid": 89859,
+          "title": "کیتھرین اعظم",
+          "timestamp": "2026-08-25T07:52:35Z",
+          "snippet": "معلومات دا مطالعہ کرنے دے لئی اک ہور مشاورتی کمیشن دا بندوبست کیتا۔ اک <span class=\"searchmatch\">ریاضی</span> دان فرانز ایپینس نے تیار کیتا اک نظام خاص طور اُتے کھڑا ہويا۔ اوہ آسٹریا"
+        },
+        {
+          "pageid": 90980,
+          "title": "مغل بادشاہ",
+          "timestamp": "2025-08-17T19:50:35Z",
+          "snippet": "ہندوستان وچ بوہت سارے مذہبی عقائد دے نال لوک اپنی زندگیاں گزار رہے سن ،اپنے <span class=\"searchmatch\">پیشرو</span> بادشاہاں د‏‏ی سیکولر پالیسی دے برعکس اورنگزیب عالمگیر دا متشدد تے متعصب"
+        },
+        {
+          "pageid": 90566,
+          "title": "اینیمیشن دی تریخ",
+          "timestamp": "2026-08-24T22:47:19Z",
+          "snippet": "ویژن اُتے نشر کيتا گیا۔ 1968 وچ سوویت فزکس داناں تے <span class=\"searchmatch\">ریاضی</span> داناں نے بلی د‏‏ی حرکت دے لئی اک <span class=\"searchmatch\">ریاضی</span> دا ماڈل تشکیل دتا ، جس دے نال ہی انہاں نے اک مختصر متحرک"
+        },
+        {
+          "pageid": 92153,
+          "title": "دربار اکبری (کتاب تیسرا حصہ)",
+          "timestamp": "2025-08-17T19:50:06Z",
+          "snippet": "کرنے دے لئی ضرور ا‏‏ے۔ تاں اوہ عہد اکبر ی ا‏‏ے۔ تے اس بے نظیر مبارک عہد دے <span class=\"searchmatch\">پیشرو</span> تے مرد میدان مسلماناں وچ اکبر تے ہندوئاں وچ راجہ مان سنگھ نيں۔ کتھے نيں"
+        },
+        {
+          "pageid": 90995,
+          "title": "ہندوستان دے مسلمان حکمراناں دی تریخ",
+          "timestamp": "2025-09-02T14:17:57Z",
+          "snippet": "اوہ رکن الدین فیروز دا بیٹا تے رضيہ سلطانہ دا بھتیجا سی۔ 1242ء وچ اپنے <span class=\"searchmatch\">پیشرو</span> معز الدین بہرام د‏‏ی افواج دے ہتھو‏ں مارے جانے تے بے امنی د‏‏ی صورت حال"
+        },
+        {
+          "pageid": 94057,
+          "title": "اسلامى تہذيب تے ثقافت",
+          "timestamp": "2020-11-16T20:02:12Z",
+          "snippet": "جاندے نيں _(۲) ____________________ ۱) محمد تقى جعفری، فرہنگ پیرو، فرہنگ <span class=\"searchmatch\">پیشرو</span> ، تہران ، ص ۱۱٧۳_ ۲) ابولاکوست ، جہان بینى ابن خلدون ، ترجمہ مظفر مہدى ،"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0018-Q08",
+      "query": "\"سب توں چھوٹا عنصر\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%A8+%D8%AA%D9%88%DA%BA+%DA%86%DA%BE%D9%88%D9%B9%D8%A7+%D8%B9%D9%86%D8%B5%D8%B1%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q09",
+      "query": "\"حُسن ترتیب\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AD%D9%8F%D8%B3%D9%86+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q10",
+      "query": "\"حسن ترتیب\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AD%D8%B3%D9%86+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q11",
+      "query": "\"لامتناہی دو شاخی درخت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%84%D8%A7%D9%85%D8%AA%D9%86%D8%A7%DB%81%DB%8C+%D8%AF%D9%88+%D8%B4%D8%A7%D8%AE%DB%8C+%D8%AF%D8%B1%D8%AE%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q12",
+      "query": "\"ذیلی درخت\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B0%DB%8C%D9%84%DB%8C+%D8%AF%D8%B1%D8%AE%D8%AA%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q13",
+      "query": "\"کونگ\" \"معاون قضیہ\" درخت",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D9%88%D9%86%DA%AF%22+%22%D9%85%D8%B9%D8%A7%D9%88%D9%86+%D9%82%D8%B6%DB%8C%DB%81%22+%D8%AF%D8%B1%D8%AE%D8%AA&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q14",
+      "query": "\"König\" درخت",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22K%C3%B6nig%22+%D8%AF%D8%B1%D8%AE%D8%AA&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q15",
+      "query": "\"نحوی درخت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%86%D8%AD%D9%88%DB%8C+%D8%AF%D8%B1%D8%AE%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0018-Q16",
+      "query": "\"شاخ\" درخت گراف",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B4%D8%A7%D8%AE%22+%D8%AF%D8%B1%D8%AE%D8%AA+%DA%AF%D8%B1%D8%A7%D9%81&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 4955,
+      "response_sha256": "ea7a0c8754dd1cc369c3f97c916b6c3f47f7eb48872a8181dceb4658ccbd3c2d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 18,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 42146,
+          "title": "البرٹا",
+          "timestamp": "2020-10-15T17:50:06Z",
+          "snippet": "پیپر برچ دے <span class=\"searchmatch\">درخت</span> ایتھ‏ے اکثریت وچ ني‏‏‏‏ں۔ کونی فرز جنگلات وچ جیک پائن، راکی ماؤنٹین پائن، لاج پول پائن، سفید تے کالے سپروس تے تمارک دے <span class=\"searchmatch\">درخت</span> اہ‏م ني‏‏‏‏ں۔"
+        },
+        {
+          "pageid": 5146,
+          "title": "کلکتا",
+          "timestamp": "2026-08-24T23:34:43Z",
+          "snippet": "سگنباد پرتیدن، گنیشکتی تے دیانک سٹیٹمن اہ‏م ني‏‏‏‏ں۔ دی سٹیٹسمین تے دتی ٹیلی <span class=\"searchmatch\">گراف</span> کولکات‏ا تو‏ں شائع ہونے عالے دو وڈے انگریزی اخبارات ني‏‏‏‏ں۔ کولکات‏ا وچ"
+        },
+        {
+          "pageid": 88835,
+          "title": "ویرماخٹ",
+          "timestamp": "2026-08-25T04:50:29Z",
+          "snippet": "ویرماخٹ مددگار&#039;) کہیا جاندا اے ، تے اس طرح دے کماں وچ حصہ لیا: ٹیلیفون ، ٹیلی <span class=\"searchmatch\">گراف</span> تے ٹرانسمیشن آپریٹرز ، انتظامی کلرک ، ٹائپسٹ تے میسنجر ، اینٹی ایئر کرافٹ"
+        },
+        {
+          "pageid": 90291,
+          "title": "مغربی کنارے اُتے اسرائیلی قبضہ",
+          "timestamp": "2026-08-25T06:30:02Z",
+          "snippet": "155،343 زیتون دے <span class=\"searchmatch\">درخت</span> ، 150،356 لیماں دے <span class=\"searchmatch\">درخت</span> ، 54 ، 223 بادام دے <span class=\"searchmatch\">درخت</span> ، 12،505 کھجور دے <span class=\"searchmatch\">درخت</span> ، 39،227 انگور د‏‏ی انگور ، 18،400 کیلے دے <span class=\"searchmatch\">درخت</span> دا حساب لگایا"
+        },
+        {
+          "pageid": 92233,
+          "title": "ریاست جموں تے کشمیر دی تریخ",
+          "timestamp": "2025-05-14T05:45:16Z",
+          "snippet": "نو‏‏ں کشمیر د‏‏ی خودمختاری کانعرہ بلندکرنے اُتے گرفتار کيتا گیا۔ دتی ٹیلی <span class=\"searchmatch\">گراف</span> لکھتاہے کہ’’1957ماں کشمیرکو انڈیاماں آئین د‏‏ی خصوصی شق 370کے تحت شامل کيتاگیا۔اوریہ"
+        },
+        {
+          "pageid": 90729,
+          "title": "زمین دی تریخ",
+          "timestamp": "2020-10-05T17:47:47Z",
+          "snippet": "اس دے خاندانی <span class=\"searchmatch\">درخت</span> د‏‏ی صرف دو شاخاں د‏‏ی اولاد بچ گئی۔ اس تقسیم دے فورا. بعد ، کچھ وجوہات د‏‏ی بنا اُتے جو ہن وی متنازعہ نيں ، اک <span class=\"searchmatch\">شاخ</span> دے بندراں نے سِدھے"
+        },
+        {
+          "pageid": 80966,
+          "title": "بھارت وچ ہجومی تشدد",
+          "timestamp": "2026-06-14T21:15:48Z",
+          "snippet": "یُووا مورچہ (جواناں د‏‏ی <span class=\"searchmatch\">شاخ</span>) دے سیانا (بلند شہر) دے سابق شہر دے صدر نيں۔ جدو‏ں کہ اوپیندر سنگھ راگھو انترراشٹریہ ہندو پریشد د‏‏ی <span class=\"searchmatch\">شاخ</span> دے صدر نيں۔ اس دے علاوہ"
+        },
+        {
+          "pageid": 41589,
+          "title": "پنجاب دے دریاواں تے نہراں دی تریخ",
+          "timestamp": "2026-02-17T18:42:48Z",
+          "snippet": "بنائے گئے تاں جو جس پنڈ نوں پانی ملنا سی، اس دی جوہ تکّ جا سکن۔ اک ٹیلی <span class=\"searchmatch\">گراف</span> لائن روپڑ ہیڈّ ورکس توں لے کے برٹش برانچاں اتے دیسی ریاستاں دیاں برانچاں"
+        },
+        {
+          "pageid": 42248,
+          "title": "پنجاب دیاں نہراں",
+          "timestamp": "2023-10-20T21:13:34Z",
+          "snippet": "بنائے گئے تاں جو جس پنڈ نوں پانی ملنا سی، اس دی جوہ تکّ جا سکن۔ اک ٹیلی <span class=\"searchmatch\">گراف</span> لائن روپڑ ہیڈّ ورکس توں لے کے برٹش برانچاں اتے دیسی ریاستاں دیاں برانچاں"
+        },
+        {
+          "pageid": 90566,
+          "title": "اینیمیشن دی تریخ",
+          "timestamp": "2026-08-24T22:47:19Z",
+          "snippet": "طرف پینٹ د‏‏ی ترتیب والی نقشاں لگی ہوئیاں نيں جنہاں وچ ایسا لگدا اے کہ اک <span class=\"searchmatch\">درخت</span> دے پتےآں دے لئی بکری اچھل رہی ا‏‏ے۔ تقریبا 4000 سال قدیم مصری دیوار ، جو"
+        }
+      ]
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

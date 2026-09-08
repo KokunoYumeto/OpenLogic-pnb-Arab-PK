@@ -7,55 +7,61 @@
 \begin{document}
 
 \olfileid{sfr}{rel}{ops}
-\olsection{تعلقاں اُتے عمل}
+\olsection{تعلقاں اُتے عمل (Operations on Relations)}
 
 تعلقاں نوں بدلنا یا رلانا اکثر کم آؤندا اے۔
 \olref[sfr][rel][ord]{prop:stricttopartial} وچ اسی تعلقاں دے \emph{اتحاد}
-اُتے غور کیتا سی؛ ایہ بس دو تعلقاں نوں جوڑیاں دے سیٹ سمجھ کے اوہناں
+(union) اُتے غور کیتا سی؛ ایہ بس دو تعلقاں نوں جوڑیاں (pairs) دے سیٹ
+سمجھ کے اوہناں
 دا اتحاد لینا اے۔ ایس طرح \olref[sfr][rel][ord]{prop:partialtostrict}
-وچ اسی تعلقاں دے نسبتی فرق اُتے غور کیتا سی۔ ہُن تعلقاں اُتے کیتے جا
-سکن والے کجھ ہور عمل ایہ نیں۔
+وچ اسی تعلقاں دے نسبتی فرق (relative difference) اُتے غور کیتا سی۔ ہُن
+تعلقاں اُتے کیتے جا سکن والے کجھ ہور عمل (operations) ایہ نیں۔
 
 \begin{defn}\ollabel{relationoperations} 
 من لو کہ $R$، $S$ تعلق نیں، تے $A$ کوئی وی سیٹ اے۔
 
-$R$ دا \emph{اُلٹا تعلق}، $R^{-1} = \Setabs{\tuple{y, x}}{\tuple{x,
+$R$ دا \emph{اُلٹا تعلق} (inverse)، $R^{-1} = \Setabs{\tuple{y, x}}{\tuple{x,
     y} \in R}$ اے۔
 
-$R$ تے $S$ دا \emph{نسبتی حاصل ضرب}، $(R \mid S) =
+$R$ تے $S$ دا \emph{نسبتی حاصل ضرب} (relative product)، $(R \mid S) =
 \{\tuple{x, z} : \exists y(Rxy \land Syz)\}$ اے۔
 
-$R$ دی $A$ تک \emph{تحدید}، $\funrestrictionto{R}{A}= R
+$R$ دی $A$ تک \emph{تحدید} (restriction)، $\funrestrictionto{R}{A}= R
 \cap A^2$ اے۔
 
-$R$ دا $A$ اُتے \emph{اطلاق}، $\funimage{R}{A} = \{y :
+$R$ دا $A$ اُتے \emph{اطلاق} (application)، $\funimage{R}{A} = \{y :
 (\exists x \in A)Rxy\}$ اے۔
 \end{defn}
 
 \begin{ex}
-من لو کہ $S \subseteq \Int^2$، سیٹ~$\Int$ اُتے جانشین ہون دا تعلق اے،
+من لو کہ $S \subseteq \Int^2$، سیٹ~$\Int$ اُتے جانشین ہون دا تعلق
+(successor relation) اے،
 یعنی $S = \Setabs{\tuple{x, y} \in \Int^2}{x + 1 = y}$، سو $Sxy$ اُدوں
 تے صرف اُدوں جدوں $x + 1 = y$۔
 
-$S^{-1}$، سیٹ $\Int$ اُتے پیشرو ہون دا تعلق اے، یعنی
+$S^{-1}$، سیٹ $\Int$ اُتے پیشرو ہون دا تعلق (predecessor relation) اے، یعنی
 $\Setabs{\tuple{x,y}\in\Int^2}{x -1 =y}$۔
 
 $S\mid S$ ایہ اے:
 $ \Setabs{\tuple{x,y}\in\Int^2}{x + 2 =y}$
 
-$\funrestrictionto{S}{\Nat}$، سیٹ~$\Nat$ اُتے جانشین ہون دا تعلق اے۔
+$\funrestrictionto{S}{\Nat}$، سیٹ~$\Nat$ اُتے جانشین ہون دا تعلق
+(successor relation) اے۔
 
 $\funimage{S}{\{1,2,3\}}$، سیٹ $\{2, 3, 4\}$ اے۔
 \end{ex}
 
-\begin{defn}[تعدی تکمیل]من لو کہ $R \subseteq A^2$ دو رکنی تعلق اے۔
+\begin{defn}[تعدی تکمیل (Transitive closure)]من لو کہ $R \subseteq A^2$
+دو رکنی تعلق (binary relation) اے۔
 
-تعلق~$R$ دی \emph{تعدی تکمیل}، $R^+ = \bigcup_{0 < n \in
-\Nat} R^n$ اے، جتھے اسی بازگشتی طور تے $R^1 = R$ تے $R^{n+1} = R^n
+تعلق~$R$ دی \emph{تعدی تکمیل} (transitive closure)، $R^+ = \bigcup_{0 < n \in
+\Nat} R^n$ اے، جتھے اسی بازگشتی طور تے (recursively) $R^1 = R$ تے $R^{n+1} = R^n
 \mid R$ تعریف کردے آں۔
 
-$R$ دی \emph{انعکاسی تعدی تکمیل}، $R^* = R^+ \cup
+$R$ دی \emph{انعکاسی تعدی تکمیل} (reflexive transitive closure)، $R^* = R^+ \cup
 \Id{A}$ اے۔
+نوٹ: ایتھے R+ اوپر والی مقامی تعریف دے مطابق تعدی تکمیل اے؛ ترتیب والے
+پچھلے حصے وچ ایہو علامت انعکاسی تکمیل لئی ورتی گئی سی۔
 \end{defn}
 
 \begin{ex}
@@ -67,7 +73,7 @@ $x < y$، تے $S^*xy$ اُدوں تے صرف اُدوں جدوں $x \le y$۔
 \end{ex}
 
 \begin{prob}
-وکھاؤ کہ $R$ دی تعدی تکمیل واقعی متعدی اے۔
+وکھاؤ کہ $R$ دی تعدی تکمیل (transitive closure) واقعی متعدی (transitive) اے۔
 \end{prob}
 
 \end{document}

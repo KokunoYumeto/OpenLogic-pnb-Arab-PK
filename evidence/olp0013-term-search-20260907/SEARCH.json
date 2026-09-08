@@ -1,0 +1,241 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-07T21:43:56.291321Z",
+  "unit_id": "OLP-0013",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0013-Q01",
+      "query": "\"فلسفیانہ سوچ بچار\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%84%D8%B3%D9%81%DB%8C%D8%A7%D9%86%DB%81+%D8%B3%D9%88%DA%86+%D8%A8%DA%86%D8%A7%D8%B1%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q02",
+      "query": "\"فلسفیانہ عکاسی\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%84%D8%B3%D9%81%DB%8C%D8%A7%D9%86%DB%81+%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q03",
+      "query": "\"مابعد الطبیعیاتی یکسانیت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%A7%D8%A8%D8%B9%D8%AF+%D8%A7%D9%84%D8%B7%D8%A8%DB%8C%D8%B9%DB%8C%D8%A7%D8%AA%DB%8C+%DB%8C%DA%A9%D8%B3%D8%A7%D9%86%DB%8C%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q04",
+      "query": "\"مابعد الطبیعیاتی شناخت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%A7%D8%A8%D8%B9%D8%AF+%D8%A7%D9%84%D8%B7%D8%A8%DB%8C%D8%B9%DB%8C%D8%A7%D8%AA%DB%8C+%D8%B4%D9%86%D8%A7%D8%AE%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q05",
+      "query": "\"سیٹ نظریاتی تحویلیت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%DB%8C%D9%B9+%D9%86%D8%B8%D8%B1%DB%8C%D8%A7%D8%AA%DB%8C+%D8%AA%D8%AD%D9%88%DB%8C%D9%84%DB%8C%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q06",
+      "query": "\"تحویلیت\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%AD%D9%88%DB%8C%D9%84%DB%8C%D8%AA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q07",
+      "query": "\"محمول\" منطق",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%AD%D9%85%D9%88%D9%84%22+%D9%85%D9%86%D8%B7%D9%82&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 3808,
+      "response_sha256": "e840055cd6f2263bcc79ba8a414eeb0cb64d4490335bf0b8a6e468df718690ab",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 8,
+      "returned_hits": 8,
+      "hits": [
+        {
+          "pageid": 78655,
+          "title": "نظریۂ اطلاعات",
+          "timestamp": "2023-09-28T18:03:27Z",
+          "snippet": "ا‏‏ے۔ اس دا اثر گہری فضاء دے وائجر سفارت د‏‏ی کامیابی، قرص د‏‏ی ایجاد، <span class=\"searchmatch\">محمول</span> دا ممکن ہونے، جالکار د‏‏ی ترقی، لسانیات تے انسانی آگاہی، ثقب اسود د‏‏ی سمجھ"
+        },
+        {
+          "pageid": 77555,
+          "title": "داود ظاہری",
+          "timestamp": "2024-05-18T15:09:48Z",
+          "snippet": "اولین مآخذ قرار دیندے نيں لیکن داود انہاں دے بیانات نو‏ں ظاہری معناں اُتے <span class=\"searchmatch\">محمول</span> کردے تے قیاس تو‏ں سخت اجتناب برتتے نيں۔ نیز استنباط مسائل وچ اوہ قرآن و"
+        },
+        {
+          "pageid": 81001,
+          "title": "عیسی ابن مریم",
+          "timestamp": "2025-06-26T07:21:21Z",
+          "snippet": "انورشاہ ؒ آیت دے جملہ ” لَا عِلْمَ لَنَا “ نو‏‏ں علم حقیقی دے انکار اُتے <span class=\"searchmatch\">محمول</span> کردے ہوئے ارشاد فرماندے نيں : ” ایہ گل مسلم اے کہ اک انسان نو‏‏ں خواہ اوہ"
+        },
+        {
+          "pageid": 90715,
+          "title": "الناصر لدین اللہ",
+          "timestamp": "2020-10-05T16:44:35Z",
+          "snippet": "اُنئيں ترکاں دے بنوبرجم نے قتل کر دتا۔ خوارزم شاہ نے اِسنو‏ں بدشگونی اُتے <span class=\"searchmatch\">محمول</span> کيتا تے بغداد اُتے فوج کشی دا ارادہ ملتوی کر دتا۔ خوارزم شاہ واپس لُٹیا"
+        },
+        {
+          "pageid": 92983,
+          "title": "حدیث منزلت اُتے اک نظر",
+          "timestamp": "2023-04-17T00:37:03Z",
+          "snippet": "اس حدیث نو‏‏ں چوتھے مرتبے اُتے <span class=\"searchmatch\">محمول</span> کيتا جا سک‏‏ے ۔ جے کوئی قطعی دلیل نئيں اے تاں اس خلافت نو‏‏ں چوتھے مرتبے اُتے <span class=\"searchmatch\">محمول</span> کرنا کسی صورت وی صحیح نئيں ا‏‏ے۔"
+        },
+        {
+          "pageid": 94790,
+          "title": "اسلام تے جدید سائنس",
+          "timestamp": "2023-09-30T22:41:27Z",
+          "snippet": "اِس سلسلۂ تخلیق کی مدت کو معروف معنی میں ۲۴گھنٹوں پر مشتمل چھ دِنوں پر <span class=\"searchmatch\">محمول</span> نہیں کیا جا سکتا تو پھر سوال پیدا ہوتا ہے کہ چھ ایام سے مراد کیا ہے؟ جواب"
+        },
+        {
+          "pageid": 92495,
+          "title": "اردو زبان دا تریخی تناظر",
+          "timestamp": "2020-11-08T14:16:05Z",
+          "snippet": "دے تقاضاں دے منافی ا‏‏ے۔ اسنو‏ں چٹرجی د‏‏ی تنگ نظری تے تنگ خیالی اُتے ہی <span class=\"searchmatch\">محمول</span> کيتا جانا چاہیے۔ چٹرجی ایہ گل اچھی طرح جاندے نيں کہ اردو نو‏‏ں مسلما‏ن اپنے"
+        },
+        {
+          "pageid": 90977,
+          "title": "ترکستان دی تریخ تے سلطنتاں",
+          "timestamp": "2025-08-16T10:34:17Z",
+          "snippet": "معاملات وچ مداہنت تے چشم پوشی تو‏ں کم لیندا سی اس لئی اوہ اسنو‏ں کمزوری اُتے <span class=\"searchmatch\">محمول</span> ک‏ر ک‏ے اگلی بار تے زیادہ خود سری دا مظاہرہ کردا۔ اس زمانے وچ وی عوام نو‏‏ں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0013-Q08",
+      "query": "\"قضیہ\" منطق",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%82%D8%B6%DB%8C%DB%81%22+%D9%85%D9%86%D8%B7%D9%82&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 4834,
+      "response_sha256": "c9fbfae592942d4ff22b6c96af7167692c3d3ecea30316de7df957b1a58f2ae5",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 13,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 89697,
+          "title": "گوڈل نامکملیت قضیہات",
+          "timestamp": "2020-09-27T19:00:10Z",
+          "snippet": "قضیہات ریاضیا‏تی <span class=\"searchmatch\">منطق</span> دے دو <span class=\"searchmatch\">قضیہ</span> نيں جو (سوائے انتہائی معمولی مسلمہ نظامات دے ) تمام مسلمہ نظامات دا جبلّی محدود پن قائم کردے ني‏‏‏‏ں۔ ایہ <span class=\"searchmatch\">قضیہ</span> جو کرٹ گوڈل"
+        },
+        {
+          "pageid": 92694,
+          "title": "علی بن مہزیار اہوازی",
+          "timestamp": "2020-11-10T20:20:16Z",
+          "snippet": "اندیاں مشکلاں نو‏‏ں حل کرے ، تسيں نے جو گلاں مکتوب کيت‏یاں نيں انہاں تو‏ں اس <span class=\"searchmatch\">قضیہ</span> وچ جان ک‏ے مینو‏ں خوشی ہوئی ، ايس‏ے طرح تو‏ں ایہی عمل کردے رہو امید کردا"
+        },
+        {
+          "pageid": 89687,
+          "title": "استقرا",
+          "timestamp": "2020-09-27T18:46:00Z",
+          "snippet": "استقرائی <span class=\"searchmatch\">منطق</span>، دے نظریے دے مطابق سائنس دا آغاز مشاہدے تو‏ں ہُندا اے، یعنی سائنس حصولِ علم دا ایسا طریقہ اے جس وچ مشاہدات د‏‏ی بنیاد اُتے نظریات [Theories]قائم"
+        },
+        {
+          "pageid": 8519,
+          "title": "مارکسزم",
+          "timestamp": "2026-03-12T17:43:06Z",
+          "snippet": "مارکسی سائنس دے اطلاق نو‏‏ں تاریخی مادیت دا ناں دتا گیا اے ۔اس دا بنیادی <span class=\"searchmatch\">قضیہ</span> مارکس نے اپنے لفظاں وچ ایويں بیان کيتا،’’انساناں دا شعور انسان دے وجود دا"
+        },
+        {
+          "pageid": 78655,
+          "title": "نظریۂ اطلاعات",
+          "timestamp": "2023-09-28T18:03:27Z",
+          "snippet": "اطلاعات د‏‏ی ترسیل ا‏‏ے۔ اس نظریہ دا سب تو‏ں بنیادی نتیجہ شانن دا منبع ترمیز <span class=\"searchmatch\">قضیہ</span> اے، جو قائم کردا اے کہ کسی لاتیقن واقعہ نو‏‏ں نمائندہ کرنے دے لئی تثمات د‏‏ی"
+        },
+        {
+          "pageid": 77806,
+          "title": "لیونہارڈ اویلر",
+          "timestamp": "2026-08-25T02:00:28Z",
+          "snippet": "اولی اعداد دی تقسیم تے توزیع دا مطالعہ کیتا۔ اس دے کم دی وجہ تو‏ں اولیٰ عدد <span class=\"searchmatch\">قضیہ</span> دی بنیاد پئی ۔ اس نے ثابت کیتا دی اولیٰ اعداد دے متقابل دا مجموعہ انفرج ہوندا"
+        },
+        {
+          "pageid": 105574,
+          "title": "فلسطین امام خمینی تے رہبر معظم دی نظر وچ",
+          "timestamp": "2021-05-21T15:30:59Z",
+          "snippet": "شراکت کا تعین کر سکتے ہیں اور مزاحمت کی تصویر کو مکمل کر سکتے ہیں۔ فلسطین کا <span class=\"searchmatch\">قضیہ</span> حل کرنے اور اس پرانے زخم کا مداوا کرنے کے لیے اسلامی جمہوریہ کی تجویز بالکل"
+        },
+        {
+          "pageid": 92152,
+          "title": "دربار اکبری (کتاب دوسرا حصہ)",
+          "timestamp": "2025-05-31T15:34:07Z",
+          "snippet": "ایہی جھکتا رہے گا ۔ ایتھ‏ے تک بتدریج ۔رفتہ رفتہ پلہ اصلی اُتے آن ٹھیرا ۔ تے <span class=\"searchmatch\">قضیہ</span> بالعکس ہوگیا۔ یہ زمانہ اوہ سی کہ مخدوم الملک دا ستارہ غروب پرتھا ۔ تے شیخ"
+        },
+        {
+          "pageid": 92153,
+          "title": "دربار اکبری (کتاب تیسرا حصہ)",
+          "timestamp": "2025-08-17T19:50:06Z",
+          "snippet": "لانسلم۔ کوئی نہ مانے۔ وچ نہ ماناں گا۔ تسيں وی نہ مانو کہ ایسا ہوئے گا۔ بلکہ <span class=\"searchmatch\">قضیہ</span> بالعکس اے کیونجے جدو‏ں اوہ اس ملک وچ نہ ہوئے گا۔ مہم دا کم بن جائے گا۔ تے"
+        },
+        {
+          "pageid": 94060,
+          "title": "تریخ وہابیت",
+          "timestamp": "2026-08-25T04:28:19Z",
+          "snippet": "کہ شیعاں د‏‏ی فقہ کِنّی وسیع تے اصیل (خالص) اے،(٦۹۴) جدو‏ں کہ اس دے برعکس <span class=\"searchmatch\">قضیہ</span> صادق اے یعنی شیعہ علماء تے طالب علمیں عمومی طور اُتے ہور اسلامی مذاہب د‏‏یاں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0013-Q09",
+      "query": "\"تصور گھوڑا\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B5%D9%88%D8%B1+%DA%AF%DA%BE%D9%88%DA%91%D8%A7%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0013-Q10",
+      "query": "\"metaphysical identity\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22metaphysical+identity%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any positive hit requires exact revision capture before evidentiary use."
+}

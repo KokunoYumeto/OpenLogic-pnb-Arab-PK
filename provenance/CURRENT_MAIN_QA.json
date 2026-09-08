@@ -1,6 +1,6 @@
 {
   "schema": "pnb-current-main-qa/1",
-  "date_utc": "2026-09-07",
+  "date_utc": "2026-09-08",
   "full_edition_complete": false,
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_units_total": 722,
@@ -36,25 +36,25 @@
   },
   "segment_canon_use": {
     "file": "ALL_TRANSLATED_SEGMENT_CANON_USE.jsonl",
-    "bytes": 1128644,
-    "sha256": "bc899221d5ab8ae433be6bc0cb05fe0ea1997f1cd2a08af8bbf12a841397d49a",
+    "bytes": 1151001,
+    "sha256": "37434051c2a3196c30cd7f3d4e9a485ad71893c155d520d0393349c65875231c",
     "rows": 1220,
     "canonical_unit_block_order": true,
-    "scope": "Exact owner projection; records consultation and repair state but grants semantic acceptance only through the validated prefix."
+    "scope": "Exact owner projection across 74 historical source-aligned translations; semantic acceptance is granted only by the separately validated repaired prefix."
   },
   "term_decisions": {
     "file": "TERM_DECISIONS.jsonl",
-    "bytes": 141439,
-    "sha256": "e7b9a116af453e42bdd9674d51db8674bf3ce3762349c82429a7cd32e423fd21",
+    "bytes": 153130,
+    "sha256": "832db62a9d965a88dfd9c5875eb09926e586266b58308c343dc149d51a6125d7",
     "entries": 130,
     "scope": "Provisional decision inventory; community usage is distinguished from peer-reviewed scholarly attestation."
   },
   "review_log": {
     "file": "TERMINOLOGY_REVIEW_LOG.jsonl",
-    "entries": 172,
+    "entries": 173,
     "terminology_entries": 130,
-    "source_fidelity_entries": 42,
-    "sha256": "5cd5f55e593dfa8dad0124995de9e8b84e10f1319952698958a9a2824e09cc87",
+    "source_fidelity_entries": 43,
+    "sha256": "f404eb2e77c5f04d3432bc96973fc8a8505ab969a256297b48a28693fa0a50f6",
     "occurrence_source_target_line_ranges": true,
     "structural_section_scope": true,
     "language_script_locale": "Punjabi / Arabic (Shahmukhi) / pnb-Arab-PK",
@@ -64,13 +64,13 @@
   "translation_decision_surfaces": {
     "directory": "translation-decisions",
     "shared_schema_sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "decisions": 172,
-    "occurrences": 2724,
-    "high_priority_decisions": 146,
+    "decisions": 173,
+    "occurrences": 2727,
+    "high_priority_decisions": 139,
     "occurrences_with_accepted_reader_pages": 0,
-    "occurrences_pending_reader_pages": 2724,
-    "decisions_json_sha256": "ae3ca877ccf8071999a9ab94f222800380f1aa0af78836007ed2ceaf7d97e24d",
-    "qa_sha256": "26dd3671e10683163e3e0cadf02ae9ab4fc5272ebb4ed3b16bbf00d57c1a0e4a",
+    "occurrences_pending_reader_pages": 2727,
+    "decisions_json_sha256": "301ff9bfe54194f640d1d09878a7078ba63736e10703d7fba43728cb80882c04",
+    "qa_sha256": "4930003afd1a99696dbb249b259bf5bde10dd6d76ae2f289dd5618a160a5ac0d",
     "surfaces": [
       "START_HERE.md",
       "TRANSLATION_DECISIONS_FULL.md",
@@ -84,10 +84,10 @@
   },
   "source_corrections": {
     "file": "SOURCE_CORRECTIONS.jsonl",
-    "entries": 36,
-    "applied_and_audited": 36,
+    "entries": 37,
+    "applied_and_audited": 37,
     "pending_until_unit_translation": 0,
-    "sha256": "aaf32ef5727795e041f3911b6a20dcfcb326ccca750fd9ef8986e73ec16b4946"
+    "sha256": "d39042e34eef3ce218ffca3cff25b616a53cf812adc6529415f43183166b6c48"
   },
   "shared_size_of_sets_audit": {
     "file": "OLSIZ-SHARED-AUDIT-ADOPTION.json",
@@ -143,28 +143,28 @@
   },
   "limits": [
     "This corrective branch checkpoint is not a new binary reader release.",
-    "Semantic acceptance is limited to the validated repaired prefix OLP-0001 through OLP-0010; isolated later repairs do not accept their units.",
+    "Semantic acceptance is limited to the validated repaired prefix OLP-0001 through OLP-0019; the 55 later historical source translations remain semantically unaccepted draft.",
     "Revision-bound community Shahmukhi mathematical usage is not peer-reviewed scholarly canon; unattested specialist terminology remains explicit, reversible and definition/source-governed.",
-    "The historical v0.1.0 reader and Zenodo record remain immutable. The new portable candidate is locally reproducible and visually accepted but not released.",
+    "The historical v0.1.0 reader and Zenodo record remain immutable. The Sets portable candidate is locally reproducible and visually accepted but not released; Relations has no integrated reader acceptance yet.",
     "The semantic HTML reader, full 722-unit corpus and final integrated reader remain incomplete."
   ],
-  "status": "CANON_REPAIR_IN_PROGRESS_VALIDATED_PREFIX_ONLY",
+  "status": "CURRENT_MAIN_SOURCE_AND_PROVENANCE_CHECKPOINT_PUBLICATION_PENDING",
   "historical_main_commit": "6c4b2f319903b3ec36af7841b108bfc74ebadf58",
-  "previous_public_main_commit": "3e1d82bf1f32d3a8dc5940ec93db2b01e327708d",
+  "previous_public_main_commit": "5161120618875dbad6b1f2cdaf669a9fb16912e5",
   "publication_commit": null,
   "publication_commit_policy": "The final metadata commit is recorded in external durable and anonymous readback receipts after publication; its hash is not self-embedded in this commit-addressed file.",
   "semantic_repair_choices": {
     "file": "SEMANTIC_REPAIR_CHOICES.jsonl",
-    "bytes": 823845,
-    "sha256": "42b65c2f3f6dca096b34549b60bd24afa447ab099b0bab667ef572ca097bd8ca",
-    "entries": 110,
+    "bytes": 1762965,
+    "sha256": "095ee9a0a3b22f3bd7d7b7ba2cc1e82520502d7ea6554193b6ca359009df64f1",
+    "entries": 214,
     "scope": "Exact choice-level repair records; provisional resolution is not conventional-term attestation or corpus-wide acceptance."
   },
   "current_identity_verifier": {
     "file": "../tools/verify_source_identity.py",
-    "bytes": 7861,
-    "sha256": "253a4a5b2f5c9ac3d2cd35b5a172806b55b9fd966230bc91c1d4fa27d4712094",
-    "scope": "Verifies 722 frozen sources, all 74 current target identities against historical or exact repair receipts, repaired-prefix structural gates, and current portable-candidate evidence; it does not expand semantic acceptance beyond OLP-0010."
+    "bytes": 7882,
+    "sha256": "c28bcc833f5063259f5fbdd465e2f6a1eb9d9e5b864a3b428a348e8e4926d46a",
+    "scope": "Verifies all 722 frozen sources, all 74 current target identities against historical or exact repair receipts, the through-OLP-0019 structural gates, and current portable-candidate evidence; it does not expand semantic acceptance beyond OLP-0019."
   },
   "semantic_status": {
     "forensic_baseline": {
@@ -177,43 +177,39 @@
       "immutable": true
     },
     "validated_repaired_prefix": {
-      "range": "OLP-0001 through OLP-0010",
-      "units": 10,
-      "choice_groups": 163,
-      "formal_invariants": 68,
-      "supported_provisional": 95,
+      "range": "OLP-0001 through OLP-0019",
+      "units": 19,
+      "choice_groups": 313,
+      "formal_invariants": 114,
+      "supported_provisional": 199,
       "unsupported": 0,
       "needs_revision": 0,
       "contentious": 0,
       "errors": 0,
       "file": "REPAIRED_PREFIX_QA.json",
-      "bytes": 56839,
-      "sha256": "fdc814cee014ea39453aaf1f7160a6274d79c311d48de7cf07fee53da60b29ec"
+      "bytes": 113999,
+      "sha256": "d07d3797b8ff9f9782a7e9e57f9846d5560f5ecc58d38f385e3d33ecfcfcfaf1"
     },
     "isolated_or_superseded_repairs": {
       "extensionality_choices_total": 14,
-      "extensionality_choices_within_prefix_superseded_by_full_records": 8,
-      "extensionality_choices_still_isolated_outside_prefix": 6,
-      "olp0018_theorem_choice_still_isolated_outside_prefix": true,
-      "semantic_acceptance_effect": "Only full choice records inside the contiguous prefix accept units; isolated later repairs do not."
+      "extensionality_choices_within_prefix_superseded_by_full_records": 12,
+      "extensionality_choices_still_isolated_outside_prefix": 2,
+      "olp0018_theorem_choice_within_prefix_superseded_by_full_record": true,
+      "remaining_isolated_choice_ids": [
+        "pnb-Arab-PK:OLP-0023-B008:C001",
+        "pnb-Arab-PK:OLP-0036-B012:C001"
+      ],
+      "semantic_acceptance_effect": "Only full choice records inside the contiguous prefix accept units; the two isolated later repairs do not."
     },
     "evidence_counts": {
-      "canon_sources": 15,
-      "canon_passages": 31
+      "canon_sources": 17,
+      "canon_passages": 36
     },
     "community_evidence_limit": "Revision-bound actual Shahmukhi technical usage, not peer-reviewed scholarly canon.",
-    "effective_remaining_unresolved_choices": 690,
-    "next_repair_choice": "pnb-Arab-PK:OLP-0011-B004:C001",
+    "effective_remaining_unresolved_choices": 590,
+    "next_repair_choice": "pnb-Arab-PK:OLP-0020-B004:C001",
     "corpus_semantic_acceptance": false,
-    "forward_authoring_after_OLP_0074_frozen": true,
-    "publication_state": {
-      "content_commit": "a699424d8e3c3beb7802faf448bd208836d0d12a",
-      "content_commit_anonymous_raw_paths_verified": 58,
-      "content_commit_codeload_frozen_sources_exact": 722,
-      "final_metadata_commit": "external durable receipt after publication",
-      "release_assets_changed": false,
-      "zenodo_changed": false
-    }
+    "forward_authoring_after_OLP_0074_frozen": true
   },
   "portable_candidate": {
     "status": "reproduced_and_all_pages_visually_accepted_not_released",
@@ -254,7 +250,6 @@
     "visual_pages_inspected": 29,
     "bidi_defect_caught_and_corrected_before_acceptance": true,
     "release_assets_changed": false,
-    "semantic_acceptance_effect": "The candidate covers all seven Sets units, exactly the current OLP-0004 through OLP-0010 source, within the validated OLP-0001 through OLP-0010 prefix."
-  },
-  "repair_content_commit": "a699424d8e3c3beb7802faf448bd208836d0d12a"
+    "semantic_acceptance_effect": "The candidate covers all seven Sets units, exactly current OLP-0004 through OLP-0010 source, within the validated OLP-0001 through OLP-0019 prefix."
+  }
 }

@@ -36,7 +36,7 @@ if ext['resolved_provisional'] != 14 or ext['choice_count'] != 14 or ext['semant
 for unit_id,row in ext['structural_unit_checks'].items():
     if not all(row['checks'].values()):
         raise ValueError('Extensionality structural failure: '+unit_id)
-    # A newer full-prefix receipt takes precedence for OLP-0005.
+    # A newer full-prefix receipt takes precedence for every covered unit.
     repair_targets.setdefault(unit_id,(row['source_path'],row['target_sha256'],row['target_bytes'],'isolated-extensionality'))
 
 theorem=json.loads((REPO/'provenance/OLP0018_THEOREM_REPAIR.json').read_text('utf-8'))
@@ -48,7 +48,7 @@ if (theorem['semantic_acceptance']
     raise ValueError('OLP-0018 theorem repair scope/structure mismatch')
 audit_by_id={row['unit_id']:row for row in audits['units']}
 olp18=audit_by_id['OLP-0018']
-repair_targets['OLP-0018']=(olp18['source_path'],theorem['artifacts']['target']['sha256'],theorem['artifacts']['target']['bytes'],'isolated-theorem-noun')
+repair_targets.setdefault('OLP-0018',(olp18['source_path'],theorem['artifacts']['target']['sha256'],theorem['artifacts']['target']['bytes'],'isolated-theorem-noun'))
 
 historical_exact=0
 repair_exact=0

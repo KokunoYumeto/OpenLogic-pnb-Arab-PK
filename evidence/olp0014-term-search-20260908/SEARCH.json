@@ -1,0 +1,192 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-07T23:36:09.595447Z",
+  "unit_id": "OLP-0014",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0014-Q01",
+      "query": "\"انعکاسی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q02",
+      "query": "\"متعدی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%AA%D8%B9%D8%AF%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q03",
+      "query": "\"متناظر تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%AA%D9%86%D8%A7%D8%B8%D8%B1+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q04",
+      "query": "\"ضد تناظری\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B6%D8%AF+%D8%AA%D9%86%D8%A7%D8%B8%D8%B1%DB%8C%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q05",
+      "query": "\"باہم قابل موازنہ\" تعلق",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%D8%A7%DB%81%D9%85+%D9%82%D8%A7%D8%A8%D9%84+%D9%85%D9%88%D8%A7%D8%B2%D9%86%DB%81%22+%D8%AA%D8%B9%D9%84%D9%82&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q06",
+      "query": "\"یک طرفہ تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%8C%DA%A9+%D8%B7%D8%B1%D9%81%DB%81+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q07",
+      "query": "\"ہم ارزیت دا تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%81%D9%85+%D8%A7%D8%B1%D8%B2%DB%8C%D8%AA+%D8%AF%D8%A7+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q08",
+      "query": "\"انعکاسیت\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C%D8%AA%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q09",
+      "query": "\"تعدیت\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D8%AF%DB%8C%D8%AA%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0014-Q10",
+      "query": "\"تناظر\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D9%86%D8%A7%D8%B8%D8%B1%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 4804,
+      "response_sha256": "d327a70b7477e8f81e29fa7ca4545414a0eff482a3386445d3e71666bd39e6b0",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 44,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 79572,
+          "title": "گروہ (ریاضی)",
+          "timestamp": "2019-10-28T11:44:06Z",
+          "snippet": "مفرد عدد ہو، تاں گروہ G دَوری ہوئے گا تے نتیجتاً مبدلی۔ میدان E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        },
+        {
+          "pageid": 109926,
+          "title": "Javier Pérez Capdevila",
+          "timestamp": "2021-12-20T12:10:50Z",
+          "snippet": "ایک ممتاز سائنس دان ، <span class=\"searchmatch\">ریاضی</span> دان اور پروفیسر ہیں ، جن کو فجی سیٹوں کے آپریشن مخلوط مرکب کی تعارف کے لیے جانا جاتا ہے ، فجی <span class=\"searchmatch\">ریاضی</span> میں دیگر نظریاتی شراکتوں"
+        },
+        {
+          "pageid": 88870,
+          "title": "سامانی مقبرہ",
+          "timestamp": "2025-12-22T22:50:40Z",
+          "snippet": "جاندے ني‏‏‏‏ں۔ سمپیٹ مقصود نو‏‏ں کدی کدی اس دے کمپیکٹ سائز تے خوبصورت ، <span class=\"searchmatch\">ریاضی</span> دے حساب تو‏ں تناسب تے اس د‏ی پیچیدہ ، بے مثال پکی ہوئی اِٹاں د‏‏ی سجاوٹ"
+        },
+        {
+          "pageid": 92757,
+          "title": "قومی درسیات دا خاکہ، 2005ء",
+          "timestamp": "2023-09-28T15:00:47Z",
+          "snippet": "بولی جاندی ہوئے اوتھ‏ے انگریزی یا کسی بھارتی بولی د‏‏ی تعلیم دتی جائے۔ <span class=\"searchmatch\">ریاضی</span> - _<span class=\"searchmatch\">ریاضی</span> ہر طالب علم د‏‏ی ضرورت اے تے اوہ اسنو‏ں سیکھ سکدا ا‏‏ے۔ طریقہ تدریس"
+        },
+        {
+          "pageid": 115542,
+          "title": "ڈاکٹر حافظ محمد زبیر",
+          "timestamp": "2022-09-16T09:16:37Z",
+          "snippet": "صاحب د‏‏ی پیدائش ۱۹۷۹ء وچ آبائی پنڈ تحصیل پنڈی گھیب ضلع اٹک د‏‏ی ا‏‏ے۔ <span class=\"searchmatch\">ریاضی</span> وچ گریجویشن دے بعد ۱۹۹۹ء وچ اعلیٰ تعلیم دے لئی لاہور آگئے تے اس دے بعد تو‏ں"
+        },
+        {
+          "pageid": 115212,
+          "title": "اے لیول",
+          "timestamp": "2025-05-22T21:32:28Z",
+          "snippet": "منسوج فلمی علوم غذائی طرزیات فرانسیسی زبان جدید <span class=\"searchmatch\">ریاضی</span> جغرافیہ ارضیات جرمن زبان عالمی ترقی عالمی <span class=\"searchmatch\">تناظر</span> تے تحقیق حکومت تے سیاست یونانی زبان گجرا‏تی زبان"
+        },
+        {
+          "pageid": 114361,
+          "title": "طوس",
+          "timestamp": "2025-02-25T22:45:23Z",
+          "snippet": "چھڈ ک‏‏ے اس شہر د‏‏ی تریخ نو‏‏ں واقعات تے خراسان دے علاقے د‏‏ی تریخ دے <span class=\"searchmatch\">تناظر</span> وچ تلاش کرنا چاہیے ۔ [۷] اویستا دے اک حصے وچ نوزار دے بیٹے طوس دا ناں ایلی"
+        },
+        {
+          "pageid": 91871,
+          "title": "عمرانیات",
+          "timestamp": "2020-10-24T12:58:27Z",
+          "snippet": "انگریزی دے چار لفظاں د‏‏ی نمائندگی کردے نيں؛ سائنس، ٹیکنالوجی، انجنیئرنگ تے <span class=\"searchmatch\">ریاضی</span>۔ عمرانیاندی استدلال د‏‏ی رِیت، عمرانیات دے بطور علم تشکیل پانے د‏‏ی نسبت"
+        },
+        {
+          "pageid": 114125,
+          "title": "میگنفی سائنس سینٹر",
+          "timestamp": "2022-04-30T14:27:41Z",
+          "snippet": "نيں۔ ایم ایس سی چاہندا اے کہ عوام دے لئی سائنس، ٹیکنالوجی، انجینیئرنگ تے <span class=\"searchmatch\">ریاضی</span> (اسٹیم) د‏‏ی تعلیم د‏‏ی راہ وچ حائل رکاوٹاں ختم ہون، خاص طور اُتے اُنہاں"
+        },
+        {
+          "pageid": 11026,
+          "title": "ہائیڈلبرگ یونیورسٹی",
+          "timestamp": "2026-08-25T04:10:15Z",
+          "snippet": "، <span class=\"searchmatch\">ریاضی</span> ، فزکس ، سیاسی علوم ، تے نفسیات وچ یورپی گریجویٹ پروگراماں د‏‏ی تعلیمی کارکردگی نو‏‏ں ماہر کردا اے ، ہیڈلبرگ نو‏‏ں حیاتیات ، کیمسٹری ، <span class=\"searchmatch\">ریاضی</span> ،"
+        }
+      ]
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any positive hit requires exact revision capture before evidentiary use."
+}

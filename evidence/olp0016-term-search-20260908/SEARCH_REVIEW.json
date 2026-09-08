@@ -1,0 +1,44 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0016",
+  "search_receipt": {
+    "path": "evidence/olp0016-term-search-20260908/SEARCH.json",
+    "bytes": 10478,
+    "sha256": "df0ecdf77be4b488462ca185f6e580811c1e7a3ede87aeac135cc0a928200025"
+  },
+  "queries": 12,
+  "zero_hit_queries": 11,
+  "positive_query": {
+    "query_id": "OLP0016-Q12",
+    "query": "\"قابل موازنہ\" تعلق",
+    "response_file": "Q12.json",
+    "response_bytes": 2059,
+    "response_sha256": "949c073cc52e0a7818dcadc17f908f3026b00ced3e10e2925b9e2d8218683ce6",
+    "total_hits": 4,
+    "reviewed_hits": [
+      {
+        "pageid": 78190,
+        "title": "مناظرات پیغمبر اعظمؐ",
+        "disposition": "unrelated ordinary comparison; no mathematical relation property"
+      },
+      {
+        "pageid": 94056,
+        "title": "اسلامی نظریہ حکومت",
+        "disposition": "unrelated comparison of books and scholarship; no mathematical relation property"
+      },
+      {
+        "pageid": 94057,
+        "title": "اسلامى تہذيب تے ثقافت",
+        "disposition": "unrelated historical comparison; no mathematical relation property"
+      },
+      {
+        "pageid": 92964,
+        "title": "مھدی منتظر تے اسلامی فکر",
+        "disposition": "unrelated comparison of people; no mathematical relation property"
+      }
+    ]
+  },
+  "adopted_hits": 0,
+  "finding": "No searched preorder, partial/linear/strict-order, reflexive-closure, extension-relation or divisibility-order label was attested. The only hits contain ordinary قابل موازنہ usage and do not support the connected relation property.",
+  "scope_limit": "Punjabi Wikipedia main-namespace search only. Absence does not prove global Punjabi absence; retained mathematical wording must remain exact-definition-governed and explicitly reversible."
+}

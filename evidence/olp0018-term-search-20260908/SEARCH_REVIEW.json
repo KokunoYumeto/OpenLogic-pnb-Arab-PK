@@ -1,0 +1,50 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0018",
+  "reviewed_at_utc": "2026-09-08T02:51:21.122Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 38174,
+    "sha256": "ea0f4f96dbeaa010da4c48db822ef88a5f2ee4046c98f473724b32b3e6d8d7d1"
+  },
+  "execution_note": "The first bounded process ended at the Windows command-yield ceiling after Q10. Q01-Q10 response bytes were preserved, the search script was repaired to resume rather than repeat completed requests, and only Q11-Q16 were newly issued. SEARCH.json records the provenance of reused versus newly fetched responses.",
+  "query_dispositions": [
+    {
+      "query_ids": ["OLP0018-Q01", "OLP0018-Q02"],
+      "disposition": "no mathematical tree hit",
+      "detail": "The exact graph-theory phrase returned zero. The eight broad hits merely co-occur with ordinary botanical trees, telegraph, graphics, programming, or mathematics in unrelated prose."
+    },
+    {
+      "query_ids": ["OLP0018-Q03", "OLP0018-Q04"],
+      "disposition": "all returned hits unrelated",
+      "detail": "The جڑ results concern botanical or metaphorical roots and unrelated graph/telegraph text. The راس results concern place names, suitability, telegraph, or unrelated ethnography; none uses root or vertex in a mathematical tree."
+    },
+    {
+      "query_ids": ["OLP0018-Q05", "OLP0018-Q06", "OLP0018-Q07"],
+      "disposition": "all returned hits unrelated",
+      "detail": "The sole پُرکھ hit uses the word for male people. جانشین and پیشرو hits use dynastic, religious, historical, botanical, or general predecessor/successor senses; none is a tree-theory definition."
+    },
+    {
+      "query_ids": ["OLP0018-Q08", "OLP0018-Q09", "OLP0018-Q10"],
+      "disposition": "zero hits",
+      "detail": "No hit attested the tested least-element or well-order forms. Both remain governed by the source's explicit quantified definitions."
+    },
+    {
+      "query_ids": ["OLP0018-Q11", "OLP0018-Q12", "OLP0018-Q13", "OLP0018-Q14", "OLP0018-Q15"],
+      "disposition": "zero hits",
+      "detail": "No hit attested infinite binary tree, subtree, König's lemma, or syntax tree in the tested Shahmukhi forms."
+    },
+    {
+      "query_id": "OLP0018-Q16",
+      "disposition": "all returned hits unrelated",
+      "detail": "The 18 broad شاخ hits refer to botanical, genealogical, institutional, river/canal, or other ordinary branches; none is a maximal chain in a mathematical tree."
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_passages": 0,
+    "reused_prior_passages": ["PNB-P034", "PNB-P035", "PNB-P036"],
+    "reuse_scope": "Only prior graph/vertex/edge wording in the tree-to-graph explanation; those passages do not attest tree-theory terminology."
+  },
+  "limits": "Search absence is not proof of linguistic absence. Every specialist OLP-0018 tree label remains exact-definition-governed, visibly bridged, reversible and non-conventional pending stronger evidence."
+}

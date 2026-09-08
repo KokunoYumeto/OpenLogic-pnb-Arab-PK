@@ -1,0 +1,180 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-08T01:05:29.964624Z",
+  "unit_id": "OLP-0016",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0016-Q01",
+      "query": "\"پیش ترتیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%BE%DB%8C%D8%B4+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q02",
+      "query": "\"جزوی ترتیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AC%D8%B2%D9%88%DB%8C+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q03",
+      "query": "\"خطی ترتیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AE%D8%B7%DB%8C+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q04",
+      "query": "\"کُل ترتیب\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D9%8F%D9%84+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q05",
+      "query": "\"سخت ترتیب\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%AE%D8%AA+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q06",
+      "query": "\"سخت خطی ترتیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%AE%D8%AA+%D8%AE%D8%B7%DB%8C+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q07",
+      "query": "\"انعکاسی تکمیل\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%B9%DA%A9%D8%A7%D8%B3%DB%8C+%D8%AA%DA%A9%D9%85%DB%8C%D9%84%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q08",
+      "query": "\"ودھاؤ دا تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%88%D8%AF%DA%BE%D8%A7%D8%A4+%D8%AF%D8%A7+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q09",
+      "query": "\"مُڈھلا ٹکڑا\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D9%8F%DA%88%DA%BE%D9%84%D8%A7+%D9%B9%DA%A9%DA%91%D8%A7%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q10",
+      "query": "\"تقسیم پذیری\" ترتیب",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D9%82%D8%B3%DB%8C%D9%85+%D9%BE%D8%B0%DB%8C%D8%B1%DB%8C%22+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q11",
+      "query": "\"بغیر باقی دے ونڈے جان\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%D8%BA%DB%8C%D8%B1+%D8%A8%D8%A7%D9%82%DB%8C+%D8%AF%DB%92+%D9%88%D9%86%DA%88%DB%92+%D8%AC%D8%A7%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0016-Q12",
+      "query": "\"قابل موازنہ\" تعلق",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%82%D8%A7%D8%A8%D9%84+%D9%85%D9%88%D8%A7%D8%B2%D9%86%DB%81%22+%D8%AA%D8%B9%D9%84%D9%82&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 2059,
+      "response_sha256": "949c073cc52e0a7818dcadc17f908f3026b00ced3e10e2925b9e2d8218683ce6",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 4,
+      "returned_hits": 4,
+      "hits": [
+        {
+          "pageid": 78190,
+          "title": "مناظرات پیغمبر اعظمؐ",
+          "timestamp": "2020-10-17T16:08:08Z",
+          "snippet": "دے سامنے سجدہ کرنا حضرت آدم (علیہ السلام) یا خانہ کعبہ دے سامنے سجدہ دی طرح اے، لیکن ایہ دو چیزاں مکمل طور اُتے فرق رکھدی نيں تے <span class=\"searchmatch\">قابل</span> <span class=\"searchmatch\">موازنہ</span> نئيں نيں۔"
+        },
+        {
+          "pageid": 94056,
+          "title": "اسلامی نظریہ حکومت",
+          "timestamp": "2020-11-16T19:41:04Z",
+          "snippet": "کتاباں وچ جو معاملات کى فقہى بحث اے _ اوہ بعد والے علماء کى لکھتاں تو‏ں <span class=\"searchmatch\">قابل</span> <span class=\"searchmatch\">موازنہ</span> نئيں اے _ مثلا دقت بحث دے لحاظ تو‏ں شیخ انصارى کى کتاب مکاسب تو‏ں علامہ"
+        },
+        {
+          "pageid": 94057,
+          "title": "اسلامى تہذيب تے ثقافت",
+          "timestamp": "2020-11-16T20:02:12Z",
+          "snippet": "دا علمى زوال تے معاشرتى سطح اُتے فقر تے نادانى تریخ دے کسى دور تو‏ں <span class=\"searchmatch\">قابل</span> <span class=\"searchmatch\">موازنہ</span> نئيں اے _ حقیقى گل یہى اے کہ جے وحشى منگول ایران تے تمام اسلامى ملکاں"
+        },
+        {
+          "pageid": 92964,
+          "title": "مھدی منتظر تے اسلامی فکر",
+          "timestamp": "2020-11-15T06:44:38Z",
+          "snippet": "اللہ ابن عمر صحابہ ایتھ‏ے تک کہ خلفاء نو‏‏ں وی علی علیہ السلام تو‏ں <span class=\"searchmatch\">قابل</span> <span class=\"searchmatch\">موازنہ</span> نئيں سمجھدے۔ خطیب بغدادی نے اپنی تریخ جلد نمبر ٧ ، صفحہ نمبر ۴۲۱ وچ روایت"
+        }
+      ]
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any positive hit requires exact revision capture before evidentiary use."
+}

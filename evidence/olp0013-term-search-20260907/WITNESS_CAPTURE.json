@@ -1,0 +1,65 @@
+{
+  "schema": "pnb-exact-community-witness-capture/1",
+  "captured_at_utc": "2026-09-07T21:45:45.943740Z",
+  "unit_id": "OLP-0013",
+  "discovery_receipt": {
+    "file": "SEARCH.json",
+    "bytes": 16141,
+    "sha256": "c25b092baf4813830de5467c44c276aeada24fa8cfd6b6ed3dcc1fa8c28ec69c",
+    "query_id": "OLP0013-Q08"
+  },
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&rvlimit=1&format=json&formatversion=2&pageids=89697",
+  "response": {
+    "file": "PNB-MATH-W11-revision-558901.json",
+    "bytes": 2656,
+    "sha256": "c9e445310d8289a779dab6b3ae3346aef48800655938c82cfbf4823d7b6379f7"
+  },
+  "page": {
+    "pageid": 89697,
+    "title": "گوڈل نامکملیت قضیہات",
+    "revision_id": 558901,
+    "parent_id": 558900,
+    "revision_timestamp": "2020-09-27T19:00:10Z",
+    "mediawiki_sha1": "10da2b7e632fafee5a162e11c297f3bfe2ef9e33",
+    "permanent_url": "https://pnb.wikipedia.org/w/index.php?oldid=558901"
+  },
+  "matching_lines": [
+    {
+      "line_1based": 2,
+      "line_utf8_bytes": 82,
+      "line_utf8_sha256": "213534c695673aefd022db8a14fbc3899f0eb9f1e6472e8e183fbad938c0ab07",
+      "text": "گوڈل <br /> نامکملیت<br /> قضیہ <br /> مکمل<br /> موافق |"
+    },
+    {
+      "line_1based": 5,
+      "line_utf8_bytes": 970,
+      "line_utf8_sha256": "8845585126777e60b6c858b6d2ea0e7a14b89a0a1557467ae0aeb3c7d21c950c",
+      "text": "'''گوڈل نامکملیت قضیہات''' [[ریاضیا‏تی منطق]] دے دو [[قضیہ]] نيں جو (سوائے انتہائی معمولی مسلمہ نظامات دے ) تمام [[axiomatic system|مسلمہ نظامات]] دا جبلّی محدود پن قائم کردے ني‏‏‏‏ں۔ ایہ قضیہ جو [[کرٹ گوڈل]] نے 1930 وچ مثبوت کیتے، ریاضیا‏تی منطق تے [[philosophy of mathematics|فلسفہ ریاضیات]] وچ اہمیت دے حامل ني‏‏‏‏ں۔ انہاں نتائج د‏‏ی تفسیر ایہ کيتی جاندی اے انہاں تو‏ں پتہ چلدا اے کہ [[Hilbert's program|ہلبرٹ برمجہ]]، جس دا مقصد تمام ریاضی دے لئی مکمل تے موافق [[axiom|مسلمات]] دا طاقم لبھنا سی، ناقابل عمل اے تے اس طرح [[Hilbert's second problem|ہلبرٹ دے دوسرے مسئلہ]] دا جواب نفی ا‏‏ے۔"
+    },
+    {
+      "line_1based": 7,
+      "line_utf8_bytes": 618,
+      "line_utf8_sha256": "9fb784d02d9a804069979b6114d09acc4ca13632b7a79084245e91c8ddcf9d55",
+      "text": "پہلے نامکملیت قضیہ دا بیان اے کہ مسلمات دا کوئی موافق نظام جس دے قضیہات د‏‏ی لسٹ اک ''موثر دستور العمل'' (لازماً، کمپیوٹر پروگرامنگ) تو‏ں دتی جا سک‏‏ے، [[قدرتی عدد|قدرتی اعداد]] بارے تمام حقائق مثبوت کرنے د‏‏ی اہلیت نئيں رکھدا۔ ایداں دے کسی نظام وچ ہمیشہ ایداں دے بیان ہون گے جو سچ نيں، مگر اس نظام وچ رہندے ہاں جنہاں دا ثبوت ممکن نئيں ہوئے گا۔"
+    },
+    {
+      "line_1based": 8,
+      "line_utf8_bytes": 357,
+      "line_utf8_sha256": "5bec7e61fec01b8a3add05f88e8328bb0784c048fada44fce15dd935504f6246",
+      "text": "دوسرا نامکملیت قضیہ دسدا اے کہ جے ایسا نظام قدرتی اعداد بارے کچھ اساسی حقائق مثبوت کرنے دا اہل ہو، تاں اک خاص سچ جو ایہ نظام مثبوت نئيں کر سک‏‏ے گا اوہ ايس‏ے نظام د‏‏ی موافقیت مثبوت کرنے دا ا‏‏ے۔"
+    },
+    {
+      "line_1based": 11,
+      "line_utf8_bytes": 34,
+      "line_utf8_sha256": "99bb39396cbe95663d9451c9eab4878f5c12d674547e37dac6f5815c3aca492a",
+      "text": "[[گٹھ:منطق ریاضیات]]"
+    }
+  ],
+  "rights": {
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "site_rights_response": "../shahmukhi-mathematical-witnesses-20260906/PNB-WIKIPEDIA-RIGHTS.json",
+    "site_rights_response_sha256": "5fb26e893bb12b19426a1ad062f97648c3b0e30925524f7a0874a4bfb4f5d35d"
+  },
+  "evidentiary_limit": "Exact revision-bound community use of قضیہ/قضیہات for named mathematical-logic theorems only. It does not by itself attest قضیہ as the source-language sense proposition, nor predicate or philosophical terminology."
+}

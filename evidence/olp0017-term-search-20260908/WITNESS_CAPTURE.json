@@ -1,0 +1,65 @@
+{
+  "schema": "pnb-revision-witness-capture/1",
+  "captured_at_utc": "2026-09-08T02:04:47.910972Z",
+  "unit_id": "OLP-0017",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions%7Cinfo&titles=%D9%85%D8%AA%D8%B5%D9%84%DB%8C%D8%AA+%28%D9%86%D8%B8%D8%B1%DB%8C%DB%81+%DA%AF%D8%B1%D8%A7%D9%81%29%7C%D9%84%DB%8C%D9%88%D9%86%DB%81%D8%A7%D8%B1%DA%88+%D8%A7%D9%88%DB%8C%D9%84%D8%B1%7C%D9%B9%D9%88%D9%BE%D9%88%D9%84%D9%88%D8%AC%DB%8C%7C%DA%AF%D8%B1%D8%A7%D9%81+%28%D8%AA%D8%AC%D8%B1%DB%8C%D8%AF%DB%8C+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%29&redirects=1&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&inprop=url&format=json&formatversion=2",
+  "raw_response": {
+    "path": "GRAPH-WITNESS-PAGES.json",
+    "bytes": 92789,
+    "sha256": "1bc1cd42d832ef644a0f8be55e7d16b2759453488a8255689791c878567557a3"
+  },
+  "requested_titles": [
+    "متصلیت (نظریہ گراف)",
+    "لیونہارڈ اویلر",
+    "ٹوپولوجی",
+    "گراف (تجریدی ریاضی)"
+  ],
+  "pages": [
+    {
+      "pageid": null,
+      "title": "گراف (تجریدی ریاضی)",
+      "missing": true,
+      "fullurl": "https://pnb.wikipedia.org/wiki/%DA%AF%D8%B1%D8%A7%D9%81_(%D8%AA%D8%AC%D8%B1%DB%8C%D8%AF%DB%8C_%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C)",
+      "revid": null,
+      "parentid": null,
+      "timestamp": null,
+      "content_bytes": 0,
+      "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "pageid": 62145,
+      "title": "ٹوپولوجی",
+      "missing": false,
+      "fullurl": "https://pnb.wikipedia.org/wiki/%D9%B9%D9%88%D9%BE%D9%88%D9%84%D9%88%D8%AC%DB%8C",
+      "revid": 489283,
+      "parentid": 489282,
+      "timestamp": "2017-07-11T14:30:29Z",
+      "content_bytes": 36690,
+      "content_sha256": "33faab53184ea454e3cebca96362a65e913a8ebb35b02d99e7fd457d754fd1be"
+    },
+    {
+      "pageid": 77806,
+      "title": "لیونہارڈ اویلر",
+      "missing": false,
+      "fullurl": "https://pnb.wikipedia.org/wiki/%D9%84%DB%8C%D9%88%D9%86%DB%81%D8%A7%D8%B1%DA%88_%D8%A7%D9%88%DB%8C%D9%84%D8%B1",
+      "revid": 710471,
+      "parentid": 709477,
+      "timestamp": "2026-08-25T02:00:28Z",
+      "content_bytes": 44540,
+      "content_sha256": "f83465a70b19a7661e6375471aedd96d0841b65cd6e39e75097b2c39851eff7e"
+    },
+    {
+      "pageid": 84820,
+      "title": "متصلیت (نظریہ گراف)",
+      "missing": false,
+      "fullurl": "https://pnb.wikipedia.org/wiki/%D9%85%D8%AA%D8%B5%D9%84%DB%8C%D8%AA_(%D9%86%D8%B8%D8%B1%DB%8C%DB%81_%DA%AF%D8%B1%D8%A7%D9%81)",
+      "revid": 546706,
+      "parentid": 0,
+      "timestamp": "2019-12-16T17:03:19Z",
+      "content_bytes": 7921,
+      "content_sha256": "2593a7ae1a4880a1740d76d4a38d4473e463e2418527bd32b4e7515ce18f66d9"
+    }
+  ],
+  "limits": "Revision-bound community usage only. Adoption requires manual exact-context review; no page is peer-reviewed scholarly canon."
+}

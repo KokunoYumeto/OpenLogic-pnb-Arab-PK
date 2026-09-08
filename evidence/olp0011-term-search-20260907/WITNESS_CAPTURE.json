@@ -1,0 +1,47 @@
+{
+  "schema": "pnb-exact-community-witness-capture/1",
+  "captured_at_utc": "2026-09-07T21:12:12.206972Z",
+  "unit_id": "OLP-0011",
+  "discovery_receipt": {
+    "file": "SEARCH.json",
+    "bytes": 10918,
+    "sha256": "028fb144d0cb4e67040991b029a67e3ed1a36be6510b5490904014700a7bfaac",
+    "query_id": "OLP0011-Q10"
+  },
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&rvlimit=1&format=json&formatversion=2&pageids=124429",
+  "response": {
+    "file": "PNB-MATH-W10-revision-629579.json",
+    "bytes": 16048,
+    "sha256": "897e456e101c0d9d8ccdccaa96ef5d083b221cbb2675169ab06cc1a823e6d2c3"
+  },
+  "page": {
+    "pageid": 124429,
+    "title": "تموینی نقشہ",
+    "revision_id": 629579,
+    "parent_id": 0,
+    "revision_timestamp": "2023-06-08T15:06:25Z",
+    "mediawiki_sha1": "afd6d18d48de9cf1b4c03ae3f75aab32bb8605cc",
+    "permanent_url": "https://pnb.wikipedia.org/w/index.php?oldid=629579"
+  },
+  "matching_lines": [
+    {
+      "line_1based": 3,
+      "line_utf8_bytes": 49,
+      "line_utf8_sha256": "4a2ddd555d1d760c72b64465334d5cd0a67adde2dd0640e965e81b65c863a93d",
+      "text": "|تموینی نقشہ <br /> رَجعت تعلق"
+    },
+    {
+      "line_1based": 5,
+      "line_utf8_bytes": 99,
+      "line_utf8_sha256": "faf8aa4ea956ff445402eb6c8dc834929acc907c4621096cd3238ce81ece95c2",
+      "text": "ریاضٰی وچ رَجعت تعلق، جس د‏‏ی بطور مساوات صورت ایہ اے "
+    }
+  ],
+  "rights": {
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "site_rights_response": "../shahmukhi-mathematical-witnesses-20260906/PNB-WIKIPEDIA-RIGHTS.json",
+    "site_rights_response_sha256": "5fb26e893bb12b19426a1ad062f97648c3b0e30925524f7a0874a4bfb4f5d35d"
+  },
+  "evidentiary_limit": "Exact revision-bound community use of تعلق in the mathematical compound رَجعت تعلق (recurrence relation) only; not peer-reviewed scholarship and not direct attestation of binary, identity, irreflexive, or order terminology."
+}

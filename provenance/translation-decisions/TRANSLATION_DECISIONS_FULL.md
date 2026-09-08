@@ -1,7 +1,7 @@
 # Punjabi Shahmukhi Translation Decisions — Complete Index
 
 This complete current-main index is a reversible projection of the durable decision ledger into the shared OpenLogic contract.
-It covers **172 decisions** and **2724 exact source-target occurrences** through `OLP-0074`. It does not imply completion or human review of the remaining corpus.
+It covers **173 decisions** and **2727 exact source-target occurrences** through `OLP-0074`. It does not imply completion or human review of the remaining corpus.
 Reader pages are attached only when a public artifact has byte-identical current repaired text. Historical v0.1.0 page references are not reused; all current occurrences therefore remain explicitly pending.
 
 ## `pnb-Arab-PK:PNB-T001`
@@ -24,13 +24,14 @@ Alternatives:
 - logic (explicit English bridge) — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (34):
+Occurrences (35):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T001:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0002-B006` | `OLP-0002` / — | `upstream/content/content.tex:17-25` | `translation/content/content.tex:17-24` | pending |
-| `pnb-Arab-PK:PNB-T001:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-23` | pending |
+| `pnb-Arab-PK:PNB-T001:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0031-B013` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:79-84` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:80-85` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0051-B005` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | pending |
 | `pnb-Arab-PK:PNB-T001:OLP-0053-B008` | `OLP-0053` / sets-functions-relations / infinite / dedekinds-proof | `upstream/content/sets-functions-relations/infinite/dedekinds-proof.tex:42-64` | `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:39-59` | pending |
@@ -92,8 +93,8 @@ Occurrences (18):
 | `pnb-Arab-PK:PNB-T002:OLP-0001-B002` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:5-9` | `translation/content/open-logic-about.tex:5-9` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0001-B003` | `OLP-0001` / — | `upstream/content/open-logic-about.tex:11-19` | `translation/content/open-logic-about.tex:11-17` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
-| `pnb-Arab-PK:PNB-T002:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
-| `pnb-Arab-PK:PNB-T002:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
+| `pnb-Arab-PK:PNB-T002:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-23` | pending |
+| `pnb-Arab-PK:PNB-T002:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0021-B007` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:23-26` | `translation/content/sets-functions-relations/functions/function-basics.tex:23-26` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0023-B006` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:14-22` | `translation/content/sets-functions-relations/functions/functions-relations.tex:14-22` | pending |
 | `pnb-Arab-PK:PNB-T002:OLP-0029-B006` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:13-19` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:13-20` | pending |
@@ -131,7 +132,7 @@ Alternatives:
 - مجموعہ; a definition-led descriptive set label — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (293):
+Occurrences (296):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -221,31 +222,34 @@ Occurrences (293):
 | `pnb-Arab-PK:PNB-T003:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0013-B008` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:70-75` | `translation/content/sets-functions-relations/relations/reflections.tex:66-70` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0014-B012` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:62-67` | `translation/content/sets-functions-relations/relations/special-properties.tex:61-66` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-14` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:28-34` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:51-57` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:101-104` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:132-135` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:148-153` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0017-B006` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:24-27` | `translation/content/sets-functions-relations/relations/graphs.tex:24-27` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:71-74` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:21-22` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:90-98` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B006` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:19-20` | `translation/content/sets-functions-relations/relations/operations.tex:19-20` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:35-38` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:40-41` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:46-46` | pending |
-| `pnb-Arab-PK:PNB-T003:OLP-0019-B015` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:47-48` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:63-77` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:54-60` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:105-108` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:136-139` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:152-157` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0017-B006` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:24-27` | `translation/content/sets-functions-relations/relations/graphs.tex:25-29` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:31-43` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0017-B008` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:43-70` | `translation/content/sets-functions-relations/relations/graphs.tex:45-72` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:74-77` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:24-26` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:90-96` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:98-108` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B006` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:19-20` | `translation/content/sets-functions-relations/relations/operations.tex:20-21` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B009` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:28-29` | `translation/content/sets-functions-relations/relations/operations.tex:29-30` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B010` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:31-33` | `translation/content/sets-functions-relations/relations/operations.tex:32-34` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B015` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:47-48` | `translation/content/sets-functions-relations/relations/operations.tex:51-52` | pending |
+| `pnb-Arab-PK:PNB-T003:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:54-55` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0021-B005` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:12-16` | `translation/content/sets-functions-relations/functions/function-basics.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0021-B008` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:28-30` | `translation/content/sets-functions-relations/functions/function-basics.tex:28-30` | pending |
 | `pnb-Arab-PK:PNB-T003:OLP-0021-B009` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:32-36` | `translation/content/sets-functions-relations/functions/function-basics.tex:32-36` | pending |
@@ -451,7 +455,7 @@ Alternatives:
 - رکن versus عنصر; definition-led member wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (150):
+Occurrences (148):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -511,18 +515,16 @@ Occurrences (150):
 | `pnb-Arab-PK:PNB-T004:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:75-78` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:36-41` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:145-146` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T004:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:51-51` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:17-22` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:63-77` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:79-82` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:37-43` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:149-150` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
+| `pnb-Arab-PK:PNB-T004:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0021-B005` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:12-16` | `translation/content/sets-functions-relations/functions/function-basics.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0021-B008` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:28-30` | `translation/content/sets-functions-relations/functions/function-basics.tex:28-30` | pending |
 | `pnb-Arab-PK:PNB-T004:OLP-0021-B009` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:32-36` | `translation/content/sets-functions-relations/functions/function-basics.tex:32-36` | pending |
@@ -644,8 +646,8 @@ Occurrences (15):
 | `pnb-Arab-PK:PNB-T005:OLP-0010-B005` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:13-19` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:13-20` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
-| `pnb-Arab-PK:PNB-T005:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T005:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:145-146` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | pending |
+| `pnb-Arab-PK:PNB-T005:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:149-150` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0021-B019` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:110-121` | `translation/content/sets-functions-relations/functions/function-basics.tex:110-121` | pending |
 | `pnb-Arab-PK:PNB-T005:OLP-0023-B008` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:32-37` | `translation/content/sets-functions-relations/functions/functions-relations.tex:32-37` | pending |
 
@@ -684,9 +686,9 @@ Occurrences (38):
 | `pnb-Arab-PK:PNB-T006:OLP-0008-B029` | `OLP-0008` / sets-functions-relations / sets / unions-and-intersections | `upstream/content/sets-functions-relations/sets/unions-and-intersections.tex:170-172` | `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:175-177` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0009-B016` | `OLP-0009` / sets-functions-relations / sets / pairs-and-products | `upstream/content/sets-functions-relations/sets/pairs-and-products.tex:88-94` | `translation/content/sets-functions-relations/sets/pairs-and-products.tex:93-100` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
-| `pnb-Arab-PK:PNB-T006:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T006:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T006:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T006:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0024-B012` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:62-66` | `translation/content/sets-functions-relations/functions/inverses.tex:62-67` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0024-B013` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:68-84` | `translation/content/sets-functions-relations/functions/inverses.tex:69-88` | pending |
 | `pnb-Arab-PK:PNB-T006:OLP-0024-B016` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:97-114` | `translation/content/sets-functions-relations/functions/inverses.tex:101-122` | pending |
@@ -756,14 +758,14 @@ Occurrences (56):
 | `pnb-Arab-PK:PNB-T007:OLP-0014-B007` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:28-31` | `translation/content/sets-functions-relations/relations/special-properties.tex:28-31` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0014-B008` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:33-36` | `translation/content/sets-functions-relations/relations/special-properties.tex:33-36` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0014-B009` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:38-42` | `translation/content/sets-functions-relations/relations/special-properties.tex:38-42` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:39-42` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:43-49` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:35-38` | pending |
-| `pnb-Arab-PK:PNB-T007:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:61-67` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:63-77` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:45-52` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:62-71` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:31-43` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:36-40` | pending |
+| `pnb-Arab-PK:PNB-T007:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0042-B007` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:22-30` | `translation/content/sets-functions-relations/arithmetization/integers.tex:27-38` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0042-B014` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:47-55` | `translation/content/sets-functions-relations/arithmetization/integers.tex:64-84` | pending |
 | `pnb-Arab-PK:PNB-T007:OLP-0043-B005` | `OLP-0043` / sets-functions-relations / arithmetization / rationals | `upstream/content/sets-functions-relations/arithmetization/rationals.tex:12-45` | `translation/content/sets-functions-relations/arithmetization/rationals.tex:12-46` | pending |
@@ -819,18 +821,12 @@ Alternatives:
 - perfect number as an explicit English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (12):
+Occurrences (6):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T008:OLP-0005-B012` | `OLP-0005` / sets-functions-relations / sets / basics | `upstream/content/sets-functions-relations/sets/basics.tex:73-92` | `translation/content/sets-functions-relations/sets/basics.tex:72-92` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0016-B005` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:12-20` | `translation/content/sets-functions-relations/relations/orders.tex:12-20` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T008:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
+| `pnb-Arab-PK:PNB-T008:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0024-B011` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:54-60` | `translation/content/sets-functions-relations/functions/inverses.tex:53-60` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0037-B010` | `OLP-0037` / sets-functions-relations / sets / schroder-bernstein | `upstream/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:44-53` | `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:41-50` | pending |
 | `pnb-Arab-PK:PNB-T008:OLP-0045-B004` | `OLP-0045` / sets-functions-relations / arithmetization / cuts | `upstream/content/sets-functions-relations/arithmetization/cuts.tex:12-19` | `translation/content/sets-functions-relations/arithmetization/cuts.tex:12-19` | pending |
@@ -886,8 +882,8 @@ Occurrences (45):
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B009` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:55-59` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:54-58` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
-| `pnb-Arab-PK:PNB-T009:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T009:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T009:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0023-B012` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:60-76` | `translation/content/sets-functions-relations/functions/functions-relations.tex:60-76` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0023-B016` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:92-101` | `translation/content/sets-functions-relations/functions/functions-relations.tex:92-104` | pending |
 | `pnb-Arab-PK:PNB-T009:OLP-0025-B005` | `OLP-0025` / sets-functions-relations / functions / composition | `upstream/content/sets-functions-relations/functions/composition.tex:12-21` | `translation/content/sets-functions-relations/functions/composition.tex:12-21` | pending |
@@ -932,7 +928,7 @@ Alternatives:
 - English number-class bridges and explicit sequence descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (201):
+Occurrences (206):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -953,15 +949,20 @@ Occurrences (201):
 | `pnb-Arab-PK:PNB-T010:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
-| `pnb-Arab-PK:PNB-T010:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:62-71` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:90-96` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:36-40` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:42-43` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B013` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:42-43` | `translation/content/sets-functions-relations/relations/operations.tex:45-46` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:PNB-T010:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0021-B013` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:57-62` | `translation/content/sets-functions-relations/functions/function-basics.tex:57-62` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0021-B014` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:64-72` | `translation/content/sets-functions-relations/functions/function-basics.tex:64-72` | pending |
 | `pnb-Arab-PK:PNB-T010:OLP-0021-B017` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:92-100` | `translation/content/sets-functions-relations/functions/function-basics.tex:91-100` | pending |
@@ -1163,7 +1164,7 @@ Alternatives:
 - ترتیب وار جوڑی; Cartesian product with English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (74):
+Occurrences (76):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1188,13 +1189,15 @@ Occurrences (74):
 | `pnb-Arab-PK:PNB-T011:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0012-B011` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:108-118` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:108-117` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0014-B014` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:74-77` | `translation/content/sets-functions-relations/relations/special-properties.tex:73-76` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:95-99` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T011:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:99-103` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0017-B006` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:24-27` | `translation/content/sets-functions-relations/relations/graphs.tex:25-29` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:31-43` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0017-B008` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:43-70` | `translation/content/sets-functions-relations/relations/graphs.tex:45-72` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:23-24` | pending |
+| `pnb-Arab-PK:PNB-T011:OLP-0019-B008` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:25-26` | `translation/content/sets-functions-relations/relations/operations.tex:26-27` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0021-B005` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:12-16` | `translation/content/sets-functions-relations/functions/function-basics.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0021-B006` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:18-21` | `translation/content/sets-functions-relations/functions/function-basics.tex:18-21` | pending |
 | `pnb-Arab-PK:PNB-T011:OLP-0021-B007` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:23-26` | `translation/content/sets-functions-relations/functions/function-basics.tex:23-26` | pending |
@@ -1283,7 +1286,7 @@ Occurrences (68):
 | `pnb-Arab-PK:PNB-T012:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
-| `pnb-Arab-PK:PNB-T012:OLP-0016-B021` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:118-122` | `translation/content/sets-functions-relations/relations/orders.tex:114-117` | pending |
+| `pnb-Arab-PK:PNB-T012:OLP-0016-B021` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:118-122` | `translation/content/sets-functions-relations/relations/orders.tex:118-121` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0022-B018` | `OLP-0022` / sets-functions-relations / functions / kinds | `upstream/content/sets-functions-relations/functions/function-kinds.tex:97-110` | `translation/content/sets-functions-relations/functions/function-kinds.tex:99-112` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0024-B016` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:97-114` | `translation/content/sets-functions-relations/functions/inverses.tex:101-122` | pending |
 | `pnb-Arab-PK:PNB-T012:OLP-0027-B005` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:10-15` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:10-16` | pending |
@@ -1363,7 +1366,7 @@ Alternatives:
 - اکٹھا کیتا سیٹ; سانجھے عنصراں دا سیٹ — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (43):
+Occurrences (42):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
@@ -1396,8 +1399,7 @@ Occurrences (43):
 | `pnb-Arab-PK:PNB-T013:OLP-0010-B014` | `OLP-0010` / sets-functions-relations / sets / russells-paradox | `upstream/content/sets-functions-relations/sets/russells-paradox.tex:79-86` | `translation/content/sets-functions-relations/sets/russells-paradox.tex:82-89` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
-| `pnb-Arab-PK:PNB-T013:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T013:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
+| `pnb-Arab-PK:PNB-T013:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-18` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0023-B008` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:32-37` | `translation/content/sets-functions-relations/functions/functions-relations.tex:32-37` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0031-B016` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:99-104` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:102-107` | pending |
 | `pnb-Arab-PK:PNB-T013:OLP-0038-B010` | `OLP-0038` / sets-functions-relations / size-of-sets / enumerations-alt | `upstream/content/sets-functions-relations/size-of-sets/enumerability-alt.tex:45-55` | `translation/content/sets-functions-relations/size-of-sets/enumerability-alt.tex:47-56` | pending |
@@ -1415,33 +1417,32 @@ Occurrences (43):
 
 ## `pnb-Arab-PK:PNB-T014`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: relation; binary relation; identity relation; irreflexive; strict order
-- Intended sense: relation; binary relation; identity relation; irreflexive; strict order
-- Chosen Shahmukhi rendering/treatment: تعلق؛ دو رکنی تعلق؛ اکو ہون دا تعلق؛ اپنے آپ نال تعلق نہ ہون والا؛ سخت ترتیب
-- Rationale: Shared scholarly words with native syntax. Binary means two argument positions, not mutuality/symmetry; identity relates each object only to itself. No specialized native attestation claimed.
-- Why expert review helps: Irreflexivity stated with explicit universal scope in definition; short descriptor must not suggest merely some missing self-pairs.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: relation; relations as sets; order relation; binary relation; identity relation; order; irreflexive; strict order; empty relation; universal relation
+- Intended sense: relation; relations as sets; order relation; binary relation; identity relation; order; irreflexive; strict order; empty relation; universal relation
+- Chosen Shahmukhi rendering/treatment: تعلق؛ سیٹاں دے روپ وچ تعلق؛ ترتیبی تعلق؛ دو رکنی تعلق؛ اکو ہون دا تعلق؛ ترتیب؛ اپنے آپ نال تعلق نہ ہون والا؛ سخت ترتیب؛ خالی تعلق؛ ہمہ گیر تعلق
+- Rationale: PNB-P032 directly uses تعلق in one mathematical compound. OLP-0012 defines a binary relation exactly as a subset of A², identifies the less-than relation with its set of pairs, and defines identity, order, irreflexive, strict, empty and universal cases by formulas and exhaustive prose. First-use English bridges expose every unattested family label.
+- Why expert review helps: The one positive witness is community-edited and supports only the generic head. No acquired Punjabi source attests the other relation-family labels or their preferred plural morphology; exact definitions and visible bridges, not a conventionality claim, govern them. Urdu search results remain excluded.
 - Please double-check: **Does تعلق retain its ordered-pair sense, and does the long irreflexive descriptor mean no self-pairs rather than merely not reflexive?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0011-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P032` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=629579 — community_mathematical_relation_lexeme; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - relation with explicit English bridge; expanded irreflexivity wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (129):
+Occurrences (134):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T014:OLP-0011-B004` | `OLP-0011` / sets-functions-relations / relations-complete | `upstream/content/sets-functions-relations/relations/relations-complete.tex:8-8` | `translation/content/sets-functions-relations/relations/relations-complete.tex:8-8` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B004` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B005` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:12-21` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0012-B006` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:23-32` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B007` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:34-46` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:34-45` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B008` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:48-53` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:47-52` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0012-B009` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:55-59` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:54-58` | pending |
@@ -1466,55 +1467,61 @@ Occurrences (129):
 | `pnb-Arab-PK:PNB-T014:OLP-0014-B014` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:74-77` | `translation/content/sets-functions-relations/relations/special-properties.tex:73-76` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0014-B015` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:79-83` | `translation/content/sets-functions-relations/relations/special-properties.tex:78-82` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0015-B005` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-14` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:28-34` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:39-42` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:75-78` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:17-22` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:24-29` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:63-77` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:79-82` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0016-B004` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:9-10` | `translation/content/sets-functions-relations/relations/orders.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0016-B005` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:12-20` | `translation/content/sets-functions-relations/relations/orders.tex:12-20` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0016-B006` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:22-25` | `translation/content/sets-functions-relations/relations/orders.tex:22-25` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-29` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:31-34` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:36-41` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:43-49` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:51-57` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B014` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:82-85` | `translation/content/sets-functions-relations/relations/orders.tex:80-83` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:85-88` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B016` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:92-96` | `translation/content/sets-functions-relations/relations/orders.tex:90-93` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:95-99` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:101-104` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B019` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:110-113` | `translation/content/sets-functions-relations/relations/orders.tex:106-109` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:132-135` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:145-146` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:148-153` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0016-B029` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:162-166` | `translation/content/sets-functions-relations/relations/orders.tex:155-160` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:71-74` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:21-22` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:36-39` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-30` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:32-35` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:37-43` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:45-52` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:54-60` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:62-71` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B014` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:82-85` | `translation/content/sets-functions-relations/relations/orders.tex:84-87` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:89-92` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B016` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:92-96` | `translation/content/sets-functions-relations/relations/orders.tex:94-97` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:99-103` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:105-108` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B019` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:110-113` | `translation/content/sets-functions-relations/relations/orders.tex:110-113` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:136-139` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:149-150` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:152-157` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0016-B029` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:162-166` | `translation/content/sets-functions-relations/relations/orders.tex:159-164` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:31-43` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:74-77` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:24-26` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:40-44` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0019-B004` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:9-10` | `translation/content/sets-functions-relations/relations/operations.tex:9-10` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B006` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:19-20` | `translation/content/sets-functions-relations/relations/operations.tex:19-20` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:22-23` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:35-38` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:40-41` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:46-46` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:51-51` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
-| `pnb-Arab-PK:PNB-T014:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:61-67` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B006` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:19-20` | `translation/content/sets-functions-relations/relations/operations.tex:20-21` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:23-24` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B008` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:25-26` | `translation/content/sets-functions-relations/relations/operations.tex:26-27` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B009` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:28-29` | `translation/content/sets-functions-relations/relations/operations.tex:29-30` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B010` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:31-33` | `translation/content/sets-functions-relations/relations/operations.tex:32-34` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:36-40` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:42-43` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B013` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:42-43` | `translation/content/sets-functions-relations/relations/operations.tex:45-46` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B015` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:47-48` | `translation/content/sets-functions-relations/relations/operations.tex:51-52` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:54-55` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:61-65` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
+| `pnb-Arab-PK:PNB-T014:OLP-0019-B020` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:67-69` | `translation/content/sets-functions-relations/relations/operations.tex:75-77` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0021-B015` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:74-80` | `translation/content/sets-functions-relations/functions/function-basics.tex:74-80` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0023-B005` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:12-12` | `translation/content/sets-functions-relations/functions/functions-relations.tex:12-12` | pending |
 | `pnb-Arab-PK:PNB-T014:OLP-0023-B006` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:14-22` | `translation/content/sets-functions-relations/functions/functions-relations.tex:14-22` | pending |
@@ -1572,36 +1579,39 @@ Occurrences (129):
 
 ## `pnb-Arab-PK:PNB-T015`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: formal metalogic; formal methods; predicate; proposition; metaphysical identity; reductionism
-- Intended sense: formal metalogic; formal methods; predicate; proposition; metaphysical identity; reductionism
-- Chosen Shahmukhi rendering/treatment: رسمی ماورائے منطق؛ رسمی طریقے؛ محمول؛ قضیہ؛ مابعد الطبیعیاتی یکسانیت؛ تحویلیت
-- Rationale: Shared Urdu/Arabic/Persian vocabulary explicitly provisional for specialized Punjabi senses. Predicate distinguished from an object-name, proposition from a list of names; retain source distinctions and hedging.
-- Why expert review helps: Native sources attest disciplinary names only, not these specialized senses. Later canon may support reversible revision.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: philosophical reflections; predicate; proposition; singular term; metaphysical identity; set-theoretic reductionism; concept horse paradox; treating-as
+- Intended sense: philosophical reflections; predicate; proposition; singular term; metaphysical identity; set-theoretic reductionism; concept horse paradox; treating-as
+- Chosen Shahmukhi rendering/treatment: فلسفیانہ سوچ بچار؛ محمول؛ قضیہ؛ واحدی اصطلاح؛ مابعد الطبیعیاتی یکسانیت؛ سیٹ نظریاتی تحویلیت؛ تصور گھوڑا پیراڈوکس؛ ... دے طور تے ورتنا
+- Rationale: OLP-0013 distinguishes predicate from name, proposition from a list of singular terms, metaphysical identity from useful representation, and treating relations as sets from asserting literal identity. PNB-P033 supports mathematical-logic/philosophy-of-mathematics register but uses قضیہ for theorem, so proposition stays explicitly bridged. The bounded search found no relevant Punjabi occurrence for metaphysical identity, reductionism, the title or concept horse; محمول hits were unrelated verbal uses.
+- Why expert review helps: No acquired peer-reviewed Pakistani Punjabi source attests these specialized senses. PNB-P033 is community-edited and supports register plus theorem usage only; every retained philosophical/logical label is source-defined, visibly bridged and reversible.
 - Please double-check: **Do the philosophical and metalogical labels preserve the source qualifications without adding stronger metaphysical claims?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0013-B003` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P033` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_mathematical_logic_expository_register; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - metalogic/predicate/reductionism as explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (35):
+Occurrences (37):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T015:OLP-0013-B003` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:9-10` | `translation/content/sets-functions-relations/relations/reflections.tex:9-10` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B004` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:12-19` | `translation/content/sets-functions-relations/relations/reflections.tex:12-18` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
+| `pnb-Arab-PK:PNB-T015:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0013-B008` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:70-75` | `translation/content/sets-functions-relations/relations/reflections.tex:66-70` | pending |
-| `pnb-Arab-PK:PNB-T015:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
-| `pnb-Arab-PK:PNB-T015:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:PNB-T015:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
+| `pnb-Arab-PK:PNB-T015:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0023-B012` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:60-76` | `translation/content/sets-functions-relations/functions/functions-relations.tex:60-76` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0024-B016` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:97-114` | `translation/content/sets-functions-relations/functions/inverses.tex:101-122` | pending |
 | `pnb-Arab-PK:PNB-T015:OLP-0029-B008` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:27-32` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:28-33` | pending |
@@ -1636,28 +1646,32 @@ Occurrences (35):
 
 ## `pnb-Arab-PK:PNB-T016`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: reflexive; transitive; symmetric; anti-symmetric; connected; asymmetric
-- Intended sense: reflexive; transitive; symmetric; anti-symmetric; connected; asymmetric
-- Chosen Shahmukhi rendering/treatment: انعکاسی؛ متعدی؛ متناظر؛ ضد تناظری؛ باہم قابلِ موازنہ؛ یک طرفہ
-- Rationale: First four labels use shared Arabic/Urdu scholarly vocabulary; connected uses pairwise comparability, not graph connectivity. Asymmetric is the descriptive one-way label, with explicit no-mutual-pair definition including self-pairs. Irreflexive retains T014's full descriptor.
-- Why expert review helps: None of these specialized Punjabi senses is established by the acquired canon. Not symmetric, anti-symmetric and asymmetric remain logically distinct in prose and formulas; no inference from ordinary antonyms.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: reflexivity/reflexive; transitivity/transitive; symmetry/symmetric; anti-symmetry/anti-symmetric; connectivity/connected; asymmetry/asymmetric
+- Intended sense: reflexivity/reflexive; transitivity/transitive; symmetry/symmetric; anti-symmetry/anti-symmetric; connectivity/connected; asymmetry/asymmetric
+- Chosen Shahmukhi rendering/treatment: انعکاسیت/انعکاسی؛ تعدیت/متعدی؛ تناظر/متناظر؛ ضد تناظر/ضد تناظری؛ باہمی موازنہ پذیری/باہم قابلِ موازنہ؛ یک طرفہ ہونا/یک طرفہ
+- Rationale: Each label is governed by its complete source condition: every self-pair; two-step closure; pair reversal; mutual pairs only at equality; comparability of distinct pairs; or no pair in both directions. Visible English bridges keep every unattested label reversible, and the prose explicitly separates not symmetric, anti-symmetric and asymmetric.
+- Why expert review helps: No acquired Punjabi source attests any of these as conventional relation-property labels. Nine exact/property-focused bounded queries returned zero; a broad تناظر query yielded unrelated token matches. These are source-defined provisional choices, not claimed conventions.
 - Please double-check: **Can readers distinguish symmetric, antisymmetric, asymmetric and non-reflexive from the chosen labels and exact self-pair conditions?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0014-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0014-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P032` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=629579 — community_mathematical_relation_lexeme; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - property names accompanied by the full defining implication — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (45):
+Occurrences (51):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T016:OLP-0014-B004` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:9-10` | `translation/content/sets-functions-relations/relations/special-properties.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B006` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:23-26` | `translation/content/sets-functions-relations/relations/special-properties.tex:23-26` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B007` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:28-31` | `translation/content/sets-functions-relations/relations/special-properties.tex:28-31` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B008` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:33-36` | `translation/content/sets-functions-relations/relations/special-properties.tex:33-36` | pending |
@@ -1665,30 +1679,34 @@ Occurrences (45):
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B010` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:44-55` | `translation/content/sets-functions-relations/relations/special-properties.tex:44-54` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B011` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:57-60` | `translation/content/sets-functions-relations/relations/special-properties.tex:56-59` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B012` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:62-67` | `translation/content/sets-functions-relations/relations/special-properties.tex:61-66` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0014-B013` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:69-72` | `translation/content/sets-functions-relations/relations/special-properties.tex:68-71` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B014` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:74-77` | `translation/content/sets-functions-relations/relations/special-properties.tex:73-76` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0014-B015` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:79-83` | `translation/content/sets-functions-relations/relations/special-properties.tex:78-82` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-14` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0015-B013` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:57-61` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:54-58` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0015-B006` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:13-15` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:17-22` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0015-B013` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:57-61` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:57-61` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0016-B005` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:12-20` | `translation/content/sets-functions-relations/relations/orders.tex:12-20` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0016-B006` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:22-25` | `translation/content/sets-functions-relations/relations/orders.tex:22-25` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-29` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:31-34` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:36-41` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:43-49` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B014` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:82-85` | `translation/content/sets-functions-relations/relations/orders.tex:80-83` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:85-88` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:95-99` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B019` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:110-113` | `translation/content/sets-functions-relations/relations/orders.tex:106-109` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B020` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:115-116` | `translation/content/sets-functions-relations/relations/orders.tex:111-112` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B021` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:118-122` | `translation/content/sets-functions-relations/relations/orders.tex:114-117` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B022` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:124-130` | `translation/content/sets-functions-relations/relations/orders.tex:119-124` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B023` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:132-136` | `translation/content/sets-functions-relations/relations/orders.tex:126-130` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0016-B029` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:162-166` | `translation/content/sets-functions-relations/relations/orders.tex:155-160` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
-| `pnb-Arab-PK:PNB-T016:OLP-0019-B020` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:67-69` | `translation/content/sets-functions-relations/relations/operations.tex:69-71` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-30` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:32-35` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:37-43` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:45-52` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:62-71` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B014` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:82-85` | `translation/content/sets-functions-relations/relations/orders.tex:84-87` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:89-92` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:99-103` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B019` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:110-113` | `translation/content/sets-functions-relations/relations/orders.tex:110-113` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B020` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:115-116` | `translation/content/sets-functions-relations/relations/orders.tex:115-116` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B021` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:118-122` | `translation/content/sets-functions-relations/relations/orders.tex:118-121` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B022` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:124-130` | `translation/content/sets-functions-relations/relations/orders.tex:123-128` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B023` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:132-136` | `translation/content/sets-functions-relations/relations/orders.tex:130-134` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0016-B029` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:162-166` | `translation/content/sets-functions-relations/relations/orders.tex:159-164` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:54-55` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:61-65` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
+| `pnb-Arab-PK:PNB-T016:OLP-0019-B020` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:67-69` | `translation/content/sets-functions-relations/relations/operations.tex:75-77` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0035-B006` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:13-27` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:13-26` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0035-B009` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:38-40` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:37-39` | pending |
 | `pnb-Arab-PK:PNB-T016:OLP-0035-B010` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:42-44` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:41-43` | pending |
@@ -1708,18 +1726,21 @@ Occurrences (45):
 
 ## `pnb-Arab-PK:PNB-T017`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: equivalence relation; equivalent; equivalence class; quotient; modular arithmetic
-- Intended sense: equivalence relation; equivalent; equivalence class; quotient; modular arithmetic
-- Chosen Shahmukhi rendering/treatment: ہم ارزیت دا تعلق؛ ہم ارز؛ ہم ارزیت دا طبقہ؛ خارج قسمت سیٹ؛ باقی اُتے مبنی حساب
-- Rationale: Shared scholarly ہم ارز and طبقہ are provisional; quotient explicitly called the set of equivalence classes, not numerical division. Modular arithmetic is described through remainders. Identity is not conflated with equivalence.
-- Why expert review helps: Specialized native attestation absent. Source definitions, representative notation and quotient set notation govern semantics; labels reversible when stronger canon becomes available.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: equivalence relation; equivalent; equivalence class; partition; quotient; modular arithmetic
+- Intended sense: equivalence relation; equivalent; equivalence class; partition; quotient; modular arithmetic
+- Chosen Shahmukhi rendering/treatment: ہم ارزیت دا تعلق؛ ہم ارز؛ ہم ارزیت دا طبقہ؛ ونڈ؛ خارج قسمت سیٹ؛ باقی اُتے مبنی حساب
+- Rationale: The authoritative source gives complete formal definitions and a worked residue-class example. The target exposes every specialist label with English at first use and leaves all formulas untouched, so each unattested choice is searchable and reversible.
+- Why expert review helps: Ten bounded exact or field-qualified Shahmukhi queries for equivalence relation/class, quotient set and modular-arithmetic variants all returned zero hits. The retained forms are definition-governed provisional editorial choices, not claimed conventions.
 - Please double-check: **Does خارج قسمت سیٹ clearly denote a set of equivalence classes, not numerical division or an equivalence class itself?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P032` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=629579 — community_mathematical_relation_lexeme; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -1732,14 +1753,14 @@ Occurrences (25):
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T017:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
 | `pnb-Arab-PK:PNB-T017:OLP-0015-B005` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:28-34` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:39-42` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T017:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:75-78` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:17-22` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:24-29` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:63-77` | pending |
+| `pnb-Arab-PK:PNB-T017:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:79-82` | pending |
 | `pnb-Arab-PK:PNB-T017:OLP-0035-B008` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:34-36` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:33-35` | pending |
 | `pnb-Arab-PK:PNB-T017:OLP-0042-B007` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:22-30` | `translation/content/sets-functions-relations/arithmetization/integers.tex:27-38` | pending |
 | `pnb-Arab-PK:PNB-T017:OLP-0042-B011` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:39-39` | `translation/content/sets-functions-relations/arithmetization/integers.tex:53-53` | pending |
@@ -1760,49 +1781,60 @@ Occurrences (25):
 
 ## `pnb-Arab-PK:PNB-T018`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: preorder; partial order; total/linear order; extension; initial segment; reflexive closure
-- Intended sense: preorder; partial order; total/linear order; extension; initial segment; reflexive closure
-- Chosen Shahmukhi rendering/treatment: پیش ترتیب؛ جزوی ترتیب؛ کُل/خطی ترتیب؛ ودھاؤ دا تعلق؛ مُڈھلا ٹکڑا؛ انعکاسی تکمیل
-- Rationale: Preserve property-defined hierarchy: reflexive/transitive, then anti-symmetric, then pairwise comparable. Extension explicitly uses sequence-prefix inclusion, not set extensionality. Reflexive closure adds the diagonal and is not transitive closure.
-- Why expert review helps: Recovered prose supports native sequencing and reasoning, not these mathematical senses. Shared scholarly or coined labels remain provisional; mathematical definitions and theorem cases govern.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: order relation; preorder; partial order; total/linear order; strict order; strict total/linear order; divisibility order; extension relation; initial segment; diagonal; reflexive closure
+- Intended sense: order relation; preorder; partial order; total/linear order; strict order; strict total/linear order; divisibility order; extension relation; initial segment; diagonal; reflexive closure
+- Chosen Shahmukhi rendering/treatment: ترتیبی تعلق؛ پیش ترتیب؛ جزوی ترتیب؛ کُل/خطی ترتیب؛ سخت ترتیب؛ سخت کُل/خطی ترتیب؛ پورا ونڈن دا تعلق؛ ودھاؤ دا تعلق؛ مُڈھلا ٹکڑا؛ قطر؛ انعکاسی تکمیل
+- Rationale: The source defines each order class by exact combinations of relation properties and tests the hierarchy with universal, length, subset, divisibility and extension relations. The diagonal proof fixes reflexive closure and separates it from transitive closure. Visible bridges expose every specialist label.
+- Why expert review helps: Eleven of twelve bounded Shahmukhi order-term queries returned zero. The remaining query yielded four ordinary قابل موازنہ comparisons unrelated to mathematics. PNB-P007 attests only ordinary ترتیب وار and PNB-P032 only generic mathematical تعلق; none establishes a conventional order-theory lexicon.
 - Please double-check: **Do the chosen labels preserve the cumulative property hierarchy and distinguish prefix extension from extensionality?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0016-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0016-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P032` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=629579 — community_mathematical_relation_lexeme; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - preorder/partial/linear order with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (28):
+Occurrences (36):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B004` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:9-10` | `translation/content/sets-functions-relations/relations/orders.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B005` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:12-20` | `translation/content/sets-functions-relations/relations/orders.tex:12-20` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0016-B006` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:22-25` | `translation/content/sets-functions-relations/relations/orders.tex:22-25` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-29` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:31-34` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:36-41` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:43-49` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:51-57` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:59-68` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:85-88` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B016` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:92-96` | `translation/content/sets-functions-relations/relations/orders.tex:90-93` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:95-99` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:101-104` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:132-135` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:145-146` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:148-153` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T018:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B007` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:27-30` | `translation/content/sets-functions-relations/relations/orders.tex:27-30` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:32-35` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B009` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:37-43` | `translation/content/sets-functions-relations/relations/orders.tex:37-43` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B010` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:45-51` | `translation/content/sets-functions-relations/relations/orders.tex:45-52` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B011` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:53-59` | `translation/content/sets-functions-relations/relations/orders.tex:54-60` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B012` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:61-70` | `translation/content/sets-functions-relations/relations/orders.tex:62-71` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B014` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:82-85` | `translation/content/sets-functions-relations/relations/orders.tex:84-87` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:89-92` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B016` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:92-96` | `translation/content/sets-functions-relations/relations/orders.tex:94-97` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B017` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:98-102` | `translation/content/sets-functions-relations/relations/orders.tex:99-103` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B018` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:104-108` | `translation/content/sets-functions-relations/relations/orders.tex:105-108` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B019` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:110-113` | `translation/content/sets-functions-relations/relations/orders.tex:110-113` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B024` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:138-142` | `translation/content/sets-functions-relations/relations/orders.tex:136-139` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B027` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:152-153` | `translation/content/sets-functions-relations/relations/orders.tex:149-150` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B028` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:155-160` | `translation/content/sets-functions-relations/relations/orders.tex:152-157` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0016-B029` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:162-166` | `translation/content/sets-functions-relations/relations/orders.tex:159-164` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:74-77` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:61-65` | pending |
+| `pnb-Arab-PK:PNB-T018:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0035-B015` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:68-94` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:68-97` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0046-B009` | `OLP-0046` / sets-functions-relations / arithmetization / reflections | `upstream/content/sets-functions-relations/arithmetization/reflections.tex:36-60` | `translation/content/sets-functions-relations/arithmetization/reflections.tex:33-57` | pending |
 | `pnb-Arab-PK:PNB-T018:OLP-0047-B015` | `OLP-0047` / sets-functions-relations / arithmetization / checking-details | `upstream/content/sets-functions-relations/arithmetization/checking-details.tex:101-109` | `translation/content/sets-functions-relations/arithmetization/checking-details.tex:102-110` | pending |
@@ -1816,19 +1848,20 @@ Occurrences (28):
 
 ## `pnb-Arab-PK:PNB-T019`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: graph; node; vertex; edge; directed graph; discrete mathematics
-- Intended sense: graph; node; vertex; edge; directed graph; discrete mathematics
-- Chosen Shahmukhi rendering/treatment: گراف؛ گرہ؛ راس؛ کنارا؛ سمت دار گراف؛ گسستہ ریاضی
-- Rationale: Graph explicitly means vertices with a binary edge relation, not the plot of a numerical function. Nodes and vertices are synonyms here; direction is an arrow orientation. Isolated vertices remain part of the specified vertex set.
-- Why expert review helps: No specialized native attestation acquired. Graph is an English loan; other labels are reversible definition-based/shared scholarly choices inside Punjabi syntax. The canon supports exposition, not graph theory.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: graph; node; vertex; edge; directed graph; discrete mathematics; isolated vertex
+- Intended sense: graph; node; vertex; edge; directed graph; discrete mathematics; isolated vertex
+- Chosen Shahmukhi rendering/treatment: گراف؛ گرہ؛ راس؛ کنارا/کناریاں؛ سمت دار گراف؛ گسستہ ریاضی؛ الگ تھلگ راس
+- Rationale: PNB-P034 lists گراف, راس and کنارہ in graph-theory terminology; PNB-P035 uses نظریۂ گراف, گراف and کنارے in connected technical prose; PNB-P036 uses راس in a vertex-connectivity definition. The OLP source itself governs node/vertex synonymy, edge direction, isolated vertices and the exact relation correspondence.
+- Why expert review helps: The witness is one community-edited reference page, not peer-reviewed scholarship. No bounded hit attested سمت دار گراف, سمتی گراف, گرہ as node, گسستہ ریاضی or الگ تھلگ راس. Target Punjabi inflects کنارا/کناریاں while the witness spells کنارہ/کنارے; those unattested or morphological choices remain visibly bridged and reversible.
 - Please double-check: **Are گرہ/راس/راساں/کنارا natural and precise, with isolated vertices and directed edges preserved?**
 
 Authorities checked:
 
 - `FROZEN-OLP-0017-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P013` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P034` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_graph_theory_term_inventory; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P035` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_connected_graph_expository_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P036` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_graph_vertex_definition_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
@@ -1840,20 +1873,20 @@ Occurrences (26):
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T019:OLP-0017-B004` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:9-10` | `translation/content/sets-functions-relations/relations/graphs.tex:9-10` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0017-B006` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:24-27` | `translation/content/sets-functions-relations/relations/graphs.tex:24-27` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:29-40` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0017-B008` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:43-70` | `translation/content/sets-functions-relations/relations/graphs.tex:42-69` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:71-74` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:21-22` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:36-39` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B011` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:56-60` | `translation/content/sets-functions-relations/relations/trees.tex:56-60` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B012` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:62-64` | `translation/content/sets-functions-relations/relations/trees.tex:62-64` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:PNB-T019:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-23` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0017-B006` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:24-27` | `translation/content/sets-functions-relations/relations/graphs.tex:25-29` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0017-B007` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:29-41` | `translation/content/sets-functions-relations/relations/graphs.tex:31-43` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0017-B008` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:43-70` | `translation/content/sets-functions-relations/relations/graphs.tex:45-72` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0017-B009` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:72-75` | `translation/content/sets-functions-relations/relations/graphs.tex:74-77` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:24-26` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:40-44` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B011` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:56-60` | `translation/content/sets-functions-relations/relations/trees.tex:63-67` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B012` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:62-64` | `translation/content/sets-functions-relations/relations/trees.tex:69-71` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:90-96` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T019:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
 | `pnb-Arab-PK:PNB-T019:OLP-0023-B007` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:24-30` | `translation/content/sets-functions-relations/functions/functions-relations.tex:24-30` | pending |
 | `pnb-Arab-PK:PNB-T019:OLP-0023-B008` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:32-37` | `translation/content/sets-functions-relations/functions/functions-relations.tex:32-37` | pending |
 | `pnb-Arab-PK:PNB-T019:OLP-0023-B009` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:39-40` | `translation/content/sets-functions-relations/functions/functions-relations.tex:39-40` | pending |
@@ -1870,50 +1903,55 @@ Occurrences (26):
 
 ## `pnb-Arab-PK:PNB-T020`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: tree; root; ancestor; successor; predecessor/parent; least element; well-ordered; finitely branching; maximal chain; subtree; lemma
-- Intended sense: tree; root; ancestor; successor; predecessor/parent; least element; well-ordered; finitely branching; maximal chain; subtree; lemma
-- Chosen Shahmukhi rendering/treatment: درخت؛ جڑ؛ پُرکھ؛ جانشین؛ پیشرو/والد گرہ؛ سب توں چھوٹا عنصر؛ حُسنِ ترتیب والا؛ ہر گرہ اُتے محدود شاخاں والا؛ ہور نہ ودھ سکن والی زنجیر؛ ذیلی درخت؛ معاون قضیہ
-- Rationale: Least is <= every element, not merely minimal. A predecessor is an immediate predecessor; non-root elements have at most one, not necessarily one. Finite branching is a local finite-successor condition, not a finite number of maximal branches. Maximal chain means cannot extend the chain, not a largest cardinality.
-- Why expert review helps: Native technical attestation absent. Definitions control the provisional labels. Kőnig remains a literal proper name with its source TeX accent.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: tree; finite/infinite tree; root; ancestor; successor/child; predecessor/parent; least element; well-ordered; finitely branching; branch/maximal chain; infinite binary tree; subtree; König's lemma; weak König's lemma
+- Intended sense: tree; finite/infinite tree; root; ancestor; successor/child; predecessor/parent; least element; well-ordered; finitely branching; branch/maximal chain; infinite binary tree; subtree; König's lemma; weak König's lemma
+- Chosen Shahmukhi rendering/treatment: درخت؛ محدود/لامتناہی درخت؛ جڑ؛ پُرکھ؛ جانشین/بچہ؛ پیشرو/والد گرہ؛ سب توں چھوٹا عنصر؛ حُسنِ ترتیب والا؛ ہر راس دے محدود جانشیناں والا؛ شاخ/ہور نہ ودھ سکن والی زنجیر؛ لامتناہی دو شاخی درخت؛ ذیلی درخت؛ K\H{o}nig دا معاون قضیہ؛ K\H{o}nig دا کمزور معاون قضیہ
+- Rationale: The source defines least by x <= every y, well-ordering by least elements of all nonempty subsets, successor by no intermediate z, finitely branching by finitely many successors at each vertex, branch as an inclusion-maximal chain, subtree by downward closure, and both König statements by exact hypotheses and conclusions. Sixteen bounded searches found no relevant tree-theory attestation. PNB-P034–P036 support only reused graph/vertex/edge forms, and PNB-P030 records an unchosen finite-sequence alternative.
+- Why expert review helps: No acquired peer-reviewed or community mathematical source attests the selected Shahmukhi tree-theory family. Ordinary-language hits for tree, root, ancestor, successor, predecessor and branch were unrelated; zero-hit searches do not prove absence. All labels remain definition-governed, visibly bridged and reversible.
 - Please double-check: **Do least, immediate predecessor, well-ordering, local finite branching and maximal chain remain distinct in these descriptive labels?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0017-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0018-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P030` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_sequence_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P034` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_graph_theory_term_inventory; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P035` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_connected_graph_expository_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P036` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=546706 — community_graph_vertex_definition_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - tree terminology with expanded immediate-successor descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (45):
+Occurrences (44):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T020:OLP-0017-B005` | `OLP-0017` / sets-functions-relations / relations / graphs | `upstream/content/sets-functions-relations/relations/graphs.tex:12-22` | `translation/content/sets-functions-relations/relations/graphs.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0018-B004` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:9-10` | `translation/content/sets-functions-relations/relations/trees.tex:9-10` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:21-22` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:36-39` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:41-46` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:48-54` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B011` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:56-60` | `translation/content/sets-functions-relations/relations/trees.tex:56-60` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B012` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:62-64` | `translation/content/sets-functions-relations/relations/trees.tex:62-64` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B013` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:66-69` | `translation/content/sets-functions-relations/relations/trees.tex:66-69` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:71-81` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:90-98` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:35-38` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:40-41` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:46-46` | pending |
-| `pnb-Arab-PK:PNB-T020:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:61-67` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B006` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:22-23` | `translation/content/sets-functions-relations/relations/trees.tex:24-26` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B008` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:37-40` | `translation/content/sets-functions-relations/relations/trees.tex:40-44` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B009` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:42-47` | `translation/content/sets-functions-relations/relations/trees.tex:46-52` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B010` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:49-54` | `translation/content/sets-functions-relations/relations/trees.tex:54-61` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B011` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:56-60` | `translation/content/sets-functions-relations/relations/trees.tex:63-67` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B012` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:62-64` | `translation/content/sets-functions-relations/relations/trees.tex:69-71` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B013` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:66-69` | `translation/content/sets-functions-relations/relations/trees.tex:73-76` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B014` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:71-81` | `translation/content/sets-functions-relations/relations/trees.tex:78-88` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:90-96` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:98-108` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0019-B011` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:35-37` | `translation/content/sets-functions-relations/relations/operations.tex:36-40` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:42-43` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T020:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0021-B011` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:43-47` | `translation/content/sets-functions-relations/functions/function-basics.tex:43-47` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0021-B012` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:49-55` | `translation/content/sets-functions-relations/functions/function-basics.tex:49-55` | pending |
 | `pnb-Arab-PK:PNB-T020:OLP-0021-B017` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:92-100` | `translation/content/sets-functions-relations/functions/function-basics.tex:91-100` | pending |
@@ -1943,37 +1981,47 @@ Occurrences (45):
 
 ## `pnb-Arab-PK:PNB-T021`
 
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: inverse relation; relative product; restriction; application/image; transitive closure; reflexive transitive closure
-- Intended sense: inverse relation; relative product; restriction; application/image; transitive closure; reflexive transitive closure
-- Chosen Shahmukhi rendering/treatment: اُلٹا تعلق؛ نسبتی حاصل ضرب؛ تحدید؛ اطلاق؛ تعدی تکمیل؛ انعکاسی تعدی تکمیل
-- Rationale: Inverse swaps coordinates, not reciprocal arithmetic. Relative product follows R then S. Restriction is exactly R intersect A squared (both endpoints), not only domain restriction. Image uses an existential source element. Transitive closure uses positive powers and is not inherently reflexive.
-- Why expert review helps: Specialized labels remain provisional. Upstream reuses R+ here for transitive closure after using R+ for reflexive closure in orders.tex; retain each local explicit definition rather than force a single global notation meaning.
+- Kind: `terminology`; confidence: **medium**; provisional: **no**; review priority: **normal**.
+- Source term/construction: operations on relations; inverse relation; relative product; two-sided restriction; application/image; positive relation power; transitive closure; reflexive transitive closure
+- Intended sense: operations on relations; inverse relation; relative product; two-sided restriction; application/image; positive relation power; transitive closure; reflexive transitive closure
+- Chosen Shahmukhi rendering/treatment: تعلقاں اُتے عمل؛ اُلٹا تعلق؛ نسبتی حاصل ضرب؛ دو پاسیاں والی تحدید؛ اطلاق/حاصل قدراں دا سیٹ؛ تعلق دی مثبت قوت؛ تعدی تکمیل؛ انعکاسی تعدی تکمیل
+- Rationale: The source defines inverse by swapping ordered-pair coordinates, relative product by an existential R-then-S intermediate, restriction by R intersect A squared, application by outputs related to an input in A, transitive closure by the union of positive powers, and reflexive transitive closure by adjoining Id(A). Sixteen bounded exact and alternate searches all returned zero hits. PNB-P032 supports only generic تعلق, PNB-P023 only sets, PNB-P022 only قدرتی اعداد, and PNB-P017 only mathematical register.
+- Why expert review helps: No acquired peer-reviewed or community Shahmukhi mathematical source attests any selected relation-operation label. Search absence does not prove absence. All labels remain definition-governed, visibly bridged and reversible.
 - Please double-check: **Do the terms preserve coordinate reversal, R-then-S order, both-endpoint restriction and positive-power rather than reflexive closure?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0019-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `FROZEN-OLP-0019-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P022` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=558901 — community_logic_theorem_statement; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P032` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=629579 — community_mathematical_relation_lexeme; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - inverse/composition/restriction/image with English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (21):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:22-23` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B008` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:25-26` | `translation/content/sets-functions-relations/relations/operations.tex:25-26` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B009` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:28-29` | `translation/content/sets-functions-relations/relations/operations.tex:28-29` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B010` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:31-33` | `translation/content/sets-functions-relations/relations/operations.tex:31-33` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:51-51` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
-| `pnb-Arab-PK:PNB-T021:OLP-0019-B020` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:67-69` | `translation/content/sets-functions-relations/relations/operations.tex:69-71` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B004` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:9-10` | `translation/content/sets-functions-relations/relations/operations.tex:9-10` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-18` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B006` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:19-20` | `translation/content/sets-functions-relations/relations/operations.tex:20-21` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:23-24` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B008` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:25-26` | `translation/content/sets-functions-relations/relations/operations.tex:26-27` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B009` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:28-29` | `translation/content/sets-functions-relations/relations/operations.tex:29-30` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B010` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:31-33` | `translation/content/sets-functions-relations/relations/operations.tex:32-34` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B012` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:39-40` | `translation/content/sets-functions-relations/relations/operations.tex:42-43` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B013` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:42-43` | `translation/content/sets-functions-relations/relations/operations.tex:45-46` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B014` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:45-45` | `translation/content/sets-functions-relations/relations/operations.tex:48-49` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B015` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:47-48` | `translation/content/sets-functions-relations/relations/operations.tex:51-52` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B016` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:50-50` | `translation/content/sets-functions-relations/relations/operations.tex:54-55` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:61-65` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B019` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:60-65` | `translation/content/sets-functions-relations/relations/operations.tex:67-73` | pending |
+| `pnb-Arab-PK:PNB-T021:OLP-0019-B020` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:67-69` | `translation/content/sets-functions-relations/relations/operations.tex:75-77` | pending |
 | `pnb-Arab-PK:PNB-T021:OLP-0023-B014` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:81-85` | `translation/content/sets-functions-relations/functions/functions-relations.tex:81-85` | pending |
 | `pnb-Arab-PK:PNB-T021:OLP-0023-B015` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:87-90` | `translation/content/sets-functions-relations/functions/functions-relations.tex:87-90` | pending |
 | `pnb-Arab-PK:PNB-T021:OLP-0023-B016` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:92-101` | `translation/content/sets-functions-relations/functions/functions-relations.tex:92-104` | pending |
@@ -2011,8 +2059,8 @@ Occurrences (47):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T022:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T022:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T022:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0038-B007` | `OLP-0038` / sets-functions-relations / size-of-sets / enumerations-alt | `upstream/content/sets-functions-relations/size-of-sets/enumerability-alt.tex:21-32` | `translation/content/sets-functions-relations/size-of-sets/enumerability-alt.tex:21-33` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0042-B014` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:47-55` | `translation/content/sets-functions-relations/arithmetization/integers.tex:64-84` | pending |
 | `pnb-Arab-PK:PNB-T022:OLP-0051-B005` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | pending |
@@ -2073,7 +2121,7 @@ Occurrences (47):
 
 Authorities checked:
 
-- `FROZEN-OLP-0020-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2082,10 +2130,11 @@ Alternatives:
 - دائرۂ وصول for codomain; range as attained outputs in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (159):
+Occurrences (160):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
+| `pnb-Arab-PK:PNB-T023:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:24-29` | pending |
 | `pnb-Arab-PK:PNB-T023:OLP-0020-B004` | `OLP-0020` / sets-functions-relations / functions | `upstream/content/sets-functions-relations/functions/functions.tex:8-8` | `translation/content/sets-functions-relations/functions/functions.tex:8-8` | pending |
 | `pnb-Arab-PK:PNB-T023:OLP-0021-B005` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:12-16` | `translation/content/sets-functions-relations/functions/function-basics.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T023:OLP-0021-B006` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:18-21` | `translation/content/sets-functions-relations/functions/function-basics.tex:18-21` | pending |
@@ -2388,7 +2437,7 @@ Occurrences (100):
 
 Authorities checked:
 
-- `FROZEN-OLP-0019-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2397,11 +2446,10 @@ Alternatives:
 - تعلق دا فنکشنی خاکہ; پابندی for restriction — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (15):
+Occurrences (14):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T025:OLP-0019-B010` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:31-33` | `translation/content/sets-functions-relations/relations/operations.tex:31-33` | pending |
 | `pnb-Arab-PK:PNB-T025:OLP-0023-B007` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:24-30` | `translation/content/sets-functions-relations/functions/functions-relations.tex:24-30` | pending |
 | `pnb-Arab-PK:PNB-T025:OLP-0023-B008` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:32-37` | `translation/content/sets-functions-relations/functions/functions-relations.tex:32-37` | pending |
 | `pnb-Arab-PK:PNB-T025:OLP-0023-B009` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:39-40` | `translation/content/sets-functions-relations/functions/functions-relations.tex:39-40` | pending |
@@ -2431,7 +2479,7 @@ Occurrences (15):
 
 Authorities checked:
 
-- `FROZEN-OLP-0019-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0024-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2440,11 +2488,10 @@ Alternatives:
 - معکوس فنکشن; بایاں/دایاں معکوس; full compositional descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (15):
+Occurrences (14):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T026:OLP-0019-B007` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:22-23` | `translation/content/sets-functions-relations/relations/operations.tex:22-23` | pending |
 | `pnb-Arab-PK:PNB-T026:OLP-0024-B005` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:12-16` | `translation/content/sets-functions-relations/functions/inverses.tex:12-16` | pending |
 | `pnb-Arab-PK:PNB-T026:OLP-0024-B011` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:54-60` | `translation/content/sets-functions-relations/functions/inverses.tex:53-60` | pending |
 | `pnb-Arab-PK:PNB-T026:OLP-0024-B012` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:62-66` | `translation/content/sets-functions-relations/functions/inverses.tex:62-67` | pending |
@@ -2509,7 +2556,7 @@ Occurrences (7):
 
 Authorities checked:
 
-- `FROZEN-OLP-0016-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -2518,12 +2565,10 @@ Alternatives:
 - نامکمل فنکشن; ہر-تھاں فنکشن; serial described only by its formula — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (24):
+Occurrences (22):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T028:OLP-0016-B008` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:32-35` | `translation/content/sets-functions-relations/relations/orders.tex:31-34` | pending |
-| `pnb-Arab-PK:PNB-T028:OLP-0016-B015` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:87-90` | `translation/content/sets-functions-relations/relations/orders.tex:85-88` | pending |
 | `pnb-Arab-PK:PNB-T028:OLP-0023-B011` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:53-58` | `translation/content/sets-functions-relations/functions/functions-relations.tex:53-58` | pending |
 | `pnb-Arab-PK:PNB-T028:OLP-0024-B013` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:68-84` | `translation/content/sets-functions-relations/functions/inverses.tex:69-88` | pending |
 | `pnb-Arab-PK:PNB-T028:OLP-0026-B005` | `OLP-0026` / sets-functions-relations / functions / partial-functions | `upstream/content/sets-functions-relations/functions/partial-functions.tex:12-12` | `translation/content/sets-functions-relations/functions/partial-functions.tex:12-12` | pending |
@@ -2577,12 +2622,12 @@ Occurrences (71):
 | `pnb-Arab-PK:PNB-T029:OLP-0007-B005` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:12-27` | `translation/content/sets-functions-relations/sets/important-sets.tex:12-26` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:83-88` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:100-108` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
-| `pnb-Arab-PK:PNB-T029:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B015` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:83-88` | `translation/content/sets-functions-relations/relations/trees.tex:90-96` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B017` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:100-108` | `translation/content/sets-functions-relations/relations/trees.tex:110-120` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
+| `pnb-Arab-PK:PNB-T029:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0027-B004` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:8-8` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:8-8` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0028-B006` | `OLP-0028` / sets-functions-relations / size-of-sets / introduction | `upstream/content/sets-functions-relations/size-of-sets/introduction.tex:13-19` | `translation/content/sets-functions-relations/size-of-sets/introduction.tex:13-19` | pending |
 | `pnb-Arab-PK:PNB-T029:OLP-0028-B007` | `OLP-0028` / sets-functions-relations / size-of-sets / introduction | `upstream/content/sets-functions-relations/size-of-sets/introduction.tex:21-26` | `translation/content/sets-functions-relations/size-of-sets/introduction.tex:21-27` | pending |
@@ -2669,13 +2714,12 @@ Alternatives:
 - شمار بندی; شمار پذیر/ناشمار; explicit list and bijection descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (90):
+Occurrences (89):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T030:OLP-0007-B009` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:62-67` | `translation/content/sets-functions-relations/sets/important-sets.tex:60-66` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0012-B012` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:120-123` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:119-122` | pending |
-| `pnb-Arab-PK:PNB-T030:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0021-B016` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:82-89` | `translation/content/sets-functions-relations/functions/function-basics.tex:82-88` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0027-B005` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:10-15` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:10-16` | pending |
 | `pnb-Arab-PK:PNB-T030:OLP-0027-B016` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:37-47` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:38-49` | pending |
@@ -2791,7 +2835,7 @@ Occurrences (22):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T031:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
+| `pnb-Arab-PK:PNB-T031:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0027-B016` | `OLP-0027` / sets-functions-relations / size-of-sets-complete | `upstream/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:37-47` | `translation/content/sets-functions-relations/size-of-sets/size-of-sets-complete.tex:38-49` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0029-B008` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:27-32` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:28-33` | pending |
 | `pnb-Arab-PK:PNB-T031:OLP-0029-B009` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:34-66` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:35-67` | pending |
@@ -3414,7 +3458,7 @@ Occurrences (5):
 
 Authorities checked:
 
-- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0042-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3423,12 +3467,10 @@ Alternatives:
 - integers as ordered-pair equivalence classes; induced operations and natural-number representation — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (9):
+Occurrences (7):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T047:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T047:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
 | `pnb-Arab-PK:PNB-T047:OLP-0042-B005` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:13-18` | `translation/content/sets-functions-relations/arithmetization/integers.tex:13-21` | pending |
 | `pnb-Arab-PK:PNB-T047:OLP-0042-B011` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:39-39` | `translation/content/sets-functions-relations/arithmetization/integers.tex:53-53` | pending |
 | `pnb-Arab-PK:PNB-T047:OLP-0042-B012` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:41-43` | `translation/content/sets-functions-relations/arithmetization/integers.tex:55-58` | pending |
@@ -3451,7 +3493,7 @@ Occurrences (9):
 
 Authorities checked:
 
-- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0042-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3460,12 +3502,10 @@ Alternatives:
 - rational quotient construction; nonzero denominator, cross-products and integer embedding — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (7):
+Occurrences (5):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T048:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T048:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
 | `pnb-Arab-PK:PNB-T048:OLP-0042-B011` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:39-39` | `translation/content/sets-functions-relations/arithmetization/integers.tex:53-53` | pending |
 | `pnb-Arab-PK:PNB-T048:OLP-0042-B012` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:41-43` | `translation/content/sets-functions-relations/arithmetization/integers.tex:55-58` | pending |
 | `pnb-Arab-PK:PNB-T048:OLP-0043-B005` | `OLP-0043` / sets-functions-relations / arithmetization / rationals | `upstream/content/sets-functions-relations/arithmetization/rationals.tex:12-45` | `translation/content/sets-functions-relations/arithmetization/rationals.tex:12-46` | pending |
@@ -3543,7 +3583,7 @@ Occurrences (28):
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3552,12 +3592,10 @@ Alternatives:
 - completeness, upper bounds, least upper bounds, continuum and gaps stated through the full criterion — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (25):
+Occurrences (23):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T050:OLP-0013-B005` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:21-39` | `translation/content/sets-functions-relations/relations/reflections.tex:20-37` | pending |
-| `pnb-Arab-PK:PNB-T050:OLP-0013-B006` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:41-55` | `translation/content/sets-functions-relations/relations/reflections.tex:39-52` | pending |
 | `pnb-Arab-PK:PNB-T050:OLP-0023-B011` | `OLP-0023` / sets-functions-relations / functions / functions-relations | `upstream/content/sets-functions-relations/functions/functions-relations.tex:53-58` | `translation/content/sets-functions-relations/functions/functions-relations.tex:53-58` | pending |
 | `pnb-Arab-PK:PNB-T050:OLP-0026-B013` | `OLP-0026` / sets-functions-relations / functions / partial-functions | `upstream/content/sets-functions-relations/functions/partial-functions.tex:67-73` | `translation/content/sets-functions-relations/functions/partial-functions.tex:69-75` | pending |
 | `pnb-Arab-PK:PNB-T050:OLP-0044-B011` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:74-74` | `translation/content/sets-functions-relations/arithmetization/reals.tex:80-85` | pending |
@@ -3596,7 +3634,7 @@ Occurrences (25):
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0021-B020` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3605,13 +3643,10 @@ Alternatives:
 - Dedekind lower cut; expand through all three defining conditions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (52):
+Occurrences (49):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T051:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0014-B010` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:44-55` | `translation/content/sets-functions-relations/relations/special-properties.tex:44-54` | pending |
-| `pnb-Arab-PK:PNB-T051:OLP-0014-B014` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:74-77` | `translation/content/sets-functions-relations/relations/special-properties.tex:73-76` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0021-B020` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:123-138` | `translation/content/sets-functions-relations/functions/function-basics.tex:123-138` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0024-B018` | `OLP-0024` / sets-functions-relations / functions / inverses | `upstream/content/sets-functions-relations/functions/inverses.tex:121-125` | `translation/content/sets-functions-relations/functions/inverses.tex:129-133` | pending |
 | `pnb-Arab-PK:PNB-T051:OLP-0028-B006` | `OLP-0028` / sets-functions-relations / size-of-sets / introduction | `upstream/content/sets-functions-relations/size-of-sets/introduction.tex:13-19` | `translation/content/sets-functions-relations/size-of-sets/introduction.tex:13-19` | pending |
@@ -3685,12 +3720,11 @@ Alternatives:
 - rational embedding and union least-upper-bound proof stated through their exact maps — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (12):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T052:OLP-0012-B010` | `OLP-0012` / sets-functions-relations / relations / relations-as-sets | `upstream/content/sets-functions-relations/relations/relations-as-sets.tex:61-106` | `translation/content/sets-functions-relations/relations/relations-as-sets.tex:60-106` | pending |
-| `pnb-Arab-PK:PNB-T052:OLP-0019-B005` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:12-17` | `translation/content/sets-functions-relations/relations/operations.tex:12-17` | pending |
 | `pnb-Arab-PK:PNB-T052:OLP-0031-B016` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:99-104` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:102-107` | pending |
 | `pnb-Arab-PK:PNB-T052:OLP-0044-B011` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:74-74` | `translation/content/sets-functions-relations/arithmetization/reals.tex:80-85` | pending |
 | `pnb-Arab-PK:PNB-T052:OLP-0044-B012` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:76-80` | `translation/content/sets-functions-relations/arithmetization/reals.tex:87-99` | pending |
@@ -3905,12 +3939,11 @@ Alternatives:
 - recursive bisection and monotone two-sided approximation governed by the recurrence — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (13):
+Occurrences (12):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNB-T057:OLP-0007-B006` | `OLP-0007` / sets-functions-relations / sets / important-sets | `upstream/content/sets-functions-relations/sets/important-sets.tex:29-38` | `translation/content/sets-functions-relations/sets/important-sets.tex:28-36` | pending |
-| `pnb-Arab-PK:PNB-T057:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0029-B031` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:233-242` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:237-248` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0044-B011` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:74-74` | `translation/content/sets-functions-relations/arithmetization/reals.tex:80-85` | pending |
 | `pnb-Arab-PK:PNB-T057:OLP-0044-B012` | `OLP-0044` / sets-functions-relations / arithmetization / reals | `upstream/content/sets-functions-relations/arithmetization/reals.tex:76-80` | `translation/content/sets-functions-relations/arithmetization/reals.tex:87-99` | pending |
@@ -4228,8 +4261,8 @@ Occurrences (7):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T066:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:121-124` | pending |
-| `pnb-Arab-PK:PNB-T066:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:PNB-T066:OLP-0018-B019` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:121-124` | `translation/content/sets-functions-relations/relations/trees.tex:134-138` | pending |
+| `pnb-Arab-PK:PNB-T066:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:140-143` | pending |
 | `pnb-Arab-PK:PNB-T066:OLP-0036-B014` | `OLP-0036` / sets-functions-relations / size-of-sets / comparing-sizes | `upstream/content/sets-functions-relations/size-of-sets/comparing-size.tex:70-105` | `translation/content/sets-functions-relations/size-of-sets/comparing-size.tex:71-111` | pending |
 | `pnb-Arab-PK:PNB-T066:OLP-0054-B004` | `OLP-0054` / — | `upstream/content/sets-functions-relations/infinite/card-sb.tex:7-7` | `translation/content/sets-functions-relations/infinite/card-sb.tex:7-7` | pending |
 | `pnb-Arab-PK:PNB-T066:OLP-0054-B013` | `OLP-0054` / — | `upstream/content/sets-functions-relations/infinite/card-sb.tex:70-73` | `translation/content/sets-functions-relations/infinite/card-sb.tex:70-73` | pending |
@@ -4250,7 +4283,7 @@ Occurrences (7):
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0018-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4259,12 +4292,11 @@ Alternatives:
 - classical sentential logic; deductive calculi; completeness with explicit retained token identifiers — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (12):
+Occurrences (11):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T067:OLP-0013-B007` | `OLP-0013` / sets-functions-relations / relations / reflections | `upstream/content/sets-functions-relations/relations/reflections.tex:57-68` | `translation/content/sets-functions-relations/relations/reflections.tex:54-64` | pending |
-| `pnb-Arab-PK:PNB-T067:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
+| `pnb-Arab-PK:PNB-T067:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T067:OLP-0051-B005` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | pending |
 | `pnb-Arab-PK:PNB-T067:OLP-0055-B005` | `OLP-0055` / propositional-logic | `upstream/content/propositional-logic/propositional-logic.tex:9-18` | `translation/content/propositional-logic/propositional-logic.tex:9-17` | pending |
 | `pnb-Arab-PK:PNB-T067:OLP-0064-B007` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:26-36` | `translation/content/first-order-logic/proof-systems/introduction.tex:25-35` | pending |
@@ -4422,7 +4454,7 @@ Occurrences (3):
 
 Authorities checked:
 
-- `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0021-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4431,20 +4463,10 @@ Alternatives:
 - نفی; اتصال; انفصال; لزوم; تکافؤ, with every exact symbol retained — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (39):
+Occurrences (29):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T072:OLP-0014-B005` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:12-21` | `translation/content/sets-functions-relations/relations/special-properties.tex:12-21` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B005` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:11-11` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B007` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:17-21` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:16-20` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B008` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:23-29` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:22-26` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B009` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:31-37` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:28-34` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B010` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:39-40` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:36-37` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B011` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:42-45` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:39-42` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B012` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:47-55` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:44-52` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B014` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:63-76` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:60-73` | pending |
-| `pnb-Arab-PK:PNB-T072:OLP-0015-B015` | `OLP-0015` / sets-functions-relations / relations / equivalence-relations | `upstream/content/sets-functions-relations/relations/equivalence-relations.tex:78-81` | `translation/content/sets-functions-relations/relations/equivalence-relations.tex:75-78` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0021-B014` | `OLP-0021` / sets-functions-relations / functions / basics | `upstream/content/sets-functions-relations/functions/function-basics.tex:64-72` | `translation/content/sets-functions-relations/functions/function-basics.tex:64-72` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0029-B020` | `OLP-0029` / sets-functions-relations / size-of-sets / enumerations | `upstream/content/sets-functions-relations/size-of-sets/enumerability.tex:140-162` | `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:141-164` | pending |
 | `pnb-Arab-PK:PNB-T072:OLP-0031-B010` | `OLP-0031` / sets-functions-relations / size-of-sets / pairing | `upstream/content/sets-functions-relations/size-of-sets/pairing.tex:66-68` | `translation/content/sets-functions-relations/size-of-sets/pairing.tex:66-68` | pending |
@@ -4576,7 +4598,7 @@ Occurrences (4):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T075:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
+| `pnb-Arab-PK:PNB-T075:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
 | `pnb-Arab-PK:PNB-T075:OLP-0051-B005` | `OLP-0051` / sets-functions-relations / infinite / dedekind | `upstream/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:16-39` | pending |
 | `pnb-Arab-PK:PNB-T075:OLP-0059-B006` | `OLP-0059` / propositional-logic / propositional-logic / preliminaries | `upstream/content/propositional-logic/syntax-and-semantics/preliminaries.tex:13-30` | `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:13-30` | pending |
 | `pnb-Arab-PK:PNB-T075:OLP-0059-B007` | `OLP-0059` / propositional-logic / propositional-logic / preliminaries | `upstream/content/propositional-logic/syntax-and-semantics/preliminaries.tex:32-39` | `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:32-40` | pending |
@@ -4849,7 +4871,7 @@ Occurrences (4):
 
 Authorities checked:
 
-- `FROZEN-OLP-0014-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0016-B022` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -4858,12 +4880,11 @@ Alternatives:
 - معنوی استلزام; یک سمتی توسیع; قطع; معنوی قضیۂ استنباط — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (8):
+Occurrences (7):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T084:OLP-0014-B007` | `OLP-0014` / sets-functions-relations / relations / special-properties | `upstream/content/sets-functions-relations/relations/special-properties.tex:28-31` | `translation/content/sets-functions-relations/relations/special-properties.tex:28-31` | pending |
-| `pnb-Arab-PK:PNB-T084:OLP-0016-B022` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:124-130` | `translation/content/sets-functions-relations/relations/orders.tex:119-124` | pending |
+| `pnb-Arab-PK:PNB-T084:OLP-0016-B022` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:124-130` | `translation/content/sets-functions-relations/relations/orders.tex:123-128` | pending |
 | `pnb-Arab-PK:PNB-T084:OLP-0035-B012` | `OLP-0035` / sets-functions-relations / size-of-sets / equinumerous-sets | `upstream/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:51-55` | `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:51-55` | pending |
 | `pnb-Arab-PK:PNB-T084:OLP-0042-B010` | `OLP-0042` / sets-functions-relations / arithmetization / From N to Z | `upstream/content/sets-functions-relations/arithmetization/integers.tex:36-37` | `translation/content/sets-functions-relations/arithmetization/integers.tex:47-51` | pending |
 | `pnb-Arab-PK:PNB-T084:OLP-0062-B007` | `OLP-0062` / propositional-logic / syntax-and-semantics / semantic-notions | `upstream/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-32` | `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:15-34` | pending |
@@ -5020,7 +5041,7 @@ Occurrences (9):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PNB-T088:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-19` | pending |
+| `pnb-Arab-PK:PNB-T088:OLP-0018-B005` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:12-20` | `translation/content/sets-functions-relations/relations/trees.tex:12-22` | pending |
 | `pnb-Arab-PK:PNB-T088:OLP-0055-B005` | `OLP-0055` / propositional-logic | `upstream/content/propositional-logic/propositional-logic.tex:9-18` | `translation/content/propositional-logic/propositional-logic.tex:9-17` | pending |
 | `pnb-Arab-PK:PNB-T088:OLP-0055-B006` | `OLP-0055` / propositional-logic | `upstream/content/propositional-logic/propositional-logic.tex:20-23` | `translation/content/propositional-logic/propositional-logic.tex:19-21` | pending |
 | `pnb-Arab-PK:PNB-T088:OLP-0064-B006` | `OLP-0064` / first-order-logic / proof-systems / introduction | `upstream/content/first-order-logic/proof-systems/introduction.tex:15-24` | `translation/content/first-order-logic/proof-systems/introduction.tex:15-23` | pending |
@@ -6383,7 +6404,7 @@ Occurrences (1):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:PREFIX-SMALL-ALPHABET:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:70-78` | pending |
+| `pnb-Arab-PK:PREFIX-SMALL-ALPHABET:OLP-0016-B013` | `OLP-0016` / sets-functions-relations / relations / orders | `upstream/content/sets-functions-relations/relations/orders.tex:72-80` | `translation/content/sets-functions-relations/relations/orders.tex:73-82` | pending |
 
 ---
 
@@ -6410,7 +6431,7 @@ Occurrences (1):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:BRANCH-CARRIER-X:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:90-98` | pending |
+| `pnb-Arab-PK:BRANCH-CARRIER-X:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:98-108` | pending |
 
 ---
 
@@ -6433,12 +6454,11 @@ Alternatives:
 - Retain faithful text with an explicit editorial note. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Apply a visibly marked, versioned editorial correction with source unchanged. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
-Occurrences (2):
+Occurrences (1):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:EMPTY-SUBTREE:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:110-119` | pending |
-| `pnb-Arab-PK:EMPTY-SUBTREE:OLP-0018-B020` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:126-128` | `translation/content/sets-functions-relations/relations/trees.tex:126-128` | pending |
+| `pnb-Arab-PK:EMPTY-SUBTREE:OLP-0018-B018` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:110-119` | `translation/content/sets-functions-relations/relations/trees.tex:122-132` | pending |
 
 ---
 
@@ -6465,8 +6485,8 @@ Occurrences (2):
 
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
-| `pnb-Arab-PK:LOCAL-R-PLUS:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:53-55` | pending |
-| `pnb-Arab-PK:LOCAL-R-PLUS:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:LOCAL-R-PLUS:OLP-0019-B017` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:52-54` | `translation/content/sets-functions-relations/relations/operations.tex:57-59` | pending |
+| `pnb-Arab-PK:LOCAL-R-PLUS:OLP-0019-B018` | `OLP-0019` / sets-functions-relations / relations / operations | `upstream/content/sets-functions-relations/relations/operations.tex:56-58` | `translation/content/sets-functions-relations/relations/operations.tex:61-65` | pending |
 
 ---
 
@@ -7502,5 +7522,33 @@ Occurrences (1):
 | Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
 |---|---|---|---|---|
 | `pnb-Arab-PK:PNBPL-002:OLP-0058-B032` | `OLP-0058` / propositional-logic / syntax-and-semantics / formulas | `upstream/content/propositional-logic/syntax-and-semantics/formulas.tex:158-159` | `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:158-161` | pending |
+
+---
+
+## `pnb-Arab-PK:PNBREL-001`
+
+- Kind: `source_correction`; confidence: **high**; provisional: **no**; review priority: **high**.
+- Source term/construction: The maximal-chain definition binds the tree carrier A and branch B as a subset of A, but quantifies over z in X minus B although X is undefined.
+- Intended sense: The maximal-chain definition binds the tree carrier A and branch B as a subset of A, but quantifies over z in X minus B although X is undefined.
+- Chosen Shahmukhi rendering/treatment: Replace only X by the already bound carrier A, preserve every other symbol and clause, keep the frozen source unchanged, and disclose the correction beside the definition.
+- Rationale: Generated review entry for a separately recorded source issue. Existing finding and treatment are copied from the durable correction record when present; no unrecorded contemporaneous motive is claimed. The alternatives and review question below were formulated for this review log. The treatment is bounded by the cited frozen-source and audit evidence.
+- Why expert review helps: Authorial intent or omitted convention is not asserted as known. Frozen source bytes remain available even where the target applies an explicit stable correction.
+- Please double-check: **Does the corrected maximality clause now quantify over exactly the tree carrier A while preserving comparability, the incomparable outside witness and the set of all branches?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0018-B016` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `REVIEW-OLP0018-STRUCTURAL-PRECHECK` (checked_context_only): provenance/OLP0018-STRUCTURAL-PRECHECK.json — Source-aligned semantic review; paired audit receipt work/SOURCE-CORRECTION-PNBREL-001.json has SHA-256 cd51832f82ea7f39a8cb1c4ac10b4e0c987e4088c133623226d8cf7e886efe95.
+
+Alternatives:
+
+- Retain faithful text with an explicit editorial note. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Apply a visibly marked, versioned editorial correction with source unchanged. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+Occurrences (1):
+
+| Occurrence | Unit / structural scope | Source | Target | Accepted reader page(s) |
+|---|---|---|---|---|
+| `pnb-Arab-PK:PNBREL-001:OLP-0018-B016` | `OLP-0018` / sets-functions-relations / relations / trees | `upstream/content/sets-functions-relations/relations/trees.tex:90-98` | `translation/content/sets-functions-relations/relations/trees.tex:98-108` | pending |
 
 ---

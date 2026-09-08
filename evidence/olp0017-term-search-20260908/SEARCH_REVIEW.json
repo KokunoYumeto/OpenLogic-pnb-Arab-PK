@@ -1,0 +1,63 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0017",
+  "reviewed_at_utc": "2026-09-08T02:09:13.918Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 22922,
+    "sha256": "524aa537973d55d100c16b612471de6d84b3abd3fa2a590db579a8bb6e8eb467"
+  },
+  "exact_capture": {
+    "file": "PNB-MATH-W11-revision-546706.json",
+    "bytes": 8359,
+    "sha256": "c09cff61fedc3813999c0c339e23c08ed71c4d9eac705878a9fcb58d4e10ddf2",
+    "receipt": "CONNECTIVITY_WITNESS_CAPTURE.json",
+    "receipt_bytes": 3450,
+    "receipt_sha256": "08fa312fa90bafd61da64208818b7b67efa81f7949ed016c42c936e53b004753"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": ["OLP0017-Q01", "OLP0017-Q04"],
+      "disposition": "one specialist page adopted",
+      "detail": "Page 84820, متصلیت (نظریہ گراف), revision 546706, uses گراف and نظریۂ گراف in connected mathematical prose, کنارے for graph edges, and راس for graph vertices. Exact lines 2, 5 and 27 were read and hashed. The same search also returned the Euler biography, whose راس/کنارہ snippet is supporting but unnecessary once the specialist page is retained. Other Q04 results use راس as a geographic name, title or unrelated word."
+    },
+    {
+      "query_ids": ["OLP0017-Q02", "OLP0017-Q03"],
+      "disposition": "zero hits",
+      "detail": "Neither سمت دار گراف nor سمتی گراف was attested. Directed graph remains exact-definition-governed and visibly bridged."
+    },
+    {
+      "query_id": "OLP0017-Q05",
+      "disposition": "zero hits",
+      "detail": "No plural راساں plus graph hit was returned; the adopted singular راس passage does not independently establish every inflected form."
+    },
+    {
+      "query_ids": ["OLP0017-Q06", "OLP0017-Q07"],
+      "disposition": "all returned hits rejected as unrelated",
+      "detail": "The ten returned گرہ/گرہاں hits concern knots, anniversaries, nautical speed, a physics antinode, an autograph, or unrelated astronomy prose. None uses گرہ as a graph-theory node."
+    },
+    {
+      "query_ids": ["OLP0017-Q08", "OLP0017-Q09"],
+      "disposition": "specialist edge evidence only from the separately captured graph page",
+      "detail": "The quoted کنارا hit is unrelated. Q09 ordinary hits concern riverbanks. The topology result mentions graph theory, but its کناریاں occurrence means riverbanks in the Königsberg description, not graph edges. The adopted connectivity page directly supplies mathematical کنارہ/کنارے instead."
+    },
+    {
+      "query_ids": ["OLP0017-Q10", "OLP0017-Q11"],
+      "disposition": "zero hits",
+      "detail": "Neither گسستہ ریاضی nor the abstract-mathematics near-match was attested for this graph context. Discrete mathematics remains visibly English-bridged."
+    },
+    {
+      "query_id": "OLP0017-Q12",
+      "disposition": "all three hits rejected as unrelated",
+      "detail": "All الگ تھلگ hits concern political or geographic isolation, not an isolated graph vertex."
+    }
+  ],
+  "adoption": {
+    "source_id": "PNB-C017",
+    "passage_ids": ["PNB-P034", "PNB-P035", "PNB-P036"],
+    "attested_only": ["گراف", "نظریۂ گراف", "راس", "کنارہ", "کنارے"],
+    "not_attested": ["سمت دار گراف", "گرہ بطور node", "گسستہ ریاضی", "الگ تھلگ راس"],
+    "quality": "revision-bound community technical usage; not peer-reviewed scholarly canon"
+  },
+  "limits": "Search absence is not proof of linguistic absence. Positive evidence is confined to the exact revision and lines recorded; all remaining OLP-0017 specialist choices stay reversible and source-definition-governed."
+}

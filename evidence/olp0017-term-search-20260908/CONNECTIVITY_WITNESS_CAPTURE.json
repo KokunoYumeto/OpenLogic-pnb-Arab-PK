@@ -1,0 +1,56 @@
+{
+  "schema": "pnb-exact-community-witness-capture/1",
+  "captured_at_utc": "2026-09-08T02:07:37.441157Z",
+  "unit_id": "OLP-0017",
+  "discovery_receipt": {
+    "file": "SEARCH.json",
+    "bytes": 22922,
+    "sha256": "524aa537973d55d100c16b612471de6d84b3abd3fa2a590db579a8bb6e8eb467",
+    "query_ids": [
+      "OLP0017-Q01",
+      "OLP0017-Q04"
+    ]
+  },
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&format=json&formatversion=2&revids=546706",
+  "response": {
+    "file": "PNB-MATH-W11-revision-546706.json",
+    "bytes": 8359,
+    "sha256": "c09cff61fedc3813999c0c339e23c08ed71c4d9eac705878a9fcb58d4e10ddf2"
+  },
+  "page": {
+    "pageid": 84820,
+    "title": "متصلیت (نظریہ گراف)",
+    "revision_id": 546706,
+    "parent_id": 0,
+    "revision_timestamp": "2019-12-16T17:03:19Z",
+    "mediawiki_sha1": "6b0916271645257eebcc569f29724ea3bf8921f6",
+    "permanent_url": "https://pnb.wikipedia.org/w/index.php?oldid=546706"
+  },
+  "matching_lines": [
+    {
+      "line_1based": 2,
+      "line_utf8_bytes": 195,
+      "line_utf8_sha256": "ad0378ea41e99c07bf50a5d508698bbe1ee59e47f34c36b7fd52034e7d644c91",
+      "text": "گراف <br /> راس <br />کنارہ <br />کنارہ متصلیت <br /> قطع مجموعہ <br /> قمہ متصلیت<br /> بےجوڑ کنارہ <br />بےجوڑ قمہ<br /> علاحدہ|"
+    },
+    {
+      "line_1based": 5,
+      "line_utf8_bytes": 692,
+      "line_utf8_sha256": "fe3147986104b47d48de583f543769911206f1a27c46135ce5dd0e4ea0f898ce",
+      "text": "ریاضی د‏‏ی شاخ نظریۂ گراف وچ کِس‏ے [[گراف (ریاضی)|گراف]] دے اک ٹکرے یعنی ''متصل'' ہونے دے حوالے تو‏ں ''متصلیت'' اک اہ‏م تصور ا‏‏ے۔ [[ہاتف]] ادارے دا [[نیٹ ورک (ضد ابہام)|شراکہ]] اک گراف بناندا اے جس وچ کنارے [[Central office|مرکزی دفاتر]] دے درمیان ربط ني‏‏‏‏ں۔ \"انہاں وچو‏ں کِنے ربط منقطع کیتے جان کہ ایہ گراف متصل تو‏ں نامتصل ہوئے جائے؟\" طرح دے سوالات متصلیت دے عنوان دے تحت بحث ہُندے ني‏‏‏‏ں۔"
+    },
+    {
+      "line_1based": 27,
+      "line_utf8_bytes": 287,
+      "line_utf8_sha256": "cfe73d01447fa910b5f3e0e834baca38fb03c5eed4cf2194f5329aef07059eaf",
+      "text": "تعریف: متصل گراف ''G'' (جو مکمل گراف نہ ہو) د‏‏ی ''قمہ متصلیت'' راس د‏ی کم تو‏ں کم تعداد <math>\\ \\kappa(G)</math> نو‏‏ں کہندے نيں جِن دے ہٹانے تو‏ں گراف نامتصل ہوئے جائے۔ جے"
+    }
+  ],
+  "rights": {
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "site_rights_response": "../shahmukhi-mathematical-witnesses-20260906/PNB-WIKIPEDIA-RIGHTS.json",
+    "site_rights_response_sha256": "5fb26e893bb12b19426a1ad062f97648c3b0e30925524f7a0874a4bfb4f5d35d"
+  },
+  "evidentiary_limit": "Exact revision-bound community graph-theory usage of گراف, نظریۂ گراف, راس and کنارہ/کنارے only; not peer-reviewed scholarship and not attestation of directed graph, node, discrete mathematics or isolated vertex."
+}

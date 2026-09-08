@@ -1,0 +1,82 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0019",
+  "reviewed_at_utc": "2026-09-08T03:35:52.263Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 11087,
+    "sha256": "e6f6107eb154dfa617cdb0f68f48af4b21235a7b42105169f3fe031c026dc9a5"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0019-Q01",
+        "OLP0019-Q02",
+        "OLP0019-Q03"
+      ],
+      "disposition": "zero hits",
+      "detail": "No hit attested either spelling of الٹا/اُلٹا تعلق or معکوس تعلق as inverse relation. The source's coordinate-swap definition governs the selected visibly bridged term."
+    },
+    {
+      "query_ids": [
+        "OLP0019-Q04",
+        "OLP0019-Q05"
+      ],
+      "disposition": "zero hits",
+      "detail": "No Shahmukhi hit attested نسبتی حاصل ضرب or the English relative-product label in relation context. The existential R-then-S formula governs the provisional phrase."
+    },
+    {
+      "query_ids": [
+        "OLP0019-Q06",
+        "OLP0019-Q07"
+      ],
+      "disposition": "zero hits",
+      "detail": "No hit attested the tested restriction or application phrases for relations. Their exact intersection and existential-image formulas remain authoritative."
+    },
+    {
+      "query_ids": [
+        "OLP0019-Q08",
+        "OLP0019-Q09",
+        "OLP0019-Q10",
+        "OLP0019-Q11"
+      ],
+      "disposition": "zero hits",
+      "detail": "No hit attested تعدی تکمیل, انتقالی بندش, انعکاسی تعدی تکمیل, or the English transitive-closure label. Positive powers and identity-union formulas govern the two distinct closures."
+    },
+    {
+      "query_ids": [
+        "OLP0019-Q12",
+        "OLP0019-Q13",
+        "OLP0019-Q14"
+      ],
+      "disposition": "zero hits",
+      "detail": "No hit attested the tested recursive, successor-relation, or predecessor-relation collocations in mathematical context. These remain source-defined and visibly bridged."
+    },
+    {
+      "query_ids": [
+        "OLP0019-Q15",
+        "OLP0019-Q16"
+      ],
+      "disposition": "zero hits",
+      "detail": "No hit attested the Shahmukhi section phrase or the English relation-operations label."
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_passages": 0,
+    "reused_prior_passages": [
+      "PNB-P017",
+      "PNB-P022",
+      "PNB-P023",
+      "PNB-P032"
+    ],
+    "reuse_scope": "Only connected mathematical prose/proof register, قدرتی اعداد, generic set usage, and the generic mathematical relation lexeme. None attests a relation-operation term."
+  },
+  "response_identity": {
+    "files": 16,
+    "each_response_bytes": 73,
+    "each_response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+    "each_total_hits": 0
+  },
+  "limits": "Search absence is not proof of linguistic absence. Every specialist OLP-0019 label remains exact-definition-governed, visibly bridged, reversible, and non-conventional pending stronger evidence."
+}

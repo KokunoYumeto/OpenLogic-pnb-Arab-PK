@@ -1,0 +1,193 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-07T21:10:37.212367Z",
+  "unit_id": "OLP-0011",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0011-Q01",
+      "query": "\"دو رکنی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D9%88+%D8%B1%DA%A9%D9%86%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q02",
+      "query": "\"ثنائی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AB%D9%86%D8%A7%D8%A6%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q03",
+      "query": "\"ریاضیاتی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7%D8%AA%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q04",
+      "query": "\"تعلق ریاضی\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D9%84%D9%82+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q05",
+      "query": "\"تعلقات تے فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D9%84%D9%82%D8%A7%D8%AA+%D8%AA%DB%92+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q06",
+      "query": "\"تعلقات اتے فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D9%84%D9%82%D8%A7%D8%AA+%D8%A7%D8%AA%DB%92+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q07",
+      "query": "\"اکو ہون دا تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%DA%A9%D9%88+%DB%81%D9%88%D9%86+%D8%AF%D8%A7+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q08",
+      "query": "\"شناختی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B4%D9%86%D8%A7%D8%AE%D8%AA%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q09",
+      "query": "\"سخت ترتیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%AE%D8%AA+%D8%AA%D8%B1%D8%AA%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0011-Q10",
+      "query": "\"relation\" \"تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22relation%22+%22%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 3573,
+      "response_sha256": "c3d9feb137c7a8f24c7622c8cd387913b58559cd157d467a4acd0a7d9b0e5672",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 25,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 30681,
+          "title": "پشتون",
+          "timestamp": "2025-03-18T07:12:17Z",
+          "snippet": "History, Antiquities, Topography, and Statistics of Eastern India: In <span class=\"searchmatch\">Relation</span> to Their Geology, Mineralogy, Botany, Agriculture, Commerce, Manufactures"
+        },
+        {
+          "pageid": 68854,
+          "title": "سوفرونیئس",
+          "timestamp": "2023-10-01T13:38:26Z",
+          "snippet": "Christian-Muslim <span class=\"searchmatch\">Relation</span>, a Bibliogrphical History (مسیحی - مسلم تعلقات، اک کتابیاندی تریخ)، جلد 1، صفحہ 121 Christian-Muslim <span class=\"searchmatch\">Relation</span>, a Bibliogrphical"
+        },
+        {
+          "pageid": 124432,
+          "title": "رَجعت نسبت",
+          "timestamp": "2023-06-08T15:09:29Z",
+          "snippet": "اصطلاح term رَجعت <span class=\"searchmatch\">تعلق</span> recurrence <span class=\"searchmatch\">relation</span>"
+        },
+        {
+          "pageid": 8528,
+          "title": "کرنسی",
+          "timestamp": "2026-08-24T23:21:34Z",
+          "snippet": "old simply by the fact that it is impersonal – that there is no human <span class=\"searchmatch\">relation</span> between master and slave. Leo Tolstoy آسٹریلیا دے وزیر محنت Eddie Ward"
+        },
+        {
+          "pageid": 77936,
+          "title": "بریٹن وڈز دا معاہدہ",
+          "timestamp": "2025-08-20T15:27:46Z",
+          "snippet": "old simply by the fact that it is impersonal – that there is no human <span class=\"searchmatch\">relation</span> between master and slave. Leo Tolstoy آسٹریلیا دے وزیر محنت Eddie Ward"
+        },
+        {
+          "pageid": 79061,
+          "title": "اسلام تے سکھ مت",
+          "timestamp": "2026-08-25T04:32:24Z",
+          "snippet": "Sikhism today. Continuum, 1–2. ISBN 978-1-4411-8140-4.  Sikhism in Its <span class=\"searchmatch\">Relation</span> to Muhammadanism, p. 12, at Google Books Lua error in ماڈیول:Citation/CS1"
+        },
+        {
+          "pageid": 30436,
+          "title": "پرویز ہودبھائی",
+          "timestamp": "2026-06-18T18:26:22Z",
+          "snippet": "Freeman, G. A. Miller and E. M. Henley), Phys. Rev. C27 (1983). 11. “A <span class=\"searchmatch\">Relation</span> Between Coherent Photoproduction and Nucleus Elastic Scattering (with G"
+        },
+        {
+          "pageid": 124429,
+          "title": "تموینی نقشہ",
+          "timestamp": "2023-06-08T15:06:25Z",
+          "snippet": "ریاضٰی وچ رَجعت <span class=\"searchmatch\">تعلق</span>، جس د‏‏ی بطور مساوات صورت ایہ اے   x n + 1 = a x n ( 1 − x n ) {\\displaystyle \\ x_{n+1}=ax_{n}(1-x_{n})} یہ مساوات دے لئی شواشی طرز"
+        },
+        {
+          "pageid": 91399,
+          "title": "تحویل اکائیات",
+          "timestamp": "2023-10-01T06:01:33Z",
+          "snippet": "تنویر اکائی دا نام علامت وضاحت ایس.آئی اکائیاں نال <span class=\"searchmatch\">تعلق</span> کینڈیلا فی مربع میٹر (ایس.آئی بنیادی اکائی) ≡ cd/m2 = 1 cd/m2 لیمبرٹ L ≡ (104/π) cd/m2 ≈ 3183.09886 cd/m2"
+        },
+        {
+          "pageid": 30467,
+          "title": "ایڈون ہبل",
+          "timestamp": "2019-10-05T05:12:21Z",
+          "snippet": "(1889–1953)&quot;. NASA. Retrieved June 21, 2011. Hubble, Edwin (1929). &quot;A <span class=\"searchmatch\">relation</span> between distance and radial velocity among extra-galactic nebulae&quot;. PNAS"
+        }
+      ]
+    }
+  ],
+  "web_discovery_note": "A separate web search found Urdu mathematics pages using تعلق/تعلقات, but no qualifying Punjabi mathematical source; Urdu pages are excluded from canon evidence.",
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and any positive hit requires exact revision capture before evidentiary use."
+}

@@ -1,191 +1,8 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **146 of 172** current decisions.
+This view contains only urgent/high-priority decisions: **139 of 173** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
-
-## `pnb-Arab-PK:PNB-T014`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: relation; binary relation; identity relation; irreflexive; strict order
-- Intended sense: relation; binary relation; identity relation; irreflexive; strict order
-- Chosen Shahmukhi rendering/treatment: تعلق؛ دو رکنی تعلق؛ اکو ہون دا تعلق؛ اپنے آپ نال تعلق نہ ہون والا؛ سخت ترتیب
-- Rationale: Shared scholarly words with native syntax. Binary means two argument positions, not mutuality/symmetry; identity relates each object only to itself. No specialized native attestation claimed.
-- Why expert review helps: Irreflexivity stated with explicit universal scope in definition; short descriptor must not suggest merely some missing self-pairs.
-- Please double-check: **Does تعلق retain its ordered-pair sense, and does the long irreflexive descriptor mean no self-pairs rather than merely not reflexive?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0011-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- relation with explicit English bridge; expanded irreflexivity wording — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T015`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: formal metalogic; formal methods; predicate; proposition; metaphysical identity; reductionism
-- Intended sense: formal metalogic; formal methods; predicate; proposition; metaphysical identity; reductionism
-- Chosen Shahmukhi rendering/treatment: رسمی ماورائے منطق؛ رسمی طریقے؛ محمول؛ قضیہ؛ مابعد الطبیعیاتی یکسانیت؛ تحویلیت
-- Rationale: Shared Urdu/Arabic/Persian vocabulary explicitly provisional for specialized Punjabi senses. Predicate distinguished from an object-name, proposition from a list of names; retain source distinctions and hedging.
-- Why expert review helps: Native sources attest disciplinary names only, not these specialized senses. Later canon may support reversible revision.
-- Please double-check: **Do the philosophical and metalogical labels preserve the source qualifications without adding stronger metaphysical claims?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0013-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P001` (checked_context_only): https://ipcs.edu.pk/website/about — disciplinary_names_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P002` (checked_context_only): https://ipcs.edu.pk/website/about — native_academic_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- metalogic/predicate/reductionism as explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T016`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: reflexive; transitive; symmetric; anti-symmetric; connected; asymmetric
-- Intended sense: reflexive; transitive; symmetric; anti-symmetric; connected; asymmetric
-- Chosen Shahmukhi rendering/treatment: انعکاسی؛ متعدی؛ متناظر؛ ضد تناظری؛ باہم قابلِ موازنہ؛ یک طرفہ
-- Rationale: First four labels use shared Arabic/Urdu scholarly vocabulary; connected uses pairwise comparability, not graph connectivity. Asymmetric is the descriptive one-way label, with explicit no-mutual-pair definition including self-pairs. Irreflexive retains T014's full descriptor.
-- Why expert review helps: None of these specialized Punjabi senses is established by the acquired canon. Not symmetric, anti-symmetric and asymmetric remain logically distinct in prose and formulas; no inference from ordinary antonyms.
-- Please double-check: **Can readers distinguish symmetric, antisymmetric, asymmetric and non-reflexive from the chosen labels and exact self-pair conditions?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0014-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- property names accompanied by the full defining implication — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T017`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: equivalence relation; equivalent; equivalence class; quotient; modular arithmetic
-- Intended sense: equivalence relation; equivalent; equivalence class; quotient; modular arithmetic
-- Chosen Shahmukhi rendering/treatment: ہم ارزیت دا تعلق؛ ہم ارز؛ ہم ارزیت دا طبقہ؛ خارج قسمت سیٹ؛ باقی اُتے مبنی حساب
-- Rationale: Shared scholarly ہم ارز and طبقہ are provisional; quotient explicitly called the set of equivalence classes, not numerical division. Modular arithmetic is described through remainders. Identity is not conflated with equivalence.
-- Why expert review helps: Specialized native attestation absent. Source definitions, representative notation and quotient set notation govern semantics; labels reversible when stronger canon becomes available.
-- Please double-check: **Does خارج قسمت سیٹ clearly denote a set of equivalence classes, not numerical division or an equivalence class itself?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P004` (checked_context_only): https://pu.edu.pk/images/journal/punjabi/PDF/Khoj-81.pdf — native_scholarly_syntax; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- equivalence/quotient with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T018`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: preorder; partial order; total/linear order; extension; initial segment; reflexive closure
-- Intended sense: preorder; partial order; total/linear order; extension; initial segment; reflexive closure
-- Chosen Shahmukhi rendering/treatment: پیش ترتیب؛ جزوی ترتیب؛ کُل/خطی ترتیب؛ ودھاؤ دا تعلق؛ مُڈھلا ٹکڑا؛ انعکاسی تکمیل
-- Rationale: Preserve property-defined hierarchy: reflexive/transitive, then anti-symmetric, then pairwise comparable. Extension explicitly uses sequence-prefix inclusion, not set extensionality. Reflexive closure adds the diagonal and is not transitive closure.
-- Why expert review helps: Recovered prose supports native sequencing and reasoning, not these mathematical senses. Shared scholarly or coined labels remain provisional; mathematical definitions and theorem cases govern.
-- Please double-check: **Do the chosen labels preserve the cumulative property hierarchy and distinguish prefix extension from extensionality?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0016-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- preorder/partial/linear order with explicit English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T019`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: graph; node; vertex; edge; directed graph; discrete mathematics
-- Intended sense: graph; node; vertex; edge; directed graph; discrete mathematics
-- Chosen Shahmukhi rendering/treatment: گراف؛ گرہ؛ راس؛ کنارا؛ سمت دار گراف؛ گسستہ ریاضی
-- Rationale: Graph explicitly means vertices with a binary edge relation, not the plot of a numerical function. Nodes and vertices are synonyms here; direction is an arrow orientation. Isolated vertices remain part of the specified vertex set.
-- Why expert review helps: No specialized native attestation acquired. Graph is an English loan; other labels are reversible definition-based/shared scholarly choices inside Punjabi syntax. The canon supports exposition, not graph theory.
-- Please double-check: **Are گرہ/راس/راساں/کنارا natural and precise, with isolated vertices and directed edges preserved?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0017-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P013` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- نوڈ; ورٹیکس; edge as an explicit English bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T020`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: tree; root; ancestor; successor; predecessor/parent; least element; well-ordered; finitely branching; maximal chain; subtree; lemma
-- Intended sense: tree; root; ancestor; successor; predecessor/parent; least element; well-ordered; finitely branching; maximal chain; subtree; lemma
-- Chosen Shahmukhi rendering/treatment: درخت؛ جڑ؛ پُرکھ؛ جانشین؛ پیشرو/والد گرہ؛ سب توں چھوٹا عنصر؛ حُسنِ ترتیب والا؛ ہر گرہ اُتے محدود شاخاں والا؛ ہور نہ ودھ سکن والی زنجیر؛ ذیلی درخت؛ معاون قضیہ
-- Rationale: Least is <= every element, not merely minimal. A predecessor is an immediate predecessor; non-root elements have at most one, not necessarily one. Finite branching is a local finite-successor condition, not a finite number of maximal branches. Maximal chain means cannot extend the chain, not a largest cardinality.
-- Why expert review helps: Native technical attestation absent. Definitions control the provisional labels. Kőnig remains a literal proper name with its source TeX accent.
-- Please double-check: **Do least, immediate predecessor, well-ordering, local finite branching and maximal chain remain distinct in these descriptive labels?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0017-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- tree terminology with expanded immediate-successor descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T021`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: inverse relation; relative product; restriction; application/image; transitive closure; reflexive transitive closure
-- Intended sense: inverse relation; relative product; restriction; application/image; transitive closure; reflexive transitive closure
-- Chosen Shahmukhi rendering/treatment: اُلٹا تعلق؛ نسبتی حاصل ضرب؛ تحدید؛ اطلاق؛ تعدی تکمیل؛ انعکاسی تعدی تکمیل
-- Rationale: Inverse swaps coordinates, not reciprocal arithmetic. Relative product follows R then S. Restriction is exactly R intersect A squared (both endpoints), not only domain restriction. Image uses an existential source element. Transitive closure uses positive powers and is not inherently reflexive.
-- Why expert review helps: Specialized labels remain provisional. Upstream reuses R+ here for transitive closure after using R+ for reflexive closure in orders.tex; retain each local explicit definition rather than force a single global notation meaning.
-- Please double-check: **Do the terms preserve coordinate reversal, R-then-S order, both-endpoint restriction and positive-power rather than reflexive closure?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0019-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- inverse/composition/restriction/image with English bridges — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
 
 ## `pnb-Arab-PK:PNB-T023`
 
@@ -199,7 +16,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0020-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -245,7 +62,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0019-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -268,7 +85,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0019-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0024-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -314,7 +131,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0016-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -682,7 +499,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0042-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -705,7 +522,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0042-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -728,7 +545,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0023-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -751,7 +568,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0021-B020` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1119,7 +936,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0013-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0018-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1234,7 +1051,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0014-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0021-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1510,7 +1327,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0014-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0016-B022` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -3305,6 +3122,28 @@ Authorities checked:
 
 - `FROZEN-OLP-0058-B032` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `REVIEW-BATCH-0026-REVIEW` (checked_context_only): provenance/BATCH-0026-REVIEW.md — Source-aligned semantic review; paired audit receipt work/batch-0026-audit.json has SHA-256 b7eb038add7756c6f71d0def174d5e9ac06f7dc7b5ec77f1ab82b53e11d790d6.
+
+Alternatives:
+
+- Retain faithful text with an explicit editorial note. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+- Apply a visibly marked, versioned editorial correction with source unchanged. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
+
+---
+
+## `pnb-Arab-PK:PNBREL-001`
+
+- Kind: `source_correction`; confidence: **high**; provisional: **no**; review priority: **high**.
+- Source term/construction: The maximal-chain definition binds the tree carrier A and branch B as a subset of A, but quantifies over z in X minus B although X is undefined.
+- Intended sense: The maximal-chain definition binds the tree carrier A and branch B as a subset of A, but quantifies over z in X minus B although X is undefined.
+- Chosen Shahmukhi rendering/treatment: Replace only X by the already bound carrier A, preserve every other symbol and clause, keep the frozen source unchanged, and disclose the correction beside the definition.
+- Rationale: Generated review entry for a separately recorded source issue. Existing finding and treatment are copied from the durable correction record when present; no unrecorded contemporaneous motive is claimed. The alternatives and review question below were formulated for this review log. The treatment is bounded by the cited frozen-source and audit evidence.
+- Why expert review helps: Authorial intent or omitted convention is not asserted as known. Frozen source bytes remain available even where the target applies an explicit stable correction.
+- Please double-check: **Does the corrected maximality clause now quantify over exactly the tree carrier A while preserving comparability, the incomparable outside witness and the set of all branches?**
+
+Authorities checked:
+
+- `FROZEN-OLP-0018-B016` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `REVIEW-OLP0018-STRUCTURAL-PRECHECK` (checked_context_only): provenance/OLP0018-STRUCTURAL-PRECHECK.json — Source-aligned semantic review; paired audit receipt work/SOURCE-CORRECTION-PNBREL-001.json has SHA-256 cd51832f82ea7f39a8cb1c4ac10b4e0c987e4088c133623226d8cf7e886efe95.
 
 Alternatives:
 

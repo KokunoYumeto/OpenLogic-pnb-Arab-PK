@@ -4,8 +4,8 @@
   "scope": {
     "translated_units": 74,
     "source_units_total": 722,
-    "decisions": 172,
-    "occurrences": 2724
+    "decisions": 173,
+    "occurrences": 2727
   },
   "shared_contract": {
     "commit": "811091d54be4989918864732073279a588340e6f",
@@ -16,10 +16,10 @@
   },
   "adapter": {
     "recording_mode": "derived",
-    "legacy_review_log_sha256": "5cd5f55e593dfa8dad0124995de9e8b84e10f1319952698958a9a2824e09cc87",
-    "term_decisions_sha256": "e7b9a116af453e42bdd9674d51db8674bf3ce3762349c82429a7cd32e423fd21",
-    "segment_canon_use_sha256": "bc899221d5ab8ae433be6bc0cb05fe0ea1997f1cd2a08af8bbf12a841397d49a",
-    "source_corrections_sha256": "aaf32ef5727795e041f3911b6a20dcfcb326ccca750fd9ef8986e73ec16b4946",
+    "legacy_review_log_sha256": "f404eb2e77c5f04d3432bc96973fc8a8505ab969a256297b48a28693fa0a50f6",
+    "term_decisions_sha256": "832db62a9d965a88dfd9c5875eb09926e586266b58308c343dc149d51a6125d7",
+    "segment_canon_use_sha256": "37434051c2a3196c30cd7f3d4e9a485ad71893c155d520d0393349c65875231c",
+    "source_corrections_sha256": "d39042e34eef3ce218ffca3cff25b616a53cf812adc6529415f43183166b6c48",
     "accepted_translation_reworded_by_adapter": false
   },
   "checks": {
@@ -37,7 +37,7 @@
   },
   "reader_pages": {
     "occurrences_with_accepted_profile_pages": 0,
-    "occurrences_pending_reader_pagination": 2724,
+    "occurrences_pending_reader_pagination": 2727,
     "profiles_available_for_current_public_text": [],
     "semantic_text_identity": "one pnb-Arab-PK Shahmukhi edition; profiles change typography only",
     "historical_v0_1_0_naskh_pdf_sha256": "b2fcb323e4b49630320e2fb7a40ee52c8f6646e6e772566e62338aac427708dc",
@@ -66,27 +66,27 @@
     {
       "path": "START_HERE.md",
       "bytes": 2135,
-      "sha256": "f1acf753b082d3471efb88546024e7fd692a47f4cef4044bb03b7da03b640347"
+      "sha256": "d461d0767d8958f8250333122acd35489a4b2fa944b7a2a1df2908afe9432901"
     },
     {
       "path": "TRANSLATION_DECISIONS_FULL.md",
-      "bytes": 1238853,
-      "sha256": "1e785fb6031214ab8ec19dd238ab9e252faf9bed190e061dbd7e969ed89b99ad"
+      "bytes": 1252081,
+      "sha256": "cb1dde5de6ff3f48622682b674075cee79e505f58f8092e0f3c089e75528571e"
     },
     {
       "path": "PRIORITY_REVIEW.md",
-      "bytes": 372828,
-      "sha256": "2b399c02fd08402ed4b54ac6e7068ff51204cece40f1765e3934c9a15cef91e9"
+      "bytes": 355229,
+      "sha256": "7ada3466fba2be7a36d7bb781fdd757b6730955bc9d6023729d1c26fa8b65902"
     },
     {
       "path": "DECISION_OCCURRENCES.csv",
-      "bytes": 1850206,
-      "sha256": "03e2412fb214bb8a16f7c81250567fca8cd0bf630f04343694063e2862db7268"
+      "bytes": 1916722,
+      "sha256": "c5991673b582d776d215d72ae35fd76c15ab0a5e1cb41d4529d0f0492401ab11"
     },
     {
       "path": "DECISIONS.json",
-      "bytes": 13821186,
-      "sha256": "ae3ca877ccf8071999a9ab94f222800380f1aa0af78836007ed2ceaf7d97e24d"
+      "bytes": 13962268,
+      "sha256": "301ff9bfe54194f640d1d09878a7078ba63736e10703d7fba43728cb80882c04"
     },
     {
       "path": "translation-decision.schema.json",
