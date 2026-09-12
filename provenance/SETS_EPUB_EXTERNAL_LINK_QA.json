@@ -1,0 +1,125 @@
+{
+  "input_qa": {
+    "bytes": 7113,
+    "path": "durable-state/work/sets-epub-v020/INDEPENDENT_QA.json",
+    "sha256": "4074bfa79779bbedae20b2995b2722fadf85054bd6bc84085b327b98ac24c9a4"
+  },
+  "links_checked": 11,
+  "links_failed": 0,
+  "links_passed": 11,
+  "mode": "anonymous bounded GET; first 1024 response bytes read; redirects followed; no credentials",
+  "results": [
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://creativecommons.org/licenses/by/4.0/",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "ffb5a1ee784bb7302cdc1daeaf4e9a24919e133ae67fb2a39493e3f8831086f1",
+      "status": 200,
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/KokunoYumeto/OpenLogic-translations",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/KokunoYumeto/OpenLogic-translations"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/basics.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/basics.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/important-sets.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/important-sets.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/pairs-and-products.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/pairs-and-products.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/russells-paradox.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/russells-paradox.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/sets.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/sets.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/subsets.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/subsets.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "c7c0b9ee20b5f821c62b48935fce8f6cb9b8f30f6b8a674edaf27a5932f0cdcc",
+      "status": 200,
+      "url": "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/unions-and-intersections.tex"
+    },
+    {
+      "content_length_header": null,
+      "content_type": "text/html",
+      "final_url": "https://openlogicproject.org/",
+      "pass": true,
+      "sample_bytes": 1024,
+      "sample_sha256": "a98a659e2549730560851fadff476666c11484543ca2effe0da3265e34ec19cc",
+      "status": 200,
+      "url": "https://openlogicproject.org/"
+    }
+  ],
+  "schema": "pnb-sets-epub3-external-link-qa/1",
+  "status": "pass"
+}

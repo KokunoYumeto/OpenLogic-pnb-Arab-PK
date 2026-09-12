@@ -1,0 +1,236 @@
+{
+  "browser_errors": {
+    "actionable_console": [],
+    "classified_engine_or_browser_warnings": [],
+    "page": []
+  },
+  "execution": {
+    "actual_archived_epub": true,
+    "external_network_denied": true,
+    "magnification_probe": "200% root font size at 360 CSS pixels",
+    "reading_engine": "EPUB.js 0.3.93 in headless Chromium",
+    "scope": "All five archived spine documents loaded; six representative locations rendered and captured. This is bounded runtime evidence, not an all-device or human accessibility certification.",
+    "scripted_content_allowed": false,
+    "speech_synthesis_stubbed_and_silent": true,
+    "text_spacing_probe": "1.5 line height, 0.12em letter spacing, 0.16em word spacing at 360 CSS pixels",
+    "transport": "ephemeral loopback-only HTTP server; all non-loopback requests aborted",
+    "viewport_css_pixels": {
+      "height": 900,
+      "width": 360
+    }
+  },
+  "failures": [],
+  "input": {
+    "epub": "durable-state/work/sets-epub-v020/OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+    "epub_bytes": 295920,
+    "epub_sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba",
+    "independent_qa_sha256": "4074bfa79779bbedae20b2995b2722fadf85054bd6bc84085b327b98ac24c9a4"
+  },
+  "network": {
+    "external_request_attempts": [],
+    "loopback_requests": [
+      {
+        "method": "GET",
+        "path": "/harness.html"
+      },
+      {
+        "method": "GET",
+        "path": "/jszip.min.js"
+      },
+      {
+        "method": "GET",
+        "path": "/epub.min.js"
+      },
+      {
+        "method": "GET",
+        "path": "/favicon.ico"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      },
+      {
+        "method": "GET",
+        "path": "/book.epub"
+      }
+    ],
+    "request_failures": []
+  },
+  "runner_sha256": "59337811a1c3c86fbb9019948773648bd70af4c96634793b7fbc1a9c56e7ec72",
+  "runtime": {
+    "counts": {
+      "empty_bodies": 0,
+      "empty_titles": 0,
+      "locale_errors": 0,
+      "math_direction_errors": 0,
+      "mathml_annotations": 329,
+      "mathml_roots": 329,
+      "rtl_math_text_errors": 0,
+      "rtl_root_errors": 0,
+      "scripts": 0,
+      "spine_items": 5,
+      "statements": 39,
+      "svg_descriptions": 3,
+      "svg_roots": 3,
+      "svg_titles": 3,
+      "toc_link_items": 10,
+      "unique_spine_hrefs": 5,
+      "xhtml_documents_loaded": 5
+    },
+    "engine": {
+      "archived_epub_opened": true,
+      "name": "epub.js",
+      "native_mathml_element_supported": true,
+      "version": "0.3.93"
+    },
+    "metadata": {
+      "direction": "rtl",
+      "identifier": "urn:sha256:86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b:sets-pnb-Arab-PK-epub3-v0.2.0",
+      "language": "pnb-Arab-PK",
+      "layout": "reflowable",
+      "title": "OpenLogic: سیٹ — پنجابی شاہ مکھی ایڈیشن"
+    },
+    "representative_renders": [
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/cover.xhtml",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 0,
+        "name": "01-cover",
+        "svg_roots": 0,
+        "text_characters": 555,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "اوپن لاجک: سیٹ — پنجابی شاہ مکھی",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      },
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/nav.xhtml",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 0,
+        "name": "02-navigation",
+        "svg_roots": 0,
+        "text_characters": 219,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "فہرست — اوپن لاجک سیٹ",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      },
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/read.xhtml",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 329,
+        "name": "03-read-opening",
+        "svg_roots": 3,
+        "text_characters": 24666,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "سیٹ — اوپن لاجک پنجابی شاہ مکھی",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      },
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/read.xhtml#sfr-set-uni-sec",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 329,
+        "name": "04-union-diagram",
+        "svg_roots": 3,
+        "text_characters": 24666,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "سیٹ — اوپن لاجک پنجابی شاہ مکھی",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      },
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/read.xhtml#sfr-set-pai-sec",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 329,
+        "name": "05-pairs-math",
+        "svg_roots": 3,
+        "text_characters": 24666,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "سیٹ — اوپن لاجک پنجابی شاہ مکھی",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      },
+      {
+        "baseline_global_horizontal_overflow": false,
+        "direction": "rtl",
+        "failures": [],
+        "href": "text/provenance.xhtml",
+        "language": "pnb-Arab-PK",
+        "mathml_roots": 0,
+        "name": "06-provenance",
+        "svg_roots": 0,
+        "text_characters": 2806,
+        "text_spacing_global_horizontal_overflow": false,
+        "title": "ماخذ، دائرہ تے ایڈیشن دی تفصیل",
+        "two_hundred_percent_magnification_global_horizontal_overflow": false
+      }
+    ],
+    "section_findings": [],
+    "speech_calls": 0
+  },
+  "schema": "pnb-sets-epub-runtime-acceptance/1",
+  "screenshots": [
+    {
+      "bytes": 44690,
+      "file": "01-cover.png",
+      "sha256": "e1911d4da8a6dd7c8e405e0f6fa49ea8570885afd95552f7e057d24310ae1f8b"
+    },
+    {
+      "bytes": 30267,
+      "file": "02-navigation.png",
+      "sha256": "ccb9fdc05819648432402a2e01de15e2a0572980e000b98b37dfb8bc7da74994"
+    },
+    {
+      "bytes": 70483,
+      "file": "03-read-opening.png",
+      "sha256": "bebe8a1636663727b544f5f24f29faf1227785bd924a0c0edac3bb1f9f2dcb2e"
+    },
+    {
+      "bytes": 90413,
+      "file": "04-union-diagram.png",
+      "sha256": "662b5b4c1a8fc4dd1ed9e5e00760f7ac81a0a15716ae31107cec59a35f61ec65"
+    },
+    {
+      "bytes": 79784,
+      "file": "05-pairs-math.png",
+      "sha256": "527fd6e9aa33cf006e8261e4831cb4ed132fda94f474a94bce98e3f20a4877db"
+    },
+    {
+      "bytes": 57871,
+      "file": "06-provenance.png",
+      "sha256": "100fb735e63d58ced7d683a2be62132b1c87e00d2a9b081d318f1ec08b948d3f"
+    }
+  ],
+  "status": "pass"
+}

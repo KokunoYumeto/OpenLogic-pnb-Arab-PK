@@ -1,0 +1,119 @@
+{
+  "epub_checks": {
+    "deterministic_cold_byte_match": true,
+    "epubcheck_5_3_0": {
+      "errors": 0,
+      "fatals": 0,
+      "infos": 0,
+      "warnings": 0
+    },
+    "external_https_links_checked_anonymously": 11,
+    "genuine_epub_version": "3.3",
+    "internal_links_checked": 30,
+    "language": "pnb-Arab-PK",
+    "mathml_tex_annotations": 329,
+    "native_mathml_roots": 329,
+    "punjabi_lexical_coverage_deficits": 0,
+    "rendition_layout": "reflowable",
+    "representative_runtime_renders_visually_reviewed": 6,
+    "rtl_math_text_runs": 21,
+    "rtl_spine_and_documents": true,
+    "runtime_spine_documents_loaded": 5,
+    "statement_and_exercise_headings": 39,
+    "svg_diagrams_with_text_alternatives": 3,
+    "tex_engine_invoked_for_epub": false,
+    "unrendered_tokens": 0
+  },
+  "evidence": [
+    {
+      "bytes": 7786,
+      "name": "provenance/SETS_EPUB_BUILD_RECEIPT.json",
+      "sha256": "2660f497c804b62086bacc062b5bd6934c3f091a5dd297264c844da37fccde3c"
+    },
+    {
+      "bytes": 9974,
+      "name": "provenance/SETS_EPUB_EPUBCHECK.json",
+      "sha256": "0ed0f99b5ea34eaa25cdd0b7a9a020bd47a2e774733b0b3d9d67501a14a88e1d"
+    },
+    {
+      "bytes": 7072,
+      "name": "provenance/SETS_EPUB_INDEPENDENT_QA.json",
+      "sha256": "6aff6708874447f53b73767ce8f0067d075b7089ad4a3fb331d67e727dc2aa7b"
+    },
+    {
+      "bytes": 7500,
+      "name": "provenance/SETS_EPUB_RUNTIME_ACCEPTANCE.json",
+      "sha256": "88690b8827c41497ce41f797627ae559366cf00381ab3320068a52c2d6911b3b"
+    },
+    {
+      "bytes": 5988,
+      "name": "provenance/SETS_EPUB_EXTERNAL_LINK_QA.json",
+      "sha256": "f2510995cb903cb084f963958dafbc6c9170ad6178a49599d746187d2f603397"
+    },
+    {
+      "bytes": 4975,
+      "name": "provenance/SETS_EPUB_VISUAL_REVIEW.json",
+      "sha256": "b4e93cde2cf9dd217614b819922ee3f2432d5629468c7ee09b4c0945d12d8324"
+    },
+    {
+      "bytes": 12245,
+      "name": "provenance/PORTABLE_CANDIDATE_QA.json",
+      "sha256": "de746469c5394b295ddf40ac2db1898b1503c126197581f943b3ef949d4aacce"
+    }
+  ],
+  "limits": [
+    "Specialized terminology remains provisional and lacks independent native-speaker review.",
+    "Only the complete Sets chapter has integrated reader acceptance; later chapters receive no release credit here.",
+    "MathML rendering varies by reading system; bounded automated and representative visual checks are not an all-device or human accessibility certification.",
+    "The PDFs are not tagged accessible PDFs."
+  ],
+  "pdf_checks": {
+    "all_29_pages_visually_inspected": true,
+    "all_fonts_embedded": true,
+    "naskh_pages": 12,
+    "nastaliq_pages": 17,
+    "same_toolchain_byte_reproduction": true,
+    "tagged_pdf": false
+  },
+  "reader_files": {
+    "epub": {
+      "bytes": 295920,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+      "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba"
+    },
+    "pdfs": [
+      {
+        "bytes": 136127,
+        "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf",
+        "pages": 12,
+        "profile": "naskh",
+        "sha256": "1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313"
+      },
+      {
+        "bytes": 192407,
+        "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Nastaliq-v0.2.0.pdf",
+        "pages": 17,
+        "profile": "nastaliq",
+        "sha256": "c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7"
+      }
+    ]
+  },
+  "schema": "pnb-sets-reader-release-qa/2",
+  "scope": {
+    "claim": "complete Sets chapter only; not the complete 722-unit OpenLogic edition",
+    "sections": 6,
+    "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+    "source_units": 7,
+    "unit_ids": [
+      "OLP-0004",
+      "OLP-0005",
+      "OLP-0006",
+      "OLP-0007",
+      "OLP-0008",
+      "OLP-0009",
+      "OLP-0010"
+    ]
+  },
+  "status": "accepted_for_publication",
+  "version": "0.2.0"
+}

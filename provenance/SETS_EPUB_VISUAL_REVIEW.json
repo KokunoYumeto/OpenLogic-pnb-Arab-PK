@@ -1,0 +1,104 @@
+{
+  "artifact": {
+    "bytes": 295920,
+    "file": "OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+    "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba"
+  },
+  "claim_limit": "Representative visual acceptance of six locations in one EPUB.js/Chromium runtime; not an all-reading-system or human accessibility certification.",
+  "date_utc": "2026-09-13",
+  "defects_closed": [
+    {
+      "defect": "Flattened mixed Punjabi/English section labels reordered parentheses in navigation.",
+      "repair": "Navigation now uses the native Punjabi label; the full English bridge remains in an explicitly isolated span in the chapter heading."
+    },
+    {
+      "defect": "RTL list flow collided with LTR unit paths and SHA-256 labels in provenance.",
+      "repair": "Unit identifiers, paths, labels and digests now occupy explicit LTR blocks; redundant list numerals are suppressed."
+    },
+    {
+      "defect": "Punjabi MathML text inherited the LTR direction of the enclosing formal expression.",
+      "repair": "Arabic-script mtext runs are explicitly marked RTL while math roots remain LTR."
+    }
+  ],
+  "rendering": {
+    "actual_archived_epub": true,
+    "browser_color_scheme_observed": "dark",
+    "engine": "EPUB.js 0.3.93 in headless Chromium",
+    "runtime_acceptance_sha256": "8eb4834ffd107c9d6ee4237211f64edd9a147d5c75dc9cdf394ddf66ca327551",
+    "vertical_continuation": "Viewport captures are representative scroll positions; material below the viewport remains available through ordinary reflow/scrolling.",
+    "viewport_css_pixels": {
+      "height": 900,
+      "width": 360
+    }
+  },
+  "schema": "pnb-sets-epub3-representative-visual-review/1",
+  "screenshots": [
+    {
+      "bytes": 44690,
+      "file": "runtime-screenshots/01-cover.png",
+      "observations": [
+        "Punjabi title and subtitle join correctly in Noto Naskh Arabic.",
+        "Seven-unit scope notice is visible and the English credit/revision block remains readable as LTR content.",
+        "No horizontal clipping or overlapping elements are visible."
+      ],
+      "review": "pass",
+      "sha256": "e1911d4da8a6dd7c8e405e0f6fa49ea8570885afd95552f7e057d24310ae1f8b"
+    },
+    {
+      "bytes": 30267,
+      "file": "runtime-screenshots/02-navigation.png",
+      "observations": [
+        "The chapter hierarchy and all six native Punjabi section labels are visible in reading order.",
+        "Native-only navigation labels avoid the mixed-direction parenthesis reversal found in the first visual candidate.",
+        "Landmarks are present and no line collides with another."
+      ],
+      "review": "pass",
+      "sha256": "ccb9fdc05819648432402a2e01de15e2a0572980e000b98b37dfb8bc7da74994"
+    },
+    {
+      "bytes": 70483,
+      "file": "runtime-screenshots/03-read-opening.png",
+      "observations": [
+        "The honest partial-scope box, chapter title, source-unit citation and first section appear in semantic order.",
+        "Punjabi prose is RTL with correctly isolated English bridges and LTR mathematical variables.",
+        "Line wrapping is natural at 360 CSS pixels with no horizontal clipping."
+      ],
+      "review": "pass",
+      "sha256": "bebe8a1636663727b544f5f24f29faf1227785bd924a0c0edac3bb1f9f2dcb2e"
+    },
+    {
+      "bytes": 90413,
+      "file": "runtime-screenshots/04-union-diagram.png",
+      "observations": [
+        "Set-builder mathematics remains visually distinct from Punjabi prose.",
+        "The accessible SVG union diagram has two labelled boundaries and highlights the complete union, including the overlap.",
+        "The Punjabi structural text alternative begins directly below the diagram without collision."
+      ],
+      "review": "pass",
+      "sha256": "662b5b4c1a8fc4dd1ed9e5e00760f7ac81a0a15716ae31107cec59a35f61ec65"
+    },
+    {
+      "bytes": 79784,
+      "file": "runtime-screenshots/05-pairs-math.png",
+      "observations": [
+        "Angle brackets, braces, equality and inequality symbols render as native mathematics rather than raw TeX.",
+        "Punjabi mtext inside the mixed equality display is explicitly RTL while the encompassing formal sequence remains LTR.",
+        "Definition and exercise numbering remain legible and no display causes page-wide horizontal overflow."
+      ],
+      "review": "pass",
+      "sha256": "527fd6e9aa33cf006e8261e4831cb4ed132fda94f474a94bce98e3f20a4877db"
+    },
+    {
+      "bytes": 57871,
+      "file": "runtime-screenshots/06-provenance.png",
+      "observations": [
+        "Scope, native MathML disclosure and seven-unit provenance heading are visible in Punjabi.",
+        "Unit IDs, source paths, SHA-256 labels and digests are isolated as LTR blocks and wrap without bidi collision.",
+        "The redundant ordered-list markers found in the second visual candidate have been removed."
+      ],
+      "review": "pass",
+      "sha256": "100fb735e63d58ced7d683a2be62132b1c87e00d2a9b081d318f1ec08b948d3f"
+    }
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,203 @@
+{
+  "accepted_reader_inputs_sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b",
+  "builder_path": "tools/build_sets_epub.py",
+  "builder_sha256": "5b739557d9e005966360d19d88310d263567a0e01a3f0a2b6b92b690e8f64851",
+  "canonical": {
+    "accepted_reader_inputs_sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b",
+    "archive": {
+      "bytes": 295920,
+      "entries": 11,
+      "path": "OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+      "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba"
+    },
+    "container": {
+      "container_sha256": "d259eabf3c1e282e4c68489f01c2e607deccee946b065e203ce60ce757391725",
+      "mimetype_sha256": "e468e350d1143eb648f60c7b0bd6031101ec0544a361ca74ecef256ac901f48b"
+    },
+    "css": {
+      "bytes": 2904,
+      "path": "OEBPS/styles/reader.css",
+      "sha256": "55955ddbf2f64eb94c37585bf940d8882c0cf6c8b37d043a6903ce5b7d995877"
+    },
+    "documents": {
+      "cover.xhtml": {
+        "bytes": 1452,
+        "path": "OEBPS/text/cover.xhtml",
+        "sha256": "e7a4fc24a051ef3f6e05d5dc502603973807afeeec7571e09e7fd894f591bb72"
+      },
+      "licenses.xhtml": {
+        "bytes": 5004,
+        "path": "OEBPS/text/licenses.xhtml",
+        "sha256": "3c97f87553c4300b059b11975e66cd67ea27e3c7475ad7ac7082be092fd16034"
+      },
+      "nav.xhtml": {
+        "bytes": 1602,
+        "path": "OEBPS/text/nav.xhtml",
+        "sha256": "18a638721bf229994cde2a0ed919a889e330705a2947c3ceeeac937e40a4c56e"
+      },
+      "provenance.xhtml": {
+        "bytes": 8415,
+        "path": "OEBPS/text/provenance.xhtml",
+        "sha256": "75e15b3954935b3c7f2d5af03b85a102ca8ed02fe3ecf86b2465f7c068ff4c9c"
+      },
+      "read.xhtml": {
+        "bytes": 148691,
+        "path": "OEBPS/text/read.xhtml",
+        "sha256": "523fda4699234e4798a132e008fd5153abe7aa89f08271bf19e6d17baf096bbf"
+      }
+    },
+    "fonts": [
+      {
+        "bytes": 291980,
+        "path": "OEBPS/fonts/NotoNaskhArabic-Regular.ttf",
+        "sha256": "c9a039ce48a477243c1eb7d561b13de115cfd651d8a83fa42e2f4d63c2e11b00"
+      },
+      {
+        "bytes": 325232,
+        "path": "OEBPS/fonts/NotoNaskhArabic-Bold.ttf",
+        "sha256": "d328b92b6bb762fd61d6438dddb7b00dd0663115afb292a358101808efe117b2"
+      }
+    ],
+    "generated_reader_stdout": "{\"units\": 7, \"sections\": 6, \"references\": 5, \"assets\": 3, \"conditional_branches\": 2, \"inputs_sha256\": \"86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b\"}",
+    "math_sanitization": {
+      "display_regions": 15,
+      "dollar_regions": 305,
+      "environment_regions": 7,
+      "inline_paren_regions": 1
+    },
+    "package": {
+      "bytes": 4530,
+      "manifest_items": 8,
+      "path": "OEBPS/package.opf",
+      "sha256": "3fa5141fddd54e61791b85dc926280932c611198b93a43c4a29fb68f6d7afa04",
+      "spine_items": 5
+    },
+    "pandoc": {
+      "command": [
+        "pandoc.EXE",
+        "sets-naskh-epub.tex",
+        "--from=latex",
+        "--to=html5",
+        "--standalone",
+        "--mathml",
+        "--wrap=none"
+      ],
+      "stderr": "",
+      "version": "pandoc 3.9.0.2"
+    },
+    "read_metrics": {
+      "figures": 3,
+      "id_rewrites": {
+        "sfr:set:bas:sec": "sfr-set-bas-sec",
+        "sfr:set:imp:sec": "sfr-set-imp-sec",
+        "sfr:set:pai:cardnmprod": "sfr-set-pai-cardnmprod",
+        "sfr:set:pai:sec": "sfr-set-pai-sec",
+        "sfr:set:pai:wienerkuratowski": "sfr-set-pai-wienerkuratowski",
+        "sfr:set:rus:sec": "sfr-set-rus-sec",
+        "sfr:set:rus:thm:russells-paradox": "sfr-set-rus-thm-russells-paradox",
+        "sfr:set:sub:forallxina": "sfr-set-sub-forallxina",
+        "sfr:set:sub:sec": "sfr-set-sub-sec",
+        "sfr:set:uni:difference": "sfr-set-uni-difference",
+        "sfr:set:uni:fig:intersection": "sfr-set-uni-fig-intersection",
+        "sfr:set:uni:fig:union": "sfr-set-uni-fig-union",
+        "sfr:set:uni:sec": "sfr-set-uni-sec"
+      },
+      "mathml_roots": 329,
+      "mathml_tex_annotations": 329,
+      "rtl_math_text_runs": 21,
+      "sections": 6,
+      "semantic_reference_links": 5,
+      "statement_headings_numbered": 39,
+      "unresolved_semantic_references": []
+    },
+    "unpacked_tree_sha256": "99f8de11e562299d3f61bd5fcd74dc0ed8f30a82bda6f7fa4065bac91824a4f7"
+  },
+  "cold": {
+    "archive": {
+      "bytes": 295920,
+      "entries": 11,
+      "path": "cold-OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+      "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba"
+    },
+    "unpacked_tree_sha256": "99f8de11e562299d3f61bd5fcd74dc0ed8f30a82bda6f7fa4065bac91824a4f7"
+  },
+  "deterministic_cold_match": true,
+  "modified": "2026-09-10T00:00:00Z",
+  "schema": "pnb-sets-epub3-build-receipt/1",
+  "scope": {
+    "body_sections": 6,
+    "claim": "complete Sets chapter only; not the complete 722-unit edition",
+    "source_units": 7,
+    "unit_ids": [
+      "OLP-0004",
+      "OLP-0005",
+      "OLP-0006",
+      "OLP-0007",
+      "OLP-0008",
+      "OLP-0009",
+      "OLP-0010"
+    ]
+  },
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_units": [
+    {
+      "source_bytes": 356,
+      "source_path": "content/sets-functions-relations/sets/sets.tex",
+      "source_sha256": "98a8964a95d72ab3004decdef3ee74f1dd1f221dd06dfc0e6d44eff52104f277",
+      "translation_bytes": 358,
+      "translation_sha256": "ea5e38050032621910376183edf8fbe290bb9fafa91e621844e914cc74fb7fc9",
+      "unit_id": "OLP-0004"
+    },
+    {
+      "source_bytes": 3819,
+      "source_path": "content/sets-functions-relations/sets/basics.tex",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "translation_bytes": 6304,
+      "translation_sha256": "57fe0ef1b8ede308916b19b3fed6574e34ea457c726e0214b1d7e34af1b447be",
+      "unit_id": "OLP-0005"
+    },
+    {
+      "source_bytes": 3515,
+      "source_path": "content/sets-functions-relations/sets/subsets.tex",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "translation_bytes": 5287,
+      "translation_sha256": "a43f274cfde6cfc699290f18825cd2dbbc34785b375ea242d2d2c88eb7690ca0",
+      "unit_id": "OLP-0006"
+    },
+    {
+      "source_bytes": 2651,
+      "source_path": "content/sets-functions-relations/sets/important-sets.tex",
+      "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
+      "translation_bytes": 3736,
+      "translation_sha256": "ddd8bf078a1af4c70ff0156d6e20bfdc6b096fc1a2ab54613042c583c709d2e0",
+      "unit_id": "OLP-0007"
+    },
+    {
+      "source_bytes": 5901,
+      "source_path": "content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_bytes": 8451,
+      "translation_sha256": "e082ec2cb505a12d1a6a82e7d89d4c460c179b589b17357ac0682b2f9f26bb2e",
+      "unit_id": "OLP-0008"
+    },
+    {
+      "source_bytes": 4516,
+      "source_path": "content/sets-functions-relations/sets/pairs-and-products.tex",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_bytes": 6850,
+      "translation_sha256": "0492517400d9fe7b4ac77558bf2028dd61f101646bd2068c774bbc9b10624c5e",
+      "unit_id": "OLP-0009"
+    },
+    {
+      "source_bytes": 3672,
+      "source_path": "content/sets-functions-relations/sets/russells-paradox.tex",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "translation_bytes": 6154,
+      "translation_sha256": "c6a36353f264aaeb76a3db74efef7aa7e5f3f9fabe1038b26822d2c2dee1914b",
+      "unit_id": "OLP-0010"
+    }
+  ],
+  "status": "pass",
+  "teX_engine_invoked": false,
+  "version": "0.2.0"
+}

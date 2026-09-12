@@ -1,0 +1,47 @@
+{
+  "aggregate_qa": {
+    "bytes": 3906,
+    "name": "provenance/SETS_EPUB_RELEASE_QA.json",
+    "sha256": "ab3c8f59c24220af5014153c91c551249c258b4be47b286287b388dd04635caa"
+  },
+  "files": [
+    {
+      "bytes": 136127,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf",
+      "sha256": "1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313"
+    },
+    {
+      "bytes": 192407,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Nastaliq-v0.2.0.pdf",
+      "sha256": "c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7"
+    },
+    {
+      "bytes": 24144,
+      "entries": 9,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-QA-v0.2.0.zip",
+      "sha256": "51da265a39dd749b0d9ffb10737d01d62ec71ac7d57c8e63804458fb6273a918"
+    },
+    {
+      "bytes": 2173252,
+      "entries": 50,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-editable-v0.2.0.zip",
+      "sha256": "92e27880ff2a48d33d19e03c85723a150875a0e5f9deeadbcf037fa7bdf98af0"
+    },
+    {
+      "bytes": 295920,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+      "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba"
+    },
+    {
+      "bytes": 578,
+      "name": "SHA256SUMS.txt",
+      "sha256": "c83ffc958005027dd1022be411330474636a9f8a901b40b0968c010ec1457bbe"
+    }
+  ],
+  "primary_preview": "OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf",
+  "release_notes": "RELEASE_NOTES_v0.2.0.md",
+  "schema": "pnb-sets-v020-release-manifest/1",
+  "scope": "complete Sets chapter OLP-0004 through OLP-0010 only; 7 of 722 source units",
+  "status": "accepted_for_publication",
+  "version": "0.2.0"
+}

@@ -1,0 +1,5 @@
+1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313  OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf
+c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7  OpenLogic-Sets-Punjabi-Shahmukhi-Nastaliq-v0.2.0.pdf
+51da265a39dd749b0d9ffb10737d01d62ec71ac7d57c8e63804458fb6273a918  OpenLogic-Sets-Punjabi-Shahmukhi-QA-v0.2.0.zip
+92e27880ff2a48d33d19e03c85723a150875a0e5f9deeadbcf037fa7bdf98af0  OpenLogic-Sets-Punjabi-Shahmukhi-editable-v0.2.0.zip
+fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba  OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub

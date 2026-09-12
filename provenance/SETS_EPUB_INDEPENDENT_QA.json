@@ -1,0 +1,145 @@
+{
+  "artifact": {
+    "bytes": 295920,
+    "path": "durable-state/work/sets-epub-v020/OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub",
+    "sha256": "fd8a878c1d6159cd5917444449a6fb56c7551f61719182d010448ad6893fa0ba",
+    "zip_entries": 11
+  },
+  "content": {
+    "canonical_translation_arabic_script_characters": 11074,
+    "canonical_translation_distinct_arabic_words": 462,
+    "diagram_structural_text_alternatives": 3,
+    "mathml_roots": 329,
+    "mathml_tex_annotations": 329,
+    "punjabi_lexical_coverage_deficits": {},
+    "rtl_math_text_runs": 21,
+    "semantic_cross_references": 5,
+    "semantic_sections": 6,
+    "statement_and_exercise_headings": 39,
+    "svg_descriptions": 3,
+    "svg_diagrams": 3,
+    "unrendered_tokens": [],
+    "visible_epub_arabic_script_characters": 12283
+  },
+  "current_unit_identity_checks": [
+    {
+      "source_path": "content/sets-functions-relations/sets/sets.tex",
+      "source_sha256": "98a8964a95d72ab3004decdef3ee74f1dd1f221dd06dfc0e6d44eff52104f277",
+      "translation_sha256": "ea5e38050032621910376183edf8fbe290bb9fafa91e621844e914cc74fb7fc9",
+      "unit_id": "OLP-0004"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/basics.tex",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "translation_sha256": "57fe0ef1b8ede308916b19b3fed6574e34ea457c726e0214b1d7e34af1b447be",
+      "unit_id": "OLP-0005"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/subsets.tex",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "translation_sha256": "a43f274cfde6cfc699290f18825cd2dbbc34785b375ea242d2d2c88eb7690ca0",
+      "unit_id": "OLP-0006"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/important-sets.tex",
+      "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
+      "translation_sha256": "ddd8bf078a1af4c70ff0156d6e20bfdc6b096fc1a2ab54613042c583c709d2e0",
+      "unit_id": "OLP-0007"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_sha256": "e082ec2cb505a12d1a6a82e7d89d4c460c179b589b17357ac0682b2f9f26bb2e",
+      "unit_id": "OLP-0008"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/pairs-and-products.tex",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_sha256": "0492517400d9fe7b4ac77558bf2028dd61f101646bd2068c774bbc9b10624c5e",
+      "unit_id": "OLP-0009"
+    },
+    {
+      "source_path": "content/sets-functions-relations/sets/russells-paradox.tex",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "translation_sha256": "c6a36353f264aaeb76a3db74efef7aa7e5f3f9fabe1038b26822d2c2dee1914b",
+      "unit_id": "OLP-0010"
+    }
+  ],
+  "epubcheck": {
+    "errors": 0,
+    "fatal": 0,
+    "report_bytes": 9805,
+    "report_sha256": "a9faa680f3af4c3ede945e727587aacc8292d49e76bdbdea121e3cf97e423359",
+    "version": "5.3.0",
+    "warnings": 0
+  },
+  "links": {
+    "broken_internal_links": 0,
+    "external_https_links": [
+      "https://creativecommons.org/licenses/by/4.0/",
+      "https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK",
+      "https://github.com/KokunoYumeto/OpenLogic-translations",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/basics.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/important-sets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/pairs-and-products.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/russells-paradox.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/sets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/subsets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/unions-and-intersections.tex",
+      "https://openlogicproject.org/"
+    ],
+    "frozen_source_links": [
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/basics.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/important-sets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/pairs-and-products.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/russells-paradox.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/sets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/subsets.tex",
+      "https://github.com/OpenLogicProject/OpenLogic/blob/9620cc73f9c8e0ad003c514a5d3748f29611c4c0/content/sets-functions-relations/sets/unions-and-intersections.tex"
+    ],
+    "internal_links_checked": 30
+  },
+  "package": {
+    "active_content": 0,
+    "epub_version": "3.3",
+    "language": "pnb-Arab-PK",
+    "manifest_items": 8,
+    "page_progression_direction": "rtl",
+    "rendition_layout": "reflowable",
+    "spine_paths": [
+      "OEBPS/text/cover.xhtml",
+      "OEBPS/text/nav.xhtml",
+      "OEBPS/text/read.xhtml",
+      "OEBPS/text/provenance.xhtml",
+      "OEBPS/text/licenses.xhtml"
+    ]
+  },
+  "prior_reader_acceptance": {
+    "inputs_path": "provenance/PORTABLE_CANDIDATE_INPUTS.json",
+    "inputs_sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b",
+    "qa_path": "provenance/PORTABLE_CANDIDATE_QA.json",
+    "qa_sha256": "de746469c5394b295ddf40ac2db1898b1503c126197581f943b3ef949d4aacce",
+    "status": "REPRODUCED_FULL_PAGE_VISUAL_PASS_NOT_RELEASED"
+  },
+  "reproducibility": {
+    "canonical_and_cold_epub_sha256_match": true,
+    "tex_engine_invoked": false,
+    "unpacked_tree_sha256_match": true
+  },
+  "schema": "pnb-sets-epub3-independent-qa/1",
+  "scope": {
+    "body_sections": 6,
+    "claim": "complete Sets chapter only; not the complete 722-unit edition",
+    "source_units": 7,
+    "unit_ids": [
+      "OLP-0004",
+      "OLP-0005",
+      "OLP-0006",
+      "OLP-0007",
+      "OLP-0008",
+      "OLP-0009",
+      "OLP-0010"
+    ]
+  },
+  "status": "pass"
+}
