@@ -1,0 +1,155 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0023",
+  "reviewed_at_utc": "2026-09-09T21:03:30.583488Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 17890,
+    "sha256": "ed68aa239374b233a4185ee115e2dffc7307366821abe4e1f70623543d23171d"
+  },
+  "witness_capture": {
+    "file": "WITNESS_CAPTURE.json",
+    "bytes": 10636,
+    "sha256": "bd996d839b48aa4b1a7c9f73734d4108c49230f2e540c879a531c3d2203b2aae"
+  },
+  "witness_adoption": {
+    "file": "WITNESS_ADOPTION.json",
+    "bytes": 2506,
+    "sha256": "d5d9fbe46046bdf5733265050b30e177a647830ad0e7cc5cff66f353f01e3cdc"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0023-Q01"
+      ],
+      "disposition": "one exact revision captured and narrowly adopted",
+      "detail": "The page فنکشن دا گراف, revision 571506, line 5 defines the graph of f as the set of ordered pairs (x,f(x)). Exact response PNB-MATH-W12-revision-571506.json is retained; PNB-C018 and PNB-P037 adopt only that phrase and ordered-pair definition as community technical usage."
+    },
+    {
+      "query_ids": [
+        "OLP0023-Q08",
+        "OLP0023-Q09"
+      ],
+      "disposition": "positive token hits but no function-image/application attestation",
+      "detail": "The returned pages use اطلاق in general application senses and عکس in unrelated, inverse or ordinary senses. None supplies the exact image/application-of-a-subset definition, so no passage was adopted for those labels."
+    },
+    {
+      "query_ids": [
+        "OLP0023-Q02",
+        "OLP0023-Q03",
+        "OLP0023-Q04",
+        "OLP0023-Q05",
+        "OLP0023-Q06",
+        "OLP0023-Q07",
+        "OLP0023-Q10",
+        "OLP0023-Q11",
+        "OLP0023-Q12",
+        "OLP0023-Q13",
+        "OLP0023-Q14",
+        "OLP0023-Q15",
+        "OLP0023-Q16"
+      ],
+      "disposition": "zero exact-form results",
+      "detail": "No bounded result supplied a revision-bound witness for functional relation, well-defined, function restriction, function image, extensionality for functions, range phrasing, or the full functions-as-relations label. Search absence is not linguistic absence."
+    }
+  ],
+  "positive_discovery_samples": [
+    {
+      "query_id": "OLP0023-Q01",
+      "query": "\"فنکشن دا گراف\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 96782,
+          "title": "فنکشن دا گراف",
+          "timestamp": "2020-12-07T10:10:28Z",
+          "snippet": "د‏ی گرافی صورت سطح ہوئے گی (دیکھو سہ بعدی گراف )۔ حقیقی اعداد اُتے <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">دا</span> <span class=\"searchmatch\">گراف</span> اس دے گرافی صورت دے برابر ا‏‏ے۔ جامع فنکشن دے لئی، گرافی صورت بنانا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0023-Q08",
+      "query": "\"اطلاق\" فنکشن ریاضی",
+      "total_hits": 9,
+      "observed_hits": [
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے تعریف شدہ ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        },
+        {
+          "pageid": 77806,
+          "title": "لیونہارڈ اویلر",
+          "timestamp": "2026-08-25T02:00:28Z",
+          "snippet": "کارآمد ہو گئے تے انہاں دا <span class=\"searchmatch\">اطلاق</span> بہت سی چگہاں اُتے ہونے لگیا۔ اس نے مختلط عدد دا وی اسّی <span class=\"searchmatch\">فنکشن</span> معلوم کیتا تے اس دا مثلثیاندی <span class=\"searchmatch\">فنکشن</span> دے نال رشتہ وی دریافت کیتا۔"
+        },
+        {
+          "pageid": 95119,
+          "title": "گاڈفری ہیرالڈ ہارڈی",
+          "timestamp": "2025-09-27T22:49:50Z",
+          "snippet": "ہارڈی ایف آر ایس (7 فروری 1877 – 1 دسمبر 1947) انگریزی دے اک <span class=\"searchmatch\">ریاضی</span> دان سن جو نمبر تھیوری تے <span class=\"searchmatch\">ریاضی</span> دے تجزیے وچ اپنی کامیابیاں دے لئی جانیا جاندا ۔ حیاتیات وچ"
+        },
+        {
+          "pageid": 78655,
+          "title": "نظریۂ اطلاعات",
+          "timestamp": "2023-09-28T18:03:27Z",
+          "snippet": "Inference and Learning Algorithms&quot; E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات سانچہ:Mathematics-footer"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0023-Q09",
+      "query": "\"عکس\" فنکشن ریاضی",
+      "total_hits": 3,
+      "observed_hits": [
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے تعریف شدہ ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        },
+        {
+          "pageid": 92299,
+          "title": "جین تے انسان",
+          "timestamp": "2020-11-04T18:07:56Z",
+          "snippet": "برسٹ دا نشان سی۔ انسانی جینوم د‏‏ی طرح اک کیچوے د‏‏ی جین وی کئی <span class=\"searchmatch\">فنکشن</span> کردی سی تے اک <span class=\"searchmatch\">فنکشن</span> کئی جینز مل ک‏ے کردیاں سن۔ دس ہزار نويں پروٹینز تے دس ہزار نويں"
+        },
+        {
+          "pageid": 51372,
+          "title": "سٹرینگ تھیوری",
+          "timestamp": "2026-08-25T00:13:24Z",
+          "snippet": "ودھاؤندی ہے۔ جویں کوانٹم پھیلڈ تھیوری وچّ، پھیلڈاں دے پرانے طریقے وچّ کارج دے <span class=\"searchmatch\">فنکشن</span> راہیں کھیتر نردھارت کیتا جاندا ہے، اویں ہی ایہہ سٹرنگ تھیوری وچّ جاں نمبو-گوٹو"
+        }
+      ]
+    }
+  ],
+  "adoption": {
+    "new_sources": 1,
+    "new_source_ids": [
+      "PNB-C018"
+    ],
+    "new_passages": 1,
+    "new_passage_ids": [
+      "PNB-P037"
+    ],
+    "reused_prior_passages": [
+      "PNB-P007",
+      "PNB-P015",
+      "PNB-P017",
+      "PNB-P023",
+      "PNB-P026",
+      "PNB-P027",
+      "PNB-P029",
+      "PNB-P030"
+    ],
+    "scope": "PNB-P037 supports فنکشن دا گراف and the ordered-pair-set definition only; all other OLP-0023 terminology remains exact-source-defined and reversible."
+  },
+  "limits": "The adopted witness is community-edited, not peer-reviewed scholarship, and does not establish a field-wide convention. Search snippets remain discovery evidence; zero hits do not prove absence."
+}

@@ -1,0 +1,299 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-09T19:09:41.289343Z",
+  "unit_id": "OLP-0022",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0022-Q01",
+      "query": "\"سرجیکٹو\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%B1%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 524,
+      "response_sha256": "aa66006aa58f0a2d8743a0dd9cbb8f5f42ab3c5773c7bfa223d48e6ad798d144",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک <span class=\"searchmatch\">سرجیکٹو</span> (فنکشن دی تصویر اتے کومڈومین برابر ہندے ہن) ہومومورفزم ہندی اے۔ اسدے سامان"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q02",
+      "query": "\"سرجیکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%B1%D8%AC%DB%8C%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q03",
+      "query": "\"انجیکٹو\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 534,
+      "response_sha256": "0af17c4225e2a36efb2e5f1a085c4471ae7e2053c79c5812e186069e4ba8b97a",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "مونومورفزم (کدے کدے اسنوں اک ایمبیڈنگ جاں ایکسٹینشن/شاخاں) وی کیہا جاندا اے) اک <span class=\"searchmatch\">انجیکٹو</span> (دخل انداجی کرن والی) ہومومورفزم ہندی اے۔ اسدے سامان ہی، f: A → B اک مونومورفزم"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q04",
+      "query": "\"انجیکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%AC%DB%8C%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 4635,
+      "response_sha256": "e558a254b9d47f47a5916d28a274521fc73cc786436182cbcf32272429bdaaba",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 17,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 41348,
+          "title": "جاپان",
+          "timestamp": "2025-11-06T06:23:26Z",
+          "snippet": "دے وقت جنہاں زخمی فوجیاں نو‏‏ں نال نئيں لے جایا جاسکیا اُنئيں مارفین دا <span class=\"searchmatch\">انجیکشن</span> لگیا کر خود ہی ہلاک کيتا گیا یا اُنئيں اوتھے چھڈ دتا گیا سی ۔ اٹھاراں جون"
+        },
+        {
+          "pageid": 1613,
+          "title": "طوطا",
+          "timestamp": "2023-06-08T14:02:30Z",
+          "snippet": "کھانے نو‏‏ں آلودہ نہ کرن۔ کھانا دُدھ د‏‏ی ٹیوباں اُتے مبنی ہُندا اے، ایہ <span class=\"searchmatch\">انجیکشن</span> ہو سکدا اے، تے آہستہ آہستہ انہاں نو‏ں دُدھ وچ بھگو کر روٹی دتی جائے گی،"
+        },
+        {
+          "pageid": 83735,
+          "title": "کارلافے ٹکر",
+          "timestamp": "2023-09-28T21:34:22Z",
+          "snippet": "1984ء وچ قتل دے جرم دا اعتراف کیتا سی تے اس دے 14 سال بعد ٹیکساس وچ اک <span class=\"searchmatch\">انجیکشن</span> دے ذریعے موت د‏‏ی ابدی نیند سلا دتا گیا۔ قید خانے وچ اس نے مسیحیت د‏‏ی"
+        },
+        {
+          "pageid": 91507,
+          "title": "کلمگی",
+          "timestamp": "2026-08-25T04:40:41Z",
+          "snippet": "پایا جاندا اے سب تو‏ں زیادہ اکثر انہاں لوکاں دے درمیان جو سڑک منشیات دے <span class=\"searchmatch\">انجیکشن</span>۔ اس صورت وچ ، spores لفظاں درج کرن اک زخم تے د‏‏ی غیر موجودگی وچ آکسیجنہاں"
+        },
+        {
+          "pageid": 90466,
+          "title": "ٹائیگر اسکواڈ",
+          "timestamp": "2024-02-04T16:28:21Z",
+          "snippet": "لگانا ، یا صحت تو‏ں متعلق معائنے دے دوران مخالفین وچ زہریلے مادے نو‏‏ں <span class=\"searchmatch\">انجیکشن</span> لگانے تو‏ں متصادماں نو‏‏ں ہلاک کردا ا‏‏ے۔ سعودی ولی عہد شہزادہ محمد بن"
+        },
+        {
+          "pageid": 122339,
+          "title": "راجستھان فوجی طیارہ حادثہ 2023ء",
+          "timestamp": "2023-05-09T13:41:15Z",
+          "snippet": "خرابی دے نتیجے وچ اک گھر تو‏ں ٹکرا گیا۔ اطلاعات دے مطابق، پائلٹ بروقت <span class=\"searchmatch\">انجیکشن</span> لگانے دے بعد جہاز تو‏ں براکھی باہر نکل گیا۔ پائلٹ جسنو‏ں معمولی زخم آئے"
+        },
+        {
+          "pageid": 91232,
+          "title": "تقلید (اصطلاح)",
+          "timestamp": "2024-02-06T08:47:29Z",
+          "snippet": "دا کسی مریض نو‏‏ں منتقل کرنا) ٣. اعضاء د‏‏ی پیوند-کاری ٤. حالت_روزہ وچ <span class=\"searchmatch\">انجیکشن</span> دا مسئلہ ٥. لاؤڈ-اسپیکر اُتے اذان دا مسئلہ ٦. ڈیجیٹل تصویر دا مسئلہ وغیرہ"
+        },
+        {
+          "pageid": 131585,
+          "title": "آئن کالن",
+          "timestamp": "2025-05-18T14:32:45Z",
+          "snippet": "والے ویسٹ انڈیز دے دورے د‏‏ی تیاری دے لئی میچ تو‏ں ٹھیک پہلے لگائے گئے <span class=\"searchmatch\">انجیکشن</span> تو‏ں بری طرح متاثر ہوݨ دے باوجود، انہاں نے ہر اننگز وچ تن وکٹاں حاصل کیتیاں،"
+        },
+        {
+          "pageid": 90465,
+          "title": "سعودی عرب وچ بدعنوانی دے الزام وچ گرفتاریاں،2017",
+          "timestamp": "2024-12-25T16:32:22Z",
+          "snippet": "باقاعدہ صحت تو‏ں متعلق چیک اپ دے لئی اسپتال جانے دے دوران اک مہلک وائرس دے <span class=\"searchmatch\">انجیکشن</span> دے ذریعے قتل کيتا گیا سی۔ ایہ اس وقت ہويا جدو‏ں اس نے بن سلمان دے 2030"
+        },
+        {
+          "pageid": 89171,
+          "title": "یوگوسلاویہ دی تحلیل",
+          "timestamp": "2026-08-25T02:07:55Z",
+          "snippet": "تے ہور تنظیماں نے اس طرح دے پروگرام د‏‏ی حمایت د‏‏ی اے &quot;سرمائے دے تازہ <span class=\"searchmatch\">انجیکشن</span> د‏‏ی شرط دے طور پر۔&quot; 1987 وچ ، سرب دے کمیونسٹ عہدیدار سلوبوڈن ملیوسویچ"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q05",
+      "query": "\"بائجیکٹو\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%D8%A7%D8%A6%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 532,
+      "response_sha256": "834971aa56939d106f139b629a68075c301098a2ed3bd4f976b6ecacef8e61d3",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم دیاں کئی وشیس قسماں اسطراں متاثر کیتیاں جاندیاں ہن: اک آئسومورفزم اک <span class=\"searchmatch\">بائجیکٹو</span> (دوبھاجت) ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q06",
+      "query": "\"بائجیکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%D8%A7%D8%A6%D8%AC%DB%8C%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q07",
+      "query": "\"اک بہ اک\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%DA%A9+%D8%A8%DB%81+%D8%A7%DA%A9%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q08",
+      "query": "\"یک بہ یک\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%8C%DA%A9+%D8%A8%DB%81+%DB%8C%DA%A9%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q09",
+      "query": "\"ہر ہدف\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%81%D8%B1+%DB%81%D8%AF%D9%81%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q10",
+      "query": "\"ہدف قدر\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%81%D8%AF%D9%81+%D9%82%D8%AF%D8%B1%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response_preserved_from_prior_bounded_attempt",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q11",
+      "query": "\"فنکشن\" \"انجیکٹو\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%22%D8%A7%D9%86%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 553,
+      "response_sha256": "c71f30b238c448af39b3ee872927bcfc47a11e2b5b924cf9dde1e371f379c9da",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ورتے جا سکدے ہن ۔ اداہرن دے طور تے، کیونکہ کوئی <span class=\"searchmatch\">فنکشن</span> صرف تے صرف تاں ہی بائجیکٹو ہندا اے جیکر ایہہ <span class=\"searchmatch\">انجیکٹو</span> تے سرجیکٹو دوویں خاصیتاں والا ہووے، امورت الجبرے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q12",
+      "query": "\"فنکشن\" \"سرجیکٹو\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%22%D8%B3%D8%B1%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 559,
+      "response_sha256": "e55f5b3c10a31de887f8c5f3924b9ed38d3a5d596b36b6fb78e48e3e84be85a0",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک <span class=\"searchmatch\">سرجیکٹو</span> (<span class=\"searchmatch\">فنکشن</span> دی تصویر اتے کومڈومین برابر ہندے ہن) ہومومورفزم ہندی اے۔ اسدے سامان"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q13",
+      "query": "\"surjective\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22surjective%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q14",
+      "query": "\"injective\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22injective%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q15",
+      "query": "\"bijective\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22bijective%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0022-Q16",
+      "query": "\"فنکشن\" \"اک بہ اک\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%22%D8%A7%DA%A9+%D8%A8%DB%81+%D8%A7%DA%A9%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

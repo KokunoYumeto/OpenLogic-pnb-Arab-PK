@@ -1,0 +1,130 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0026",
+  "reviewed_at_utc": "2026-09-15T03:00:33.921330Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 14208,
+    "sha256": "aa6e60b1f36de2008cdb32b26c79a9cb1356ad37db23d0ab46825bc4540b063b"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0026-Q08"
+      ],
+      "disposition": "mixed defined-form hits; reuse existing PNB-P026 only, no new source adopted",
+      "detail": "The integral result is the already preserved revision-bound PNB-P026 passage and uses تعریف شدہ for a function on an interval. The JavaScript and derivative results do not define partial functions. PNB-P026 may support the ordinary defined-form wording only; it does not attest partial/total functions or their actual-domain convention."
+    },
+    {
+      "query_ids": [
+        "OLP0026-Q09"
+      ],
+      "disposition": "incidental or context-mismatched hits; no undefined-function evidence adopted",
+      "detail": "The returned JavaScript and derivative snippets do not show a mathematical partial-function definition or establish غیر تعریف شدہ as a conventional specialist pair. No new passage is adopted."
+    },
+    {
+      "query_ids": [
+        "OLP0026-Q11"
+      ],
+      "disposition": "known exact page; reuse PNB-P037 within its existing limit",
+      "detail": "The result is the already captured, revision-bound function-graph page underlying PNB-P037. It directly supports فنکشن دا گراف as an ordered-pair-set phrase only; it does not attest partial functions or serial relations."
+    },
+    {
+      "query_ids": [
+        "OLP0026-Q01",
+        "OLP0026-Q02",
+        "OLP0026-Q03",
+        "OLP0026-Q04",
+        "OLP0026-Q05",
+        "OLP0026-Q06",
+        "OLP0026-Q07",
+        "OLP0026-Q10",
+        "OLP0026-Q12",
+        "OLP0026-Q13",
+        "OLP0026-Q14",
+        "OLP0026-Q15",
+        "OLP0026-Q16"
+      ],
+      "disposition": "zero exact-form results",
+      "detail": "No bounded result supplied a revision-bound witness for partial function, total function, partial-function domain, serial relation or well-defined. Search absence is not linguistic absence."
+    }
+  ],
+  "positive_discovery_samples": [
+    {
+      "query_id": "OLP0026-Q08",
+      "query": "\"تعریف شدہ\" فنکشن",
+      "total_hits": 3,
+      "observed_hits": [
+        {
+          "pageid": 79648,
+          "title": "جاوا اسکرپٹ دے قواعد",
+          "timestamp": "2026-08-25T05:10:43Z",
+          "snippet": "دے۔ تھلے پیش کردہ مثالاں وچ alert <span class=\"searchmatch\">فنکشن</span> استعمال کیتا گیا ا‏‏ے۔ دراصل جاوا سکرپٹ د‏‏ی معیاری لائبریری وچ ایسا <span class=\"searchmatch\">فنکشن</span> موجود نئيں جس دے ذریعہ ٹیکسٹ دکھایا"
+        },
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے <span class=\"searchmatch\">تعریف</span> <span class=\"searchmatch\">شدہ</span> ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0026-Q09",
+      "query": "\"غیر تعریف شدہ\" فنکشن",
+      "total_hits": 2,
+      "observed_hits": [
+        {
+          "pageid": 79648,
+          "title": "جاوا اسکرپٹ دے قواعد",
+          "timestamp": "2026-08-25T05:10:43Z",
+          "snippet": "دے۔ تھلے پیش کردہ مثالاں وچ alert <span class=\"searchmatch\">فنکشن</span> استعمال کیتا گیا ا‏‏ے۔ دراصل جاوا سکرپٹ د‏‏ی معیاری لائبریری وچ ایسا <span class=\"searchmatch\">فنکشن</span> موجود نئيں جس دے ذریعہ ٹیکسٹ دکھایا"
+        },
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0026-Q11",
+      "query": "\"فنکشن دا گراف\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 96782,
+          "title": "فنکشن دا گراف",
+          "timestamp": "2020-12-07T10:10:28Z",
+          "snippet": "د‏ی گرافی صورت سطح ہوئے گی (دیکھو سہ بعدی گراف )۔ حقیقی اعداد اُتے <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">دا</span> <span class=\"searchmatch\">گراف</span> اس دے گرافی صورت دے برابر ا‏‏ے۔ جامع فنکشن دے لئی، گرافی صورت بنانا"
+        }
+      ]
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_source_ids": [],
+    "new_passages": 0,
+    "new_passage_ids": [],
+    "reused_prior_passages": [
+      "PNB-P007",
+      "PNB-P015",
+      "PNB-P017",
+      "PNB-P023",
+      "PNB-P026",
+      "PNB-P027",
+      "PNB-P029",
+      "PNB-P030",
+      "PNB-P037"
+    ],
+    "scope": "The exact OLP source and formulas govern partiality, at-most-one assignment, definedness, actual domain, totality and seriality. PNB-P026 supports only an ordinary function-defined phrase, and PNB-P037 supports only فنکشن دا گراف as an ordered-pair set. All remaining specialist labels stay visibly bridged and reversible."
+  },
+  "limits": "Search snippets are discovery evidence only. Reusing a previously verified passage does not widen its evidentiary scope, positive co-occurrence does not establish a preferred scholarly convention, and zero hits do not prove absence."
+}

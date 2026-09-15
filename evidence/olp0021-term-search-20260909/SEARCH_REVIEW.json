@@ -1,0 +1,333 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0021",
+  "reviewed_at_utc": "2026-09-09T01:18:24.527227Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 38632,
+    "sha256": "e944df9f980343f49853179c27467c65c36f1c455d86c63e717b9b564ba35fe0"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0021-Q01",
+        "OLP0021-Q07",
+        "OLP0021-Q08",
+        "OLP0021-Q15"
+      ],
+      "disposition": "positive function/input-output discovery; limited adoption",
+      "detail": "The results include the dedicated فنکشن page, mathematical-analysis prose, programming-language function/input-output usage and one English-token result. They establish community exposure to فنکشن and related loan vocabulary, but snippets are not revision-bound and do not attest the complete set-theoretic function bundle or chapter wording."
+    },
+    {
+      "query_ids": [
+        "OLP0021-Q03"
+      ],
+      "disposition": "mapping hits unrelated to mathematical mappings",
+      "detail": "The returned pages discuss astronomical or geographic mapping, not a function as a set-theoretic map."
+    },
+    {
+      "query_ids": [
+        "OLP0021-Q10",
+        "OLP0021-Q11"
+      ],
+      "disposition": "successor/predecessor hits mostly historical or ordinary",
+      "detail": "The bounded results use جانشین and پیشرو primarily for heirs, predecessors in history, or ordinary senses. No exact mathematical successor/predecessor construction was adopted from snippets."
+    },
+    {
+      "query_ids": [
+        "OLP0021-Q12"
+      ],
+      "disposition": "positive parity discovery; limited adoption",
+      "detail": "Results include dedicated جفت عدد and طاق عدد pages and a parity theorem. This confirms community exposure to the even/odd forms, but does not by itself establish every surrounding function term or a peer-reviewed convention."
+    },
+    {
+      "query_ids": [
+        "OLP0021-Q02",
+        "OLP0021-Q04",
+        "OLP0021-Q05",
+        "OLP0021-Q06",
+        "OLP0021-Q09",
+        "OLP0021-Q13",
+        "OLP0021-Q14",
+        "OLP0021-Q16"
+      ],
+      "disposition": "zero or non-qualifying exact-form results",
+      "detail": "No bounded result supplied a revision-bound Shahmukhi witness for the tested domain, codomain, range, black-box, by-cases, extensionality, or function/argument collocations. Search absence is not linguistic absence."
+    }
+  ],
+  "positive_discovery_samples": [
+    {
+      "query_id": "OLP0021-Q01",
+      "query": "\"فنکشن\" ریاضی",
+      "total_hits": 34,
+      "observed_hits": [
+        {
+          "pageid": 30312,
+          "title": "فنکشن",
+          "timestamp": "2017-03-18T13:00:16Z",
+          "snippet": "<span class=\"searchmatch\">فنکشن</span> میتھمیٹکس دا اک انگ اے جیدے وچ انپٹ آؤٹپٹ دے برابر ہوندی اے۔"
+        },
+        {
+          "pageid": 30311,
+          "title": "میتھمیٹیکل انیلیسز",
+          "timestamp": "2017-03-20T15:16:11Z",
+          "snippet": "میتھمیٹیکل انیلیسز میتھمیٹکس دا اک انگ اے. ایدے وچ <span class=\"searchmatch\">فنکشن</span>، سیریز تے سیکوئنس نوں ویکھیا جاندا اے۔ ایہناں دا انجینرنگ وچ کم ہوندا اے۔"
+        },
+        {
+          "pageid": 62146,
+          "title": "جنرل ٹوپولوجی",
+          "timestamp": "2017-07-11T14:37:34Z",
+          "snippet": "کنٹینیوٹی ، کمپیکٹنیسّ (سنگھنتا)، اتے کنیکٹڈنیسّ ہن۔ سہج علم دے طریقے نال، جاری <span class=\"searchmatch\">فنکشن</span> نیڑے دے نقطےآں نوں نیڑے دے قطےآں تکّ لیندے ہن۔ کمپیکٹ سیٹ اوہ ہندے ہن جہناں"
+        },
+        {
+          "pageid": 79663,
+          "title": "تفریقی مساوات",
+          "timestamp": "2023-10-01T06:17:22Z",
+          "snippet": "د‏‏ی سمتار (velocity) دا <span class=\"searchmatch\">فنکشن</span> (function) جو وقت انحصار کردا ہو حاصل کرنے دے لئی سانو‏ں تفرقی مساوات حل کرنا ہوئے گی۔ <span class=\"searchmatch\">ریاضی</span> وچ تفرقی مساوات مختلف نقطہ"
+        },
+        {
+          "pageid": 63452,
+          "title": "سائین ویو",
+          "timestamp": "2017-10-12T16:59:34Z",
+          "snippet": "کنٹینیوس ویو ہندی اے۔ اسدا ناں کوسائین دے <span class=\"searchmatch\">فنکشن</span> سائین اتے رکھیا گیا اے جہڑی کہ اسدا گراف ہندی اے۔ اسدی ورتوں <span class=\"searchmatch\">ریاضی</span>،فزکس، انجینیئرنگ، سگنل پروسیسنگ اتے ہور"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q03",
+      "query": "\"نقشہ بندی\" ریاضی",
+      "total_hits": 2,
+      "observed_hits": [
+        {
+          "pageid": 1692,
+          "title": "تارا پڑھت",
+          "timestamp": "2026-03-12T14:25:38Z",
+          "snippet": "چنانچہ، اِس زمانے دے زیادہ تر فلکیا‏تی انکشافات، ستارےآں تے سیارےآں د‏‏ی <span class=\"searchmatch\">نقشہ</span> <span class=\"searchmatch\">بندی</span> تک ہی محدود سن ۔ اِس علم نو‏‏ں نَجُوم پيمائی کہیا جاندا ا‏‏ے۔ اِنہاں ابتدائی"
+        },
+        {
+          "pageid": 3850,
+          "title": "عطارد",
+          "timestamp": "2024-08-30T02:02:10Z",
+          "snippet": "مرتبہ اک ہی پہلو روشن دکھادی دتا جس د‏‏ی وجہ تو‏ں محض 45 فیصد حصے د‏‏ی <span class=\"searchmatch\">نقشہ</span> <span class=\"searchmatch\">بندی</span> ممکن ہوئے پائی سی۔ 27 مارچ 1974 نو‏‏ں پہلی بار نیڑے تو‏ں گزرنے تو‏ں دو"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q07",
+      "query": "\"انپٹ\" فنکشن",
+      "total_hits": 2,
+      "observed_hits": [
+        {
+          "pageid": 30312,
+          "title": "فنکشن",
+          "timestamp": "2017-03-18T13:00:16Z",
+          "snippet": "<span class=\"searchmatch\">فنکشن</span> میتھمیٹکس دا اک انگ اے جیدے وچ <span class=\"searchmatch\">انپٹ</span> آؤٹپٹ دے برابر ہوندی اے۔"
+        },
+        {
+          "pageid": 65404,
+          "title": "کھیتی باڑی",
+          "timestamp": "2026-08-25T03:19:27Z",
+          "snippet": "کردی اے: 1. فارم&#039; تے سدھی کھپت اتے 2. اسدھے ورتوں فارم اُتے ورتی جان والی <span class=\"searchmatch\">انپٹ</span> دے پیداوار لئی۔ سدھیاں کھپت وچ کھیت واہن اتے مشینری چلاؤن لئی لوبریکینٹ اتے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q08",
+      "query": "\"آؤٹ پٹ\" فنکشن",
+      "total_hits": 3,
+      "observed_hits": [
+        {
+          "pageid": 106862,
+          "title": "سی (پروگرامنگ زبان)",
+          "timestamp": "2026-08-25T00:52:33Z",
+          "snippet": "انہاں پٹ تے <span class=\"searchmatch\">آؤٹ</span> <span class=\"searchmatch\">پٹ</span> (input and output) فنکشنز دے ڈکلیریشن اُتے مشتمل ہو، جداں printf۔ دوسری سطر وچ موجود main اس گل دا اشارہ ک‏ے رہیا اے کہ <span class=\"searchmatch\">فنکشن</span> دا ناں main"
+        },
+        {
+          "pageid": 90517,
+          "title": "ریاستہائے متحدہ کی ایجادات دی ٹائم لائن (1890–1945)",
+          "timestamp": "2026-06-15T05:47:48Z",
+          "snippet": "، جسنو‏ں calc-حساب کتاب وی کہیا جاندا اے ، اک رسمی نظام اے جو <span class=\"searchmatch\">فنکشن</span> د‏‏ی تعریف ، <span class=\"searchmatch\">فنکشن</span> ایپلی کیشن تے تکرار د‏‏ی تفتیش دے لئی ڈیزائن کيتا گیا ا‏‏ے۔ اس"
+        },
+        {
+          "pageid": 90574,
+          "title": "کیپلر خلائی دوربین",
+          "timestamp": "2026-08-14T19:53:26Z",
+          "snippet": "نو‏‏ں ایف او وی وچ گرنا اے یا نئيں ، تے جے ایسا اے تاں ، ایہ فوٹو ڈٹیکٹر <span class=\"searchmatch\">آؤٹ</span> <span class=\"searchmatch\">پٹ</span> ڈیٹا اسٹریم وچ کتھے ظاہر ہوئے گی۔ خارجی منصوبےآں دے امیدواراں اُتے مشتمل"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q10",
+      "query": "\"جانشین\" ریاضی",
+      "total_hits": 72,
+      "observed_hits": [
+        {
+          "pageid": 55687,
+          "title": "امام جعفر صادق",
+          "timestamp": "2019-10-10T19:22:19Z",
+          "snippet": "علوم عربیہ جداں <span class=\"searchmatch\">ریاضی</span> تے کیمیا وغیرہ د‏‏ی وی بعض شاگرداں کوتعلیم دتی سی۔ چنانچہ آپ دے اصحاب وچو‏ں جابر بن حیان طرسوسی سائنس تے <span class=\"searchmatch\">ریاضی</span> دے مشہور امام فن"
+        },
+        {
+          "pageid": 881,
+          "title": "حسن بن صباح",
+          "timestamp": "2019-02-08T17:40:04Z",
+          "snippet": "ست سال دی عمر توں ای اسنوں تحصیل علم شوق سی ۔ اٹھارہ سال دی عمر تک اس نے <span class=\"searchmatch\">ریاضی</span> ، نجوم تے سحر وغیرہ مختلف علوم حاصل کیتے ۔ اس وقت تک اس دا مذہب اپنے باپ"
+        },
+        {
+          "pageid": 3834,
+          "title": "غزنوی سلطنت",
+          "timestamp": "2025-06-18T05:15:41Z",
+          "snippet": "980ء دے دہاکے چ جے پال دے اک وڈے علاقے تے مل مار لیا سی ۔ اس دے بعد اسدے <span class=\"searchmatch\">جانشین</span> پتر آنند پال نے اپنے پیؤ دی خودکشی دا بدلہ لین دیاں کوششاں جاری رکھیاں (جے"
+        },
+        {
+          "pageid": 107709,
+          "title": "ایسٹ انڈیا کمپنی کالج",
+          "timestamp": "2022-07-29T04:22:57Z",
+          "snippet": "پڑھائی ولیم ڈیلٹری 1806–13 وچ <span class=\"searchmatch\">ریاضی</span> دے پروفیسر سن ۔ اوہ 1796 وچ دوسرا رینگلر رہیا سی۔ بیوک برج (1767–1833) 1806–16 وچ <span class=\"searchmatch\">ریاضی</span> دے پروفیسر سن ۔ چارلس ویب لی"
+        },
+        {
+          "pageid": 117424,
+          "title": "گجردیس",
+          "timestamp": "2023-02-10T12:40:19Z",
+          "snippet": "ماہرِ <span class=\"searchmatch\">ریاضی</span> دان برہما گپتا نے اپنا مشہور مقالہ لکھیا سی۔ خیال کيتا جاندا اے کہ ہیون سانگ نے جس نوجوان حکمران دا ذکر کیہ اوہ اس دا اگلا <span class=\"searchmatch\">جانشین</span> رہیا ہوئے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q11",
+      "query": "\"پیشرو\" ریاضی",
+      "total_hits": 39,
+      "observed_hits": [
+        {
+          "pageid": 84425,
+          "title": "آشوتوش مکھرجی",
+          "timestamp": "2023-09-30T21:17:27Z",
+          "snippet": "قانون دان، بیرسٹر، <span class=\"searchmatch\">ریاضی</span> دان تے متعدد الالسنہ صلاحیت دے مالک سن ۔ آشوتوش پہلے طالب علم سن جنہاں نو‏ں کلکتہ یونیورسٹی نے دوہری سند (<span class=\"searchmatch\">ریاضی</span> تے فزکس وچ ایم اے)"
+        },
+        {
+          "pageid": 79311,
+          "title": "ناصر خسرو",
+          "timestamp": "2024-12-26T07:03:14Z",
+          "snippet": "تخلیق ہويا تے اس دے چیدہ موضوعات حضرت علی کرم اللہ وجہہ د‏‏ی جرات، انہاں دے <span class=\"searchmatch\">پیشرو</span> (خاص کر امام مستنصر)، خراسان دا حال و حکمران، ہجرت، سفر، یاماگان دا خاموش"
+        },
+        {
+          "pageid": 84433,
+          "title": "برجیندر ناتھ سیل",
+          "timestamp": "2025-05-04T18:21:42Z",
+          "snippet": "تو‏ں نامذہب انسان دوستی د‏‏ی طرف منتقل ہونا چاہیے۔ اپنے معروف نظریا‏تی <span class=\"searchmatch\">پیشرو</span> ایشور چندر ودیا ساگر د‏‏ی طرح برجیندر ناتھ وی سائنسی تحقیق تے عقلیت پسندی"
+        },
+        {
+          "pageid": 2454,
+          "title": "چین",
+          "timestamp": "2024-12-07T18:35:27Z",
+          "snippet": "ادوایاتی تے جراحی دے مقاصد دے لئی <span class=\"searchmatch\">ریاضی</span> نو‏‏ں آرکیٹیکچر تے جیوگرافی وچ استعمال کيتا گیا۔ پنجويں صدی وچ چینی <span class=\"searchmatch\">ریاضی</span> دان زو چونگ زہی نے پائی یعنی π د‏‏ی"
+        },
+        {
+          "pageid": 7170,
+          "title": "لیونارڈو ڈی ونچی",
+          "timestamp": "2026-08-24T22:20:04Z",
+          "snippet": "چنانچہ ہور تیسری تے چوتھ‏ی شادیاں تو‏ں ملے۔ لیوناردو نے لاطینی، ہندسہ تے <span class=\"searchmatch\">ریاضی</span> وچ اک غیر رسمی تعلیم حاصل کيتی۔ بعد د‏‏ی زندگی وچ لیوناردو نے صرف بچپن دے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q12",
+      "query": "\"جفت\" \"طاق\" ریاضی",
+      "total_hits": 9,
+      "observed_hits": [
+        {
+          "pageid": 85819,
+          "title": "تبدل کامل گروہ",
+          "timestamp": "2020-01-01T08:23:57Z",
+          "snippet": "مدد تو‏ں اسيں <span class=\"searchmatch\">جفت</span> تے <span class=\"searchmatch\">طاق</span> تبدلکامل د‏‏ی متبادل تعریف ایويں ک‏ر سکدے نيں: قضیہ: تبدلکامل <span class=\"searchmatch\">جفت</span> اکھوائے گا جے تقلیگل دی کُل تعداد <span class=\"searchmatch\">جفت</span> ہوئے تے <span class=\"searchmatch\">طاق</span> اکھوائے گی جے"
+        },
+        {
+          "pageid": 89700,
+          "title": "جفت عدد",
+          "timestamp": "2021-08-14T00:51:40Z",
+          "snippet": "-2,0,2,4,6,8,\\cdots \\}} صحیح عدد قدرتی عدد <span class=\"searchmatch\">طاق</span> عدد مکمل عدد E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        },
+        {
+          "pageid": 89703,
+          "title": "طاق عدد",
+          "timestamp": "2020-09-27T19:04:40Z",
+          "snippet": "-1,1,3,5,7,9,\\cdots \\}} صحیح عدد قدرتی عدد <span class=\"searchmatch\">جفت</span> عدد مکمل عدد E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        },
+        {
+          "pageid": 9907,
+          "title": "انٹیجر",
+          "timestamp": "2020-09-27T19:03:10Z",
+          "snippet": "102+1} سانچہ:صحیح اعداد مکمل عدد قدرتی عدد <span class=\"searchmatch\">جفت</span> عدد <span class=\"searchmatch\">طاق</span> عدد E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        },
+        {
+          "pageid": 89702,
+          "title": "مکمل عدد",
+          "timestamp": "2020-09-27T19:03:43Z",
+          "snippet": "ا‏‏ے۔ گنت‏ی صحیح عدد قدرتی عدد <span class=\"searchmatch\">طاق</span> عدد <span class=\"searchmatch\">جفت</span> عدد سانچہ:صحیح اعداد E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q15",
+      "query": "\"function\" پنجابی ریاضی",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "India&quot;, Mathematics Magazine 68 (3): 163–174 [165–9 &amp; 173–4] E=mc2     <span class=\"searchmatch\">پنجابی</span> ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0021-Q16",
+      "query": "\"فنکشن\" \"دلیل\"",
+      "total_hits": 8,
+      "observed_hits": [
+        {
+          "pageid": 107409,
+          "title": "جنت",
+          "timestamp": "2021-06-27T18:04:13Z",
+          "snippet": "متمائز بہشت یعنی اک سونے د‏‏ی بنی ہوئی تے دوسری چاندی د‏‏ی بنی ہوئی۔ مختلف <span class=\"searchmatch\">فنکشن</span> تے نتائج دے اعتبار تو‏ں دو مختلف بہشت؛ قرآن کریم وچ مختلف جگہاں اُتے مکرر"
+        },
+        {
+          "pageid": 103599,
+          "title": "حیا (اسلام)",
+          "timestamp": "2021-05-15T18:06:36Z",
+          "snippet": "اے کہ جے کسی دے پاس مال و دولت کم اے تاں صرف فلمی گانےآں د‏‏ی ریکارڈنگ <span class=\"searchmatch\">فنکشن</span> وچ لگاندا اے، جو کچھ مال دار ہُندا اے اوہ انہاں تقاریب وچ مُووی وی بنواندا"
+        },
+        {
+          "pageid": 114315,
+          "title": "سلطان علی بن محمد باقر",
+          "timestamp": "2022-05-13T17:34:45Z",
+          "snippet": "اے کہ ۱۳۱۳ عیسوی وچ قم دا حاکم اعضاد الدولہ مشہد اردہل (جو کہ قم دا اک <span class=\"searchmatch\">فنکشن</span> سی) آیا تے حکم دتا کہ خانہ کعبہ د‏‏ی کھدائی کيت‏ی جائے۔ اوہ ذا‏تی طور اُتے"
+        },
+        {
+          "pageid": 90568,
+          "title": "انواح دی اصل",
+          "timestamp": "2024-06-23T01:14:30Z",
+          "snippet": "ہوسکدیاں نيں تے ایہ اکثر خصوصیات غیر تطبیق معلوم ہودیاں سن کیونجے انہاں دا <span class=\"searchmatch\">فنکشن</span> معلوم نئيں سی ، جداں کہ آرکڈس فرٹلائزیشن کے بارے وچ انہاں د‏‏ی کتاب وچ دکھایا"
+        },
+        {
+          "pageid": 95119,
+          "title": "گاڈفری ہیرالڈ ہارڈی",
+          "timestamp": "2025-09-27T22:49:50Z",
+          "snippet": "لٹل ووڈ میکس اطلاق ہارڈی - لٹل ووڈ ٹوبریائی تھیوریم ہارڈی - لٹل ووڈ زیٹا <span class=\"searchmatch\">فنکشن</span> دا اندازہ ہارڈی - رامانوجان جرنل ہارڈی - رامانوجان نظریہ ہارڈی د‏‏ی عدم"
+        }
+      ]
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_passages": 0,
+    "reused_prior_passages": [
+      "PNB-P026",
+      "PNB-P027",
+      "PNB-P029",
+      "PNB-P030"
+    ],
+    "reuse_scope": "These exact revision-bound community passages support فنکشن in mathematical prose and ڈومین/فنکشن in a vector-field context only; they do not establish the complete function-basics terminology bundle."
+  },
+  "limits": "Search-result snippets are discovery evidence only. Positive hits require exact revision capture and context review before canon adoption; zero hits do not prove absence. OLP-0021 therefore keeps every selected label definition-governed, visibly bridged and reversible."
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0022",
+  "reviewed_at_utc": "2026-09-09T19:11:49.671737Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 18429,
+    "sha256": "afc54f121e97d33f1b79ffe2b3b40d143d96562a2102ab019faf8305dadd4d0c"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0022-Q01",
+        "OLP0022-Q03",
+        "OLP0022-Q05",
+        "OLP0022-Q11",
+        "OLP0022-Q12"
+      ],
+      "disposition": "positive loan-form hits in unrelated homomorphism or ordinary prose; no adoption",
+      "detail": "The returned pages use سرجیکٹو, انجیکٹو or بائجیکٹو incidentally in homomorphism/monomorphism discussion, or use انجیکشن in ordinary contexts. They are not exact revision-bound function-kinds passages defining surjection, injection or bijection, so no new source or passage is adopted."
+    },
+    {
+      "query_ids": [
+        "OLP0022-Q04"
+      ],
+      "disposition": "injection hits are ordinary or non-mathematical",
+      "detail": "The returned pages use انجیکشن for medical, historical or ordinary insertion senses rather than an injective function."
+    },
+    {
+      "query_ids": [
+        "OLP0022-Q02",
+        "OLP0022-Q06",
+        "OLP0022-Q07",
+        "OLP0022-Q08",
+        "OLP0022-Q09",
+        "OLP0022-Q10",
+        "OLP0022-Q13",
+        "OLP0022-Q14",
+        "OLP0022-Q15",
+        "OLP0022-Q16"
+      ],
+      "disposition": "zero exact-form results",
+      "detail": "No bounded result supplied a revision-bound Shahmukhi witness for surjection/injection/bijection nouns, one-to-one correspondence, or the selected descriptive phrases in the function sense. Search absence is not linguistic absence."
+    }
+  ],
+  "positive_discovery_samples": [
+    {
+      "query_id": "OLP0022-Q01",
+      "query": "\"سرجیکٹو\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک <span class=\"searchmatch\">سرجیکٹو</span> (فنکشن دی تصویر اتے کومڈومین برابر ہندے ہن) ہومومورفزم ہندی اے۔ اسدے سامان"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q03",
+      "query": "\"انجیکٹو\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "مونومورفزم (کدے کدے اسنوں اک ایمبیڈنگ جاں ایکسٹینشن/شاخاں) وی کیہا جاندا اے) اک <span class=\"searchmatch\">انجیکٹو</span> (دخل انداجی کرن والی) ہومومورفزم ہندی اے۔ اسدے سامان ہی، f: A → B اک مونومورفزم"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q04",
+      "query": "\"انجیکشن\"",
+      "total_hits": 17,
+      "observed_hits": [
+        {
+          "pageid": 41348,
+          "title": "جاپان",
+          "timestamp": "2025-11-06T06:23:26Z",
+          "snippet": "دے وقت جنہاں زخمی فوجیاں نو‏‏ں نال نئيں لے جایا جاسکیا اُنئيں مارفین دا <span class=\"searchmatch\">انجیکشن</span> لگیا کر خود ہی ہلاک کيتا گیا یا اُنئيں اوتھے چھڈ دتا گیا سی ۔ اٹھاراں جون"
+        },
+        {
+          "pageid": 1613,
+          "title": "طوطا",
+          "timestamp": "2023-06-08T14:02:30Z",
+          "snippet": "کھانے نو‏‏ں آلودہ نہ کرن۔ کھانا دُدھ د‏‏ی ٹیوباں اُتے مبنی ہُندا اے، ایہ <span class=\"searchmatch\">انجیکشن</span> ہو سکدا اے، تے آہستہ آہستہ انہاں نو‏ں دُدھ وچ بھگو کر روٹی دتی جائے گی،"
+        },
+        {
+          "pageid": 83735,
+          "title": "کارلافے ٹکر",
+          "timestamp": "2023-09-28T21:34:22Z",
+          "snippet": "1984ء وچ قتل دے جرم دا اعتراف کیتا سی تے اس دے 14 سال بعد ٹیکساس وچ اک <span class=\"searchmatch\">انجیکشن</span> دے ذریعے موت د‏‏ی ابدی نیند سلا دتا گیا۔ قید خانے وچ اس نے مسیحیت د‏‏ی"
+        },
+        {
+          "pageid": 91507,
+          "title": "کلمگی",
+          "timestamp": "2026-08-25T04:40:41Z",
+          "snippet": "پایا جاندا اے سب تو‏ں زیادہ اکثر انہاں لوکاں دے درمیان جو سڑک منشیات دے <span class=\"searchmatch\">انجیکشن</span>۔ اس صورت وچ ، spores لفظاں درج کرن اک زخم تے د‏‏ی غیر موجودگی وچ آکسیجنہاں"
+        },
+        {
+          "pageid": 90466,
+          "title": "ٹائیگر اسکواڈ",
+          "timestamp": "2024-02-04T16:28:21Z",
+          "snippet": "لگانا ، یا صحت تو‏ں متعلق معائنے دے دوران مخالفین وچ زہریلے مادے نو‏‏ں <span class=\"searchmatch\">انجیکشن</span> لگانے تو‏ں متصادماں نو‏‏ں ہلاک کردا ا‏‏ے۔ سعودی ولی عہد شہزادہ محمد بن"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q05",
+      "query": "\"بائجیکٹو\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم دیاں کئی وشیس قسماں اسطراں متاثر کیتیاں جاندیاں ہن: اک آئسومورفزم اک <span class=\"searchmatch\">بائجیکٹو</span> (دوبھاجت) ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q11",
+      "query": "\"فنکشن\" \"انجیکٹو\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ورتے جا سکدے ہن ۔ اداہرن دے طور تے، کیونکہ کوئی <span class=\"searchmatch\">فنکشن</span> صرف تے صرف تاں ہی بائجیکٹو ہندا اے جیکر ایہہ <span class=\"searchmatch\">انجیکٹو</span> تے سرجیکٹو دوویں خاصیتاں والا ہووے، امورت الجبرے"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0022-Q12",
+      "query": "\"فنکشن\" \"سرجیکٹو\"",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک <span class=\"searchmatch\">سرجیکٹو</span> (<span class=\"searchmatch\">فنکشن</span> دی تصویر اتے کومڈومین برابر ہندے ہن) ہومومورفزم ہندی اے۔ اسدے سامان"
+        }
+      ]
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_passages": 0,
+    "reused_prior_passages": [
+      "PNB-P007",
+      "PNB-P015"
+    ],
+    "reuse_scope": "These exact revision-bound passages support Shahmukhi academic ordering and explanatory syntax only; they do not attest specialized function-kind terminology."
+  },
+  "limits": "Search-result snippets are discovery evidence only. Positive hits require exact revision capture and context review before canon adoption; zero hits do not prove absence. OLP-0022 therefore keeps every selected label definition-governed, visibly bridged and reversible."
+}

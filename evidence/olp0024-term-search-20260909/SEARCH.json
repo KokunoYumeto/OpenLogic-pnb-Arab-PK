@@ -1,0 +1,210 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-09T21:28:07.532049Z",
+  "unit_id": "OLP-0024",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0024-Q01",
+      "query": "\"اُلٹا فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%8F%D9%84%D9%B9%D8%A7+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q02",
+      "query": "\"اُلٹ فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%8F%D9%84%D9%B9+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q03",
+      "query": "\"معکوس فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%B9%DA%A9%D9%88%D8%B3+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q04",
+      "query": "\"فنکشن دا معکوس\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%D8%A7+%D9%85%D8%B9%DA%A9%D9%88%D8%B3%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q05",
+      "query": "\"کھبا اُلٹ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%DA%BE%D8%A8%D8%A7+%D8%A7%D9%8F%D9%84%D9%B9%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q06",
+      "query": "\"سجا اُلٹ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%AC%D8%A7+%D8%A7%D9%8F%D9%84%D9%B9%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q07",
+      "query": "\"left inverse\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22left+inverse%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q08",
+      "query": "\"right inverse\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22right+inverse%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q09",
+      "query": "\"Axiom of Choice\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22Axiom+of+Choice%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q10",
+      "query": "\"چُناؤ دا مسلّم\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%86%D9%8F%D9%86%D8%A7%D8%A4+%D8%AF%D8%A7+%D9%85%D8%B3%D9%84%D9%91%D9%85%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q11",
+      "query": "\"انتخاب دا مسلّم\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8+%D8%AF%D8%A7+%D9%85%D8%B3%D9%84%D9%91%D9%85%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q12",
+      "query": "\"مسلّمۂ انتخاب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%B3%D9%84%D9%91%D9%85%DB%82+%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q13",
+      "query": "\"یک بہ یک فنکشن\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DB%8C%DA%A9+%D8%A8%DB%81+%DB%8C%DA%A9+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q14",
+      "query": "\"onto function\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22onto+function%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0024-Q15",
+      "query": "\"بائجیکٹو\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A8%D8%A7%D8%A6%D8%AC%DB%8C%DA%A9%D9%B9%D9%88%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 547,
+      "response_sha256": "a1282acae508261965189af0cb98236df34c6ceaf8f767590716412ffdc0044a",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہن: اک آئسومورفزم اک <span class=\"searchmatch\">بائجیکٹو</span> (دوبھاجت) ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک سرجیکٹو (<span class=\"searchmatch\">فنکشن</span> دی تصویر اتے کومڈومین"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0024-Q16",
+      "query": "\"inverse function\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22inverse+function%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

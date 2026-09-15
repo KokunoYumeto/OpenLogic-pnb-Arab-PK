@@ -1,0 +1,360 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-09T00:50:21.111523Z",
+  "unit_id": "OLP-0020",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0020-Q01",
+      "query": "\"فنکشن\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 4335,
+      "response_sha256": "fc50820f683bb7abb5fd2c74d2b61742d52a33dd5f470b36b39907ce771b1256",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 34,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 30312,
+          "title": "فنکشن",
+          "timestamp": "2017-03-18T13:00:16Z",
+          "snippet": "<span class=\"searchmatch\">فنکشن</span> میتھمیٹکس دا اک انگ اے جیدے وچ انپٹ آؤٹپٹ دے برابر ہوندی اے۔"
+        },
+        {
+          "pageid": 30311,
+          "title": "میتھمیٹیکل انیلیسز",
+          "timestamp": "2017-03-20T15:16:11Z",
+          "snippet": "میتھمیٹیکل انیلیسز میتھمیٹکس دا اک انگ اے. ایدے وچ <span class=\"searchmatch\">فنکشن</span>، سیریز تے سیکوئنس نوں ویکھیا جاندا اے۔ ایہناں دا انجینرنگ وچ کم ہوندا اے۔"
+        },
+        {
+          "pageid": 62146,
+          "title": "جنرل ٹوپولوجی",
+          "timestamp": "2017-07-11T14:37:34Z",
+          "snippet": "کنٹینیوٹی ، کمپیکٹنیسّ (سنگھنتا)، اتے کنیکٹڈنیسّ ہن۔ سہج علم دے طریقے نال، جاری <span class=\"searchmatch\">فنکشن</span> نیڑے دے نقطےآں نوں نیڑے دے قطےآں تکّ لیندے ہن۔ کمپیکٹ سیٹ اوہ ہندے ہن جہناں"
+        },
+        {
+          "pageid": 79663,
+          "title": "تفریقی مساوات",
+          "timestamp": "2023-10-01T06:17:22Z",
+          "snippet": "د‏‏ی سمتار (velocity) دا <span class=\"searchmatch\">فنکشن</span> (function) جو وقت انحصار کردا ہو حاصل کرنے دے لئی سانو‏ں تفرقی مساوات حل کرنا ہوئے گی۔ <span class=\"searchmatch\">ریاضی</span> وچ تفرقی مساوات مختلف نقطہ"
+        },
+        {
+          "pageid": 63452,
+          "title": "سائین ویو",
+          "timestamp": "2017-10-12T16:59:34Z",
+          "snippet": "کنٹینیوس ویو ہندی اے۔ اسدا ناں کوسائین دے <span class=\"searchmatch\">فنکشن</span> سائین اتے رکھیا گیا اے جہڑی کہ اسدا گراف ہندی اے۔ اسدی ورتوں <span class=\"searchmatch\">ریاضی</span>،فزکس، انجینیئرنگ، سگنل پروسیسنگ اتے ہور"
+        },
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہومومورفزم ہندا اے جو پچھان ایلیمینٹاں (عناصر) دا کوڈومین (کسے دتے ہوئے <span class=\"searchmatch\">فنکشن</span> دے سارے ممکن ملاں دا سیٹ) دی پچھان تک نقشہ بناؤندا اے۔ اک گروپ ہومومورفزم"
+        },
+        {
+          "pageid": 80453,
+          "title": "ویژہ قدر",
+          "timestamp": "2019-11-08T17:12:53Z",
+          "snippet": "اک سمتیہ <span class=\"searchmatch\">فنکشن</span>   f : R n → R n {\\displaystyle \\ f:\\mathbb {R} ^{n}\\to \\mathbb {R} ^{n}} دے لئی جے سمتیہ د‏‏ی ایسی قیمت   X = X ∗ {\\displaystyle \\ X=X^{*}}"
+        },
+        {
+          "pageid": 62153,
+          "title": "کمپلیکس پلین",
+          "timestamp": "2017-07-11T15:40:46Z",
+          "snippet": "ویسیل (1745–1818) ولوں درسائے گئے ہن ۔ ارگینڈ مورتاں دی ورتوں کمپلیکس پلین وچّ کسے <span class=\"searchmatch\">فنکشن</span> دے دھرواں اتے زیروآں دیاں پزیشناں دکھان لئی اکثر ورتے جاندے ہن ۔"
+        },
+        {
+          "pageid": 79572,
+          "title": "گروہ (ریاضی)",
+          "timestamp": "2019-10-28T11:44:06Z",
+          "snippet": "مفرد عدد ہو، تاں گروہ G دَوری ہوئے گا تے نتیجتاً مبدلی۔ میدان E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "تصور اے جو تفرقی دے ہمراہ حسابان وچ اک اکبر عالج ا‏‏ے۔ حقیقی متغیر د‏‏ی <span class=\"searchmatch\">فنکشن</span> f تے حقیقی لکیر اُتے وقفہ   [ a , b ] {\\displaystyle \\ [a,b]} دتا ہو، تاں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q02",
+      "query": "\"فنکشناں\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%A7%DA%BA%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 1007,
+      "response_sha256": "08fe1a9a6b3f3e9ff19b5aa9c1558257da11823f46cebe4ca4de4f732e246d82",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 2,
+      "returned_hits": 2,
+      "hits": [
+        {
+          "pageid": 3292,
+          "title": "ٹریگنومیٹری",
+          "timestamp": "2013-03-11T11:10:22Z",
+          "snippet": "ٹریگنومیٹرک ریشیو دے درمیان رشتے نوں دسدی اے۔ ٹریگنومیٹری نوں <span class=\"searchmatch\">ریاضی</span> چ تے اپلائڈ <span class=\"searchmatch\">ریاضی</span> دوناں چ ورتیا جاندا اے تے اینوں فزکس، کیمسٹری تے دوجے سینس مضموناں"
+        },
+        {
+          "pageid": 63274,
+          "title": "گیج تھیوری گریویٹی",
+          "timestamp": "2023-09-28T22:54:20Z",
+          "snippet": "فیلڈ اکئیوشناں دی طبعیاتی برابری نوں متاثر نہیں کردیاں ۔ ایہہ اصول ویکٹر <span class=\"searchmatch\">فنکشناں</span>، پوزیشن-گیج فیلڈ اتے روٹیشن-گیج فیلڈ، دے اک نویں جوڑے نال جان-پچھان ول"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q03",
+      "query": "\"ریاضیاتی فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7%D8%AA%DB%8C+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 624,
+      "response_sha256": "80d627a45cd0425c796939bbe41029baa09930d9b5c5c710de5168a1f0f3c6af",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 79759,
+          "title": "جی این یو آکٹیو",
+          "timestamp": "2026-05-17T23:20:32Z",
+          "snippet": "دا رقبہ 94 ہوئے گا)۔ سادہ <span class=\"searchmatch\">ریاضیا‏تی</span> <span class=\"searchmatch\">فنکشن</span> تعریف کرنے دے آسان تر طریقے موجود نيں، جو درج ذیل نيں۔ آکٹیو وچ <span class=\"searchmatch\">ریاضیا‏تی</span> <span class=\"searchmatch\">فنکشن</span> بطور کلیہ بنانے دا آسان طریقہ"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q04",
+      "query": "\"ریاضی دا فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C+%D8%AF%D8%A7+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0020-Q05",
+      "query": "\"تابع\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%A7%D8%A8%D8%B9%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 4651,
+      "response_sha256": "53492952ccd41d89da54410b7dfea4e10c5ff0bbd866d8be593e57b5fe5aad59",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 48,
+      "returned_hits": 10,
+      "hits": [
+        {
+          "pageid": 87526,
+          "title": "آخوندزادہ سیف الرحمن",
+          "timestamp": "2026-08-16T22:21:10Z",
+          "snippet": "ترجمہ قرآن مجید و تفسیر ،علم صرف ونحو،علم فقہ، اصول علم معانی وبیان علم <span class=\"searchmatch\">ریاضی</span> و تریخ علم حکمت و فلسفہ علم منطق و عقائد علم تفسیر ،اصول تفسیر علم حدیث"
+        },
+        {
+          "pageid": 84756,
+          "title": "ریجیکس",
+          "timestamp": "2019-12-14T12:37:16Z",
+          "snippet": "بندی کيتی گئی اے جو مختلف شرائط اُتے پورے اتردے ني‏‏‏‏ں۔ بولی د‏‏ی تعریف <span class=\"searchmatch\">ریاضی</span>، کمپیوٹر سائنس تے لسانیات وچ کچھ ایويں کيتی جاندی اے کہ بولی مختلف علامات"
+        },
+        {
+          "pageid": 98489,
+          "title": "سید ابوالحسن اصفہانی",
+          "timestamp": "2025-02-09T13:02:01Z",
+          "snippet": "قائل سن تے سید اصفہانی انہاں افکار دے سلسلے وچ اپنے استاد آخوند خراسانی دے <span class=\"searchmatch\">تابع</span> و پیرو سن ۔ اسی پس منظر د‏‏ی بنیاد اُتے آخوند خراسانی تے شیخ عبداللہ مازندرانی"
+        },
+        {
+          "pageid": 88031,
+          "title": "اشاعت اسلام",
+          "timestamp": "2026-08-23T08:06:35Z",
+          "snippet": "دے لوکاں نے دور رس مرچنشیل نیٹ ورکس ، مسافراں ، سائنس داناں ، شکاریاں ، <span class=\"searchmatch\">ریاضی</span> داناں ، معالجین تے فلاسفراں دے نال سبھیاچار تے سائنس دے متعدد نفیس مراکز"
+        },
+        {
+          "pageid": 1177,
+          "title": "سلطان محمد فاتح",
+          "timestamp": "2026-08-25T05:42:00Z",
+          "snippet": "نو‏‏ں کافی حد تک مذہبی آزادی د‏‏ی اجازت دتی ، بشرطیکہ اوہ اس د‏ی حکمرانی دے <span class=\"searchmatch\">تابع</span> ہون۔ ۱۴۶۳ وچ بوسنیا د‏‏ی فتح دے بعد ، اس نے بوسنیا دے فرانسیسیاں نو‏‏ں ملیڈریا"
+        },
+        {
+          "pageid": 31008,
+          "title": "سید احمد خان",
+          "timestamp": "2026-08-25T09:15:27Z",
+          "snippet": "نیکی، نیکی دے لئی تیار ا‏‏ے۔ انسان د‏‏ی تمام خوبیاں تے ساری نیکیاں تیری ہی <span class=\"searchmatch\">تابع</span> تے تیری ہی فرماں بردار نيں۔“ سرسید دے مضامین وچ مقصد دا عنصر غالب اے تے اوہ"
+        },
+        {
+          "pageid": 85189,
+          "title": "سید ابو الحسن اصفہانی",
+          "timestamp": "2025-02-09T13:01:40Z",
+          "snippet": "قائل سن تے سید اصفہانی انہاں افکار دے سلسلے وچ اپنے استاد آخوند خراسانی دے <span class=\"searchmatch\">تابع</span> و پیرو سن ۔ اسی پس منظر د‏‏ی بنیاد اُتے آخوند خراسانی تے شیخ عبداللہ مازندرانی"
+        },
+        {
+          "pageid": 91135,
+          "title": "دائمی حرکت",
+          "timestamp": "2026-08-14T19:54:41Z",
+          "snippet": "توانائی کےتحفظ دے قوانین خاص طور اُتے <span class=\"searchmatch\">ریاضی</span> دے نقطہ نظر تو‏ں مضبوط ني‏‏‏‏ں۔ نوتھر دا نظریہ ، جو 1915 وچ <span class=\"searchmatch\">ریاضی</span> دے اعتبار تو‏ں ثابت ہويا سی ، بیان کردا"
+        },
+        {
+          "pageid": 80167,
+          "title": "اسلامی آزاد یونیورسٹی",
+          "timestamp": "2026-01-19T23:48:46Z",
+          "snippet": "with nil. دانشگاه آزاد اسلامی نجف‌آباد، واحد جامع مستقل شد/ واحد جامع مستقل <span class=\"searchmatch\">تابع</span> استان نیست  http://iaun.ac.ir/index.php/ Archived 2020-09-24 at the وے بیک"
+        },
+        {
+          "pageid": 68754,
+          "title": "سندھ دی تریخ",
+          "timestamp": "2025-08-17T19:50:27Z",
+          "snippet": "حیثیت صوبہ ملتان دی چوتھی سرکار دی سی تے اوتھے دا حاکم ملتان دے صوبے دار دے <span class=\"searchmatch\">تابع</span> ہُندا سی۔ اوتھے 1574ء تے 1679ء یعنی 105 برس وچ پنجاہ حاکم مقرر ہوئے۔ انہاں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q06",
+      "query": "\"ریاضیاتی تابع\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%D8%A7%D8%AA%DB%8C+%D8%AA%D8%A7%D8%A8%D8%B9%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0020-Q07",
+      "query": "\"دائرۂ تعریف\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D8%A7%D8%A6%D8%B1%DB%82+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0020-Q08",
+      "query": "\"دائرہ تعریف\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D8%A7%D8%A6%D8%B1%DB%81+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0020-Q09",
+      "query": "\"نقشہ بندی\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%86%D9%82%D8%B4%DB%81+%D8%A8%D9%86%D8%AF%DB%8C%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 1031,
+      "response_sha256": "423c45caa41af43c2e4332ad286b8d33094df7fe3dd357566c47b9971f713b2a",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 2,
+      "returned_hits": 2,
+      "hits": [
+        {
+          "pageid": 1692,
+          "title": "تارا پڑھت",
+          "timestamp": "2026-03-12T14:25:38Z",
+          "snippet": "چنانچہ، اِس زمانے دے زیادہ تر فلکیا‏تی انکشافات، ستارےآں تے سیارےآں د‏‏ی <span class=\"searchmatch\">نقشہ</span> <span class=\"searchmatch\">بندی</span> تک ہی محدود سن ۔ اِس علم نو‏‏ں نَجُوم پيمائی کہیا جاندا ا‏‏ے۔ اِنہاں ابتدائی"
+        },
+        {
+          "pageid": 3850,
+          "title": "عطارد",
+          "timestamp": "2024-08-30T02:02:10Z",
+          "snippet": "مرتبہ اک ہی پہلو روشن دکھادی دتا جس د‏‏ی وجہ تو‏ں محض 45 فیصد حصے د‏‏ی <span class=\"searchmatch\">نقشہ</span> <span class=\"searchmatch\">بندی</span> ممکن ہوئے پائی سی۔ 27 مارچ 1974 نو‏‏ں پہلی بار نیڑے تو‏ں گزرنے تو‏ں دو"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q10",
+      "query": "\"mapping\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22mapping%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0020-Q11",
+      "query": "\"domain\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22domain%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 1236,
+      "response_sha256": "54edb8e0a12f40f7e13be600438fbd5d4748f55cf02efa482f2a4b64f10ba1ae",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 3,
+      "returned_hits": 3,
+      "hits": [
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے تعریف شدہ ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        },
+        {
+          "pageid": 62404,
+          "title": "سپیس ٹائیم",
+          "timestamp": "2026-08-25T08:34:28Z",
+          "snippet": "چتر 3-4. ولوسٹی دے اک <span class=\"searchmatch\">فنکشن</span> دے طور تے لورنٹز پھیکٹر"
+        },
+        {
+          "pageid": 90549,
+          "title": "انٹرنیٹ دی تریخ",
+          "timestamp": "2026-08-09T03:25:24Z",
+          "snippet": "نیم سسٹم دے لئی نگرانی تے ہ‏م آہنگی فراہ‏م کردا ا‏‏ے۔ آئی اے این اے دا <span class=\"searchmatch\">فنکشن</span> اصل وچ یو ایس سی انفارمیشن سائنسز انسٹی ٹیوٹ (آئی ایس آئی) دے ذریعہ انجام"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0020-Q12",
+      "query": "\"Functions\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22Functions%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 2112,
+      "response_sha256": "b4bb8c1a7f39814c7658744fe2686e04a68d7c2672ac2fcb8529f96dbea55c25",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 5,
+      "returned_hits": 5,
+      "hits": [
+        {
+          "pageid": 5146,
+          "title": "کلکتا",
+          "timestamp": "2026-08-24T23:34:43Z",
+          "snippet": "www.kmcgov.in Error: unknown archive URL (archived [Date missing]) KMC <span class=\"searchmatch\">functions</span> at www.kmcgov.in Error: unknown archive URL (archived [Date missing])"
+        },
+        {
+          "pageid": 104121,
+          "title": "پنجابی وچ الوپ ہو رہے پنجابی شبدا دا انگریزی روپ",
+          "timestamp": "2021-04-23T18:49:23Z",
+          "snippet": "آکھدے ہاں اسدے لئی <span class=\"searchmatch\">پنجابی</span> پرانے شبد اے &#039;تفنگ&#039; (فارسی) جو تورکی &#039;تفیک&#039; (<span class=\"searchmatch\">پنجابی</span> وچ تپک بنیا) توں انوناسکتا لے کے فارسی راہیں <span class=\"searchmatch\">پنجابی</span> وچ تتسم آیا۔ تپک شبد"
+        },
+        {
+          "pageid": 96702,
+          "title": "ثانیہ نشتر",
+          "timestamp": "2026-08-14T22:25:53Z",
+          "snippet": "۱۷ فروری ۲۰۱۴.  Maqbool, Shahina (6 May 2013). &quot;PM consolidates health <span class=\"searchmatch\">functions</span> under renamed division&quot;. The News (Pakistan). https://web.archive"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "India&quot;, Mathematics Magazine 68 (3): 163–174 [165–9 &amp; 173–4] E=mc2     <span class=\"searchmatch\">پنجابی</span> ویکیپیڈیا اُتے ریاضی مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     ریاضی علامات"
+        },
+        {
+          "pageid": 51372,
+          "title": "سٹرینگ تھیوری",
+          "timestamp": "2026-08-25T00:13:24Z",
+          "snippet": "ورتے گئے جو monster group (گروپ تھیوری وچّ پیدا ہوئی اک بنتر)تے modular <span class=\"searchmatch\">functions</span> (نمبر تھیوری وچّ مہتوپورن پھنکشناں دی اک شرینی) نال سبندھت سی۔ (2009)"
+        }
+      ]
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

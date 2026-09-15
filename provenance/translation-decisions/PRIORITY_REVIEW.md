@@ -1,77 +1,8 @@
 # Punjabi Shahmukhi Translation Decisions — Priority Review
 
-This view contains only urgent/high-priority decisions: **139 of 173** current decisions.
+This view contains only urgent/high-priority decisions: **134 of 173** current decisions.
 Use the explicit double-check question to give focused feedback; expert review is useful but is not a publication hold.
 Exact occurrence rows are in `TRANSLATION_DECISIONS_FULL.md` and `DECISION_OCCURRENCES.csv`.
-
-## `pnb-Arab-PK:PNB-T023`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: function; mapping; domain; codomain; range; input/argument; output/value; black box
-- Intended sense: function; mapping; domain; codomain; range; input/argument; output/value; black box
-- Chosen Shahmukhi rendering/treatment: فنکشن؛ نقشہ بندی؛ دائرۂ تعریف؛ ہدف سیٹ؛ حاصل قدراں دا سیٹ؛ انپٹ/دلیل؛ آؤٹ پٹ/قدر؛ کالا ڈبّا
-- Rationale: Domain is allowed inputs, codomain is specified target set, range is actually attained values; codomain need not equal range. Argument here is a function input, not an inferential argument. A function fixes exactly one output per input without specifying or requiring a computation procedure.
-- Why expert review helps: No native mathematical attestation acquired. English loan فنکشن and scholarly/shared labels remain reversible provisional choices inside Punjabi syntax; mathematical definitions govern.
-- Please double-check: **Do دائرۂ تعریف, ہدف سیٹ and حاصل قدراں دا سیٹ clearly distinguish allowed inputs, specified targets and actually attained values?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0015-B008` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- دائرۂ وصول for codomain; range as attained outputs in full — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T024`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: surjective/surjection; injective/injection; bijective/bijection; one-to-one correspondence
-- Intended sense: surjective/surjection; injective/injection; bijective/bijection; one-to-one correspondence
-- Chosen Shahmukhi rendering/treatment: ہر ہدف قدر لینے والا/سرجیکٹو؛ اک بہ اک/انجیکٹو؛ اک بہ اک تے ہر ہدف قدر لینے والا/بائجیکٹو؛ اک بہ اک مطابقت
-- Rationale: Surjectivity means every codomain element is attained; injectivity means distinct inputs never share an output; bijectivity is their conjunction and uniquely pairs the domain and codomain. Descriptive Punjabi phrases carry the definitions while parenthetical international loans keep the terms reversible.
-- Why expert review helps: No specialized native mathematical attestation was acquired. The canon supports prose order and explanation only; exact quantified definitions govern, and all labels remain open to correction without holding release.
-- Please double-check: **Do the descriptive phrases for surjective, injective and bijective preserve existence, uniqueness and their conjunction while the retained lexical tokens remain reversible?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0022-B006` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- international loan labels alone; longer quantified descriptions at every use — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T025`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: graph of a function; functional relation; well-defined; function restriction; image/application
-- Intended sense: graph of a function; functional relation; well-defined; function restriction; image/application
-- Chosen Shahmukhi rendering/treatment: فنکشن دا گراف؛ فنکشنی تعلق؛ صحیح طور تے تعریف شدہ؛ فنکشن دی تحدید؛ عکس/اطلاق
-- Rationale: A function graph is a relation between A and B, equivalently a subset of A times B, and is distinct from the graph-theory object in PNB-T019. Functional means existence and uniqueness of an output for each domain element. Function restriction narrows only the domain and keeps codomain B, unlike the earlier homogeneous two-sided relation restriction; image/application collects the attained values of a subset.
-- Why expert review helps: Native prose canon does not attest these mathematical senses. Definitions and audited source corrections OLFUN-004/005 govern; the labels remain reversible and open to correction.
-- Please double-check: **Does فنکشن دا گراف stay distinct from a graph-theory structure, and do تحدید plus عکس/اطلاق clearly preserve domain-only restriction and subset image?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0023-B007` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- تعلق دا فنکشنی خاکہ; پابندی for restriction — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
 
 ## `pnb-Arab-PK:PNB-T026`
 
@@ -79,65 +10,25 @@ Alternatives:
 - Source term/construction: inverse function; left inverse; right inverse; Axiom of Choice; undo
 - Intended sense: inverse function; left inverse; right inverse; Axiom of Choice; undo
 - Chosen Shahmukhi rendering/treatment: اُلٹا فنکشن؛ کھبا اُلٹ؛ سجا اُلٹ؛ چُناؤ دا مسلّم؛ اثر واپس موڑنا
-- Rationale: A two-sided inverse satisfies both compositions as identities. A left inverse undoes f after f and characterizes injectivity subject to the source-corrected nonempty-domain condition for existence; a right inverse is undone by f and characterizes surjectivity, with the stated general use of Choice. Undo is functional reversal, not arithmetic reciprocal.
-- Why expert review helps: No native technical attestation was acquired. The labels are reversible definition-led scholarly bridges; OLFUN-001 governs the nonempty-domain repair and the source footnote governs the Choice qualification.
+- Rationale: OLP-0024 fixes the two-sided, left and right inverse equations and the Axiom-of-Choice qualification. The target uses descriptive Punjabi with visible English bridges and keeps the OLFUN-001 nonempty-domain repair in the left-inverse theorem and proof.
+- Why expert review helps: The bounded search acquired no revision-bound Punjabi inverse-function, left/right inverse or Axiom-of-Choice definition. All specialist labels remain provisional and reversible; prior passages support only their recorded prose, set, function, domain or mathematical-register scopes.
 - Please double-check: **Do کھبا اُلٹ and سجا اُلٹ consistently distinguish which composition is the identity, and does چُناؤ دا مسلّم retain the source footnote’s exact scope?**
 
 Authorities checked:
 
-- `FROZEN-OLP-0024-B005` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0024-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P017` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=675058 — community_mathematical_prose_and_proof_vocabulary; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P023` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=372811 — community_set_theory_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P026` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_calculus_theorem_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P027` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_theorem_problem_distinction; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P029` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=493040 — community_n_tuple_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
+- `PNB-P030` (checked_context_only): https://pnb.wikipedia.org/w/index.php?oldid=643560 — community_mathematical_sequence_usage; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
 Alternatives:
 
 - معکوس فنکشن; بایاں/دایاں معکوس; full compositional descriptions — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T027`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: composition of functions; compose; relative product analogue
-- Intended sense: composition of functions; compose; relative product analogue
-- Chosen Shahmukhi rendering/treatment: فنکشناں دی ترکیب؛ ترتیب نال لاگو کرنا؛ نسبتی حاصل ضرب دا مماثل عمل
-- Rationale: The source convention comp(f,g) means first apply f and then g, yielding g(f(x)); the range of f must lie in the domain of g. This agrees with the previously preserved R-then-S relative-product order.
-- Why expert review helps: No native function-theory attestation was acquired. ترکیب is a reversible scholarly bridge inside Punjabi syntax; formulas and application order govern.
-- Please double-check: **Does ترکیب make the source convention—first f, then g—unambiguous and preserve its agreement with the R-then-S relative-product order?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0025-B004` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- مرکب فنکشن; تابعی ترکیب as a scholarly bridge — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-- Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
-
----
-
-## `pnb-Arab-PK:PNB-T028`
-
-- Kind: `terminology`; confidence: **medium**; provisional: **yes**; review priority: **high**.
-- Source term/construction: partial function; total function; defined/undefined; serial relation
-- Intended sense: partial function; total function; defined/undefined; serial relation
-- Chosen Shahmukhi rendering/treatment: جزوی فنکشن؛ کُل فنکشن؛ تعریف شدہ/غیر تعریف شدہ؛ سریئل (ہر پہلے رکن لئی کوئی دوسرا رکن رکھنے والا) تعلق
-- Rationale: A partial function assigns at most one output and may be undefined at inputs; its actual domain is the subset where defined. A total function is defined on every declared input. Seriality supplies at least one related output for every first-coordinate element and therefore makes a functional relation total.
-- Why expert review helps: No native technical attestation was acquired. جزوی/کُل and the transliterated سریئل label are reversible bridges; the explicit at-most-one, definedness and for-every-input clauses govern.
-- Please double-check: **Do جزوی and کُل clearly express zero-or-one versus exactly-one output availability, and is سریئل understandable when immediately paired with its quantified clause?**
-
-Authorities checked:
-
-- `FROZEN-OLP-0023-B011` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
-- `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-- `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
-
-Alternatives:
-
-- نامکمل فنکشن; ہر-تھاں فنکشن; serial described only by its formula — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 - Keep the chosen wording and add its precise defining condition when first introduced. — Retrospective comparison candidate; the record does not claim this alternative was consulted before the accepted wording.
 
 ---
@@ -246,7 +137,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0021-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0031-B010` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 
@@ -1051,7 +942,7 @@ Alternatives:
 
 Authorities checked:
 
-- `FROZEN-OLP-0021-B014` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
+- `FROZEN-OLP-0029-B020` (checked_supports): Open Logic Project frozen source revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 — This exact source block fixes the intended mathematical sense or fidelity issue; it is not target-language terminology evidence.
 - `PNB-P007` (checked_context_only): https://www.rvel.org/detail.php?id=2835 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 - `PNB-P015` (checked_context_only): https://rvel.org/detail.php?id=1283 — native_prose_syntax_only; used only within the bounded role stated in the legacy decision record, not as specialist technical attestation. Where redistribution-safe quote text is absent, passage_sha256 identifies the complete structured passage record.
 

@@ -1,0 +1,242 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-15T02:59:24.845857Z",
+  "unit_id": "OLP-0026",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0026-Q01",
+      "query": "\"جزوی فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AC%D8%B2%D9%88%DB%8C+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q02",
+      "query": "\"جزوی فنکشناں\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AC%D8%B2%D9%88%DB%8C+%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%A7%DA%BA%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q03",
+      "query": "\"پارشل فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%BE%D8%A7%D8%B1%D8%B4%D9%84+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q04",
+      "query": "\"partial function\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22partial+function%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q05",
+      "query": "\"کُل فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D9%8F%D9%84+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q06",
+      "query": "\"کل فنکشن\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%A9%D9%84+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q07",
+      "query": "\"total function\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22total+function%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q08",
+      "query": "\"تعریف شدہ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D8%B1%DB%8C%D9%81+%D8%B4%D8%AF%DB%81%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 1594,
+      "response_sha256": "37e8da60251bb66d3aaf5cb828178059cf5a1c76c8ad30d6ffcf4b8f5799359d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 3,
+      "returned_hits": 3,
+      "hits": [
+        {
+          "pageid": 79648,
+          "title": "جاوا اسکرپٹ دے قواعد",
+          "timestamp": "2026-08-25T05:10:43Z",
+          "snippet": "دے۔ تھلے پیش کردہ مثالاں وچ alert <span class=\"searchmatch\">فنکشن</span> استعمال کیتا گیا ا‏‏ے۔ دراصل جاوا سکرپٹ د‏‏ی معیاری لائبریری وچ ایسا <span class=\"searchmatch\">فنکشن</span> موجود نئيں جس دے ذریعہ ٹیکسٹ دکھایا"
+        },
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے <span class=\"searchmatch\">تعریف</span> <span class=\"searchmatch\">شدہ</span> ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0026-Q09",
+      "query": "\"غیر تعریف شدہ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%BA%DB%8C%D8%B1+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81+%D8%B4%D8%AF%DB%81%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 1066,
+      "response_sha256": "7cb66ba66a699509c6f756466e4555a120b09034b2e352f90270601c2c6c2a1d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 2,
+      "returned_hits": 2,
+      "hits": [
+        {
+          "pageid": 79648,
+          "title": "جاوا اسکرپٹ دے قواعد",
+          "timestamp": "2026-08-25T05:10:43Z",
+          "snippet": "دے۔ تھلے پیش کردہ مثالاں وچ alert <span class=\"searchmatch\">فنکشن</span> استعمال کیتا گیا ا‏‏ے۔ دراصل جاوا سکرپٹ د‏‏ی معیاری لائبریری وچ ایسا <span class=\"searchmatch\">فنکشن</span> موجود نئيں جس دے ذریعہ ٹیکسٹ دکھایا"
+        },
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0026-Q10",
+      "query": "\"ڈومین\" \"جزوی فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%88%D9%88%D9%85%DB%8C%D9%86%22+%22%D8%AC%D8%B2%D9%88%DB%8C+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q11",
+      "query": "\"فنکشن دا گراف\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%D8%A7+%DA%AF%D8%B1%D8%A7%D9%81%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 579,
+      "response_sha256": "51032a3f39259b7a33c878fa1f11ce4ce1074ec92aa0302d6f7555ee896f5659",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 96782,
+          "title": "فنکشن دا گراف",
+          "timestamp": "2020-12-07T10:10:28Z",
+          "snippet": "د‏ی گرافی صورت سطح ہوئے گی (دیکھو سہ بعدی گراف )۔ حقیقی اعداد اُتے <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">دا</span> <span class=\"searchmatch\">گراف</span> اس دے گرافی صورت دے برابر ا‏‏ے۔ جامع فنکشن دے لئی، گرافی صورت بنانا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0026-Q12",
+      "query": "\"سریئل تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%B1%DB%8C%D8%A6%D9%84+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q13",
+      "query": "\"سریئل ریلیشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B3%D8%B1%DB%8C%D8%A6%D9%84+%D8%B1%DB%8C%D9%84%DB%8C%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q14",
+      "query": "\"serial relation\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22serial+relation%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q15",
+      "query": "\"صحیح طور تے تعریف شدہ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B5%D8%AD%DB%8C%D8%AD+%D8%B7%D9%88%D8%B1+%D8%AA%DB%92+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81+%D8%B4%D8%AF%DB%81%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0026-Q16",
+      "query": "\"well-defined\" فنکشن پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22well-defined%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

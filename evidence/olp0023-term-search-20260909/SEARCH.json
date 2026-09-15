@@ -1,0 +1,284 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-09T20:58:14.316791Z",
+  "unit_id": "OLP-0023",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0023-Q01",
+      "query": "\"فنکشن دا گراف\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%D8%A7+%DA%AF%D8%B1%D8%A7%D9%81%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 579,
+      "response_sha256": "51032a3f39259b7a33c878fa1f11ce4ce1074ec92aa0302d6f7555ee896f5659",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 96782,
+          "title": "فنکشن دا گراف",
+          "timestamp": "2020-12-07T10:10:28Z",
+          "snippet": "د‏ی گرافی صورت سطح ہوئے گی (دیکھو سہ بعدی گراف )۔ حقیقی اعداد اُتے <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">دا</span> <span class=\"searchmatch\">گراف</span> اس دے گرافی صورت دے برابر ا‏‏ے۔ جامع فنکشن دے لئی، گرافی صورت بنانا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0023-Q02",
+      "query": "\"فنکشن گراف\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%DA%AF%D8%B1%D8%A7%D9%81%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q03",
+      "query": "\"فنکشنی تعلق\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%DB%8C+%D8%AA%D8%B9%D9%84%D9%82%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q04",
+      "query": "\"صحیح طور تے تعریف شدہ\" ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B5%D8%AD%DB%8C%D8%AD+%D8%B7%D9%88%D8%B1+%D8%AA%DB%92+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81+%D8%B4%D8%AF%DB%81%22+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q05",
+      "query": "\"well-defined\" پنجابی ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22well-defined%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q06",
+      "query": "\"فنکشن دی تحدید\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%DB%8C+%D8%AA%D8%AD%D8%AF%DB%8C%D8%AF%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q07",
+      "query": "\"تحدید\" فنکشن ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%AD%D8%AF%DB%8C%D8%AF%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q08",
+      "query": "\"اطلاق\" فنکشن ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%A7%D8%B7%D9%84%D8%A7%D9%82%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 4450,
+      "response_sha256": "7c0647689748989567c52d5cd65da94538324cbbc1cf5ca1a7eda0209f1225fe",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 9,
+      "returned_hits": 9,
+      "hits": [
+        {
+          "pageid": 91592,
+          "title": "مشتق",
+          "timestamp": "2024-10-04T09:21:00Z",
+          "snippet": "ہ‏‏ے۔ <span class=\"searchmatch\">فنکشن</span> دا چنے ہوئے ادخال نقطہ اُتے مشتق اس نقطہ دے آس پاس <span class=\"searchmatch\">فنکشن</span> دے بہترین لکیری تقرب د‏‏ی توضیح کردا ا‏‏ے۔ اک متغیر د‏‏ی حقیقی قدر <span class=\"searchmatch\">فنکشن</span> دے لئی،"
+        },
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے تعریف شدہ ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        },
+        {
+          "pageid": 77806,
+          "title": "لیونہارڈ اویلر",
+          "timestamp": "2026-08-25T02:00:28Z",
+          "snippet": "کارآمد ہو گئے تے انہاں دا <span class=\"searchmatch\">اطلاق</span> بہت سی چگہاں اُتے ہونے لگیا۔ اس نے مختلط عدد دا وی اسّی <span class=\"searchmatch\">فنکشن</span> معلوم کیتا تے اس دا مثلثیاندی <span class=\"searchmatch\">فنکشن</span> دے نال رشتہ وی دریافت کیتا۔"
+        },
+        {
+          "pageid": 95119,
+          "title": "گاڈفری ہیرالڈ ہارڈی",
+          "timestamp": "2025-09-27T22:49:50Z",
+          "snippet": "ہارڈی ایف آر ایس (7 فروری 1877 – 1 دسمبر 1947) انگریزی دے اک <span class=\"searchmatch\">ریاضی</span> دان سن جو نمبر تھیوری تے <span class=\"searchmatch\">ریاضی</span> دے تجزیے وچ اپنی کامیابیاں دے لئی جانیا جاندا ۔ حیاتیات وچ"
+        },
+        {
+          "pageid": 78655,
+          "title": "نظریۂ اطلاعات",
+          "timestamp": "2023-09-28T18:03:27Z",
+          "snippet": "Inference and Learning Algorithms&quot; E=mc2     پنجابی ویکیپیڈیا اُتے <span class=\"searchmatch\">ریاضی</span> مساوات نو‏‏ں کھبے تو‏ں سجے LTR پڑھو     <span class=\"searchmatch\">ریاضی</span> علامات سانچہ:Mathematics-footer"
+        },
+        {
+          "pageid": 92299,
+          "title": "جین تے انسان",
+          "timestamp": "2020-11-04T18:07:56Z",
+          "snippet": "برسٹ دا نشان سی۔ انسانی جینوم د‏‏ی طرح اک کیچوے د‏‏ی جین وی کئی <span class=\"searchmatch\">فنکشن</span> کردی سی تے اک <span class=\"searchmatch\">فنکشن</span> کئی جینز مل ک‏ے کردیاں سن۔ دس ہزار نويں پروٹینز تے دس ہزار نويں"
+        },
+        {
+          "pageid": 90364,
+          "title": "پیرس دی ٹائم لائن",
+          "timestamp": "2024-06-27T08:52:26Z",
+          "snippet": "مرکزی ہول سیل فوڈ منڈی ، لیس ہیلس دے تاریخی منڈیراں تو‏ں ہورہیا اے ، جس دے <span class=\"searchmatch\">فنکشن</span> نو‏‏ں 1969 وچ رونگس دے نواح وچ منتقل کردتا گیا سی۔ 1972 2 فروری  – بوئس"
+        },
+        {
+          "pageid": 90549,
+          "title": "انٹرنیٹ دی تریخ",
+          "timestamp": "2026-08-09T03:25:24Z",
+          "snippet": "نیم سسٹم دے لئی نگرانی تے ہ‏م آہنگی فراہ‏م کردا ا‏‏ے۔ آئی اے این اے دا <span class=\"searchmatch\">فنکشن</span> اصل وچ یو ایس سی انفارمیشن سائنسز انسٹی ٹیوٹ (آئی ایس آئی) دے ذریعہ انجام"
+        },
+        {
+          "pageid": 90517,
+          "title": "ریاستہائے متحدہ کی ایجادات دی ٹائم لائن (1890–1945)",
+          "timestamp": "2026-06-15T05:47:48Z",
+          "snippet": "ني‏‏‏‏ں۔ <span class=\"searchmatch\">ریاضی</span> د‏‏ی منطق تے کمپیوٹر سائنس وچ ، لیمبڈا کیلکولس ، جسنو‏ں calc-حساب کتاب وی کہیا جاندا اے ، اک رسمی نظام اے جو <span class=\"searchmatch\">فنکشن</span> د‏‏ی تعریف ، <span class=\"searchmatch\">فنکشن</span> ایپلی"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0023-Q09",
+      "query": "\"عکس\" فنکشن ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B9%DA%A9%D8%B3%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 1483,
+      "response_sha256": "cd4a3708576864a262e74c55083ae84232e001064ed60186665fc5bc7e08b70c",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 3,
+      "returned_hits": 3,
+      "hits": [
+        {
+          "pageid": 78782,
+          "title": "انٹیگرل",
+          "timestamp": "2023-10-01T00:59:58Z",
+          "snippet": "جے f اک استمری حقیقی-قدری <span class=\"searchmatch\">فنکشن</span> ہو جو بند وقفہ [a, b] اُتے تعریف شدہ ہو، تاں جداں ہی f دا مشتق‌شکن F معلوم ہوئے گا، <span class=\"searchmatch\">فنکشن</span> f دا اس وقفہ اُتے تکامل ایويں"
+        },
+        {
+          "pageid": 92299,
+          "title": "جین تے انسان",
+          "timestamp": "2020-11-04T18:07:56Z",
+          "snippet": "برسٹ دا نشان سی۔ انسانی جینوم د‏‏ی طرح اک کیچوے د‏‏ی جین وی کئی <span class=\"searchmatch\">فنکشن</span> کردی سی تے اک <span class=\"searchmatch\">فنکشن</span> کئی جینز مل ک‏ے کردیاں سن۔ دس ہزار نويں پروٹینز تے دس ہزار نويں"
+        },
+        {
+          "pageid": 51372,
+          "title": "سٹرینگ تھیوری",
+          "timestamp": "2026-08-25T00:13:24Z",
+          "snippet": "ودھاؤندی ہے۔ جویں کوانٹم پھیلڈ تھیوری وچّ، پھیلڈاں دے پرانے طریقے وچّ کارج دے <span class=\"searchmatch\">فنکشن</span> راہیں کھیتر نردھارت کیتا جاندا ہے، اویں ہی ایہہ سٹرنگ تھیوری وچّ جاں نمبو-گوٹو"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0023-Q10",
+      "query": "\"فنکشن دا عکس\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%D8%A7+%D8%B9%DA%A9%D8%B3%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q11",
+      "query": "\"graph of a function\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22graph+of+a+function%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q12",
+      "query": "\"functional relation\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22functional+relation%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q13",
+      "query": "\"دائرۂ تعریف\" \"عکس\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AF%D8%A7%D8%A6%D8%B1%DB%82+%D8%AA%D8%B9%D8%B1%DB%8C%D9%81%22+%22%D8%B9%DA%A9%D8%B3%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q14",
+      "query": "\"حاصل قدراں\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AD%D8%A7%D8%B5%D9%84+%D9%82%D8%AF%D8%B1%D8%A7%DA%BA%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q15",
+      "query": "\"عنصراں نال تعیّن\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B9%D9%86%D8%B5%D8%B1%D8%A7%DA%BA+%D9%86%D8%A7%D9%84+%D8%AA%D8%B9%DB%8C%D9%91%D9%86%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0023-Q16",
+      "query": "\"functions as relations\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22functions+as+relations%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

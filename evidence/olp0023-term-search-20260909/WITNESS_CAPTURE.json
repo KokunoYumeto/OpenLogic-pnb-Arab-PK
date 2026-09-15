@@ -1,0 +1,210 @@
+{
+  "schema": "pnb-witness-capture/1",
+  "captured_at_utc": "2026-09-09T21:00:14.158579Z",
+  "unit_id": "OLP-0023",
+  "search_response": {
+    "file": "Q01.json",
+    "bytes": 579,
+    "sha256": "51032a3f39259b7a33c878fa1f11ce4ce1074ec92aa0302d6f7555ee896f5659"
+  },
+  "request_url": "https://pnb.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids%7Ctimestamp%7Csha1%7Ccontent&rvslots=main&rvlimit=1&pageids=96782&format=json&formatversion=2",
+  "page_id": 96782,
+  "title": "فنکشن دا گراف",
+  "revision_id": 571506,
+  "revision_timestamp": "2020-12-07T10:10:28Z",
+  "revision_sha1": "e871c8e61ad359923c7a203194853d909d6223ba",
+  "response": {
+    "file": "PNB-MATH-W12-revision-571506.json",
+    "bytes": 4466,
+    "sha256": "f1144d15c5cb70b3c87f08e7aca9dbe137435e7ea344c6b1314d4e6373cf0f9b"
+  },
+  "content_lines": [
+    {
+      "line_1based": 1,
+      "utf8_sha256": "d36740df6a625a6f0d95dd499ebccaea3ae1257dff9d73fee3fffa88048bde8e",
+      "text": "{{اصطلاح برابر|"
+    },
+    {
+      "line_1based": 2,
+      "utf8_sha256": "2919569701baffe43000fb30a78c6404dad905f8e98fcef3ff76e9b6ba75df13",
+      "text": "دالہ دا گراف|"
+    },
+    {
+      "line_1based": 3,
+      "utf8_sha256": "33e937ebdfe24dd3cbf9c8bf40b86893fd70b0bf87c60b058df58839abd3e379",
+      "text": "graph of a function"
+    },
+    {
+      "line_1based": 4,
+      "utf8_sha256": "2f86e39b0fe2be69df9cee8beb44e5893fc0d8bdb7963f621ce7a1053cf5dca1",
+      "text": "}}"
+    },
+    {
+      "line_1based": 5,
+      "utf8_sha256": "26d8e6dfe5ab075ed97a28aa81cd72f0be2ede1cbe0d97b326fa1cba1c7de9e2",
+      "text": "ریاضیات وچ فنکشن ''f'' دا '''گراف''' تمام [[مرتب جوڑا|زوج مرتب]] <code dir=\"ltr\">(''x'', ''f''(''x''))</code> دا مجموعہ ا‏‏ے۔ خاصاً جے ''x'' [[حقیقی عدد]] ہو، تاں \"گراف\" تو‏ں مراد اس مجموعہ د‏‏ی گرافی صورت اے، [[کارتیسی متناسق نظام|کارتیسی مستوی]] وچ [[منحنی]] د‏‏ی ہیئت وچ ، جتھے کارتیسی محور وغیرہ دکھائے جاندے نيں۔ کارتیسی مستوی وچ گرافی نو‏‏ں کدی '''منحنی خاکہ گری''' وی کہیا جاندا ا‏‏ے۔ جے فنکشن دا ادخال حقیقی اعداد دا زوجِ مرتب <code dir=\"ltr\">(''x''<sub>1</sub>, ''x''<sub>2</sub>)</code> ہو، تاں گراف تمام [[ordered triple|تہرے مرتب]] <code dir=\"ltr\">(''x''<sub>1</sub>, ''x''<sub>2</sub>, ''f''(''x''<sub>1</sub>, ''x''<sub>2</sub>))</code> دا مجموعہ اے تے اس د‏ی گرافی صورت [[سطح]] ہوئے گی (دیکھو [[three dimensional graph|سہ بعدی گراف]] )۔"
+    },
+    {
+      "line_1based": 7,
+      "utf8_sha256": "a84cbb6d9c0efbe1b1f6d27a1b865d23d5f0d474c503c8bb797b0f1c9def23e0",
+      "text": "حقیقی اعداد اُتے فنکشن دا گراف اس دے گرافی صورت دے برابر ا‏‏ے۔ جامع فنکشن دے لئی، گرافی صورت بنانا ممکن نئيں ہُندا تے \"دالہ دا گراف\" د‏‏ی رسمی تعریف ریاضیا‏تی بیانات د‏‏ی ضروریات پورا کرنے دے لئی مناسب رہندی ا‏‏ے۔"
+    },
+    {
+      "line_1based": 9,
+      "utf8_sha256": "8b63a137f8777a7e28e0529c8fbcbc1e7615decaa0a264e1e8cd1e1daa20a5de",
+      "text": "یہ جانچنے دے لئی کہ کیہ منحنی گراف فنکشن اے، [[عمودی لکیر اختبار]] استعمال کرو۔ ایہ جانچنے دے لئی کہ کیہ فنکشن [[one-to-one function|واحد الواحد]] اے، یعنی کيتا اس د‏ی [[inverse function|مقلوب دالہ]] اے، [[افقی لکیر اختبار|اُفقی لکیر اختبار]] استعمال کرو۔ جے فنکشن دا مقلب ہو، تاں گراف نو‏‏ں لکیر <math>y = x</math> دے گرد معکس ک‏ر ک‏ے مقلوب فنکشن دا گراف ڈھونڈا جا سکدا ا‏‏ے۔ منحنی واحد الواحد فنکشن ہوئے گی [[اگر بشرط اگر]] ایہ فنکشن ہوئے تے ایہ اُفقی لکیر اختبار اُتے پورا اترے۔"
+    },
+    {
+      "line_1based": 11,
+      "utf8_sha256": "7ab3b4c5286eb869afcefe884a933e45c95108d1ffe71a8451f8538a39bf2b45",
+      "text": "== مثالاں =="
+    },
+    {
+      "line_1based": 12,
+      "utf8_sha256": "7dd646fb92e9fe98e51fae682f327576643c2de5db637ed738c8387b35bb4e03",
+      "text": "[[فائل:cubicpoly.png|کھبے|thumb|300 px| دالہ <math>f(x)={{x^3}-9x} \\!\\ </math> دا گراف]]"
+    },
+    {
+      "line_1based": 13,
+      "utf8_sha256": "e845def42b9ae849c111d27b393b40c83a956cca495cf23461a0371eb642874f",
+      "text": "=== اک متغیر د‏‏ی دالہ ==="
+    },
+    {
+      "line_1based": 14,
+      "utf8_sha256": "d5844584ec0a1119a51c352e997d100102f7c99597aa5afbfb42fc523c3dfba2",
+      "text": "فنکشن"
+    },
+    {
+      "line_1based": 15,
+      "utf8_sha256": "a13940b9042bdaf61ecdead861adea763d934a3c874f4dbcaef6fba6d64980e8",
+      "text": ": <math>f(x)="
+    },
+    {
+      "line_1based": 16,
+      "utf8_sha256": "0c602c10a173988d7ad5f6c52ac2d725d838a4b67c521cd587c61adadc300bde",
+      "text": " \\left\\{\\begin{matrix}"
+    },
+    {
+      "line_1based": 17,
+      "utf8_sha256": "aa86037a7f549bf3968e419ab3841503346a7914da978a2cc61e9dbdf80fd130",
+      "text": " a, & \\mbox{if }x=1 \\\\ d, & \\mbox{if }x=2 \\\\ c, & \\mbox{if }x=3."
+    },
+    {
+      "line_1based": 18,
+      "utf8_sha256": "0eb71b6558e1ea41d46db2ca2e7be1c34df51caf94c9bf274dfb6802845d55ec",
+      "text": " \\end{matrix}\\right."
+    },
+    {
+      "line_1based": 19,
+      "utf8_sha256": "b72c7e6a438504acc97deda5d362c06d4c5d7dc95ac7a0b6865b3b024d586540",
+      "text": " </math>"
+    },
+    {
+      "line_1based": 20,
+      "utf8_sha256": "a2ef15575dc0a5a1dd201dbbb7d6414f117456f6f9be0afbe69cb22fb6a08199",
+      "text": "کا گراف ایہ اے "
+    },
+    {
+      "line_1based": 21,
+      "utf8_sha256": "312e2574aa0bdbb0d014fb5b6673244bed27820623362adff6d5239ece6dbdcf",
+      "text": ":<code dir=\"ltr\">{(1,a), (2,d), (3,c)}</code>"
+    },
+    {
+      "line_1based": 23,
+      "utf8_sha256": "42c59d36124b12774549107df6563dbb1512cc8b5626412b40b6ba6a2244de6c",
+      "text": "کعبی کثیر رقمی"
+    },
+    {
+      "line_1based": 24,
+      "utf8_sha256": "10a3e86ccf6b78b6ace740d488749f723e1fcae3fbbd0b85e6a4bad34c6e5509",
+      "text": ": <math>f(x)={{x^3}-9x} \\!\\ </math>"
+    },
+    {
+      "line_1based": 25,
+      "utf8_sha256": "13fe87fccbd7f7d1e62e5acccc215ec29355d02f4e83d0f36b3622d54dac0db1",
+      "text": "کا [[real line|حقیقی لکیر]] اُتے گراف ایہ اے "
+    },
+    {
+      "line_1based": 26,
+      "utf8_sha256": "aa0c83904a811401331b7af4cb9c4f1c29ee0ae22525e8150bbf97b6849898b7",
+      "text": ":<code dir=\"ltr\"> {(''x'', ''x''<sup>3</sup>-9''x'') : ''x'' حقیقی عدد ہے}</code>"
+    },
+    {
+      "line_1based": 27,
+      "utf8_sha256": "789c54f383782670301a4c9ac9961dbe6293e60d34f95d2378c1e5f14409c8ed",
+      "text": "اگر اس مجموعہ نو‏‏ں [[کارتیسی مستوی]] اُتے درج کيتا جائے، تاں نتیجہ منحنی اے (دیکھو شکل)۔"
+    },
+    {
+      "line_1based": 29,
+      "utf8_sha256": "d5e2131a8178dc1ef90a3102dd9639bad7b10b705e89ffa6232e3c8049d39ce4",
+      "text": "{{clear}}"
+    },
+    {
+      "line_1based": 31,
+      "utf8_sha256": "4fd3496cda8c804b9abbabfa010efdd011c186e4a086d1b440273e17d36e9ce3",
+      "text": "[[فائل:Three-dimensional graph.png|سجے|thumb|300px|Graph of the [[تفاعل (ریاضیات)|تفاعل]] ''f(x, y) = [[جیب دالہ|sin]](x<sup>2</sup>)·[[مثلثیاندی دالہ|cos]](y<sup>2</sup>)''.]]"
+    },
+    {
+      "line_1based": 33,
+      "utf8_sha256": "f5c66910c718915c55dc02f11944fb30c21815fe1970a3ece219f5dc3da9e432",
+      "text": "== شمارندی اطلاقیے =="
+    },
+    {
+      "line_1based": 34,
+      "utf8_sha256": "e7aa919693baf515ccf3194ce4c8e5108dfcb01cba83c35232d5314caab16bf9",
+      "text": "فنکشن دے گراف بنانے دے لئی متعدد اطلاقیے جداں کہ [[جی این یو آکٹیو|آکٹیو]] تے [[مکسما (شمارندی الجبرا نظام)|maxima]] دستیاب نيں۔"
+    },
+    {
+      "line_1based": 36,
+      "utf8_sha256": "e15256325f310944466db116dd502328204cd096551c541b25e4cbcf5013729d",
+      "text": "== مورتاں =="
+    },
+    {
+      "line_1based": 37,
+      "utf8_sha256": "d3712744b3bebbf0f6e816c76d679176eddfd00426dff36eb11f8b3c678698e0",
+      "text": "<gallery>"
+    },
+    {
+      "line_1based": 38,
+      "utf8_sha256": "86059310bf87f1c2d04dba35eff19f8fd721811a1f5d1c99c032bcf17c4dc723",
+      "text": "Image:Sinx2+siny2.jmb.jpg|<!--{{nowrap|1=''z'' = sin(''x'')<sup>2</sup> + sin(''y'')<sup>2</sup>}}-->"
+    },
+    {
+      "line_1based": 39,
+      "utf8_sha256": "6863ac39d1451b9c1fda494fe0a07a8b3ce06b9d98496533903598b137eacca6",
+      "text": "</gallery>"
+    },
+    {
+      "line_1based": 40,
+      "utf8_sha256": "9b7631368a518f42c8df7657ee7f47771d6ca237e6eb1c184f6a3f5279c8d83e",
+      "text": "== حوالے =="
+    },
+    {
+      "line_1based": 41,
+      "utf8_sha256": "23eb299eec69872f22a0a5b5bb6ac5c6d412b3c99aa81f2afe092a0fb6aa5d52",
+      "text": "{{حوالے}}"
+    },
+    {
+      "line_1based": 42,
+      "utf8_sha256": "8b54257f711b168e89538b1bf1b4df844217e97333b301927381c849cb4d9f65",
+      "text": "{{متضاد بین الویکی}}"
+    },
+    {
+      "line_1based": 44,
+      "utf8_sha256": "ef5ccdd73a8bea1c7c03bb424a8c8eeba5e438804f4fef40fe3d7c78aa49508e",
+      "text": "[[گٹھ:ابتدائی ریاضیات]]"
+    },
+    {
+      "line_1based": 45,
+      "utf8_sha256": "330cca7d030ca5adc2c187ba23c0ba24fb21ba3815208166efe30b88204c2d63",
+      "text": "[[گٹھ:تفاعلات ]]"
+    },
+    {
+      "line_1based": 47,
+      "utf8_sha256": "92882803917ca12bf7d6c0b293cb80f2f58cd8011ab747ddb75b3ab5f908c94c",
+      "text": " [[گٹھ:کامنز گٹھ جس دا ربط ویکی ڈیٹا اُتے اے ]]"
+    }
+  ],
+  "adoption_status": "captured_pending_exact-line-review",
+  "limits": "Community-edited technical usage only. Capture does not establish a peer-reviewed or field-wide convention; any adopted passage must be restricted to its exact line and wording."
+}

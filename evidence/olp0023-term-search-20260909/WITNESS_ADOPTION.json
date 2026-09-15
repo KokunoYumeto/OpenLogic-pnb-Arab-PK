@@ -1,0 +1,58 @@
+{
+  "schema": "pnb-witness-adoption/1",
+  "adopted_at_utc": "2026-09-09T21:02:33.669039Z",
+  "unit_id": "OLP-0023",
+  "source_id": "PNB-C018",
+  "passage_id": "PNB-P037",
+  "capture": {
+    "file": "WITNESS_CAPTURE.json",
+    "bytes": 10636,
+    "sha256": "bd996d839b48aa4b1a7c9f73734d4108c49230f2e540c879a531c3d2203b2aae"
+  },
+  "response": {
+    "file": "PNB-MATH-W12-revision-571506.json",
+    "bytes": 4466,
+    "sha256": "f1144d15c5cb70b3c87f08e7aca9dbe137435e7ea344c6b1314d4e6373cf0f9b"
+  },
+  "selected_line": {
+    "line_1based": 5,
+    "utf8_sha256": "26d8e6dfe5ab075ed97a28aa81cd72f0be2ede1cbe0d97b326fa1cba1c7de9e2"
+  },
+  "scope": "Community attestation for فنکشن دا گراف as an ordered-pair-set definition only; no peer-reviewed or broader terminology claim.",
+  "before": {
+    "C:\\interlanguage-task-state\\openlogic-pnb-Arab-PK\\CANON_SOURCES.jsonl": {
+      "bytes": 22466,
+      "sha256": "e9a524756df42dd36d94816a8116cbce10604611b8f1430408691871825b19b6"
+    },
+    "C:\\interlanguage-production\\openlogic-pnb-Arab-PK\\repo\\provenance\\CANON_SOURCES.jsonl": {
+      "bytes": 22985,
+      "sha256": "5809c4eeb0895c2d10eb3aa3241776af202d1086fb2378af5ad256a638dc4c35"
+    },
+    "C:\\interlanguage-task-state\\openlogic-pnb-Arab-PK\\CANON_PASSAGES.jsonl": {
+      "bytes": 42192,
+      "sha256": "93b1c71dba3520220d4a689246be878ff6b8775da33fe0b71dc90fc4214f0b73"
+    },
+    "C:\\interlanguage-production\\openlogic-pnb-Arab-PK\\repo\\provenance\\CANON_PASSAGES.jsonl": {
+      "bytes": 42192,
+      "sha256": "93b1c71dba3520220d4a689246be878ff6b8775da33fe0b71dc90fc4214f0b73"
+    }
+  },
+  "after": {
+    "C:\\interlanguage-task-state\\openlogic-pnb-Arab-PK\\CANON_SOURCES.jsonl": {
+      "bytes": 24019,
+      "sha256": "aab60f2867d2e1a3ff6a5d94571e8547dca78825c55e8f4dea4b90b67ba759c1"
+    },
+    "C:\\interlanguage-production\\openlogic-pnb-Arab-PK\\repo\\provenance\\CANON_SOURCES.jsonl": {
+      "bytes": 24647,
+      "sha256": "a8ed0b25d682433f8f37c7b046c3de194ebe4f3e974ad23afd3cb6d74d6f0f24"
+    },
+    "C:\\interlanguage-task-state\\openlogic-pnb-Arab-PK\\CANON_PASSAGES.jsonl": {
+      "bytes": 44162,
+      "sha256": "dd88d116eebbab6719d141154788b74773f4201db57f4ab4443e389a1bb634d7"
+    },
+    "C:\\interlanguage-production\\openlogic-pnb-Arab-PK\\repo\\provenance\\CANON_PASSAGES.jsonl": {
+      "bytes": 44162,
+      "sha256": "dd88d116eebbab6719d141154788b74773f4201db57f4ab4443e389a1bb634d7"
+    }
+  }
+}

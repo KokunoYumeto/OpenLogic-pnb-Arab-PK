@@ -1,0 +1,242 @@
+{
+  "schema": "pnb-bounded-term-search/1",
+  "searched_at_utc": "2026-09-09T23:52:23.957732Z",
+  "unit_id": "OLP-0025",
+  "site": "Punjabi Wikipedia (Shahmukhi)",
+  "endpoint": "MediaWiki list=search, namespace 0",
+  "request_mode": "anonymous; no credentials or authorization headers",
+  "queries": [
+    {
+      "query_id": "OLP0025-Q01",
+      "query": "\"فنکشن دی ترکیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%DB%8C+%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q01.json",
+      "response_bytes": 933,
+      "response_sha256": "7a4caa33815c460025391b68c3cc28458d3505df8011d742f365cd356a016335",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 2,
+      "returned_hits": 2,
+      "hits": [
+        {
+          "pageid": 85819,
+          "title": "تبدل کامل گروہ",
+          "timestamp": "2020-01-01T08:23:57Z",
+          "snippet": "{ 1 , 2 , ⋯ , n } {\\displaystyle \\{1,2,\\cdots ,n\\}} پر، تاں انہاں <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">د‏‏ی</span> <span class=\"searchmatch\">ترکیب</span> f ∘ g ( k ) = f ( g ( k ) ) {\\displaystyle f\\circ g(k)=f(g(k))} بھی"
+        },
+        {
+          "pageid": 79572,
+          "title": "گروہ (ریاضی)",
+          "timestamp": "2019-10-28T11:44:06Z",
+          "snippet": "{ 1 , 2 , ⋯ , n } {\\displaystyle \\{1,2,\\cdots ,n\\}} پر، تاں انہاں <span class=\"searchmatch\">فنکشن</span> <span class=\"searchmatch\">د‏‏ی</span> <span class=\"searchmatch\">ترکیب</span> f ∘ g ( k ) = f ( g ( k ) ) {\\displaystyle f\\circ g(k)=f(g(k))} بھی"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0025-Q02",
+      "query": "\"فنکشناں دی ترکیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%D8%A7%DA%BA+%D8%AF%DB%8C+%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q02.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q03",
+      "query": "\"مرکب فنکشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%85%D8%B1%DA%A9%D8%A8+%D9%81%D9%86%DA%A9%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q03.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q04",
+      "query": "\"فنکشن کمپوزیشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%DA%A9%D9%85%D9%BE%D9%88%D8%B2%DB%8C%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q04.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q05",
+      "query": "\"فنکشن دا کمپوزیشن\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%AF%D8%A7+%DA%A9%D9%85%D9%BE%D9%88%D8%B2%DB%8C%D8%B4%D9%86%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q05.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q06",
+      "query": "\"composition\" فنکشن ریاضی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22composition%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86+%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q06.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q07",
+      "query": "\"function composition\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22function+composition%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q07.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q08",
+      "query": "\"نسبتی حاصل ضرب\" تعلق",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D9%86%D8%B3%D8%A8%D8%AA%DB%8C+%D8%AD%D8%A7%D8%B5%D9%84+%D8%B6%D8%B1%D8%A8%22+%D8%AA%D8%B9%D9%84%D9%82&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q08.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q09",
+      "query": "\"تعلقاں دا حاصل ضرب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AA%D8%B9%D9%84%D9%82%D8%A7%DA%BA+%D8%AF%D8%A7+%D8%AD%D8%A7%D8%B5%D9%84+%D8%B6%D8%B1%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q09.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q10",
+      "query": "\"relational composition\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22relational+composition%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q10.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q11",
+      "query": "\"رینج\" \"ڈومین\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%B1%DB%8C%D9%86%D8%AC%22+%22%DA%88%D9%88%D9%85%DB%8C%D9%86%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q11.json",
+      "response_bytes": 1593,
+      "response_sha256": "62786ca970dec4a713aba61099416dfcf0a74fd06e8813f619c3bdbc2a1363b7",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 3,
+      "returned_hits": 3,
+      "hits": [
+        {
+          "pageid": 62145,
+          "title": "ٹوپولوجی",
+          "timestamp": "2017-07-11T14:30:29Z",
+          "snippet": "جاری <span class=\"searchmatch\">فنکشن</span> اک-توں-اک اتے اؤنٹو (اپر) ہووے، اتے جیکر کسے <span class=\"searchmatch\">فنکشن</span> دا الٹا وی جاری ہووے، تاں <span class=\"searchmatch\">فنکشن</span> نوں اک ہومومورپھزم کیہا جاندا اے اتے اس <span class=\"searchmatch\">فنکشن</span> دی <span class=\"searchmatch\">ڈومین</span> نوں"
+        },
+        {
+          "pageid": 90549,
+          "title": "انٹرنیٹ دی تریخ",
+          "timestamp": "2026-08-09T03:25:24Z",
+          "snippet": "انٹرنیٹ پروٹوکول ایڈریس اسپیس تے <span class=\"searchmatch\">ڈومین</span> نیم سسٹم دے لئی نگرانی تے ہ‏م آہنگی فراہ‏م کردا ا‏‏ے۔ آئی اے این اے دا <span class=\"searchmatch\">فنکشن</span> اصل وچ یو ایس سی انفارمیشن سائنسز"
+        },
+        {
+          "pageid": 90568,
+          "title": "انواح دی اصل",
+          "timestamp": "2024-06-23T01:14:30Z",
+          "snippet": "ہوسکدیاں نيں تے ایہ اکثر خصوصیات غیر تطبیق معلوم ہودیاں سن کیونجے انہاں دا <span class=\"searchmatch\">فنکشن</span> معلوم نئيں سی ، جداں کہ آرکڈس فرٹلائزیشن کے بارے وچ انہاں د‏‏ی کتاب وچ دکھایا"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0025-Q12",
+      "query": "\"حاصل قدراں دا سیٹ\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%D8%AD%D8%A7%D8%B5%D9%84+%D9%82%D8%AF%D8%B1%D8%A7%DA%BA+%D8%AF%D8%A7+%D8%B3%DB%8C%D9%B9%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q12.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q13",
+      "query": "\"ڈومین\" \"فنکشن\" \"ترکیب\"",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%88%D9%88%D9%85%DB%8C%D9%86%22+%22%D9%81%D9%86%DA%A9%D8%B4%D9%86%22+%22%D8%AA%D8%B1%DA%A9%DB%8C%D8%A8%22&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q13.json",
+      "response_bytes": 528,
+      "response_sha256": "d005d7617c52f33cd7be07bbfac8b91d698d72efcb4ad2575386b53398e474a2",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 1,
+      "returned_hits": 1,
+      "hits": [
+        {
+          "pageid": 90568,
+          "title": "انواح دی اصل",
+          "timestamp": "2024-06-23T01:14:30Z",
+          "snippet": "مختلف ہور میکانزم نو‏‏ں زیادہ ساکھ دتا گیا۔ د‏‏ی ترقی دے نال جدید اختاسوادی <span class=\"searchmatch\">ترکیب</span> 1930کی دہائی تے 1940کی دہائی وچ ، اختاسوادی د‏‏ی ڈارون دے تصور موافقت قدرتی"
+        }
+      ]
+    },
+    {
+      "query_id": "OLP0025-Q14",
+      "query": "\"گراف\" \"R_f\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22%DA%AF%D8%B1%D8%A7%D9%81%22+%22R_f%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q14.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q15",
+      "query": "\"g(f(x))\" فنکشن",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22g%28f%28x%29%29%22+%D9%81%D9%86%DA%A9%D8%B4%D9%86&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q15.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    },
+    {
+      "query_id": "OLP0025-Q16",
+      "query": "\"compose functions\" پنجابی",
+      "url": "https://pnb.wikipedia.org/w/api.php?action=query&list=search&srsearch=%22compose+functions%22+%D9%BE%D9%86%D8%AC%D8%A7%D8%A8%DB%8C&srnamespace=0&srlimit=10&srprop=size%7Cwordcount%7Ctimestamp%7Csnippet&format=json&formatversion=2",
+      "response_file": "Q16.json",
+      "response_bytes": 73,
+      "response_sha256": "fc4ef97f55581c8d6f7eee219bb38485841749396ae8f7520fff2fdf2fe1671d",
+      "retrieval_disposition": "fresh_anonymous_response",
+      "total_hits": 0,
+      "returned_hits": 0,
+      "hits": []
+    }
+  ],
+  "limits": "Community usage discovery only. Search absence does not prove linguistic absence, and every positive hit requires exact context and revision review before evidentiary use."
+}

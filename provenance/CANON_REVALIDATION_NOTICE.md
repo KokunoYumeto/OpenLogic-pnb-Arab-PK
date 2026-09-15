@@ -1,6 +1,6 @@
 # Canon revalidation and semantic repair status
 
-Status date: 2026-09-08
+Status date: 2026-09-15
 
 This notice supersedes semantic-acceptance claims for the existing Punjabi Shahmukhi translation without deleting or rewriting historical evidence.
 
@@ -30,17 +30,17 @@ The audit therefore classified all 74 translated units as historically and prove
 
 ## Current validated prefix
 
-The contiguous repair validator covers OLP-0001 through OLP-0019 and reports:
+The contiguous repair validator covers OLP-0001 through OLP-0026 and reports:
 
-- 313/313 choice groups accounted for;
-- 114 reverified formal invariants;
-- 199 language-bearing groups with exact supported-provisional repair records;
+- 438/438 choice groups accounted for;
+- 152 reverified formal invariants;
+- 286 language-bearing groups with exact supported-provisional repair records;
 - 0 unsupported, 0 needs-revision, and 0 contentious groups;
 - no target-span, passage-identity, formula, command, protected-argument, placeholder-token, brace, Unicode, or source-manifest failures.
 
-OLP-0005–OLP-0010 make the Sets chapter’s core vocabulary reversible at its definitions and distinguish Russell's named paradox, the derived contradiction, comprehension, and extensionality. OLP-0011–OLP-0019 do the same for the complete Relations chapter: relations as sets, identity and order relations, relation properties, equivalence classes and quotients, order variants, graphs, trees, and relation operations. Exact revision-bound community evidence supports only bounded items such as the mathematical-relation head and graph/vertex/edge wording; specialist terms without attestation retain visible English bridges and explicit uncertainty. Sixteen bounded OLP-0019 relation-operation searches returned zero hits, which is recorded as search absence rather than proof of linguistic absence.
+OLP-0005–OLP-0010 make the Sets chapter’s core vocabulary reversible at its definitions and distinguish Russell's named paradox, the derived contradiction, comprehension, and extensionality. OLP-0011–OLP-0019 do the same for the complete Relations chapter: relations as sets, identity and order relations, relation properties, equivalence classes and quotients, order variants, graphs, trees, and relation operations. OLP-0020–OLP-0026 cover the complete Functions chapter: the function driver, function basics, functions as relations, kinds of functions, inverses, composition, and partial functions. Exact revision-bound community evidence supports only bounded items such as فنکشن, ordinary defined-function wording, and فنکشن دا گراف; partiality, totality, seriality, composition, inverse, range, and codomain labels without direct attestation retain visible English bridges and explicit uncertainty. Bounded searches are recorded as discovery evidence only, and zero hits are not treated as proof of linguistic absence.
 
-This establishes semantic acceptance only for the repaired prefix OLP-0001–OLP-0019 under the documented provisional-term policy. It is not a claim that the remaining 55 translated draft units, the historical v0.1.0 reader, or the complete 722-unit edition is semantically accepted or complete. The effective unresolved count is 590 of the immutable 791 non-formal baseline choices after accounting for 201 validator-compatible repairs, including two isolated later repairs. The next repair choice is `pnb-Arab-PK:OLP-0020-B004:C001`.
+This establishes semantic acceptance only for the repaired prefix OLP-0001–OLP-0026 under the documented provisional-term policy. It is not a claim that the remaining 48 translated draft units, the historical v0.1.0 reader, or the complete 722-unit edition is semantically accepted or complete. The effective unresolved count is 504 of the immutable 791 non-formal baseline choices after accounting for 287 validator-compatible repairs, including one isolated later repair. The next repair choice is `pnb-Arab-PK:OLP-0027-B004:C001`.
 
 The relocatable Sets-reader candidate was rebuilt after this checkpoint. Three XeLaTeX passes in each profile reproduced stable Naskh and Nastaliq bytes, all 29 pages were rendered and visually inspected, and all fonts were embedded. The first visual pass caught an apostrophe-sensitive bidirectional reversal in the `Russell's Paradox` heading; the bridge recognizer was corrected, both profiles were rebuilt, and all 65 English bridges then retained their internal LTR order. This is complete-page layout and local reproducibility evidence only: no PDF release changed, and it does not establish cross-platform byte reproducibility. Exact evidence is in [`PORTABLE_CANDIDATE_QA.json`](PORTABLE_CANDIDATE_QA.json).
 

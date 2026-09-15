@@ -1,0 +1,74 @@
+{
+  "schema": "pnb-bounded-term-search-review/1",
+  "unit_id": "OLP-0024",
+  "reviewed_at_utc": "2026-09-09T21:32:09.705924Z",
+  "search": {
+    "file": "SEARCH.json",
+    "bytes": 11379,
+    "sha256": "c32020274888ff9bdccc02f975950391a16e1a3a7229710c757921e70cd76bd2"
+  },
+  "query_dispositions": [
+    {
+      "query_ids": [
+        "OLP0024-Q15"
+      ],
+      "disposition": "positive incidental loan-form hit; no new inverse-function evidence adopted",
+      "detail": "The sole result is the already reviewed homomorphism page, where بائجیکٹو and فنکشن occur in an isomorphism description. It neither defines an inverse function nor attests left inverse, right inverse or the Axiom of Choice. Its incidental function-kind loan forms were already rejected for specialist adoption in the OLP-0022 review."
+    },
+    {
+      "query_ids": [
+        "OLP0024-Q01",
+        "OLP0024-Q02",
+        "OLP0024-Q03",
+        "OLP0024-Q04",
+        "OLP0024-Q05",
+        "OLP0024-Q06",
+        "OLP0024-Q07",
+        "OLP0024-Q08",
+        "OLP0024-Q09",
+        "OLP0024-Q10",
+        "OLP0024-Q11",
+        "OLP0024-Q12",
+        "OLP0024-Q13",
+        "OLP0024-Q14",
+        "OLP0024-Q16"
+      ],
+      "disposition": "zero exact-form results",
+      "detail": "No bounded result supplied a revision-bound witness for inverse function, left inverse, right inverse, undoing, or the Axiom of Choice. Search absence is not linguistic absence."
+    }
+  ],
+  "positive_discovery_samples": [
+    {
+      "query_id": "OLP0024-Q15",
+      "query": "\"بائجیکٹو\" فنکشن",
+      "total_hits": 1,
+      "observed_hits": [
+        {
+          "pageid": 62162,
+          "title": "ہومومورفزم",
+          "timestamp": "2018-02-17T18:26:20Z",
+          "snippet": "ہن: اک آئسومورفزم اک <span class=\"searchmatch\">بائجیکٹو</span> (دوبھاجت) ہومومورفزم ہندی اے۔ اک ایپیمورفزم (کدے کدے اسنوں اک کور وی کیہا جاندا اے) اک سرجیکٹو (<span class=\"searchmatch\">فنکشن</span> دی تصویر اتے کومڈومین"
+        }
+      ]
+    }
+  ],
+  "adoption": {
+    "new_sources": 0,
+    "new_source_ids": [],
+    "new_passages": 0,
+    "new_passage_ids": [],
+    "reused_prior_passages": [
+      "PNB-P007",
+      "PNB-P015",
+      "PNB-P017",
+      "PNB-P023",
+      "PNB-P026",
+      "PNB-P027",
+      "PNB-P029",
+      "PNB-P030",
+      "PNB-P037"
+    ],
+    "scope": "All OLP-0024 inverse terminology remains exact-source-defined, visibly bridged and provisional; prior passages support prose, function vocabulary, or function graph only within their recorded limits."
+  },
+  "limits": "Search snippets are discovery evidence only. The lone positive result is not an inverse-function definition, and zero hits do not prove absence or settle conventional Punjabi terminology."
+}
