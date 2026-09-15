@@ -11,6 +11,16 @@ This release makes the complete Punjabi Shahmukhi Sets chapter available as a ge
 
 This is the complete Sets chapter only. It is **not** the complete 722-unit OpenLogic edition, and no later chapter receives reader-acceptance credit from this release.
 
+## Downloads in reading and reproduction order
+
+1. `OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf` — primary human-readable preview.
+2. `OpenLogic-Sets-Punjabi-Shahmukhi-reproducible-source-v0.2.0.zip` — authoritative editable-source package, including both exact accepted cumulative TeX masters and their input/build receipts.
+3. `OpenLogic-Sets-Punjabi-Shahmukhi-Nastaliq-v0.2.0.pdf` — alternate reading profile.
+4. `OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub` — reflowable EPUB 3.3 reader.
+5. QA evidence, manifest and checksum files.
+
+Packaging correction, 2026-09-15: the original `OpenLogic-Sets-Punjabi-Shahmukhi-editable-v0.2.0.zip` remains downloadable byte-for-byte for provenance, but it omitted the generated cumulative `sets-naskh.tex` and `sets-nastaliq.tex` masters. The authoritative reproducible-source ZIP preserves all 50 original entries and adds those exact accepted masters, their exact `INPUTS.json` and `BUILD_RECEIPT.json`, a use note and the deterministic correction tool. No translated text, PDF or EPUB byte was rebuilt or replaced.
+
 ## EPUB edition
 
 The EPUB is script-free and genuinely reflowable. It declares `pnb-Arab-PK`, right-to-left document and spine direction, and embeds Noto Naskh Arabic under the OFL. Mathematical content is native presentation MathML with TeX annotations; the three diagrams are inline SVG with Punjabi titles, descriptions and structural text alternatives.

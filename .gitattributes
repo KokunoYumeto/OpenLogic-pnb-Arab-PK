@@ -36,9 +36,12 @@ tools/audit_sets_epub.py -text
 tools/accept_sets_epub_runtime.mjs -text
 tools/check_epub_external_links.py -text
 tools/prepare_sets_v020_release.py -text
+tools/prepare_sets_v020_source_correction.py -text
 provenance/SETS_EPUB_*.json -text
+provenance/SETS_REPRODUCIBLE_SOURCE_QA.json -text
 output/release-v0.2.0/*.json -text
 output/release-v0.2.0/*.txt -text
+output/release-v0.2.0/*.zip -text
 
 # Revision-bound public witness/search receipts are byte-addressed evidence.
 evidence/**/*.json -text whitespace=cr-at-eol

@@ -16,9 +16,10 @@ The chapter covers extensionality, subsets and power sets, important sets, union
 
 ## Read and inspect
 
-Release files include the reflowable EPUB, both PDF profiles, a bounded editable-source ZIP, a QA-evidence ZIP and a SHA-256 inventory. See `provenance/SETS_EPUB_RELEASE_QA.json` for exact accepted bytes, source coverage, EPUBCheck, content/link/runtime checks and representative visual review. The entire English source is preserved in `upstream/`; translated source is separate in `translation/`. Git text normalization is disabled for `upstream/**`, so all 722 public source blobs retain the manifest-addressed bytes. `provenance/UPSTREAM-EOL-REPAIR.json` records the one-time repair of 84 historical newline-only Git representations and the staged 722/722 verification.
+Release files include the reflowable EPUB, both PDF profiles, a complete reproducible-source ZIP, a QA-evidence ZIP and SHA-256 inventories. The reproducible-source ZIP contains both exact accepted cumulative TeX masters plus their accepted input/build receipts; the original editable ZIP is preserved unchanged as historical packaging but omitted those masters. See `provenance/SETS_EPUB_RELEASE_QA.json` for exact accepted reader bytes and `provenance/SETS_REPRODUCIBLE_SOURCE_QA.json` for the source-package correction. The entire English source is preserved in `upstream/`; translated source is separate in `translation/`. Git text normalization is disabled for `upstream/**`, so all 722 public source blobs retain the manifest-addressed bytes. `provenance/UPSTREAM-EOL-REPAIR.json` records the one-time repair of 84 historical newline-only Git representations and the staged 722/722 verification.
 
 - [Download the v0.2.0 EPUB](https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/download/v0.2.0/OpenLogic-Sets-Punjabi-Shahmukhi-v0.2.0.epub)
+- [Download the complete v0.2.0 reproducible source](https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/download/v0.2.0/OpenLogic-Sets-Punjabi-Shahmukhi-reproducible-source-v0.2.0.zip)
 - [Inspect the complete v0.2.0 release](https://github.com/KokunoYumeto/OpenLogic-pnb-Arab-PK/releases/tag/v0.2.0)
 
 - [Original project](https://openlogicproject.org/) and [contributors](https://openlogicproject.org/people/)

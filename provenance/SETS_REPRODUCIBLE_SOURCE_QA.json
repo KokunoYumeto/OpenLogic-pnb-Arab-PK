@@ -1,0 +1,91 @@
+{
+  "accepted_pdf_bindings": {
+    "naskh": {
+      "bytes": 136127,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Naskh-v0.2.0.pdf",
+      "sha256": "1e3f2fa2413534872123995b7128ee64ed37e42a51a21eb13621ddca59b9a313"
+    },
+    "nastaliq": {
+      "bytes": 192407,
+      "name": "OpenLogic-Sets-Punjabi-Shahmukhi-Nastaliq-v0.2.0.pdf",
+      "sha256": "c4239acb125435c4fb756ebae514f6ec3136c1c4c2fdae756d0612e9a70b7ff7"
+    }
+  },
+  "added_entries": [
+    {
+      "bytes": 42256,
+      "name": "reader/accepted-v0.2.0/sets-naskh.tex",
+      "sha256": "dacae70b697d38570ea354781f8c4d43eb501b07b10e9d6dd82ff525bd3babad"
+    },
+    {
+      "bytes": 42291,
+      "name": "reader/accepted-v0.2.0/sets-nastaliq.tex",
+      "sha256": "a910a168e9d4b1a2101318d4f0d121e438af0a9246d49b46df43a8c5d2746335"
+    },
+    {
+      "bytes": 29715,
+      "name": "reader/accepted-v0.2.0/INPUTS.json",
+      "sha256": "86406d66d07836d6b5eb498d6b80828d1d5ad13d09f83d215f266826c766791b"
+    },
+    {
+      "bytes": 2713,
+      "name": "reader/accepted-v0.2.0/BUILD_RECEIPT.json",
+      "sha256": "f37815dcd736256a7d58f99432e53ec09a5bfc2291df2eb5689e52e4a45bdfeb"
+    },
+    {
+      "bytes": 1548,
+      "name": "reader/ACCEPTED_MASTERS_v0.2.0.md",
+      "sha256": "c03f250a0e4d1bbc56d6fbcef2ec2d8ad9291ee11c76e44bfca066c2522dfe3e"
+    },
+    {
+      "bytes": 8625,
+      "name": "tools/prepare_sets_v020_source_correction.py",
+      "sha256": "40b40739e5837e8e01b80b26ae1a90713d9fedbee0e91f0ae7d6f359364c6969"
+    }
+  ],
+  "checks": {
+    "accepted_inputs_and_build_receipt_present": true,
+    "both_actual_accepted_cumulative_masters_present": true,
+    "crc": "pass",
+    "preamble_not_misrepresented_as_master": true,
+    "safe_paths": "pass",
+    "tex_engine_invoked": false
+  },
+  "corrected_package": {
+    "bytes": 2206711,
+    "deterministic_cold_match": true,
+    "entries": 56,
+    "name": "OpenLogic-Sets-Punjabi-Shahmukhi-reproducible-source-v0.2.0.zip",
+    "sha256": "64bec0f191b943279e6bfa728c65104c11b871911afa79e941c6a92d92de6a9f"
+  },
+  "legacy_entry_bytes_preserved": 50,
+  "legacy_package": {
+    "bytes": 2173252,
+    "entries": 50,
+    "name": "OpenLogic-Sets-Punjabi-Shahmukhi-editable-v0.2.0.zip",
+    "preserved_unchanged": true,
+    "sha256": "92e27880ff2a48d33d19e03c85723a150875a0e5f9deeadbcf037fa7bdf98af0"
+  },
+  "limits": [
+    "The archived accepted master bytes retain the original acceptance-build relative paths.",
+    "Use the included generator for a relocatable rebuild; different TeX installations require fresh visual QA.",
+    "The package covers OLP-0004 through OLP-0010 only and does not claim a complete 722-unit reader."
+  ],
+  "schema": "pnb-sets-reproducible-source-qa/1",
+  "scope": {
+    "claim": "complete Sets chapter only; not the complete 722-unit OpenLogic edition",
+    "sections": 6,
+    "source_units": 7,
+    "unit_ids": [
+      "OLP-0004",
+      "OLP-0005",
+      "OLP-0006",
+      "OLP-0007",
+      "OLP-0008",
+      "OLP-0009",
+      "OLP-0010"
+    ]
+  },
+  "status": "pass",
+  "version": "0.2.0"
+}
