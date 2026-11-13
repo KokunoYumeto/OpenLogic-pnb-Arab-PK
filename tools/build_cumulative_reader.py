@@ -80,6 +80,7 @@ BUILD_FILES = (
     "upstream/bib/open-logic.bib",
     "translation/pnb-morphology.sty",
     "reader/cumulative-localization.tex",
+    "reader/ai-attribution.json",
     "fonts/NOTICE.md",
     "fonts/OFL.txt",
     "fonts/NotoNastaliqUrdu-Regular.ttf",
@@ -552,11 +553,21 @@ def main():
     if set(reader.visits) != expected or any(count != 1 for count in reader.visits.values()):
         raise ValueError(f"Reader coverage mismatch. Missing {expected - set(reader.visits)}")
     template = (REPO / "reader/cumulative.tex").read_text("utf-8")
+    credits = json.loads((REPO / "reader/ai-attribution.json").read_bytes())
+    attribution = "\\par\n".join(
+        rf"{{\small {credit['role']} — \pnbLatin{{{credit['model']}}}۔}}"
+        for credit in credits
+    )
+    models = ", ".join(credit["model"] for credit in credits)
     args.output.mkdir(parents=True, exist_ok=True)
     sources = {}
     for profile, settings in PROFILE.items():
         source = template
-        for marker, content in {"PROFILE": settings, "ABOUT": about, "BODY": body}.items():
+        replacements = {
+            "PROFILE": settings, "ABOUT": about, "BODY": body,
+            "ATTRIBUTION": attribution, "ATTRIBUTION_MODELS": models,
+        }
+        for marker, content in replacements.items():
             source = replace_once(source, f"@@{marker}@@", content, profile)
         data = source.encode("utf-8")
         destination = args.output / f"open-logic-pnb-{profile}.tex"

@@ -99,12 +99,21 @@ def main():
         body.remove(title_block)
     head.find("title").text = TITLE
     add(head, "meta", name="author", content="Open Logic Project")
+    credits = json.loads((root / "reader/ai-attribution.json").read_bytes())
+    description = " ".join(
+        f"{credit['role']} — {credit['model']}۔" for credit in credits
+    )
+    add(head, "meta", name="description", content=f"{ATTRIBUTION} {description}")
     add(head, "link", rel="stylesheet", href="open-logic-pnb.css")
     for old in head.xpath("./style"):
         head.remove(old)
     header = etree.Element("header")
     add(header, "h1", TITLE)
     add(header, "p", ATTRIBUTION)
+    credit_list = add(header, "ul")
+    for credit in credits:
+        item = add(credit_list, "li", credit["role"] + " — ")
+        add(item, "bdi", credit["model"], lang="en", dir="ltr").tail = "۔"
     provenance = add(header, "ul")
     for label, url in LINKS:
         add(add(provenance, "li"), "a", label, href=url)

@@ -1,0 +1,14 @@
+[
+  {
+    "role": "ترجمے دی مُڈھلی لکھائی",
+    "model": "OpenAI Codex — GPT-5.6 Sol (Ultra)"
+  },
+  {
+    "role": "ترجمے دے اگلے حصیاں دی لکھائی",
+    "model": "OpenAI Codex — GPT-6 Sol (Ultra)"
+  },
+  {
+    "role": "باقی ترجمہ، ترجمے دیاں اصلاحاں تے ایڈیشن دی صفحہ بندی",
+    "model": "OpenAI Codex — GPT-6.1 Sol (Ultra)"
+  }
+]

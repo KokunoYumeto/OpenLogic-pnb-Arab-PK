@@ -159,7 +159,7 @@ def publication_assets(directory, tree, diagnostic):
     return resources, {name: (directory / "fonts" / name).read_text("utf-8") for name in font_license_files}, figure_count
 
 
-def opf_package(documents, resources, book_id, modified):
+def opf_package(documents, resources, book_id, modified, description):
     root = etree.Element(tag(OPF, "package"), nsmap={None: OPF, "dc": DC},
                          version="3.0", attrib={"unique-identifier": "book-id"})
     root.set(tag(XML, "lang"), LANG)
@@ -169,7 +169,7 @@ def opf_package(documents, resources, book_id, modified):
     add(metadata, DC, "language", LANG)
     add(metadata, DC, "creator", PUBLISHER)
     add(metadata, DC, "subject", SUBJECT)
-    add(metadata, DC, "description", "AI-translated Punjabi Shahmukhi edition of The Open Logic Text.")
+    add(metadata, DC, "description", description)
     add(metadata, DC, "source", LINKS[1][1])
     add(metadata, DC, "rights", "Creative Commons Attribution 4.0 International. Embedded fonts: SIL Open Font License 1.1 and GNU GPL with the TX fonts document-embedding exception.")
     add(metadata, OPF, "meta", modified, property="dcterms:modified")
@@ -271,7 +271,8 @@ def main():
     add(add(nav, XHTML, "li"), XHTML, "a", "فانٹاں دے لائسنس", href="font-licenses.xhtml")
     source_hash = sha256(source_bytes).hexdigest()
     book_id = "urn:uuid:" + str(uuid5(NAMESPACE_URL, f"openlogic-pnb-Arab-PK:{SOURCE_REVISION}:{source_hash}"))
-    package = opf_package(documents, resources, book_id, "2026-11-13T00:00:00Z")
+    description = tree.find("./head/meta[@name='description']").get("content")
+    package = opf_package(documents, resources, book_id, "2026-11-13T00:00:00Z", description)
     container = etree.Element(tag(OCF, "container"), nsmap={None: OCF}, version="1.0")
     add(add(container, OCF, "rootfiles"), OCF, "rootfile",
         **{"full-path": "EPUB/package.opf", "media-type": "application/oebps-package+xml"})
