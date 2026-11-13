@@ -1,0 +1,56 @@
+% Part: computability
+% Chapter: recursive-functions
+% Section: pr-functions-computable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cmp}{rec}{cmp}
+\olsection{بنیادی بازگشتی فنکشن قابلِ حساب نیں}
+
+فرض کرو فنکشن $h$ نوں بنیادی بازگشت راہیں
+متعین کیتا گیا اے:
+\begin{eqnarray*}
+h(\vec x, 0)     & = & f(\vec x) \\
+h(\vec x, y + 1) & = & g(\vec x, y, h(\vec x, y))
+\end{eqnarray*}
+تے فرض کرو فنکشن $f$ تے $g$ قابلِ حساب
+نیں۔ (ایتھے اسی $\vec x$ نوں $x_0$،
+\dots، $x_{k-1}$ دا مختصر روپ ورتدے
+آں۔) تاں $h(\vec x, 0)$ صاف طور اُتے
+حساب کیتا جا سکدا اے، کیونکہ ایہ بس
+$f(\vec x)$ اے جیہڑا فرض مطابق قابلِ
+حساب اے۔ فیر $h(\vec x, 1)$ وی حساب
+کیتا جا سکدا اے، کیونکہ $1 = 0 + 1$
+تے ایس لئی $h(\vec x, 1)$ بس ایہ اے:
+\begin{align*}
+ h(\vec x, 1) & = g(\vec x, 0, h(\vec x, 0)) =  g(\vec x, 0, f(\vec x)).
+\intertext{اسی ایس طرح اگے ودھ کے حساب کر سکدے آں}
+h(\vec x, 2) & = g(\vec x, 1, h(\vec x, 1)) = g(\vec x, 1, g(\vec x, 0, f(\vec x)))\\
+h(\vec x, 3) & = g(\vec x, 2, h(\vec x, 2)) = g(\vec x, 2, g(\vec x, 1, g(\vec x, 0, f(\vec x))))\\
+h(\vec x, 4) & = g(\vec x, 3, h(\vec x, 3)) = g(\vec x, 3, g(\vec x, 2, g(\vec x, 1, g(\vec x, 0, f(\vec x)))))\\
+& \vdots
+\end{align*}
+لہٰذا عام طور اُتے $h(\vec x, y)$
+حساب کرن لئی پہلے $h(\vec x, 0)$،
+فیر $h(\vec x, 1)$، \dots، باری باری
+حساب کردے جاواں، جد تک $h(\vec x, y)$
+تک نہ پہنچ جاواں۔
+
+ایس لئی جے فنکشن $f$ تے $g$ قابلِ
+حساب ہون، تاں بنیادی بازگشتی تعریف
+اک نواں قابلِ حساب فنکشن دیندی اے۔
+اِس طرح جے فنکشن $f$ تے $g_i$ قابلِ
+حساب ہون، تاں اوہناں دی ترکیب نال
+ملن والا فنکشن وی قابلِ حساب ہوندا
+اے۔
+
+چونکہ بنیادی فنکشن $\Zero$، $\Succ$
+تے $\Proj{n}{i}$ قابلِ حساب نیں،
+تے ترکیب تے بنیادی بازگشت قابلِ حساب
+فنکشناں توں قابلِ حساب فنکشن دیندیاں
+نیں، اِس لئی ہر بنیادی بازگشتی فنکشن
+قابلِ حساب اے۔
+
+\end{document}

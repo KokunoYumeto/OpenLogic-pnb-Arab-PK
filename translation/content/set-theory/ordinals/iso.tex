@@ -1,0 +1,165 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{iso}
+\olsection{ترتیب دے ہم ساخت نقشے}
+
+حُسنِ ترتیب \emph{کِس طرح} مضبوط اے، ایہ سمجھاؤن لئی اسیں پہلاں حُسنِ
+ترتیب والیاں ساختاں دی آپس وچ پرکھ دا اک طریقہ دساں گے۔
+
+\begin{defn}
+\emph{حُسنِ ترتیب والی ساخت} اک جوڑی $\tuple{A, <}$ اے، جیہدے وچ $<$،
+$A$ نوں حُسنِ ترتیب وچ رکھدا اے۔ حُسنِ ترتیب والیاں ساختاں $\tuple{A, <}$
+تے $\tuple{B, \lessdot}$ \emph{ترتیب دے لحاظ نال ہم ساخت} اُدوں تے صرف اُدوں
+نیں جدوں اک !!a{bijection} $f \colon A \to B$ ہووے جیہدے لئی
+$x < y$ اُدوں تے صرف اُدوں اے جدوں $f(x) \lessdot  f(y)$۔
+ایس صورت وچ اسیں $\ordeq{\tuple{A, <}}{\tuple{B, \lessdot}}$ لکھدے آں
+تے $f$ نوں \emph{ترتیب دا ہم ساخت نقشہ} آکھدے آں۔
+\end{defn}
+\noindent
+اگے مختصر گل کرن لئی اسیں ’’ترتیب دے ہم ساخت نقشیاں‘‘ دی تھاں ’’ہم ساخت
+نقشیاں‘‘ آکھاں گے۔ سمجھ مطابق، ہم ساخت نقشے اوہ !!{bijection}s نیں
+جیہڑے ساخت نوں قائم رکھدے نیں۔ ایہناں بارے کجھ سادیاں گلاں ہِیٹھاں نیں۔
+
+\begin{lem}\ollabel{isoscompose}
+ہم ساخت نقشیاں دے مرکب وی ہم ساخت نقشے نیں۔ یعنی جے $f \colon A \to B$
+تے $g \colon B \to C$ ہم ساخت نقشے نیں، تاں $(g \circ f) \colon A \to C$
+اک ہم ساخت نقشہ اے۔
+\end{lem}
+\begin{prob}
+	\olref[sth][ordinals][iso]{isoscompose} ثابت کرو۔
+\end{prob}
+\begin{proof}
+ایہ مشق چھڈّی اے۔
+\end{proof}
+\begin{cor}\ollabel{ordisoisequiv}
+	$\ordeq{X}{Y}$ اک ہم ارزی دا تعلق اے۔
+\end{cor}
+\begin{prop}\ollabel{ordisounique}
+جے $\tuple{A, <}$ تے $\tuple{B, \lessdot}$ حُسنِ ترتیب والیاں ہم ساخت
+ساختاں نیں، تاں اوہناں وچکار اکّو اک ہم ساخت نقشہ اے۔
+\end{prop}
+
+\begin{proof}
+منّ لو $f$ تے $g$، $A \to B$ دے ہم ساخت نقشے نیں۔ اسیں نتیجہ استقرا
+نال ثابت کراں گے، یعنی \olref[wo]{propwoinduction} نال۔
+$a\in A$ مقرر کرو تے استقرا لئی منّ لو کہ $(\forall b < a)f(b) = g(b)$۔
+$x \in B$ مقرر کرو۔
+
+جے $x \lessdot f(a)$، تاں $f^{-1}(x) < a$، سو
+$g(f^{-1}(x)) \lessdot g(a)$، کیوں جے $f$ تے $g$ ہم ساخت نقشے نیں۔
+پر چونکہ $f^{-1}(x) < a$، ساڈے مفروضے مطابق
+$x =f(f^{-1}(x)) = g(f^{-1}(x))$۔ سو $x \lessdot g(a)$۔
+ایسے طرح، جے $x \lessdot g(a)$، تاں $x \lessdot f(a)$۔
+
+عام صورت وچ $(\forall x \in B)(x \lessdot f(a) \liff x \lessdot g(a))$۔
+ایس توں $f(a) = g(a)$ نکلدا اے، \olref[sfr][rel][ord]{prop:extensionality-strictlinearorders}
+نال۔ سو $(\forall a \in A)f(a) = g(a)$، \olref[wo]{propwoinduction} نال۔
+\end{proof}\noindent
+ایس توں کجھ اندازہ ہوندا اے کہ حُسنِ ترتیب والیاں ساختاں مضبوط نیں۔
+پر ایس گل نوں اگے سمجھاؤن لئی کجھ ہور نشان دسنے کم آؤن گے۔
+
+\begin{defn}
+جدوں $\tuple{A, <}$ حُسنِ ترتیب والی ساخت اے تے $a \in A$، تاں منّ لو
+$A_a = \Setabs{x \in A}{x < a}$۔ اسیں $A_a$ نوں $A$ دا حقیقی
+\emph{مُڈھلا ٹکڑا} آکھدے آں (تے $A$ نوں وی $A$ دا اک غیر حقیقی مُڈھلا
+ٹکڑا منّ دے آں)۔ منّ لو $<_a$، $<$ دا اوس مُڈھلے ٹکڑے تک محدود روپ اے،
+یعنی $\funrestrictionto{\mathord{<}}{A_a^2}$۔
+\end{defn}
+\noindent
+ایہ نشان ورت کے اسیں آکھ تے ثابت کر سکدے آں کہ کوئی حُسنِ ترتیب والی
+ساخت اپنے کسے حقیقی مُڈھلے ٹکڑے نال ہم ساخت نہیں۔
+
+\begin{lem}\ollabel{wellordnotinitial}
+جے $\tuple{A, <}$ حُسنِ ترتیب والی ساخت اے تے $a \in A$، تاں
+$\ordneq{\tuple{A, <}}{\tuple{A_a, <_a}}$۔
+\end{lem}
+
+\begin{proof}
+تضاد کڈھن لئی منّ لو $f \colon A \to A_a$ اک ہم ساخت نقشہ اے۔
+چونکہ $f$ اک یک بہ یک تے پورا نقشہ اے تے $A_a \subsetneq A$،
+\olref[wo]{wo:strictorder} ورت کے $b \in A$ نوں $<$ دے لحاظ نال $A$ دا
+سبھ توں چھوٹا !!{element} منّ لو جیہدے لئی $b \neq f(b)$۔ اسیں وکھاواں گے
+کہ $(\forall x \in A)(x<b \liff x < f(b))$، جیہدے توں
+\olref[sfr][rel][ord]{prop:extensionality-strictlinearorders} نال
+$b = f(b)$ نکلے گا تے تضاد مل جائے گا۔
+
+منّ لو $x < b$۔ سو $x = f(x)$، $b$ دی چُون کر کے۔ تے $f(x) < f(b)$،
+کیوں جے $f$ اک ہم ساخت نقشہ اے۔ سو $x < f(b)$۔
+
+منّ لو $x < f(b)$۔ سو $f^{-1}(x) < b$، کیوں جے $f$ اک ہم ساخت نقشہ اے،
+تے ایس لئی $f^{-1}(x) = x$، $b$ دی چُون کر کے۔ سو $x < b$۔
+\end{proof}
+
+اگلا نتیجہ، موٹی گل آکھیے تاں، ایہ وکھاندا اے کہ ہم ساخت نقشے دا
+’’مُڈھلا ٹکڑا‘‘ وی ہم ساخت نقشہ اے:
+
+\begin{lem}\ollabel{wellordinitialsegment}
+منّ لو $\tuple{A, <}$ تے $\tuple{B, \lessdot}$ حُسنِ ترتیب والیاں ساختاں
+نیں۔ جے $f \colon A \to B$ اک ہم ساخت نقشہ اے تے $a \in A$، تاں
+$\funrestrictionto{f}{A_{a}} : A_a \to B_{f(a)}$ اک ہم ساخت نقشہ اے۔
+\end{lem}
+
+\begin{proof}
+چونکہ $f$ اک ہم ساخت نقشہ اے:
+	%Since $f$ is an isomorphism, $b < a$ iff $f(b) \lessdot f(a)$, so that
+\begin{align*}
+	\funimage{f}{A_a} &= \funimage{f}{\Setabs{x \in A}{x < a}}\\
+	&= \funimage{f}{\Setabs{f^{-1}(y) \in A}{f^{-1}(y) < a}} \\
+	&= \Setabs{y \in B}{y \lessdot f(a)} \\
+	&=B_{f(a)}
+\end{align*}
+تے $\funrestrictionto{f}{A_a}$ ترتیب قائم رکھدا اے کیوں جے $f$ اینوں قائم رکھدا اے۔
+\end{proof}
+
+اگلے دو نتیجے ثابت کردے نیں کہ حُسنِ ترتیب والیاں ساختاں دی ہمیشہ آپس وچ پرکھ ہو سکدی اے:
+
+\begin{lem}\ollabel{lemordsegments}
+منّ لو $\tuple{A, <}$ تے $\tuple{B, \lessdot}$ حُسنِ ترتیب والیاں ساختاں نیں۔
+جے $\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{b_1}, \lessdot_{b_1}}}$
+تے $\ordeq{\tuple{A_{{a_2}}, <_{a_2}}}{\tuple{B_{{b_2}}, \lessdot_{b_2}}}$،
+تاں ${a_1}  < {a_2} \text{ اُدوں تے صرف اُدوں جدوں }{b_1} \lessdot {b_2}$۔
+\end{lem}
+
+\begin{proof}
+اسیں \emph{کھبے توں سجے پاسے} ثابت کراں گے۔ دوجے پاسے وی ایہو جیہا ثبوت اے۔
+منّ لو $\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{b_1}, \lessdot_{b_1}}}$
+تے $\ordeq{\tuple{A_{{a_2}}, <_{a_2}}}{\tuple{B_{{b_2}}, \lessdot_{b_2}}}$
+دونیں نیں، تے $f \colon A_{{a_2}} \to B_{{b_2}}$ ساڈا ہم ساخت نقشہ اے۔
+منّ لو ${a_1} < {a_2}$۔ فیر
+$\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{f({a_1})}, \lessdot_{f({a_1})}}}$
+اے، \olref{wellordinitialsegment} نال۔ سو
+$\ordeq{\tuple{B_{b_1}, \lessdot_{b_1}}}{\tuple{B_{f({a_1})}, \lessdot_{f({a_1})}}}$،
+تے ایس لئی ${b_1} = f({a_1})$، \olref{wellordnotinitial} نال۔
+ہُن ${b_1} \lessdot {b_2}$، کیوں جے $f$ دا دائرہ $B_{{b_2}}$ اے۔
+\end{proof}
+
+\begin{thm}\ollabel{thm:woalwayscomparable}
+کسے وی دو حُسنِ ترتیب والیاں ساختاں وچوں اک دوجی دے کسے مُڈھلے ٹکڑے
+نال ہم ساخت اے۔ ایہ ٹکڑا حقیقی ہونا ضروری نہیں۔
+\end{thm}
+
+\begin{proof}
+منّ لو $\tuple{A, <}$ تے $\tuple{B, \lessdot}$ حُسنِ ترتیب والیاں ساختاں نیں۔
+وکھ کرن دے اصول نال منّ لو
+\[
+	f = \Setabs{\tuple{a, b} \in A \times B}{
+		\ordeq{\tuple{A_a, <_a}}{\tuple{B_b, \lessdot_b}}}.
+\]
+\olref{lemordsegments} نال، $a_1 < a_2$ اُدوں تے صرف اُدوں اے جدوں
+$b_1 \lessdot b_2$، ساریاں $\tuple{a_1, b_1}, \tuple{a_2, b_2} \in f$
+لئی۔ سو $f \colon \dom{f} \to \ran{f}$ اک ہم ساخت نقشہ اے۔
+
+جے $a_2 \in \dom{f}$ تے $a_1 < a_2$، تاں $a_1 \in \dom{f}$،
+\olref{wellordinitialsegment} نال۔ سو $\dom{f}$، $A$ دا مُڈھلا ٹکڑا اے۔
+ایسے طرح $\ran{f}$، $B$ دا مُڈھلا ٹکڑا اے۔ تضاد کڈھن لئی منّ لو دونیں
+\emph{حقیقی} مُڈھلے ٹکڑے نیں۔ فیر $a$ نوں $<$ دے لحاظ نال
+$A \setminus \dom{f}$ دا سبھ توں چھوٹا !!{element} منّ لو، سو
+$\dom{f} = A_a$۔ تے $b$ نوں $\lessdot$ دے لحاظ نال
+$B \setminus \ran{f}$ دا سبھ توں چھوٹا !!{element} منّ لو، سو
+$\ran{f} = B_b$۔ سو $f \colon A_a \to B_b$ اک ہم ساخت نقشہ اے،
+تے ایس لئی $\tuple{a, b} \in f$، جیہڑا تضاد اے۔
+\end{proof}
+
+\end{document}

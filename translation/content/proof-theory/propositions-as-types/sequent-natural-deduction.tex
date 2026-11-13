@@ -1,0 +1,111 @@
+% part: intuitionistic-logic
+% chapter: propositions-as-types
+% section: sequent-natural-deduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{snd}
+
+\olsection{سیکوئنٹ طرز دا قدرتی اخذ}
+
+$ \Gamma \Sequent !A$ لکھو جے قدرتی اخذ دا !!{derivation} اے جیہدے وچ $ \Gamma$، !!{undischarged} مفروضے نیں تے $!A$ نتیجہ اے۔ یا $ \Sequent !A$ لکھو جے $ \Gamma$ خالی اے۔
+
+$ \Gamma, !A_1, \dots, !A_n$ اسیں $ \Gamma \cup \{!A_1, \dots,
+!A_n\}$ لئی لکھدے آں، تے $ \Gamma, \Delta$ نوں $ \Gamma \cup \Delta$ لئی۔
+
+ویکھو کہ جدوں ساڈے کول $ \Gamma \Sequent !A \land !A$ اے، یعنی ساڈے کول !!a{derivation} اے جیہدے وچ $ \Gamma$، !!{undischarged} مفروضے نیں تے $!A \land !A$ آخری !!{formula} اے، تاں تھلّے $ \Elim{\land}$ لا کے اسیں !!a{derivation} لے سکدے آں اوہناں ای !!{undischarged} مفروضیاں تے نتیجے $!A$ والا۔ دوجے لفظاں وچ، جے $ \Gamma
+\Sequent !A \land !B$، تاں $ \Gamma \Sequent !A$۔
+\begin{prooftree}
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !A$
+  \DisplayProof\qquad\bottomAlignProof
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !B$
+\end{prooftree}
+لیبل $ \Elim{\land}$، قدرتی اخذ وچ اوسے ناں والے قاعدے نال جوڑ ول اشارہ کردا اے۔
+
+ایویں ای منّ لو کہ ساڈے کول $ \Gamma, !A \Sequent !B$ اے، یعنی ساڈے کول !!a{derivation} اے جیہدے !!{undischarged} مفروضے $ \Gamma, !A$ تے آخری !!{formula}~$!B$ اے۔ جے اسیں $ \Intro{\lif}$ قاعدہ لائیے، تاں ساڈے کول !!a{derivation} اے جیہدے وچ $ \Gamma$، !!{undischarged} مفروضے نیں تے $!A
+\lif !B$ آخری !!{formula} اے، یعنی $ \Gamma \Sequent !A \lif
+!B$۔ ویکھو کہ ایس نال مفروضیاں دا !!{discharge} ہور صاف ہو گیا اے۔
+\begin{prooftree}
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+\end{prooftree}
+
+ہور قاعدیاں توں وی اسیں ایس طرح نتیجے کڈھ سکدے آں۔ ایہ قاعدے ہِٹھ کھولھ کے دِتّے نیں:
+\begin{gather*}
+  \Axiom $\Gamma \fCenter !A$
+  \Axiom $\Delta \fCenter !B$
+  \RightLabel{$\Intro{\land}$}
+  \BinaryInf $\Gamma,\Delta \fCenter !A \land !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_1$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+  \qquad
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_2$}
+  \UnaryInf $\Gamma \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Intro{\lor}_1$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\qquad
+  \Axiom $\Gamma \fCenter !B$
+  \RightLabel{$\Intro{\lor}_2$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \lor !B$
+  \Axiom $\Delta, !A \fCenter !C$
+  \Axiom $\Delta', !B \fCenter !C$
+  \RightLabel{$\Elim{\lor}$}
+  \TrinaryInf $\Gamma, \Delta, \Delta' \fCenter !C$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+  \DisplayProof
+  \qquad
+  \Axiom $\Delta \fCenter !A \lif !B$
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInf $\Gamma, \Delta \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter \lfalse$
+  \RightLabel{$\FalseInt$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+\end{gather*}
+
+ہر مفروضہ اپنے آپ وچ !!a{derivation} اے $!A$ دا~$!A$ توں، یعنی ساڈے کول ہمیشہ $!A \Sequent !A$ اے۔
+
+\begin{prooftree}
+  \AxiomC{$ $}
+  \UnaryInfC{$!A \fCenter !A$}
+\end{prooftree}
+
+ایہ سارے قاعدے رلا کے قدرتی اخذ دے !!{derivation}s وچوں کِہڑے موجود نیں، ایہدے بارے اک حساب منّے جا سکدے نیں۔ ایہ قدرتی اخذ دی نشانیاں والی وکھری صورت وی منّے جا سکدے نیں، جیہدے وچ ہر قدم اُتے !!{formula} جیہڑا !!{derive} ہویا، اوہ وی درج ہوندا اے تے !!{undischarged} مفروضے جیہناں توں اوہ !!{derive} ہویا، اوہ وی۔
+
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \UnaryInf $!A \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom $!B \fCenter !B$
+  \BinaryInf$!A, !B\lif \fCenter \lfalse$
+  \UnaryInf$(!B \fCenter !A \lif \lfalse$
+  \UnaryInf$( !B \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom$(!B \fCenter !B$
+  \BinaryInf$(!B \fCenter \lfalse$
+  \UnaryInf$\fCenter !B \lif \lfalse$
+\end{prooftree}
+جتھے $!B$، $(!A \lor (!A \lif \lfalse))\lif \lfalse$ دا چھوٹا روپ اے۔
+
+\end{document}

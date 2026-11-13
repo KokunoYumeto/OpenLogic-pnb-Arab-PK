@@ -1,0 +1,193 @@
+% Part: model-theory
+% Chapter: interpolation
+% Section: definability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{int}{def}
+
+\olsection{قابلِ تعریف ہون دا قضیہ}
+
+درمیانی جملے دے قضیے دا اک اہم اطلاق
+بیتھ دا قابلِ تعریف ہون دا قضیہ اے۔
+اک $n$-جگہی تعلق~$R$ متعین کرن لئی
+اسیں ایسا !!a{formula}~$!C$ دے سکدے
+آں جس وچ $n$ آزاد !!{variable}s ہون
+تے جس وچ~$R$ نہ آوے۔ ایہ
+~$R$ دی \emph{صریح} تعریف
+~$!C$ راہیں ہووے گی۔ فیر اسیں ایہ وی آکھ
+سکدے آں کہ اک نظریہ~$\Sigma(P)$،
+ایسی !!{language} وچ جس وچ
+$n$-جگہی !!{predicate}~$P$ ہووے،
+~$P$ نوں صریح طور اُتے متعین کردا
+اے جے ایس وچ اک باقاعدہ صریح تعریف
+موجود ہووے (یا گھٹ توں گھٹ اوہ
+ایس توں منطقی طور اُتے نکلدی ہووے)،
+یعنی
+\[
+\Sigma(P) \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1, \dots,
+    x_n))]].
+\]
+پر صریح تعریف، تعلق نوں پوری طرح
+متعین کرن دے مفہوم وچ، تعریف دا صرف
+اک طریقہ اے۔ کوئی نظریہ ایسا وی ہو
+سکدا اے کہ ہر نمونے وچ باقی
+!!{language} دی تعبیر،~$P$ دی تعبیر
+مقرر کر دیوے۔ قابلِ تعریف ہون دا
+قضیہ آکھدا اے کہ جدوں کوئی نظریہ
+~$P$ دی تعبیر ایس طرح مقرر کرے،
+یعنی~$P$ نوں \emph{ضمنی طور اُتے
+متعین کرے}، تاں اوہ اوہنوں صریح طور
+اُتے وی متعین کردا اے۔
+
+\begin{defn}
+فرض کرو $\Lang{L}$ ایسی !!a{language}
+اے جس وچ !!{predicate}~$P$ نہیں۔
+$\Sigma(P)$، $\Lang{L}
+\cup \{P\}$ دے !!{sentence}s دا سیٹ،
+~$P$ نوں
+\emph{صریح طور اُتے متعین کردا} اے
+اوہدوں تے صرف اوہدوں جدوں
+کوئی !!a{formula}~$!C(x_1, \dots, x_n)$،
+$\Lang{L}$ دا، ایسا ہووے
+کہ
+\[
+\Sigma(P) \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1, \dots,
+    x_n))]].
+\]
+\end{defn}
+
+\begin{defn}
+فرض کرو $\Lang{L}$ ایسی !!a{language}
+اے جس وچ !!{predicate}s~$P$ تے~$P'$
+نہیں۔ $\Sigma(P)$،
+$\Lang{L} \cup \{P\}$ دے
+!!{sentence}s دا سیٹ،
+$P$ نوں \emph{ضمنی طور اُتے
+متعین کردا} اے اوہدوں تے صرف
+اوہدوں جدوں
+\[
+\Sigma(P) \cup \Sigma(P') \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff \Atom{P'}{x_1,\dots,
+      x_n})]],
+\]
+جتھے $\Sigma(P')$، $P$ دی جگہ
+$P'$ ہر تھاں اکّو طرح رکھ کے
+$\Sigma(P)$ توں ملدا اے۔
+\end{defn}
+
+دوجے لفظاں وچ، کسے وی نمونے
+$\Struct{M}$ تے $R, R' \subseteq
+\Domain{M}^n$ لئی، جے
+$\Expan{M}{R} \Entails \Sigma(P)$
+تے $\Expan{M}{R'} \Entails \Sigma(P')$
+دوہاں ہون، تاں $R=R'$؛ جتھے
+$\Expan{M}{R}$ اوہ !!{structure}
+~$\Struct{M'}$ اے جو
+$\Lang{L}$ نوں
+$\Lang{L} \cup \{P\}$ تک ودھا کے
+ملدی اے تے جس وچ
+$\Assign{P}{M'} = R$؛ تے
+$\Expan{M}{R'}$ لئی وی ایویں؛ دوجی توسیع وچ
+نویں ناں والا محمول دوجے تعلق نال تعبیر ہوندا اے۔
+
+\begin{thm}[بیتھ دا قابلِ تعریف ہون دا قضیہ]
+$\Sigma(P)$، $\Lang{L}
+  \cup\{P\}$-!!{sentence}s دا سیٹ،
+$P$ نوں ضمنی طور
+اُتے متعین کردا اے اوہدوں تے صرف
+اوہدوں جدوں $\Sigma(P)$،
+$P$ نوں صریح طور اُتے متعین کرے۔
+\end{thm}
+
+\begin{proof}
+جے $\Sigma(P)$، $P$ نوں صریح
+طور اُتے متعین کرے، تاں دوہاں
+\begin{align*}
+  \Sigma(P) & \Entails & \lforall[x_1][\dots \lforall[x_n]
+    [(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1,\dots,x_n))]]\\
+  \Sigma(P') & \Entails & \lforall[x_1][\dots \lforall[x_n]
+    [(\Atom{P'}{x_1,\dots, x_n} \liff !C(x_1,\dots,x_n))]]
+\end{align*}
+ہون گے، تے نتیجہ نکل آؤندا اے۔
+الٹے رخ لئی فرض کرو کہ $\Sigma(P)$،
+$P$ نوں ضمنی طور اُتے متعین کردا
+اے۔ پہلے اسیں نویں !!{constant}s
+$c_1$، \dots،~$c_n$،
+$\Lang{L}$ وچ شامل کردے آں۔ تاں
+\[
+\Sigma(P) \cup \Sigma(P') \Entails
+\Atom{P}{c_1, \dots, c_n} \to  \Atom{P'}{c_1, \dots, c_n}.
+\]
+محدود گواہی دے قضیے نال محدود سیٹ
+$\Delta_0 \subseteq \Sigma(P)$
+تے $\Delta_1 \subseteq \Sigma(P')$
+ایسے ملدے نیں کہ
+\[
+\Delta_0 \cup \Delta_1 \Entails
+\Atom{P}{c_1, \dots, c_n} \to \Atom{P'}{c_1, \dots, c_n}.
+\]
+$!D(P)$ نوں اوہناں سارے
+!!{sentence}s $!A(P)$ دا منطقی جوڑ من لو
+جنہاں لئی یا $!A(P) \in \Delta_0$
+ہووے یا $!A(P') \in \Delta_1$؛
+تے $!D(P')$ نوں اوہناں سارے
+!!{sentence}s $!A(P')$ دا منطقی جوڑ من لو
+جنہاں لئی یا $!A(P) \in \Delta_0$
+ہووے یا $!A(P') \in \Delta_1$۔
+تاں $!D(P) \land
+!D(P') \Entails \Atom{P}{c_1, \dots, c_n} \to P'c_1\dots c_n$۔
+ایس نوں ایویں مُڑ ترتیب دے
+سکدے آں کہ دتے خاص !!{predicate} دے اصل تے نویں ناں،
+$\Entails$ دے آپو اپنے پاسے آ جان؛ باقی زبان مشترک رہ سکدی اے:
+\[
+!D(P) \land \Atom{P}{c_1, \dots, c_n} \Entails
+!D(P') \to \Atom{P'}{c_1, \dots, c_n}.
+\]
+کریگ دے درمیانی جملے دے قضیے نال
+اک !!a{sentence} $!C(c_1,\dots, c_n)$
+اے جس وچ $P$ یا $P'$ نہیں، تے
+جس لئی:
+\begin{align*}
+  !D(P) \land \Atom{P}{c_1, \dots, c_n} & \Entails !C(c_1,\dots, c_n); \\
+  !C(c_1,\dots, c_n) & \Entails !D(P') \to \Atom{P'}{c_1, \dots, c_n}.
+\end{align*}
+ایہناں وچوں پہلے منطقی نتیجے
+توں ساڈے کول
+$!D(P) \Entails
+\Atom{P}{c_1,\dots, c_n} \lif !C(c_1,\dots, c_n)$
+آؤندا اے۔ تے دوجے توں، کیوں جے
+اک $\Lang{L} \cup \{P\}$-نمونہ
+$\Expan{M}{R}
+\Entails !A(P)$ اوہدوں تے صرف
+اوہدوں جدوں متعلقہ
+$\Lang{L} \cup
+\{P'\}$-نمونہ
+$\Expan{M}{R} \models !A(P')$
+ہووے (باقی زبان، دائرہ تے تعلق دی تعبیر اکو اے، صرف
+محمول دا ناں بدلدا اے)، اسیں
+$!C(c_1,\dots, c_n) \Entails !D(P) \lif \Atom{P}{c_1,\dots, c_n}$
+لیندے آں، جس توں:
+\[
+!D(P) \Entails !C(c_1,\dots,c_n) \to \Atom{P}{c_1,\dots, c_n}.
+\]
+دوہاں نوں ملا کے
+$!D(P) \Entails \Atom{P}{c_1,\dots, c_n}
+\liff !C(c_1, \dots, c_n)$،
+تے یک رُخیت تے عمومیت نال ایہ وی۔ ایتھے نویں مستقلاں
+دی ہر آمد نوں متعلقہ آزاد متغیر نال بدل کے اوہناں دے
+ناواں توں پاک فارمولا بناؤ؛ پہلاں پابند متغیراں دے ناں
+بدلو جے لوڑ ہووے، تاں جو نواں آزاد متغیر کسے مسوّر دے
+دائرۂ اثر وچ نہ پھس جائے:
+\[
+\Sigma(P) \Entails
+\lforall[x_1][\dots\lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff
+    !C(x_1,\dots, x_n))]].
+\]
+\end{proof}
+
+\end{document}

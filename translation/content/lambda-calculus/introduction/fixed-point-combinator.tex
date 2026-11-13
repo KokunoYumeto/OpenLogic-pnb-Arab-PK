@@ -1,0 +1,42 @@
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: fixed-point-combinator
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{fix}
+\olsection{مقرر نقطے دے کمبینیٹر}
+
+فرض کرو تُہاڈے کول لامبڈا ٹرم $g$ اے تے تُہانوں اک ہور ٹرم $k$
+چاہیدا اے جیہدے لئی $k$ دی $\beta$-ہم ارزی $gk$ نال ہووے۔
+ساڈی لکھت دے رواج ورت کے ایہ ٹرم متعین کرو:
+\[
+\fn{diag}(x) = xx
+\]
+تے
+\[
+l(x) = g(\fn{diag}(x))
+\]
+دوجے لفظاں وچ، $l$ اوہ ٹرم $\lambd[x][g(xx)]$ اے۔ منّ لو $k$
+اوہ ٹرم $ll$ اے۔ فیر ساڈے کول ایہ اے:
+\begin{align*}
+k & = (\lambd[x][g(xx)])(\lambd[x][g(xx)]) \\
+& \red  g((\lambd[x][g(xx)])(\lambd[x][g(xx)])) \\
+& = gk.
+\end{align*}
+جے اسیں
+\[
+Y = \lambd[g][((\lambd[x][g(xx)])(\lambd[x][g(xx)]))]
+\]
+لئیے، تاں $Yg$ تے $g(Yg)$ تقلیل ہو کے اکّو ٹرم تک پُہنچدے نیں۔
+سو $Yg \equiv_\beta g(Yg)$۔ ایہنوں «کری دا کمبینیٹر» آکھدے نیں۔
+جے اس دی تھاں
+\[
+Y = (\lambd[xg][g(xxg)])(\lambd[xg][g(xxg)])
+\]
+لئیے، تاں $Yg$ دی تقلیل نال خود $g(Yg)$ ملدا اے۔ ایہ ودھ مضبوط
+بیان اے۔ $Y$ دے ایس روپ نوں «ٹیورنگ دا کمبینیٹر» آکھدے نیں۔
+
+\end{document}

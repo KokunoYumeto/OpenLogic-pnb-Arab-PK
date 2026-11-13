@@ -1,0 +1,101 @@
+% Part: lambda-calculus
+% Chapter: church-rosser
+% Section: parallel-beta-eta-reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{cr}{pbe}
+
+\olsection{متوازی $\beta\eta$-تقلیل}
+
+ایس حصے وچ اسیں متوازی $\beta\eta$-تقلیل لئی چرچ–روسر خاصیت
+ثابت کردے آں۔ ایہ $\beta\eta$-تقلیل دے مطابق متوازی تقلیل اے۔
+
+\begin{defn}[متوازی $\beta\eta$-تقلیل، $\beredpar$] \ollabel{defn:beredpar}
+  ٹرماں اُتے \emph{متوازی $\beta\eta$-تقلیل} ($\beredpar$)
+  استقرا نال ایویں متعین ہوندی اے۔
+  \begin{enumerate}
+    \item \ollabel{defn:beredpar1} $x \beredpar x$۔
+    \item \ollabel{defn:beredpar2} جے $N \xrightarrow{\beta} N'$، تاں $\lambd[x][N] \beredpar
+      \lambd[x][N']$۔
+    \item \ollabel{defn:beredpar3} جے $P \beredpar P'$ تے $Q \beredpar Q'$، تاں $PQ \beredpar
+      P'Q'$۔
+    \item \ollabel{defn:beredpar4} جے $N \beredpar N'$ تے $Q \beredpar Q'$، تاں
+      $(\lambd[x][N])Q \beredpar \Subst{N'}{Q'}{x}$۔
+    \item \ollabel{defn:beredpar5} جے $N \beredpar N'$، تاں $\lambd[x][Nx]
+      \beredpar N'$، بشرطیکہ $x \notin FV(N)$۔
+  \end{enumerate}
+\end{defn}
+
+\begin{thm}\ollabel{thm:refl}
+  $M \beredpar M$۔
+\end{thm}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pbe]{thm:refl} ثابت کرو۔
+\end{prob}
+
+\begin{defn}[$\beta\eta$-مکمل تقلیل]\ollabel{defn:becd}
+  \emph{$\beta\eta$-مکمل تقلیل}~$\becd{M}$، جیہڑی~$M$ توں
+  ملدی اے، ایویں متعین ہوندی اے۔
+  \begin{align}
+    \becd{x} &= x \ollabel{defn:becd1} \\
+    \becd{(\lambd[x][N])} &= \lambd[x][\becd{N}] \ollabel{defn:becd2}\\
+    \becd{(PQ)} &= \becd{P}\becd{Q} && \text{جے $P$، $\lambd$ تجرید نہیں}
+    \ollabel{defn:becd3} \\
+    \becd{((\lambd[x][N])Q)} &= \Subst{\becd{N}}{\becd{Q}}{x}
+                             \ollabel{defn:becd4} \\
+    \becd{(\lambd[x][Nx])} &= \becd{N} \ollabel{defn:becd5} & \text{جے $x
+                                                      \notin FV(N)$}
+  \end{align}
+\end{defn}
+
+\begin{lem}\ollabel{lem:comp}
+  جے $M \beredpar M'$ تے $R \beredpar R'$، تاں $\Subst{M}{R}{y}
+  \beredpar \Subst{M'}{R'}{y}$۔
+\end{lem}
+
+\begin{proof}
+  $M \beredpar M'$ دے !!{derivation} اُتے استقرا نال۔
+
+  پہلِیاں چار صورتاں عین \olref[pb]{lem:comp} والیاں نیں۔
+  جے آخری قاعدہ \olref{defn:beredpar5} اے، تاں $M$ دی شکل
+  $\lambd[x][Nx]$ تے $M'$ دی شکل $N'$ اے، کجھ $x$ تے~$N'$ لئی
+  جتھے $x \notin
+  FV(N)$ تے $N \beredpar N'$۔ اسیں دکھاؤنا اے کہ
+  $\Subst{(\lambd[x][Nx])}{R}{y} \beredpar \Subst{N'}{R'}{y}$، یعنی
+  $\lambd[x][\Subst{N}{R}{y} x] \beredpar \Subst{N'}{R'}{y}$۔ ایہ
+  \olref{defn:beredpar}\olref{defn:beredpar5} تے استقرائی مفروضے توں ملدا اے۔
+\end{proof}
+
+\begin{lem}\ollabel{lem:cont}
+  جے $M \beredpar M'$، تاں $M' \beredpar \becd{M}$۔
+\end{lem}
+
+\begin{proof}
+  $M \beredpar M'$ دے !!{derivation} اُتے استقرا نال۔
+
+  پہلِیاں چار صورتاں \olref[pb]{lem:cont} والیاں وانگ نیں۔
+  جے آخری قاعدہ \olref{defn:beredpar5} اے، تاں $M$ دی شکل
+  $\lambd[x][Nx]$ تے $M'$ دی شکل $N'$ اے، کجھ $x$، $N$، $N'$ لئی
+  جتھے $x \notin FV(N)$ تے $N
+  \beredpar N'$۔ اسیں دکھاؤنا اے کہ $N' \beredpar
+  \becd{(\lambd[x][Nx])}$، یعنی $N' \beredpar \becd{N}$۔
+  ایہ استقرائی مفروضے توں سیدھا ملدا اے۔
+\end{proof}
+
+\begin{thm}\ollabel{thm:cr}
+  $\beredpar$ وچ چرچ–روسر خاصیت اے۔
+\end{thm}
+
+\begin{proof}
+  \olref{lem:cont} توں سیدھا ملدا اے۔
+\end{proof}
+
+\end{document}

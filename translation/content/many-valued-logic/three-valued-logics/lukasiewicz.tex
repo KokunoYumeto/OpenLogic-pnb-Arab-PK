@@ -1,0 +1,249 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: lukasiewicz
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{luk}
+
+\olsection{لوکاشیویچ دی منطق}
+
+کئی قدراں والی منطق دیاں پہلِیاں چھپیاں تے تفصیل نال تیار
+کیتیاں تجویزاں وچوں اک پولینڈ دے فلسفی یان لوکاشیویچ دی 1921
+دی تجویز اے۔ لوکاشیویچ نوں ارسطو دی سمندری لڑائی والے مسئلے
+توں خیال آیا۔ لگدا اے کہ \emph{اجّ} جملہ «بھلکے سمندر وچ
+اک لڑائی ہووے گی» نہ سچ اے نہ جھوٹ، کیوں جے اوہدی صداقتی قدر
+اجے طے نہیں ہوئی۔ لوکاشیویچ نے ایہو جیہے جملے، جیہڑے مستقبل
+دے اوہناں واقعات بارے نیں جو ہو وی سکدے نیں تے نہیں وی،
+لئی تِیجی صداقتی قدر شامل کرن دی تجویز دِتّی۔
+\begin{quote}
+میں کسے تضاد توں بغیر منّ سکدا آں کہ اگلے سال کسے خاص ویلے،
+مثلاً 21 دسمبر دوپہر نوں، وارسا وچ میرا ہونا ہُن نہ ہاں وچ
+طے اے نہ ناں وچ۔ ایس لئی ممکن اے کہ میں دِتّے ویلے وارسا
+وچ ہواں، پر ضروری نہیں۔ ایس مفروضے تحت قضیہ «میں اگلے سال
+21 دسمبر دوپہر نوں وارسا وچ ہواں گا» ایس ویلے نہ سچ ہو سکدا
+اے نہ جھوٹ۔ کیوں جے ایہ ہُن سچ ہووے، تاں میرا اگّوں وارسا
+وچ ہونا ضروری ہووے گا، جیہڑا مفروضے دے اُلٹ اے۔ دوجے پاسے،
+جے ایہ ہُن جھوٹ ہووے، تاں میرا اگّوں وارسا وچ ہونا ناممکن
+ہووے گا، جیہڑا وی مفروضے دے اُلٹ اے۔ سو ایہ قضیہ ایس ویلے
+نہ سچ اے نہ جھوٹ تے ایہدی تِیجی قدر ہونی چاہیدی اے، جیہڑی
+«0» یعنی جھوٹ تے «1» یعنی سچ توں وکھری ہووے۔ ایہ قدر
+اسیں «$\frac{1}{2}$» لکھ سکدے آں۔ ایہ «ممکن» نوں ظاہر
+کردی اے تے تِیجی قدر وجوں «سچ» تے «جھوٹ» دے نال جُڑدی اے۔
+\end{quote}
+اسیں لوکاشیویچ دی تِیجی صداقتی قدر لئی $\Undef$ ورتاں گے۔
+\footnote{لوکاشیویچ ایتھے «ممکن» نوں اوہناں معنیاں وچ ورتدا
+اے جیہڑے اجّ عام نہیں، یعنی ممکن پر ضروری نہیں۔}
+
+ایس سمجھ مطابق $\lnot$، $\land$ تے $\lor$ دے صداقتی
+فنکشن طے کرنے سوکھے نیں۔ مستقبل بارے غیر طے شدہ جملے دی
+نفی وی مستقبل بارے غیر طے شدہ جملہ اے، ایس لئی
+$\tf{\lnot}(\Undef) = \Undef$۔ جے عطف دا اک جزو غیر طے
+شدہ تے دوجا سچ اے، تاں عطف وی غیر طے شدہ اے۔ مستقبل والا
+جزو جیویں وی نکلے، اوہدے مطابق عطف سچ وی نکل سکدا اے تے
+جھوٹ وی۔ ایس لئی
+\[
+    \tf{\land}(\True, \Undef) =
+\tf{\land}(\Undef, \True) =
+\Undef.
+\]
+پر جے دوجا جزو جھوٹ اے، تاں عطف سچ نہیں نکل سکدا۔ ایس لئی
+\[\tf{\land}(\False, \Undef) =
+\tf{\land}(\False, \Undef) = \False.\]
+باقی قدراں، جدوں دلیلاں دیاں قدراں طے ہون، یعنی $\True$
+یا $\False$ ہون، کلاسیکی منطق والیاں نیں۔
+
+شرطیے لئی گل ذرا گُنجھلدار اے۔ منّ لو $q$ مستقبل بارے غیر
+طے شدہ جملہ اے۔ جے $p$ جھوٹ اے، تاں $p \lif q$ سچ ہووے گا،
+بھاویں $q$ جیویں وی نکلے۔ سو $\tf{\lif}(\False, \Undef) = \True$
+رکھنا چاہیدا اے۔ تے جے $p$ سچ اے، تاں $q \lif p$ سچ ہووے گا،
+بھاویں $q$ جیویں وی نکلے۔ ایس لئی $\tf{\lif}(\Undef, \True) = \True$۔
+جے $p$ سچ اے، تاں $p
+\lif q$ سچ وی نکل سکدا اے تے جھوٹ وی، سو $\tf{\lif}(\True,
+\Undef) = \Undef$۔ ایسے طرح جے $p$ جھوٹ اے، تاں $q
+\lif p$ سچ وی نکل سکدا اے تے جھوٹ وی، سو
+$\tf{\lif}(\Undef, \False) = \Undef$۔ ہُن اوہ صورت باقی اے
+جدوں $p$ تے $q$ دوویں مستقبل بارے غیر طے شدہ نیں۔ مُڈھلے
+خیال مطابق ایس صورت وچ $\Undef$ دینا چاہیدا اے۔ پر ایس
+نال $!A \lif !A$ ہمیشہ صادق \emph{نہیں} رہے گا۔ لوکاشیویچ
+نوں $!A \lor \lnot !A$ تے $\lnot(!A
+\land \lnot !A)$ چھڈن وچ کوئی دِقّت نہیں سی، پر اوہ $!A \lif !A$
+چھڈن لئی تیار نہیں سی۔ ایس لئی اوہنے مقرر کیتا کہ
+$\tf{\lif}(\Undef, \Undef) =
+\True$۔
+
+\begin{defn}\ollabel{def:lukasiewicz}
+تِن قدراں والی لوکاشیویچ دی منطق ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ اکّو مقرر قدر اے، یعنی $V^+ = \{\True\}$۔
+  \item صداقتی فنکشن ہِٹھلے جدولاں توں ملدے نیں۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}$ & \\ 
+      \hline  
+      $\True$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\ 
+      $\False$ & $\False$ & $\False$ & $\False$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\True$ & $\True$ \\ 
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\True$ & $\True$ & $\Undef$  \\ 
+      $\False$ & $\True$ & $\True$ & $\True$ 
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+سوکھے ای دِسدا اے کہ کوئی وی !!{formula}~$!A$ جیہدے وچ
+صرف $\lnot$، $\land$ تے $\lor$ ہوون، صداقتی قدر~$\Undef$
+لیندا اے جے اوہدے سارے !!{propositional variable}s نوں~$\Undef$
+دِتّی جاوے۔ سو مثلاً کلاسیکی ہمیشہ صادق فارمولے $p \lor \lnot p$
+تے $\lnot(p
+\land \lnot p)$، $\LogLuk[3]$ وچ ہمیشہ صادق نہیں، کیوں جے
+$\pValue{v}(!A)
+= \Undef$ جدوں $\pAssign v(p) = \Undef$۔
+
+اوہناں !!{valuation}s وچ جتھے $\pAssign v(p) = \True$ یا
+$\False$، $\pValue
+v(!A)$ اپنی کلاسیکی صداقتی قدر دے برابر ہووے گا۔
+
+\begin{prop}
+  جے $\pAssign v(p) \in \{\True, \False\}$ ہر اوہ $p$ لئی
+  جیہڑا~$!A$ وچ اے، تاں
+  $\pValue v(!A)[\LogLuk[3]] = \pValue v(!A)[\LogCL]$۔
+\end{prop}
+
+\begin{prob}\label{mvl:thr:luk:prob:luk-iff} منّ لو اسیں
+  $\pValue v(!A \liff !B) = \pValue v((!A \lif !B) \land (!B \lif
+  !A))$ نوں~$\LogLuk[3]$ وچ تعریف وجوں ورتدے آں۔ $\liff$ دا
+  صداقتی جدول کیہ ہووے گا؟
+\end{prob}
+
+کئی کلاسیکی ہمیشہ صادق فارمولے \LogLuk[3] وچ وی \emph{ہمیشہ
+صادق} نیں، مثلاً $\lnot p \lif (p \lif q)$۔ کلاسیکی منطق وانگ
+اسیں ایہ گل صداقتی جدولاں نال پرکھ سکدے آں۔
+\begin{center}
+\begin{tabular}{cc|cccccc}
+  $p$ & $q$ & $\lnot$ & $p$ & $\lif$ & $\smash{(}p$ & $\lif$ & $q\smash{)}$ \\ \hline
+  \True & \True & \False & \True & \True & \True & \True & \True \\
+  \True & \Undef & \False & \True & \True & \True & \Undef & \Undef \\
+  \True & \False & \False & \True & \True & \True & \False & \False \\
+  \Undef & \True & \Undef & \Undef & \True & \Undef & \True & \True \\
+  \Undef & \Undef & \Undef & \Undef & \True & \Undef & \True & \Undef \\
+  \Undef & \False & \Undef & \Undef & \True & \Undef & \Undef & \False \\
+  \False & \True & \True & \False & \True & \False & \True & \True \\
+  \False & \Undef & \True & \False & \True & \False & \True & \Undef \\
+  \False & \False & \True & \False & \True & \False & \True & \False \\  
+\end{tabular}
+\end{center}
+
+\begin{prob}
+  دکھاؤ کہ ہِٹھلے فارمولے \LogLuk[3] وچ ہمیشہ صادق نیں۔
+  \begin{enumerate}
+    \item $p \lif (q \lif p)$
+    \item\label{mvl:thr:luk:prob:luk-taut-2} $\lnot(p \land q) \liff (\lnot p \lor \lnot q)$
+    \item\label{mvl:thr:luk:prob:luk-taut-3} $\lnot(p \lor q) \liff (\lnot p \land \lnot q)$
+  \end{enumerate}
+  (\olref[mvl][thr][luk]{prob:luk-taut-2} تے
+  \olref[mvl][thr][luk]{prob:luk-taut-3} وچ $!A \liff !B$
+  نوں $(!A \lif !B) \land (!B \lif !A)$ دا مختصر روپ سمجھو،
+  یا \olref[mvl][thr][luk]{prob:luk-iff} دا اپنا حل ویکھو۔)
+\end{prob}
+
+\begin{prob}
+  دکھاؤ کہ ہِٹھلے کلاسیکی ہمیشہ صادق فارمولے~\LogLuk[3] وچ
+  ہمیشہ صادق نہیں۔
+  \begin{enumerate}
+    \item $(\lnot p \land p) \lif q)$
+    \item $((p \lif q) \lif p) \lif p$
+    \item $(p \lif (p \lif q)) \lif (p \lif q)$
+  \end{enumerate}
+\end{prob}
+
+سو شاید ایہ خیال آوے کہ بھاویں سارے کلاسیکی ہمیشہ صادق
+فارمولے~$\LogLuk[3]$ وچ ہمیشہ صادق نہیں، فیر وی اوہناں دی قدر~$\True$ یا~$\Undef$ ہونی چاہیدی اے
+ہر !!{valuation} اُتے۔ ایہ گل سچ نہیں۔ اک ردّی مثال ایہ اے۔
+\[
+  \lnot(p \lif \lnot p) \lor \lnot(\lnot p \lif p)
+\]
+ایہدی قدر $\False$ اے جے $p$ دی قدر~$\Undef$ اے۔
+
+\begin{prob}
+  ہِٹھلے تعلقاں وچوں کیہڑے لوکاشیویچ دی منطق وچ قائم نیں؟
+  ہر اک لئی صداقتی جدول دیو۔
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $\lnot\lnot p \Entails p$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+لوکاشیویچ نوں امید سی کہ اپنے تِن قدراں والے نظام اُتے امکان
+دی منطق بنا سکے گا۔ ایس لئی اوہنے اک مقامی رابطہ $\Diamond
+!A$، یعنی «$!A$ ممکن اے»، تے اوہدے نال ملدا $\Box !A$،
+یعنی «$!A$ ضروری اے»، شامل کیتے۔
+\begin{center}
+  \begin{tabular}{c|c} 
+    $\tf{\Diamond}$ & \\ 
+    \hline  
+    $\True$ & $\True$ \\ 
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$ 
+  \end{tabular}
+  \quad
+  \begin{tabular}{c|c} 
+    $\tf{\Box}$ & \\ 
+    \hline  
+    $\True$ & $\True$ \\ 
+    $\Undef$ & $\False$ \\
+    $\False$ & $\False$ 
+  \end{tabular}
+\end{center}
+دوجے لفظاں وچ، $p$ اُدوں تے صرف اُدوں ممکن اے جدوں ایہ
+پہلاں ای جھوٹ طے نہ ہووے۔ تے $p$ اُدوں تے صرف اُدوں ضروری
+اے جدوں ایہ پہلاں ای سچ طے ہووے۔
+
+\begin{prob}
+  دکھاؤ کہ $\Box p \liff \lnot\Diamond \lnot p$ تے $\Diamond p \liff
+  \lnot \Box \lnot p$، ~\LogLuk[3] وچ ہمیشہ صادق نیں جدوں
+  اینوں $\Box$ تے~$\Diamond$ دے صداقتی جدولاں نال ودھایا جاوے۔
+\end{prob}
+
+پر ایس تجویز کیتی ہوئی امکانی منطق دیاں کمزوریاں چھیتی
+سامھنے آ گئیاں۔ جیویں وی گل نکلے، $p \land \lnot p$ کدے سچ
+نہیں نکل سکدا۔ سو بھاویں ایہ ہُن طے نہیں ہویا، تے ایس لئی
+غیر طے شدہ اے، اینوں ناممکن منّنا چاہیدا اے۔ یعنی
+$\lnot \Diamond(p
+\land \lnot p)$ ہمیشہ صادق ہونا چاہیدا اے۔ پر جے $\pAssign v(p) =
+\Undef$، تاں $\pValue v(\lnot \Diamond(p \land \lnot p)) =
+\Undef$۔ لوکاشیویچ دی ایہ گل ٹھیک سی کہ امکان تے ضرورت
+ورگے فرق رکھن لئی دو صداقتی قدراں کافی نہیں۔ پر تِیجی
+صداقتی قدر شامل کرنا وی کافی نہیں۔
+
+\end{document}

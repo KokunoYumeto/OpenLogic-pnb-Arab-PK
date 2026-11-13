@@ -1,0 +1,29 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: canonical-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{cmd}
+
+\olsection{کینونیکل نمونے}
+
+امکانی نظام~$\Sigma$ دا \emph{کینونیکل نمونہ} اک خاص نمونہ~$\mModel{M^\Sigma}$ اے جیہدے جہان سارے مکمل $\Sigma$-بے تضاد سیٹ نیں۔ ایہدا رسائی دا تعلق~$R^\Sigma$ تے قدر بندی $V^\Sigma$ ایویں متعین کیتے جاندے نیں کہ جہان~$\Delta$ وچ سچے !!{formula}s عین اوہی !!{formula}s ہون جیہڑے~$\Delta$ وچ نیں۔
+
+\begin{defn}
+  منّ لو $\Sigma$ اک نارمل امکانی منطق اے۔ \emph{کینونیکل نمونہ}، نظام
+  $\Sigma$ دا، $\mModel{M}^\Sigma = \tuple{W^\Sigma, R^\Sigma,
+    V^\Sigma}$ اے، جتھے
+  \begin{enumerate}
+  \item $W^\Sigma = \Setabs{ \Delta }{\Delta \text{
+      مکمل $\Sigma$-بے تضاد اے} }$۔
+  \item $R^\Sigma \Delta\Delta'$ اُدوں تے صرف اُدوں ہوندا اے جدوں
+    \iftag{prvBox}{$\Box^{-1}\Delta \subseteq
+      \Delta'$}{$\Diamond\Delta' \subseteq \Delta$}۔
+  \item $V^\Sigma(p) = \Setabs{\Delta}{p \in \Delta}$۔
+  \end{enumerate}
+\end{defn}
+
+\end{document}

@@ -1,0 +1,87 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: simple-S5
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{s5}
+
+\olsection{\Log{S5} لئی سادے \usetoken{P}{tableau}}
+
+\Log{S5} ہر پاسے رسائی والے نمونیاں دی جماعت لئی صحت مند تے مکمل اے،
+یعنی اوہ نمونے جیہناں وچ ہر جہان ہر جہان توں رسائی وچ اے۔ ایسے
+نمونیاں وچ رسائی دا تعلق فرق نہیں پاؤندا۔ «کوئی جہان~$w$ اے جتھے
+$\mSat{M}{!A}[w]$» اُدوں تے صرف اُدوں سچ اے جدوں اجیہا کوئی $w$،
+~$u$ توں رسائی وچ اے۔ سو \Log{S5} وچ نمونیاں دی تعریف لئی جہاناں
+دا اک سیٹ تے قدر بندی~$V$ ای کافی نیں۔ ایس توں لگدا اے کہ اسیں
+!!{tableau} دے قاعدے وی سوکھے کر سکدے آں۔ عام صورت وچ اگیتے مثبت
+صحیح عدداں دیاں لڑیاں ہوندے نیں، تاں جو پتا رہے کہ کہڑے اگیتے اوہناں
+جہاناں دے ناں نیں جیہڑے دوجے جہاناں توں رسائی وچ نیں۔ $\sigma.n$
+ایسے جہان دا ناں اے جیہڑا~$\sigma$ توں رسائی وچ اے۔ پر \Log{S5} وچ
+ہر جہان ہر جہان توں رسائی وچ اے، ایس لئی اوہ حساب رکھن دی لوڑ نہیں۔
+اگیتیاں لئی مثبت صحیح عدد ورت سکدے آں۔ سوکھے قاعدے
+\olref{tab:rules-S5} وچ دتے نیں۔
+
+\begin{table}
+  \begin{center}
+    \def\arraystretch{3}\def\fCenter{}
+    \begin{tabular}{|c|c|}
+    \hline
+    \iftag{prvBox}{
+      \AxiomC{\sFmla{\True}{\Box !A}[n]}
+      \RightLabel{\TRule{\True}{\Box}}
+      \UnaryInfC{\sFmla{\True}{!A}[m]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Box !A}[n]}
+      \RightLabel{\TRule{\False}{\Box}}
+      \UnaryInfC{\sFmla{\False}{!A}[m]}
+      \DisplayProof\\
+      $m$ ورتیا ہویا اے & $m$ نواں اے
+      \\[1ex]
+      \hline}{}
+    \iftag{prvDiamond}{
+      \AxiomC{\sFmla{\True}{\Diamond !A}[n]}
+      \RightLabel{\TRule{\True}{\Diamond}}
+      \UnaryInfC{\sFmla{\True}{!A}[m]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Diamond !A}[n]}
+      \RightLabel{\TRule{\False}{\Diamond}}
+      \UnaryInfC{\sFmla{\False}{!A}[m]}
+      \DisplayProof\\
+      $m$ نواں اے & $m$ ورتیا ہویا اے
+      \\[1ex]
+      \hline}{}
+    \end{tabular}
+  \end{center}
+  \caption{\Log{S5} لئی سوکھے قاعدے۔}
+  \ollabel{tab:rules-S5}
+\end{table}
+
+\begin{ex}
+  اسیں اک سادہ بند تابلو دیندے آں جیہڑا وکھاؤندا اے کہ $\Log{S5} \Proves
+  \Ax{5}$، یعنی $\Diamond!A \lif \Box\Diamond!A$.
+  \begin{oltableau}
+    [\pFmla{\False}{\Diamond\formula{A} \lif \Box\Diamond \formula{A}}{1},
+      just = \TAss
+      [\pFmla{\True}{\Diamond \formula{A}}{1}, just = {\TRule{\False}{\lif}[1]}
+        [\pFmla{\False}{\Box\Diamond \formula{A}}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\False}{\Diamond \formula{A}}{2},
+            just = {\TRule{\False}{\Box}[3]}
+            [\pFmla{\True}{\formula{A}}{3},
+              just = {\TRule{\True}{\Diamond}[2]}
+                [\pFmla{\False}{\formula{A}}{3},
+                  just = {\TRule{\False}{\Diamond}[4]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+\end{ex}
+
+\end{document}

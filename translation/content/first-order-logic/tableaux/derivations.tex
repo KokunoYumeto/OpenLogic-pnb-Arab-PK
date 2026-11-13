@@ -1,0 +1,99 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{der}}
+      {\olfileid{pl}{tab}{der}}
+
+\olsection{\usetoken{P}{tableau}}
+
+\begin{explain}
+اسیں دس چکے آں کہ مفروضہ کیہ اے، تے استنباط دے قاعدے وی دے چکے
+آں۔ !!^{tableau}s ایہناں توں استقرائی طور تے بندے نیں: ہر
+!!{tableau} یا تاں اک ایہو جیہی شاخ اے جیہڑی اک یا ودھ مفروضیاں
+اُتے مشتمل ہووے، یا پھر شاخ اُتے استنباطی قاعدہ لا کے پہلے
+!!a{tableau} توں حاصل ہوندا اے۔
+\end{explain}
+
+\begin{defn}[!!^{tableau}]
+مفروضیاں $\sFmla{S_1}{!A_1}$، \dots،
+$\sFmla{S_n}{!A_n}$ لئی !!^a{tableau} (جتھے ہر $S_i$ یا تاں
+$\True$ اے یا~$\False$) !!{signed formula}s دا اک محدود درخت
+اے جیہڑا ہِٹھ لکھیاں شرطاں پوری کردا اے:
+\begin{enumerate}
+\item درخت دے سب توں اُتّے والے $n$ عدد !!{signed formula}s،
+  $\sFmla{S_i}{!A_i}$ نیں، اک دوجے دے ہِٹھاں۔
+\item درخت وچ ہر اوہ !!{signed formula} جیہڑا مفروضیاں وچوں نہیں،
+  اوہدے اُتّے والی شاخ دے کسے !!a{signed formula} اُتے استنباطی
+  قاعدے دی درست ورتوں توں حاصل ہوندا اے۔
+\end{enumerate}
+!!a{tableau} دی شاخ اُدوں تے صرف اُدوں \emph{بند} اے جدوں اوہدے
+وچ $\sFmla{\True}{!A}$ تے~$\sFmla{\False}{!A}$ دونیں
+ہون، تے نہیں تاں \emph{کھلی} اے۔ جیہڑے !!^a{tableau} دی ہر شاخ
+بند ہووے، اوہ (اپنے مفروضیاں دے سیٹ لئی) \emph{بند !!{tableau}}
+اے۔ جے !!a{tableau} بند نہیں، یعنی اوہدے وچ گھٹ توں گھٹ اک کھلی
+شاخ اے، تاں اوہ \emph{کھلا} اے۔
+\end{defn}
+
+\begin{ex}
+  مفروضیاں دا ہر سیٹ اپنے آپ وچ !!a{tableau} اے، پر عام طور تے
+  بند نہیں ہووے گا۔ (ظاہر اے کہ ایہ صرف اُدوں بند اے جدوں مفروضیاں
+  وچ پہلے ای !!{signed formula}s دی جوڑی
+  $\sFmla{\True}{!A}$ تے~$\sFmla{\False}{!A}$ موجود ہووے۔)
+
+  % PNBTAB-003: bare A is the formula component of the signed formula; the sign remains present in the tableau.
+  !!a{tableau} (کھلا یا بند) وچ موجود !!a{signed formula}، جیہدا
+  فارمولا~$!A$ اے، اُتے استنباط دے قاعدیاں وچوں اک لا کے اس توں
+  نواں، وڈا تابلو بنا سکدے آں۔ ایہ قاعدہ اوہدے لاگو ہون والی
+  $!A$ دی آمد رکھن والی ہر شاخ دے سرے اُتے اک یا ودھ
+  !!{signed formula}s شامل کرے گا۔
+
+  مثال لئی، مفروضہ $\sFmla{\True}{!A \land \lnot
+    !A}$ لو۔ صرف اوس مفروضے اُتے مشتمل (کھلا) !!{tableau} ایہ اے:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss]
+    \end{tableau}{}
+  \end{center}
+  ایس مفروضے اُتے $\TRule{\True}{\land}$ دا قاعدہ لا کے نواں
+  !!{tableau} ملدا اے۔ ایہ قاعدہ سانوں !!{tableau} وچ دو نویاں
+  لیکاں شامل کرن دی اجازت دیندا اے، $\sFmla{\True}{!A}$ تے
+  $\sFmla{\True}{\lnot !A}$:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss
+        [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\land}[1]},
+          [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\land}[1]}
+          ]
+        ]
+      ]
+    \end{tableau}{}
+  \end{center}
+  جدوں اسیں !!{tableau}s لکھدے آں تاں لاگو کیتے قاعدے سجے پاسے
+  درج کردے آں (مثلاً $\TRule{\True}{\land} 1$ دا مطلب اے کہ
+  اوس لکیر دا !!{signed formula}، $\TRule{\True}{\land}$ قاعدہ
+  لکیر~$1$ دے !!{signed formula} اُتے لا کے
+  حاصل ہویا اے)۔ ایس نویں !!{tableau} وچ ہور
+  !!{signed formula}s نیں، پر صرف اک
+  ($\sFmla{\True}{\lnot !A}$) اُتے اسیں قاعدہ لا سکدے آں
+  (ایس صورت وچ $\TRule{\True}{\lnot}$ دا قاعدہ)۔ ایس توں بند
+  !!{tableau} ملدا اے:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss
+        [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\land}[1]}
+          [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\land}[1]}
+            [\sFmla{\False}{\formula{A}}, just={\TRule{\True}{\lnot}[3]}, close]
+          ]
+        ]
+      ]
+    \end{tableau}{}
+  \end{center}
+\end{ex}
+
+\end{document}

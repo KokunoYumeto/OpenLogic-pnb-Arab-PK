@@ -1,0 +1,41 @@
+% Part: incompleteness
+% Chapter: theories-computability
+% Section: computably-axiomatizable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{tcp}{cax}
+
+\olsection{\printtoken{S}{axiomatizable} نظریے}
+
+نظریہ $\Th{T}$، \emph{!!{axiomatizable}} اے جے اوہدے
+مسلّمیاں دا کوئی قابلِ حساب سیٹ~$A$ ہووے۔ ($A$ نوں $\Th{T}$ لئی
+مسلّمیاں دا سیٹ آکھن دا مطلب اے کہ $T = \Setabs{!A}{A \Proves !A}$۔)
+قدرتی عدداں دی کوئی وی “معقول” مسلّمہ بندی ایہ شرط پوری کرے گی۔
+خاص طور اُتے ہر اوہ نظریہ !!{axiomatizable} اے جیہدے مسلّمیاں
+دا سیٹ محدود اے۔
+
+\begin{lem}
+فرض کرو $\Th{T}$ !!{axiomatizable} اے۔ تاں $\Th{T}$
+!!{computably
+enumerable} اے۔
+\end{lem}
+
+\begin{proof}
+فرض کرو $A$، $\Th{T}$ لئی مسلّمیاں دا قابلِ حساب سیٹ اے۔
+$!A \in T$ دی تصدیق لئی مسلّمیاں توں $!A$ دا !!a{derivation}
+لبھو۔ ثبوت مل جائے تاں رکنیت ثابت ہو جاندی اے۔ جے ثبوت موجود
+نہ ہووے، تاں ایہ تلاش ضروری نہیں کہ مُک جائے۔
+
+دوجے لفظاں وچ $!A$، $\Th{T}$ وچ اُدوں تے صرف اُدوں اے
+جدوں مسلّمیاں دی اک محدود فہرست $!B_1$، \dots، $!B_k$
+موجود ہووے، جیہدے سارے مسلّمے سیٹ $A$ وچ ہون، تے پہلے درجے
+دی منطق وچ $(!B_1 \land \dots \land !B_k) \lif !A$ دا
+!!a{derivation} ہووے۔ اسیں پہلاں جان دے آں کہ “کوئی \dots
+موجود اے جیہدے لئی \dots” دے روپ وچ تعریف ہو سکّن والا ہر
+سیٹ !!{c.e.} اے، جے دوجے “\dots” والی شرط قابلِ حساب ہووے۔
+\end{proof}
+
+\end{document}

@@ -1,0 +1,107 @@
+% Part: proof-theory
+% Chapter: proof-search
+% Section: completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{ps}{cpl}
+
+\olsection{تمامیت}
+
+ہُن اسیں وکھاؤنے آں کہ ثبوت لبھّن والا الگورتھم خطا نہیں کھاندا۔ یعنی جے ایہ وچّے رُک جاوے یا کدے ختم نہ ہووے، تاں شروع دے سیکوئنٹ~$\Gamma \Sequent \Delta$ دا کوئی !!{proof} نہیں۔ ایہ وکھاؤن لئی اسیں اک !!a{structure}~$\Struct M$ ایویں متعین کردے آں کہ ہر $!A \in \Gamma$ لئی $\Sat{M}{!A}$، تے ہر~$! \in \Delta$ لئی $\Sat/{M}{!A}$۔ دوجے لفظاں وچ، سارے !!{formula}s، جیہڑے~$\Gamma$ وچ نیں، سچے نیں تے سارے !!{formula}s، جیہڑے~$\Delta$ وچ نیں، جھوٹھے نیں~$\Struct M$ وچ۔ یعنی $\Gamma \Sequent \Delta$ معتبر نہیں۔ چونکہ \Log{G3c} صحت مند اے، ایس لئی $\Gamma \Sequent \Delta$ دا کوئی !!{proof} نہیں۔
+
+اسیں $\Struct{M}$ نوں جوڑے $ \Theta, \Xi$ توں، جیہڑا !!{formula}s دا اے، تے سیٹ~$C$ توں، جیہڑا !!{constant}s دا اے، متعین کردے آں۔ سانوں $\Theta, \Xi$ تے~$C$ ثبوت دی ناکام بھال دی اک \emph{ناکامی والی شاخ} توں ملدے نیں، بھاویں بھال وچّے رُک جاوے یا ختم ای نہ ہووے۔ ناکامی والی شاخ سیکوئنٹاں دی لڑی $ \Pi_n \Sequent
+\Lambda_n$ تے !!{constant}s دے سیٹاں~$C_n$ توں بندی اے، جتھے $\Pi_0 \Sequent \Lambda_0$ آخری سیکوئنٹ $ \Gamma \Sequent
+\Delta$ اے، تے $\Pi_{n+1} \Sequent \Lambda_{n+1}$، $ \Pi_n
+\Sequent \Lambda_n$ دا اوہ مقدمہ اے جیہڑا پڑاؤ~$n+1$ اُتے بنیا تے جیہدا الگورتھم !!a{proof} نہیں لبھدا۔ صاف اے کہ ہر~$n$ لئی ایہو جیہا مقدمہ ضرور موجود اے، نئیں تاں الگورتھم !!a{proof} لبھ چکیا ہوندا۔ $C_n$ نوں اوہ !!{constant}s دا سیٹ منّ لو جیہڑا~$\Pi_n
+\Sequent \Delta_n$ نال جُڑیا اے۔
+
+جے الگورتھم کسے سبھ توں اُتلے سیکوئنٹ اُتے وچّے رُک جاوے، جیہدے وچ صرف جوہری !!{formula}s نیں، تاں اوس سیکوئنٹ اُتے مُکّن والی شاخ ناکامی والی شاخ اے۔ جے الگورتھم کدے ختم نہیں ہوندا، تاں ایہ ہور وڈّے توں وڈّے درخت بناؤندا رہندا اے۔ تسی ایہناں نوں اک لامحدود درخت ودھاؤن وانگ سمجھ سکدے او (اوہ درخت جیہڑا الگورتھم دے لامحدود قدم چلن توں پچھوں ہوندا)۔ ایہ درخت لامحدود ہووے گا پر ہر تھاں اوہدیاں شاخاں محدود ہون گئیاں (ہر گنڈھ دے صرف اک یا دو بچے نیں، یعنی جھٹ اوہدے اُتّے آؤن والے سیکوئنٹ)۔ K\H{o}nig دے لیمے نال ہر لامحدود درخت جیہدی ہر تھاں شاخ بندی محدود اے، اوہدی اک لامحدود شاخ ضرور ہوندی اے۔ جے بھال دا الگورتھم ہمیشہ چلدا رہے، تاں ایہو جیہی لامحدود شاخ ناکامی والی شاخ ہووے گی۔
+
+جے $\Pi_n \Sequent \Lambda_n$ تے $C_n$ دی لڑی ناکامی والی شاخ اے، تاں $ \Theta = \bigcup_n \Pi_n$ تے $ \Xi = \bigcup_n \Lambda_n$ رکھو (!!{formula}s دے انڈیکس تے مُڑ آؤن والیاں نقلاں ہٹا کے)، تے $C =
+\bigcup_n C_n$ رکھو۔
+
+ہُن اسیں~$\Struct{M}$ دی تعریف دے سکدے آں۔
+\begin{enumerate}
+\item دائرہ $\Domain{M}$ اوہناں ٹرماں دا سیٹ اے جیہڑے~$C$ تے !!{function}s، جیہڑے~$\Gamma \Sequent \Delta$ وچ ہون جے کوئی ہون، نال بن سکدے نیں، پر !!{variable}s توں بناں۔
+\item جے $c \in \Domain{M}$، تاں $\Assign{c}{M} = c$۔
+\item جے $f$، $m$ تھاواں والا !!{function} اے $ \Gamma \Sequent \Delta$ وچ، تے $t_1$، \dots، $t_m \in \Domain{M}$، تاں $\Assign{f}{M}(t_1, \dots, t_m) =
+f(t_1, \dots, t_n)$۔
+\item جے $R$، $m$ تھاواں والا !!{predicate} اے $ \Gamma \Sequent
+\Delta$ وچ، تاں $\Assign{R}{M} = \Setabs{\tuple{t_1, \dots, t_m} \in
+\Domain{M}^n}{R(t_1, \dots, t_n) \in \Theta}$۔
+\end{enumerate}
+$\Struct{M}$ اک \emph{ٹرماں توں بنیا نمونہ} اے، کیونکہ اوہدا دائرہ ٹرماں دا سیٹ اے، تے !!{constant}s تے !!{function}s دے مطلب ایویں دِتّے نیں کہ $\Value{t}{M} = t$ ضرور ہووے۔ جوہری !!{formula}s، جیہڑے~$\Theta$ وچ نیں، $\Assign{R}{M}$ متعین کرن لئی ایویں ورتے نیں کہ $\Sat{M}{R(t_1, \dots, t_n)}$ اوہدوں تے صرف اوہدوں جے $R(t_1, \dots, t_n)
+\in \Theta$۔
+
+\begin{lem}\ollabel{lem:truth}
+ہر $!A \in \Theta \cup \Xi$ لئی:
+\begin{enumerate}
+  \item جے $!A \in \Theta$، تاں $\Sat{M}{!A}$۔
+  \item جے $!A \in \Xi$، تاں $\Sat/{M}{!A}$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+$\depth{!A}$ اُتے استقرا نال۔
+
+پہلاں منّ لو کہ $!A$ جوہری اے، یعنی یا $!A \ident \lfalse$ یا $!A
+\ident R(t_1, \dots, t_m)$۔
+
+کیونکہ $\Pi_n \Sequent \Lambda_n$ ناکامی والی شاخ اے، کسے $ \Pi_n$ وچ $ \lfalse$ نہیں آ سکدا (نئیں تاں $ \Pi_n \Sequent \Lambda_n$ اک مسلّمہ ہوندا)۔ $\Sat{M}{R(t_1, \dots, t_m)}$ اوہدوں تے صرف اوہدوں جے $R(t_1, \dots, t_m) \in
+\Theta$،~$\Struct{M}$ دی تعریف نال۔ دونے گلاں رلا کے ملدا اے کہ جے $!A \in
+\Theta$، تاں $\Sat{M}{!A}$۔
+
+جے $!A$ جوہری اے تے $!A \in \Pi_n$، تاں $!A \in \Pi_{n+1}$، تے جے $!A \in \Lambda_n$، تاں $!A \in \Lambda_{n+1}$۔ (ایہ اوس طریقے توں نکلدا اے جیہدے نال ثبوت لبھّن والا الگورتھم اگلے سیکوئنٹ بناؤندا اے۔) سو جے $!A \in \Theta \cap \Xi$، تاں کسے~$n$ لئی $!A \in \Pi_n \cap
+\Lambda_n$۔ ایہدا مطلب اے کہ $\Pi_n \Sequent \Lambda_n$ اک مسلّمہ اے، تے ناکامی والی شاخ وچ کوئی مسلّمہ نہیں ہو سکدا۔ سو بناوٹ دے حساب نال $!A \notin \Theta
+\cap \Xi$ جوہری~$!A$ لئی، ایس لئی جے $!A \in
+\Xi$، تاں $!A \notin \Theta$۔ ایہدے توں نکلدا اے کہ جے $!A \in \Xi$، تاں $\Sat/{M}{!A}$،~$\Struct{M}$ دی تعریف نال۔
+
+استقرائی قدم لئی منّ لو کہ (1) تے (2) اوہناں سارے !!{formula}s لئی ٹھیک نیں جیہناں دی !!{depth}~$!A$ توں گھٹ اے۔ اسیں (1) تے (2) نوں $!A$ لئی وکھ وکھ صورتاں وچ ثابت کردے آں۔
+
+پہلاں ویکھو کہ جدوں $!A^i$، $ \Pi_n \Sequent \Lambda_n$ وچ آؤندا اے، تاں $!A^i$، $ \Pi_{n+1} \Sequent \Lambda_{n+1}$ وچ وی آؤندا اے، سوائے جدوں $i$، $ \Pi_n \Sequent \Lambda_n$ وچ سبھ توں چھوٹا انڈیکس اے۔ چونکہ ہر پڑاؤ اُتے شامل ہوئے سبھ توں اُتلے سیکوئنٹاں وچ سبھ توں چھوٹا انڈیکس ودھدا اے، آخر اسیں $ \Pi_n \Sequent \Lambda_n$ تک پہنچدے آں جیہدے وچ $!A^i$ آؤندا اے تے $i$ سبھ توں چھوٹا انڈیکس اے۔ پڑاؤ $n+1$ اُتے الگورتھم~$!A^i$ نوں گھٹاؤندا اے۔ دوجے لفظاں وچ، جے $!A \in \Theta$، تاں کسے $n$ لئی $ \Pi_n = \Pi_n',
+!A^i$ تے $i$ سبھ توں چھوٹا انڈیکس اے۔ تے جے $!A \in \Xi$، تاں کسے $n$ لئی $ \Lambda_n = \Lambda_n', !A^i$ تے $i$ سبھ توں چھوٹا انڈیکس اے۔
+
+\begin{enumerate}
+  \item $!A \in \Theta$ تے $!A \ident !B \land !C$۔ تاں کسے $n$ لئی $ \Pi_n = \Pi_n', (!B \land !C)^i$۔ $\Pi_{n+1} \Sequent
+  \Lambda_{n+1}$،~\LeftR{\land} دا میل کھاندا مقدمہ اے، یعنی $ \Pi_{n+1} = \Pi_n', !B^k, !C^{k+1}$۔ ایس لئی $!B, !C \in
+  \Theta$۔ استقرا دے مفروضے نال $ \Sat{M}{!B}$ تے $ \Sat{M}{!C}$۔ $\Sat{M}{}$ دی تعریف نال سانوں $ \Sat{M}{!B \land !C}$ ملدا اے۔
+
+  \item $!A \in \Xi$ تے $!A \ident !B \land !C$۔ تاں کسے $n$ لئی $ \Lambda_n = \Lambda_n', !B \land !C$۔ $\Pi_{n+1} \Sequent
+  \Lambda_{n+1}$،~\RightR{\land} دے دو مقدمیّاں وچوں اک اے جیہدا نتیجہ $ \Pi_n \Sequent \Lambda'_n, !B \land !C$ اے، یعنی $ \Lambda_{n+1} = \Lambda_n', !B^k$ یا $ \Lambda_{n+1} = \Lambda_n',
+  !C^k$۔ ایس لئی یا $!B \in \Xi$ یا $!C \in \Xi$۔ استقرا دے مفروضے نال یا $\Sat/{M}{!B}$ یا $\Sat/{M}{!C}$۔ $\Sat{M}{}$ دی تعریف نال سانوں $ \Sat/{M}{!B \land !C}$ ملدا اے۔
+
+  \item $!A \ident \lnot !B$، $!A \ident !B \lor !C$ تے $!A \ident !B \lif !C$ والیاں صورتاں ایہناں ورگیاں نیں تے مشقاں لئی چھڈّیاں گئیاں نیں۔
+
+  \item $!A \in \Theta$ تے $!A \ident \lexists[x][!B(x)]$۔ تاں کسے $n$ لئی $ \Pi_n = \Pi_n', \lexists[x][!B(x)]^i$۔ $\Pi_{n+1}
+  \Sequent \Lambda_{n+1}$،~\LeftR{\lexists} دا میل کھاندا مقدمہ اے، یعنی $ \Pi_{n+1} = \Pi_n', !B(c)^k$ کسے~$c$ لئی۔ ایس لئی $!B(c) \in \Theta$ تے~$c \in C$۔ استقرا دے مفروضے نال $\Sat{M}{!B(c)}$۔ $\Sat{M}{}$ دی تعریف نال سانوں $ \Sat{M}{\lexists[x][!B(x)]}$ ملدا اے۔
+
+  \item $!A \in \Xi$ تے $!A \ident \lexists[x][!B(x)]$۔ تاں کسے $n$ لئی $ \Lambda_n = \Lambda_n', \lexists[x][!B(x)]^i$۔ کیونکہ جدوں وی $ \lexists[x][!B(x)]$ نوں گھٹایا جاندا اے، $\lexists[x][!B(x)]$ اک نویں انڈیکس نال مقدمے والے سیکوئنٹ دے سجّے پاسے رہندا اے، ایس لئی $ \lexists[x][!B(x)]$ نوں ناکامی والی شاخ وچ سجّے پاسے لامحدود واری گھٹایا جاندا اے، جے اوہ اُتھے آؤندا اے۔ ہر ٹرم $t \in
+  \Domain{M}$ آخر اک ناکامی والی شاخ اُتے «پہلا اوہ ٹرم جیہدے وچ صرف~$C_n$ والے مستقل ہون تے جیہڑا سجّے پاسے $ \lexists[x][!B(x)]$ دی تقلیل وچ پہلاں نہ ورتیا گیا ہووے» بن جاندا اے۔ سو ہر $t \in \Domain{M}$ لئی $!B(t) \in \Lambda_n$ کسے~$n$ لئی، تے ایس لئی $!B(t) \in \Xi$۔ استقرا دے مفروضے نال $ \Sat/{M}{!B(t)}$ ہر $t \in
+  \Domain{M}$ لئی۔ $\Sat{M}{}$ دی تعریف نال سانوں $ \Sat/{M}{\lexists[x][!B(x)]}$ ملدا اے۔
+
+  \item $!A \ident \lforall[x][!B(x)]$ والیاں صورتاں ایہناں ورگیاں نیں تے مشقاں لئی چھڈّیاں گئیاں نیں۔
+\end{enumerate}
+\end{proof}
+
+\begin{cor}\ollabel{cor:complete}
+\Log{G3c} لئی ثبوت لبھّن دا الگورتھم کامل اے۔ جے ایہ وچّے رُک جاوے یا کدے ختم نہ ہووے، تاں شروع دا سیکوئنٹ~$\Gamma \Sequent \Delta$ معتبر نہیں تے ایس لئی اوہدا کوئی !!{proof} نہیں۔
+\end{cor}
+
+\begin{proof}
+جے الگورتھم وچّے رُک جاوے یا کدے ختم نہ ہووے، تاں اک ناکامی والی شاخ اے جیہدے توں $\Struct{M}$ نوں متعین کیتا جا سکدا اے۔ \olref{lem:truth} نال ہر $!A \in \Gamma$ لئی $\Sat{M}{!A}$، تے ہر $!A \in \Delta$ لئی $\Sat/{M}{!A}$۔ (چیتے رکھو کہ $\Pi_0 = \Gamma$ تے $\Lambda_0 =
+\Delta$، سو $\Gamma \subseteq \Theta$ تے $\Delta \subseteq \Xi$۔) سو $ \Gamma \Sequent \Delta$ معتبر نہیں۔~\Log{G3c} دی صحت مندی کرکے $ \Gamma \Sequent \Delta$ دا کوئی !!{proof} نہیں۔
+\end{proof}
+
+\begin{cor}
+\Log{G3c} کامل اے۔ جے $ \Gamma \Sequent \Delta$ معتبر اے، تاں $\Log{G3c} \Proves \Gamma \Sequent \Delta$۔
+\end{cor}
+
+\begin{proof}
+اسیں عکسِ نقیض ثابت کردے آں۔ منّ لو $ \Log{G3c} \Proves/ \Gamma
+\Sequent \Delta$۔ تاں ثبوت لبھّن دا الگورتھم یا وچّے رُک جاندا اے یا کدے ختم نہیں ہوندا، کیونکہ لبھّن لئی کوئی !!{proof} نہیں۔ \olref{cor:complete} نال $ \Gamma \Sequent \Delta$ معتبر نہیں۔
+\end{proof}
+
+\end{document}

@@ -1,0 +1,112 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: Structures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{str}
+
+\olsection{پہلے درجے دیاں زباناں لئی \printtoken{P}{structure}}
+
+\begin{explain}
+پہلے درجے دیاں زباناں اپنے آپ وچ \emph{بنا تعبیر دے} ہوندیاں نیں:
+!!{constant}s، !!{function}s تے !!{predicate}s نال کوئی خاص
+معنی پہلے توں جڑے نہیں ہوندے۔ معنی \article{structure}
+\emph{!!{structure}} متعین کرکے دتے جاندے نیں۔ اوہ
+\emph{دائرہ} متعین کردی اے، یعنی اوہ اشیاء جنہاں ول
+!!{constant}s اشارہ کردے نیں، جنہاں اُتے !!{function}s کم کردے
+نیں، تے جنہاں اُتے مسوّرے چلدے نیں۔ نال ایہ وی متعین ہوندا اے
+کہ کیہڑے !!{constant}s کیہڑیاں اشیاء ول اشارہ کردے نیں،
+!!a{function} اشیاء نوں دوجیاں اشیاء ول کیویں بھیجدا اے، تے
+!!{predicate}s کیہڑیاں اشیاء اُتے لاگو ہوندے نیں۔
+!!^{structure}s منطق وچ \emph{معنوی} تصورات، مثلاً منطقی نتیجے،
+اعتبار تے پورا ہون جوگتا دی بنیاد نیں۔ علمی عبارت وچ انہاں نوں
+کدے ``ساختاں،'' کدے ``تعبیراں،'' تے کدے ``نمونے'' آکھیا جاندا اے۔
+\end{explain}
+
+\begin{defn}[!!^{structure}s]
+\Article{structure} \emph{!!{structure}}~$\Struct M$، پہلے درجے دی
+زبان $\Lang{L}$ لئی، ہیٹھ لکھیاں چیزاں توں بندی اے:
+\begin{enumerate}
+\item \emph{دائرہ:} اک غیر خالی سیٹ، $\Domain M$
+\item \emph{!!{constant}s دی تعبیر:} ہر !!{constant}~$c$ لئی
+  جیہڑا $\Lang{L}$ وچ اے، !!a{element} $\Assign{c}{M} \in \Domain M$
+\item \emph{!!{predicate}s دی تعبیر:} ہر $n$-مقامی
+  !!{predicate}~$R$ لئی جیہڑا $\Lang{L}$ وچ اے ($\eq$ توں علاوہ)، اک $n$-مقامی
+  تعلق $\Assign{R}{M} \subseteq \Domain{M}^n$
+\item \emph{!!{function}s دی تعبیر:} ہر $n$-مقامی
+  !!{function}~$f$ لئی جیہڑا $\Lang{L}$ وچ اے، اک $n$-مقامی فنکشن $\Assign{f}{M}
+  \colon \Domain{M}^n \to \Domain{M}$
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+حساب دی زبان لئی !!^a{structure}~$\Struct M$ وچ اک سیٹ،
+$\Domain M$ دا اک عنصر $\Assign{\Obj 0}{M}$ جیہڑا
+!!{constant}~$\Obj 0$ دی تعبیر اے، اک یک-مقامی فنکشن
+$\Assign{\Obj \prime}{M} \colon \Domain{M} \to \Domain M$،
+دو دو-مقامی فنکشن $\Assign{\Obj +}{M}$ تے $\Assign{\Obj
+    \times}{M}$ (دونیں $\Domain M^2 \to \Domain M$)، تے اک
+دو-مقامی تعلق $\Assign{\Obj <}{M} \subseteq \Domain{M}^2$ ہوندے نیں۔
+
+ایہو جہی ساخت دی اک صاف مثال ایہ اے:
+\begin{enumerate}
+\item $\Domain N = \Nat$
+\item $\Assign{\Obj 0}{N} = 0$
+\item $\Assign{\Obj \prime}{N}(n) = n + 1$ ہر $n \in \Nat$ لئی
+\item $\Assign{\Obj +}{N}(n, m) = n + m$ ہر $n, m \in \Nat$ لئی
+\item $\Assign{\Obj \times}{N}(n, m) = n\cdot m$ ہر $n, m \in \Nat$ لئی
+\item $\Assign{\Obj <}{N} = \Setabs{\tuple{n, m}}{n \in \Nat, m \in
+  \Nat, n < m}$
+\end{enumerate}
+ایس طرح تعریف کیتی ساخت~$\Struct N$ نوں، $\Lang L_A$ لئی،
+\emph{حساب دا معیاری نمونہ} آکھدے آں، کیوں جے ایہ~$\Lang L_A$
+دیاں غیر منطقی ثابتاں دی تعبیر ٹھیک اوہو جیہی کردی اے جیہڑی
+تُسی توقع کردے او۔
+
+پر~$\Lang L_A$ لئی ہور بہت ساریاں !!{structure}s وی ممکن نیں۔
+مثلاً اسیں دائرے لئی صحیح عدداں دا سیٹ~$\Int$ لے سکدے آں،
+قدرتی اعداد~$\Nat$ دی تھاں، تے $\Obj
+0$، $\Obj \prime$، $\Obj +$، $\Obj \times$ تے $\Obj <$
+دیاں تعبیراں اوہدے مطابق متعین کر سکدے آں۔ بلکہ~$\Lang L_A$
+لئی ایسی ساختاں وی بنا سکدے آں جنہاں دا عدداں نال دور دا وی
+واسطہ نہ ہووے۔
+\end{ex}
+
+\begin{ex}
+ساخت~$\Struct M$ نوں، سیٹ نظریے دی زبان~$\Lang L_Z$ لئی،
+بس اک سیٹ تے اک دو-مقامی تعلق چاہیدا اے۔ ایس لئی، خالص فنی
+لحاظ نال، مثلاً لوکاں دا سیٹ تے تعلق ``$x$، $y$ توں وڈی عمر
+دا اے''، $\Lang L_Z$ لئی !!a{structure} بن سکدا اے؛ ایویں
+$\Nat$ تے $n \ge m$ دا تعلق وی، جدوں $n, m \in \Nat$ ہون۔
+
+$\Lang L_Z$ لئی اک خاص دلچسپ !!{structure} اوہ اے جیہدے دائرے دے
+!!{element}s خود سیٹ نیں تے $\Obj \in$ دی تعبیر واقعی تعلق
+``$x$،~$y$ دا !!a{element} اے'' اے۔ ایہ \emph{وراثتاً محدود سیٹاں}
+دی !!{structure}~$\Struct{{HF}}$ اے:
+\begin{enumerate}
+\item $\Domain{{{HF}}} = \emptyset \cup \Pow{\emptyset} \cup
+  \Pow{\Pow{\emptyset}} \cup \Pow{\Pow{\Pow{\emptyset}}} \cup \dots$;
+\item $\Assign{\Obj \in}{{{HF}}} = \Setabs{\tuple{x, y}}{x, y \in
+  \Domain{{{HF}}}, x \in y}$.
+\end{enumerate}
+\end{ex}
+
+\begin{digress}
+کیہڑی شے نوں !!a{structure} منن دے ضابطے ساڈی منطق اُتے اثر
+پاندے نیں۔ مثال لئی، خالی دائریاں دی ممانعت، مسوّر والے جملیاں
+دے پورا اترن (یا سچ ہون) دی عام تعبیر ہِٹھ، ایہ یقینی بناندی اے
+کہ $\lexists[x][(!A(x) \lor \lnot !A(x))]$ معتبر اے---یعنی
+منطقی سچائی اے۔ تے ایہ شرط کہ سارے !!{constant}s دائرے دی
+کسے شے ول اشارہ کرن، وجودی تعمیم نوں استدلال دا درست نمونہ
+بناندی اے: $!A(a)$، ایس لئی $\lexists[x][!A(x)]$۔ جے اسیں
+ناواں نوں دائرے توں باہر دیاں اشیاء ول اشارہ کرن دی اجازت
+دیندے، یا اشارہ نہ کرن دی، تاں اسیں \emph{آزاد منطق} ول جا
+رہے ہوندے؛ اوتھے وجودی تعمیم لئی اک وادھو مقدمہ چاہیدا اے:
+$!A(a)$ تے $\lexists[x][\eq[x][a]]$، ایس لئی
+$\lexists[x][!A(x)]$۔
+\end{digress}
+
+\end{document}

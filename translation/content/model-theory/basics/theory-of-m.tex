@@ -1,0 +1,71 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: theory-of-m
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{bas}{thm}
+
+\section{اک \printtoken{S}{structure} دا نظریہ}
+
+ہر !!{structure}~$\Struct{M}$ کجھ !!{sentence}s نوں سچ تے کجھ نوں
+جھوٹا بناؤندی اے۔ اوہدے سچ بنائے سارے !!{sentence}s دے سیٹ نوں
+اوہدا \emph{نظریہ} آکھیا جاندا اے۔ ایہ سیٹ واقعی اک نظریہ اے، کیوں جے
+اوہدے توں جیہڑی وی گل منطقی طور اُتے نکلے، اوہ اوہدے سارے نمونیاں
+وچ سچ ہونی چاہیدی اے، جنہاں وچ~$\Struct{M}$ وی شامل اے۔ ایس لئی
+اوہ نتیجہ وی ایس سارے سچ جملیاں دے سیٹ وچ آ جاندا اے۔
+
+\begin{defn}
+  !!a{structure}~$\Struct M$ دتی ہووے۔ $\Struct{M}$ دا
+  \emph{نظریہ}، اوہناں !!{sentence}s دا سیٹ $\Theory{M}$ اے
+  جیہڑے $\Struct{M}$ وچ سچ نیں؛ یعنی $\Theory{M} =
+  \Setabs{!A}{\Sat{M}{!A}}$۔
+\end{defn}
+
+اسیں ``نظریہ'' دا لفظ غیر رسمی طور اُتے اوہناں !!{sentence}s دے
+سیٹاں لئی وی ورتدے آں جنہاں دی کوئی مِتھی ہوئی تعبیر ہووے، چاہے اوہ
+استنتاج دے لحاظ نال بند ہوون یا نہ ہوون۔
+
+\begin{prop}
+ہر $\Struct{M}$ لئی، $\Theory{M}$ مکمل اے۔
+\end{prop}
+
+\begin{proof}
+ہر !!{sentence}~$!A$ لئی یا $\Sat{M}{!A}$ یا $\Sat{M}{\lnot !A}$،
+ایس لئی یا $!A \in \Theory{M}$ یا $\lnot !A \in \Theory{M}$۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:equiv}
+  جے $\Struct{N} \models !A$ ہر $!A \in \Theory{M}$ لئی، تاں
+  $\Struct{M} \elemequiv \Struct{N}$۔ ایتھے دوہاں ساختاں دی زبان اکّو اے۔
+\end{prop}
+
+\begin{proof}
+کیوں جے $\Sat{N}{!A}$ ہر $!A \in \Theory{M}$ لئی، ایس لئی
+$\Theory{M} \subseteq \Theory{N}$۔ جے $\Sat{N}{!A}$، تاں
+$\Sat/{N}{\lnot !A}$؛ ایس لئی $\lnot !A
+\notin \Theory{M}$۔ جے نفی پہلے نظریے وچ ہوندی، تاں دوسری ساخت وچ وی
+سچ ہونی سی، پر ایتھے اوہ سچ نہیں۔ کیوں جے $\Theory{M}$ مکمل اے، ایس لئی $!A \in
+\Theory{M}$۔ سو $\Theory{N} \subseteq \Theory{M}$، تے سانوں
+$\Struct{M} \elemequiv \Struct{N}$ ملدا اے۔
+\end{proof}
+
+\begin{rem}\ollabel{remark:R}
+  $\Struct{R} = \langle\Real, <\rangle$ نوں ویکھو: ایہ اوہ
+  !!{structure} اے جیہدا دائرہ حقیقی اعداد دا سیٹ $\Real$ اے،
+  تے اوہ !!{language} وچ اے جیہدے وچ صرف اک دو-تھانواں والا
+  !!{predicate} اے، جس دی تعبیر حقیقی اعداد اُتے $<$ تعلق اے۔
+  ظاہر اے کہ $\Struct{R}$ !!{nonenumerable} اے؛ پر چونکہ
+  $\Theory{R}$ واضح طور اُتے موافق اے، L\"owenheim--Skolem قضیے
+  مطابق ایہدا اک !!a{enumerable} نمونہ اے، مثلاً $\Struct{S}$؛
+  تے \olref{prop:equiv} توں $\Struct{R}
+  \equiv \Struct{S}$۔ اک دا دائرہ قابلِ شمار اے تے دوجے دا نہیں،
+  ایس لئی اوہناں وچ ہم شکلی لئی درکار اک بہ اک مطابقت نہیں ہو سکدی۔
+  ہور ایہ کہ $\Struct{R}$ تے $\Struct{S}$
+  ہم شکل نہیں، ایس لئی ایہ مثال دکھاؤندی اے کہ
+  \olref[iso]{thm:isom} دا الٹا دعویٰ عام طور اُتے درست نہیں۔
+\end{rem}
+
+\end{document}

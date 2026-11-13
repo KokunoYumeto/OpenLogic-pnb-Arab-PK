@@ -1,0 +1,200 @@
+% Part: intuitionistic-logic
+% Chapter: tableaux
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{tab}{sou}
+
+\olsection{وجدانیت پسند \usetoken{P}{tableau} دی صحت مندی}
+
+\begin{explain}
+  وجدانیت پسند !!{tableau}s دی صحت مندی وکھاؤن لئی سانوں ایہ ثابت کرنا اے
+  کہ جے
+  \[
+  \sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1], \sFmla{\False}{!A}[1]
+  \]
+  دا بند !!{tableau} اے، تاں $!B_1, \dots, !B_n \Entails !A$۔ عکسِ نقیض
+  ثابت کرنا سوکھا اے۔ جے کسے $\mModel{M}$ تے جہان~$w$ لئی
+  $\mSat{M}{!B_i}[w]$ ہر $i=1$، \dots،~$n$ لئی اے، پر $\mSat{M}{!A}[w]$،
+  تاں کوئی !!{tableau} بند نہیں ہو سکدا۔ ایہو جیہا ردّی نمونہ وکھاندا اے
+  کہ !!{tableau} دے شروع دے مفروضے اکٹھے پورے ہو سکدے نیں۔ ثبوت دا طریقہ
+  ایہ اے کہ جدوں وی !!a{tableau} دی ٹہنی اُتے سارے اگیتے والے
+  !!{formula}s اکٹھے پورے ہو سکن، تاں کوئی قاعدہ لاؤن نال گھٹ توں گھٹ
+  اک ایہو جیہی ودھی ہوئی ٹہنی ملدی اے جیہڑی ہجے وی پوری ہو سکدی اے۔
+  چونکہ بند ٹہنیاں پوریاں نہیں ہو سکدیاں، ایس لئی اگیتے والے !!{formula}s دے
+  پورے ہو سکّن والے سیٹ لئی ہر !!{tableau} وچ گھٹ توں گھٹ اک کھُلّی ٹہنی ہووے گی۔
+
+  ایس طریقے نوں امکانی صورت وچ ورتن لئی سانوں ’پورا ہون جوگا‘ دی تعریف
+  تعلقی نمونیاں تے اگیتیاں تک ودھاؤنی پئے گی۔ ایہ ہو جائے تاں ثبوت سدھا اے۔
+\end{explain}
+
+\begin{defn}
+  منّ لو $P$ اگیتیاں دا کوئی سیٹ اے، یعنی $P \subseteq (\PosInt)^*
+  \setminus \{\emptyseq\}$، تے $\mModel{M}$ اک نمونہ اے۔
+  فنکشن~$f\colon P \to W$،~$P$ دی~$\mModel{M}$ وچ \emph{تعبیر} اے جے
+  جدوں وی $\sigma$ تے $\sigma.n$ دونیں~$P$ وچ ہون، اوہدوں $Rf(\sigma)f(\sigma.n)$۔
+
+  اگیتیاں~$P$ دی تعبیر دے لحاظ نال اسیں ایویں تعریف کر سکدے آں:
+  \begin{enumerate}
+  \item $\mModel{M}$ وچ $\sFmla{\True}{!A}[\sigma]$ اُدوں تے صرف اُدوں
+    پورا اتردا اے جدوں $\mSat{M}{!A}[f(\sigma)]$۔
+  \item $\mModel{M}$ وچ $\sFmla{\False}{!A}[\sigma]$ اُدوں تے صرف اُدوں
+    پورا اتردا اے جدوں $\mSat/{M}{!A}[f(\sigma)]$۔
+  \end{enumerate}
+\end{defn}
+
+دھیان دیو کہ $R$ انعکاسی تے متعدی اے، تے $\sigma.{*}$ توں مراد
+$\sigma$، $\sigma.n_1$، $\sigma.n_1.n_2$، \dots نیں۔ ایس لئی ساڈے کول
+$Rf(\sigma)f(\sigma.{*})$ وی اے۔
+
+\begin{defn}
+  منّ لو $\Gamma$ اگیتے والے !!{formula}s دا سیٹ اے، تے $P(\Gamma)$
+  اوہدے وچ آؤن والے اگیتیاں دا سیٹ اے۔ جے $f$،~$P(\Gamma)$ دی
+  $\mModel{M}$ وچ تعبیر اے، تاں اسیں آکھدے آں کہ $\mModel{M}$ وچ
+  $\Gamma$،~$f$ دے لحاظ نال پورا اتردا اے، یعنی $\mSat{M}{\Gamma}[f]$،
+  جے $\mModel{M}$ وچ~$\Gamma$ دا ہر اگیتے والا !!{formula}،~$f$ دے لحاظ نال
+  پورا اتردا اے۔ $\Gamma$ \emph{پورا ہون جوگا} اُدوں تے صرف اُدوں اے جدوں
+  اک نمونہ~$\mModel{M}$ تے اک تعبیر~$f$ ہووے، جیہڑی $P(\Gamma)$ دی اے تے جیہدے لئی
+  $\mSat{M}{\Gamma}[f]$۔
+\end{defn}
+
+\begin{prop}
+  جے $\Gamma$ وچ دونیں $\sFmla{\True}{!A}[\sigma]$ تے
+  $\sFmla{\False}{!A}[\sigma.{*}]$ ہون، کسے !!{formula}~$!A$ تے اگیتے~$\sigma$ لئی،
+  یا اوہدے وچ $\sFmla{\True}{\lfalse}[\sigma]$ ہووے، تاں $\Gamma$ پورا ہون جوگا نہیں۔
+\end{prop}
+
+\begin{proof}
+  چونکہ ہمیشہ $\mSat/{M}{\lfalse}[f(\sigma)]$، ایس لئی اوہ $\Gamma$
+  جیہدے وچ $\sFmla{\True}{\lfalse}$ ہووے، پورا ہون جوگا نہیں۔
+
+  کوئی نمونہ~$\mModel{M}$ تے تعبیر~$f$ وی نہیں ہو سکدی، جیہڑی $P(\Gamma)$ دی اے تے
+  جتھے دونیں شرطاں پوریاں ہون۔ جے $\mSat{M}{!A}[f(\sigma)]$، تاں
+  \olref[sem][rel]{prop:true-monotonic} مطابق، چونکہ $Rf(\sigma)(\sigma.{*})$،
+  ایس لئی $\mSat{M}{!A}[f(\sigma)]$۔ سو دونیں
+  $\mSat{M}{!A}[f(\sigma)]$ تے $\mSat/{M}{!A}[f(\sigma.{*})]$ نہیں ہو سکدے۔
+\end{proof}
+
+\begin{thm}[صحت مندی]
+  \ollabel{thm:tableau-soundness}
+  جے $\Gamma$ دا کوئی بند !!{tableau} اے، تاں $\Gamma$ پورا ہون جوگا نہیں۔
+\end{thm}
+
+\begin{proof}
+اسیں !!a{tableau} دی ٹہنی نوں پورا ہون جوگا اُدوں تے صرف اُدوں آکھدے آں
+جدوں اوہدے اُتے !!{signed formula}s دا سیٹ پورا ہون جوگا اے۔ تے
+!!a{tableau} نوں پورا ہون جوگا اوہدوں آکھیے جے اوہدے وچ گھٹ توں گھٹ
+اک پورا ہون جوگی ٹہنی اے۔
+
+اسیں ایہ وکھاندے آں کہ کسے پورا ہون جوگے !!{tableau} نوں استنباط دے
+اک قاعدے نال ودھاؤن توں ہمیشہ اک پورا ہون جوگا !!{tableau} ملدا اے۔
+ایس نال قضیہ ثابت ہووے گا۔ کوئی وی بند !!{tableau} اوس !!{tableau}
+اُتے استنباط دے قاعدے لاؤن نال ملدا اے جیہڑا صرف~$\Gamma$ دے مفروضیاں توں
+بندا اے۔ سو جے $\Gamma$ پورا ہون جوگا ہووے، تاں اوہدے لئی ہر !!{tableau}
+پورا ہون جوگا ہووے گا۔ پر بند !!{tableau} صاف طور اُتے پورا ہون جوگا نہیں،
+کیوں جے اوہدیاں ساریاں ٹہنیاں بند نیں تے بند ٹہنیاں پوریاں نہیں ہو سکدیاں۔
+
+فرض کرو ساڈے کول اک پورا ہون جوگا !!{tableau} اے، یعنی !!a{tableau}
+جیہدے وچ گھٹ توں گھٹ اک پورا ہون جوگی ٹہنی اے۔ استنباط دا قاعدہ لاؤن نال
+یا کسے ٹہنی اُتے !!{signed formula}s شامل ہوندے نیں یا اوہ ٹہنی دو حصیاں
+وچ ونڈی جاندی اے۔ جے !!{tableau} دی کسے پورا ہون جوگی ٹہنی نوں ایس قاعدے دے
+اطلاق نال ودھایا نہیں جاندا، تاں اوہ ودھے ہوئے !!{tableau} وچ وی پورا ہون
+جوگی ٹہنی رہندی اے۔ سو ودھیا ہویا ٹیبلو پورا ہون جوگا اے۔ ایس لئی سانوں
+صرف اوہ صورت ویکھنی اے جدوں قاعدہ کسے پورا ہون جوگی ٹہنی اُتے لگدا اے۔
+
+منّ لو $\Gamma$ اوس ٹہنی دے !!{signed formula}s دا سیٹ اے تے
+$\sFmla{S}{!A}[\sigma] \in \Gamma$ اوہ !!{signed formula} اے جیہدے اُتے
+قاعدہ لگدا اے۔ جے قاعدہ ٹہنی نوں دو حصیاں وچ نہیں ونڈدا، تاں اسیں وکھانا اے
+کہ ودھی ہوئی ٹہنی، یعنی $\Gamma$ تے قاعدے دے نتیجے رلا کے، ہجے وی پورا
+ہون جوگی اے۔ جے قاعدہ ٹہنی نوں ونڈدا اے، تاں اسیں وکھانا اے کہ بنیاں دوناں
+ٹہنیاں وچوں گھٹ توں گھٹ اک پورا ہون جوگی اے۔
+\begin{enumerate}
+\item $\TRule{\True}{\lnot}$ نوں $\sFmla{\True}{\lnot !B}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ ودھی ہوئی ٹہنی اُتے !!{signed formula}s
+  $\Gamma \cup \{\sFmla{\False}{!B}[\sigma.{*}]\}$ نیں۔
+  فرض کرو $\mSat{M}{\Gamma}[f]$۔ خاص کر کے $\mSat{M}{\lnot !B}[f(\sigma)]$۔
+  سو $\mSat/{M}{!B}[w]$ ہر اوہ $w$ لئی اے جیہڑا $Rf(\sigma)w$ پورا کرے،
+  تے اوہناں وچ $f(\sigma.{*})$ وی اے۔ سو $\mModel{M}$ وچ
+  $\sFmla{\False}{!B}[\sigma.{*}]$،~$f$ دے لحاظ نال پورا اتردا اے۔
+\item $\TRule{\False}{\lnot}$ نوں $\sFmla{\False}{\lnot !B}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ مشق۔
+\item $\TRule{\True}{\land}$ نوں $\sFmla{\True}{!B \land !C}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے تے ٹہنی اُتے دو نویں !!{signed formula}s ملدے نیں:
+  $\sFmla{\True}{!B}[\sigma]$ تے $\sFmla{\True}{!C}[\sigma]$۔ فرض کرو
+  $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{!B \land !C}[f(\sigma)]$۔
+  فیر $\mSat{M}{!B}[f(\sigma)]$ تے $\mSat{M}{!C}[f(\sigma)]$۔
+  یعنی $\mModel{M}$ وچ $\sFmla{\True}{!B}[\sigma]$ تے
+  $\sFmla{\True}{!C}[\sigma]$ دونیں~$f$ دے لحاظ نال پورے اتردے نیں۔
+\item $\TRule{\False}{\lor}$ نوں $\sFmla{\False}{!B \lor !C} \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ مشق۔
+\item $\TRule{\False}{\lif}$ نوں $\sFmla{\False}{!B \lif !C}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ ایس نال ٹہنی اُتے دو نویں !!{signed formula}s ملدے نیں:
+  $\sFmla{\True}{!B}[\sigma.n]$ تے $\sFmla{\False}{!C}[\sigma.n]$، جتھے
+  $\sigma.n$ ٹہنی اُتے نواں اگیتا اے، یعنی $\sigma.n \notin P(\Gamma)$۔
+
+  چونکہ $\Gamma$ پورا ہون جوگا اے، اک $\mModel{M}$ تے تعبیر~$f$ اے، جیہڑی
+  $P(\Gamma)$ دی اے تے جیہدے لئی $\mSat{M}{\Gamma}[f]$، خاص کر کے
+  $\mSat/{M}{!B \lif !C}[f(\sigma)]$۔ اسیں وکھانا اے کہ
+  $\Gamma \cup \{\sFmla{\False}{!B \lif !C}[\sigma.n]\}$ پورا ہون جوگا اے۔
+  ایس لئی اسیں $P(\Gamma) \cup \{\sigma.n\}$ دی تعبیر ایویں تعریف کردے آں:
+
+  چونکہ $\mSat/{M}{!B \lif !C}[f(\sigma)]$، ایس لئی اک $w \in W$ اے
+  جیہڑا $Rf(\sigma)w$ پورا کردا اے تے جیہدے لئی $\mSat{M}{!B}[w]$ تے
+  $\mSat/{M}{!C}[w]$۔ منّ لو $f'$، $f$ ورگا اے، بس $f'(\sigma.n) = w$۔
+  چونکہ $f'(\sigma) = f(\sigma)$ تے $Rf(\sigma)w$، ایس لئی
+  $Rf'(\sigma)f'(\sigma.n)$۔ سو $f'$، $P(\Gamma) \cup \{\sigma.n\}$ دی
+  اک تعبیر اے۔ ظاہر اے کہ $\mSat{M}{!B}[f'(\sigma.n)]$ تے
+  $\mSat/{M}{!C}[f'(\sigma.n)]$۔ چونکہ $f(\sigma') = f'(\sigma')$
+  سارے اگیتیاں $\sigma' \in P(\Gamma)$ لئی، ایس لئی $\mSat{M}{\Gamma}[f']$۔
+  سو $\mModel{M}, f'$ وچ $\Gamma \cup \{\sFmla{\False}{!B \lif !C}[\sigma.n]\}$
+  پورا اتردا اے۔
+\end{enumerate}
+ہُن دو مقدمیاں والے ممکن استنباط ویکھیے۔
+\begin{enumerate}
+\item $\TRule{\False}{\land}$ نوں $\sFmla{\False}{!B \land !C}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے تے دو ٹہنیاں ملدیاں نیں۔ کھبے والی
+  $\sFmla{\False}{!B}[\sigma]$ توں اگے جاندی اے تے سجے والی
+  $\sFmla{\False}{!C}[\sigma]$ توں۔ فرض کرو $\mSat{M}{\Gamma}[f]$،
+  خاص کر کے $\mSat/{M}{!B \land !C}[f(\sigma)]$۔ فیر
+  $\mSat/{M}{!B}[f(\sigma)]$ یا $\mSat/{M}{!C}[f(\sigma)]$۔
+  پہلی صورت وچ $\mModel{M}, f$ وچ $\sFmla{\False}{!B}[\sigma]$ پورا
+  اتردا اے، یعنی کھبی ٹہنی پورا ہون جوگی اے۔ دوجی صورت وچ
+  $\mModel{M}, f$ وچ $\sFmla{\False}{!C}[\sigma]$ پورا اتردا اے،
+  یعنی سجی ٹہنی پورا ہون جوگی اے۔
+\item $\TRule{\True}{\lor}$ نوں $\sFmla{\True}{!B \lor !C}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ مشق۔
+\item $\TRule{\True}{\lif}$ نوں $\sFmla{\True}{!B \lif !C}[\sigma] \in \Gamma$
+  اُتے لاؤن نال ٹہنی ودھدی اے۔ مشق۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref[int][tab][sou]{thm:tableau-soundness} دا ثبوت مکمل کرو۔
+\end{prob}
+
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+\end{cor}
+
+\begin{proof}
+  جے $\Gamma \Proves !A$، تاں کجھ $!B_1$، \dots، $!B_n \in \Gamma$ لئی،
+  $\Delta = \{\sFmla{\False}{!A}[1], \sFmla{\True}{!B_1}[1],
+  \dots, \sFmla{\True}{!B_n}[1]\}$ دا بند !!{tableau} اے۔ اسیں وکھانا اے
+  کہ $\Gamma \Entails !A$۔ فرض کرو ایہ نہیں۔ تاں کسے $\mModel{M}$ تے $w$ لئی،
+  $\mSat{M}{!B_i}[w]$ ہر $i=1$، \dots،~$n$ لئی، پر $\mSat/{M}{!A}[w]$۔
+  منّ لو $f(1) = w$۔ فیر $f$،~$P(\Delta)$ دی~$\mModel{M}$ وچ تعبیر اے،
+  تے $\mModel{M}$ وچ~$\Delta$،~$f$ دے لحاظ نال پورا اتردا اے۔
+  پر \olref{thm:tableau-soundness} مطابق، $\Delta$ پورا ہون جوگا نہیں،
+  کیوں جے اوہدا بند !!{tableau} اے۔ ایہ تضاد اے۔ سو آخر $\Gamma \Proves !A$ ہونا اے۔
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$ سارے نمونیاں وچ سچ اے۔
+\end{cor}
+
+\end{document}

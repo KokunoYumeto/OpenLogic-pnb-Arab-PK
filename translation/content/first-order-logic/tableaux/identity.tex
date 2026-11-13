@@ -1,0 +1,109 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{ide}
+
+\olsection{\usetoken{P}{tableau} وچ \usetoken{S}{identity} دی شمولیت}
+
+!!^{tableau}s وچ !!{identity} لئی وادھو استنباطی قاعدے چاہیدے نیں۔
+$\eq$ دے قاعدے ایہ نیں ($t$، $t_1$ تے $t_2$ بند ٹرم نیں):
+
+\begin{defish}
+\AxiomC{}
+\RightLabel{$\eq$}
+\UnaryInfC{\sFmla{\True}{\eq[t][t]}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\True}{\eq[t_1][t_2]}}
+\noLine
+\UnaryInfC{\sFmla{\True}{!A(t_1)}}
+\RightLabel{$\TRule{\True}{\eq}$}
+\UnaryInfC{\sFmla{\True}{!A(t_2)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\True}{\eq[t_1][t_2]}}
+\noLine
+\UnaryInfC{\sFmla{\False}{!A(t_1)}}
+\RightLabel{$\TRule{\False}{\eq}$}
+\UnaryInfC{\sFmla{\False}{!A(t_2)}}
+\DisplayProof
+\end{defish}
+دھیان دیو کہ باقی سارے قاعدیاں دے برعکس، $\TRule{\True}{\eq}$ تے
+$\TRule{\False}{\eq}$ لئی لازم اے کہ شاخ اُتے پہلے ای \emph{دو}
+علامت لائے !!{formula}s موجود ہون، یعنی
+$\sFmla{\True}{\eq[t_1][t_2]}$ تے $\sFmla{S}{!A(t_1)}$ دونیں۔
+
+\begin{ex}
+جے $s$ تے $t$ بند ٹرم نیں، تاں $\eq[s][t], !A(s)
+\Proves !A(t)$:
+\begin{oltableau}
+  [\sFmla{\False}{\formula{A}(t)}, just = \TAss
+    [\sFmla{\True}{\eq[s][t]}, just = \TAss
+      [\sFmla{\True}{\formula{A}(s)}, just = \TAss
+        [\sFmla{\True}{\formula{A}(t)}, just={\TRule{\True}{\eq}[2, 3]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+تساں ایس نوں اکو ہون والیاں چیزاں دی اک دوجے دی تھاں ورتوں دا اصول
+(substitutability of identicals)، یا لائبنز دا قانون (Leibniz' Law)،
+دے ناں نال جان دے ہوؤ گے۔
+
+% PNBTAB-014: two explanatory identity-rule premise formulas are normalized; the three proof trees are unchanged.
+!!^{tableau}s ایہ ثابت کردے نیں کہ $\eq$ متناظر اے، یعنی
+$\eq[s_1][s_2]
+\Proves \eq[s_2][s_1]$:
+\begin{oltableau}
+  [\sFmla{\False}{\eq[s_2][s_1]}, just = \TAss
+    [\sFmla{\True}{\eq[s_1][s_2]}, just = \TAss
+      [\sFmla{\True}{\eq[s_1][s_1]}, just = {$\eq$}
+        [\sFmla{\True}{\eq[s_2][s_1]}, just = {\TRule{\True}{\eq}[2, 3]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+ایتھے سطر~$2$ پہلا لازمی !!{formula}~$\sFmla{\True}{\eq[s_1][s_2]}$
+اے جیہڑا $\TRule{\True}{\eq}$ لئی چاہیدا اے۔ سطر~$3$ دوجا
+لازمی فارمولا اے، جیہدا روپ $\sFmla{\True}{!A(s_1)}$ اے۔
+$!A(x)$ نوں $\eq[x][s_1]$ سمجھو؛ فیر $!A(s_1)$،
+$\eq[s_1][s_1]$ اے تے $!A(s_2)$، $\eq[s_2][s_1]$ اے۔
+
+ایہ وی ثابت کردے نیں کہ $\eq$ متعدی اے، یعنی
+$\eq[s_1][s_2],
+\eq[s_2][s_3] \Proves \eq[s_1][s_3]$:
+\begin{oltableau}
+  [\sFmla{\False}{\eq[s_1][s_3]}, just = \TAss
+    [\sFmla{\True}{\eq[s_1][s_2]}, just = \TAss
+      [\sFmla{\True}{\eq[s_2][s_3]}, just = \TAss
+        [\sFmla{\True}{\eq[s_1][s_3]}, just = {\TRule{\True}{\eq}[3, 2]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+ایس !!{tableau} وچ $\TRule{\True}{\eq}$ دا پہلا لازمی
+!!{formula} سطر~$3$ دا $\sFmla{\True}{\eq[s_2][s_3]}$ اے
+($s_2$،~$t_1$ دا کردار ادا کردا اے، تے $s_3$،~$t_2$ دا)۔
+دوجا لازمی فارمولا، جیہدا روپ~$\sFmla{\True}{!A(s_2)}$ اے،
+سطر~$2$ وچ اے۔ ایتھے $!A(x)$ نوں $\eq[s_1][x]$ سمجھو؛
+ایس طرح $!A(s_2)$، $\eq[s_1][s_2]$ بندا اے (یعنی سطر~$2$)
+تے $!A(s_3)$ نتیجے دا !!{formula}~$\eq[s_1][s_3]$ بندا اے۔
+\end{ex}
+
+\begin{prob}
+ہِٹھ دتیاں لئی بند !!{tableau}s بناؤ:
+\begin{enumerate}
+\item $\sFmla{\False}{\lforall[x][\lforall[y][((x = y \land !A(x))
+      \lif !A(y))]]}$
+\item $\sFmla{\False}{\lexists[x][(!A(x) \land
+    \lforall[y][(!A(y) \lif y = x)])]}$,\\
+  $\sFmla{\True}{\lexists[x][!A(x)] \land
+    \lforall[y][\lforall[z][((!A(y) \land !A(z)) \lif y = z)]]}$
+\end{enumerate}
+\end{prob}
+
+\end{document}

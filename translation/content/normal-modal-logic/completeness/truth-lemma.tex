@@ -1,0 +1,129 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: truth-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{tru}
+
+\olsection{سچائی دا معاون قضیہ}
+
+کینونیکل نمونہ~$\mModel{M^\Sigma}$ ایویں متعین اے کہ
+$\mSat{M^\Sigma}{!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں $!A \in \Delta$۔ !!{propositional
+variable}s لئی $V^\Sigma$ دی تعریف ایہ گل سدھی دیندی اے۔ پر سانوں پرکھنا اے کہ ایہ ہم ارزی سارے !!{formula}s لئی چلدی اے۔ اسیں ایہ استقرا نال کردے آں۔ استقرائی قدم وچ قضیاتی عاملاں والے !!{formula}s لئی ہم ارزی ثابت کرنی اے، جتھے سانوں \olref[ccs]{prop:ccs-properties} ورتنا پئے گا، تے امکانی عاملاں لئی وی، جتھے اسیں \olref[mod]{sec} دے نتیجے ورتاں گے۔
+
+\begin{prop}[سچائی دا معاون قضیہ]
+  \ollabel{prop:truthlemma}
+  ہر !!{formula}~$!A$ لئی $\mSat{M^\Sigma}{!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں
+  $!A \in \Delta$۔
+\end{prop}
+
+\begin{proof}
+  استقرا نال،~$!A$ اُتے۔
+  \begin{enumerate}
+    \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat/{M^\Sigma}{\lfalse}[\Delta]$،
+        \olref[syn][trw]{defn:mmodels} مطابق، تے $\lfalse \notin \Delta$،
+        \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lfalse} مطابق۔}}{}
+
+    \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M^\Sigma}{\ltrue}[\Delta]$،
+        \olref[syn][trw]{defn:mmodels} مطابق، تے $\ltrue \in \Delta$،
+        \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-ltrue} مطابق۔}}{}
+
+    \item \indcase{!A}{p}{$\mSat{M^\Sigma}{p}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\Delta \in
+      V^\Sigma(p)$، \olref[syn][trw]{defn:mmodels} مطابق۔ نالے $\Delta
+      \in V^\Sigma(p)$ اُدوں تے صرف اُدوں جدوں $p \in \Delta$،
+      تعریف مطابق~$V^\Sigma$ دی۔}
+
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}{%
+        \iftag{probNot}{مشق۔}{$\mSat{M^\Sigma}{\lnot !B}[\Delta]$
+          اُدوں تے صرف اُدوں جدوں $\mSat/{M^\Sigma}{!B}[\Delta]$
+          (\olref[syn][trw]{defn:mmodels} مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \notin \Delta$ (استقرائی مفروضے مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $\lnot !B \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot} مطابق)۔}}}{}
+
+    \tagitem{prvAnd}{\indcase{!A}{!B \land !C}{%
+        \iftag{probAnd}{مشق۔}{$\mSat{M^\Sigma}{!B \land
+            !C}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\mSat{M^\Sigma}{!B}[\Delta]$ تے
+          $\mSat{M^\Sigma}{!C}[\Delta]$ (\olref[syn][trw]{defn:mmodels} مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \in \Delta$ تے $!C
+          \in \Delta$ (استقرائی مفروضے مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \land !C \in
+          \Delta$ (\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-land} مطابق)۔}}}{}
+
+    \tagitem{prvOr}{\indcase{!A}{!B \lor !C}{%
+        \iftag{probOr}{مشق۔}{$\mSat{M^\Sigma}{!B \lor
+            !C}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\mSat{M^\Sigma}{!B}[\Delta]$ یا
+          $\mSat{M^\Sigma}{!C}[\Delta]$ (\olref[syn][trw]{defn:mmodels} مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \in \Delta$ یا $!C
+          \in \Delta$ (استقرائی مفروضے مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \lor !C \in
+          \Delta$ (\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lor} مطابق)۔}}}{}
+
+    \tagitem{prvIf}{\indcase{!A}{!B \lif !C}{%
+        \iftag{probIf}{مشق۔}{$\mSat{M^\Sigma}{!B \lif
+            !C}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M^\Sigma}{!B}[\Delta]$ یا
+          $\mSat{M^\Sigma}{!C}[\Delta]$ (\olref[syn][trw]{defn:mmodels} مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \notin \Delta$ یا
+          $!C \in \Delta$ (استقرائی مفروضے مطابق)، ایہ اُدوں تے صرف اُدوں جدوں $!B \lif !C
+          \in \Delta$ (\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lif} مطابق)۔}}}{}
+
+    \tagitem{prvIff}{\indcase{!A}{!B \liff !C}{%
+        \iftag{probIff}{مشق۔}{$\mSat{M^\Sigma}{!B \liff
+            !C}[\Delta]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M^\Sigma}{!B}[\Delta]$ تے
+          $\mSat{M^\Sigma}{!C}[\Delta]$ دونیں، یا
+          $\mSat/{M^\Sigma}{!B}[\Delta]$ تے
+          $\mSat/{M^\Sigma}{!C}[\Delta]$ دونیں (\olref[syn][trw]{defn:mmodels} مطابق)۔ ایہ اُدوں تے صرف اُدوں جدوں یا تاں $!B \in \Delta$
+          تے $!C \in \Delta$ دونیں، یا $!B \notin \Delta$ تے $!C \notin
+          \Delta$ دونیں (استقرائی مفروضے مطابق)۔ ایہ اُدوں تے صرف اُدوں جدوں $!B \liff !C \in
+          \Delta$ (\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-liff} مطابق)۔}}}{}
+
+    \tagitem{prvBox}{\indcase{!A}{\Box !B}{%
+        \iftag{probBox}{مشق۔}{پہلاں منّ لو
+          $\mSat{M^\Sigma}{\Box !B}[\Delta]$۔
+          \olref[syn][trw]{defn:mmodels} مطابق ہر ایسے $\Delta'$ لئی
+          جیہدے لئی $R^\Sigma \Delta\Delta'$،
+          $\mSat{M^\Sigma}{!B}[\Delta']$ اے۔ استقرائی مفروضے مطابق ہر ایسے
+          $\Delta'$ لئی جیہدے لئی $R^\Sigma \Delta\Delta'$، $!B \in
+          \Delta'$۔ $R^\Sigma$ دی تعریف مطابق ہر ایسے $\Delta'$ لئی
+          جیہدے لئی $\Box^{-1} \Delta \subseteq \Delta'$، $!B \in
+          \Delta'$۔ \olref[mod]{prop:box} مطابق $\Box !B \in
+          \Delta$۔
+
+          ہُن منّ لو $\Box !B \in \Delta$۔ کوئی ایسا $\Delta' \in W^\Sigma$
+          لے لو جیہدے لئی $R^\Sigma \Delta\Delta'$، یعنی $\Box^{-1}\Delta
+          \subseteq \Delta'$۔ کیوں جے $\Box !B \in \Delta$، ایس لئی $!B \in
+          \Box^{-1} \Delta$۔ سو $!B \in \Delta'$۔ استقرائی مفروضے مطابق
+          $\mSat{M^\Sigma}{!B}[\Delta']$۔ کیوں جے
+          $\Delta'$ کوئی وی ہو سکدا سی جیہدے لئی $R^\Sigma \Delta\Delta'$، ایس لئی
+          ہر ایسے $\Delta' \in W^\Sigma$ لئی جیہدے لئی $R^\Sigma
+          \Delta\Delta'$، $\mSat{M^\Sigma}{!B}[\Delta']$۔ \olref[syn][trw]{defn:mmodels} مطابق $\mSat{M^\Sigma}{\Box
+            !B}[\Delta]$۔}}}{}
+
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{%
+        \iftag{probDiamond}{مشق۔}{پہلاں منّ لو
+          $\mSat{M^\Sigma}{\Diamond !B}[\Delta]$۔
+          \olref[syn][trw]{defn:mmodels} مطابق کسے ایسے $\Delta'$ لئی جیہدے لئی
+          $R^\Sigma \Delta\Delta'$، $\mSat{M^\Sigma}{!B}[\Delta']$۔ استقرائی مفروضے مطابق کسے ایسے $\Delta'$ لئی جیہدے لئی
+          $R^\Sigma \Delta\Delta'$، $!B \in \Delta'$۔
+          $R^\Sigma$ دی تعریف مطابق،\iftag{prvBox}{ کسے ایسے $\Delta'$ لئی جیہدے لئی
+            $\Box^{-1} \Delta \subseteq \Delta'$، $!B \in \Delta'$۔
+            \olref[mod]{prop:diamond} مطابق،}{} کسے ایسے $\Delta'$ لئی جیہدے لئی
+          $\Diamond \Delta' \subseteq \Delta$، $!B \in
+          \Delta'$۔ کیوں جے $!B \in \Delta'$، ایس لئی $\Diamond !B \in \Diamond
+          \Delta'$، سو $\Diamond !B \in \Delta$۔
+
+          ہُن منّ لو $\Diamond !B \in \Delta$۔
+          \olref[mod]{prop:diamond} مطابق اک مکمل
+          $\Sigma$-بے تضاد $\Delta' \in W^\Sigma$ اے جیہدے لئی
+          $\Diamond \Delta' \subseteq \Delta$ تے $!B \in
+          \Delta'$۔\iftag{prvBox}{ \olref[mod]{lem:box-iff-diamond} مطابق،
+            ایسا $\Delta' \in W^\Sigma$ اے جیہدے لئی $\Box^{-1}
+            \Delta \subseteq \Delta'$ تے $!B \in \Delta'$۔}{} 
+          $R^\Sigma$ دی تعریف مطابق $R^\Sigma \Delta\Delta'$، سو
+          ایسا $\Delta' \in W^\Sigma$ اے جیہدے لئی $R^\Sigma
+          \Delta\Delta'$ تے $!B \in \Delta'$۔ \olref[syn][trw]{defn:mmodels} مطابق $\mSat{M^\Sigma}{\Diamond
+            !B}[\Delta]$۔}}}{}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probFalse,probTrue,probNot,proband,probOr,probIf,probIff,probBox,probDiamond}
+  \olref[nml][com][tru]{prop:truthlemma} دا ثبوت پورا کرو۔
+\end{probtag}
+
+\end{document}

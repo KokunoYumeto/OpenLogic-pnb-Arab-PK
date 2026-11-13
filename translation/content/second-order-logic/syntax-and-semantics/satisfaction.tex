@@ -1,0 +1,258 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: satisfaction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{syn}{sat}
+
+\olsection{پورا اترنا}
+
+\begin{explain}
+دوجے درجے دے !!{formula}s لئی پورا اترن دے
+تعلق~$\Sat{M}{!A}[s]$ دی تعریف کرن لئی اسیں
+دوجے درجے دے !!{variable}s نوں وی تعریف وچ
+شامل کرنا اے۔ دوجے درجے دی منطق وچ !!a{structure}
+دا تصور اوہی اے جو پہلے درجے دی منطق وچ اے۔
+فرق صرف متغیر قدر بندی~$s$ وچ اے۔ ہُن اوہ پہلے درجے دے
+!!{variable}s دے نال نال دوجے درجے دے !!{variable}s نوں وی
+قدراں دیندی اے۔
+\end{explain}
+
+\begin{defn}[متغیر قدر بندی]
+\emph{متغیر قدر بندی}~$s$، !!a{structure}~$\Struct{M}$
+لئی، اک فنکشن اے جیہڑا ہر
+\begin{enumerate}
+\item شے دے !!{variable}~$\Obj{v_i}$ نوں~$\Domain M$
+  دے اک عنصر ول بھیجدا اے؛ یعنی
+  $s(\Obj{v_i}) \in \Domain{M}$؛
+\item $n$-رکنی تعلقی متغیر~$\Obj{V_i^n}$ نوں
+  اک $n$-رکنی تعلق ول بھیجدا اے، جیہڑا
+  ~$\Domain{M}$ اُتے اے؛ یعنی
+  $s(\Obj{V_i^n}) \subseteq \Domain{M}^n$؛
+\item $n$-رکنی فنکشنی متغیر~$\Obj{u_i^n}$ نوں
+  اک $n$-رکنی فنکشن دیندا اے جیہڑا
+  $\Domain{M}$ دے ترتیب وار ٹپل نوں $\Domain{M}$ دا اک عنصر
+  دیندا اے۔ یعنی
+  $s(\Obj{u_i^n})\colon \Domain{M}^n \to \Domain{M}$؛
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+!!^a{structure} ہر !!{constant} تے !!{function}
+نوں !!a{value} دیندی اے، تے دوجے درجے دی
+متغیر قدر بندی ہر شے دے متغیر تے فنکشنی متغیر
+نوں اوسے ترتیب نال اک شے تے اک فنکشن دیندی اے۔ دوویں رل کے
+ہر ٹرم دی قدر متعین کرن دی اجازت دیندے نیں۔
+\end{explain}
+
+\begin{defn}[ٹرم دی \usetoken{S}{value}]
+جے $t$ زبان~$\Lang L$ دا ٹرم اے، $\Struct M$
+اُس~$\Lang L$ لئی !!a{structure} اے، تے $s$
+اُس~$\Struct M$ لئی !!a{variable} قدر بندی اے،
+تاں \emph{!!{value}}~$\Value{t}{M}[s]$ پہلے
+درجے دے ٹرماں وانگ تعریف ہوندی اے، نال ایہہ شق:
+\begin{quote}
+\indcase{t}{\Atom{u}{t_1, \ldots, t_n}}{
+\[
+\Value{\indfrm}{M}[s] = s(u)(\Value{t_1}{M}[s], \ldots,
+\Value{t_n}{M}[s]).
+\]}
+\end{quote}
+\end{defn}
+
+\begin{defn}[$x$-بدل قدر بندی]
+جے $s$، !!a{structure}~$\Struct M$ لئی
+!!a{variable} قدر بندی اے، تاں ہر اوہ
+!!{variable} قدر بندی~$s'$، جیہڑی~$\Struct M$
+لئی ہووے تے~$s$ توں ودھ توں ودھ~$x$ نوں دتی
+قدر وچ وکھری ہووے، اوہنوں~$s$ دی \emph{$x$-بدل قدر بندی}
+آکھدے آں۔
+جے $s'$، $x$ دے لحاظ نال~$s$ دی بدل قدر بندی اے، تاں
+$\varAssign{s'}{s}{x}$ لکھدے آں۔
+(دوجے درجے دے متغیراں $X$ یا $u$ لئی وی
+ایویں ہی۔)
+\end{defn}
+
+\begin{defn}
+  جے $s$، !!a{structure}~$\Struct M$ لئی
+  !!a{variable} قدر بندی اے تے $m \in \Domain{M}$،
+  تاں~$\Subst{s}{m}{x}$ اوہ !!{variable}
+  قدر بندی اے جیہڑی ایویں تعریف
+  ہوندی اے:
+  \[\Subst{s}{m}{y} = \begin{cases}
+    m & \text{جے } y \ident x\\
+    s(y) & \text{ہور صورت وچ},
+  \end{cases}\]
+  جے $X$ اک $n$-رکنی تعلقی !!{variable} اے تے $M \subseteq
+  \Domain{M}^n$، تاں $\Subst{s}{M}{X}$ !!{variable} قدر بندی
+  ایویں تعریف ہوندی اے:
+  \[\Subst{s}{M}{y} = \begin{cases}
+    M & \text{جے } y \ident X\\
+    s(y) & \text{ہور صورت وچ}.
+  \end{cases}\]
+  جے $u$ اک $n$-رکنی فنکشنی !!{variable} اے تے
+  $f\colon \Domain{M}^n
+  \to \Domain{M}$، تاں $\Subst{s}{f}{u}$ !!{variable} قدر بندی
+  ایویں تعریف ہوندی اے:
+  \[\Subst{s}{f}{y} = \begin{cases}
+    f & \text{جے } y \ident u\\
+    s(y) & \text{ہور صورت وچ}.
+  \end{cases}\]
+  ہر صورت وچ $y$ پہلے یا دوجے درجے دا کوئی وی
+  !!{variable} ہو سکدا اے۔
+\end{defn}
+
+\begin{defn}[پورا اترنا]
+دوجے درجے دے !!{formula}s~$!A$ لئی پورا اترن
+دی تعریف \olref[fol][syn][sat]{defn:satisfaction}
+ورگی اے، نال ایہہ شقّاں شامل نیں:
+\begin{enumerate}
+\item \indcase{!A}{\Atom{X^n}{t_1, \dots, t_n}}{$\Sat{M}{\indfrm}[s]$
+  اُدوں تے صرف اُدوں جدوں $\langle \Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s] \rangle \in
+  s(X^n)$۔}
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[X][!B]}{$\Sat{M}{\indfrm}[s]$ اُدوں تے صرف اُدوں جدوں ہر $M
+  \subseteq \Domain{M}^n$ لئی $\Sat{M}{!B}[\Subst{s}{M}{X}]$۔}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[X][!B]}{$\Sat{M}{\indfrm}[s]$ اُدوں تے صرف اُدوں جدوں
+  گھٹ توں گھٹ اک $M \subseteq \Domain{M}^n$ ایسا ہووے جیہدے لئی
+  $\Sat{M}{!B}[\Subst{s}{M}{X}]$۔}}{}
+
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[u][!B]}{$\Sat{M}{\indfrm}[s]$ اُدوں تے صرف اُدوں جدوں ہر
+  $f\colon \Domain{M}^n \to \Domain{M}$ لئی
+  $\Sat{M}{!B}[\Subst{s}{f}{u}]$۔}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[u][!B]}{$\Sat{M}{\indfrm}[s]$ اُدوں تے صرف اُدوں جدوں
+  گھٹ توں گھٹ اک $f\colon \Domain{M}^n \to \Domain{M}$ ایسا ہووے
+  جیہدے لئی $\Sat{M}{!B}[\Subst{s}{f}{u}]$۔}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+  !!{formula} $\lforall[z][(\Atom{X}{z} \liff \lnot
+    \Atom{Y}{z})]$ ویکھو۔ ایس وچ دوجے درجے دے
+  مسوّر کوئی نہیں، پر دوجے درجے دے !!{variable}s
+  $X$ تے~$Y$ موجود نیں (ایتھے دوناں نوں
+  اک-رکنی منّیا اے)۔ ایس دے مطابق پہلے درجے
+  دا !!{sentence}
+  $\lforall[z][(\Atom{P}{z} \liff \lnot \Atom{R}{z})]$
+  آکھدا اے کہ جو شے~$P$ دی تعبیر وچ آؤندی اے،
+  اوہ~$R$ دی تعبیر وچ نہیں آؤندی، تے اُلٹا وی۔
+  کسے !!a{structure} وچ !!a{predicate}~$P$
+  دی تعبیر~$\Assign{P}{M}$ نال دتی جاندی اے۔
+  پر $X$ تے~$Y$ ورگے دوجے درجے دے !!{variable}s
+  دی تعبیر !!{structure} خود نہیں، بلکہ
+  !!a{variable} قدر بندی دیندی اے۔ چونکہ دوجے
+  درجے دا !!{formula} کوئی !!a{sentence} نہیں
+  (ایس وچ آزاد !!{variable}s $X$ تے~$Y$ نیں)،
+  اس لئی ایہہ صرف !!a{structure}~$\Struct{M}$
+  تے نال !!a{variable} قدر بندی~$s$ دے لحاظ نال
+  پورا اتردا اے۔
+
+  $\Sat{M}{\lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})]}[s]$
+  اُدوں تے صرف اُدوں لاگو اے جدوں~$s(X)$ دے !!{element}s اوہو ہون
+  جیہڑے دائرے وچ~$s(Y)$ دے !!{element}s نہیں۔
+  یعنی اُدوں تے صرف اُدوں جدوں
+  $s(Y) = \Domain{M} \setminus s(X)$۔
+  مثال لئی $\Domain{M} = \{1, 2, 3\}$ لو۔
+  کیوں جے کوئی !!{predicate}s، !!{function}s
+  یا !!{constant}s شامل نہیں، اس لئی
+  ~$\Struct{M}$ دا دائرہ ہی متعلقہ اے۔
+  ہُن $s_1(X) = \{1, 2\}$ تے $s_1(Y) = \{3\}$
+  لئی $\Sat{M}{\lforall[z][(\Atom{X}{z}
+      \liff \lnot \Atom{Y}{z})]}[s_1]$۔
+
+  ایس دے اُلٹ، جے $s_2(X) = \{1, 2\}$ تے
+  $s_2(Y) = \{2, 3\}$ ہون، تاں
+  $\Sat/{M}{\lforall[z][(\Atom{X}{z} \liff \lnot
+      \Atom{Y}{z})]}[s_2]$۔ وجہ ایہہ اے کہ
+  $\Sat{M}{\Atom{X}{z}}[\Subst{s_2}{2}{z}]$
+  (کیوں جے $2 \in \Subst{s_2}{2}{z}(X)$)، پر
+  $\Sat/{M}{\lnot \Atom{Y}{z}}[\Subst{s_2}{2}{z}]$
+  (کیوں جے $2 \in
+  \Subst{s_2}{2}{z}(Y)$ وی)۔
+\end{ex}
+
+\begin{ex}
+  $\Sat{M}{\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+  \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]}[s]$
+  اُدوں ہوندا اے جدوں کوئی $N \subseteq \Domain{M}$
+  ایسا ہووے کہ
+  $\Sat{M}{(\lexists[y][\Atom{Y}{y}] \land \lforall[z][(\Atom{X}{z}
+  \liff \lnot \Atom{Y}{z})])}[\Subst{s}{N}{Y}]$۔
+  ایہہ اُنہاں صورتاں وچ ہوندا اے جدوں
+  $N \neq \emptyset$ ہووے (تاکہ
+  $\Sat{M}{\lexists[y][\Atom{Y}{y}]}[\Subst{s}{N}{Y}]$)
+  تے پچھلی مثال وانگ
+  $N = \Domain{M} \setminus s(X)$ وی ہووے۔
+  دوجے لفظاں وچ،
+  $\Sat{M}{\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+  \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]}[s]$
+  اُدوں تے صرف اُدوں جدوں
+  $\Domain{M} \setminus s(X)$ خالی نہ ہووے؛ یعنی
+  $s(X) \neq \Domain{M}$۔ سو مثال لئی !!{formula}
+  اُس ویلے پورا اتردا اے جدوں $\Domain{M}
+  = \{1, 2, 3\}$ تے $s(X) = \{1, 2\}$ ہون؛
+  پر اُس ویلے نہیں جدوں $s(X) = \{1, 2, 3\}
+  = \Domain{M}$ ہووے۔
+
+  چونکہ جے $s(X) = \Domain{M}$ ہووے تاں
+  !!{formula} پورا نہیں اتر دا، اس لئی
+  !!{sentence}
+  \[
+  \lforall[X][\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+      \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]]
+  \]
+  کدے پورا نہیں اتر دا: ہر !!{structure}~$\Struct{M}$
+  لئی اوہ قدر بندی جیہڑی
+  $s(X) = \Domain{M}$ رکھے، ایس !!{sentence}
+  نوں جھوٹا بنا دیندی اے۔ دوجے پاسے جملہ
+  \[
+  \lexists[X][\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+      \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]]
+  \]
+  ہر قدر بندی~$s$ دے لحاظ نال پورا اتردا اے،
+  کیوں جے اسیں ہمیشہ کوئی $M \subseteq \Domain{M}$
+  لبھ سکدے آں جیہڑا $M \neq \Domain{M}$ ہووے
+  (مثلاً $M = \emptyset$)۔
+\end{ex}
+
+\begin{ex}
+  دوجے درجے دا !!{sentence}~$\lforall[X][\lforall[y][X(y)]]$
+  آکھدا اے کہ ہر $1$-رکنی تعلق، یعنی ہر خاصیت،
+  ہر شے اُتے صادق اے۔ ایہہ ظاہر اے کہ ایہہ کدے
+  سچ نہیں: ہر~$\Struct{M}$ وچ اک متغیر قدر بندی~$s$
+  لئی، جیہڑی $s(X) = \emptyset$ تے
+  $s(y) = a \in \Domain{M}$ رکھے، ساڈے کول
+  $\Sat/{M}{X(y)}[s]$ اے۔ ایس دا مطلب اے کہ
+  $!A \lif \lforall[X][\lforall[y][X(y)]]$
+  دوجے درجے دی منطق وچ $\lnot !A$ دے ہم ارز اے۔
+  یعنی $\Sat{M}{!A \lif
+  \lforall[X][\lforall[y][X(y)]]}$ اُدوں تے صرف
+  اُدوں جدوں $\Sat{M}{\lnot !A}$۔
+  دوجے لفظاں وچ، دوجے درجے دی منطق وچ اسیں
+  $\lnot$ نوں $\lforall$ تے~$\lif$ نال
+  تعریف کر سکدے آں۔
+\end{ex}
+
+\begin{prob}
+  دِکھاؤ کہ دوجے درجے دی منطق وچ $\lforall$
+  تے~$\lif$ نال اسیں ہور رابطیاں دی تعریف کر سکدے آں:
+  \begin{enumerate}
+    \item ثابت کرو کہ دوجے درجے دی منطق وچ
+    $!A \land !B$،
+    $\lforall[X][(!A \lif (!B \lif \lforall[x][X(x)])\lif
+    \lforall[x][X(x)])]$ دے ہم ارز اے۔
+    \item صرف $\lforall$ تے $\lif$ ورت کے
+    $!A \lor !B$ دے ہم ارز دوجے درجے دا
+    اک فارمولا لبھو۔
+  \end{enumerate}
+\end{prob}
+
+\end{document}

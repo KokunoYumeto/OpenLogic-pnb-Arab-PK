@@ -1,0 +1,73 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{z}{pairs}
+\olsection{جوڑیاں}
+
+اگلا مسلّمہ جیہڑا ویکھنا اے، ایہ اے:
+
+\begin{axiom}[جوڑیاں]
+کسے وی دو سیٹاں $a, b$ لئی سیٹ $\{a, b\}$ موجود اے۔
+\[
+	\forall a \forall b \exists P \forall x (x \in P \liff (x = a \lor x = b))
+\]
+\end{axiom}
+
+مرحلہ وار تصور نال ایس مسلّمے دا جواز ایویں دیندے آں۔ منّ لو $a$
+مرحلے $S$ اُتے تے $b$ مرحلے $T$ اُتے موجود اے۔ منّ لو $M$، مرحلیاں
+$S$ تے $T$ وچوں جیہڑا پچھوں آؤندا اے، اوہ اے۔ چونکہ $a$ تے $b$ دونیں
+مرحلے $M$ اُتے موجود نیں، ایس لئی سیٹ $\{a,b\}$ اک ممکن اکٹھ اے جیہڑا
+$M$ توں پچھوں آؤن والے کسے وی مرحلے اُتے دستیاب اے (جیہڑا وی وڈا ہووے)۔
+
+پر ذرا ٹھہرو!{} اسیں کیوں منّیئے کہ $M$ توں پچھوں کوئی مرحلے
+\emph{موجود نیں}؟ جے کوئی نہیں تاں ساڈا جواز نہیں چلے گا۔ سو جوڑیاں دا
+جواز دین لئی سانوں \olref[sth][z][story]{sec} دے بیان وچ اک ہور
+اصول شامل کرنا پئے گا:
+\begin{enumerate}
+	\item[] \stagessucc۔ کوئی آخری مرحلہ نہیں۔
+\end{enumerate}
+کی ایس اصول دا جواز اے؟ شون فیلڈ دے بیان وچ ایہ گل \emph{صاف لفظاں وچ}
+نہیں کہی گئی سی کہ کوئی آخری مرحلہ نہیں۔ فیر وی، جے ایہ (ٹھیک ٹھیک
+آکھیے تاں) ساڈے بیان وچ اک وادھا اے، ایہ ایس بنیادی خیال نال میل کھاندا
+اے کہ سیٹ مرحلیاں وچ بندے نیں۔ اگے اسیں اینوں منّ لواں گے۔ سو جوڑیاں دا
+مسلّمہ وی منّ لواں گے۔
+
+ایس نویں مسلّمے نال اسیں کئی ہور سیٹاں دی موجودگی ثابت کر سکدے آں۔ مثلاً:
+
+\begin{prop}\ollabel{prop:pairsconsequences}
+کسے وی دو سیٹاں $a$ تے $b$ لئی ہِیٹھلے سیٹ موجود نیں:
+	\begin{enumerate}
+		\item\ollabel{singleton} $\{a\}$
+		\item\ollabel{binunion} $a \cup b$
+		\item\ollabel{tuples} $\tuple{a, b}$
+	\end{enumerate}
+\end{prop}
+
+\begin{proof}
+\olref{singleton}۔ جوڑیاں دے اصول نال $\{a, a\}$ موجود اے، تے عنصراں
+نال تعیّن دے اصول نال ایہ $\{a\}$ اے۔
+
+\olref{binunion}۔ جوڑیاں دے اصول نال $\{a, b\}$ موجود اے۔
+ہُن $a \cup b = \bigcup \{a, b\}$ اتحاد دے اصول نال موجود اے۔
+
+\olref{tuples}۔ \olref{singleton} نال $\{a\}$ موجود اے۔ جوڑیاں دے
+اصول نال $\{a, b\}$ موجود اے۔ ہُن $\{\{a\}, \{a, b\}\} = \tuple{a, b}$
+وی جوڑیاں دے اصول نال موجود اے۔
+\end{proof}
+
+\begin{prob}
+وکھاؤ کہ کسے وی سیٹاں $a, b, c$ لئی سیٹ $\{a, b, c\}$ موجود اے۔
+\end{prob}
+
+\begin{prob}
+وکھاؤ کہ کسے وی سیٹاں $a_1, \ldots, a_n$ لئی سیٹ $\{a_1, \ldots, a_n\}$
+موجود اے۔
+\end{prob}
+
+%\begin{proof} By two applications of Pairs, $\{\{a_1, a_2\}, \{a_1,
+%   a_3\}\}$ exists. By Union and Extensionality, $\bigcup \{\{a_1,
+%   a_2\}, \{a_1, a_3\}\} = \{a_1, a_2, a_3\}$ exists. Repeat this
+%   trick as often as necessary. \end{proof}
+
+\end{document}

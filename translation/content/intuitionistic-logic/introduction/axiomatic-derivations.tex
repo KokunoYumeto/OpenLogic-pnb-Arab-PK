@@ -1,0 +1,69 @@
+% part: intuitionistic-logic
+% chapter: introduction
+% section: axiomatic-derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{int}{axd}
+
+\olsection{مسلّمی \usetoken{P}{derivation}}
+
+وجدانیت پسند قضیاتی منطق لئی مسلّمی !!{derivation}s خیال دے لحاظ
+نال سبھ توں سادے تے تاریخ وچ سبھ توں پہلے !!{derivation} نظام نیں۔
+ایہ کلاسیکی قضیاتی منطق وانگ ای کم کردے نیں۔
+
+\begin{defn}[!!^{derivability}]
+جے $\Gamma$، $\Lang L$ دے !!{formula}s دا سیٹ اے، تاں $\Gamma$
+توں اک \emph{!!{derivation}}، اک محدود لڑی $!A_1$،
+\dots،~$!A_n$ اے جیہڑی !!{formula}s دی اے۔ ایس وچ ہر $i \le n$ لئی ہِیٹھلیاں وچوں اک
+گل لاگو اے:
+\begin{enumerate}
+\item $!A_i \in \Gamma$۔
+\item $!A_i$ اک مسلّمہ اے۔
+\item $!A_i$ کسے $!A_j$ تے $!A_k$ توں، جتھے $j < i$ تے $k <
+  i$، قاعدۂ اثباتِ مقدم نال نکلدا اے، یعنی $!A_k \ident !A_j \lif !A_i$۔
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[مسلّمے]
+وجدانیت پسند قضیاتی منطق دے \emph{مسلّمیاں} دے سیٹ $\PAx$ وچ ہِیٹھلیاں
+شکلاں والے سارے !!{formula}s شامل نیں:
+\begin{align}
+  & (!A \land !B) \lif !A \ollabel{ax:land1}\\
+  & (!A \land !B) \lif !B \ollabel{ax:land2}\\
+  & !A \lif (!B \lif (!A \land !B)) \ollabel{ax:land3}\\
+  & !A \lif (!A \lor !B) \ollabel{ax:lor1}\\
+  & !A \lif (!B \lor !A) \ollabel{ax:lor2}\\
+  & (!A \lif !C) \lif ((!B \lif !C) \lif ((!A \lor !B) \lif !C)) \ollabel{ax:lor3}\\
+  & !A \lif (!B \lif !A) \ollabel{ax:lif1}\\
+  & (!A \lif (!B \lif !C)) \lif ((!A \lif !B) \lif (!A \lif !C)) \ollabel{ax:lif2}\\
+  & \lfalse \lif !A \ollabel{ax:lfalse1}
+\end{align}
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+!!^a{formula}~$!A$، $\Gamma$ توں \emph{!!{derivable}} اے،
+$\Gamma \Proves !A$ لکھدے آں، جے !!a{derivation} ہووے جیہڑی
+$\Gamma$ توں $!A$ اُتے مکدی اے۔
+\end{defn}
+
+\begin{defn}[قضیے]
+!!^a{formula}~$!A$ اک \emph{قضیہ} اے جے !!a{derivation}~$!A$ دی
+خالی سیٹ توں ہووے۔ $\Proves !A$ لکھدے آں جے $!A$ قضیہ اے،
+تے $\Proves/ !A$ لکھدے آں جے نہیں۔
+\end{defn}
+
+\begin{prop}
+  جے وجدانیت پسند منطق دے مسلّمی !!{derivation} نظام وچ
+  $\Gamma \Proves !A$، تاں کلاسیکی منطق وچ وی $\Gamma \Proves !A$۔
+  خاص کر کے، جے $!A$ وجدانیت پسند قضیہ اے، تاں کلاسیکی قضیہ وی اے۔
+\end{prop}
+
+\begin{proof}
+  ہر وجدانیت پسند مسلّمہ کلاسیکی مسلّمہ وی اے۔ سو وجدانیت پسند منطق
+  دی ہر !!{derivation} کلاسیکی منطق وچ وی !!a{derivation} اے۔
+\end{proof}
+
+\end{document}

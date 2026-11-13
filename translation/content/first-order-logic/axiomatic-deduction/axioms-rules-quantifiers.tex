@@ -1,0 +1,36 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: axioms-rules-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{qua}
+
+\olsection{مسوّراں لئی مسلّمے تے قاعدے}
+
+\begin{defn}[مسوّراں لئی مسلّمے]
+مسوّراں اُتے لاگو \emph{مسلّمے} ہِٹھ دتے روپاں دیاں ساریاں مثالاں نیں:
+\begin{align}
+\ollabel{ax:q1} & \lforall[x][!B] \lif !B(t), \\
+\ollabel{ax:q2} & !B(t) \lif \lexists[x][!B].
+\end{align}
+کسے وی بند ٹرم~$t$ لئی۔
+\end{defn}
+
+\begin{defn}[مسوّراں لئی قاعدے]
+% PNBAXD-013: خاص مستقل تیار ہون والے مسوّری فارمولے وچ وی غیر حاضر ہووے،جیویں صحت مندی دے ثبوت وچ لازم اے۔
+\item جے $!B \lif !A(a)$ پہلے ای !!{derivation} وچ آ چکیا ہووے تے
+  $a$ نہ~$\Gamma$ وچ آؤندا ہووے، نہ~$!B$ وچ، تے نہ تیار ہون والے
+  مسوّری فارمولے وچ، تاں $!B \lif
+  \lforall[x][!A(x)]$ اک درست استنباطی قدم اے۔
+\item جے $!A(a) \lif !B$ پہلے ای !!{derivation} وچ آ چکیا ہووے تے
+  $a$ نہ~$\Gamma$ وچ آؤندا ہووے، نہ~$!B$ وچ، تے نہ تیار ہون والے
+  مسوّری فارمولے وچ، تاں $\lexists[x][!A(x)] \lif
+  !B$ اک درست استنباطی قدم اے۔
+\end{defn}
+
+اسیں ایہناں وچوں ہر اک قاعدے نوں مختصر کر کے ``\QR'' لکھاں گے۔
+
+\end{document}

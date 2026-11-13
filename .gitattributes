@@ -49,3 +49,12 @@ evidence/**/*.json -text whitespace=cr-at-eol
 # Frozen upstream sources are byte-addressed by SOURCE_MANIFEST.jsonl. Never
 # normalize their line endings in the Git object database.
 upstream/** -text
+
+open-logic-pnb-*.tex -text
+reader/cumulative*.tex -text
+reader/placement.json -text
+reader/source-manifest.jsonl -text
+reader/diagrams/** -text
+tools/build_cumulative_* -text
+tools/web/** -text
+translation/pnb-morphology.sty -text

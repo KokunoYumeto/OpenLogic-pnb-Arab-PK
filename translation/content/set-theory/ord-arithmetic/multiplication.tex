@@ -1,0 +1,90 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{mult}
+
+\olsection{ترتیبی ضرب}
+
+ہُن اسیں ترتیبی ضرب ول آؤندے آں۔ ایہنوں تقریباً ترتیبی جوڑ وانگ سمجھاں گے۔ سو منّ لو اسیں $\alpha$ نوں~$\beta$ نال ضرب دینا چاہندے آں۔ ایس لئی اک مستطیل جال دی کلپنا کرو، جیہدی چوڑائی $\alpha$ تے اُچائی $\beta$ اے۔ $\alpha$ تے $\beta$ دا حاصلِ ضرب ایویں ملدا اے کہ اک قطار دے سرے توں دوجے سرے تک لنگھو، فیر اگلی قطار وچ ایویں ای لنگھو\ldots جدوں تک سارے جال وچوں نہ لنگھ جاؤ۔ دوجے لفظاں وچ، $\alpha$ تے $\beta$ دا حاصلِ ضرب $\beta$ دے \emph{ہر} رکن دی تھاں $\alpha$ دی اک نقل رکھن نال بندا اے۔
+
+اینوں رسمی صورت دین لئی اسیں $\alpha$ تے $\beta$ دے کارتیسی حاصلِ ضرب اُتے اُلٹی لغتی ترتیب ورتدے آں۔
+
+\begin{defn}
+کسے وی ترتیبی عدداں $\alpha, \beta$ لئی اوہناں دا حاصلِ ضرب $\alpha \ordtimes \beta = \ordtype{\alpha \times \beta, \rlexless}$ اے۔
+\end{defn}
+\noindent
+اسیں فیر تصدیق کرنی اے کہ ایہ تعریف ٹھیک بنی اے۔
+
+\begin{lem}\ollabel{ordtimeslessiswo}
+$\tuple{\alpha \times \beta, \rlexless}$ حُسنِ ترتیب والی ساخت اے، کسے وی ترتیبی عدداں $\alpha$ تے $\beta$ لئی۔
+\end{lem}
+
+\begin{proof}
+این اویویں جیویں \olref[add]{ordsumlessiswo} لئی۔
+\end{proof}
+\noindent
+تے ایہ ثابت کرنا اوکھا نہیں کہ ضرب ایس طرح چل دی اے۔
+
+\begin{lem}\ollabel{ordtimesrecursion}
+کسے وی ترتیبی عدداں $\alpha, \beta$ لئی:
+\begin{align*}
+	\alpha \ordtimes 0 &= 0\\
+	\alpha \ordtimes (\beta \ordplus 1) &=
+		(\alpha \ordtimes \beta) \ordplus \alpha\\
+	\alpha  \ordtimes \beta &=
+		\supstrict_{\delta < \beta}(\alpha \ordtimes \delta) &&
+		\text{جدوں $\beta$ حدّی ترتیبی عدد اے}.
+\end{align*}
+\end{lem}
+
+\begin{proof}
+مشق لئی چھڈیا اے۔
+\end{proof}
+
+جوڑ وانگ ای، اسیں سِدھی تعریف دین دی تھاں ترتیبی ضرب دی تعریف ایہناں بازگشتی مساواتاں نال وی کر سکدے ساں۔ تے جوڑ وانگ ای، ضرب وچ وی کجھ جانیاں پچھانیاں خاصیتاں نیں۔
+
+\begin{lem}\ollabel{ordinalmultiplicationisnice}
+جے $\alpha, \beta, \gamma$ ترتیبی عدد نیں، تاں:
+\begin{enumerate}
+	\item\ollabel{ordtimes1} جے $\alpha \neq 0$ تے $\beta < \gamma$،
+	تاں $\alpha \ordtimes \beta < \alpha \ordtimes \gamma$۔
+	\item\ollabel{ordtimes2} جے $\alpha \neq 0$ تے $\alpha \ordtimes
+	\beta = \alpha\ordtimes\gamma$، تاں $\beta = \gamma$۔
+	\item\ollabel{ordtimes3}  $\alpha \ordtimes (\beta \ordtimes
+	\gamma) = (\alpha \ordtimes \beta) \ordtimes \gamma$۔
+	\item\ollabel{ordtimes4} جے $\alpha \leq \beta$، تاں $\alpha
+	\ordtimes \gamma \leq \beta \ordtimes \gamma$۔
+	\item\ollabel{ordtimes5}  $\alpha \ordtimes (\beta \ordplus
+	\gamma) = (\alpha \ordtimes \beta )\ordplus (\alpha\ordtimes
+	\gamma)$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+مشق لئی چھڈیا اے۔
+\end{proof}
+
+تسی جِنّے چاہو ہور نتیجے ثابت کر سکدے او (یا لبھ کے پڑھ سکدے او)۔ پر \olref[ord-arithmetic][add]{ordsumnotcommute} نوں چیتے رکھو، تاں ہِیٹھلی گل اُتے حیرانی نہیں ہونی چاہیدی۔
+
+\begin{prop}
+ترتیبی ضرب تبادلی نہیں اے۔ $2 \ordtimes \omega  =
+\omega < \omega \ordtimes 2$
+\end{prop}
+
+\begin{proof}
+$2 \ordtimes \omega = \supstrict_{n < \omega}(2\ordtimes  n) = \omega \in \supstrict_{n < \omega}(\omega \ordplus n) = \omega \ordplus \omega = \omega \ordtimes 2$۔
+\end{proof}
+\noindent
+ایہدی سہج سمجھ والی وجہ فیر بڑی سِدھی اے۔ $2
+\ordtimes \omega$ کڈھن لئی ہر قدرتی عدد دی تھاں دو شےواں رکھو۔ جے تسی قدرتی عدداں وچ سارے «ادھ» والے عدد پا دیو، یعنی $\Setabs{\nicefrac{n}{2}}{n \in \omega}$ اُتے قدرتی ترتیب ویکھو، تاں اوہو ترتیب دی قسم ملے گی۔ ایویں آکھیاں صاف اے کہ ترتیب دی قسم آپ $\omega$ دی ترتیب دی قسم ورگی اے۔ پر $\omega \ordtimes 2$ کڈھن لئی $\omega$ دیاں دو نقلاں اک دوجی دے پچھوں رکھو۔
+
+\begin{prob}
+\olref[sth][ord-arithmetic][mult]{ordtimeslessiswo}،
+\olref[sth][ord-arithmetic][mult]{ordtimesrecursion}،
+تے
+\olref[sth][ord-arithmetic][mult]{ordinalmultiplicationisnice}
+ثابت کرو۔
+\end{prob}
+
+\end{document}

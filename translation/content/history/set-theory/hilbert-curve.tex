@@ -1,0 +1,100 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{his}{set}{hilbertcurve}
+
+\olsection{ضمیمہ۔ ہلبرٹ دیاں ساری تھاں بھرن والیاں منحنیواں}
+
+باب \olref[pathology]{sec} وچ اسیں دسیا سی کہ کانتور دے ایس ثبوت توں پچھوں کہ اک لکیر تے اک مربع وچ نقطیاں دی گنتی عین اِکّو اے (\olref[his][set][cantorplane]{thm:cantorplane})، پیانو نے پُچھیا کہ کی کوئی ایہو جیہی \emph{منحنی} ہو سکدی اے جیہڑی ساری تھاں بھر دے۔ 1890 وچ اوہنوں ہاں وچ جواب ملیا۔ ایس حصے وچ اسیں سمجھاؤنے آں کہ ہلبرٹ دی ساری تھاں بھرن والی منحنی کِویں بنائی جاندی اے۔ بیان موٹا جیہا اے تے اُساری وچ اک ذرا جیہی تبدیلی اے۔\footnote{ہور دقیق بیان لئی \cite{Rose2010} ویکھو۔ تبدیلی بس تھلّے دتیاں منحنیواں دے لال حصے شامل کرنا اے۔ ایس نال ایہ پرکھنا ذرا سوکھا ہو جاندا اے کہ منحنی مسلسل اے۔}
+
+سانوں فنکشن $h$ نوں فنکشاں دی لڑی $h_1$، $h_2$، $h_3$، \dots\@ دی حد وجوں تعریف کرنا اے۔ اسیں پہلاں اُساری دساں گے۔ فیر وکھاواں گے کہ ایہ ساری تھاں بھر دی اے۔ فیر وکھاواں گے کہ ایہ اک منحنی اے۔
+
+اسیں $h$ دا حاصل سیٹ اکائی مربع $\unitsquare$ منّاں گے۔ $h$ دا پہلا اندازہ، یعنی $h_1$، ایہ اے:
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 40pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[oldiagcolorC, thick] (20pt, 0)--(20pt, 20pt);
+	\draw[oldiagcolorC, thick] (60pt, 0)--(60pt, 20pt);		
+	\begin{scope}[xshift=20pt, yshift=20pt]
+	\draw [black, thick, l-system={Hilbert curve, step=40pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+ہر حصے دا پتا رکھن لئی اسیں مربع اُتے $2 \times 2$ دی جالی پائی اے۔ اسیں سوچ سکدے آں کہ منحنی تھلّے کھبّے والے چوتھائی حصے توں شروع ہوندی اے، فیر اُتّے کھبّے، فیر اُتّے سجّے تے آخر تھلّے سجّے جاندی اے۔ اُساری دا دوجا پڑا، یعنی $h_2$، ایہ اے:
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 20pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[oldiagcolorC, thick] (0pt, 10pt)--(10pt, 10pt);
+	\draw[oldiagcolorC, thick] (70pt, 10pt)--(80pt, 10pt);
+	\draw[thick, oldiagcolorE] (10pt, 30pt)--(10pt, 50pt); 
+	\draw[thick, oldiagcolorE] (30pt, 50pt)--(50pt, 50pt); 
+	\draw[thick, oldiagcolorE] (70pt, 50pt)--(70pt, 30pt); \begin{scope}[xshift=10pt, yshift=30pt]
+	\draw [thick, rotate=270,black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=10pt, yshift=50pt]
+	\draw [thick, black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=50pt, yshift=50pt]
+	\draw [thick, black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=70pt, yshift=10pt]
+	\draw [thick, rotate=90,black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+وکھ وکھ رنگاں توں ایہ سمجھن وچ مدد ملدی اے کہ $h_2$ کِویں بنیا۔ اسیں پہلاں $h_1$ دے اوہ حصے دیاں چھوٹیاں کیتیاں نکلاں، جیہڑا !!{colorC} رنگ دا نہیں، مربع دے تھلّے کھبّے، اُتّے کھبّے، اُتّے سجّے تے تھلّے سجّے رکھدے آں (ایہ کالے رنگ وچ نیں)۔ فیر ایہناں چار شکلاں نوں جوڑدے آں (!!{colorE} لکیراں نال)۔ آخر اپنی شکل نوں مربع دی باہری حد نال جوڑدے آں (!!{colorC} لکیراں نال)۔
+
+ہُن $h_3$ ول آؤ۔ جیویں $h_2$، $h_1$ دے لال توں چھُٹ باقی حصے دیاں چار چھوٹیاں کیتیاں تے جوڑیاں نکلاں توں بنیا، اویویں $h_3$، $h_2$ دے لال توں چھُٹ باقی حصے دیاں چار چھوٹیاں کیتیاں نکلاں توں بندا اے (کالے رنگ وچ)۔ اوہناں نوں اک دوجے نال جوڑدے آں (!!{colorE} لکیراں نال) تے آخر مربع دی باہری حد نال جوڑدے آں (!!{colorC} لکیراں نال)۔
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 10pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[thick, oldiagcolorC](5pt, 0pt)--(5pt, 5pt); 
+	\draw[thick, oldiagcolorC] (75pt, 0pt)--(75pt, 5pt); 
+	\draw[thick, oldiagcolorE] (75pt, 45pt)--(75pt, 35pt);
+	\draw[thick, oldiagcolorE] (5pt, 35pt)--(5pt, 45pt); 
+	\draw[thick, oldiagcolorE] (35pt, 45pt)--(45pt, 45pt); 
+	\draw[thick, oldiagcolorE] (75pt, 45pt)--(75pt, 35pt); \begin{scope}[xshift=5pt, yshift=35pt]
+	\draw [rotate=270, thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=5pt, yshift=45pt]
+	\draw [thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=45pt, yshift=45pt]
+	\draw [thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=75pt, yshift=5pt]
+	\draw [thick, rotate=90,black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+ہُن سانوں عام ڈھنگ دِسدا اے، جیہدے نال $h_{n+1}$ دی تعریف $h_n$ توں ہوندی اے۔ آخر اسیں \emph{آپ} منحنی $h$ دی تعریف کردے آں۔ ایہدے لئی وارو واری آؤن والے فنکشاں $h_1$، $h_2$، \dots\@ دی ہر نقطے اُتے حد لینے آں۔ یعنی ہر $x \in \unitsquare$ لئی:
+\begin{align*}
+	h(x) &= \lim_{n \rightarrow \infty} h_n(x)
+\end{align*}
+ہُن اسیں وکھاؤنے آں کہ ایہ منحنی ساری تھاں بھر دی اے۔ جدوں اسیں منحنی $h_n$ کھچدے آں، اسیں $2^n \times 2^n$ دی جالی $\unitsquare$ اُتے پاؤنے آں۔ فیثاغورث دے قضیے مطابق جالی دے ہر خانے دے قطر دی لمبائی ایہ اے:
+\[
+\sqrt{\left(\nicefrac{1}{2^{n}}\right)^2+\left(\nicefrac{1}{2^{n}}\right)^2} = 2^{(\frac{1}{2}-n)}
+\]
+تے صاف اے کہ $h_n$ جالی دے ہر خانے وچوں لنگھدا اے۔ سو $\unitsquare$ دا ہر نقطہ $2^{(\frac{1}{2}-n)}$ دی دُوری دے \emph{اندر} اے، $h_n$ دے کسے نہ کسے نقطے توں۔ ہُن $h$ دی تعریف فنکشاں دی لڑی $h_1$، $h_2$، $h_3$، \dots\@ دی حد وجوں کیتی گئی اے۔ سو کسے وی نقطے دی $h$ توں ودھ توں ودھ دُوری ایہ اے:
+\[
+\lim_{n \rightarrow \infty} 2^{(\frac{1}{2}-n)} = 0.
+\]
+یعنی $\unitsquare$ دا ہر نقطہ $0$ دُور اے~$h$ توں۔ دوجے لفظاں وچ، $\unitsquare$ دا ہر نقطہ منحنی \emph{اُتے} اے۔ سو $h$ ساری تھاں بھر دی اے!{}
+
+ہُن ایہ وکھاؤنا باقی اے کہ $h$ سچ مُچ اک \emph{منحنی} اے۔ ایس لئی سانوں منحنی دی تعریف دینی پئے گی۔ اج دی تعریف اوس تعریف اُتے ٹِکی اے جیہڑی ژوردان نے 1887 وچ دِتّی سی (یعنی پہلی ساری تھاں بھرن والی منحنی توں بس کجھ سال پہلاں)۔
+
+\begin{defn}
+منحنی $\unitline$ توں $\Real^2$ ول اک مسلسل نقشہ بندی اے۔
+\end{defn}
+
+ایہ گل عام سہج سمجھ نال کافی صاف اے۔ ایس سمجھ مطابق منحنی اک «ہموار» نقشہ بندی اے جیہڑی اک معیاری لکیر نوں مستوی $\Real^2$ اُتے لیاندی اے۔ ساڈا فنکشن $h$ سچ مُچ $\unitline$ توں $\Real^2$ ول اک نقشہ بندی اے۔ سو سانوں بس وکھاؤنا اے کہ $h$ مسلسل اے۔ اسیں \olref[limits]{sec} وچ $\epsilon$/$\delta$ والی لکھت نال تسلسل دی تعریف دِتّی سی۔ عام بولی وچ اسیں ایہ ثابت کرنا چاہندے آں: \emph{جے تسی اک نقطہ $p$، $\unitsquare$ وچ، تے اپنی مرضی دی درستی $\epsilon$ دسو، تاں اسیں $\unitline$ دا اک کھُلّا حصہ لبھ سکدے آں، ایویں کہ اوس کھُلّے حصے دے کسے وی $x$ لئی $h(x)$ دی دُوری $\epsilon$ دے اندر ہووے، $p$ توں۔}
+
+سو فرض کرو کہ تسی $p$ تے $\epsilon$ دس دِتّے نیں۔ ایہ اصل وچ $p$ مرکز تے $\epsilon$ نیم قطر والا دائرہ $\unitsquare$ اُتے کھچن دے برابر اے۔ (دائرہ $\unitsquare$ دی حد توں باہر وی جا سکدا اے، پر ایہدے نال کوئی فرق نہیں پیندا۔) ہُن چیتے کرو کہ فنکشن $h_n$ دا بیان کردیاں اسیں $2^n \times 2^n$ دی جالی $\unitsquare$ اُتے کھچّی سی۔ صاف اے کہ $\epsilon$ جِنّا وی چھوٹا ہووے، کوئی $n$ ایہو جیہا اے کہ $2^n \times 2^n$ دی جالی دا اک خانہ، جیہڑی $\unitsquare$ اُتے اے، $p$ مرکز تے $\epsilon$ نیم قطر والے دائرے دے اندر پورے دا پورا آ جاندا اے۔
+
+سو اوہ $n$ لو تے $I$، $\unitline$ دا سبھ توں وڈا کھُلّا حصہ ہووے، جیہنوں $h_n$ پورے دا پورا جالی دے اوس خانے اندر بھیجدا اے۔ (صاف اے کہ $(a,b)$ موجود اے، کیوں جے اسیں پہلاں ای ویکھیا کہ $h_n$، $2^n\times 2^n$ دی جالی دے ہر خانے وچوں لنگھدا اے۔) ہُن اینا وکھاؤنا کافی اے کہ جدوں وی $x \in I$ ہووے، نقطہ $h(x)$ جالی دے اوسے خانے وچ اے۔ تے \emph{ایہ} وکھاؤن لئی اینا کافی اے کہ $h_m(x)$ اوسے خانے وچ اے، ہر $m > n$ لئی۔ پر ایہ صاف اے۔ جے اسیں ویکھیے کہ $h_m$ نال کیہ ہوندا اے، $m > n$ لئی، تاں دِسدا اے کہ اکائی وقفے دا عین «اوہی حصہ» اوسے خانے وچ بھیجیا جاندا اے۔ اسیں بس اوہنوں اوس خانے وچ ہور ودھ کھچ کے تے ہور ودھ ول دے کے بھیجنے آں۔
+
+\end{document}

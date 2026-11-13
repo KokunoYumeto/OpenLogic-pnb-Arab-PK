@@ -1,0 +1,74 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: entailment
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{ent}
+
+\olsection{منطقی نتیجہ}
+
+\begin{explain}
+  جہان وچ سچائی دی تعریف نال اسیں !!{formula}s دے وچ منطقی نتیجے دا تعلق متعین کر سکدے آں۔ !!^a{formula}~$!B$ توں~$!A$ منطقی نتیجے وجوں نکلدا اے اُدوں تے صرف اُدوں جدوں $!B$ دے سچا ہون نال $!A$ وی سچا ہووے۔ ایتھے «جدوں» دا مطلب اے کہ نمونہ کوئی وی ہووے تے اوس نمونے وچ جہان وی کوئی وی ہووے۔
+\end{explain}
+
+\begin{defn}
+  جے $\Gamma$، !!{formula}s دا سیٹ اے تے $!A$، !!a{formula} اے، تاں $\Gamma$ توں~$!A$ \emph{منطقی نتیجے وجوں نکلدا اے}، علامتاں وچ $\Gamma \Entails !A$، اُدوں تے صرف اُدوں جدوں ہر نمونے $\mModel{M} = \tuple{W, R, V}$ تے ہر جہان
+  $w \in W$ لئی، جے $\mSat{M}{!B}[w]$ ہر $!B \in \Gamma$ لئی ہووے، تاں
+  $\mSat{M}{!A}[w]$۔ جے $\Gamma$ وچ صرف اک !!{formula}~$!B$ اے، تاں اسیں $!B \Entails !A$ لکھدے آں۔
+\end{defn}
+
+\begin{ex}
+  ایہ وکھاؤن لئی کہ اک !!a{formula} توں دوجا منطقی نتیجے وجوں نکلدا اے، سانوں سارے نمونیاں بارے $\mSat{M}{}[w]$ دی تعریف ورت کے دلیل دینی پیندی اے۔ مثال لئی
+  $p \lif \Diamond p \Entails \Box\lnot p \lif \lnot p$ وکھاؤن لئی اسیں ایویں دلیل دے سکدے آں۔ اک نمونہ $\mModel{M} = \tuple{W, R,
+    V}$ تے $w \in W$ لے لو تے منّ لو $\mSat{M}{p \lif \Diamond
+    p}[w]$۔ سانوں $\mSat{M}{\Box\lnot p \lif \lnot
+    p}[w]$ وکھاؤنا اے۔ منّ لو ایہ گل نہیں۔ فیر $\mSat{M}{\Box\lnot p}[w]$ تے
+  $\mSat/{M}{\lnot p}[w]$۔ کیوں جے $\mSat/{M}{\lnot p}[w]$، ایس لئی $\mSat{M}{
+    p}[w]$۔ مفروضے مطابق $\mSat{M}{p \lif \Diamond p}[w]$، ایس لئی
+  $\mSat{M}{\Diamond p}[w]$۔ $\mSat{M}{\Diamond
+    p}[w]$ دی تعریف مطابق کوئی ایسا $w'$ اے جیہدے لئی $Rww'$ ہووے تے
+  $\mSat{M}{p}[w']$ ہووے۔ کیوں جے $\mSat{M}{\Box \lnot p}[w]$ وی اے، ایس لئی
+  $\mSat{M}{\lnot p}[w']$۔ ایہ تضاد اے۔
+
+  ایہ وکھاؤن لئی کہ کسے !!a{formula}~$!B$ توں دوجا فارمولا~$!A$ منطقی نتیجے وجوں نہیں نکلدا، سانوں اک ردّی مثال دینی پیندی اے۔ یعنی اک ایسا نمونہ $\mModel{M} = \tuple{W, R,
+    V}$ دیندے آں جیہدے کسے جہان~$w \in W$ وچ $\mSat{M}{!B}[w]$ ہووے
+  پر $\mSat/{M}{!A}[w]$۔ وکھائیے کہ $p \lif \Diamond p \Entails/
+  \Box p \lif p$۔ \olref{fig:counterex} والا نمونہ ویکھو۔
+  $\mSat{M}{\Diamond p}[w_1]$، ایس لئی $\mSat{M}{p \lif
+    \Diamond p}[w_1]$۔ پر کیوں جے $\mSat{M}{\Box p}[w_1]$ تے
+  $\mSat/{M}{p}[w_1]$، ایس لئی $\mSat/{M}{\Box p \lif p}[w_1]$۔
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label=right:\mFalse{p}]{$w_1$}; 
+      \node[world] (w2) [label=right:\mTrue{p}, above left=of w1]{$w_2$}; 
+      \node[world] (w3) [label=right:\mTrue{p}, above right=of w1] {$w_3$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$p \lif \Diamond p
+  \Entails \Box p \lif p$ دی ردّی مثال۔}
+  \ollabel{fig:counterex}
+  \end{figure}
+
+  اکثر بڑی سادی ردّی مثال وی کافی ہوندی اے۔ نمونہ $\mModel{M'} =
+  \{W', R', V'\}$، جیہدے وچ $W' = \{w\}$، $R' = \emptyset$ تے $V'(p) =
+  \emptyset$ اے، وی اک ردّی مثال اے۔ کیوں جے $\mSat/{M'}{p}[w]$،
+  ایس لئی $\mSat{M'}{p \lif \Diamond p}[w]$۔ کیوں جے کوئی جہان رسائی وچ نہیں~$w$ توں، ایس لئی $\mSat{M'}{\Box p}[w]$، تے فیر $\mSat/{M'}{\Box p
+    \lif p}[w]$۔
+\end{ex}
+
+\begin{prob}
+  وکھاؤ کہ $\Box (!A \land !B) \Entails \Box !A$۔
+\end{prob}
+
+\begin{prob}
+  وکھاؤ کہ $\Box (p \lif q) \Entails/ p \lif \Box q$ تے $p \lif \Box
+  q \Entails/\Box (p \lif q)$۔
+\end{prob}
+
+\end{document}

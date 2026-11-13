@@ -1,0 +1,140 @@
+% Part: intuitionistic-logic
+% Chapter: tableaux
+% Section: rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{tab}{rul}
+
+\olsection{وجدانیت پسند منطق دے قاعدے}
+
+$\land$ تے $\lor$ دے قاعدے اوہو نیں جیہڑے عام قضیاتی نشان والے
+!!{tableau}s وچ نیں۔ بس اگیتے شامل نیں۔ ہر صورت وچ نشان والے !!{formula}
+$\sFmla{S}{!A}[\sigma]$ اُتے قاعدہ لاؤن نال نویں !!{formula}s ملدے نیں
+جیہناں دا اگیتا وی~$\sigma$ اے۔ ایہ گل سوکھی سمجھ آندی اے۔ مثلاً جے
+$!A \land !B$،~$\sigma$ ناں والے جہان اُتے سچ اے، تاں $!A$ تے $!B$
+~$\sigma$ اُتے سچ نیں (تے کسے ہور جہان اُتے نہیں)۔ $\land$ تے $\lor$
+دے قاعدے \olref{tab:prop-rules} وچ اکٹھے کیتے نیں۔
+
+\begin{table}
+  \[\def\arraystretch{3}\begin{array}{|c|c|}
+    \hline
+    \AxiomC{\sFmla{\True}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\land}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\True}{!B}[\sigma]}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\land}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\False}{!B}[\sigma]$}
+    \DisplayProof
+    \\[2ex]
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lor}}
+    \UnaryInfC{$\sFmla{\True}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\True}{!B}[\sigma]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lor}}
+    \UnaryInfC{\sFmla{\False}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma]}
+    \DisplayProof
+    \\[2ex]
+    \hline
+  \end{array}\]
+  \caption{اگیتے والے !!{tableau} دے قاعدے $\land$ تے $\lor$ لئی}
+  \ollabel{tab:prop-rules}
+\end{table}
+
+ٹہنی بند ہون دی شرط عام !!{tableau}s ورگی اے، پر ایتھے !!{formula}s دے
+نال اگیتیاں دا میل وی چاہیدا اے۔ اصل وچ شرط کجھ کھُلّی ہو سکدی اے۔
+وجدانیت پسند نمونیاں وچ !!{formula}s اک واری سچ ہو جان، تاں سچ رہندے نیں۔
+ایس لئی ایہ ممکن نہیں کہ $!A$،~$\sigma$ اُتے سچ پر کسے رسائی والے اگیتے
+~$\sigma.{*}$ اُتے جھوٹ ہووے۔ سو ٹہنی بند اے جے اوہدے وچ دونیں ہون:
+\[
+\sFmla{\True}{!A}[\sigma] \quad\text{ تے }\quad \sFmla{\False}{!A}[\sigma.{*}]
+\]
+کسے اگیتے $\sigma$ تے !!{formula}~$!A$ لئی۔ دھیان دیو، جے نشان اُلٹ ہون،
+یعنی ٹہنی وچ
+\[
+\sFmla{\False}{!A}[\sigma] \quad\text{ تے }\quad \sFmla{\True}{!A}[\sigma.{*}]
+\]
+ہون، تاں ٹہنی صرف اوہدوں بند اے جدوں $*$ خالی لڑی اے۔
+
+ٹہنی اوہدوں وی بند اے جدوں اوہدے وچ~$\sFmla{\True}{\bot}[\sigma]$ ہووے۔
+
+مفروضے قائم کرن دے قاعدے وی عام !!{tableau}s والے ای نیں، فرق ایہ اے کہ
+مفروضیاں لئی اسیں ہمیشہ اگیتا~$1$ ورتدے آں۔ (کیہڑا اگیتا ورتنا اے، ایس نال
+فرق نہیں پیندا، بس سارے مفروضیاں دا اگیتا اکّو ہووے۔) سو مثلاً اسیں آکھدے آں کہ
+\[
+!B_1, \dots, !B_n \Proves !A
+\]
+اُدوں تے صرف اُدوں اے جدوں ہِیٹھلے مفروضیاں دا اک بند ٹیبلو ہووے:
+\[
+\sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1],
+\sFmla{\False}{!A}[1].
+\]
+
+شرطیے~$\lif$ لئی قاعدے کلاسیکی تے امکانی صورتاں توں وکھرے نیں۔
+قاعدہ $\TRule{\lif}{\True}$، $\sFmla{\True}{!A \lif !B}[\sigma]$ والی ٹہنی
+نوں دو وکھریاں ٹہنیاں اُتے $\sFmla{\True}{!A}[\sigma.{*}]$ تے
+$\sFmla{\False}{!B}[\sigma.{*}]$ پا کے ودھاندا اے۔ ایہ قاعدہ صرف اوہ
+اگیتا~$\sigma.{*}$ ورت کے لا سکدے آں جیہڑا قاعدہ لاؤن والی ٹہنی اُتے
+\emph{پہلاں ای} آ چکیا ہووے۔ ایہو جیہے اگیتے نوں (ٹہنی اُتے) ’ورتیا ہویا‘
+آکھیے۔ (چونکہ $\sigma.{*}$ وچ خود $\sigma$ شامل اے، ایس لئی ایہ قاعدہ
+اگیتے والے نشان لائے فارمولے $\sFmla{\True}{!A}[\sigma]$ تے
+$\sFmla{\False}{!B}[\sigma]$ وکھریاں ٹہنیاں اُتے پا کے ہمیشہ لایا جا سکدا اے۔)
+
+قاعدہ $\TRule{\lif}{\False}$، $\sFmla{\False}{!A \lif !B}[\sigma]$ والی
+ٹہنی نوں $\sFmla{\True}{!A}[\sigma.n]$ تے $\sFmla{\False}{!B}[\sigma.n]$
+دونیں اوسے ٹہنی اُتے پا کے ودھاندا اے، جتھے $\sigma.n$ ٹہنی لئی نواں اگیتا اے۔
+
+$\lnot$ دے قاعدے ایس طرح تعریف ہوندے نیں (اوہ تعریف ورت کے جیہڑی
+$\lnot !A$ نوں $!A \lif \lfalse$ دے طور اُتے دیندی اے)۔
+
+قاعدے \olref{tab:rules-lif-lnot} وچ دتے نیں۔
+
+\begin{table}
+  \[\def\arraystretch{3}\begin{array}{|c|c|}
+    \hline
+    \AxiomC{\sFmla{\True}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\True}{\lnot}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma.{*}]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\False}{\lnot}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+    \DisplayProof
+    \\[1ex]
+    \text{$\sigma.{*}$ ورتیا ہویا اے} & \text{$\sigma.n$ نواں اے}\\
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lif}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma.{*}] \quad \mid \quad
+      \sFmla{\True}{!B}[\sigma.{*}]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lif}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma.n]}
+    \DisplayProof
+    \\[1ex]
+    \text{$\sigma.{*}$ ورتیا ہویا اے} & \text{$\sigma.n$ نواں اے}\\
+    \hline
+  \end{array}\]
+  \caption{اگیتے والے !!{tableau} دے قاعدے $\lnot$ تے $\lif$ لئی}
+  \ollabel{tab:rules-lif-lnot}
+\end{table}
+
+\end{document}

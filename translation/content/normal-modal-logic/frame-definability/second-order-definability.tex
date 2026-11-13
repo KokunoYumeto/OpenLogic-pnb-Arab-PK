@@ -1,0 +1,106 @@
+% Part: normal-modal-logic
+% Chapter: frame-correspondence
+% Section: standard-translation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{frd}{st}
+
+\olsection{دوجے درجے دی زبان وچ تعریف}
+
+فریماں دیاں کجھ خاصیتاں امکانی فارمولیاں نال متعین ہو سکدیاں نیں پر پہلے درجے دی زبان وچ نہیں۔ پر جے اک رکنی محمولاں اُتے مسوّراں دی اجازت دیئے (یعنی اک رکنی دوجے درجے دی تسویر دی)، تاں فریم دیاں ساریاں اوہ خاصیتاں متعین کر سکدے آں جیہڑیاں امکانی فارمولیاں نال متعین ہو سکدیاں نیں۔ ایس لئی اسیں اوس باقاعدہ جوڑ نوں ورتدے آں جیہڑا امکانی !!{formula} دے کسے جہان وچ سچا ہون دیاں شرطاں تے پہلے درجے دے !!{formula}s وچ اے۔ اینوں امکانی فارمولیاں دا پہلے درجے دے فارمولیاں وچ معیاری ترجمہ آکھدے آں۔ ایہ ایسی زبان وچ اے جیہدے وچ رسائی دے تعلق لئی دو رکنی !!{predicate}~$Q$ تے اک رکنی !!{predicate}~$P_i$ وی اے، اوہناں !!{propositional variable}s~$\Obj p_i$ لئی جیہڑے~$!A$ وچ آؤندے نیں۔
+
+\begin{defn}
+  \emph{معیاری ترجمہ}~$\ST_x(!A)$ دی تعریف استقرا نال ایویں ہوندی اے۔
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\ST_x(\indfrm) = \lfalse$.}}{}
+  \tagitem{prvTrue}{\indcase{!A}{\lfalse}{$\ST_x(\indfrm) = \ltrue$.}}{}
+  \item \indcase{!A}{\Obj p_i}{$\ST_x(\indfrm) = \Atom{P_i}{x}$.}
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\ST_x(\indfrm) = \lnot \ST_x(!B)$.}}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \land \ST_x(!C))$.}}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \lor \ST_x(!C))$.}}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \lif \ST_x(!C))$.}}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \liff \ST_x(!C))}$.}{}
+  \tagitem{prvBox}{\indcase{!A}{\Box !B}{$\ST_x(\indfrm) =
+      \lforall[y][(\Atom{Q}{x,y} \lif \ST_y(!B))]$.}}{}
+  \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{$\ST_x(\indfrm) =
+      \lexists[y][(\Atom{Q}{x,y} \land \ST_y(!B))]$.}}{}
+  \end{enumerate}
+\end{defn}
+
+مثلاً $\ST_x(\Box p \lif p)$ دا ترجمہ $\lforall[y][(\Atom{Q}{x,y}
+  \lif \Atom{P}{y})] \lif \Atom{P}{x}$ اے۔ ہر !!{structure} جیہڑی~$\ST_x(!A)$ دی زبان لئی اے، اوہدے لئی اک دائرہ،~$Q$ نوں دِتّا دو رکنی تعلق، تے اک رکنی !!{predicate}s~$P_i$ نوں دِتّے دائرے دے ذیلی سیٹ چاہیدے نیں۔ دوجے لفظاں وچ ایسی !!a{structure} دے جز اوہی نیں جیہڑے~$!A$ دے نمونے دے جز نیں۔ دائرہ جہاناں دا سیٹ اے،~$Q$ نوں دِتّا دو رکنی تعلق رسائی دا تعلق اے، تے~$P_i$ نوں دِتّے ذیلی سیٹ اوہی دِتّیاں قدراں~$V(\Obj p_i)$ نیں۔ ایس لئی ایہ حیرانی دی گل نہیں کہ $!A$ دا امکانی نمونے وچ پورا اترنا تے $\ST_x(!A)$ دا اوہدے نال جڑی !!{structure} وچ پورا اترنا اک دوجے نال میل کھاندے نیں۔
+
+\begin{prop}\ollabel{prop:st}
+  منّ لو $\mModel{M} = \tuple{W, R, V}$ اے، تے $\Struct{M'}$ پہلے درجے دی !!{structure} اے جیہدے وچ $\Domain{M'} = W$، $\Assign{Q}{M'} = R$ تے
+  $\Assign{P_i}{M'} = V(\Obj p_i)$ نیں، تے $s(x) = w$ اے۔ فیر
+  \[
+  \mSat{M}{!A}[w] \text{ اُدوں تے صرف اُدوں جدوں } \Sat{M'}{\ST_x(!A)}[s]
+  \]
+\end{prop}
+
+\begin{proof}
+  استقرا نال،~$!A$ اُتے۔
+\end{proof}
+
+\begin{prop}
+  منّ لو $!A$ امکانی !!{formula} اے تے $\mModel{F} = \tuple{W, R}$ فریم اے۔ منّ لو $\Struct{F'}$ پہلے درجے دی !!{structure} اے جیہدے وچ $\Domain{F'} = W$ تے $\Assign{Q}{F'} = R$ اے، تے $!A'$ ایہ دوجے درجے دا فارمولا اے۔
+  \[
+  \lforall[X_1][\dots\lforall[X_n][\lforall[x][
+        \SSubst{\ST_x(!A)}{\subst{X_1}{P_1}, \dots,
+          \subst{X_n}{P_n}}]]],
+  \]
+  جتھے $P_1$، \dots، $P_n$ اوہ سارے اک رکنی !!{predicate}s نیں جیہڑے~$\ST_x(!A)$ وچ نیں۔ فیر
+  \[
+  \mModel{F} \Entails !A \text{ اُدوں تے صرف اُدوں جدوں } \Sat{F'}{!A'}
+  \]
+\end{prop}
+
+\begin{proof}
+  $\Sat{F'}{!A'}$ اُدوں تے صرف اُدوں جدوں ہر ایسی !!{structure}~$\mModel{M'}$ لئی، جیہدے وچ
+  $\Assign{P_i}{M'} \subseteq W$ ہووے $i = 1$، \dots،~$n$ لئی، تے ہر ایسے $s$ لئی جیہدے وچ $s(x) \in W$، اوہدے لئی $\Sat{M'}{\ST_x(!A)}[s]$ ہووے۔
+  \olref{prop:st} مطابق ایہ گل اُدوں تے صرف اُدوں ہوندی اے جدوں سارے نمونیاں~$\mModel{M}$ لئی جیہڑے~$\mModel{F}$ اُتے ٹکے نیں، تے ہر جہان~$w \in W$ لئی، $\mSat{M}{!A}[w]$، یعنی $\mModel{F} \Entails !A$۔
+\end{proof}
+
+\begin{defn}
+  فریماں دی جماعت~$\mClass{F}$ \emph{دوجے درجے دی زبان وچ متعین ہو سکدی اے} جے کوئی ایسا !!a{sentence}~$!A$ ہووے، دوجے درجے دی اوس زبان وچ جیہدے وچ صرف اک دو رکنی !!{predicate}~$P$ ہووے تے مسوّر صرف اک رکنی سیٹ متغیراں اُتے لگن، کہ $\mModel{F} = \tuple{W, R} \in \mClass{F}$ اُدوں تے صرف اُدوں جدوں $\Sat{M}{!A}$ ہووے اوس !!{structure}~$\Struct{M}$ وچ جیہدے لئی
+  $\Domain{M} = W$ تے $\Assign{P}{M} = R$۔
+\end{defn}
+
+\begin{cor}
+  جے فریماں دی جماعت !!a{formula}~$!A$ نال متعین ہو سکدی اے، تاں اوہدے نال جڑی رسائی دے تعلقاں دی جماعت اک رکنی دوجے درجے دے جملے نال متعین ہو سکدی اے۔
+\end{cor}
+
+\begin{proof}
+  پچھلے ثبوت دے اک رکنی دوجے درجے دے جملے~$!A'$ وچ مطلوب خاصیت اے۔
+\end{proof}
+
+مثال لئی فیر !!{formula}~$\Box p \lif p$ ویکھو۔ ایہ انعکاس نوں متعین کردا اے۔ انعکاس پہلے درجے دے !!{sentence}~$\lforall[x][\Atom{Q}{x,x}]$ نال ضرور متعین ہو سکدا اے۔ پر ایہ ہِیٹھلے اک رکنی دوجے درجے دے !!{sentence} نال وی متعین ہو سکدا اے۔
+\[
+\lforall[X][\lforall[x][(\lforall[y][(\Atom{Q}{x,y} \lif \Atom{X}{y})]
+    \lif \Atom{X}{x})]].
+\]
+ایہدا مطلب اے کہ دونیں جملے ہم ارز نیں۔ ایہ گل سدھی طرح پرکھن دا اک طریقہ ایہ اے۔ پہلاں منّ لو دوجے درجے دا جملہ !!a{structure}~$\Struct{M}$ وچ سچا اے۔ کیوں جے $x$ تے $X$ دوناں اُتے کُلّی مسوّر لگے نیں، ایس لئی باقی حصہ ہر $x \in W$ تے سیٹ~$X \subseteq W$ لئی پورا اترنا چاہیدا اے، مثلاً سیٹ $\Setabs{z}{Rxz}$ لئی، جتھے $R =
+\Assign{Q}{M}$۔ سو ہر ایسے~$s$ لئی جیہدے وچ $s(x) \in W$ تے $s(X) =
+\Setabs{z}{Rxz}$، ساڈے کول $\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif
+    \Atom{X}{y})] \lif \Atom{X}{x}}$ اے۔ پر $s(X)$ نوں جیویں چُنیا اے، اوہدے مطابق ایس دا مطلب اے $\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif
+    \Atom{Q}{x,y})] \lif \Atom{Q}{x,x}}[s]$، جیہڑا $\Atom{Q}{x,x}$ نال ہم ارز اے کیوں جے مقدم معتبر اے۔ کیوں جے $s(x)$ کوئی وی ہو سکدا اے، ایس لئی $\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$۔
+
+ہُن منّ لو $\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$ تے وکھاؤ کہ
+$\Sat{M}{\lforall[X][\lforall[x][(\lforall[y][(\Atom{Q}{x,y} \lif
+        \Atom{X}{y})] \lif \Atom{X}{x})]]}$۔ کوئی وی قدر بندی~$s$ چُنو تے منّ لو $\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif
+    \Atom{X}{y})]}[s]$۔ منّ لو $s'$ اوہ $y$-بدل قدر بندی اے جیہڑی~$s$ دی اے جیہدے لئی $s'(y)
+= s(x)$۔ سو $\Sat{M}{\Atom{Q}{x,y} \lif \Atom{X}{y}}[s']$، یعنی
+$\Sat{M}{\Atom{Q}{x,x} \lif \Atom{X}{x}}[s]$۔ کیوں جے
+$\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$، مقدم سچا اے، تے ساڈے کول
+$\Sat{M}{\Atom{X}{x}}[s]$ اے، جیہڑا اسیں وکھاؤنا سی۔
+
+کیوں جے فریماں دیاں کجھ متعین ہو سکّن والیاں جماعتاں پہلے درجے دی زبان وچ متعین نہیں ہو سکدیاں، ایس لئی کجھ اک رکنی دوجے درجے دے !!{sentence} جیہڑے~$!A'$ دی شکل دے نیں، پہلے درجے دے !!{sentence} نال ہم ارز نہیں۔ ایہ فیصلہ کرن دا کوئی مؤثر طریقہ نہیں کہ ایہناں وچوں کہڑے ہم ارز نیں۔
+
+\end{document}

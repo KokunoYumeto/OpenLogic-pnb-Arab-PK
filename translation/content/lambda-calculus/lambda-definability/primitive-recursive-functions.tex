@@ -1,0 +1,151 @@
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: primitive-recursive-functions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{prf}
+\olsection{بنیادی بازگشتی فنکشن \usetoken{S}{lambda definable} نیں}
+
+یاد کرو کہ بنیادی بازگشتی فنکشن اوہ نیں جیہڑے مُڈھلے فنکشوناں
+$\Zero$، $\Succ$ تے $\Proj{n}{i}$ توں ترکیب تے بنیادی بازگشت
+نال متعین کیتے جا سکدے نیں۔
+
+\begin{lem}
+  \ollabel{lem:basic}
+  مُڈھلے بنیادی بازگشتی فنکشن $\Zero$، $\Succ$ تے دلیلاں
+  وچوں اک چُنن والے فنکشن~$\Proj{n}{i}$، !!{lambda definable} نیں۔
+\end{lem}
+
+\begin{proof}
+ایہ ہِٹھلے ٹرماں نال !!{lambda defined} نیں۔
+\begin{align*}
+  \fn{Zero} & \ident \lambd[a][\lambd[fx][x]]\\
+  \fn{Succ} & \ident \lambd[a][\lambd[fx][f (a f x)]] \\
+  \fn{Proj}^n_i & \ident \lambd[x_0\dots x_{n-1}][x_i]
+\end{align*}
+\end{proof}
+
+\begin{lem}
+  \ollabel{lem:comp} فرض کرو $k$ دلیلاں والا فنکشن $f$ تے
+  $n$ دلیلاں والے فنکشن $g_0, \dots, g_{k-1}$، ٹرماں
+  $F$، $G_0$، \dots، $G_k$ نال !!{lambda definable} نیں تے
+  $h$ اوہناں دی ترکیب نال متعین اے۔ فیر $H$، !!{lambda definable} اے۔
+\end{lem}
+
+\begin{proof}
+  $h$ ہِٹھلے ٹرم نال !!{lambda defined} ہو سکدا اے۔
+  \[
+  H \ident \lambd[x_0 \dots x_{n-1}][F\, (G_0 x_0 \dots
+    x_{n-1}) \dots (G_{k-1} x_0 \dots x_{n-1})]
+  \]
+  ایس گل دی پڑتال مشق لئی چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+  \olref[lam][ldf][prf]{lem:comp} دا ثبوت پورا کرن لئی دکھاؤ
+  کہ $H\num{n_0}\dots\num{n_{n-1}} \red \num{h(n_0, \dots,
+    n_{n-1})}$۔
+\end{prob}
+
+دھیان دیو کہ \olref{lem:comp} وچ ایہ شرط نہیں سی کہ $f$
+تے $g_0$، \dots،~$g_{k-1}$ بنیادی بازگشتی ہون۔ شرط بس ایہ
+سی کہ اوہ ہر انپٹ اُتے معین ہون تے !!{lambda definable} ہون۔
+
+\begin{lem}\ollabel{lem:prim}
+  فرض کرو $f$ اک $n$ دلیلاں والا فنکشن اے تے~$g$ اک $n+2$
+  دلیلاں والا فنکشن اے۔ ایہ ٹرم $F$ تے~$G$ نال !!{lambda definable}
+  نیں، تے فنکشن~$h$ نوں $f$ تے $g$ توں بنیادی بازگشت نال
+  متعین کیتا اے۔ فیر $h$ وی !!{lambda definable} اے۔
+\end{lem}
+
+\begin{proof}
+  یاد کرو کہ $h$ دی تعریف ایویں اے۔
+  \begin{align*}
+    h(x_1, \dots, x_n, 0) &= f(x_1, \dots, x_n)\\
+    h(x_1, \dots, x_n, y+1) & = h(x_1, \dots, x_n, y, h(x_1, \dots, x_n, y)).
+  \end{align*}
+  سادے لفظاں وچ بنیادی بازگشتی تعریف فنکشن $h$ دا اطلاق
+  $y$ واری دہراؤندی اے تے اینوں $f(x_1,
+  \dots, x_n)$ اُتے لاؤندی اے۔ ایہ چرچ عدداں دی تعریف ورگا
+  اے، جیہڑے آپ وی دہراؤ کرن والے ٹرماں وجوں متعین نیں۔
+
+  سوکھ لئی اسیں اک ودھیک دلیل~$x$ واسطے تعریف تے ثبوت دیندے آں۔
+  فنکشن $h$ ایویں !!{lambda defined} اے۔
+  \begin{align*}
+    H \ident & \lambd[x][\lambd[y][\fn{Snd} (y
+        D \tuple{\num{0}, F x})]]
+    \intertext{جتھے}
+    D \ident & \lambd[p][\tuple{\fn{Succ} (\fn{Fst}\, p), (G x
+          (\fn{Fst}\, p) (\fn{Snd}\, p))}]
+  \end{align*}
+  ہر قدم دی حالت اک جوڑا اے، جیہدا پہلا رکن اوہ ویلے دا $y$
+  تے دوجا اوہدے نال جُڑی~$h$ دی قدر اے۔ تکرار دے ہر قدم
+  اُتے اسیں $y$ تے $h$ دیاں نویاں قدراں دا جوڑا بناؤندے آں۔
+  تکرار مکّن اُتے جوڑے دا دوجا رکن واپس دیندے آں۔ اوہی
+  $h$ دی آخری قدر اے۔ ہُن ثابت کردے آں کہ ایہ واقعی بنیادی
+  بازگشت دی نمائندگی اے۔
+
+  اسیں ثابت کرنا اے کہ ہر $n$ تے $m$ لئی $H\,\num{n}\,\num{m} \red
+  \num{h(n,m)}$۔ ایس لئی پہلاں دکھاؤندے آں کہ جے $D_n \ident
+  \Subst{D}{\num{n}}{x}$، تاں $D_n^m \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m}, \num{h(n, m)}}$۔ اسیں~$m$ اُتے استقرا نال اگّے ودھدے آں۔
+
+  جے $m=0$، تاں سانوں $D_n^0 \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{0}, \num{h(n, 0)}}$ چاہیدا اے۔ پر $D_n^0 \tuple{\num{0}, F\,
+    \num{n}}$ بس $\tuple{\num{0}, F\, \num{n}}$ اے۔ کیوں جے $F$،
+  ~$f$ نوں !!{lambda define}s، ایس لئی ایہدی تقلیل $\tuple{\num{0},
+    \num{f(n)}}$ تک ہوندی اے۔ تے کیوں جے $f(n) = h(n, 0)$، ایہ
+  $\tuple{\num{0},
+    \num{h(n,0)}}$ اے۔
+
+  ہُن فرض کرو $D_n^m \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m}, \num{h(n, m)}}$۔ اسیں دکھاؤنا اے کہ
+  $D_n^{m+1} \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m+1}, \num{h(n, m+1)}}$۔
+  \begin{align*}
+    D_n^{m+1} \tuple{\num{0}, F\, \num{n}}
+    & \ident D_n(D_n^{m} \tuple{\num{0}, F\, \num{n}})\\
+    & \red D_n\,\tuple{\num{m}, \num{h(n, m)}} \text{\qquad (استقرائی مفروضے توں)}\\
+    & \ident (\lambd[p][
+      \tuple{
+        \fn{Succ} (\fn{Fst}\, p), (G \, \num{n} (\fn{Fst}\, p) (\fn{Snd}\, p))
+    }]) \tuple{\num{m}, \num{h(n,m)}}\\
+    & \redone
+    \tuple{\fn{Succ} (\fn{Fst}\, \tuple{\num{m}, \num{h(n,m)}}),\\
+      & \qquad (G \, \num{n} (\fn{Fst}\, \tuple{\num{m}, \num{h(n,m)}}) (\fn{Snd}\, \tuple{\num{m}, \num{h(n,m)}}))}\\
+    & \red
+    \tuple{\fn{Succ}\, \num{m}, (G \, \num{n} \,\num{m} \, \num{h(n,m)})}\\
+    & \red \tuple{\num{m+1}, \num{g(n, m, h(n, m))}}
+  \end{align*}
+  کیوں جے $g(n, m, h(n, m)) = h(n, m+1)$، ایس لئی ایہ قدم پورا ہویا۔
+
+  آخر وچ ایہ تقلیل ویکھو۔
+  \begin{align*}
+    H\,\num n\,\num m &\ident \lambd[x][\lambd[y][\fn{Snd} (y
+        (\lambd[p].\tuple{\fn{Succ} (\fn{Fst}\, p), (G\, x\,
+          (\fn{Fst}\, p)\, (\fn{Snd}\, p))}) \tuple{\num{0}, F x})]]\\
+    & \qquad\,\num n\, \num m\\
+    & \red \fn{Snd} (\num m \,
+    \underbrace{(\lambd[p].\tuple{\fn{Succ} (\fn{Fst}\, p), (G \,\num n\,
+      (\fn{Fst}\, p) (\fn{Snd}\, p))})}_{D_n} \tuple{\num{0}, F \num n})\\
+    & \ident \fn{Snd} (\num m \, D_n\, \tuple{\num{0}, F \num n})\\
+    & \red \fn{Snd} \,(D_n^m  \tuple{\num{0}, F \num n})\\
+    & \red \fn{Snd} \,\tuple{\num{m}, \num{h(n, m)}} \\
+    & \red \num{h(n,m)}.
+  \end{align*}
+\end{proof}
+
+\begin{prop}
+  ہر بنیادی بازگشتی فنکشن !!{lambda definable} اے۔
+\end{prop}
+
+\begin{proof}
+  \olref{lem:basic} مطابق سارے مُڈھلے فنکشن !!{lambda definable}
+  نیں۔ \olref{lem:comp} تے \olref{lem:prim} مطابق
+  !!{lambda definable} فنکشن ترکیب تے بنیادی بازگشت ہِٹھ بند نیں۔
+\end{proof}
+
+\end{document}

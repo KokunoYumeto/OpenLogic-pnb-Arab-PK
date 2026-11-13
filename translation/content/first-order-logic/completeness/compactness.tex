@@ -1,0 +1,291 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: compactness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{com}}
+      {\olfileid{pl}{com}{com}}
+
+\olsection{محدود گواہی دا قضیہ}
+
+تمامیت دے قضیے دا اک اہم نتیجہ محدود گواہی دا قضیہ اے۔
+ایہ قضیہ کہندا اے کہ جے !!{sentence}s دے کسے سیٹ دا ہر
+\emph{محدود} ذیلی سیٹ پورا ہون جوگا ہووے، تاں سارا سیٹ
+پورا ہون جوگا اے---بھاویں اوہ سیٹ آپ لامتناہی ہووے۔
+ایہ گل پہلی نظر وچ بالکل واضح نہیں۔ پہلے پہل ایہ امکان
+رد ہوندا نظر نہیں آؤندا کہ !!{sentence}s دا کوئی لامتناہی
+سیٹ متضاد ہووے، پر تضاد، ایویں سمجھو، صرف لامتناہی تعداد
+وچوں پیدا ہوندا ہووے۔ محدود گواہی دا قضیہ ایہ امکان رد
+کردا اے: !!{sentence}s دا کوئی ایسا پورا ہون جوگا نہ ہون والا
+لامتناہی سیٹ نہیں جیہدا ہر محدود ذیلی سیٹ پورا ہون جوگا
+ہووے۔ تمامیت دے قضیے وانگ، ایس دا منطقی نتیجے نال
+متعلق وی اک بیان اے: جے !!{sentence}s دا لامتناہی سیٹ
+کجھ نتیجے وچ لیاندا اے، تاں اوہ نتیجہ اوہدے کسے محدود
+ذیلی سیٹ توں ہی نکلدا اے۔
+
+\begin{defn}
+  !!{formula}s دا سیٹ~$\Gamma$ \emph{محدود طور تے پورا ہون جوگا}
+  اُدوں تے صرف اُدوں اے جدوں ہر محدود $\Gamma_0 \subseteq \Gamma$
+  پورا ہون جوگا ہووے۔
+\end{defn}
+
+\begin{thm}[محدود گواہی دا قضیہ]
+\ollabel{thm:compactness}
+ہر جملیاں دے سیٹ~$\Gamma$ تے ہر جملے~$!A$ لئی
+ہٹھ لکھیاں گلاں درست نیں:
+\begin{enumerate}
+  \item $\Gamma \Entails !A$ اُدوں تے صرف اُدوں جدوں کوئی محدود
+    $\Gamma_0 \subseteq \Gamma$ موجود ہووے جیہدے لئی
+    $\Gamma_0 \Entails !A$۔
+  \item $\Gamma$ پورا ہون جوگا اُدوں تے صرف اُدوں اے جدوں
+    اوہ محدود طور تے پورا ہون جوگا اے۔
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+اسیں (2) ثابت کردے آں۔ جے $\Gamma$ پورا ہون جوگا اے، تاں
+\iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+موجود اے جیہدی لئی
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$
+ہر $!A \in \Gamma$ اُتے درست اے۔
+ظاہر اے کہ ایہی $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+،~$\Gamma$ دے ہر محدود ذیلی سیٹ نوں وی پورا کردی اے؛
+ایس لئی $\Gamma$ محدود طور تے پورا ہون جوگا اے۔
+
+ہُن فرض کرو $\Gamma$ محدود طور تے پورا ہون جوگا اے۔
+فیر ہر محدود $\Gamma_0 \subseteq \Gamma$ پورا ہون جوگا
+اے۔ صحت مطابق
+(\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},
+    prfSC/{fol:seq:sou:cor:consistency-soundness},
+    prfND/{fol:ntd:sou:cor:consistency-soundness},
+    prfTab/{fol:tab:sou:cor:consistency-soundness}}}{%
+  \tagrefs{prfAX/{pl:axd:sou:cor:consistency-soundness},
+    prfSC/{pl:seq:sou:cor:consistency-soundness},
+    prfND/{pl:ntd:sou:cor:consistency-soundness},
+    prfTab/{pl:tab:sou:cor:consistency-soundness}}}),
+ہر محدود ذیلی سیٹ بے تضاد اے۔ فیر
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:ptn:prop:proves-compact},
+    prfSC/{fol:seq:ptn:prop:proves-compact},
+    prfND/{fol:ntd:ptn:prop:proves-compact},
+    prfTab/{fol:tab:ptn:prop:proves-compact}}}{%
+  \tagrefs{prfAX/{pl:axd:ptn:prop:proves-compact},
+    prfSC/{pl:seq:ptn:prop:proves-compact},
+    prfND/{pl:ntd:ptn:prop:proves-compact},
+    prfTab/{pl:tab:ptn:prop:proves-compact}}}
+مطابق $\Gamma$ آپ وی بے تضاد ہووے گا۔
+تمامیت مطابق (\olref[cth]{thm:completeness})،
+چونکہ $\Gamma$ بے تضاد اے، ایس لئی اوہ پورا ہون جوگا اے۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][com]{thm:compactness}
+دا حصہ (1) ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][com]{thm:compactness}
+دا حصہ (1) ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\iftag{FOL}{%
+\begin{ex}
+% PNB-COM-008: The source calls equality instances sentences but Trm[L] includes variables; restrict t to closed old-language terms, as required by its own term semantics.
+ہر نمونے~$\Struct{M}$ وچ، جیہڑا نظریے~$\Gamma$ دا نمونہ اے،
+ہر بند ٹرم~$t$،~$\Domain{M}$ دے کسے نہ کسے
+!!a{element} نوں ظاہر کردا اے۔ پر کی اسیں ایہ ضمانت
+دے سکدے آں کہ $\Domain{M}$ دا ہر !!{element} وی کسے
+بند ٹرم توں ظاہر ہووے؟ ہور لفظاں وچ، کی ایسے نظریے~$\Gamma$
+نیں جنہاں دے سارے نمونے بند ٹرماں نال پوری طرح ڈھکے ہوئے
+ہون؟ محدود گواہی دا قضیہ وکھاندا اے کہ جے $\Gamma$
+دے لامتناہی نمونے ہون، تاں ایہ گل درست نہیں۔ وجہ ایہ اے:
+فرض کرو $\Struct{M}$،~$\Gamma$ دا اک لامتناہی نمونہ اے،
+تے $c$ اک !!a{constant} اے جیہڑا $\Gamma$ دی زبان وچ نہیں۔
+% PNB-COM-016: پچھلا PNB-COM-007 غلط سی؛eq/ اصل وچ inequality اے،اضافی lnot ہٹا کے اصل polarity بحال۔
+$\Delta$ نوں $\eq/[c][t]$ جملیاں دا سیٹ لو،
+جتھے~$t$،~$\Lang{L}$، یعنی~$\Gamma$ دی زبان
+دا بند ٹرم اے؛ یعنی
+  \[
+  \Delta = \Setabs{\eq/[c][t]}{t \in \Trm[L],\ t\text{ بند اے}}.
+  \]
+$\Gamma \cup \Delta$ دا کوئی وی محدود ذیلی سیٹ
+$\Gamma' \cup \Delta'$ دے روپ وچ لکھیا جا سکدا اے،
+جتھے $\Gamma' \subseteq \Gamma$ تے
+$\Delta' \subseteq \Delta$۔ چونکہ $\Delta'$ محدود اے،
+ایس وچ صرف محدود گنتی دے ٹرم آ سکدے نیں۔ کوئی
+$a \in \Domain{M}$ لو،~$\Domain{M}$ دا ایسا
+!!a{element} جیہڑا اوہناں وچوں کسے ٹرم توں ظاہر نہ
+ہووے، تے $\Struct{M'}$ نوں اوہ
+!!{structure} لو جیہڑی $\Struct{M}$ ورگی ہی اے،
+پر جیہدے وچ $\Assign{c}{M'} = a$ وی اے۔
+چونکہ $a \neq \Value{t}{M}$ ہر~$t$ لئی
+جیہڑا~$\Delta'$ وچ آؤندا اے، ایس لئی
+$\Sat{M'}{\Delta'}$۔ چونکہ
+$\Sat{M}{\Gamma}$، $\Gamma' \subseteq
+\Gamma$، تے $c$،~$\Gamma$ وچ نہیں آؤندا،
+ایس لئی $\Sat{M'}{\Gamma'}$ وی۔
+دونیں ملا کے،
+$\Sat{M'}{\Gamma' \cup \Delta'}$
+ہر محدود ذیلی سیٹ $\Gamma' \cup \Delta'$
+لئی اے۔
+لہٰذا $\Gamma \cup \Delta$ دا ہر محدود ذیلی
+سیٹ پورا ہون جوگا اے۔ محدود گواہی مطابق،
+$\Gamma \cup \Delta$ آپ وی پورا ہون جوگا
+اے۔ ایس لئی $\Gamma \cup \Delta$ دے ایسے نمونے
+موجود نیں جنہاں لئی
+$\Sat{M}{\Gamma \cup \Delta}$۔
+ایسا ہر $\Struct{M}$،~$\Gamma$ دا نمونہ
+اے۔
+% PNB-COM-018: نہ ڈھکے ہون دا دعویٰ اصل زبان دے reduct بارے اے؛نواں c خود نویں عنصر دا ناں اے۔
+اصل زبان لئی، یعنی نئے مستقل دی تعبیر ہٹا کے، اوہ بند ٹرماں نال پوری طرح ڈھکیا ہویا
+نہیں، کیونکہ $\Value{c}{M} \neq
+\Value{t}{M}$ ہر بند ٹرم~$t$
+لئی اے جیہڑا~$\Lang{L}$ وچ اے۔
+\end{ex}
+
+\begin{ex}
+ایسی !!a{language}~$\Lang{L}$ اُتے غور کرو جیہدے
+وچ !!{predicate}~$<$، !!{constant}s~$\Obj{0}$ تے
+$\Obj{1}$، تے !!{function}s~$+$، $\times$ تے
+$-$ ہون۔ $\Gamma$ نوں ایس !!{language} دے اوہناں
+سارے !!{sentence}s دا سیٹ لو جیہڑے
+!!{structure}~$\Struct{Q}$ وچ سچے نیں،
+جیہدا دائرہ~$\Rat$ اے تے جیہدے نشاناں دیاں
+تعبیراں معمول والیاں نیں۔ ایس طرح
+$\Gamma$،~$\Lang{L}$ دے ناطق اعداد بارے
+سارے سچے !!{sentence}s دا سیٹ اے۔
+یقیناً~$\Rat$ وچ (بلکہ~$\Real$ وچ وی)
+کوئی ایسا عدد~$r$ نہیں جیہڑا~$0$ توں وڈا
+پر $1/k$ توں، ہر $k \in \PosInt$ لئی،
+چھوٹا ہووے۔ ایسا عدد، جے موجود ہووے،
+\emph{لامتناہی طور تے چھوٹا عدد (infinitesimal)}
+ہووے گا: صفر نہیں، پر بے حد چھوٹا۔
+محدود گواہی دا قضیہ ورت کے ایہ وکھایا
+جا سکدا اے کہ $\Gamma$ دے ایسے نمونے
+موجود نیں جنہاں وچ لامتناہی طور تے
+چھوٹے عدد موجود ہون۔ ساڈی زبان وچ
+تقسیم دا کوئی !!a{function} نہیں (صفر
+نال تقسیم غیر معرّف اے، تے !!{function}s
+دی تعبیر ہمہ جا فنکشناں نال ہونی چاہیدی
+اے)۔ پر اسیں پھر وی ایہ بیان کر سکدے
+آں کہ $r < 1/k$، کیونکہ ایہ اُدوں تے
+صرف اُدوں اے جدوں $r \cdot k < 1$۔
+ہُن $c$ اک نواں !!{constant} لو تے
+$\Delta$ نوں ایہ سیٹ لو:
+\[
+\{\Obj{0} < c\}
+\cup \Setabs{ c \times \num k < \Obj{1} }{k \in \PosInt}
+\]
+(جتھے $\num{k} = (\Obj{1} + (\Obj{1} + \dots + (\Obj{1} +
+\Obj{1})\dots))$ وچ $k$ عدد~$\Obj{1}$ نیں)۔
+$\Delta_0$ نوں~$\Delta$ دا کوئی وی محدود ذیلی سیٹ
+لو۔ کوئی~$K$ موجود اے ایسا کہ سارے
+!!{sentence}s~$c \times \num{k} < \Obj{1}$
+جیہڑے~$\Delta_0$ وچ آؤندے نیں،
+اوہناں دا $k < K$ ہووے۔ جے اسیں $\Struct{Q}$ نوں
+$\Struct{Q'}$ تک ودھائیے تے
+$\Assign{c}{Q'} = 1/K$ رکھیے،
+تاں $\Sat{Q'}{\Gamma_0 \cup \Delta_0}$
+ہر محدود $\Gamma_0 \subseteq \Gamma$ لئی؛
+ایس لئی $\Gamma \cup \Delta$ محدود
+طور تے پورا ہون جوگا اے (مشق:
+ایہ تفصیل نال ثابت کرو)۔ محدود گواہی
+مطابق $\Gamma \cup \Delta$ پورا ہون
+جوگا اے۔ ہر نمونے~$\Struct{S}$ وچ،
+جیہڑا~$\Gamma \cup \Delta$ دا نمونہ اے، اک
+لامتناہی طور تے چھوٹا عدد، یعنی
+$\Assign{c}{S}$، موجود اے۔
+\end{ex}
+}{}
+
+\tagprob{FOL}
+\begin{prob}
+حساب دے معیاری نمونے~$\Struct{N}$
+وچ کوئی !!{element}~$k \in \Domain{N}$
+ایسا نہیں جیہڑا ہر فارمولے~$\num{n}
+< x$ نوں پورا کرے (جتھے $\num{n}$،
+$\Obj{0}^{\prime\dots\prime}$ اے،
+جیہدے وچ $n$ عدد $\prime$ نیں)۔
+محدود گواہی دا قضیہ ورت کے وکھاؤ کہ
+حساب دی زبان دے اوہ !!{sentence}s
+جیہڑے حساب دے معیاری نمونے
+$\Struct{N}$ وچ سچے نیں،
+!!a{structure}~$\Struct{N'}$ وچ
+وی سچے نیں جیہدے وچ ایسا
+!!a{element} موجود اے جیہڑا
+ہر فارمولے~$\num{n} < x$
+نوں \emph{پورا کردا} اے۔
+\end{prob}
+\tagendprob
+
+\iftag{FOL}{
+\begin{ex}
+اسیں جان دے آں کہ !!{identity} والی
+پہلے درجے دی منطق ایہ بیان کر سکدی
+اے کہ !!{domain} دا حجم گھٹ توں گھٹ
+کنا ہووے: جملہ~$!A_{\ge n}$
+(جیہڑا کہندا اے ”گھٹ توں گھٹ $n$
+وکھریاں چیزاں نیں“) صرف اوہناں
+ساختاں وچ سچا اے جنہاں دے
+$\Domain{M}$ وچ گھٹ توں گھٹ~$n$
+چیزاں ہون۔ سو جے اسیں
+  \[
+  \Delta = \Setabs{!A_{\ge n}}{n \ge 1}
+  \]
+لئیے، تاں $\Delta$ دا ہر نمونہ
+لامتناہی ہونا لازم اے۔ ایس طرح
+کسی نظریے وچ~$\Delta$ شامل کر کے
+اسیں ضمانت دے سکدے آں کہ اوہدے
+صرف لامتناہی نمونے ہون: $\Gamma \cup
+\Delta$ دے نمونے ٹھیک اوہی
+$\Gamma$ دے لامتناہی نمونے نیں۔
+
+ایس لئی پہلے درجے دی منطق
+لامتناہیت بیان کر سکدی اے۔ پر
+محدود گواہی دا قضیہ وکھاندا اے
+کہ ایہ محدودیت بیان نہیں کر
+سکدی۔ فرض کرو کہ جملیاں
+دا کوئی سیٹ~$\Lambda$ ٹھیک
+اوہناں ساریاں تے صرف اوہناں
+!!{structure}s وچ پورا ہووے
+جیہڑیاں محدود نیں۔ فیر
+$\Delta \cup \Lambda$
+محدود طور تے پورا ہون جوگا
+اے۔ کیوں؟ فرض کرو
+$\Delta' \cup \Lambda' \subseteq \Delta \cup
+\Lambda$ محدود اے، جتھے
+$\Delta' \subseteq \Delta$ تے
+$\Lambda' \subseteq \Lambda$۔
+% PNB-COM-009: The source's maximum does not exist when Delta-prime is empty; in that case take the bound to be one.
+جے ایہ پہلا ذیلی سیٹ خالی نہ ہووے،
+تاں $n$ اوہ سب توں وڈا عدد
+لو جیہدے لئی $!A_{\ge n}
+\in \Delta'$؛ جے اوہ خالی
+ہووے تاں ایہ حد اک رکھ لو۔
+چونکہ $\Lambda$ ہر محدود
+ساخت وچ پورا ہوندا اے،
+ایس دا اک نمونہ~$\Struct{M}$
+اے جیہدے !!{element}s
+محدود تعداد وچ، پر $\ge n$
+نیں۔ فیر
+$\Sat{M}{\Delta' \cup \Lambda'}$۔
+محدود گواہی مطابق
+$\Delta \cup \Lambda$
+دا اک لامتناہی نمونہ اے،
+جیہڑا ایس مفروضے نال
+ٹکراؤندا اے کہ $\Lambda$
+صرف محدود !!{structure}s
+وچ پورا ہوندا اے۔
+\end{ex}
+}{}
+
+\end{document}

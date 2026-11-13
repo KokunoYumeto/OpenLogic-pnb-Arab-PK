@@ -1,0 +1,225 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: unique-readability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{unq}
+
+\olsection{اکّو طرح نال پڑھت}
+
+\begin{explain}
+جس طرح اسیں !!{formula}s دی تعریف کیتی اے، اوہ ضمانت
+دیندا اے کہ ہر !!{formula} دی \emph{اکّو پڑھت} ہووے؛
+یعنی !!{formula}s دے تشکیل قاعدیاں مطابق اوہنوں بناؤن
+دا بنیادی طور تے صرف اک طریقہ اے، تے اوہدی نحوی ”تعبیر“
+دا وی صرف اک طریقہ اے۔ جے ایہ نہ ہوندا، تاں مبہم
+!!{formula}s ہوندے، یعنی اوہ !!{formula}s جیہناں
+دیاں اک توں ودھ پڑھتاں یا نحوی تعبیراں ہوندیاں—ایہ صاف
+اے کہ اسیں اس توں بچنا چاہندے آں۔ پر اس توں وی
+اہم گل ایہ اے کہ ایس خاصیت دے بغیر اگلیاں
+زیادہ تر تعریفاں تے ثبوت کم نہیں کرن گے۔
+
+ایہ گل واضح کرن دا شاید سب توں چنگا طریقہ ایہ ویکھنا
+اے کہ جے اسیں !!{formula}s دے تشکیل لئی خراب قاعدے
+دتے ہوندے، جیہڑے اکّو طرح نال پڑھت دی ضمانت نہ
+دیندے، تاں کی ہوندا۔ مثال لئی، اسیں رابطیاں دے
+تشکیل قاعدیاں وچ قوساں بھل سکدے ساں؛ مثلاً اسیں
+ایہ اجازت دے سکدے ساں:
+\begin{quote}
+جے $!A$ تے $!B$، !!{formula}s نیں، تاں $!A \lif !B$ وی اے۔
+\end{quote}
+ایٹمی فارمولا $!D$ توں شروع کر کے ایہ سانوں $!D
+\lif !D$ بناؤن دی اجازت دیندا۔ ایس توں، $!D$ دے نال،
+سانوں $!D \lif !D
+\lif !D$ مل جاندا۔ پر ایہ کرن دے دو طریقے نیں:
+\begin{enumerate}
+\item اسیں $!D$ نوں $!A$ منّیئے تے $!D \lif !D$ نوں $!B$۔
+\item اسیں $!A$ نوں $!D \lif !D$ منّیئے تے $!B$،~$!D$ اے۔
+\end{enumerate}
+ایس دے مطابق !!{formula}~$!D \lif !D \lif !D$
+نوں ”پڑھن“ دے دو طریقے نیں۔ ایہ $!B
+\lif !C$ دے روپ وچ اے، جدوں $!B$، $!D$ اے تے $!C$،
+$!D \lif !D$ اے؛ پر \emph{ایہ ایس روپ وچ وی اے}:
+$!B \lif !C$، جتھے $!B$، $!D \lif !D$ اے تے $!C$
+اوہو~$!D$ اے۔
+
+جے ایہ ہووے، تاں ساڈیاں تعریفاں ہر وار کم نہیں کرن
+گیاں۔ مثال لئی، جدوں اسیں کسے فارمولے دے
+!!{main operator} دی تعریف کردے آں، تاں آکھدے آں:
+$!B \lif !C$ روپ دے فارمولے وچ !!{main operator}،
+~$\lif$ دی دکھائی گئی آمد اے۔ پر جے اسیں فارمولا $!D
+\lif !D \lif !D$ نوں اُتے دسے دو وکھرے طریقیاں نال
+$!B \lif !C$ دے روپ وچ رکھ سکدے آں، تاں پہلی
+صورت وچ $\lif$ دی پہلی آمد !!{main operator} بنے گی
+تے دوجی صورت وچ دوجی آمد۔ پر ساڈا مقصد
+!!{main operator} نوں !!{formula} دا اک \emph{فنکشن}
+% PNB-SYN-006: اگلی main-operator تعریف مطابق ایٹمی فارمولیاں دا مرکزی عامل نہیں؛ضمنی غیرایٹمی دائرہ صاف۔
+منّنا اے؛ یعنی ہر غیر ایٹمی !!{formula} وچ !!{main
+  operator} دی ٹھیک اک آمد ہونی چاہیدی اے۔
+\end{explain}
+
+\begin{lem}
+!!a{formula}~$!A$ وچ کھبیاں تے سجیاں قوساں دی
+گنتی برابر اے۔
+\end{lem}
+
+\begin{proof}
+اسیں ایہ $!A$ دی تشکیل اُتے استقرا نال ثابت کردے آں۔
+ایس لئی دو گلاں چاہیدیاں نیں: (الف) پہلاں ثابت کریے
+کہ سارے ایٹمی فارمولیاں وچ متعلقہ خاصیت اے
+(استقرا دی بنیاد)۔ (ب) فیر ثابت کریے کہ جدوں دتے
+فارمولیاں توں نویں فارمولے بنائے جان، تاں جے پرانیاں
+وچ خاصیت اے، نویاں وچ وی ہووے۔
+
+$l(!A)$ نوں کھبیاں قوساں دی گنتی تے $r(!A)$ نوں
+~$!A$ وچ سجیاں قوساں دی گنتی منّو؛ ایس طرح
+$l(t)$ تے $r(t)$، ٹرم~$t$ وچ کھبیاں تے سجیاں
+قوساں دی گنتی نیں۔
+
+\begin{prob}
+    ہر ٹرم~$t$ لئی $l(t) = r(t)$ ثابت کرو۔
+\end{prob}
+
+\begin{enumerate}
+\tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\indfrm$ وچ $0$ کھبیاں تے $0$
+    سجیاں قوساں نیں۔}}{}
+
+\tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\indfrm$ وچ $0$ کھبیاں تے $0$
+    سجیاں قوساں نیں۔}}{}
+
+\item \indcase{!A}{\Atom{R}{t_1,\dots,t_n}}{$l(\indfrm) = 1 + l(t_1) +
+  \dots + l(t_n) = 1 + r(t_1) + \dots + r(t_n) = r(\indfrm)$۔ ایتھے
+  اسیں اوہ گل ورتدے آں جیہڑی مشق لئی چھڈی گئی اے:
+  $l(t) = r(t)$، ہر ٹرم~$t$ لئی۔}
+
+\item \indcase{!A}{\eq[t_1][t_2]}{$l(\indfrm) = l(t_1) + l(t_2) =
+  r(t_1) + r(t_2) = r(\indfrm)$۔}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{استقرائی مفروضے نال
+    $l(!B) = r(!B)$۔ اس لئی $l(\indfrm) = l(!B) = r(!B) =
+    r(\indfrm)$۔}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{استقرائی مفروضے نال $l(!B) =
+  r(!B)$ تے $l(!C) = r(!C)$۔ اس لئی $l(\indfrm) = 1 + l(!B) + l(!C) =
+  1 + r(!B) + r(!C) = r(\indfrm)$۔}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{استقرائی
+    مفروضے نال $l(!B) = r(!B)$۔ اس لئی $l(\indfrm) = l(!B) = r(!B) =
+    r(\indfrm)$۔}}{}
+
+% Print case for \lexists if prvEx and not prvAll
+\tagitem{prvAll,notprvEx}{}{\indcase{!A}{\lexists[x][!B]}{استقرائی
+    مفروضے نال $l(!B) = r(!B)$۔ اس لئی $l(\indfrm) = l(!B) = r(!B) =
+    r(\indfrm)$۔}}
+
+% Just say similarly if prvEx and prvAll
+\tagitem{notprvAll,notprvEx}{}{\indcase{!A}{\lexists[x][!B]}{ایویں ای۔}}
+\end{enumerate}
+\end{proof}
+
+\begin{defn}[پورے توں چھوٹا مُڈھلا ٹکڑا]
+علامتاں دی لڑی $!B$، علامتاں دی لڑی~$!A$ دا
+\emph{پورے توں چھوٹا مُڈھلا ٹکڑا} اے، جے $!B$
+نال علامتاں دی اک غیر خالی لڑی جوڑ کے~$!A$ ملے۔
+\end{defn}
+
+\begin{lem}\ollabel{lem:no-prefix}
+جے $!A$، !!a{formula} اے تے $!B$، $!A$ دا
+پورے توں چھوٹا مُڈھلا ٹکڑا اے، تاں $!B$،
+!!a{formula} نہیں اے۔
+\end{lem}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][unq]{lem:no-prefix} ثابت کرو۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:unique-atomic}
+جے $!A$ ایٹمی !!{formula} اے، تاں اوہ ہیٹھ
+دیتیاں شرطاں وچوں ٹھیک اک شرط پوری کردا اے۔
+\begin{enumerate}
+\tagitem{prvFalse}{$!A \ident \lfalse$۔}{}
+\tagitem{prvTrue}{$!A \ident \ltrue$۔}{}
+\item $!A \ident \Atom{R}{t_1,\dots,t_n}$، جتھے $R$ اک $n$-مقامی
+  !!{predicate} اے، $t_1$, \dots, $t_n$ ٹرم نیں، تے $R$،
+  $t_1$, \dots, $t_n$ وچوں ہر اک اکّو طرح متعین اے۔
+\item $!A \ident \eq[t_1][t_2]$، جتھے $t_1$ تے $t_2$
+  اکّو طرح متعین ٹرم نیں۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][unq]{prop:unique-atomic} ثابت کرو (اشارہ:
+ٹرماں لئی \olref[fol][syn][unq]{lem:no-prefix} دا اک روپ
+بیان کرو تے ثابت کرو۔)
+\end{prob}
+
+\begin{prop}[اکّو طرح نال پڑھت]
+ہر !!{formula} ہیٹھ دیتیاں شرطاں وچوں ٹھیک اک
+شرط پوری کردا اے۔
+\begin{enumerate}
+\item $!A$ ایٹمی اے۔
+
+\tagitem{prvNot}{$!A$، $\lnot !B$ دے روپ وچ اے۔}{}
+
+\tagitem{prvAnd}{$!A$، $(!B \land !C)$ دے روپ وچ اے۔}{}
+
+\tagitem{prvOr}{$!A$، $(!B \lor !C)$ دے روپ وچ اے۔}{}
+
+\tagitem{prvIf}{$!A$، $(!B \lif !C)$ دے روپ وچ اے۔}{}
+
+\tagitem{prvIff}{$!A$، $(!B \liff !C)$ دے روپ وچ اے۔}{}
+
+\tagitem{prvAll}{$!A$، $\lforall[x][!B]$ دے روپ وچ اے۔}{}
+
+\tagitem{prvEx}{$!A$، $\lexists[x][!B]$ دے روپ وچ اے۔}{}
+\end{enumerate}
+ہور ایہ کہ ہر صورت وچ $!B$، یا $!B$ تے $!C$،
+اکّو طرح متعین نیں۔ ایس دا مطلب اے کہ، مثال لئی،
+وکھرے جوڑے $!B$, $!C$ تے $!B'$, $!C'$ نہیں ہو
+سکدے جیہناں لئی $!A$ دونیں روپاں وچ ہووے:
+\iftag{prvIf}{$(!B \lif !C)$ تے $(!B' \lif !C')$۔}{
+    \iftag{prvOr}{$(!B \lor !C)$ تے $(!B' \lor !C')$۔}{
+      \iftag{prvAnd}{$(!B \land !C)$ تے $(!B' \land !C')$۔}{}}}
+\end{prop}
+
+\begin{proof}
+تشکیل دے قاعدے لازمی کردے نیں کہ جے !!a{formula}
+ایٹمی نہیں، تاں اوہ کھلدی قوس~(،
+\iftag{prvNot}{$\lnot$،}{} یا مسوّر نال شروع ہووے۔
+دوجے پاسے، جیہڑا وی !!{formula} ہیٹھ دیاں
+علامتاں وچوں کسے اک نال شروع ہووے، اوہ ایٹمی
+ہووے گا: !!a{predicate}، !!a{function}، !!a{constant}\iftag{prvFalse}{، $\lfalse$}{}\iftag{prvTrue}{، $\ltrue$}{}۔
+
+اس لئی سانوں اصل وچ صرف ایہ دکھانا اے کہ جے $!A$
+اک پاسے $(!B \ast
+!C)$ دے روپ وچ اے تے دوجے پاسے $(!B' \mathbin{\ast'} !C')$،
+تاں $!B \ident
+!B'$، $!C \ident !C'$، تے $\ast = {\ast'}$۔
+
+فرض کرو $!A \ident (!B \ast !C)$ وی اے تے $!A \ident (!B'
+\mathbin{\ast'} !C')$ وی۔ تاں یا $!B \ident !B'$، یا ایہ
+نہیں۔ جے ایہ اے، تاں صاف اے کہ $\ast = {\ast'}$ تے
+$!C \ident !C'$، کیوں جے ایہ فیر $!A$ دیاں
+اوہ ذیلی لڑیاں نیں جیہڑیاں اکّو مقام توں شروع ہوندیاں
+تے اکّو لمبائی رکھدیاں نیں۔ دوجی صورت $!B \not\ident !B'$
+اے۔ کیوں جے $!B$ تے
+$!B'$ دونیں $!A$ دیاں ذیلی لڑیاں نیں تے اکّو مقام
+توں شروع ہوندیاں نیں، تاں اک دوجی دا پورے توں
+چھوٹا مُڈھلا ٹکڑا لازماً ہووے گی۔ پر ایہ
+\olref{lem:no-prefix} دے مطابق ناممکن اے۔
+\end{proof}
+
+
+\end{document}

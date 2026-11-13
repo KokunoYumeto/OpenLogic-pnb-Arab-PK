@@ -1,0 +1,93 @@
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: eta
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{eta}
+\olsection{$\eta$-روپ بدلنا}
+
+$\lambda$ ٹرماں اُتے اک ہور تعلق اے۔ \olref[fv]{sec} وچ
+اسیں $\lambd[x][(fx)]$ دی مثال ورتی سی، جیہڑا اک دلیل قبول
+کردا اے تے اوہدے اُتے $f$ لاؤندا اے۔ دوجے لفظاں وچ ایہ اوہی
+فنکشن اے جو~$f$ اے۔ $\lambd[x][(fx)]N$ تے $fN$ دوہاں دی
+تقلیل نال~$fN$ ملدا اے۔ اسیں ایس خیال نوں $\eta$-تقلیل
+تے $\eta$-وادھے نال ظاہر کردے آں۔
+
+\begin{defn}[$\eta$-سکڑاؤ، $\eredone$]
+  \ollabel{defn:beredone}
+  \emph{$\eta$-سکڑاؤ} ($\eredone$) ٹرماں اُتے سبھ توں چھوٹا
+  موافق تعلق اے جیہڑا ہِٹھلی شرط پوری کردا اے۔
+  \[
+    \lambd[x][M x] \eredone M \text{ بشرطیکہ } x \notin FV(M)
+  \]
+\end{defn}
+
+\begin{defn}[$\beta\eta$-تقلیل، $\bered$] \ollabel{defn:bered}
+  \emph{$\beta\eta$-تقلیل} ($\bered$) ٹرماں اُتے سبھ توں چھوٹا
+  انعکاسی تے تعدّی والا تعلق اے جیہدے وچ $\bredone$ تے
+  $\eredone$ شامل نیں۔ یعنی ایہدے قاعدے انعکاس تے تعدّی دے
+  قاعدے تے ایہ دو ہور قاعدے نیں۔
+  \begin{enumerate}
+  \item جے $M \bredone N$، تاں $M \bered N$۔ \ollabel{defn:bered3}
+  \item جے $M \eredone N$، تاں $M \bered N$۔ \ollabel{defn:bered4}
+  \end{enumerate}
+
+\end{defn}
+
+\begin{defn}
+  اسیں ہم ارزیتی تعلق $\equal$ نوں $\eta$-روپ بدلن دے قاعدے نال
+  ودھاؤندے آں۔
+  \[
+  \lambd[x][f x] \equal f
+  \]
+  ودھے ہوئے تعلق نوں $\equal[\eta]$ لکھدے آں۔
+\end{defn}
+
+$\eta$-ہم ارزی اہم اے، کیوں جے ایہ لامبڈا ٹرماں دی
+امتدادی برابری نال جُڑی اے۔
+
+\begin{defn}[امتدادی برابری]
+  اسیں ہم ارزیتی تعلق $\equal$ نوں (\ext) دے قاعدے نال ودھاؤندے آں۔
+  \begin{center}
+  جے $Mx \equal Nx$، تاں $M \equal N$، بشرطیکہ $x \notin FV(MN)$۔
+  \end{center}
+  ودھے ہوئے تعلق نوں $\equal[\ext]$ لکھدے آں۔
+\end{defn}
+
+موٹے طور اُتے قاعدہ ایہ آکھدا اے کہ جے دو ٹرم فنکشن
+وجوں اکّو دلیل اُتے اکّو جیہا ورتاؤ کرن، تاں اوہناں نوں
+برابر سمجھنا چاہیدا اے۔
+
+ہُن ثابت کردے آں کہ $\eta$ دا قاعدہ عین امتدادی برابری
+دیندا اے تے ایس توں ودھ کجھ نہیں دیندا۔
+
+\begin{thm}
+  $M \equal[\ext] N$ اُدوں تے صرف اُدوں اے جدوں $M \equal[\eta] N$۔
+\end{thm}
+
+\begin{proof}
+  پہلاں اسیں ثابت کردے آں کہ $\equal[\eta]$ امتدادی برابری
+  دے قاعدے ہِٹھ بند اے۔ یعنی $ext$ دا قاعدہ $\equal[\eta]$ وچ
+  کجھ ہور نہیں پاؤندا۔ ایس لئی $\equal[\eta]$ وچ $\equal[\ext]$
+  شامل اے، تے جے $M \equal[\ext] N$، تاں $M \equal[\eta] N$۔
+
+  ایہ ثابت کرن لئی کہ $\equal[\eta]$، \ext ہِٹھ بند اے،
+  دھیان دیو کہ جے کوئی $M
+  \equal N$، \ext{} دے قاعدے نال اخذ ہویا اے، تاں اوہدا
+  مفروضہ $Mx
+  \equal[\eta] Nx$ اے۔ فیر $\lambd[x][Mx]
+  \equal[\eta] \lambd[x][Nx]$ ملدا اے $\equal$ دے اک قاعدے
+  نال۔ دوہاں پاسیاں اُتے $\eta$ لاؤن نال $M \equal[\eta] N$
+  ملدا اے۔
+
+  ایس طرح ثابت کردے آں کہ $\eta$ دا قاعدہ $\equal[ext]$ وچ
+  شامل اے۔ ہر $\lambd[x][Mx]$ تے $M$ لئی، جتھے $x \notin
+  FV(M)$، ساڈے کول $(\lambd[x][Mx])x \equal[\ext] Mx$ اے۔
+  \ext{} دے قاعدے نال ایس توں $\lambd[x][Mx] \equal[\ext] M$
+  ملدا اے۔
+\end{proof}
+
+\end{document}

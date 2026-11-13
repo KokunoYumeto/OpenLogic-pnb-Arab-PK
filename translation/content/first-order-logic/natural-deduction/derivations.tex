@@ -1,0 +1,109 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{der}}
+      {\olfileid{pl}{ntd}{der}}
+
+\olsection{اخذ (\usetoken{P}{derivation})}
+
+\begin{explain}
+اسیں دس چکے آں کہ مفروضہ کیہ ہوندا اے، تے استنباط دے قاعدے وی
+دے چکے آں۔ فطری استنباط وچ !!^{derivation}s ایہناں توں
+استقرائی طور تے بنائے جاندے نیں: ہر !!{derivation} یا تاں اکیلا
+مفروضہ ہوندا اے، یا اک، دو، یا تِن !!{derivation}s دے بعد
+درست استنباط لا کے بندا اے۔
+\end{explain}
+
+\begin{defn}[!!^{derivation}]
+\Article{derivation} \emph{!!{derivation}}، !!a{sentence}~$!A$ دا
+مفروضیاں~$\Gamma$ توں اک محدود درخت اے جیہڑا !!{sentence}s دا
+بنیا ہووے تے ہِٹھ لکھیاں شرطاں پوری کردا ہووے:
+\begin{enumerate}
+\item درخت دے سب توں اُپرلے !!{sentence}s یا تاں $\Gamma$ وچ ہوندے
+  نیں یا درخت دے کسے استنباط نال !!{discharged} ہوندے نیں۔
+\item درخت دا سب توں ہِٹھلا !!{sentence}~$!A$ اے۔
+\item درخت دا ہر !!{sentence}، ہِٹھلے آخرلے جملے~$!A$ توں سوا،
+  استنباطی قاعدے دی درست ورتوں دا مقدمہ اے، تے اوس قاعدے دا نتیجہ
+  درخت وچ اوس !!{sentence} دے ٹھیک ہِٹھاں آؤندا اے۔
+\end{enumerate}
+فیر اسیں $!A$ نوں !!{derivation} دا \emph{نتیجہ} تے $\Gamma$
+نوں ایہدے !!{undischarged} مفروضے آکھدے آں۔
+
+جے $!A$ دا~$\Gamma$ توں !!a{derivation} موجود ہووے، اسیں آکھدے
+آں کہ $!A$،~$\Gamma$ توں \emph{!!{derivable}} اے، یا علامتاں وچ:
+$\Gamma \Proves
+!A$۔ جے~$!A$ دا !!a{derivation} ہووے جیہدے ہر مفروضے نوں
+!!{discharged} کیتا گیا ہووے، اسیں~$\Proves !A$ لکھدے آں۔
+\end{defn}
+
+\begin{ex}
+ہر مفروضہ اپنے آپ وچ !!a{derivation} اے۔ مثلاً $!A$ اپنے آپ وچ
+!!a{derivation} اے، تے $!B$ وی۔ اسیں ایہناں توں، مثال لئی
+$\Intro{\land}$ دا قاعدہ لا کے، نواں !!{derivation} بنا سکدے آں:
+\begin{prooftree}
+\AxiomC{$!A$}
+\AxiomC{$!B$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !B$}
+\end{prooftree}
+ایہ قاعدے عام ورتوں لئی نیں: اسیں ایہدے وچ $!A$ تے~$!B$ دی
+تھاں کوئی وی !!{sentence}s رکھ سکدے آں، مثلاً $!C$ تے~$!D$۔
+فیر نتیجہ $!C \land !D$ ہووے گا، اس لئی
+\begin{prooftree}
+\AxiomC{$!C$}
+\AxiomC{$!D$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\end{prooftree}
+اک درست !!{derivation} اے۔ یقیناً اسیں مفروضیاں دی ترتیب وی
+بدل سکدے آں: $!D$،~$!A$ والا کردار تے $!C$،~$!B$ والا
+کردار ادا کرے۔ ایس لئی
+\begin{prooftree}
+\AxiomC{$!D$}
+\AxiomC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!D \land !C$}
+\end{prooftree}
+وی اک درست !!{derivation} اے۔
+
+ہن اسیں ہور قاعدہ، مثلاً $\Intro{\lif}$، لا سکدے آں۔ ایہ
+شرطیہ نتیجہ کڈھن دی اجازت دیندا اے، تے اوہناں سارے مفروضیاں نوں
+!!{discharge} کرن دی وی جیہڑے اوس شرطیہ دے مقدم دے عین برابر ہون۔
+ایس لئی ہِٹھلے دونیں !!{derivation}s درست ہون گے:
+\begin{prooftree}
+\AxiomC{$\Discharge{!C}{1}$}
+\AxiomC{$!D$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$!C \lif (!C \land !D)$}
+\DisplayProof\bottomAlignProof
+\AxiomC{$!C$}
+\AxiomC{$\Discharge{!D}{1}$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$!D \lif (!C \land !D)$}
+\end{prooftree}
+ایہ بالترتیب وکھاندے نیں کہ $!D \Proves !C \lif (!C \land !D)$
+تے $!C \Proves !D \lif (!C \land !D)$۔
+
+یاد رکھو، مفروضے خارج کرنا اجازت اے، لازمی شرط نہیں: ساڈے لئی
+مفروضے خارج کرنا ضروری نہیں۔ خاص طور تے، جے اوہ مفروضے
+!!{derivation} وچ موجود وی نہ ہون، فیر وی اسیں قاعدہ لا سکدے آں۔
+مثلاً ہِٹھلا استنباط جائز اے، بھاویں کسے مفروضے~$!A$ نوں
+!!{discharged} کرن لئی موجود نہیں:
+\begin{prooftree}
+  \AxiomC{$!B$}
+  \DischargeRule{\Intro{\lif}}{1}
+  \UnaryInfC{$!A \lif !B$}
+\end{prooftree}
+\end{ex}
+
+\end{document}

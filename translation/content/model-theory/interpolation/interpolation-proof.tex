@@ -1,0 +1,341 @@
+% Part: model-theory
+% Chapter: interpolation
+% Section: interpolation-proof
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{int}{prf}
+
+\olsection{کریگ دا درمیانی جملے دا قضیہ}
+
+\begin{thm}[کریگ دا درمیانی جملے دا قضیہ]
+\ollabel{thm:interpol} 
+فرض کرو دتے دو فارمولے جملے نیں تے
+$\Entails !A \lif !B$، تاں اک !!a{sentence}
+$!C$ موجود اے جس لئی
+$\Entails !A \lif !C$ تے
+$\Entails !C \lif !B$، تے ہر
+!!{constant}، !!{function} تے
+!!{predicate} ($\eq$ توں علاوہ)
+جو $!C$ وچ اے، $!A$
+تے~$!B$ دوہاں وچ وی آؤندا اے۔
+!!{sentence} $!C$ نوں $!A$ تے~$!B$
+دا \emph{درمیانی جملہ (interpolant)}
+آکھیا جاندا اے۔
+\end{thm}
+
+\begin{proof}
+فرض کرو $\Lang{L}_1$، $!A$ دی زبان،
+تے $\Lang{L}_2$، $!B$ دی زبان اے۔
+$\Lang{L}_0 = \Lang{L}_1 \cap \Lang{L}_2$
+رکھو۔ ہر $i \in \{0, 1, 2 \}$ لئی
+$\Lang{L}'_i$، $\Lang{L}_i$ وچ
+لامتناہی نویں !!{constant}s $\Obj c_0,
+\Obj c_1, \Obj c_2, \dots$ شامل کرکے بناؤ۔
+
+جے $!A$ پورا ہون جوگا نہ ہووے،
+$\lexists[x][\eq/[x][x]]$ اک درمیانی
+جملہ اے۔ جے $\lnot !B$ پورا ہون جوگا
+نہ ہووے (تے ایس لئی $!B$ منطقی طور
+اُتے معتبر ہووے)، تاں
+$\lexists[x][\eq[x][x]]$ اک درمیانی
+جملہ اے۔ سو اسیں ایہ وی فرض کر سکدے آں
+کہ $!A$ تے $\lnot !B$ دوہاں
+پورے ہون جوگے نیں۔
+
+درمیانی جملے دے قضیے دا تقابلِ نقیض
+ثابت کرن لئی فرض کرو کہ $!A$ تے
+$!B$ لئی کوئی درمیانی جملہ نہیں۔
+دوجے لفظاں وچ فرض کرو کہ $\{!A\}$
+تے $\{\lnot !B\}$،
+$\Lang{L}_0$ وچ وکھ نہ کیتے
+جا سکدے نیں۔
+
+ساڈا مقصد جوڑی $(\{ !A \}, \{\lnot!B\})$
+نوں اک ایسی غیر قابلِ تفریق جوڑی
+$(\Gamma^*, \Delta^*)$ تک ودھانا اے
+جس نوں ہور نہ ودھایا جا سکے۔
+$!A_0$، $!A_1$، $!A_2$، \dots،
+$\Lang{L}'_1$ دے !!{sentence}s دی
+گنتی وار فہرست ہون؛ تے $!B_0$،
+$!B_1$، $!B_2$، \dots،
+~$\Lang{L}'_2$ دے !!{sentence}s دی۔
+اسیں !!{sentence}s دے سیٹاں دیاں دو
+ودھدیاں سلسلیاں $(\Gamma_n, \Delta_n)$،
+$n \ge 0$ لئی، ایویں متعین کردے آں۔
+$\Gamma_0 = \{ !A\}$ تے
+$\Delta_0 = \{\lnot !B \}$ رکھو۔
+فرض کرو $(\Gamma_n, \Delta_n)$ پہلے
+توں متعین نیں؛ $\Gamma_{n+1}$ تے
+$\Delta_{n+1}$ ایویں متعین کرو:
+ہر اگلا سیٹ پچھلا سیٹ رکھدا اے؛ ہیٹھاں دتی شرط
+پوری ہووے تاں صرف دتے اضافے کرو، نہیں تاں اوہ سیٹ
+جیویں اے رہن دیو۔ گواہ لئی شامل کیتے مشترک نویں
+مستقلاں وچوں اک چنو:
+\begin{enumerate}
+\item جے $\Gamma_n \cup \{!A_n \}$ تے
+  $\Delta_n$، $\Lang{L}'_0$ وچ
+  وکھ نہ کیتے جا سکّن، تاں $!A_n$ نوں
+  $\Gamma_{n+1}$ وچ رکھو۔ ہور ایہ کہ جے
+  $!A_n$ وجودی !!{formula}
+  $\lexists[x][!S]$ ہووے، تاں ایسا نواں
+  !!{constant} $c$ چنو جو
+  $\Gamma_n$، $\Delta_n$، $!A_n$ یا
+  $!B_n$ وچ نہ آؤندا ہووے، تے
+  $\Subst{!S}{c}{x}$ نوں
+  $\Gamma_{n+1}$ وچ رکھو۔
+\item جے $\Gamma_{n+1}$ تے
+  $\Delta_n \cup \{!B_n \}$،
+  $\Lang{L}'_0$ وچ وکھ نہ کیتے جا سکّن،
+  تاں $!B_n$ نوں $\Delta_{n+1}$ وچ رکھو۔
+  ہور ایہ کہ جے $!B_n$ وجودی
+  !!{formula} $\lexists[x][!S]$ ہووے،
+  تاں ایسا نواں !!{constant} $c$
+  چنو جو $\Gamma_{n+1}$، $\Delta_n$،
+  $!A_n$ یا $!B_n$ وچ نہ آؤندا ہووے،
+  تے $\Subst{!S}{c}{x}$ نوں
+  $\Delta_{n+1}$ وچ رکھو۔
+\end{enumerate}
+آخر وچ ایہ متعین کرو:
+\begin{align*}
+  \Gamma^* & = \bigcup_{n\ge 0} \Gamma_n, & 
+  \Delta^* & = \bigcup_{n\ge 0} \Delta_n.
+\end{align*}
+ہن $n$ اُتے دوہری استقرا نال
+اسیں ثابت کر سکدے آں:
+\begin{enumerate}
+\item\ollabel{part-a} $\Gamma_n$ تے
+  $\Delta_n$، $\Lang{L}'_0$
+  وچ وکھ نہ کیتے جا سکّن؛
+\item\ollabel{part-b} $\Gamma_{n+1}$
+  تے $\Delta_n$، $\Lang{L}'_0$
+  وچ وکھ نہ کیتے جا سکّن۔
+\end{enumerate}
+\olref{part-a} دی ابتدا
+\olref[sep]{lem:sep1} توں ملدی اے۔
+\olref{part-b} لئی تین صورتاں
+وکھ کرنیاں پین گیاں:
+\begin{enumerate}
+\item جے $\Gamma_0 \cup \{!A_0 \}$
+  تے $\Delta_0$ وکھ کیتے جا سکّن،
+  تاں $\Gamma_1 = \Gamma_0$ تے
+  \olref{part-b} صرف \olref{part-a}
+  اے؛
+\item جے $\Gamma_1 = \Gamma_0 \cup\{ !A_0\}$،
+  تاں بناوٹ دے مطابق $\Gamma_1$ تے
+  $\Delta_0$ وکھ نہیں کیتے جا سکدے۔
+\item ہن اوہ صورت رہندی اے جدوں $!A_0$
+  وجودی ہووے، سو
+  $\Gamma_1 = \Gamma_0 \cup \{ \lexists[x][!S], \Subst{!S}{c}{x}
+  \}$۔ بناوٹ دے مطابق
+  $\Gamma_0 \cup \{ \lexists[x][!S]\}$
+  تے $\Delta_0$ وکھ نہیں کیتے جا سکدے؛
+  سو \olref[sep]{lem:sep2} نال
+  $\Gamma_0 \cup \{ \lexists[x][!S], \Subst{!S}{c}{x} \}$
+  تے $\Delta_0$ وی وکھ نہیں کیتے جا سکدے۔
+\end{enumerate}
+ایس نال اُتے \olref{part-a} تے
+\olref{part-b} لئی استقرا دی ابتدا
+مکمل ہوندی اے۔ ہن استقرائی قدم۔
+\olref{part-a} لئی، جے
+$\Delta_{n+1} \supseteq \Delta_n \cup \{ !B_n \}$
+تاں $\Gamma_{n+1}$ تے
+$\Delta_{n+1}$ بناوٹ دے مطابق وکھ
+نہیں کیتے جا سکدے (جے $!B_n$
+وجودی وی ہووے تاں
+\olref[sep]{lem:sep2} نال)؛ جے
+$\Delta_{n+1} = \Delta_n$ ہووے
+(کیوں جے $\Gamma_{n+1}$ تے
+$\Delta_n \cup \{!B_n\}$ وکھ کیتے
+جا سکدے نیں)، تاں
+\olref{part-b} دا استقرائی مفروضہ ورتدے
+آں۔ \olref{part-b} دے استقرائی قدم لئی،
+جے $\Gamma_{n+2} \supseteq \Gamma_{n+1} \cup
+\{!A_{n+1} \}$ تاں $\Gamma_{n+2}$
+تے $\Delta_{n+1}$ بناوٹ دے مطابق
+وکھ نہیں کیتے جا سکدے (جے $!A_{n+1}$
+وجودی وی ہووے تاں
+\olref[sep]{lem:sep2} نال)؛ تے جے
+$\Gamma_{n+2} = \Gamma_{n+1}$ ہووے،
+تاں \olref{part-a} دا ہن ثابت ہویا
+استقرائی قدم ورتدے آں۔ ایس نال
+\olref{part-a} تے \olref{part-b}
+اُتے استقرا مکمل ہوندی اے۔
+
+ایس توں $\Gamma^*$ تے $\Delta^*$
+وکھ نہیں کیتے جا سکدے؛ جے ایسا نہ
+ہووے، تاں محدود گواہی دے قضیے نال
+کوئی $n \ge 0$ ایسا ہووے گا کہ
+$\Gamma_n$ تے $\Delta_n$ نوں
+وکھ کیتا جا سکے، \olref{part-a} دے خلاف۔
+خاص طور اُتے $\Gamma^*$ تے
+$\Delta^*$ بے تضاد نیں: کیوں جے جے
+پہلا یا دوجا سیٹ متضاد ہووے، تاں
+اوہناں نوں بالترتیب
+$\lexists[x][\eq/[x][x]]$ یا
+  $\lforall[x][\eq[x][x]]$
+نال وکھ کیتا جا سکدا اے۔
+
+ہن اسیں دکھاؤندے آں کہ $\Gamma^*$،
+$\Lang{L}'_1$ وچ مکمل بے تضاد اے
+تے ایویں $\Delta^*$،
+$\Lang{L}'_2$ وچ۔ پہلے لئی فرض کرو
+کہ $!A_n \notin \Gamma^*$ تے
+$\lnot !A_n
+\notin \Gamma^*$، کسے
+$n \ge 0$ لئی۔ جے
+$!A_n \notin \Gamma^*$،
+تاں $\Gamma_n \cup \{!A_n \}$
+نوں $\Delta_n$ توں وکھ کیتا
+جا سکدا اے، تے ایس لئی کوئی
+$!C \in \Lang{L}'_0$ اے جس لئی
+دوہاں گلاں ایہ نیں:
+\begin{align*}
+  \Gamma^* & \Entails !A_n \lif !C, & 
+  \Delta^* & \Entails \lnot !C.
+\end{align*}
+ایویں جے $\lnot !A_n \notin \Gamma^*$،
+تاں کوئی $!C' \in
+\Lang{L}'_0$ اے جس لئی دوہاں گلاں:
+\begin{align*}
+  \Gamma^* & \Entails \lnot !A_n \lif !C', & 
+  \Delta^* & \Entails \lnot !C'.
+\end{align*}
+قضیاتی منطق نال
+$\Gamma^* \Entails !C \lor !C'$ تے
+$\Delta^* \Entails \lnot (!C \lor !C')$؛
+سو $!C \lor
+!C'$، $\Gamma^*$ تے $\Delta^*$
+نوں وکھ کردا اے۔ ایس ورگی دلیل
+دکھاؤندی اے کہ $\Delta^*$ وی مکمل اے۔
+
+آخر وچ اسیں دکھاؤندے آں کہ
+$\Gamma^* \cap \Delta^*$،
+$\Lang{L}'_0$ وچ مکمل بے تضاد اے۔
+ایہ ظاہر طور اُتے بے تضاد اے، کیوں
+جے ایہ بے تضاد سیٹاں دا مشترک حصہ اے۔
+مکمل پن دکھاؤن لئی $!S \in
+\Lang{L}'_0$ نوں اک جملہ من لو۔ ہن $\Gamma^*$،
+$\Lang{L'_1}
+\supseteq \Lang{L'_0}$ وچ مکمل اے،
+تے ایویں $\Delta^*$،
+$\Lang{L'_2} \supseteq \Lang{L'_0}$
+وچ۔ ایس لئی یا $!S \in \Gamma^*$
+یا $\lnot !S \in \Gamma^*$، تے
+یا $!S \in \Delta^*$ یا
+$\lnot !S \in \Delta^*$۔ جے
+$!S \in
+\Gamma^*$ تے $\lnot !S \in \Delta^*$
+تاں $!S$، $\Gamma^*$ تے
+$\Delta^*$ نوں وکھ کردا؛ تے جے
+$\lnot !S \in
+\Gamma^*$ تے $!S \in \Delta^*$
+تاں $\Gamma^*$ تے $\Delta^*$
+نوں $\lnot !S$ وکھ کردا۔ ایس لئی
+یا $!S \in
+\Gamma^* \cap \Delta^*$ یا
+$\lnot !S \in \Gamma^* \cap \Delta^*$،
+تے $\Gamma^* \cap \Delta^*$
+مکمل اے۔
+
+بناوٹ وچ ہر قبول کیتے وجودی جملے نال گواہ شامل کیتا گیا اے۔
+ہر بند ٹرم دے برابر ہون والا عنصر موجود ہون دی شرط ہمیشہ
+صادق اے؛ ودھائی زبان دی فہرست وچ ایہ شرط وی آؤندی اے
+تے اوہدے لئی شامل کیتا مشترک نواں مستقل گواہ ملدا اے۔
+سو بند ٹرماں دے برابری والے ہر طبقے دا نمائندہ ایسا مستقل اے۔
+کیوں جے $\Gamma^*$ مکمل بے تضاد تے گواہاں والا اے،
+ایس دا اک نمونہ $\Struct{M}'_1$ اے
+جس دا !!{domain} $\Domain{M'_1}$
+عین اوہناں عنصراں اُتے مشتمل اے
+جو شامل کیتے مشترک نویں !!{constant}s دی تعبیر
+$\Assign{c}{M'_1}$ نال ملدے نیں؛
+بالکل تمامیت دے قضیے دے ثبوت وانگ
+(\olref[fol][com][cth]{thm:completeness})۔
+ایویں $\Delta^*$ دا اک نمونہ
+$\Struct{M}'_2$ اے جس دا !!{domain}
+$\Domain{M'_2}$،
+شامل کیتے مشترک نویں !!{constant}s دیاں تعبیراں
+$\Assign{c}{M'_2}$ نال ملدا اے۔
+
+$\Struct{M_1}$، $\Struct{M'_1}$
+توں $\Lang{L'_1} \setminus \Lang{L'_0}$
+وچلی !!{constant}s، !!{function}s تے
+!!{predicate}s دیاں تعبیراں ہٹا کے
+بناؤ؛ تے $\Struct{M_2}$ وی ایسے طرح۔
+ایتھے نقشے دی تعریف وچ مستقل شامل کیتے مشترک نویں
+مستقلاں وچوں ورتیا جاندا اے؛ پچھلے قدم نال ایہ دوہاں
+دائریاں دے ہر عنصر نوں ناں دیندے نیں۔
+تاں نقشہ $h \colon M_1 \to M_2$
+جو $h(\Assign{c}{M'_1}) = \Assign{c}{M'_2}$
+نال متعین اے، $\Lang{L}'_0$
+وچ ہم شکلی اے، کیوں جے
+$\Gamma^* \cap \Delta^*$،
+$\Lang{L}'_0$ وچ مکمل بے تضاد اے،
+جیویں دکھایا۔ ایہ ایس لئی نکلدا
+اے کہ کوئی وی $\Lang{L}'_0$-!!{sentence}
+یا $\Gamma^*$ تے $\Delta^*$ دوہاں
+وچ اے یا کسے وچ وی نہیں: سو
+$\Assign{c}{M'_1} \in
+\Assign{P}{M'_1}$ اوہدوں تے صرف
+اوہدوں جدوں $\Atom{P}{c} \in \Gamma^*$،
+اوہدوں تے صرف اوہدوں جدوں
+$\Atom{P}{c} \in \Delta^*$، اوہدوں
+تے صرف اوہدوں جدوں
+$\Assign{c}{M'_2} \in
+\Assign{P}{M'_2}$۔ ہم شکلی دیاں
+باقی شرطاں وی ایویں ثابت کیتیاں
+جا سکدیاں نیں۔
+
+ہن اک نمونہ $\Struct{M}$،
+!!{language}
+$\Lang{L'_1} \cup \Lang{L'_2}$ لئی
+ایویں متعین کریے:
+\begin{enumerate}
+\item !!{domain} $\Domain{M}$،
+  عین $\Domain{M_2}$ اے، یعنی سارے
+  عنصر $\Assign{c}{M'_2}$ دا سیٹ؛
+\item جے !!a{predicate}~$P$،
+  $\Lang{L_2} \setminus
+  \Lang{L_1}$ وچ اے، تاں
+  $\Assign{P}{M} = \Assign{P}{M'_2}$؛
+\item جے محمول $P$،
+  $\Lang{L}_1\setminus \Lang{L}_2$
+  وچ اے، تاں
+  $\Assign{P}{M} = h(\Assign{P}{M'_1})$،
+  یعنی $\tuple{\Assign{c_1}{M'_2}, \dots, \Assign{c_n}{M'_2}} \in
+  \Assign{P}{M}$ اوہدوں تے صرف اوہدوں
+  جدوں $\tuple{\Assign{c_1}{M'_1}, \dots,
+  \Assign{c_n}{M'_1}} \in \Assign{P}{M'_1}$۔
+\item جے !!a{predicate} $P$،
+  $\Lang{L}_0$ وچ اے، تاں
+  $\Assign{P}{M} =
+  \Assign{P}{M'_2} = h(\Assign{P}{M'_1})$۔
+\item $\Lang{L}'_1 \cup \Lang{L}'_2$
+  دے !!^{function}s، جنہاں وچ
+  !!{constant}s وی نیں، ایویں ہی
+  سمجھے جاندے نیں۔
+\end{enumerate}
+
+آخر وچ !!{formula}s اُتے استقرا
+نال دکھایا جاندا اے کہ
+$\Struct{M}$، $\Struct{M'_1}$
+نال $\Lang{L'_1}$ دے سارے
+!!{formula}s بارے، تے
+$\Struct{M'_2}$ نال
+$\Lang{L'_2}$ دے سارے
+!!{formula}s بارے متفق اے؛ پہلے مقابلے وچ ہم شکلی
+راہیں ملدیاں متغیر قدر-بندیاں، تے دوجے وچ اکو قدر-بندی
+ورتی جاندی اے۔ جملیاں لئی قدر-بندی دا فرق نہیں پیندا۔
+خاص طور اُتے
+$\Struct{M} \Entails \Gamma^* \cup \Delta^*$،
+جس توں $\Struct{M}
+\Entails !A$ تے
+$\Struct{M} \Entails \lnot!B$،
+تے $\not\Entails !A \lif !B$۔
+ایس نال کریگ دے درمیانی جملے دے
+قضیے دا ثبوت مکمل ہوندا اے۔
+\end{proof}
+
+\end{document}

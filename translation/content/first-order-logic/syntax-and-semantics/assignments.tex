@@ -1,0 +1,387 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: assignments
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{ass}
+
+\olsection{متغیر قدر بندیاں}
+
+\begin{explain}
+!!{variable} قدر بندی~$s$ \emph{ہر} متغیر نوں قدر دیندی اے---تے
+متغیر لامتناہی نیں۔ ظاہر اے کہ ایہ لازم نہیں۔ اسیں !!{variable}
+قدر بندیاں توں سارے !!{variable}s نوں قدراں دیون دا تقاضا صرف
+ایس لئی کردے آں کہ گل بہت سوکھی ہو جاندی اے۔ ٹرم~$t$ دی قدر
+تے !!a{structure} وچ !!a{formula}~$!A$ دا~$s$ دے لحاظ نال
+پورا اترنا یا نہ اترنا صرف انہاں قدراں اُتے منحصر اے جیہڑیاں
+قدر بندی~$s$،~$t$ دے !!{variable}s تے~$!A$ دے آزاد
+!!{variable}s نوں دیندی اے۔ اگلے دو قضیے ایہی گل دسدے نیں۔
+``منحصر ہون'' نوں پکا کرن لئی اسیں ثابت کردے آں کہ دو متغیر
+قدر بندیاں جے~$t$ دے سارے متغیراں اُتے متفق ہون تاں اک ہی
+قدر دیندیاں نیں؛ تے جے اوہ~$!A$ دے سارے آزاد متغیراں اُتے
+متفق ہون تاں $!A$ پہلی دے لحاظ نال اُدوں تے صرف اُدوں
+پورا اتردا اے جدوں دوجی دے لحاظ نال پورا اتردا اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:valindep}
+جے ٹرم~$t$ دے !!{variable}s، $x_1$، \dots،~$x_n$ وچوں ہون، تے
+$s_1(x_i) = s_2(x_i)$، $i = 1$، \dots،~$n$ لئی، تاں
+$\Value{t}{M}[s_1] = \Value{t}{M}[s_2]$۔
+\end{prop}
+
+\begin{proof}
+~$t$ دی پیچیدگی اُتے استقرا کردے آں۔ بنیادی صورت وچ $t$ یا
+!!a{constant} ہو سکدا اے یا~$x_1$، \dots،~$x_n$ وچوں کوئی
+متغیر۔ جے $t = c$، تاں $\Value{t}{M}[s_1] = \Assign{c}{M} =
+\Value{t}{M}[s_2]$۔ جے $t = x_i$، تاں قضیے دی مفروضہ شرط
+مطابق $s_1(x_i) = s_2(x_i)$، ایس لئی
+$\Value{t}{M}[s_1] = s_1(x_i) = s_2(x_i) = \Value{t}{M}[s_2]$۔
+
+استقرائی قدم لئی فرض کرو $t = \Atom{f}{t_1, \dots, t_k}$، تے
+دعویٰ $t_1$، \dots، $t_k$ لئی درست اے۔ فیر
+\begin{align*}
+  \Value{t}{M}[s_1] & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_1] \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_1], \dots, \Value{t_k}{M}[s_1]).
+\intertext{$j = 1$، \dots،~$k$ لئی~$t_j$ دے !!{variable}s،
+    $x_1$، \dots،~$x_n$ وچوں نیں۔ استقرائی مفروضے مطابق
+    $\Value{t_j}{M}[s_1] = \Value{t_j}{M}[s_2]$۔ ایس لئی}
+\Value{t}{M}[s_1] & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_1] \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_1], \dots, \Value{t_k}{M}[s_1]) \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_2], \dots, \Value{t_k}{M}[s_2]) \\
+  & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_2] = \Value{t}{M}[s_2].
+\end{align*}
+\end{proof}
+
+\begin{prop}\ollabel{prop:satindep}
+جے $!A$ دے آزاد !!{variable}s، $x_1$، \dots،~$x_n$ وچوں ہون، تے
+$s_1(x_i) = s_2(x_i)$، $i = 1$، \dots،~$n$ لئی، تاں
+$\Sat{M}{!A}[s_1]$ اُدوں تے صرف اُدوں جدوں $\Sat{M}{!A}[s_2]$۔
+\end{prop}
+
+\begin{proof}
+اسیں $!A$ دی پیچیدگی اُتے استقرا کردے آں۔ بنیادی صورت وچ، جدوں
+$!A$ ایٹمی ہووے، $!A$ ایہناں وچوں ہو سکدا اے:
+\iftag{prvTrue}{$\ltrue$،}{}
+\iftag{prvFalse}{$\lfalse$،}{}
+$\Atom{R}{t_1, \dots, t_k}$، جیہڑا $k$-مقامی محمول $R$ تے
+ٹرماں $t_1$، \dots،~$t_k$ نال بندا اے؛ یا $\eq[t_1][t_2]$،
+جیہڑا ٹرماں $t_1$ تے~$t_2$ نال بندا اے۔ پچھلی دو صورتاں وچ اسیں !!{biconditional}
+دی صرف اگلی سمت دکھاندے آں، کیوں جے اُلٹی سمت دا ثبوت
+متناظر اے۔
+
+\begin{enumerate}
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\Sat{M}{\indfrm}[s_1]$ تے
+    $\Sat{M}{\indfrm}[s_2]$ دونیں۔}}{}
+
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\Sat/{M}{!A}[s_1]$ تے
+    $\Sat/{M}{!A}[s_2]$ دونیں۔}}{}
+
+\item
+  \indcase{!A}{\Atom{R}{t_1, \ldots, t_k}}{فرض کرو
+    $\Sat{M}{\indfrm}[s_1]$۔ تاں
+    \[
+    \langle \Value{t_1}{M}[s_1], \ldots, \Value{t_k}{M}[s_1] \rangle
+    \in \Assign{R}{M}.
+    \]
+    $i = 1$، \dots،~$k$ لئی \olref{prop:valindep} مطابق
+    $\Value{t_i}{M}[s_1] = \Value{t_i}{M}[s_2]$۔ ایس لئی
+    % PNB-SEM-011: ٹپل دی پہلی جگہ پہلا ٹرم ای رہندا اے، چلدا اشاریہ نہیں۔
+    $\langle \Value{t_1}{M}[s_2], \ldots, \Value{t_k}{M}[s_2] \rangle
+    \in \Assign{R}{M}$، تے نتیجتاً $\Sat{M}{\indfrm}[s_2]$۔}
+\item
+  \indcase{!A}{\eq[t_1][t_2]}{فرض کرو $\Sat{M}{\indfrm}[s_1]$۔
+    تاں $\Value{t_1}{M}[s_1] = \Value{t_2}{M}[s_1]$۔ ایس لئی
+    \begin{align*}
+      \Value{t_1}{M}[s_2] & = \Value{t_1}{M}[s_1]
+      & \text{(\olref{prop:valindep} مطابق)} \\
+      & = \Value{t_2}{M}[s_1]
+      & \text{(کیوں جے $\Sat{M}{\eq[t_1][t_2]}[s_1]$)}\\
+      &= \Value{t_2}{M}[s_2]
+      & \text{(\olref{prop:valindep} مطابق)،}
+    \end{align*}
+    ایس لئی $\Sat{M}{\eq[t_1][t_2]}[s_2]$۔}
+\end{enumerate}
+
+ہُن فرض کرو کہ $\Sat{M}{!B}[s_1]$ اُدوں تے صرف اُدوں جدوں
+$\Sat{M}{!B}[s_2]$، سارے اوہناں !!{formula}s~$!B$ لئی
+جیہڑے~$!A$ نالوں گھٹ پیچیدہ نیں۔ استقرائی قدم~$!A$ دے مرکزی عامل مطابق
+صورتاں وچ ونڈیا جاندا اے۔ ہر صورت وچ اسیں !!{biconditional}
+دی صرف اگلی سمت دکھاندے آں؛ اُلٹی سمت دا ثبوت متناظر اے۔
+مسوّراں والیاں صورتاں توں چھٹ اسیں استقرائی مفروضہ ذیلی-!!{formula}s~$!B$
+اُتے لاگو کردے آں، جیہڑے~$!A$ دے نیں۔~$!B$ دے آزاد متغیر،
+~$!A$ دے آزاد متغیراں وچوں نیں۔ ایس لئی جے $s_1$ تے $s_2$،~$!A$
+دے آزاد متغیراں اُتے متفق ہون، تاں اوہ~$!B$ دے آزاد متغیراں
+اُتے وی متفق ہون گے، تے استقرائی مفروضہ~$!B$ اُتے لاگو ہووے گا۔
+
+\begin{enumerate}
+\tagitem{defNot}{}{%
+  \iftag{probNot}{%
+    \indcase!{!A}{\lnot !B}{}}{%
+    \indcase{!A}{\lnot !B}{جے $\Sat{M}{\indfrm}[s_1]$، تاں
+      $\Sat/{M}{!B}[s_1]$؛ استقرائی مفروضے مطابق
+      $\Sat/{M}{!B}[s_2]$، لہٰذا $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defAnd}{}{%
+  \iftag{probAnd}{%
+    \indcase!{!A}{!B \land !C}{}}{%
+    \indcase{!A}{!B \land !C}{جے $\Sat{M}{\indfrm}[s_1]$، تاں
+      $\Sat{M}{!B}[s_1]$ تے $\Sat{M}{!C}[s_1]$؛ استقرائی
+      مفروضے مطابق $\Sat{M}{!B}[s_2]$ تے $\Sat{M}{!C}[s_2]$۔ ایس لئی
+      $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defOr}{}{%
+  \iftag{probOr}{%
+    \indcase!{!A}{!B \lor !C}{}}{%
+    \indcase{!A}{!B \lor !C}{جے $\Sat{M}{\indfrm}[s_1]$، تاں
+      $\Sat{M}{!B}[s_1]$ یا $\Sat{M}{!C}[s_1]$۔ استقرائی مفروضے
+      مطابق $\Sat{M}{!B}[s_2]$ یا $\Sat{M}{!C}[s_2]$؛ لہٰذا
+      $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defIf}{}{%
+  \iftag{probIf}{%
+    \indcase!{!A}{!B \lif !C}{}}{%
+    \indcase{!A}{!B \lif !C}{جے $\Sat{M}{\indfrm}[s_1]$، تاں
+    $\Sat/{M}{!B}[s_1]$ یا $\Sat{M}{!C}[s_1]$۔ استقرائی مفروضے
+    مطابق $\Sat/{M}{!B}[s_2]$ یا $\Sat{M}{!C}[s_2]$؛ ایس لئی
+    $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defIff}{}{%
+  \iftag{probIff}{%
+    \indcase!{!A}{!B \liff !C}{}}{%
+    \indcase{!A}{!B \liff !C}{جے $\Sat{M}{\indfrm}[s_1]$، تاں یا تاں
+      $\Sat{M}{!B}[s_1]$ تے $\Sat{M}{!C}[s_1]$ دونیں، یا $\Sat/{M}{!B}[s_1]$ تے
+      $\Sat/{M}{!C}[s_1]$ دونیں۔ استقرائی مفروضے مطابق یا تاں
+      $\Sat{M}{!B}[s_2]$ تے $\Sat{M}{!C}[s_2]$ دونیں، یا $\Sat/{M}{!B}[s_2]$
+      تے $\Sat/{M}{!C}[s_2]$ دونیں۔ دونوں صورتاں وچ $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defEx}{}{%
+  \iftag{probEx}{%
+    \indcase!{!A}{\lexists[x][!B]}{}}{%
+    \indcase{!A}{\lexists[x][!B]}{جے $\Sat{M}{\indfrm}[s_1]$، تاں
+      کوئی $m \in \Domain{M}$ ایسا اے جیہدے لئی
+      $\Sat{M}{!B}[\Subst{s_1}{m}{x}]$۔ رکھو
+      $s_1' = \Subst{s_1}{m}{x}$ تے $s_2' =
+      \Subst{s_2}{m}{x}$۔~$!B$ دے آزاد متغیر $x_1$،
+      \dots، $x_n$ تے $x$ وچوں نیں۔ $s_1'(x_i) = s_2'(x_i)$، کیوں جے
+      $s_1'$ تے $s_2'$، $x$-بدل قدر بندیاں نیں، بالترتیب $s_1$ تے~$s_2$ دیاں،
+      تے مفروضے مطابق $s_1(x_i) = s_2(x_i)$۔
+      % PNB-SEM-018: درج متغیر مسوّر دے متغیر دے برابر وی ہو سکدا اے؛ دونوں صورتاں دی برابری صریح اے۔
+      ایہ سبب مسوّر دے متغیر توں ہور درج متغیراں لئی اے؛ جے کوئی
+      درج متغیر مسوّر دے متغیر دے برابر ہووے، تاں دوہاں وچ رکھی
+      اکّو قدر نال برابری ملدی اے۔ انہاں دی تعریف توں
+      $s_1'(x) = s_2'(x) = m$؛ $s_1'$ تے~$s_2'$ دی تعریف وچ ایہی
+      قدر رکھی گئی سی۔ فیر استقرائی
+      مفروضہ $!B$ تے $s_1'$، $s_2'$ اُتے لاگو ہوندا اے، ایس لئی
+      $\Sat{M}{!B}[s_2']$۔ ہُن چونکہ $s_2' = \Subst{s_2}{m}{x}$،
+      کوئی $m \in \Domain{M}$ ایسا اے جیہدے لئی
+      $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$، لہٰذا
+      $\Sat{M}{\indfrm}[s_2]$۔}}}
+
+\tagitem{defAll}{}{%
+  \iftag{probAll}{%
+    \indcase!{!A}{\lforall[x][!B]}{}}{%
+    \indcase{!A}{\lforall[x][!B]}{جے $\Sat{M}{\indfrm}[s_1]$، تاں ہر
+      $m \in \Domain{M}$ لئی $\Sat{M}{!B}[\Subst{s_1}{m}{x}]$۔ اسیں
+      دکھانا چاہندے آں کہ ہر $m \in \Domain{M}$ لئی
+      $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$ وی اے۔ سو کوئی وی
+      $m \in \Domain{M}$ چنو، تے
+      % PNB-SEM-012: ماخذ وچ اک غیر متعین قدر بندی دو وار بدل دی اے؛ دونوں بدل صورتاں اپنی اپنی اصل قدر بندی توں بندیاں نیں۔
+      $s_1' = \Subst{s_1}{m}{x}$ تے $s_2' =
+      \Subst{s_2}{m}{x}$ ویکھو۔ ساڈے کول $\Sat{M}{!B}[s_1']$ اے۔
+      ~ $!B$ دے آزاد متغیر $x_1$، \dots، $x_n$ تے $x$ وچوں نیں۔
+      $s_1'(x_i) = s_2'(x_i)$، کیوں جے $s_1'$ تے $s_2'$
+      $x$-بدل قدر بندیاں نیں، بالترتیب $s_1$ تے~$s_2$ دیاں، تے مفروضے مطابق
+      $s_1(x_i) = s_2(x_i)$۔ ایہ سبب مسوّر دے متغیر توں ہور
+      درج متغیراں لئی اے؛ جے کوئی درج متغیر مسوّر دے متغیر دے
+      برابر ہووے، تاں دوہاں وچ رکھی اکّو قدر نال برابری ملدی اے۔
+      تعریف توں $s_1'(x) = s_2'(x) = m$؛
+      ایہ~$s_1'$ تے~$s_2'$ نوں دتی گئی قدر اے۔ فیر استقرائی مفروضہ~$!B$
+      تے~$s_1'$، $s_2'$ اُتے لاگو ہوندا اے، تے
+      $\Sat{M}{!B}[s_2']$ ملدا اے۔ ایہ ہر $m \in \Domain{M}$ لئی اے؛
+      یعنی $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$ سارے~$m \in
+      \Domain{M}$ لئی اے۔ ایس لئی $\Sat{M}{\indfrm}[s_2]$۔}}}
+\end{enumerate}
+استقرا نال نتیجہ ملدا اے کہ $\Sat{M}{!A}[s_1]$ اُدوں تے صرف اُدوں
+جدوں $\Sat{M}{!A}[s_2]$، جے $!A$ دے آزاد !!{variable}s، $x_1$،
+\dots، $x_n$ وچوں ہون تے $s_1(x_i)=s_2(x_i)$،
+$i = 1$، \dots،~$n$ لئی۔
+\end{proof}
+
+\begin{probtag}{probNot,probOr,probAnd,probIf,probIff,probEx,probAll}
+\olref[fol][syn][ass]{prop:satindep} دا ثبوت مکمل کرو۔
+\end{probtag}
+
+\begin{explain}
+!!^{sentence}s وچ آزاد متغیر نہیں ہوندے؛ ایس لئی کوئی وی دو متغیر
+قدر بندیاں کسے وی جملے دے سارے آزاد متغیراں (جنہاں دی گنتی صفر
+اے) نوں اوہی قدراں دیندیاں نیں۔ پچھلا ثابت کیتا قضیہ ایہ دسدا اے
+کہ !!a{sentence} دا کسے ساخت وچ متغیر قدر بندی دے لحاظ نال
+پورا اترنا یا نہ اترنا اُس قدر بندی توں بالکل آزاد اے۔ اسیں ایہ
+حقیقت درج کردے آں۔ ایہی اگلی تعریف نوں جائز بناندی اے، جیہڑی
+!!a{structure} وچ !!a{sentence} دے پورا اترن لئی متغیر قدر
+بندی دا ذکر نہیں کردی۔
+\end{explain}
+
+\begin{cor}
+\ollabel{cor:sat-sentence}
+جے $!A$ اک !!a{sentence} اے تے $s$ متغیر قدر بندی اے، تاں
+$\Sat{M}{!A}[s]$ اُدوں تے صرف اُدوں جدوں
+$\Sat{M}{!A}[s']$، ہر متغیر قدر بندی~$s'$ لئی۔
+\end{cor}
+
+\begin{proof}
+  $s'$ کوئی وی متغیر قدر بندی لو۔ چونکہ $!A$ اک !!a{sentence} اے،
+  اوہدے کوئی آزاد متغیر نہیں؛ ایس لئی ہر متغیر قدر بندی~$s'$
+  بدیہی طور تے~$!A$ دے سارے آزاد متغیراں نوں اوہی قدراں دیندی
+  اے جیہڑیاں~$s$ دیندی اے۔ سو \olref{prop:satindep} دی شرط پوری
+  اے، تے $\Sat{M}{!A}[s]$ اُدوں تے صرف اُدوں جدوں
+  $\Sat{M}{!A}[s']$۔
+\end{proof}
+
+\begin{defn}
+\ollabel{defn:satisfaction}
+جے $!A$ اک !!a{sentence} اے، تاں اسیں آکھدے آں کہ
+!!a{structure}~$\Struct M$،~$!A$ نوں \emph{پورا کردی اے}،
+$\Sat{M}{!A}$، اُدوں تے صرف اُدوں جدوں
+$\Sat{M}{!A}[s]$ ہر متغیر قدر بندی~$s$ لئی۔
+\end{defn}
+
+جے $\Sat{M}{!A}$، تاں اسیں سادہ لفظاں وچ ایہ وی آکھدے آں کہ
+\emph{$!A$،~$\Struct{M}$ وچ سچ اے۔} پورا اترن دا تصور
+انفرادی !!{sentence}s توں !!{sentence}s دے سیٹاں تک فطری طور تے
+پھیل جاندا اے۔
+
+\begin{defn}
+\ollabel{defn:sat}
+جے $\Gamma$، !!{sentence}s دا سیٹ~$\Gamma$ اے، تاں اسیں
+آکھدے آں کہ !!a{structure}~$\Struct M$،~$\Gamma$ نوں
+\emph{پورا کردی اے}، $\Sat{M}{\Gamma}$، اُدوں تے صرف اُدوں
+جدوں $\Sat{M}{!A}$ ہر $!A \in \Gamma$ لئی۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:sentence-sat-true}
+  فرض کرو $\Struct{M}$ اک !!a{structure}، $!A$ اک
+  !!a{sentence} تے $s$ متغیر قدر بندی اے۔ $\Sat{M}{!A}$
+  اُدوں تے صرف اُدوں جدوں $\Sat{M}{!A}[s]$۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ass]{prop:sentence-sat-true} ثابت کرو۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:sat-quant}
+  فرض کرو $!A(x)$ وچ صرف $x$ آزاد اے، تے $\Struct M$ اک
+  !!a{structure} اے۔ فیر:
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{$\Sat{M}{\lexists[x][!A(x)]}$ اُدوں تے صرف اُدوں جدوں
+      $\Sat{M}{!A(x)}[s]$ گھٹ توں گھٹ اک متغیر قدر بندی~$s$ لئی۔}{}
+    \tagitem{prvAll}{$\Sat{M}{\lforall[x][!A(x)]}$ اُدوں تے صرف اُدوں جدوں
+      $\Sat{M}{!A(x)}[s]$ ہر متغیر قدر بندی~$s$ لئی۔}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ass]{prop:sat-quant} ثابت کرو۔
+\end{prob}
+
+\begin{prob}
+\DeclareRobustCommand{\VDash}{\mathrel{||}\joinrel\Relbar}
+فرض کرو $\Lang L$ ایسی زبان اے جیہدے وچ !!{function}s نہیں۔
+% PNB-SEM-021: تازہ ثابتہ نشان چنن لئی معیاری زبان دا لامتناہی ذخیرہ ایتھے صریح مفروضہ اے۔
+ایہ مشق ثابتہ نشاناں دا لامتناہی ذخیرہ من کے کیتی جاندی اے،
+تاں جو ہر قدم اُتے تازہ ناں چنیا جا سکے۔
+!!{structure}~$\Struct M$، !!a{constant}~$c$ تے
+$a \in \Domain M$ دتے ہون، تاں $\Struct M[a/c]$ اوہ
+!!{structure} تعریف کرو جیہڑی~$\Struct M$ ورگی اے، سوائے ایس دے
+کہ $\Assign{c}{M[a/c]} = a$۔ $\Struct M \VDash !A$،
+!!{sentence}s~$!A$ لئی ایویں تعریف کرو:
+\begin{enumerate}
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\Struct{M} \VDash \indfrm$ نہیں۔}}{}
+
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\Struct{M} \VDash \indfrm$۔}}{}
+
+\item \indcase{!A}{\Atom{R}{d_1, \dots, d_n}}{$\Struct M \VDash \indfrm$
+  اُدوں تے صرف اُدوں جدوں $\langle \Assign{d_1}{M}, \dots, \Assign{d_n}{M} \rangle \in
+  \Assign{R}{M}$۔}
+
+\item \indcase{!A}{\eq[d_1][d_2]}{$\Struct M \VDash \indfrm$ اُدوں تے صرف اُدوں جدوں
+  $\Assign{d_1}{M} = \Assign{d_2}{M}$۔}
+
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}{$\Struct{M} \VDash \indfrm$ اُدوں تے صرف اُدوں جدوں
+    $\Struct{M} \VDash {!B}$ نہ ہووے۔}}{}
+
+\tagitem{prvAnd}{%
+  \indcase{!A}{(!B \land !C)}{$\Struct{M} \VDash
+    \indfrm$ اُدوں تے صرف اُدوں جدوں $\Struct{M} \VDash!B$ تے
+    $\Struct{M} \VDash !C$ دونیں۔}}{}
+
+\tagitem{prvOr}{%
+  \indcase{!A}{(!B \lor !C)}{$\Struct{M} \VDash \indfrm$ اُدوں تے صرف اُدوں جدوں
+    $\Struct{M} \VDash !B$ یا $\Struct{M} \VDash !C$، یا دونیں۔}}{}
+
+\tagitem{prvIf}{%
+  \indcase{!A}{(!B \lif !C)}{$\Struct{M} \VDash \indfrm$ اُدوں تے صرف اُدوں جدوں
+    $\Struct {M} \VDash !B$ نہ ہووے یا $\Struct M \VDash !C$ ہووے، یا دونیں۔}}{}
+
+\tagitem{prvIff}{%
+  \indcase{!A}{(!B \liff !C)}{$\Struct{M} \VDash {\indfrm}$ اُدوں تے صرف اُدوں جدوں یا تاں
+    $\Struct{M} \VDash {!B}$ تے $\Struct{M} \VDash {!C}$ دونیں، یا
+    نہ $\Struct{M} \VDash {!B}$ ہووے نہ $\Struct{M} \VDash {!C}$۔}}{}
+
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[x][!B]}{$\Struct{M} \VDash {\indfrm}$ اُدوں تے صرف اُدوں جدوں
+    ہر $a \in \Domain{M}$ لئی $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$،
+    جے $c$،~$!B$ وچ نہ آوے۔}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[x][!B]}{$\Struct{M} \VDash
+  {\indfrm}$ اُدوں تے صرف اُدوں جدوں کوئی $a \in \Domain M$ ایسا ہووے
+  جیہدے لئی $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$، جے
+  $c$،~$!B$ وچ نہ آوے۔}}{}
+\end{enumerate}
+$x_1$، \dots، $x_n$،~$!A$ دے سارے آزاد !!{variable}s ہون؛
+$c_1$، \dots، $c_n$،~$!A$ وچ نہ آون والے ثابتہ نشان ہون؛
+انہاں تازہ ثابتہ نشاناں نوں آپس وچ وکھرا چنو؛
+$a_1$، \dots، $a_n \in \Domain M$ ہون؛ تے $s(x_i) = a_i$۔
+
+ثابت کرو کہ $\Sat{M}{!A}[s]$ اُدوں تے صرف اُدوں جدوں
+$\Struct M[a_1/c_1,\dots,a_n/c_n]
+\VDash \Subst{\Subst{!A}{c_1}{x_1}\dots}{c_n}{x_n}$۔
+
+(ایہ مسئلہ دکھاندا اے کہ پہلے درجے دی منطق لئی متغیر قدر بندیاں
+توں بغیر وی معنویات دتی جا سکدی اے۔)
+\end{prob}
+
+\begin{prob}
+فرض کرو $f$ اک یک-مقامی فنکشن نشان اے جیہڑا~$!A(x,y)$ وچ نہیں آندا۔
+% PNB-SEM-022: قدر بندی توں بغیر صدق تے سکولم بدل لئی جملہ ہون تے جائز بدل دیاں پچھلی شرطاں صریح نیں۔
+ایتھے فارمولے دے آزاد متغیر صرف دتے دوناں متغیراں وچوں نیں،
+تے دتے فنکشن ٹرم دا بدل پچھلی تعریف مطابق بدل لئی آزاد اے۔
+ثابت کرو کہ کوئی !!a{structure}~$\Struct{M}$ ایسی موجود اے جیہدے لئی
+$\Sat{M}{\lforall[x][\lexists[y][!A(x,y)]]}$، اُدوں تے صرف اُدوں
+جدوں کوئی~$\Struct M'$ ایسی موجود ہووے جیہدے لئی
+$\Sat{M'}{\lforall[x][!A(x,f(x))]}$۔
+
+(ایہ مسئلہ سکولم دے قضیے دی اک خاص صورت اے؛
+$\lforall[x][!A(x,f(x))]$ نوں
+$\lforall[x][\lexists[y][!A(x,y)]]$ دی \emph{سکولم معیاری صورت}
+آکھدے آں۔)
+\end{prob}
+
+\end{document}

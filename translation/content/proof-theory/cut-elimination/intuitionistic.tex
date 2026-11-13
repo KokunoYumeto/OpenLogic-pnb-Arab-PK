@@ -1,0 +1,65 @@
+جے $!A \ident (!B \lif !C)$، تاں $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Pi \fCenter \Lambda$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+\Cut اُتے مُکدا !!{proof}،
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\DisplayProof
+\]
+قطع !!{height} وچ~$\pi$ توں گھٹ اے۔ استقرا دا مفروضہ !!a{proof}~$\pi_1''$ دیندا اے $\Gamma, \Pi \fCenter \Delta, \Lambda, !B$ دا۔
+\Cut اُتے مُکدا !!{proof}،
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$B!, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\Cut}
+\BinaryInf$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+قطع درجے تے قطع !!{height} دوہاں وچ اوہدے قطع درجے تے !!{height} توں گھٹ اے جیہڑا~$\pi$ دا اے، سو استقرا دا مفروضہ \Log{G3c}-!!{proof}~$\pi_2'''$ دیندا اے $!B, \Gamma, \Pi, \Pi \fCenter \Delta, \Lambda,
+\Lambda$ دا۔ ہُن استقرا دا مفروضہ اوس !!{proof} اُتے لاؤ جیہڑا \Cut اُتے مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2'''$}
+\Deduce$!B, \Gamma, \Pi, \Pi \fCenter \Delta, \Lambda,
+\Lambda$
+\RightLabel{\Cut}
+\BinaryInf$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+(ایہدا قطع درجہ $< \cutr{\pi}$ اے) تاں !!a{proof} ملدا اے $\Gamma,
+\Gamma, \Pi, \Pi, \Pi \fCenter \Delta, \Lambda, \Lambda, \Lambda$ دا۔ !!{proof} $\pi'$، $\Gamma, \Pi \fCenter \Delta, \Lambda$ دا، \olref[seq][inv]{prop:G3c-cont-adm} لاؤن نال ملدا اے۔

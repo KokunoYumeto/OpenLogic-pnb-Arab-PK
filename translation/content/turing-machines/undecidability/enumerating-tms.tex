@@ -1,0 +1,166 @@
+% Part: turing-machines
+% Chapter: undecidability
+% Section: enumerating-tms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{und}{enu}
+\olsection{ٹیورنگ مشیناں دی گنتی وار فہرست}
+
+\begin{explain}
+اسی دکھا سکدے آں کہ ساریاں ٹیورنگ مشیناں دا مجموعہ !!{enumerable}
+اے۔ ایہ ایس گل توں نکلدا اے کہ ہر ٹیورنگ مشین دا محدود بیان
+دتا جا سکدا اے۔ حالتاں دا مجموعہ تے پٹی دے نشاناں دا مجموعہ
+دونوں محدود نیں۔ حالتی تبدیلی دا فنکشن $Q \times \Sigma$
+توں $Q \times \Sigma \times \{\TMleft, \TMright, \TMstay\}$
+تک اک جزوی فنکشن اے؛ ایس لئی جن محدود دلیلی جوڑیاں اُتے
+ایہ تعریف شدہ اے، اوہناں لئی ایس دیاں قدراں فہرست وچ لکھ
+کے ایہنوں وی متعین کیتا جا سکدا اے۔
+
+ایہ گل اپنی حد تک ٹھیک اے، پر اتھے اک باریک فرق اے۔ ٹیورنگ
+مشین دی تعریف نے ایس گل اُتے کوئی پابندی نہیں لائی کہ حالتاں
+دے مجموعے تے پٹی دے حروف دے !!{element}s کیہڑے ہو سکدے نیں۔
+مثلاً ہر حقیقی عدد لئی، تکنیکی طور اُتے، اک ایسی ٹیورنگ مشین
+اے جیڑی اُس عدد نوں اپنی حالت بنا لَیندی اے۔ پر مشین دا
+\emph{عمل} ایس گل توں آزاد اے کہ حالت تے حرف دے طور اُتے کیہڑیاں
+اشیا ورتیاں گئیاں نیں۔ \olref{fig:variants} وچ دتیاں دو ٹیورنگ
+مشیناں ویکھو۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (A);
+\end{tikzpicture}\\
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+  semithick]
+\tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+\node[initial,state]         (A)              {$s$};
+\node[state]         (B) [right of=A] {$h$};
+
+\path (A) edge [bend left] node {\TMtrans{A}{A}{\TMright}} (B)
+(B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+edge [bend left] node {\TMtrans{A}{A}{\TMright}} (A);
+\end{tikzpicture}
+\end{center}
+\caption{\emph{جُفت} مشین دے وکھرے روپ}
+\ollabel{fig:variants}
+\end{figure}
+ایہ دو خاکے دو مشیناں نوں ظاہر کردے نیں: $M$ دی پٹی دا
+حرفی مجموعہ $\Sigma = \{\TMendtape,\TMblank,\TMstroke\}$
+تے حالتاں دا مجموعہ $\{q_0,q_1\}$ اے؛ $M'$ دا حرفی
+مجموعہ $\Sigma' =
+\{\TMendtape,\TMblank,A\}$ تے حالات $\{s,h\}$ نیں۔ پر
+باقی ہدایات اکّو جیہیاں نیں: $M$، $n$ عدد $\TMstroke$
+نشاناں دی لڑی اُتے اُدوں تے صرف اُدوں رُکدی اے جدوں $n$ جُفت
+ہووے؛ تے $M'$، $n$ عدد $A$ نشاناں دی لڑی اُتے، اُدوں تے
+صرف اُدوں رُکدی اے جدوں $n$ جُفت ہووے۔ اسی صرف $\TMstroke$
+دا ناں بدل کے~$A$، $q_0$ دا بدل کے~$s$، تے $q_1$ دا
+بدل کے~$h$ رکھیا اے۔ ایہ مثال عام اصول دِندی اے: جے
+اک مشین دوجی توں حالتاں تے نشاناں دے ناں ایس طرح بدلݨ نال
+ملدی اے، تاں اسی اوہناں نوں اکّو جیہی سمجھ سکدے آں۔
+بلکہ اسی مشین دے نشاناں تے حالتاں نوں بس مثبت صحیح اعداد
+ہی سمجھ سکدے آں: $\sigma_0$ دی تھاں~$1$، $\sigma_1$
+دی تھاں~$2$، وغیرہ؛ $\TMendtape$ نوں~$1$، $\TMblank$
+نوں~$2$، وغیرہ۔ ایس طرح \emph{جُفت} مشین
+\olref{fig:standard-even} وچ وکھائی مشین بن جاندی اے۔
+\begin{figure}
+\[\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+  semithick]
+\tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+\node[initial,state]         (A)              {$1$};
+\node[state]         (B) [right of=A] {$2$};
+
+\path (A) edge [bend left] node {\TMtrans{3}{3}{\TMright}} (B)
+(B) edge [loop above] node {\TMtrans{2}{2}{\TMright}} (B)
+edge [bend left] node {\TMtrans{3}{3}{\TMright}} (A);
+\end{tikzpicture}
+\]
+\caption{اک \emph{معیاری} جُفت مشین}
+\ollabel{fig:standard-even}
+\end{figure}
+جس ٹیورنگ مشین دیاں حالتاں تے نشان مثبت صحیح اعداد ہون،
+اسی اوہنوں \emph{معیاری} مشین کہہ سکدے آں تے ہن توں صرف
+ایہناں مشیناں اُتے غور کر سکدے آں۔\footnote{“معیاری
+مشین” اک رائج معیاری اصطلاح نہیں۔}
+
+ساڈا مقصد ایہ دکھانا سی کہ ٹیورنگ مشیناں دا مجموعہ
+!!{enumerable} اے۔ اُپرلی گل دے پیشِ نظر ایس لئی ایہ
+دکھانا کافی اے کہ معیاری ٹیورنگ مشیناں دا مجموعہ
+!!{enumerable} اے۔ فرض کرو ساڈے کول اک معیاری مشین
+$M = \tuple{Q, \Sigma, q_0, \delta}$ اے۔ اسی مثبت صحیح
+اعداد دی اک محدود لڑی نال ایہدا بیان کِویں دیواں؟ پہلے
+حالتاں دی تعداد، فیر خود حالات، نشاناں دی تعداد، خود نشان
+تے ابتدائی حالت فہرست وچ لکھانگے۔ (چیتے رکھو کہ ایہ
+سارے مثبت صحیح اعداد نیں، کیوں جے $M$ معیاری مشین اے۔)
+ہن~$\delta$ دا کیہ کریے؟ ممکنہ آرگومنٹاں، یعنی
+$\tuple{q,\sigma}$ جوڑیاں، دا مجموعہ محدود اے، کیوں جے
+$Q$ تے~$\Sigma$ محدود نیں۔ ایس لئی~$\delta$ دی ساری
+معلومات بس اوہناں $5$-رُکنی سلسلیاں
+$\tuple{q, \sigma, q', \sigma', d}$ دی محدود فہرست اے
+جنہاں لئی $\delta(q,\sigma) = \tuple{q', \sigma', D}$
+ہووے۔ اتھے $d$ اک عدد اے جیڑا سمت~$D$ نوں کوڈ کردا
+اے (مثلاً $1$ نال~$\TMleft$، $2$ نال~$\TMright$، تے
+$3$ نال~$\TMstay$)۔
+
+ایس طرح ہر معیاری ٹیورنگ مشین دا بیان مثبت صحیح اعداد دی
+اک محدود فہرست، یعنی اک سلسلے $s_M \in
+(\PosInt)^*$، نال دتا جا سکدا اے۔ مثلاً معیاری
+\emph{جُفت} مشین نوں ایہ سلسلہ کوڈ کردا اے:
+\[
+2, \underbrace{1, 2}_Q, 3, \overbrace{1, 2, 3}^\Sigma, 1, \underbrace{1, 3, 2, 3, 2}_{\delta(1,3) = \tuple{2,3,R}}, 
+\overbrace{2, 2, 2, 2, 2}^{\delta(2,2) = \tuple{2,2,R}},
+\underbrace{2, 3, 1, 3, 2}_{\delta(2,3) = \tuple{1,3,R}}.
+\]
+\end{explain}
+
+\begin{thm}
+$\Nat$ توں~$\Nat$ تک ایسے فنکشن موجود نیں جیڑے ٹیورنگ
+مشین نال حساب نہیں ہو سکدے۔
+\end{thm}
+
+\begin{proof}
+سانوں پتا اے کہ مثبت صحیح اعداد دے محدود سلسلیاں
+~$(\PosInt)^*$ دا مجموعہ !!{enumerable} اے
+(\cref{sfr:siz:zigzag:prob:posint-star})۔ ایس توں نکلدا
+اے کہ معیاری ٹیورنگ مشیناں دے بیان، جو~$(\PosInt)^*$
+دا ذیلی مجموعہ نیں، خود وی گنتی وار فہرست بنن جوگ نیں۔
+ہر ٹیورنگ-حسابی فنکشن $\Nat$ توں~$\Nat$ تک کسے نہ
+کسے (اصل وچ کئی) ٹیورنگ مشین نال حساب ہوندا اے۔ اوس
+مشین دیاں حالتاں تے نشانیاں دے ناں مثبت صحیح اعداد
+رکھ کے، خاص طور اُتے $\TMendtape$ نوں~$1$، $\TMblank$
+نوں~$2$، تے $\TMstroke$ نوں~$3$ رکھ کے، اسی ویکھدے آں
+کہ ہر ٹیورنگ-حسابی فنکشن دا حساب اک معیاری ٹیورنگ مشین
+وی کردِی اے۔ ایس دا مطلب اے کہ $\Nat$ توں~$\Nat$ تک
+سارے ٹیورنگ-حسابی فنکشناں دا مجموعہ وی گنتی وار فہرست
+بنن جوگ اے۔
+
+دوجے پاسے، $\Nat$ توں~$\Nat$ تک سارے فنکشناں دا
+مجموعہ !!{enumerable} نہیں اے
+(\cref{sfr:siz:red:prob:nat-nat})۔ جے سارے فنکشن
+کسی نہ کسی ٹیورنگ مشین نال حساب ہو سکدے ہوندے، تاں
+اوہناں نوں حساب کرن والیاں مشیناں دے بیان فہرست وچ
+لکھ کے اسی سارے فنکشناں دی فہرست بنا سکدے ہوندے۔
+ایس لئی کجھ فنکشن ٹیورنگ مشین نال حساب نہیں ہو سکدے۔
+\end{proof}
+
+\begin{prob}
+  کی تسی ٹیورنگ مشیناں دا ایسا بیان سوچ سکدے او جس وچ
+  حالات تے حرفی نشاناں نوں صاف صاف فہرست وچ لکھن
+  دی لوڑ نہ ہووے؟ تسی “معیاری” مشین دا اپنا تصور
+  تعریف کر سکدے او، پر ایہ وی دسو کہ تہاڈے نویں معنیٰ
+  وچ ہر ٹیورنگ مشین دی حسابی کارروائی اک “معیاری”
+  مشین کیوں کر سکدی اے۔
+\end{prob}
+
+\end{document}

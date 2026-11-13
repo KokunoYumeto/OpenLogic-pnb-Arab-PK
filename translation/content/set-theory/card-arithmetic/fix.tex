@@ -1,0 +1,111 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{fix}
+\olsection{$\aleph$ دے قائم نقطے}
+
+\olref[spine][]{chap} وچ اسیں آکھیا سی کہ بدل رکھن دے اصول دا جواز دین دی لوڑ اے، کیوں جے ایہ درجہ وار سلسلے نوں خاصا اُچا کر دیندا اے۔ ہُن کجھ کارڈینل حساب کر کے اسیں سلسلے دی اُچائی دی اک نِکّی جیہی مثال دے سکدے آں۔
+
+صاف اے کہ $0 < \aleph_0$، تے $1 < \aleph_1$، تے $2 < \aleph_2$\ldots تے سچ مُچ ہر قدم اُتے وڈائی دا فرق ہور \emph{ودھدا} جاندا اے۔ سو ایہ اندازہ لاؤن نوں جی کردا اے کہ $\kappa< \aleph_\kappa$ ہر ترتیبی عدد $\kappa$ لئی۔
+
+پر $\ZFC$ منّ کے ایہ اندازہ \emph{غلط} اے۔ اصل وچ اسیں ثابت کر سکدے آں کہ \emph{$\aleph$ دے قائم نقطے} موجود نیں، یعنی ایہو جیہے کارڈینل عدد $\kappa$ جنہاں لئی $\kappa=\aleph_\kappa$۔
+
+\begin{prop}\ollabel{alephfixed}
+اک $\aleph$ دا قائم نقطہ موجود اے۔
+\end{prop}
+
+\begin{proof}
+بازگشت ورت کے ایویں تعریف کرو:
+\begin{align*}
+	\kappa_0 &= 0\\
+	\kappa_{n+1} &= \aleph_{\kappa_n}\\
+	\kappa&= \bigcup_{n < \omega}\kappa_n
+\end{align*}
+ہُن $\kappa$ اک کارڈینل عدد اے، \olref[cardinals][classing]{unioncardinalscardinal} مطابق۔ پر ہُن:
+\[
+	\kappa= \bigcup_{n < \omega} \kappa_{n+1} =
+	\bigcup_{n < \omega}\aleph_{\kappa_n} =
+	\bigcup_{\alpha < \kappa}\aleph_\alpha = \aleph_\kappa
+\]
+%	By construction, $\kappa$ is the least cardinal greater than each
+%	$\kappa_n$. So $\aleph_\kappa$ is the least cardinal greater than
+%	each $\aleph_{\kappa_n}$, and hence greater than each
+%	$\kappa_{n+1}$. But equally $\kappa$ is the least cardinal greater
+%	than each $\kappa_{n+1} = \aleph_{\kappa_n}$. So $\kappa=
+%	\aleph_\kappa$.
+\end{proof}
+
+بُولوس نے اک واری این اوس $\aleph$ دے قائم نقطے بارے مضمون لکھیا سی جیہڑا اسیں ہُن بنایا اے۔ مضمون دے مُڈھ وچ $\kappa$ دی موجودگی دسّن پچھوں اوہنے آکھیا:
+\begin{quote}
+	[$\kappa$] اوہناں لوکاں دی سمجھ مطابق جیہناں دا سیٹ نظریے نال پہلاں کوئی واسطہ نہیں پیا، \emph{خاصا وڈا} عدد اے۔ مینوں لگدا اے، اینا وڈا کہ ایہ کسے وی اوہ نظریے دے سچ اُتے سوال کھڑا کردا اے جیہدے دعویاں وچ ایہ دعویٰ وی اے کہ گھٹ توں گھٹ $\kappa$ شےواں موجود نیں۔
+	\citep[p.~257]{Boolos2000}
+\end{quote}
+تے آخر اوہنے اپنا مضمون ایہ پُچھ کے مکایا:
+\begin{quote}
+	[کی] سانوں شک اے کہ بھاویں کہانی دے مُڈھ وچ جو وی حال سی، جدوں اسیں اینی دور آ گئے آں، پہیے خالی گھیڑی کھا رہے نیں تے اسیں ہُن کسے واقعی موجود شے دا بیان نہیں سُن رہے؟
+	\citep[p.~268]{Boolos2000}
+\end{quote}
+جے اسیں واقعی «کسے وی حقیقت» توں اگے نکل گئے آں، تاں قصور سِدھا بدل رکھن دے اصول دے سر رکھنا پئے گا۔ کیوں جے ایس مسلّمے نال ای ساڈا ثبوت چلدا اے۔ ایس صورت وچ ایہ سمجھ آؤندی اے کہ بُولوس نوں کئی دہاکے پہلاں کیتے اپنے دعوے ول مُڑنا پئے گا کہ بدل رکھن دے اصول دے «کوئی ناپسند» نتیجے نہیں (\olref[replacement][extrinsic]{sec} ویکھو)۔
+
+پر کی $\kappa$ دی موجودگی اینی ماڑی گل اے؟ ایتھے رسل دے \emph{ٹرسٹرم شینڈی دے پیراڈوکس} نوں ویکھنا کم آ سکدا اے۔ ٹرسٹرم شینڈی اپنی زندگی اپنی ڈائری وچ لکھدا اے، پر اوہنوں اک دن لکھن اُتے اک سال لگدا اے۔ ہر لنگھدے سال نال ٹرسٹرم ہور پچھے رہ جاندا اے۔ اک سال پچھوں اوہنے بس اک دن لکھیا اے تے 364 دن لکھے بناں جی چکیا اے۔ دو سالاں پچھوں اوہنے بس دو دن لکھے نیں تے 728 دن لکھے بناں جی چکیا اے۔ تِن سالاں پچھوں اوہنے بس تِن دن لکھے نیں تے 1092 دن لکھے بناں جی چکیا اے \dots\footnote{لیپ سال چھڈ کے۔} فیر وی جے ٹرسٹرم \emph{امر} اے، تاں اوہ ہر دن لکھ لوے گا، کیوں جے اوہ اپنی زندگی دے $n$ ویں دن نوں اپنے $n$ ویں سال وچ لکھے گا۔ سو «سمیں دے آخر اُتے» ٹرسٹرم دی ڈائری پوری ہووے گی۔
+
+ہُن ایہ اوس خیال توں اینی وکھری کیویں اے کہ $\alpha$، $\aleph_\alpha$ توں چھوٹا اے، تے ہور تے ہور چھوٹا ہُندا جاندا اے، جدوں تک اسیں $\kappa$ تک نہیں پہنچدے؟ اوس تھاں فرق پورا ہو جاندا اے تے $\kappa
+= \aleph_\kappa$۔
+
+ایہ گل لاںبھے رکھ کے تے $\ZFC$ منّ کے، آؤ قائم نقطے بناؤن دیاں کجھ ہور دلچسپ گلاں نال باب مکائیے۔ اگلے تِن نتیجے سہج سمجھ وچ وکھاندے نیں کہ اک (غیر معمولی) نقطہ اے جتھے درجہ وار سلسلہ جِنّا اُچا اے، اِنّا ای چوڑا اے۔
+
+\begin{prop}\ollabel{bethfixed}
+اک $\beth$ دا قائم نقطہ اے، یعنی ایہو جیہا $\kappa$ کہ $\kappa=
+\beth_\kappa$۔
+\end{prop}
+
+\begin{proof}
+\olref{alephfixed} وانگ، «$\beth$» نوں «$\aleph$» دی تھاں ورت کے۔
+\end{proof}
+
+\begin{prop}\ollabel{stagesize}
+$\card{V_{\omega+\alpha}} = \beth_{\alpha}$۔ جے $\omega \ordtimes
+\omega \leq \alpha$، تاں $\card{V_\alpha} = \beth_\alpha$۔
+\end{prop}
+
+\begin{proof}
+پہلا دعویٰ لامتناہی درجیاں اُتے سادے استقرا نال نکلدا اے۔ دوجا دعویٰ نکلدا اے کیوں جے جدوں $\omega \ordtimes \omega \leq \alpha$ تاں
+$\omega + \alpha = \alpha$۔ ایہ ثابت کرن لئی اسیں \olref[ord-arithmetic][]{chap} توں ترتیبی حساب دے حقائق ورتدے آں۔ پہلاں دھیان دیو کہ $\omega \ordtimes \omega = \omega \ordtimes (1 \ordplus \omega) =
+(\omega  \ordtimes 1) \ordplus (\omega\ordtimes\omega) = \omega
+\ordplus (\omega \ordtimes \omega)$۔ ہُن جے $\omega \ordtimes \omega
+\leq \alpha$، یعنی $\alpha = (\omega\ordtimes\omega) \ordplus \beta$
+کسے $\beta$ لئی، تاں $\omega \ordplus \alpha = \omega \ordplus
+((\omega \ordtimes \omega) \ordplus \beta) = (\omega \ordplus (\omega
+\ordtimes \omega)) \ordplus \beta = (\omega \ordtimes \omega) \ordplus
+\beta = \alpha$۔
+\end{proof}
+
+\begin{cor}
+اک ایہو جیہا $\kappa$ اے کہ $\card{V_\kappa} = \kappa$۔
+\end{cor}
+
+\begin{proof}
+$\kappa$ اک $\beth$ دا قائم نقطہ ہووے، جیویں \olref{bethfixed} وچ دِتا اے۔ صاف اے کہ $\omega \ordtimes \omega < \kappa$۔ سو $\card{V_\kappa} =
+\beth_\kappa= \kappa$، \olref{stagesize} مطابق۔
+\end{proof}
+
+$V_\kappa$ توں تھلّے اینے ای مرحلے نیں جِنّے $V_\kappa$ دے !!{element}s نیں۔ سو سہج سمجھ مطابق $V_\kappa$ جِنّا اُچا اے، اِنّا ای چوڑا اے۔ ایہ ٹرسٹرم شینڈی ورگی گل اے۔ اسیں اک مرحلے توں اگلے ول \emph{ذیلی سیٹاں دے سیٹ} لے کے جاندے آں، تے ہر قدم اُتے درجہ وار سلسلہ \emph{کِتے} وڈا ہو جاندا اے۔ پر «آخر وچ»، یعنی مرحلے $\kappa$ اُتے، سلسلے دی چوڑائی اوہدی اُچائی نوں جا ملدی اے۔
+
+کوئی پُچھ سکدا اے، \emph{سلسلے دی چوڑائی اوہدی اُچائی دے برابر کِنّی واری ہُندی اے؟} جواب اے، \emph{اِنّی واری جِنّے ترتیبی عدد نیں۔} پر ایہدی تھوڑی وضاحت چاہیدی اے۔
+
+اسیں اک ٹرم $\tau$ ایویں تعریف کردے آں۔ کسے وی $A$ لئی:
+\begin{align*}
+	\tau_0(A) & \defis \card{A}\\
+	\tau_{n+1}(A) & \defis \beth_{\tau_n(A)}\\
+	\tau(A) & \defis \bigcup_{n < \omega}\tau_n(A)
+\intertext{\olref{bethfixed} وانگ، $\tau(A)$ اک $\beth$ دا قائم نقطہ اے، کسے وی $A$ لئی، تے صاف اے کہ $\card{A} < \tau(A)$۔
+سو ہُن ایہ بازگشتی تعریف ویکھو:}
+	W_0 &\defis 0\\
+	W_{\alpha + 1} & \defis \tau(W_\alpha)\\
+	W_\alpha & \defis \bigcup_{\beta < \alpha} W_\beta
+	\text{، جدوں $\alpha$ حدّی اے}
+\end{align*}
+ایہ بناوٹ سارے ترتیبی عدداں لئی تعریف کیتی اے۔ سو سہج سمجھ مطابق $W$ ترتیبی عدداں توں $\beth$ دے قائم نقطیاں ول «!!a{injection}» اے۔ تے این پہلاں وانگ، $V_{W_\alpha}$ جِنّا اُچا اے، اِنّا ای چوڑا اے، کسے وی $\alpha$ لئی۔
+
+\end{document}

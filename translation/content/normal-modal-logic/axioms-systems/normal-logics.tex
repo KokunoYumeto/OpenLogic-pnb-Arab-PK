@@ -1,0 +1,100 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: normal-logics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{nor}
+
+\olsection{نارمل امکانی منطقاں}
+
+امکانی !!{formula}s دے کجھ سیٹ ایسے نیں جیہناں نوں کسے مسلّمیاں دے سیٹ توں اخذ ہون والے !!{formula}s وجوں پچھاننا سوکھا نہیں۔ اسیں چاہندے آں کہ امکانی منطقاں کجھ خاص قاعدے پالن۔ سبھ توں پہلاں، جو کجھ اسیں کلاسیکی قضیاتی منطق وچ !!{derive} کر سکدے آں، اوہ اجے وی !!{derivable} ہونا چاہیدا اے۔ ایہ خیال رکھنا اے کہ ہُن !!{formula}s وچ
+\iftag{prvBox}{$\Box$\iftag{prvDiamond}{
+    تے~}{}}{}\iftag{prvDiamond}{$\Diamond$}{} وی آ سکدے نیں۔ ایس لئی اسیں شرط لاؤندے آں کہ امکانی منطق وچ ہمیشہ صادق فارمولیاں توں بدل نال بنیاں ساریاں مثالاں ہون، تے ایہ قاعدۂ اثباتِ مقدم تحت بند ہووے۔
+
+\begin{defn}
+  \emph{امکانی منطق} امکانی !!{formula}s دا ایسا سیٹ~$\Sigma$ اے جیہڑا
+  \begin{enumerate}
+  \item سارے ہمیشہ صادق فارمولے رکھدا اے؛
+  \item بدل تحت بند اے، یعنی جے $!A \in \Sigma$ تے
+    $!D_1$، \dots، $!D_n$، !!{formula}s نیں، تاں
+    \[
+    \SSubst{!A}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \in \Sigma,
+    \]
+  \item \emph{قاعدۂ اثباتِ مقدم} تحت بند اے، یعنی جے $!A$ تے $!A
+      \lif !B \in \Sigma$، تاں $!B \in \Sigma$۔
+  \end{enumerate}
+\end{defn}
+
+امکانی منطقاں لئی تعلقی معنیات ورتن واسطے سانوں ایہ شرط وی لاؤنی پئے گی کہ سارے امکانی نمونیاں وچ معتبر سارے !!{formula}s شامل ہون۔ پتا لگدا اے کہ ایہ شرط پوری ہو جاندی اے جے \Ax{K}\iftag{prvDiamond}{ تے~\Dual{}}{} دیاں ساریاں مثالاں
+!!{derivable} ہون، تے جدوں وی !!a{formula}~$!A$، !!{derivable} ہووے، تاں~$\Box !A$ وی۔ ایہ شرطاں پوریاں کرن والی امکانی منطق نوں \emph{نارمل} آکھدے آں۔ (غیر نارمل امکانی منطقاں وی نیں، پر عام تعلقی نمونے اوہناں لئی کافی نہیں۔)
+
+\begin{defn}
+  امکانی منطق $\Sigma$ \emph{نارمل} اے جے اوہدے وچ
+  \begin{align*}
+    \tag{\Ax{K}} & \Box(p \lif q) \lif (\Box p \lif \Box q),
+    \iftag{prvDiamond}{\\
+      \tag{\Dual} & \Diamond p \liff \lnot\Box\lnot p}{}
+  \end{align*}
+  شامل نیں، تے اوہ \emph{لازمیت دے قاعدے} تحت بند اے، یعنی جے $!A \in
+  \Sigma$، تاں $\Box !A \in \Sigma$۔
+\end{defn}
+
+دھیان دیو کہ ہمیشہ صادق لزوم اینا باریک اے کہ \emph{جہان وچ سچائی} برقرار رکھدا اے، جدکہ قاعدہ \Nec{} صرف \emph{نمونے وچ سچائی} برقرار رکھدا اے (تے ایس لئی فریم یا فریماں دی جماعت وچ منطقی اعتبار وی)۔
+
+\begin{prop}\ollabel{prop:rk}
+  ہر نارمل امکانی منطق قاعدے \RK تحت بند اے۔
+  \begin{prooftree}
+    \AxiomC{$!A_1 \lif (!A_2 \lif \cdots (!A_{n-1} \lif !A_n)\cdots)$}
+    \RightLabel{\RK}
+    \UnaryInfC{$\Box!A_1 \lif (\Box!A_2 \lif \cdots (\Box!A_{n-1}
+      \lif \Box!A_n)\cdots).$}
+  \end{prooftree}
+\end{prop}
+
+\begin{proof}
+  استقرا نال،~$n$ اُتے۔ جے $n = 1$ تاں قاعدہ \Nec ای اے، تے ہر نارمل امکانی منطق \Nec تحت بند اے۔
+
+  ہُن منّ لو نتیجہ $n-1$ لئی چلدا اے۔ اسیں وکھاؤنے آں کہ ایہ~$n$ لئی وی چلدا اے۔
+
+  منّ لو
+  \begin{align*}
+  & !A_1 \lif (!A_2 \lif \cdots (!A_{n-1} \lif !A_n)\cdots) \in \Sigma
+  \intertext{استقرائی مفروضے مطابق ساڈے کول ایہ اے}
+  & \Box!A_1 \lif (\Box!A_2 \lif \cdots \Box(!A_{n-1} \lif !A_n)\cdots)
+  \in \Sigma
+  \intertext{کیوں جے $\Sigma$ اک نارمل امکانی منطق اے، ایس وچ~$\Ax{K}$ دیاں ساریاں مثالاں نیں، خاص طور تے ایہ}
+  & \Box(!A_{n-1} \lif !A_n) \lif (\Box!A_{n-1} \lif \Box!A_n) \in \Sigma
+  \intertext{قاعدۂ اثباتِ مقدم تے ہمیشہ صادق فارمولیاں توں بدل نال بنیاں مناسب مثالاں ورت کے سانوں ایہ ملدا اے}
+  & \Box!A_1 \lif (\Box!A_2 \lif \cdots (\Box!A_{n-1}
+  \lif \Box!A_n)\cdots) \in \Sigma.
+  \end{align*}
+\end{proof}
+
+\begin{prop}\ollabel{prop:notDiamondBot}
+  ہر نارمل امکانی منطق $\Sigma$ وچ~$\lnot\Diamond\lfalse$ شامل اے۔
+\end{prop}
+
+\begin{prob}
+  \olref[nml][prf][nor]{prop:notDiamondBot} ثابت کرو۔
+\end{prob}
+
+\begin{prop}
+  منّ لو $!A_1$، \dots، $!A_n$، !!{formula}s نیں۔ فیر اک سبھ توں چھوٹی امکانی منطق $\Sigma$ اے جیہدے وچ
+  $!A_1$، \dots، $!A_n$ دیاں ساریاں مثالاں شامل نیں۔
+\end{prop}
+
+\begin{proof}
+  $!A_1$، \dots، $!A_n$ دتے ہون، تاں $\Sigma$ نوں ساریاں اوہناں نارمل امکانی منطقاں دا سانجھا حصہ متعین کرو جیہناں وچ
+  $!A_1$، \dots، $!A_n$ دیاں ساریاں مثالاں شامل نیں۔ سانجھا حصہ خالی نہیں، کیوں جے
+  $\Frm[L]$، یعنی سارے !!{formula}s دا سیٹ، ایسی اک امکانی منطق اے۔
+\end{proof}
+
+\begin{defn}
+سبھ توں چھوٹی نارمل امکانی منطق جیہدے وچ $!A_1$، \dots، $!A_n$ شامل ہون، \emph{امکانی نظام} اکھواؤندی اے تے اینوں $\Log{K} !A_1 \dots
+!A_n$ لکھدے آں۔ سبھ توں چھوٹی نارمل امکانی منطق نوں~\Log{K} لکھدے آں۔
+\end{defn}
+
+\end{document}

@@ -1,0 +1,43 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{syn}{sem}
+\olsection{معنوی تصورات}
+
+\begin{explain}
+\emph{منطقی اعتبار}، \emph{منطقی نتیجہ} تے
+\emph{پورا ہون جوگتا} دیاں تعریفاں دوجے درجے دی منطق وچ
+اوہو جیہیاں نیں جیہڑیاں پہلے درجے دی منطق وچ نیں۔ فرق ایہ
+اے کہ ہُن پورا اترن دا تعلق دوجے درجے دے !!{formula}s لئی
+ورتیدا اے۔ دوجے درجے دا
+!!{sentence} اوہ !!a{formula} اے جیہدے سارے
+متغیر پابند ہون، محمولی تے فنکشنی متغیر وی۔
+\end{explain}
+
+\begin{defn}[منطقی اعتبار]
+جملہ $!A$ \emph{معتبر} اے، $\Entails !A$،
+اُدوں تے صرف اُدوں جدوں $\Sat{M}{!A}$ ہر
+!!{structure}~$\Struct M$ لئی ہووے۔
+\end{defn}
+
+\begin{defn}[منطقی نتیجہ]
+جملیاں دے سیٹ~$\Gamma$ توں جملہ~$!A$
+\emph{منطقی طور تے نکلدا اے}، $\Gamma
+\Entails !A$، اُدوں تے صرف اُدوں جدوں ہر اوہ !!{structure}~$\Struct M$ جیہدے وچ
+$\Sat{M}{\Gamma}$ ہووے، اوہدے وچ $\Sat{M}{!A}$ وی ہووے۔
+\end{defn}
+
+\begin{defn}[پورا ہون جوگتا]
+جملیاں دا سیٹ~$\Gamma$ \emph{پورا ہون جوگا} اے
+جے $\Sat{M}{\Gamma}$ کسے
+!!{structure}~$\Struct M$ لئی ہووے۔ جے
+$\Gamma$ پورا ہون جوگا نہ ہووے، تاں اوہنوں
+\emph{پورا ہون جوگا نہیں} آکھدے نیں۔
+\end{defn}
+
+\end{document}

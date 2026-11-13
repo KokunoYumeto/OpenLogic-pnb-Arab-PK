@@ -1,0 +1,86 @@
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: language-epistemic-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{lan}
+
+\olsection{علم دی منطق دی زبان}
+
+\begin{defn}
+منّ لو $G$ فاعلاں دے نشاناں دا سیٹ اے۔ کئی فاعلاں والی علم دی منطق
+دی بنیادی زبان وچ ایہ شامل نیں:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+  \tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+  \item !!{propositional variable}s دا اک !!{denumerable}s سیٹ: $\Obj
+    p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item قضیاتی رابطے: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}۔
+  \item علم دا عامل $\Knows_a$ جتھے $a \in G$۔
+\end{enumerate}
+\end{defn}
+
+جے ساڈے نظام وچ اسیں صرف اک فاعل دا علم ویکھدے آں، تاں سیٹ~$G$
+تے وکھ وکھ فاعلاں دا حوالہ چھڈ سکدے آں۔ فیر ساڈے کول صرف بنیادی
+عامل~$\Knows$ اے۔
+
+\begin{defn}
+علم دی زبان دے \emph{!!^{formula}s} استقرا نال ایویں متعین ہوندے نیں:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ اک ایٹمی !!{formula} اے۔}{}
+
+\tagitem{prvTrue}{$\ltrue$ اک ایٹمی !!{formula} اے۔}{}
+
+\item ہر قضیاتی متغیر $\Obj p_i$ اک (ایٹمی) !!{formula} اے۔
+
+\tagitem{prvNot}{جے $!A$ اک !!a{formula} اے، تاں $\lnot !A$ وی
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ اک !!a{formula} اے۔}{}
+
+\tagitem{prvOr}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIf}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIff}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \liff !B)$
+  اک !!a{formula} اے۔}{}
+
+\item جے $!A$ اک !!a{formula} اے تے $a \in G$، تاں $\Knows_a !A$
+  اک !!a{formula} اے۔
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+جے !!a{formula}~$!A$ وچ $\Knows_a$ نہیں آؤندا، تاں اسیں اوہنوں
+\emph{امکانی عامل توں خالی} آکھدے آں۔
+
+\begin{defn}
+  عامل $\Knows$ اک فرد دا علم وکھاؤندا اے۔ $\EKnows$، جیہنوں اکثر
+  «ساریاں نوں پتا اے» پڑھدے آں، جماعت دا علم وکھاؤندا اے۔ جتھے
+  $G' \subseteq G$، اوتھے اسیں $\EKnows_{G'} !A$ نوں
+  ایہدی مختصر لکھت وجوں متعین کردے آں:
+  \[\bigwedge_{b \in G'} \Knows_b !A.\]
+\end{defn}
+
+اسیں علم دی اک ہور تگڑی صورت وی متعین کر سکدے آں، یعنی فاعلاں
+دی جماعت~$G$ وچ \emph{سانجھا علم}۔ جدوں کوئی گل کسے جماعت دے
+فاعلاں دا سانجھا علم اے، تاں جماعت دے فاعلاں دے ہر میل لئی ساریاں
+نوں پتا اے کہ اک دوجے نوں پتا اے کہ اک دوجے نوں پتا اے \dots
+تے ایہ سلسلہ چلدا رہندا اے۔ ایہ جماعت دے علم توں کِتے تگڑی شرط اے۔
+ایسے تعلقی نمونے سوکھ نال بن سکدے نیں جیہناں وچ !!a{formula} جماعت
+دا علم اے پر سانجھا علم نہیں۔ اسیں $\CKnows_G !A$ نال ایہ وکھاواں گے،
+«جماعت~$G$ وچ ایہ سانجھا علم اے کہ~$!A$۔»
+
+\end{document}

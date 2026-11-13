@@ -1,0 +1,132 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{prv}}
+      {\olfileid{pl}{ntd}{prv}}
+      
+\olsection{\usetoken{S}{derivability} تے بے تضادی (Consistency)}
+
+ہُن اسیں !!{derivability} دے تعلق دیاں کئی خاصیتاں ثابت کراں گے۔ ایہ
+اپنے آپ وچ وی دلچسپ نیں، تے ہر اک تمامیت دے قضیے دے ثبوت وچ اپنا کردار
+ادا کرے گی۔
+
+\begin{prop}\ollabel{prop:provability-contr}
+  جے $\Gamma \Proves !A$ تے $\Gamma \cup \{!A\}$ متضاد اے،
+  تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+منّ لو~$!A$ دی~$\Gamma$ توں !!{derivation}~$\delta_1$ اے، تے
+~$\lfalse$ دی $\Gamma \cup \{!A\}$ توں
+!!{derivation}~$\delta_2$ اے۔ فیر اسیں ایویں !!{derive} کر سکدے آں:
+\begin{prooftree}
+\AxiomC{$\Gamma, \Discharge{!A}{1}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot !A$}
+\AxiomC{$\Gamma$}
+\RightLabel{$\delta_1$}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\end{prooftree}
+نویں !!{derivation} وچ مفروضہ~$!A$ !!{discharged} اے، ایس لئی ایہ
+~$\Gamma$ توں !!a{derivation} اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{\lnot !A\}$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+پہلاں منّ لو $\Gamma \Proves !A$، یعنی اک
+!!a{derivation}~$\delta_0$،~$!A$ دی اے جیہدے !!{undischarged}
+مفروضے~$\Gamma$ وچ نیں۔ اس طرح اسیں $\lfalse$ دی
+$\Gamma \cup \{\lnot !A\}$ توں !!a{derivation} حاصل کردے آں:
+\begin{prooftree}
+  \AxiomC{$\lnot !A$}
+  \AxiomC{$\Gamma$}
+  \RightLabel{$\delta_0$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+\end{prooftree}
+
+ہُن منّ لو $\Gamma \cup \{\lnot !A\}$ متضاد اے، تے
+$\delta_1$ اوہدی مطابق~$\lfalse$ دی !!{derivation} اے جیہدے
+!!{undischarged} مفروضے~$\Gamma \cup \{\lnot !A\}$ وچ نیں۔
+اسیں~$!A$ دی صرف~$\Gamma$ توں !!a{derivation}،
+~$\FalseCl$ ورت کے حاصل کردے آں:
+\begin{prooftree}
+  \AxiomC{$\Gamma, \Discharge{\lnot !A}{1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$\lfalse$}
+  \RightLabel{\FalseCl}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A$}
+\end{prooftree}
+\end{proof}
+
+\begin{prob}
+ثابت کرو کہ $\Gamma \Proves \lnot !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{!A\}$
+متضاد اے۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:explicit-inc}
+  جے $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$، تاں $\Gamma$
+  متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$۔ فیر
+  اک !!a{derivation}~$\delta$،~$!A$ دی~$\Gamma$ توں اے۔
+  $\Elim{\lnot}$ قاعدے دی ایہ سادی ورتوں ویکھو:
+  \begin{prooftree}
+    \AxiomC{$\lnot !A$}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta$}
+    \DeduceC{$!A$}
+    \RightLabel{\Elim{\lnot}}
+    \BinaryInfC{$\lfalse$}
+  \end{prooftree}
+  چونکہ $\lnot !A \in \Gamma$، سارے !!{undischarged} مفروضے
+  ~$\Gamma$ وچ نیں؛ ایس لئی ایہ وکھاؤندا اے کہ $\Gamma \Proves \lfalse$۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  جے $\Gamma \cup \{!A\}$ تے $\Gamma \cup \{\lnot !A\}$ دونیں
+  متضاد نیں، تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+!!{derivation}s~$\delta_1$ تے~$\delta_2$، بالترتیب~$\lfalse$ دیاں
+  $\Gamma \cup \{ !A \}$ توں تے $\lfalse$ دیاں $\Gamma \cup \{ \lnot !A
+  \}$ توں نیں۔ فیر اسیں ایویں !!{derive} کر سکدے آں:
+\begin{prooftree}
+\AxiomC{$\Gamma, \Discharge{\lnot !A}{2}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{2}
+\UnaryInfC{$\lnot \lnot !A$}
+\AxiomC{$\Gamma, \Discharge{!A}{1}$}
+\RightLabel{$\delta_1$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot !A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\end{prooftree}
+چونکہ مفروضے $!A$ تے $\lnot !A$ دونیں !!{discharged} نیں، ایہ
+~$\lfalse$ دی صرف~$\Gamma$ توں !!a{derivation} اے۔ ایس لئی $\Gamma$
+متضاد اے۔
+\end{proof}
+
+\end{document}

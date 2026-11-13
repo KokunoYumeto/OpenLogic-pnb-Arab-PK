@@ -1,0 +1,74 @@
+% part: intuitionistic-logic
+% chapter: introduction
+% section: syntax
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{int}{syn}
+
+\olsection{وجدانیت پسند منطق دی نحو}
+
+وجدانیت پسند منطق دی نحو قضیاتی منطق والی ای اے۔ کلاسیکی
+قضیاتی منطق وچ کجھ رابطے ہور رابطیاں نال متعین ہو سکدے نیں۔
+مثلاً $!A \lif !B$ نوں $\lnot !A \lor !B$ نال، یا $!A \lor !B$
+نوں $\lnot(\lnot !A \land \lnot !B)$ نال متعین کر سکدے آں۔
+ایس لئی کلاسیکی منطق نوں پیش کرن ویلے کجھ رابطے اکثر ایہناں
+تعریفاں دی مختصر لکھت وجوں لیاندے جاندے نیں۔ وجدانیت پسند منطق
+وچ ایہ گل دو صورتاں وچ چلدی اے۔ $\lnot !A$ نوں $!A \lif \lfalse$
+دی مختصر لکھت وجوں متعین کر سکدے آں تے اکثر کردے آں۔ فیر
+$\lfalse$ دی اپنی تعریف نہیں ہونی چاہیدی!{} نالے $!A \liff !B$
+نوں کلاسیکی منطق وانگ $(!A \lif !B) \land (!B \lif !A)$
+دے طور اُتے متعین کر سکدے آں۔
+
+قضیاتی وجدانیت پسند منطق دے !!^{formula}s،
+\emph{!!{propositional variable}s} تے قضیاتی مستقل~$\lfalse$ توں
+\emph{منطقی رابطیاں} نال بندے نیں۔ ساڈے کول ایہ نیں:
+
+\begin{enumerate}
+\item !!^a{denumerable} سیٹ~$\PVar$، جیہدے !!{propositional variable}s
+  $\Obj p_0$، $\Obj p_1$، \dots نیں۔
+\item !!{falsity} لئی قضیاتی مستقل~$\lfalse$۔
+\item منطقی رابطے $\land$ (عطف)، $\lor$ (فصل)، $\lif$ (شرطیہ)۔
+\item رموزِ اوقاف، کھلدا قوس «(»، بند ہون والا قوس «)» تے کوما۔
+\end{enumerate}
+
+\begin{defn}[فارمولا]
+\ollabel{defn:formulas} قضیاتی وجدانیت پسند منطق دے
+\emph{!!{formula}s} دا سیٹ~$\Frm[L_0]$ استقرا نال ایویں متعین ہوندا اے:
+\begin{enumerate}
+\item $\lfalse$ اک ایٹمی !!{formula} اے۔
+
+\item ہر !!{propositional variable}~$\Obj p_i$ اک ایٹمی
+  !!{formula} اے۔
+
+\item جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ اک !!a{formula} اے۔
+
+\item جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  اک !!a{formula} اے۔
+
+\item جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  اک !!a{formula} اے۔
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+اُتے دتے ابتدائی رابطیاں توں علاوہ، اسیں ایہ \emph{متعین} نشان
+وی ورتدے آں، $\lnot$ (نفی) تے $\liff$ (!!{biconditional})۔
+ایہناں متعین عاملاں نال بنے فارمولے ایویں سمجھے جان:
+\begin{enumerate}
+\item $\lnot !A$، $!A \lif \lfalse$ دی مختصر لکھت اے۔
+
+\item $!A \liff !B$، $(!A \lif !B) \land (!B
+  \lif !A)$ دی مختصر لکھت اے۔
+\end{enumerate}
+
+رسمی طور اُتے $\lnot$ اک مختصر لکھت اے، پر کدی کدی اسیں
+~$\lnot$ لئی تعریف وچ صاف شقّاں تے قاعدے دیاں گے، جیویں ایہ
+ابتدائی نشان ہووے۔ ایہ زیادہ تر ایس لئی اے کہ اسیں مشق دے
+مسئلے بیان کر سکیے۔
+
+\end{document}

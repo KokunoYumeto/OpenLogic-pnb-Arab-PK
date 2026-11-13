@@ -1,0 +1,104 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{foundation}
+
+\olsection{بنیاد دا مسلّمہ}
+
+کم ہجے \emph{تقریباً} پورا اے، \emph{بالکل} پورا نہیں، کیوں جے
+$\ZFminus$ وچ کوئی گل ضمانت نہیں دیندی کہ \emph{ہر} سیٹ کسے $V_\alpha$
+وچ اے، یعنی ہر سیٹ کسے مرحلے اُتے بندا اے۔
+
+ہُن اک کافی سدھے (ریاضیاتی) مطلب وچ سانوں ایس گل دی \emph{پرواہ} نہیں
+کہ درجہ بندی توں باہر وی سیٹ نیں یا نہیں۔ (جے باہر کوئی سیٹ نیں، تاں
+اسیں اوہناں نوں چھڈ سکدے آں۔) پر اسیں سیٹ دے اپنے \emph{تصور} دا جواز
+ایس خیال نال دتا اے کہ ہر سیٹ کسے مرحلے اُتے بندا اے
+(\stageshier{} نوں \olref[z][story]{sec} وچ ویکھو)۔ سو اسیں ایہ امکان
+روکنا چاہواں گے کہ کجھ سیٹ درجہ بندی توں باہر ہون۔ ایس لئی اک نواں مسلّمہ
+شامل کرنا پئے گا جیہڑا یقینی بناوے کہ ہر سیٹ درجہ بندی وچ کِتے نہ کِتے اے۔
+
+چونکہ $V_\alpha$ والے سیٹ ساڈے مرحلے نیں، اسیں ہِیٹھلی گل نوں مسلّمہ
+بناؤن بارے سوچ سکدے آں:
+
+\begin{defish}
+\emph{باقاعدگی۔} $\forall A \exists \alpha\, A \subseteq V_\alpha$
+\end{defish}
+
+ایہ بالکل معقول طریقہ ہووے گا۔ پر اوہناں وجوہاں کر کے جیہڑیاں اگلے حصے وچ
+دساں گے، اسیں ایہدی تھاں اک ہور مسلّمہ منّاں گے:
+
+\begin{axiom}[بنیاد]
+$(\forall A \neq \emptyset)(\exists B \in A)A \cap B = \emptyset$۔
+\end{axiom}
+
+کجھ محنت نال اسیں ($\ZFminus$ وچ) وکھا سکدے آں کہ بنیاد توں باقاعدگی نکلدی اے:
+\begin{defn}
+ہر سیٹ $A$ لئی منّ لو:
+\begin{align*}
+	\text{cl}_0(A) &= A,\\
+	\text{cl}_{n+1}(A) &= \bigcup \text{cl}_n(A),\\
+	\text{trcl}(A) &= \bigcup_{n < \omega} \text{cl}_{n}(A).
+\end{align*}
+اسیں $\text{trcl}(A)$ نوں $A$ دی \emph{متعدی بندش} آکھدے آں۔
+\end{defn}
+\noindent
+’’متعدی بندش‘‘ ناں ٹھیک اے:
+\begin{prop}\ollabel{subsetoftrcl}
+$A \subseteq \trcl{A}$ تے $\trcl{A}$ اک متعدی سیٹ اے۔
+\end{prop}
+
+\begin{proof}
+ظاہر اے کہ $A = \text{cl}_0(A) \subseteq \text{trcl}(A)$۔ تے جے
+$x \in b \in \trcl{A}$، تاں $b \in \text{cl}_n(A)$ کسے $n$ لئی،
+سو $x \in \text{cl}_{n+1}(A) \subseteq \text{trcl}(A)$۔
+\end{proof}
+
+\begin{lem}\ollabel{lem:TransitiveWellFounded}
+جے $A$ متعدی سیٹ اے، تاں کوئی $\alpha$ اے جیہدے لئی $A \subseteq V_\alpha$۔
+\end{lem}
+
+\begin{proof}
+’’$\supstrict(X)$‘‘ دی تعریف \olref[ordinals][opps]{defsupstrict} توں
+یاد کر کے دو سیٹ تعریف کرو:
+\begin{align*}
+	D  &= \Setabs{x \in A}{\forall \delta\ x \nsubseteq V_\delta}\\
+	\alpha &= \supstrict\Setabs{\delta}{(\exists x \in A)
+	(x \subseteq V_\delta \land (\forall \gamma \in \delta)x \nsubseteq V_\gamma)}
+\end{align*}
+منّ لو $D = \emptyset$۔ سو جے $x \in A$، تاں کوئی $\delta$ اے
+جیہدے لئی $x \subseteq V_\delta$ تے، ترتیبی عدداں دی حُسنِ ترتیب نال،
+$(\forall \gamma \in \delta)x \nsubseteq V_\gamma$۔ ایس لئی $\delta \in \alpha$
+تے سو $x \in V_\alpha$، \olref[spine][Valphabasic]{Valphabasicprops} نال۔
+سو $A \subseteq V_{\alpha}$، جیویں سانوں چاہیدا سی۔
+
+سو $D = \emptyset$ وکھاؤنا کافی اے۔ تضاد کڈھن لئی منّ لو ایویں نہیں۔
+بنیاد نال کوئی $B \in D \subseteq A$ اے جیہدے لئی $D \cap B = \emptyset$۔
+جے $x \in B$، تاں $x \in A$، کیوں جے $A$ متعدی اے۔ تے چونکہ
+$x \notin D$، ایس لئی $\exists \delta\ x \subseteq V_\delta$۔ سو ہُن منّ لو
+\[
+	\beta = \supstrict\Setabs{\delta}{(\exists x \in b)(x \subseteq V_\delta \land (\forall \gamma < \delta)x \nsubseteq V_\gamma)}.
+\]
+پہلاں وانگ، $B \subseteq V_\beta$، جیہڑا $B \in D$ دے دعوے دے اُلٹ اے۔
+\end{proof}
+
+\begin{thm}\ollabel{zfentailsregularity}
+باقاعدگی قائم اے۔
+\end{thm}
+
+\begin{proof}
+$A$ مقرر کرو۔ ہُن $A \subseteq \trcl{A}$، \olref{subsetoftrcl} نال،
+تے ایہ متعدی اے۔ سو کوئی $\alpha$ اے جیہدے لئی
+$A \subseteq \trcl{A} \subseteq V_\alpha$، \olref{lem:TransitiveWellFounded} نال۔
+\end{proof}
+
+ایہناں نتیجیاں توں پتا لگدا اے کہ $\ZFminus$ شرطیہ
+$\emph{بنیاد}\Rightarrow\emph{باقاعدگی}$ ثابت کردا اے۔
+\olref[spine][rank]{zfminusregularityfoundation} وچ اسیں وکھاواں گے کہ
+$\ZFminus$، $\emph{باقاعدگی}\Rightarrow\emph{بنیاد}$ ثابت کردا اے۔
+سو بنیاد تے باقاعدگی ($\ZFminus$ دے لحاظ نال) \emph{ہم ارز} نیں۔
+ایہدا مطلب اے کہ $\ZFminus$ دتا ہووے، تاں اسیں بنیاد دا جواز ایہ
+ویکھ کے دے سکدے آں کہ ایہ باقاعدگی دے ہم ارز اے۔ تے باقاعدگی دا جواز
+\stageshier{} دی بنیاد اُتے سدھا دے سکدے آں۔
+
+\end{document}

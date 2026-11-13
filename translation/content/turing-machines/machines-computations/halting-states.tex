@@ -1,0 +1,119 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: halting-states
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{mac}{hal}
+\olsection{رُکّن والیاں حالتاں}
+
+\begin{explain}
+بھاویں اسی اپنی مشیناں
+لئی ایہ تعریف رکھی اے
+کہ اوہ صرف اُدوں رُکدیاں
+نیں جدوں چلاؤن لئی
+کوئی حکم نہ ہووے، ٹیورنگ
+مشیناں دی عام نمائندگی
+وچ اک خاص \emph{رُکّن
+والی حالت}~$h$ ہوندی
+اے، تے $h \in Q$ اے۔
+
+رُکّن والی حالت دا
+خیال سادا اے: جدوں
+مشین اپنا کم مکمل
+کر لیندی اے (انپٹ
+قبول کرن لئی تیار
+ہو جاوے، یا آؤٹ پٹ
+لکھ چکی ہووے)، اوہ
+حالت~$h$ وچ چلی جاندی
+اے تے اوس حالت وچ رُک جاندی اے۔
+کجھ مشیناں دیاں
+رُکّن والیاں دو حالتاں
+ہوندیاں نیں: اک انپٹ
+قبول کرن لئی تے
+دوجی انپٹ رد کرن لئی۔
+\end{explain}
+
+\begin{ex}\emph{رُکّن والیاں حالتاں}۔
+ایس خیال نوں کھولن لئی
+اسی جفت مشین نوں تھوڑھا
+بدل کے شروع کردے آں۔
+جے انپٹ دیاں لکیراں دی گنتی جفت ہووے تاں
+مشین نوں حالت~$q_0$
+وچ رُکّان دی بجائے
+اسی اک حکم ودھا سکدے
+آں جیڑا مشین نوں رُکّن
+والی حالت وچ لے جاوے۔
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial, state]         (A)                     {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below of=A] {$h$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (B)
+  	    edge node {\TMtrans{\TMblank}{\TMblank}{N}} (C)
+        (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{R}} (B)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (A);
+\end{tikzpicture}
+\]
+
+ہن مثال نوں ہور ودھائیے۔
+جدوں مشین نوں پتا لگدا اے
+کہ انپٹ دیاں لکیراں دی گنتی طاق اے،
+اوہ کدی نہیں رُکدی۔ لوپ والے حکم نوں
+رد کرن والی حالت~$r$
+تک جان والے حکم نال
+بدل کے اسی مشین وچ
+اک \emph{رد} والی حالت
+شامل کر سکدے آں۔
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)                     {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below of=A] {$h$};
+  \node[state]         (D) [below of=B] {$r$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (B)
+  	    edge node {\TMtrans{\TMblank}{\TMblank}{N}} (C)
+        (B) edge node {\TMtrans{\TMblank}{\TMblank}{N}} (D)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (A);
+\end{tikzpicture}
+\]
+\end{ex}
+
+\begin{explain}
+ایہو جہیاں صورتاں وچ
+خاص رُکّن والی حالت
+شامل کرنی فائدہ مند
+ہو سکدی اے، کیوں جے
+ایس نال صاف پتا لگدا
+اے کہ مشین کدوں کسے
+انپٹ نوں قبول یا رد
+کردی اے۔ پر ایہ گل
+یاد رکھنی ضروری اے
+کہ خاص رُکّن والی
+حالت ودھاؤن نال مشین
+دی حساب کرن دی طاقت
+نہیں ودھدی۔ ایس طرح
+رُکّن دے گھٹ رسمی
+خیال دے وی اپنے فائدے
+نیں۔ ایس باب وچ ہن
+تک ورتی گئی رُکّن
+دی تعریف نال
+\emph{رُکّن دے مسئلے}
+بارے ثبوت سمجھنا تے
+وکھانا سوکھا ہو جاندا اے۔ ایس
+لئی اسی اپنی اصل
+تعریف ہی ورتدے رہندے
+آں۔
+\end{explain}
+
+\end{document}

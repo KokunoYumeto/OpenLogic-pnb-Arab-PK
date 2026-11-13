@@ -1,0 +1,45 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{int}
+
+\olsection{جان پہچان}
+
+!!^{tableau}s، !!{signed
+  formula}s دے خاص (ہِٹھاں ول شاخاں کڈھن والے) درخت نیں، یعنی اوہناں جوڑیاں دے درخت جیہناں وچ صداقتی قدر دا نشان ($\True$ یا
+$\False$) تے اک !!a{sentence} ہوندے نیں۔
+\[
+\sFmla{\True}{!A} \text{ یا } \sFmla{\False}{!A}.
+\]
+!!^a{tableau} کجھ \emph{مفروضیاں} نال شروع ہوندا اے۔ ہر اگلا
+!!{signed formula} کسے استنباطی قاعدے نوں لا کے پیدا ہوندا اے۔ کجھ قاعدے درخت دے اک سِرے اُتے اک یا ودھ !!{signed formula}s لاؤندے نیں۔ ہور دو نویں سِرے لاؤندے نیں، تے ایس نال دو شاخاں بندیاں نیں۔
+قاعدیاں توں ایسے !!{signed formula}s ملدے نیں جیہناں دا !!{formula} اوس !!{signed formula} دے فارمولے توں گھٹ پیچیدہ ہوندا اے جیہدے اُتے قاعدہ لگیا سی۔ جدوں کسے شاخ وچ $\sFmla{\True}{!A}$ تے
+$\sFmla{\False}{!A}$ دونیں ہون، تاں اوہ شاخ \emph{بند} اکھواؤندی اے۔ جے !!a{tableau} دی ہر شاخ بند اے، تاں سارا !!{tableau} بند اے۔ بند !!{tableau} اک !!a{derivation} اے جیہڑا وکھاؤندا اے کہ !!{tableau} شروع کرن لئی ورتے گئے !!{signed formula}s دا سیٹ اکٹھا پورا نہیں ہو سکدا۔ ایس نال $\Proves$ دا تعلق متعین کر سکدے آں۔
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں کوئی ایسا محدود سیٹ~$\Gamma_0 = \{!B_1,
+\dots, !B_n\} \subseteq \Gamma$ ہووے جیہدے لئی ہِیٹھلے مفروضیاں دا اک بند
+!!{tableau} ہووے۔
+\[
+\{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}.
+\]
+
+امکانی منطقاں لئی سانوں !!{signed
+formula} دا خیال ودھاؤنا وی پئے گا تے اوہ قاعدے شامل کرنے پین گے جیہڑے~\iftag{prvBox}{$\Box$\iftag{prvDiamond}{ تے
+    $\Diamond$}}{$\Diamond$} لئی نیں۔ نشان ($\True$ یا
+$\False$) توں علاوہ، !!{formula}s نال امکانی !!{tableau}s وچ \emph{اگیتے}~$\sigma$ وی ہوندے نیں۔ اگیتے مثبت صحیح عدداں دیاں غیر خالی لڑیاں نیں، یعنی $\sigma \in (\PosInt)^* \setminus
+\{\emptyseq\}$۔ ایسے اگیتے اسیں ارد گرد دے
+$\tuple{\ }$ توں بغیر لکھدے آں، تے وکھ وکھ !!{element}s نوں~$.$ نال وکھ کردے آں، $,$ دی تھاں۔ جے $\sigma$ اگیتا اے، تاں $\sigma.n$ دا مطلب $\sigma
+\concat \tuple{n}$ اے۔ مثلاً جے $\sigma = 1.2.1$، تاں $\sigma.3$، $1.2.1.3$ اے۔ سو مثلاً
+\[
+\sFmla{\True}{\Box !A \lif !A}[1.2]
+\]
+اک \emph{اگیتے والا !!{signed formula}} اے (مختصر طور تے \emph{اگیتے والا
+  !!{formula}})۔
+
+سیدھی سمجھ ایہ اے کہ اگیتا نمونے دے ایسے جہان دا ناں اے جیہڑا اوہ !!{formula}s پورے کر سکدا ہووے جیہڑے !!a{tableau} دی اک شاخ اُتے آئے نیں۔ تے جے $\sigma$ کسے جہان دا ناں اے، تاں $\sigma.n$ ایسے جہان دا ناں اے جیہڑا~$\sigma$ دے ناں والے جہان توں رسائی وچ اے۔
+
+\end{document}

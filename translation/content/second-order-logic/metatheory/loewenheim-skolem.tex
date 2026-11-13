@@ -1,0 +1,58 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: compactness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{met}{lst}
+
+\olsection{لووینہائم--سکولم دا قضیہ دوجے درجے دی منطق وچ لاگو نہیں ہوندا}
+
+\begin{explain}
+لووینہائم--سکولم (L\"owenheim--Skolem) دا نزولی قضیہ آکھدا اے
+کہ !!{sentence}s دے ہر اوس سیٹ دا !!a{enumerable} نمونہ وی ہوندا اے
+جیہدا کوئی لامتناہی نمونہ ہووے۔ ایہ وی تمامیت دے قضیے توں نکلدا
+اے: تمامیت دا ثبوت !!{sentence}s دے ہر بے تضاد سیٹ لئی اک نمونہ
+بناؤندا اے، تے اوہ نمونہ !!{enumerable} ہوندا اے۔ اک صعودی
+لووینہائم--سکولم قضیہ وی اے: جے !!{sentence}s دے کسے سیٹ دا
+!!a{denumerable} نمونہ ہووے، تاں اوہدا !!a{nonenumerable}
+نمونہ وی ہوندا اے۔ ایہ دوویں قضیے دوجے درجے دی منطق وچ لاگو نہیں ہوندے۔
+\end{explain}
+
+
+\begin{thm}
+\ollabel{thm:sol-no-ls} لووینہائم--سکولم دا قضیہ دوجے درجے دی منطق وچ
+لاگو نہیں ہوندا۔ ایہو جیہے !!{sentence}s
+نیں جنہاں دے لامتناہی نمونے نیں، پر کوئی !!{enumerable} نمونہ نہیں۔
+\end{thm}
+
+\begin{proof}
+یاد کرو کہ
+\[
+\fn{Count} \ident \lexists[z][\lexists[u][\lforall[X][((X(z) \land
+      \lforall[x][(X(x) \lif X(u(x)))]) \lif \lforall[x][X(x)])]]]
+\]
+!!a{structure}~$\Struct{M}$ وچ اُدوں تے صرف اُدوں درست اے جدوں
+$\Domain{M}$، !!{enumerable} ہووے۔ ایس لئی $\lnot\fn{Count}$
+ساخت~$\Struct{M}$ وچ اُدوں تے صرف اُدوں درست اے جدوں
+$\Domain{M}$، !!{nonenumerable} ہووے۔ ایہو جہیاں !!{structure}s
+موجود نیں: کسے وی !!{nonenumerable} سیٹ نوں !!{domain} بنا لو،
+مثلاً $\Pow{\Nat}$ یا~$\Real$۔ سو $\lnot \fn{Count}$ دے
+لامتناہی نمونے نیں، پر کوئی !!{enumerable} نمونہ نہیں۔
+\end{proof}
+
+\begin{thm}
+ایہو جیہے !!{sentence}s نیں جنہاں دے !!{denumerable} نمونے نیں،
+پر کوئی !!{nonenumerable} نمونہ نہیں۔
+\end{thm}
+
+\begin{proof}
+$\fn{Count} \land \fn{Inf}$، $\Nat$ وچ درست اے، پر کسے وی
+!!{structure}~$\Struct{M}$ وچ درست نہیں جدوں $\Domain{M}$،
+!!{nonenumerable} ہووے۔
+\end{proof}
+
+
+\end{document}

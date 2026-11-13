@@ -1,4 +1,4 @@
-% Punjabi Shahmukhi grammatical case for retained OpenLogic token identifiers.
+% Punjabi Shahmukhi reader labels and retained OpenLogic tokens.
 \ProvidesPackage{pnb-morphology}
 \newcommand{\pnboblique}[1]{\begingroup
   \definetoken{p}{element}{عنصراں}%
@@ -7,3 +7,180 @@
 \settexttoken{element}{عنصر}{عنصر}[عنصر][عنصر]
 \definetoken{a}{element}{}
 \definetoken{A}{element}{}
+\settexttoken{formula}{فارمولا}{فارمولے}[فارمولا][فارمولے]
+\definetoken{a}{formula}{}
+\definetoken{A}{formula}{}
+\settexttoken{sentence}{جملہ}{جملے}[جملہ][جملے]
+\definetoken{a}{sentence}{}
+\definetoken{A}{sentence}{}
+\settexttoken{constant}{ثابتہ نشان}{ثابتہ نشان}[ثابتہ نشان][ثابتہ نشان]
+\definetoken{a}{constant}{}
+\definetoken{A}{constant}{}
+\settexttoken{function}{فنکشن نشان}{فنکشن نشان}[فنکشن نشان][فنکشن نشان]
+\definetoken{a}{function}{}
+\definetoken{A}{function}{}
+\settexttoken{predicate}{محمول نشان}{محمول نشان}[محمول نشان][محمول نشان]
+\definetoken{a}{predicate}{}
+\definetoken{A}{predicate}{}
+\settexttoken{derivation}{اخذ}{اخذ}[اخذ][اخذ]
+\definetoken{a}{derivation}{}
+\definetoken{A}{derivation}{}
+\settexttoken{derive}{اخذ}{اخذ}[اخذ][اخذ]
+\settexttoken{free for}{بدل لئی آزاد}{بدل لئی آزاد}[بدل لئی آزاد][بدل لئی آزاد]
+\settexttoken{discharge}{خارج}{خارج}[خارج][خارج]
+\settexttoken{discharged}{خارج}{خارج}[خارج][خارج]
+\settexttoken{undischarged}{غیر خارج}{غیر خارج}[غیر خارج][غیر خارج]
+\definetoken{a}{undischarged}{}
+\definetoken{A}{undischarged}{}
+\settexttoken{identity}{برابری دی علامت}{برابری دیاں علامتاں}[برابری دی علامت][برابری دیاں علامتاں]
+\definetoken{a}{identity}{}
+\definetoken{A}{identity}{}
+\settexttoken{structure}{ساخت}{ساختاں}[ساخت][ساختاں]
+\definetoken{a}{structure}{}
+\definetoken{A}{structure}{}
+\settexttoken{variable}{متغیر}{متغیر}[متغیر][متغیر]
+\definetoken{a}{variable}{}
+\definetoken{A}{variable}{}
+\settexttoken{domain}{دائرہ}{دائرے}[دائرہ][دائرے]
+\definetoken{a}{domain}{}
+\definetoken{A}{domain}{}
+\settexttoken{complete}{کامل}{کامل}[کامل][کامل]
+\definetoken{a}{complete}{}
+\definetoken{A}{complete}{}
+\settexttoken{decidable}{فیصلہ کرن جوگ}{فیصلہ کرن جوگ}[فیصلہ کرن جوگ][فیصلہ کرن جوگ]
+\definetoken{a}{decidable}{}
+\definetoken{A}{decidable}{}
+\settexttoken{axiomatizable}
+  {مسلّماتی طور متعین ہون جوگ}{مسلّماتی طور متعین ہون جوگ}
+  [مسلّماتی طور متعین ہون جوگ][مسلّماتی طور متعین ہون جوگ]
+\definetoken{a}{axiomatizable}{}
+\definetoken{A}{axiomatizable}{}
+\settexttoken{axiomatizability}
+  {مسلّماتی طور متعین ہون دی اہلیت}{مسلّماتی طور متعین ہون دی اہلیت}
+  [مسلّماتی طور متعین ہون دی اہلیت][مسلّماتی طور متعین ہون دی اہلیت]
+\definetoken{a}{axiomatizability}{}
+\definetoken{A}{axiomatizability}{}
+\settexttoken{represents}{نمائندگی}{نمائندگی}[نمائندگی][نمائندگی]
+\definetoken{a}{represents}{}
+\definetoken{A}{represents}{}
+\settexttoken{enumerable}
+  {گنتی وار فہرست بنن جوگ}{گنتی وار فہرست بنن جوگ}
+  [گنتی وار فہرست بنن جوگ][گنتی وار فہرست بنن جوگ]
+\settexttoken{nonenumerable}
+  {گنتی وار فہرست نہ بنن جوگ}{گنتی وار فہرست نہ بنن جوگ}
+  [گنتی وار فہرست نہ بنن جوگ][گنتی وار فہرست نہ بنن جوگ]
+\settexttoken{denumerable}
+  {گنتی وار لامتناہی}{گنتی وار لامتناہی}
+  [گنتی وار لامتناہی][گنتی وار لامتناہی]
+\settexttoken{surjective}
+  {ہر ہدف قدر لین والا}{ہر ہدف قدر لین والے}
+  [ہر ہدف قدر لین والا][ہر ہدف قدر لین والے]
+\definetoken{a}{surjective}{}
+\definetoken{A}{surjective}{}
+\settexttoken{computably enumerable}
+  {قابلِ حساب گنتی وار فہرست بنن جوگ}
+  {قابلِ حساب گنتی وار فہرست بنن جوگ}
+  [قابلِ حساب گنتی وار فہرست بنن جوگ]
+  [قابلِ حساب گنتی وار فہرست بنن جوگ]
+\definetoken{a}{computably enumerable}{}
+\definetoken{A}{computably enumerable}{}
+
+% Preserve logical Unicode text behind the shaped Shahmukhi glyphs in XeTeX PDFs.
+\ifdefined\XeTeXgenerateactualtext
+  \XeTeXgenerateactualtext=1\relax
+\fi
+
+% Apply after OpenLogic loads the TikZ automata library.
+\AtBeginDocument{%
+  \ifdefined\tikzset
+    \pgfkeysifdefined{/tikz/initial by arrow/.@cmd}{%
+      \tikzset{initial by arrow/.append style={initial text={شروع}}}%
+    }{}%
+  \fi
+}
+\settexttoken{parameter}{پیرامیٹر}{پیرامیٹر}[پیرامیٹر][پیرامیٹر]
+\settexttoken{lambda define}
+  {لامبڈا نال متعین}{لامبڈا نال متعین کردا اے}
+  [لامبڈا نال متعین][لامبڈا نال متعین کردا اے]
+\settexttoken{lambda defined}
+  {متعین}{متعین}[متعین][متعین]
+\settexttoken{lambda definable}
+  {لامبڈا نال متعین ہون جوگ}{لامبڈا نال متعین ہون جوگ}
+  [لامبڈا نال متعین ہون جوگ][لامبڈا نال متعین ہون جوگ]
+\definetoken{a}{lambda definable}{}
+\definetoken{A}{lambda definable}{}
+\settexttoken{propositional variable}
+  {قضیاتی متغیر}{قضیاتی متغیراں}[قضیاتی متغیر][قضیاتی متغیراں]
+\definetoken{a}{propositional variable}{}
+\definetoken{A}{propositional variable}{}
+\settexttoken{valuation}{قدر بندی}{قدر بندیاں}[قدر بندی][قدر بندیاں]
+\definetoken{a}{valuation}{}
+\definetoken{A}{valuation}{}
+\settexttoken{truth}{صدق}{صدق}[صدق][صدق]
+\settexttoken{falsity}{کذب}{کذب}[کذب][کذب]
+\settexttoken{conditional}{شرطیہ}{شرطیے}[شرطیہ][شرطیے]
+\settexttoken{biconditional}{دو شرطیہ}{دو شرطیے}[دو شرطیہ][دو شرطیے]
+\definetoken{a}{truth}{}
+\definetoken{A}{truth}{}
+\definetoken{a}{falsity}{}
+\definetoken{A}{falsity}{}
+\definetoken{a}{conditional}{}
+\definetoken{A}{conditional}{}
+\definetoken{a}{biconditional}{}
+\definetoken{A}{biconditional}{}
+\settexttoken{derivable}
+  {اخذ ہون جوگ}{اخذ ہون جوگ}[اخذ ہون جوگ][اخذ ہون جوگ]
+\settexttoken{derivability}
+  {اخذ ہون دی اہلیت}{اخذ ہون دی اہلیت}[اخذ ہون دی اہلیت][اخذ ہون دی اہلیت]
+\definetoken{a}{derivable}{}
+\definetoken{A}{derivable}{}
+\definetoken{a}{derivability}{}
+\definetoken{A}{derivability}{}
+\settexttoken{language}{زبان}{زباناں}[زبان][زباناں]
+\definetoken{a}{language}{}
+\definetoken{A}{language}{}
+
+% Reader text tokens used in the translated chapters.
+\settexttoken{tableau}{تابلو}{تابلو}[تابلو][تابلو]
+\definetoken{a}{tableau}{}
+\definetoken{A}{tableau}{}
+\settexttoken{signed formula}{علامت لایا فارمولا}{علامت لائے فارمولے}[علامت لایا فارمولا][علامت لائے فارمولے]
+\definetoken{a}{signed formula}{}
+\definetoken{A}{signed formula}{}
+\settexttoken{operator}{منطقی عامل}{منطقی عاملاں}[منطقی عامل][منطقی عاملاں]
+\definetoken{a}{operator}{}
+\definetoken{A}{operator}{}
+\settexttoken{main operator}{مرکزی عامل}{مرکزی عامل}[مرکزی عامل][مرکزی عامل]
+\definetoken{a}{main operator}{}
+\definetoken{A}{main operator}{}
+\settexttoken{subformula}{ذیلی فارمولا}{ذیلی فارمولے}[ذیلی فارمولا][ذیلی فارمولے]
+\definetoken{a}{subformula}{}
+\definetoken{A}{subformula}{}
+\settexttoken{value}{قدر}{قدراں}[قدر][قدراں]
+\definetoken{a}{value}{}
+\definetoken{A}{value}{}
+\settexttoken{injective}{انجیکٹو}{انجیکٹو}[انجیکٹو][انجیکٹو]
+\definetoken{a}{injective}{}
+\definetoken{A}{injective}{}
+\settexttoken{injection}{اک بہ اک نقشہ بندی}{اک بہ اک نقشہ بندیاں}[اک بہ اک نقشہ بندی][اک بہ اک نقشہ بندیاں]
+\definetoken{a}{injection}{}
+\definetoken{A}{injection}{}
+\settexttoken{surjection}{ہر ہدف قدر لین والی نقشہ بندی}{ہر ہدف قدر لین والیاں نقشہ بندیاں}[ہر ہدف قدر لین والی نقشہ بندی][ہر ہدف قدر لین والیاں نقشہ بندیاں]
+\definetoken{a}{surjection}{}
+\definetoken{A}{surjection}{}
+\settexttoken{bijective}{بائجیکٹو}{بائجیکٹو}[بائجیکٹو][بائجیکٹو]
+\definetoken{a}{bijective}{}
+\definetoken{A}{bijective}{}
+\settexttoken{bijection}{دوطرفی نقشہ بندی}{دوطرفی نقشہ بندیاں}[دوطرفی نقشہ بندی][دوطرفی نقشہ بندیاں]
+\definetoken{a}{bijection}{}
+\definetoken{A}{bijection}{}
+\settexttoken{c.e.}{قابلِ حساب گنتی وار فہرست بنن جوگ}{قابلِ حساب گنتی وار فہرست بنن جوگ}[قابلِ حساب گنتی وار فہرست بنن جوگ][قابلِ حساب گنتی وار فہرست بنن جوگ]
+\definetoken{a}{c.e.}{}
+\definetoken{A}{c.e.}{}
+\settexttoken{nonderivability}{اخذ نہ ہو سکّن}{اخذ نہ ہو سکّن}[اخذ نہ ہو سکّن][اخذ نہ ہو سکّن]
+\definetoken{a}{nonderivability}{}
+\definetoken{A}{nonderivability}{}
+\settexttoken{axiomatized}{مسلّمیاں نال متعین}{مسلّمیاں نال متعین}[مسلّمیاں نال متعین][مسلّمیاں نال متعین]
+\definetoken{a}{axiomatized}{}
+\definetoken{A}{axiomatized}{}
+

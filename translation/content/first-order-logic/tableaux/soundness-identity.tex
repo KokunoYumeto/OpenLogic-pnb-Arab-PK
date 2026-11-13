@@ -1,0 +1,48 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{sid}
+
+\olsection{\usetoken{S}{identity} نال صحت مندی}
+
+\begin{prop}
+!!^{tableau}s جیہناں وچ اکو ہون دے قاعدے وی شامل نیں، صحت مند نیں:
+کوئی بند !!{tableau} پورا ہون جوگ نہیں۔
+\end{prop}
+
+\begin{proof}
+ساڈے لئی، پہلے وانگ، صرف ایہ وکھانا کافی اے کہ جے !!a{tableau} دی
+کوئی شاخ پورا ہون جوگ اے، تاں اوس شاخ اُتے~$\eq$ دے قاعدیاں وچوں
+کوئی اک لا کے بنن والی شاخ وی پورا ہون جوگ اے۔ $\Gamma$ نوں شاخ اُتے
+موجود علامت لائے !!{formula}s دا سیٹ منّ لو، تے $\Struct{M}$
+!!a{structure} ہووے جیہڑی~$\Gamma$ نوں پورا کردی اے۔
+
+فرض کرو شاخ نوں~$\eq$ نال ودھایا جاندا اے، یعنی علامت لایا
+!!{formula}~$\sFmla{\True}{\eq[t][t]}$ شامل کیتا جاندا اے۔
+ظاہر اے کہ $\Sat{M}{\eq[t][t]}$، ایس لئی $\Struct{M}$،
+$\Gamma \cup \{\sFmla{\True}{\eq[t][t]}\}$ نوں وی پورا کردی اے۔
+
+% PNBTAB-015: the explicitly True equality-rule conclusion has its True sign; all other formulas are unchanged.
+جے شاخ نوں $\TRule{\True}{\eq}$ نال ودھایا جائے، تاں اسیں علامت لایا
+!!{formula}~$\sFmla{\True}{!A(t_2)}$ شامل کردے آں، پر $\Gamma$ وچ
+دونیں~$\sFmla{\True}{\eq[t_1][t_2]}$ تے $\sFmla{\True}{!A(t_1)}$
+موجود نیں۔ ایس لئی $\Sat{M}{\eq[t_1][t_2]}$ تے
+$\Sat{M}{!A(t_1)}$۔ اک متغیراں دی قدر بندی $s$ لو جیہدے لئی
+$s(x) = \Value{t_1}{M}$۔ \olref[syn][ass]{prop:sentence-sat-true}
+مطابق $\Sat{M}{!A(t_1)}[s]$۔ چونکہ $\varAssign{s}{s}{x}$،
+\olref[syn][ext]{prop:ext-formulas} مطابق $\Sat{M}{!A(x)}[s]$۔
+چونکہ $\Sat{M}{\eq[t_1][t_2]}$، اسیں جان دے آں کہ
+$\Value{t_1}{M} = \Value{t_2}{M}$، ایس لئی
+$s(x) = \Value{t_2}{M}$۔ \olref[syn][ext]{prop:ext-formulas} نوں
+دوبارہ لا کے $\Sat{M}{!A(t_2)}[s]$ وی ملدا اے۔
+\olref[syn][ass]{prop:sentence-sat-true} مطابق
+$\Sat{M}{!A(t_2)}$۔ $\TRule{\False}{\eq}$ دی صورت وی ایس طرح
+حل ہوندی اے۔
+\end{proof}
+
+\end{document}

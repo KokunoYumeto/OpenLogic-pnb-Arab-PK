@@ -1,0 +1,207 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{basic}
+\olsection{ترتیبی عدداں دیاں بنیادی خاصیتاں}
+
+اسیں ویکھیا سی کہ پہلے کجھ ترتیبی عدد قدرتی عدد نیں۔ ترتیبی عدداں دا
+نظریہ بناؤن دی وڈی وجہ اوہ استقرائی اصول ودھاؤنا اے جیہڑا قدرتی عدداں
+لئی قائم اے۔ اسیں کجھ بنیادی نتیجیاں دی لڑی راہیں اوس اصول تک پہنچاں گے۔
+
+\begin{lem}\ollabel{ordmemberord}
+ترتیبی عدد دا ہر !!{element} آپ اک ترتیبی عدد اے۔
+\end{lem}
+
+\begin{proof}
+منّ لو $\alpha$ ترتیبی عدد اے تے $b \in \alpha$۔ چونکہ $\alpha$
+متعدی اے، $b \subseteq \alpha$۔ سو $\in$، $b$ نوں حُسنِ ترتیب وچ
+رکھدا اے، کیوں جے $\in$، $\alpha$ نوں حُسنِ ترتیب وچ رکھدا اے۔
+
+ایہ ویکھن لئی کہ $b$ متعدی اے، منّ لو $x \in c \in b$۔ سو $c \in \alpha$،
+کیوں جے $b \subseteq \alpha$۔ فیر چونکہ $\alpha$ متعدی اے،
+$c \subseteq \alpha$، تے ایس لئی $x \in \alpha$۔ سو $x, c, b \in \alpha$۔
+پر $\in$، $\alpha$ نوں حُسنِ ترتیب وچ رکھدا اے، ایس لئی $\in$، $\alpha$
+اُتے متعدی تعلق اے، \olref[sth][ordinals][wo]{wo:strictorder} نال۔
+سو چونکہ $x \in c \in b$، ایس لئی $x \in b$۔ عام صورت وچ $c \subseteq b$۔
+\end{proof}
+
+\begin{cor}\ollabel{ordissetofsmallerord}
+$\alpha = \Setabs{\beta \in \alpha}{\beta \text{ ترتیبی عدد اے}}$،
+ہر ترتیبی عدد~$\alpha$ لئی۔
+\end{cor}
+
+\begin{proof}
+\olref{ordmemberord} توں سدھا نکلدا اے۔
+\end{proof}
+
+اگلے دو اہم نتیجیاں، \olref{ordinductionschema} تے \olref{ordtrichotomy}،
+دی موٹی گل ایہ اے کہ رکنیت آپ ترتیبی عدداں نوں حُسنِ ترتیب وچ رکھدی اے:
+
+\begin{thm}[لامتناہی درجیاں اُتے استقرا]\ollabel{ordinductionschema}
+ہر فارمولے $\phi(x)$ لئی:
+\[
+	\text{ جے }\exists \alpha \phi(\alpha)\text{، تاں }\exists \alpha(\phi(\alpha)
+	\land  (\forall \beta \in \alpha) \lnot \phi(\beta))
+\]
+ایتھے دِتے مقداری نشان ان کہے طور اُتے ترتیبی عدداں تک محدود نیں۔
+\end{thm}
+
+\begin{proof}
+%\olref{ordinductionschema1}. 
+منّ لو $\phi(\alpha)$ کسے ترتیبی عدد $\alpha$ لئی۔ جے $ (\forall \beta
+\in \alpha) \lnot \phi(\beta)$، تاں ثبوت پورا ہویا۔ نہیں تاں چونکہ
+$\alpha$ ترتیبی عدد اے، اوہدے وچ $\in$ دے لحاظ نال اک سبھ توں چھوٹا
+!!{element} اے جیہڑا $\phi$ پورا کردا اے، تے \olref{ordmemberord} نال
+ایہ ترتیبی عدد اے۔
+%	\olref{ordinductionschema2}. Suppose there is some ordinal
+%	$\gamma$ such that $\lnot\phi(\gamma)$. Then by
+%	\olref{ordinductionschema1}, there is an $\in$-minimal ordinal
+%	$\alpha$ for which $\lnot\phi(\alpha)$. So $(\forall \beta <
+%	\alpha) \phi(\beta)$, rendering the antecedent of the conditional
+%	false.
+\end{proof}
+\noindent
+دھیان دیو کہ \olref{ordinductionschema} نوں ایس خاکے دے روپ وچ وی لکھ سکدے آں:
+\[
+\text{ جے }\forall \alpha((\forall \beta \in \alpha)\phi(\beta) \lif 
+\phi(\alpha))\text{، تاں }\forall \alpha\phi(\alpha)
+\]
+بس $\lnot\phi(\alpha)$ نوں \olref{ordinductionschema} وچ لینا اے تے فیر بنیادی منطقی تبدیلیاں کرنیاں نیں۔
+
+\begin{thm}[تِن صورتاں دا اصول]\ollabel{ordtrichotomy}
+$\alpha \in \beta \lor \alpha = \beta \lor \beta \in \alpha$، کسے وی
+دو ترتیبی عدداں $\alpha$ تے $\beta$ لئی۔
+\end{thm}
+
+\begin{proof}
+ثبوت دوہرے استقرا نال اے، یعنی \olref{ordinductionschema} نوں دو واری
+ورت کے۔ آکھو کہ $x$، $y$ نال \emph{پرکھیا جا سکدا اے} اُدوں تے صرف اُدوں
+جدوں $x \in y \lor x = y \lor y \in x$۔
+
+استقرا لئی منّ لو کہ~$\alpha$ دے ہر ترتیبی عدد دی \emph{ہر} ترتیبی
+عدد نال پرکھ ہو سکدی اے۔ ہور استقرا لئی منّ لو کہ $\alpha$ دی~$\beta$
+دے ہر ترتیبی عدد نال پرکھ ہو سکدی اے۔ اسیں وکھاواں گے کہ $\alpha$
+دی~$\beta$ نال پرکھ ہو سکدی اے۔~$\beta$ اُتے استقرا نال نکلے گا کہ $\alpha$
+دی ہر ترتیبی عدد نال پرکھ ہو سکدی اے۔ فیر~$\alpha$ اُتے استقرا نال،
+\emph{ہر} ترتیبی عدد دی \emph{ہر} ترتیبی عدد نال پرکھ ہو سکدی اے،
+جیہڑی سانوں چاہیدی سی۔ ایہ کافی اے کہ $\alpha \notin \beta$ تے
+$\beta \notin \alpha$ منّ کے وکھائیے کہ $\alpha = \beta$۔
+
+ایہ وکھاؤن لئی کہ $\alpha \subseteq \beta$، $\gamma \in \alpha$ مقرر کرو۔
+\olref{ordmemberord} نال ایہ اک ترتیبی عدد اے۔ سو پہلے استقرائی مفروضے
+نال $\gamma$ دی $\beta$ نال پرکھ ہو سکدی اے۔ پر جے یا تاں $\gamma = \beta$
+یا $\beta \in \gamma$، تاں $\beta \in \alpha$ (لوڑ پئے تاں ایس گل نوں
+ورت کے کہ $\alpha$ متعدی اے)۔ ایہ ساڈے مفروضے دے اُلٹ اے۔ سو
+$\gamma \in \beta$۔ عام صورت وچ $\alpha \subseteq \beta$۔
+
+دوجے استقرائی مفروضے نال عین ایہو جیہی دلیل وکھاندی اے کہ
+$\beta \subseteq \alpha$۔ سو $\alpha = \beta$۔
+\end{proof}\noindent ایس لئی کدی اسیں $\alpha <\beta$ لکھاں گے،
+$\alpha \in \beta$ دی تھاں، کیوں جے $\in$ ترتیب دے تعلق وانگ کم کردا اے۔
+ایہدی کوئی ڈونگھی وجہ نہیں، بس ایہ جانیا پچھانیا اے تے
+$\alpha \leq \beta$ لکھنا $\alpha \in \beta \lor \alpha = \beta$
+لکھن نالوں سوکھا اے۔\footnote{اسیں $\alpha \mathrel{\underline{\in}} \beta$
+لکھ سکدے ساں، پر ایہ بالکل غیر معیاری ہوندا۔}
+
+ساڈے پچھلے نتیجیاں دے دو سدھے حاصل ایہ نیں۔ پہلا ساڈے نویں نشاناں نوں کم وچ لیاندا اے:
+
+\begin{cor}\ollabel{ordordered}
+جے $\exists \alpha\phi(\alpha)$، تاں $\exists \alpha(\phi(\alpha)
+\land \forall \beta(\phi(\beta) \lif \alpha \leq \beta))$۔
+نالے کسے وی ترتیبی عدداں $\alpha, \beta, \gamma$ لئی،
+$\alpha \notin \alpha$ تے $\alpha \in \beta \in \gamma \lif \alpha \in \gamma$
+دونیں قائم نیں۔
+\end{cor}
+
+\begin{proof}
+بالکل \olref[wo]{wo:strictorder} وانگ۔
+\end{proof}
+
+\begin{prob}
+\olref[sth][ordinals][basic]{ordtrichotomy} دے ثبوت وچ ’’عین ایہو جیہی دلیل‘‘
+نوں پورا کرو۔
+\end{prob}
+
+\begin{cor}\ollabel{corordtransitiveord}
+$A$ ترتیبی عدد اُدوں تے صرف اُدوں اے جدوں $A$ ترتیبی عدداں دا متعدی سیٹ اے۔
+\end{cor}
+
+\begin{proof}
+\emph{کھبے توں سجے پاسے۔} \olref{ordmemberord} نال۔
+\emph{سجے توں کھبے پاسے۔} جے $A$ ترتیبی عدداں دا متعدی سیٹ اے، تاں
+$\in$، $A$ نوں حُسنِ ترتیب وچ رکھدا اے،
+\olref{ordinductionschema} تے \olref{ordtrichotomy} نال۔
+\end{proof}
+
+اسیں \olref{ordinductionschema} تے \olref{ordtrichotomy} دا مطلب ایہ دسیا سی
+کہ $\in$ ترتیبی عدداں نوں حُسنِ ترتیب وچ رکھدا اے۔ پر ہِیٹھلے نتیجے کر کے
+ایہو جیہے دعوے بارے سانوں \emph{بڑی احتیاط} کرنی پئے گی:
+
+\begin{thm}[بورالی فورتی دا پیراڈوکس]\ollabel{buraliforti}
+سارے ترتیبی عدداں دا کوئی سیٹ نہیں۔
+\end{thm}
+
+\begin{proof}
+تضاد کڈھن لئی منّ لو $O$ سارے ترتیبی عدداں دا سیٹ اے۔ جے
+$\alpha \in \beta \in O$، تاں $\alpha$ ترتیبی عدد اے، \olref{ordmemberord}
+نال، سو $\alpha \in O$۔ ایس لئی $O$ متعدی اے، تے \olref{corordtransitiveord}
+نال $O$ ترتیبی عدد اے۔ ایس لئی $O \in O$، جیہڑا
+\olref{ordordered} دے اُلٹ اے۔
+\end{proof}
+\noindent
+ایہ نتیجہ \citeauthor{Burali-Forti1897} دے ناں اُتے اے۔ پر 1899 وچ ڈیڈیکنڈ
+نوں اک خط وچ کانتور نے سبھ توں پہلاں صاف ویکھیا کہ سارے ترتیبی عدداں دا
+سیٹ منّن وچ \emph{تضاد} اے۔ جیویں فان ہائینورٹ دسدا اے:
+\begin{quote}
+  بورالی فورتی آپ ایس تضاد نوں \emph{برہانِ خلف} نال ایس نتیجے دا ثبوت
+  سمجھدا سی کہ ترتیبی عدداں دی قدرتی ترتیب بس اک جزوی ترتیب اے۔
+  \citep[p.~105]{Heijenoort1967}
+\end{quote}
+بورالی فورتی دی غلطی اک پاسے رکھ کے، پچھلی گل ایویں سمیٹ سکدے آں۔
+ترتیبی عدد سیٹ نیں۔ رکنیت ہر اک نوں حُسنِ ترتیب وچ رکھدی اے تے
+ساریاں نوں رلا کے وی حُسنِ ترتیب وچ رکھدی اے (بھانویں سارے رل کے سیٹ
+نہیں بناندے)۔
+
+گل پوری کرن لئی ترتیبی عدداں دیاں کجھ ہور بنیادی خاصیتاں ہِیٹھاں نیں،
+جیہڑیاں \olref{ordinductionschema} تے \olref{ordtrichotomy} توں نکلدیاں نیں۔
+
+\begin{prop}
+ترتیبی عدداں دی ہر سختی نال گھٹدی لڑی محدود اے۔
+\end{prop}
+
+\begin{proof}
+ترتیبی عدداں دی کسے وی لامتناہی سختی نال گھٹدی لڑی
+$\alpha_0 > \alpha_1 > \alpha_2 > \ldots$ وچ $<$ دے لحاظ نال
+کوئی ایسا رکن نہیں جیہدے توں ہور کوئی رکن چھوٹا نہ ہووے۔
+ایہ \olref{ordinductionschema} دے اُلٹ اے۔
+\end{proof}
+
+\begin{prop}\ollabel{ordinalsaresubsets}
+$\alpha \subseteq \beta \lor \beta \subseteq \alpha$، کسے وی
+ترتیبی عدداں $\alpha, \beta$ لئی۔
+\end{prop}
+
+\begin{proof}
+جے $\alpha \in \beta$، تاں $\alpha \subseteq \beta$، کیوں جے $\beta$
+متعدی اے۔ ایسے طرح جے $\beta \in \alpha$، تاں $\beta \subseteq \alpha$۔
+تے جے $\alpha = \beta$، تاں $\alpha \subseteq \beta$ تے $\beta \subseteq \alpha$۔
+سو \olref{ordtrichotomy} نال ثبوت پورا ہویا۔
+\end{proof}
+
+\begin{prop}\ollabel{ordisoidentity}
+$\alpha = \beta$ اُدوں تے صرف اُدوں اے جدوں $\ordeq{\alpha}{\beta}$،
+کسے وی ترتیبی عدداں $\alpha, \beta$ لئی۔
+\end{prop}
+
+\begin{proof}
+ترتیبی عدد حُسنِ ترتیب والیاں ساختاں نیں۔ سو ایہ تِن صورتاں دے اصول
+(\olref[basic]{ordtrichotomy}) تے \olref[iso]{wellordnotinitial}
+توں سدھا نکلدا اے۔
+\end{proof}
+
+\begin{prob}\ollabel{probunionordinalsordinal}
+ثابت کرو کہ جے $X$ دا ہر رکن ترتیبی عدد اے، تاں $\bigcup X$ وی ترتیبی عدد اے۔
+\end{prob}
+
+\end{document}

@@ -1,0 +1,153 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{sou}}
+      {\olfileid{pl}{axd}{sou}}
+      
+\olsection{صحت مندی}
+
+\begin{explain}
+!!^a{derivation} نظام، جیویں مسلّمی اخذ، \emph{صحت مند} اے جے ایہ
+اوہ دعوے !!{derive} نہیں کر سکدا جیہڑے حقیقت وچ درست نہیں۔ ایس لئی
+صحت مندی !!{derivation} نظاماں لئی اک قسم دی یقینی تحفظ والی خاصیت اے۔
+جیہڑی ثبوتی-نظریاتی خاصیت دا سوال ہووے، اوس مطابق اسیں مثال دے طور تے
+ایہ جاننا چاہواں گے کہ
+\begin{enumerate}
+\item ہر !!{derivable}~$!A$ منطقی طور تے معتبر ہووے؛
+\item جے $!A$ کجھ ہور مفروضیاں~$\Gamma$ توں !!{derivable} ہووے،
+  تاں اوہ اوہناں دا منطقی نتیجہ وی ہووے؛
+\item جے !!{formula}s دا سیٹ~$\Gamma$ متضاد ہووے، تاں اوہ پورا ہون جوگ نہ ہووے۔
+\end{enumerate}
+ایہ !!a{derivation} نظام دیاں اہم خاصیتاں نیں۔ جے انہاں وچوں کوئی
+وی خاصیت نہ ہووے، تاں !!{derivation} نظام وچ کمی اے---ایہ حد توں ودھ
+!!{derive} کرے گا۔ ایس لئی کسے !!a{derivation} نظام دی صحت مندی
+ثابت کرنا نہایت اہم اے۔
+\end{explain}
+
+\begin{prop}
+  جے $!A$ اک مسلّمہ اے، تاں
+  \iftag{FOL}
+    {$\Sat{M}{!A}[s]$ ہر !!{structure}~$\Struct{M}$ تے ہر تعیین~$s$ لئی۔}
+    {$\pSat{v}{!A}$ ہر !!{valuation}~$\pAssign{v}$ لئی۔}
+\end{prop}
+
+\begin{proof}
+\iftag{FOL}{اسیں ایہ جانچنا اے کہ سارے مسلّمے منطقی طور تے معتبر نیں۔
+  مثال لئی \olref[qua]{ax:q1} دی حالت ویکھو: فرض کرو $t$، $x$ دی تھاں
+  $!A$ وچ !!{free for} اے، تے فرض کرو
+  $\Sat{M}{\lforall[x][!A]}[s]$۔ تاں پورا اترن دی تعریف مطابق
+  ہر $\varAssign{s'}{s}{x}$ لئی $\Sat{M}{!A}[s']$ وی اے؛ خاص طور تے
+  جے $s'(x) = \Value{t}{M}[s]$ ہووے۔
+  \olref[syn][ext]{prop:ext-formulas} توں
+  $\Sat{M}{\Subst{!A}{t}{x}}[s]$۔ ایس توں
+  $\Sat{M}{(\lforall[x][!A] \lif \Subst{!A}{t}{x})}[s]$
+  ثابت ہوندا اے۔}{ہر مسلّمے لئی صداقتی جدول بنا کے جانچو کہ اوہ
+  ہمیشہ صادق اے۔}
+\end{proof}
+
+\begin{thm}[صحت مندی]
+\ollabel{thm:soundness}
+جے $\Gamma \Proves !A$ تاں $\Gamma \Entails !A$۔
+\end{thm}
+
+\begin{proof}
+$!A$ دے~$\Gamma$ توں !!{derivation} دی لمبائی اُتے استقرا کردے آں۔
+جے استنباطی قاعدیاں نال درست ٹھہرے کوئی قدم نہ ہون، تاں !!{derivation}
+دے سارے !!{formula}s یا مسلّماں دیاں مثالاں نیں یا~$\Gamma$ وچ نیں۔
+پچھلے قضیے توں سارے مسلّمے
+\iftag{FOL}{منطقی طور تے معتبر}{ہمیشہ صادق} نیں، ایس لئی جے $!A$
+مسلّمہ اے، تاں $\Gamma \Entails !A$۔ جے $!A \in \Gamma$، تاں
+صاف ظاہر اے کہ $\Gamma \Entails !A$۔
+
+جے~$!A$ دے !!{derivation} دا آخری قدم قاعدۂ اثباتِ مقدم نال درست
+ٹھہردا اے، تاں !!{derivation} وچ !!{formula}s $!B$ تے $!B \lif !A$
+موجود نیں، تے استقرائی مفروضہ انہاں !!{formula}s اُتے ختم ہون والے
+!!{derivation} دے حصے اُتے لاگو ہوندا اے (کیوں جے اوہناں وچ
+استنباطی قاعدے نال درست ٹھہرے گھٹ توں گھٹ اک قدم کم اے)۔ ایس لئی
+استقرائی مفروضے توں $\Gamma \Entails !B$ تے $\Gamma \Entails !B \lif
+!A$۔ فیر
+\iftag{FOL}
+      {\olref[syn][sem]{thm:sem-deduction}}
+      {\olref[pl][syn][sem]{thm:sem-deduction}}
+توں $\Gamma \Entails !A$۔
+
+\iftag{FOL}{ہُن فرض کرو آخری قدم \QR نال درست ٹھہردا اے۔
+% PNBAXD-008: دو مسوّری صورتاں وچ ماخذ توں رہ گیا ! فارمولا ٹوکن بحال کیتا۔
+تاں ایس قدم دا روپ $!C \lif \lforall[x][!B(x)]$ اے تے ایس توں
+پہلاں $!C \lif !B(c)$ دا قدم موجود اے؛ ایتھے $c$ نہ $\Gamma$ وچ،
+نہ~$!C$ وچ، تے نہ $\lforall[x][!B(x)]$ وچ آؤندا اے۔ استقرائی مفروضے
+توں $\Gamma \Entails !C \lif !B(c)$۔
+\olref[syn][sem]{thm:sem-deduction} توں $\Gamma \cup \{!C\} \Entails
+!B(c)$۔
+
+ایسی ساخت~$\Struct{M}$ لو جیہڑی $\Sat{M}{\Gamma \cup
+  \{!C\}}$ پوری کردی ہووے۔ اسیں دکھانا اے کہ
+$\Sat{M}{\lforall[x][!B(x)]}$۔ چونکہ
+$\lforall[x][!B(x)]$ اک !!a{sentence} اے، ایس دا مطلب ایہ دکھانا اے
+کہ ہر متغیر تعیین~$s$ لئی $\Sat{M}{!B(x)}[s]$
+(\olref[syn][ass]{prop:sat-quant})۔ چونکہ $\Gamma \cup \{!C\}$
+سارے جملیاں اُتے مشتمل اے، $\Sat{M}{!D}[s]$ ہر $!D \in
+\Gamma$ لئی اے،
+\olref[syn][sat]{defn:satisfaction} مطابق۔ ہُن $\Struct{M'}$ نوں
+$\Struct{M}$ ورگی ساخت لو، صرف ایہ فرق ہووے کہ
+$\Assign{c}{M'} = s(x)$۔ چونکہ $c$ نہ~$\Gamma$ وچ آؤندا اے تے
+نہ~$!C$ وچ، \olref[syn][ext]{cor:extensionality-sent} توں
+$\Sat{M'}{\Gamma \cup \{!C\}}$۔ چونکہ $\Gamma \cup \{!C\}
+\Entails !B(c)$،
+% PNBAXD-009: ماخذ دے اک satisfaction argument وچ رہ گیا ! ٹوکن بحال کیتا۔
+$\Sat{M'}{!B(c)}$۔ چونکہ $!B(c)$ اک !!a{sentence} اے،
+\olref[syn][ass]{prop:sentence-sat-true} توں
+$\Sat{M'}{!B(c)}[s]$۔ \olref[syn][ext]{prop:ext-formulas} توں
+$\Sat{M'}{!B(x)}[s]$ اُدوں تے صرف اُدوں جدوں
+$\Sat{M'}{!B(c)}[s]$ (یاد رکھو کہ
+$!B(c)$ دراصل $\Subst{!B(x)}{c}{x}$ اے)۔ ایس لئی
+$\Sat{M'}{!B(x)}[s]$۔ چونکہ $c$،~$!B(x)$ وچ نہیں آؤندا،
+\olref[syn][ext]{prop:extensionality} توں
+$\Sat{M}{!B(x)}[s]$۔ پر $s$ کوئی وی متغیر تعیین سی، ایس لئی
+$\Sat{M}{\lforall[x][!B(x)]}$۔ لہٰذا
+$\Gamma \cup \{!C\} \Entails \lforall[x][!B(x)]$۔
+\olref[syn][sem]{thm:sem-deduction} توں $\Gamma
+\Entails !C \lif \lforall[x][!B(x)]$۔
+
+اوہ حالت جتھے $!A$، \QR{} نال درست ٹھہردا اے پر اوہدا روپ
+$\lexists[x][!B(x)] \lif !C$ اے، مشق لئی چھڈدے آں۔}{}
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+  \olref[fol][axd][sou]{thm:soundness} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$ \iftag{FOL}{منطقی طور تے معتبر}{ہمیشہ صادق} اے۔
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+جے $\Gamma$ پورا ہون جوگ اے، تاں اوہ بے تضاد اے۔
+\end{cor}
+
+\begin{proof}
+اسیں متقابلِ عکس ثابت کردے آں۔ فرض کرو $\Gamma$ بے تضاد نہیں۔
+تاں $\Gamma \Proves \lfalse$، یعنی~$\lfalse$ دا
+~$\Gamma$ توں !!a{derivation} موجود اے۔ \olref{thm:soundness} توں
+ہر \iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+جیہڑی $\Gamma$ نوں پورا کردی اے، اوہنوں~$\lfalse$ وی پورا کرنا پوے گا۔
+چونکہ
+\iftag{FOL}{$\Sat/{M}{\lfalse}$ ہر
+  !!{structure}~$\Struct{M}$ لئی}{$\pSat/{v}{\lfalse}$ ہر
+  !!{valuation}~$\pAssign{v}$ لئی}، کوئی وی
+\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma$ نوں پورا
+نہیں کر سکدا؛ یعنی $\Gamma$ پورا ہون جوگ نہیں۔
+\end{proof}
+
+
+\end{document}

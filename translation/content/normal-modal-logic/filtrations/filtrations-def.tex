@@ -1,0 +1,150 @@
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: filtrations-def
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{fil}
+
+\olsection{فلٹریشناں}
+
+$\mModel{M}$ دی $\Gamma$ راہیں فلٹریشن نوں اکّو مقرر نمونہ منّن دی بجائے، اسیں ایہ متعین کردے آں کہ نمونہ~$\mModel{M^*}$ کدوں~$\mModel{M}$ دی فلٹریشن گنیا جاندا اے۔ ساریاں فلٹریشناں دا جہاناں دا سیٹ~$W^*$ تے قدر بندی~$V^*$ اکّو ہوندے نیں۔ پر وکھ وکھ فلٹریشناں دے رسائی دے تعلق~$R^*$ وکھرے ہو سکدے نیں۔ فلٹریشن گنے جان لئی $R^*$ نوں کئی شرطاں پوریاں کرنیاں پیندیاں نیں۔ ایہ عین اوہی شرطاں نیں جیہڑیاں مُکھ نتیجہ ثابت کرن لئی چاہیدیاں نیں، یعنی $\mSat{M}{!A}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!A}[{[w]}]$، بشرطیکہ $!A \in
+\Gamma$۔
+
+\begin{defn}\ollabel{defn:filtration}
+  منّ لو $\Gamma$ ذیلی فارمولیاں تحت بند اے تے $\mModel{M} = \tuple{W,
+    R, V}$۔ \emph{$\mModel{M}$ دی $\Gamma$ راہیں فلٹریشن} کوئی وی نمونہ $\mModel{M^*} = \tuple{W^*,R^*,V^*}$ اے جیہدے لئی
+  \begin{enumerate}
+  \item $W^* = \Setabs{[w]}{w \in W}$؛
+  \item \ollabel{defn:filtration-R}%
+    ہر $u,v \in W$ لئی
+    \begin{enumerate}
+    \item \ollabel{defn:filtration-R1}%
+      جے $Ruv$، تاں $R^*[u][v]$؛
+    \tagitem{prvBox}{\ollabel{defn:filtration-R2}%
+      جے $R^*[u][v]$، تاں ہر $\Box !A \in \Gamma$ لئی، جے
+      $\mSat{M}{\Box!A}[u]$ تاں $\mSat{M}{!A}[v]$}{}؛
+    \tagitem{prvDiamond}{\ollabel{defn:filtration-R3}%
+      جے $R^*[u][v]$، تاں ہر $\Diamond !A \in \Gamma$ لئی، جے
+      $\mSat{M}{!A}[v]$ تاں $\mSat{M}{\Diamond!A}[u]$۔}{}
+    \end{enumerate}
+  \item $V^*(p) = \Setabs{[u]}{u \in V(p)}$۔
+  \end{enumerate}
+\end{defn}
+
+ایہ سوچنا فائدے مند اے کہ $V^*(p)$ کیہ اے۔ ایہ ہم ارزیت دے طبقیاں~$[w]$ دا سیٹ اے، سارے اوہناں جہاناں~$w$ لئی جتھے $p$،~$\mModel{M}$ وچ سچا اے۔ اک پاسے جے $w \in V(p)$، تاں $[w] \in
+V^*(p)$ تعریف مطابق۔ پر ایہ ضروری نہیں کہ جے $[w] \in V^*(p)$، تاں $w \in V(p)$۔ جے $[w] \in V^*(p)$، تاں صرف ایہ گل پکی اے کہ $[w] = [u]$ \emph{کسے}~$u \in V(p)$ لئی۔ صاف اے کہ $[w] = [u]$ دا مطلب $w \equiv u$ اے۔ سو جدوں $[w] \in
+V^*(p)$، اسیں (صرف) ایہ نتیجہ کڈھ سکدے آں کہ $w \equiv u$ کسے $u \in
+V(p)$ لئی۔
+
+\begin{thm}\ollabel{thm:filtrations}
+  جے $\mModel{M^*}$، $\mModel{M}$ دی $\Gamma$ راہیں فلٹریشن اے، تاں ہر $!A \in \Gamma$ تے $w \in W$ لئی
+  $\mSat{M}{!A}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!A}[{[w]}]$۔
+\end{thm}
+
+\begin{proof}
+  $!A$ اُتے استقرا نال، ایس حقیقت نوں ورت کے کہ $\Gamma$ ذیلی فارمولیاں تحت بند اے۔ کیوں جے $!A \in \Gamma$ تے $\Gamma$ ذیلی !!{formula}s تحت بند اے، ایس لئی سارے ذیلی !!{formula}s جیہڑے~$!A$ دے نیں، وی $\in
+  \Gamma$ نیں۔ سو ہر استقرائی قدم وچ استقرائی مفروضہ ذیلی !!{formula}s اُتے، جیہڑے~$!A$ دے نیں، لاگو ہوندا اے۔
+  \begin{enumerate}
+    \tagitem{prvFalse}{\indcase{!A}{\lfalse}{نہ
+        $\mSat{M}{\indfrm}[w]$، تے نہ $\mSat{M^*}{\indfrm}[{[w]}]$۔}}{}
+    \tagitem{prvTrue}{\indcase{!A}{\ltrue}{
+        $\mSat{M}{\indfrm}[w]$ تے $\mSat{M^*}{\indfrm}[{[w]}]$ دونیں۔}}{}
+    \item \indcase{!A}{p}{کھبے توں سجے والا رخ سدھا اے، کیوں جے
+      $\mSat{M}{\indfrm}[w]$ صرف اُدوں جدوں $w \in V(p)$، جیہدے توں $[w]
+      \in V^*(p)$ نکلدا اے، یعنی $\mSat{M^*}{\indfrm}[{[w]}]$۔ اُلٹے پاسے منّ لو
+      $\mSat{M^*}{\indfrm}[{[w]}]$، یعنی $[w] \in
+      V^*(p)$۔ فیر کسے $v \in V(p)$ لئی $w \equiv v$۔ صاف اے کہ فیر
+      $\mSat{M}{p}[v]$ وی۔ کیوں جے $w \equiv v$، ایس لئی $w$ تے $v$،
+      اکّو !!{formula}s،~$\Gamma$ وچوں، سچے کردے نیں۔ مفروضے مطابق $p
+      \in \Gamma$ تے $\mSat{M}{p}[v]$، ایس لئی $\mSat{M}{\indfrm}[w]$۔}
+
+    \tagitem{prvNot}{\iftag{probNot}{مشق۔}{\indcase{!A}{\lnot
+          !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$۔
+          استقرائی مفروضے مطابق $\mSat/{M}{!B}[w]$ اُدوں تے صرف اُدوں جدوں
+          $\mSat/{M^*}{!B}[{[w]}]$۔ آخر $\mSat/{M^*}{!B}[{[w]}]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{\indfrm}[{[w]}]$۔}}}{}
+
+    \tagitem{prvAnd}{\iftag{probAnd}{مشق۔}{\indcase{!A}{(!B \land
+          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے
+          $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
+          $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ تے
+          $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
+
+    \tagitem{prvOr}{\iftag{probOr}{مشق۔}{\indcase{!A}{(!B \lor
+          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا
+          $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
+          $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ یا
+          $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
+
+    \tagitem{prvIf}{\iftag{probIf}{مشق۔}{\indcase{!A}{(!B \lif
+          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا
+          $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
+          $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
+          اُدوں تے صرف اُدوں جدوں $\mSat/{M^*}{!B}[{[w]}]$ یا
+          $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
+
+    \tagitem{prvIff}{\iftag{probIff}{مشق۔}{\indcase{!A}{(!B \liff
+          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے
+          $\mSat{M}{!C}[w]$ دونیں، یا $\mSat/{M}{!B}[w]$ تے
+          $\mSat/{M}{!C}[w]$ دونیں۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
+          اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
+          $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
+          اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M^*}{!B}[{[w]}]$ تے
+          $\mSat{M^*}{!C}[{[w]}]$ دونیں، یا $\mSat/{M^*}{!B}[{[w]}]$ تے
+          $\mSat/{M^*}{!C}[{[w]}]$ دونیں۔}}}{}
+
+    \tagitem{prvBox}{\iftag{probBox}{مشق۔}{\indcase{!A}{\Box
+          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔
+          $\mSat{M^*}{\indfrm}[{[w]}]$ وکھاؤن لئی ایسا $v$ لے لو جیہدے لئی
+          $R^*[w][v]$۔
+          \olref{defn:filtration}\olref{defn:filtration-R2} توں
+          $\mSat{M}{!B}[v]$ ملدا اے، تے استقرائی مفروضے توں
+          $\mSat{M^*}{!B}[{[v]}]$۔ کیوں جے $v$ کوئی وی ایسا جہان ہو سکدا سی،
+          ایس لئی $\mSat{M^*}{\indfrm}[{[w]}]$ نکلدا اے۔
+
+          اُلٹے پاسے منّ لو $\mSat{M^*}{\indfrm}[{[w]}]$ تے کوئی وی ایسا $v$
+          لے لو جیہدے لئی $Rwv$۔
+          \olref{defn:filtration}\olref{defn:filtration-R1} توں
+          $R^*[w][v]$ ملدا اے، سو $\mSat{M^*}{!B}[{[v]}]$، تے استقرائی مفروضے توں $\mSat{M}{!B}[v]$۔ کیوں جے $v$ کوئی وی ایسا جہان ہو سکدا سی،
+          ایس لئی $\mSat{M}{\indfrm}[w]$۔}}}{}
+
+    \tagitem{prvDiamond}{\iftag{probDiamond}{مشق۔}{\indcase{!A}{\Diamond
+          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔ فیر کسے $v \in W$ لئی
+          $Rwv$ تے $\mSat{M}{!B}[v]$۔ استقرائی مفروضے مطابق
+          $\mSat{M^*}{!B}[{[v]}]$، تے
+          \olref{defn:filtration}\olref{defn:filtration-R1} مطابق
+          $R^*[w][v]$۔ سو $\mSat{M^*}{\indfrm}[{[w]}]$۔
+
+          ہُن منّ لو $\mSat{M^*}{\indfrm}[{[w]}]$۔ فیر کسے $[v]
+          \in W^*$ لئی جیہدے نال $R^*[w][v]$، $\mSat{M^*}{!B}[{[v]}]$۔
+          استقرائی مفروضے مطابق $\mSat{M}{!B}[v]$۔
+          \olref{defn:filtration}\olref{defn:filtration-R3} مطابق
+          $\mSat{M}{\indfrm}[w]$۔}}}{}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[nml][fil][fil]{thm:filtrations} دا ثبوت پورا کرو۔
+\end{prob}
+
+جیہڑی گل نمونے دے جہاناں وچ سچائی لئی قائم اے، اوہی گل نمونے وچ سچائی تے نمونیاں دی جماعت وچ اعتبار لئی وی قائم اے۔
+
+\begin{cor}
+  منّ لو $\Gamma$ ذیلی فارمولیاں تحت بند اے۔ فیر
+  \begin{enumerate}
+  \item جے $\mModel{M^*}$، $\mModel{M}$ دی
+    $\Gamma$ راہیں فلٹریشن اے، تاں ہر $!A \in \Gamma$ لئی $\mSat{M}{!A}$ اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!A}$۔
+  \item جے $\mClass{C}$ نمونیاں دی جماعت اے تے $\Gamma(\mClass{C})$،
+    $\Gamma$-فلٹریشناں دی اوہ جماعت اے جیہڑیاں $\mClass{C}$ دے نمونیاں توں بنیاں نیں، تاں کوئی وی !!{formula}~$!A \in \Gamma$، $\mClass{C}$ وچ اُدوں تے صرف اُدوں معتبر اے جدوں اوہ $\Gamma(\mClass{C})$ وچ معتبر ہووے۔
+  \end{enumerate}
+\end{cor}
+
+\end{document}

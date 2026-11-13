@@ -1,0 +1,130 @@
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: language-epistemic-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{sem}
+
+\olsection{سمے دی منطق دیاں معنیات}
+
+\begin{defn}
+سمے دی منطق دی بنیادی زبان وچ ایہ شامل نیں:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+  \tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+  \item !!{propositional variable}s دا اک !!{denumerable}s سیٹ: $\Obj
+    p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item قضیاتی رابطے: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}۔
+  \item لنگھے سمے دے عامل $\Ptemp$ تے $\Htemp$۔
+  \item آؤن والے سمے دے عامل $\Ftemp$ تے $\Gtemp$۔
+\end{enumerate}
+\end{defn}
+
+اگے اسیں ویکھاں گے کہ ہور قسماں دے امکانی عامل کِویں شامل ہو سکدے نیں۔
+
+\begin{defn}
+سمے دی زبان دے \emph{!!^{formula}s} استقرا نال ایویں متعین ہوندے نیں:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ اک ایٹمی !!{formula} اے۔}{}
+
+\tagitem{prvTrue}{$\ltrue$ اک ایٹمی !!{formula} اے۔}{}
+
+\item ہر قضیاتی متغیر $\Obj p_i$ اک (ایٹمی) !!{formula} اے۔
+
+\tagitem{prvNot}{جے $!A$ اک !!a{formula} اے، تاں $\lnot !A$ وی
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ اک !!a{formula} اے۔}{}
+
+\tagitem{prvOr}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIf}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIff}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \liff !B)$
+  اک !!a{formula} اے۔}{}
+
+\item جے $!A$ اک !!a{formula} اے، تاں $\Ptemp  !A$، $\Htemp  !A$،
+  $F !A$ تے $\Gtemp  !A$ سارے !!{formula}s نیں۔
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+ہور قسماں دیاں مفہومی منطقاں وانگ، سمے دیاں منطقاں دیاں معنیات تعلقی نمونیاں راہیں دتیاں جاندیاں نیں۔
+
+\begin{defn}
+  سمے دی زبان دا اک \emph{نمونہ} ترتیبی تِکڑی
+  $\mModel{M} = \tuple{T, \prec, V}$ اے، جتھے
+  \begin{enumerate}
+  \item $T$ اک غیر خالی سیٹ اے، جیہدے اجزا سمے دے نقطے نیں۔
+  \item $\prec$، $T$ اُتے اک دو رکنی تعلق اے۔
+  \item $V$ اوہ فنکشن اے جیہڑا ہر !!{propositional
+    variable}~$p$ نوں سمے دے نقطیاں دا سیٹ $V(p)$ دیندا اے۔
+  \end{enumerate}
+  جدوں $t \prec t'$ ہووے، اسیں آکھدے آں کہ $t$،~$t'$ توں
+  \emph{پہلاں اے}۔
+  جدوں $t \in V(p)$ ہووے، اسیں آکھدے آں کہ $p$،~$t$ اُتے \emph{سچ اے}۔
+\end{defn}
+
+ہن لئی ویکھو کہ پہلاں ہون والے تعلق $\prec$ اُتے اسیں کوئی شرط
+نہیں لائی۔ سو ہن ساڈے سمے دے نمونیاں دی بناوٹ اُتے کوئی پابندی نہیں۔
+سماں اک سیدھی لڑی ہو سکدا اے، شاخاں کڈھ سکدا اے، چکر وچ چل سکدا اے
+یا اوہدی کوئی وی ہور بناوٹ ہو سکدی اے۔
+
+معیاری امکانی منطق وانگ، سمے دا ہر نمونہ طے کردا اے کہ اوہدے کہڑے
+نقطیاں اُتے کہڑے !!{formula}s سچ نیں۔ تعلقی معنیات دی بنیادی گل لئی
+اسیں اوہی لکھت ورتدے آں، «نمونہ $\mModel{M}$، !!{formula}~$!A$
+نوں نقطے~$t$ اُتے سچ کردا اے»۔ ایہ تعلق استقرا نال متعین ہوندا اے،
+تے سارے غیر امکانی عاملاں لئی معیاری امکانی منطق والا ای اے۔
+
+\begin{defn}\ollabel{defn:tmodels}
+  \emph{!!a{formula}~$!A$ دا~$t$ اُتے سچ ہونا}، نمونے~$\mModel M$
+  وچ، نشانیاں وچ $\mSat{M}{!A}[t]$، استقرا نال ایویں متعین ہوندا اے:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{کدی نہیں کہ $\mSat{M}{\lfalse}[t]$}۔}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{ہمیشہ $\mSat{M}{\ltrue}[t]$}۔}{}
+  \item $\mSat{M}{p}[t]$ اُدوں تے صرف اُدوں جدوں $t \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[t]$ اُدوں تے
+    صرف اُدوں جدوں $\mSat/{M}{!B}[t]$}۔}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[t]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[t]$ تے $\mSat{M}{!C}[t]$}۔}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[t]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[t]$ یا $\mSat{M}{!C}[t]$}
+    (یا دونیں)۔}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[t]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat/{M}{!B}[t]$ یا $\mSat{M}{!C}[t]$}۔}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[t]$ اُدوں
+    تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[t]$ تے $\mSat{M}{!C}[t]$
+    دونیں ہون، یا نہ $\mSat{M}{!B}[t]$ ہووے تے نہ $\mSat{M}{!C}[t]$}۔}{}
+  \item\ollabel{defn:sub:mmodels-p}
+    \indcase{!A}{\Ptemp  !B}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[t']$ کسے ایسے $t' \in T$ لئی ہووے جیہدے لئی $t' \prec t$}
+  \item\ollabel{defn:sub:mmodels-h}
+    \indcase{!A}{\Htemp  !B}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[t']$ ہر ایسے $t' \in T$ لئی ہووے جیہدے لئی $t' \prec t$}
+  \item\ollabel{defn:sub:mmodels-f}
+    \indcase{!A}{\Ftemp  !B}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[t']$ کسے ایسے $t' \in T$ لئی ہووے جیہدے لئی $t \prec t'$}
+  \item\ollabel{defn:sub:mmodels-g}
+    \indcase{!A}{\Gtemp  !B}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[t']$ ہر ایسے $t' \in T$ لئی ہووے جیہدے لئی $t \prec t'$}
+  \end{enumerate}
+\end{defn}
+
+معنیات توں تسی ویکھ سکدے او کہ عامل $\Ptemp$ تے~$\Htemp$ اک دوجے
+دے دوہرے نیں، تے ایویں ای عامل $\Ftemp$ تے $\Gtemp$ وی۔ ایس لئی اسیں
+$\Htemp  !A$ دی تعریف $\lnot \Ptemp \lnot !A$ دے طور اُتے کر سکدے آں،
+تے $\Gtemp$ تے~$\Ftemp$ لئی وی ایویں۔
+
+\end{document}

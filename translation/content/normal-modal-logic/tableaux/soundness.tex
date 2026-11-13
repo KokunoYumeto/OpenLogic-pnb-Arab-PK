@@ -1,0 +1,262 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{sou}
+
+\olsection{\Log{K} لئی صحت مندی}
+
+\begin{editorial}
+  صحت مندی دا ایہ ثبوت کلاسیکی قضیاتی منطق والا ثبوت دوبارہ ورتدا اے،
+  یعنی ہر گل مڈھ توں ثابت کردا اے۔ جے صحت مندی دا اپنے آپ وچ پورا
+  ثبوت چاہیدا اے تاں ایہ ٹھیک اے۔ جے تسی عام تابلو دی صحت مندی پہلاں
+  ویکھ چکے او، تاں ایہ کجھ دہرایا ہویا لگے گا۔ اگے چل کے ایس اپنے آپ
+  وچ پورے روپ تے غیر امکانی صورت اُتے ٹکے روپ وچوں چُن سکنا ممکن
+  بناؤن دی وِونت اے۔
+\end{editorial}
+
+\begin{explain}
+  اگیتے والے !!{tableau}s دی صحت مندی وکھاؤن لئی اسیں ثابت کرنا اے کہ جے
+  \[
+  \sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1], \sFmla{\False}{!A}[1]
+  \]
+  دا اک بند !!{tableau} اے، تاں $!B_1, \dots, !B_n \Entails !A$۔
+  اُلٹے نکار والا بیان ثابت کرنا سوکھا اے۔ جے کسے $\mModel{M}$ تے
+  جہان~$w$ لئی، $\mSat{M}{!B_i}[w]$ سارے $i=1$, \dots,~$n$ لئی ہووے
+  پر $\mSat{M}{!A}[w]$ ہووے، تاں کوئی !!{tableau} بند نہیں ہو سکدا۔
+  اجیہا ردّی نمونہ وکھاؤندا اے کہ !!{tableau} دے شروع والے مفروضے پورے
+  ہون جوگ نیں۔ ثبوت دا طریقہ ایہ اے کہ جدوں !!a{tableau} دی کسے شاخ
+  اُتے سارے اگیتے والے !!{formula}s پورے ہون جوگ ہون، تاں قاعدہ لاؤن نال
+  گھٹ توں گھٹ اک ودھی ہوئی شاخ وی پورا ہون جوگ ہوندی اے۔ بند شاخاں
+  پوریاں ہون جوگ نہیں، ایس لئی اگیتے والے !!{formula}s دے کسے پورا ہون
+  جوگ سیٹ دے ہر !!{tableau} وچ گھٹ توں گھٹ اک کھلی شاخ ہووے گی۔
+
+امکانی صورت وچ ایہ طریقہ ورتن لئی سانوں «پورا ہون جوگ» دی تعریف
+  امکانی نمونیاں تے اگیتیاں تک ودھاؤنی پئے گی۔ اوہ تعریف ملن پچھوں
+  ثبوت سِدھا اے۔
+\end{explain}
+
+\begin{defn}
+  منّ لو $P$ اگیتیاں دا کوئی سیٹ اے، یعنی $P \subseteq (\PosInt)^*
+  \setminus \{\emptyseq\}$، تے $\mModel{M}$ اک نمونہ اے۔
+  فنکشن~$f\colon P \to W$،~$P$ دی $\mModel{M}$ وچ \emph{تعبیر} اے جے
+  جدوں وی $\sigma$ تے $\sigma.n$ دونیں~$P$ وچ ہون، تاں
+  $Rf(\sigma)f(\sigma.n)$ ہووے۔
+
+اگیتیاں دے سیٹ~$P$ دی تعبیر دے لحاظ نال اسیں ایہ تعریف کر سکدے آں:
+  \begin{enumerate}
+  \item $\mModel{M}$، $\sFmla{\True}{!A}[\sigma]$ نوں اُدوں تے صرف اُدوں
+    پورا کردا اے جدوں $\mSat{M}{!A}[f(\sigma)]$۔
+  \item $\mModel{M}$، $\sFmla{\False}{!A}[\sigma]$ نوں اُدوں تے صرف اُدوں
+    پورا کردا اے جدوں $\mSat/{M}{!A}[f(\sigma)]$۔
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}
+  منّ لو $\Gamma$ اگیتے والے !!{formula}s دا اک سیٹ اے، تے $P(\Gamma)$
+  اوہدے وچ آئے اگیتیاں دا سیٹ اے۔ جے $f$،~$P(\Gamma)$ دی $\mModel{M}$
+  وچ تعبیر اے، تاں اسیں آکھدے آں کہ $\mModel{M}$،$\Gamma$ نوں~$f$ دے لحاظ نال پورا کردا اے، $\mSat{M}{\Gamma}[f]$، جے $\mModel{M}$،
+  ~$\Gamma$ دے ہر اگیتے والے !!{formula} نوں~$f$ دے لحاظ نال پورا کردا اے۔
+  $\Gamma$ \emph{پورا ہون جوگ} اے اُدوں تے صرف اُدوں جدوں کوئی
+  نمونہ~$\mModel{M}$ تے کوئی تعبیر~$f$، $P(\Gamma)$ لئی، ہووے جیہدے لئی
+  $\mSat{M}{\Gamma}[f]$۔
+\end{defn}
+
+\begin{prop}
+  جے $\Gamma$ وچ $\sFmla{\True}{!A}[\sigma]$ تے
+  $\sFmla{\False}{!A}[\sigma]$ دونیں ہون، کسے !!{formula}~$!A$ تے
+  اگیتے~$\sigma$ لئی، تاں $\Gamma$ پورا نہیں ہو سکدا۔
+\end{prop}
+
+\begin{proof}
+  ایسا نمونہ~$\mModel{M}$ تے تعبیر~$f$، $P(\Gamma)$ لئی، ہو ای نہیں سکدے
+  جیہناں لئی $\mSat{M}{!A}[f(\sigma)]$ تے
+  $\mSat/{M}{!A}[f(\sigma)]$ دونیں ہون۔
+\end{proof}
+
+\begin{thm}[صحت مندی]
+  \ollabel{thm:tableau-soundness}
+  جے $\Gamma$ دا کوئی بند !!{tableau} اے، تاں $\Gamma$ پورا نہیں ہو سکدا۔
+\end{thm}
+
+\begin{proof}
+!!a{tableau} دی شاخ پورا ہون جوگ اُدوں تے صرف اُدوں اے جدوں اوہدے اُتے
+آئے !!{signed formula}s دا سیٹ پورا ہون جوگ اے۔ !!a{tableau} نوں پورا
+ہون جوگ آکھاں گے جے اوہدے وچ گھٹ توں گھٹ اک پورا ہون جوگ شاخ ہووے۔
+
+اسیں ایہ وکھاؤنے آں کہ کسے پورا ہون جوگ !!{tableau} نوں اخذ دے
+کسے قاعدے نال ودھائیے تاں ہر واری پورا ہون جوگ !!{tableau} ای ملدا اے۔
+ایس نال قضیہ ثابت ہو جائے گا۔ ہر بند !!{tableau} اوہناں قاعدیاں نوں
+اوس !!{tableau} اُتے لا کے ملدا اے جیہدے وچ صرف~$\Gamma$ دے مفروضے نیں۔
+سو جے $\Gamma$ پورا ہون جوگ ہووے، تاں اوہدا ہر !!{tableau} پورا ہون جوگ
+ہووے گا۔ پر بند !!{tableau} پورا نہیں ہو سکدا، کیوں جے اوہدیاں ساریاں
+شاخاں بند ہوندیاں نیں، تے بند شاخاں پوریاں نہیں ہو سکدیاں۔
+
+منّ لو ساڈے کول پورا ہون جوگ !!{tableau} اے، یعنی اجیہا !!a{tableau}
+جیہدے وچ گھٹ توں گھٹ اک پورا ہون جوگ شاخ اے۔ اخذ دا قاعدہ لاؤن نال
+یا تاں کسے شاخ اُتے !!{signed formula}s ودھدے نیں، یا شاخ دو شاخاں وچ
+ونڈی جاندی اے۔ جے !!{tableau} وچ کوئی پورا ہون جوگ شاخ اے جیہڑی ایس
+قاعدے نال نہیں ودھی، تاں ودھے ہوئے !!{tableau} وچ وی اوہ پورا ہون جوگ
+شاخ رہندی اے۔ ایس لئی ودھیا تابلو پورا ہون جوگ اے۔ سو اسیں صرف اوہ صورت
+ویکھنی اے جیہدے وچ قاعدہ کسے پورا ہون جوگ شاخ اُتے لگدا اے۔
+
+منّ لو $\Gamma$ اوس شاخ دے !!{signed formula}s دا سیٹ اے، تے
+$\sFmla{S}{!A}[\sigma] \in \Gamma$ اوہ !!{signed formula} اے جیہدے اُتے
+قاعدہ لگدا اے۔ جے قاعدے نال شاخ نہیں ونڈی جاندی، تاں اسیں وکھانا اے
+کہ ودھی ہوئی شاخ، یعنی قاعدے دے نتیجیاں سنے $\Gamma$، ہُن وی پورا ہون
+جوگ اے۔ جے قاعدے نال شاخ دو حصیاں وچ ونڈی جاندی اے، تاں اسیں وکھانا
+اے کہ ملن والیاں دونہاں شاخاں وچوں گھٹ توں گھٹ اک پورا ہون جوگ اے۔
+\tagfalse{prvDiamond}
+پہلاں اوہ اخذ ویکھدے آں جیہناں دا صرف اک مقدمہ اے۔
+\begin{enumerate}
+\item شاخ، قاعدہ $\TRule{\True}{\lnot}$ نوں
+  $\sFmla{\True}{\lnot !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  تاں ودھی ہوئی شاخ اُتے !!{signed formula}s
+  $\Gamma \cup \{\sFmla{\False}{!B}[\sigma]\}$ نیں۔ منّ لو
+  $\mSat{M}{\Gamma}[f]$۔ خاص طور اُتے $\mSat{M}{\lnot !B}[f(\sigma)]$۔
+  ایس لئی $\mSat/{M}{!B}[f(\sigma)]$، یعنی $\mModel{M}$،
+  $\sFmla{\False}{!B}[\sigma]$ نوں~$f$ دے لحاظ نال پورا کردا اے۔
+\item شاخ، قاعدہ $\TRule{\False}{\lnot}$ نوں
+  $\sFmla{\False}{\lnot !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔ مشق۔
+\item شاخ، قاعدہ $\TRule{\True}{\land}$ نوں
+  $\sFmla{\True}{!B \land !C}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  ایس نال شاخ اُتے دو نویں !!{signed formula}s
+  $\sFmla{\True}{!B}[\sigma]$ تے $\sFmla{\True}{!C}[\sigma]$ ملدے نیں۔
+  منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{!B \land
+    !C}[f(\sigma)]$۔ تاں $\mSat{M}{!B}[f(\sigma)]$ تے
+  $\mSat{M}{!C}[f(\sigma)]$۔ ایس دا مطلب اے کہ $\mModel{M}$،
+  $\sFmla{\True}{!B}[\sigma]$ تے $\sFmla{\True}{!C}[\sigma]$
+  دونہاں نوں~$f$ دے لحاظ نال پورا کردا اے۔
+\item شاخ، قاعدہ $\TRule{\False}{\lor}$ نوں
+  $\sFmla{\False}{!B \lor !C} \in \Gamma$ اُتے لا کے ودھدی اے۔ مشق۔
+\item شاخ، قاعدہ $\TRule{\False}{\lif}$ نوں
+  $\sFmla{\False}{!B \lif !C}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  شاخ اُتے دو نویں !!{signed formula}s ملدے نیں،
+  $\sFmla{\True}{!B}[\sigma]$ تے $\sFmla{\False}{!C}[\sigma]$۔
+  منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے
+  $\mSat/{M}{!B \lif !C}[f(\sigma)]$۔ تاں
+  $\mSat{M}{!B}[f(\sigma)]$ تے $\mSat/{M}{!C}[f(\sigma)]$۔
+  ایس دا مطلب اے کہ $\mModel{M}, f$،
+  $\sFmla{\True}{!B}[\sigma]$ تے $\sFmla{\False}{!C}[\sigma]$ دونہاں نوں
+  پورا کردے نیں۔
+
+\iftag{prvBox}{%
+\item شاخ، قاعدہ $\TRule{\True}{\Box}$ نوں
+  $\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{!B}[\sigma.n]$ ملدا اے، کسے
+    $\sigma.n \in P(\Gamma)$ لئی (کیوں جے $\sigma.n$ پہلاں توں ورتیا
+    ہویا ہونا چاہیدا اے)۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے
+    $\mSat{M}{\Box !B}[f(\sigma)]$۔ جدوں $f$ اگیتیاں دی تعبیر اے تے
+    $\sigma$, $\sigma.n \in P(\Gamma)$ دونیں ہون، تاں اسیں جاندے آں کہ
+    $Rf(\sigma)f(\sigma.n)$۔ ایس لئی $\mSat{M}{!B}[f(\sigma.n)]$،
+    یعنی $\mModel{M}, f$، $\sFmla{\True}{!B}[\sigma.n]$ نوں پورا کردے نیں۔}
+
+\item شاخ، قاعدہ $\TRule{\False}{\Box}$ نوں
+  $\sFmla{\False}{\Box !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال نواں !!{signed
+      formula}~$\sFmla{\False}{!A}[\sigma.n]$ ملدا اے، جتھے $\sigma.n$
+    شاخ لئی نواں اگیتا اے، یعنی $\sigma.n \notin P(\Gamma)$۔
+    $\Gamma$ پورا ہون جوگ اے، ایس لئی کوئی $\Struct{M}$ تے تعبیر~$f$، $P(\Gamma)$ لئی، موجود اے جیہدے لئی $\Sat{M}{\Gamma}[f]$، خاص کر کے
+    $\mSat/{M}{\Box !B}[f(\sigma)]$۔ اسیں وکھانا اے کہ
+    $\Gamma \cup \{\sFmla{\False}{!B}[\sigma.n]\}$ پورا ہون جوگ اے۔
+    ایس لئی اسیں $P(\Gamma) \cup \{\sigma.n\}$ دی تعبیر ایویں
+    متعین کردے آں:
+
+$\mSat/{M}{\Box !B}[f(\sigma)]$ اے، ایس لئی کوئی $w \in W$ اے
+  جیہدے لئی $Rf(\sigma)w$ تے $\mSat/{M}{!B}[w]$۔ منّ لو $f'$، $f$ ورگا
+  ای اے، بس $f'(\sigma.n) = w$۔ $f'(\sigma) = f(\sigma)$ تے
+  $Rf(\sigma)w$ ہون کر کے، ایس لئی $Rf'(\sigma)f'(\sigma.n)$، سو $f'$،
+  $P(\Gamma) \cup \{\sigma.n\}$ دی تعبیر اے۔ صاف اے کہ
+  $\mSat/{M}{!B}[f'(\sigma.n)]$۔ $f(\sigma') = f'(\sigma')$
+  ہر اگیتے $\sigma' \in P(\Gamma)$ لئی اے، ایس لئی
+  $\mSat{M}{\Gamma}[f']$۔ سو $\mModel{M}, f'$،
+  $\Gamma \cup \{\sFmla{\False}{!B}[\sigma.n]\}$ نوں پورا کردے نیں۔}
+  }{}
+
+\iftag{prvDiamond}{%
+\item شاخ، قاعدہ $\TRule{\True}{\Diamond}$ نوں
+  $\sFmla{\True}{\Diamond !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال نواں !!{signed
+      formula}~$\sFmla{\True}{!A}[\sigma.n]$ ملدا اے، جتھے $\sigma.n$
+    شاخ لئی نواں اگیتا اے، یعنی $\sigma.n \notin P(\Gamma)$۔
+    $\Gamma$ پورا ہون جوگ اے، ایس لئی کوئی $\Struct{M}$ تے تعبیر~$f$، $P(\Gamma)$ لئی، موجود اے جیہدے لئی $\Sat{M}{\Gamma}[f]$، خاص کر کے
+    $\mSat{M}{\Diamond !B}[f(\sigma)]$۔ اسیں وکھانا اے کہ
+    $\Gamma \cup \{\sFmla{\True}{!B}[\sigma.n]\}$ پورا ہون جوگ اے۔
+    ایس لئی اسیں $P(\Gamma) \cup \{\sigma.n\}$ دی تعبیر ایویں
+    متعین کردے آں:
+
+$\mSat{M}{\Diamond !B}[f(\sigma)]$ اے، ایس لئی کوئی $w \in W$ اے
+  جیہدے لئی $Rf(\sigma)w$ تے $\mSat{M}{!B}[w]$۔ منّ لو $f'$، $f$ ورگا
+  ای اے، بس $f'(\sigma.n) = w$۔ $f'(\sigma) = f(\sigma)$ تے
+  $Rf(\sigma)w$ ہون کر کے، ایس لئی $Rf'(\sigma)f'(\sigma.n)$، سو $f'$،
+  $P(\Gamma) \cup \{\sigma.n\}$ دی تعبیر اے۔ صاف اے کہ
+  $\mSat{M}{!B}[f'(\sigma.n)]$۔ $f(\sigma') = f'(\sigma')$
+  ہر اگیتے $\sigma' \in P(\Gamma)$ لئی اے، ایس لئی
+  $\mSat{M}{\Gamma}[f']$۔ سو $\mModel{M}, f'$،
+  $\Gamma \cup \{\sFmla{\True}{!B}[\sigma.n]\}$ نوں پورا کردے نیں۔}
+\item شاخ، قاعدہ $\TRule{\False}{\Diamond}$ نوں
+  $\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\False}{!B}[\sigma.n]$ ملدا اے، کسے
+    $\sigma.n \in P(\Gamma)$ لئی (کیوں جے $\sigma.n$ پہلاں توں ورتیا
+    ہویا ہونا چاہیدا اے)۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے
+    $\mSat/{M}{\Diamond !B}[f(\sigma)]$۔ جدوں $f$ اگیتیاں دی تعبیر اے تے
+    $\sigma$, $\sigma.n \in P(\Gamma)$ دونیں ہون، تاں اسیں جاندے آں کہ
+    $Rf(\sigma)f(\sigma.n)$۔ ایس لئی $\mSat/{M}{!B}[f(\sigma.n)]$،
+    یعنی $\mModel{M}, f$، $\sFmla{\False}{!B}[\sigma.n]$ نوں پورا کردے نیں۔}
+  }{}
+\end{enumerate}
+ہُن اوہ اخذ ویکھدے آں جیہناں دے دو مقدمے نیں۔
+\begin{enumerate}
+\item شاخ، قاعدہ $\TRule{\False}{\land}$ نوں
+  $\sFmla{\False}{!B \land !C}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  ایس نال دو شاخاں بندیاں نیں۔ کھبی شاخ $\sFmla{\False}{!B}[\sigma]$
+  راہیں تے سجی شاخ $\sFmla{\False}{!C}[\sigma]$ راہیں اگے ودھدی اے۔
+  منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے
+  $\mSat/{M}{!B \land !C}[f(\sigma)]$۔ تاں
+  $\mSat/{M}{!B}[f(\sigma)]$ یا $\mSat/{M}{!C}[f(\sigma)]$۔
+  پہلی صورت وچ $\mModel{M}, f$، $\sFmla{\False}{!B}[\sigma]$ نوں
+  پورا کردے نیں، یعنی کھبی شاخ پورا ہون جوگ اے۔ دوجی صورت وچ
+  $\mModel{M}, f$، $\sFmla{\False}{!C}[\sigma]$ نوں پورا کردے نیں،
+  یعنی سجی شاخ پورا ہون جوگ اے۔
+\item شاخ، قاعدہ $\TRule{\True}{\lor}$ نوں
+    $\sFmla{\True}{!B \lor !C}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔ مشق۔
+\item شاخ، قاعدہ $\TRule{\True}{\lif}$ نوں
+    $\sFmla{\True}{!B \lif !C}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔ مشق۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref[nml][tab][sou]{thm:tableau-soundness} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+\end{cor}
+
+\begin{proof}
+  جے $\Gamma \Proves !A$، تاں کجھ $!B_1$, \dots, $!B_n \in
+  \Gamma$ لئی، $\Delta = \{\sFmla{\False}{!A}[1], \sFmla{\True}{!B_1}[1],
+  \dots, \sFmla{\True}{!B_n}[1]\}$ دا بند !!{tableau} اے۔
+  اسیں وکھانا اے کہ $\Gamma \Entails !A$۔ منّ لو ایہ نہیں۔ تاں کسے
+  $\mModel{M}$ تے $w$ لئی $\mSat{M}{!B_i}[w]$، $i=1$, \dots,~$n$
+  لئی اے، پر $\mSat/{M}{!A}[w]$۔ منّ لو $f(1) = w$۔ تاں $f$،
+  ~$P(\Delta)$ دی~$\mModel{M}$ وچ تعبیر اے، تے $\mModel{M}$،
+  ~$\Delta$ نوں~$f$ دے لحاظ نال پورا کردا اے۔ پر
+  \olref{thm:tableau-soundness} مطابق، $\Delta$ دا بند !!{tableau} ہون
+  کر کے اوہ پورا نہیں ہو سکدا۔ ایہ تضاد اے۔ سو آخرکار
+  $\Gamma \Proves !A$ ہونا لازمی اے۔
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$ سارے نمونیاں وچ سچ اے۔
+\end{cor}
+
+\end{document}

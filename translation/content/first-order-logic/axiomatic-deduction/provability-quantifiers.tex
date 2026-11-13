@@ -1,0 +1,55 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: provability-quantifiers
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{qpr}
+
+\olsection{\usetoken{S}{derivability} تے مسوّرے}
+
+\begin{explain}
+  تمامیت دے قضیے لئی ایہ وی ضروری اے کہ مسلّمی اخذاں توں
+  $\Proves$ بارے اوہ حقیقتاں حاصل ہون جیہڑیاں ایس حصے وچ
+  ثابت کیتیاں جاندیاں نیں۔
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:strong-generalization} جے $c$ اک !!a{constant} اے جیہڑا
+نہ $\Gamma$ وچ آؤندا اے تے نہ $!A(x)$ وچ، تے $\Gamma \Proves !A(c)$،
+تاں $\Gamma \Proves \lforall[x][!A(x)]$۔
+\end{thm}
+
+\begin{proof}
+% PNBAXD-015: ہمیشہ صادق والی مسلّمی سطر تے اثباتِ مقدم دا آخری جواز واضح کیتا۔
+استنباط دے قضیے نال $\Gamma \Proves \ltrue \lif !A(c)$۔ چونکہ
+$c$ نہ $\Gamma$ وچ آؤندا اے تے نہ~$\top$ وچ، ساڈے کول $\Gamma \Proves
+\ltrue \lif \lforall[x][!A(x)]$ ملدا اے۔ استنباط دا قضیہ فیر لا کے،
+تے ہمیشہ صادق والی مسلّمی سطر نوں قاعدۂ اثباتِ مقدم نال ورت کے،
+$\Gamma \Proves \lforall[x][!A(x)]$۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+% PNBAXD-014: q1/q2 دی اصل بند ٹرم والی حد صاف کیتی۔
+دونوں حالتاں وچ مثال لئی ورتیا ٹرم بند اے۔
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{\olref[qua]{ax:q2} تے استنباط دے قضیے توں۔}{}
+\tagitem{prvAll}{\olref[qua]{ax:q1} تے استنباط دے قضیے توں۔}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

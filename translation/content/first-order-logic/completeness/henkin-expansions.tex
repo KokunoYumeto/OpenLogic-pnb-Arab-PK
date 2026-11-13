@@ -1,0 +1,248 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: henkin-expansion
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{hen}
+
+\olsection{ہینکن دی توسیع}
+
+\begin{explain}
+تمامیت دے قضیے نوں ثابت کرن وچ اک مشکل ایہ اے کہ مکمل بے تضاد
+سیٹ~$\Gamma$ توں جیہڑا ماڈل اسیں بناندے آں، اوہنوں
+~$\Gamma$ وچ موجود سارے مسوّر !!{formula}s سچے بنانے پینے نیں۔
+ایہ یقینی بناؤن لئی اسیں لیون ہینکن دی دتی اک ترکیب ورتدے آں۔
+بنیادی طور اُتے، اس ترکیب وچ زبان نوں لامحدود تعداد وچ نویں
+!!{constant}s نال ودھایا جاندا اے، تے اک آزاد !!{variable}
+والے ہر !!{formula}~$!A(x)$ لئی ایس صورت دا اک فارمولا
+شامل کیتا جاندا اے:
+\iftag{prvEx}
+      {$\lexists[x][!A(x)] \lif !A(c)$}
+      {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c)$},
+جتھے $c$ نویں !!{constant}s وچوں اک اے۔ جدوں اسیں
+~$\Gamma$ نوں پورا کرن والی !!{structure} بناواں گے،
+ایہ ایس گل دی ضمانت دیوے گا کہ
+\iftag{prvEx}
+{ہر سچے وجودی جملے دا اک گواہ}
+{ہر جھوٹھے کلی جملے دی اک ردّ مثال}
+انہاں نویں مستقل علامتاں وچوں موجود ہووے۔
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:lang-exp}
+جے $\Gamma$، $\Lang L$ وچ بے تضاد اے تے $\Lang L'$
+نوں $\Lang L$ وچ نویں !!{constant}s دا
+!!a{denumerable} سیٹ $\Obj d_0$،
+$\Obj d_1$، \dots شامل کر کے بنایا گیا اے، تاں
+$\Gamma$،~$\Lang L'$ وچ وی بے تضاد اے۔
+\end{prop}
+
+\begin{defn}[سیر شدہ سیٹ]
+!!{formula}s دا سیٹ $\Gamma$، زبان $\Lang {L}$ وچ
+\emph{سیر شدہ} اُدوں تے صرف اُدوں اے جدوں ہر
+!!{formula}~$!A(x) \in \Frm[L]$ لئی، جیہدے وچ اک
+آزاد !!{variable}~$x$ اے، کوئی
+!!a{constant}~$c \in \Lang{L}$ ایسا ہووے کہ
+\iftag{prvEx}
+      {$\lexists[x][!A(x)] \lif !A(c) \in \Gamma$}
+      {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c) \in \Gamma$}۔
+\end{defn}
+
+اگلی تعریف اگلے قضیے دے ثبوت وچ ورتی جائے گی۔
+
+\begin{defn}
+\ollabel{defn:henkin-exp}
+فرض کرو $\Lang L'$ اوہو جیہی اے جیویں
+\olref{prop:lang-exp} وچ اے۔ اک ترتیب
+$!A_0(x_0)$، $!A_1(x_1)$، \dots مقرر کرو۔
+ایہ انہاں سارے !!{formula}s~$!A_i(x_i)$ دی ترتیب
+اے جیہڑے~$\Lang L'$ دے نیں تے جِنہاں وچ صرف اک
+متغیر ($x_i$) آزاد آوندا اے۔ اسیں
+!!{sentence}s~$!D_n$ نوں $n$ اُتے استقرا نال متعین کردے آں۔
+
+$c_0$، انہاں $\Obj d_i$ وچوں پہلی ایسی
+!!{constant} لو جیہڑی اسیں~$\Lang{L}$ وچ شامل کیتی
+اے تے جیہڑی~$!A_0(x_0)$ وچ نہیں آوندی۔ فرض کرو
+$!D_0$، \dots،~$!D_{n-1}$ پہلے ہی متعین ہو چکے نیں؛
+ہُن $c_n$ نویاں !!{constant}s~$\Obj d_i$ وچوں پہلی
+ایسی لو جیہڑی نہ $!D_0$، \dots،~$!D_{n-1}$ وچ
+آوے تے نہ~$!A_n(x_n)$ وچ۔
+
+ہُن $!D_{n}$ نوں ایہ !!{formula} مقرر کرو:
+\iftag{prvEx}
+{$\lexists[x_{n}][!A_{n}(x_{n})] \lif
+  !A_{n}(c_{n})$}{$\lnot\lforall[x_{n}][!A_{n}(x_{n})] \lif \lnot
+  !A_{n}(c_{n})$}۔
+\end{defn}
+
+\begin{lem}
+\ollabel{lem:henkin}
+ہر بے تضاد سیٹ~$\Gamma$ نوں اک سیر شدہ بے تضاد
+سیٹ~$\Gamma'$ تک ودھایا جا سکدا اے۔
+\end{lem}
+
+\begin{proof}
+جملیاں دا اک بے تضاد سیٹ~$\Gamma$ زبان~$\Lang{L}$
+وچ دتا ہووے، تاں نویں !!{constant}s دا اک
+!!a{denumerable} سیٹ شامل کر کے زبان نوں
+~$\Lang{L'}$ تک ودھاؤ۔ \olref{prop:lang-exp} مطابق
+$\Gamma$ ایس ودھی ہوئی زبان وچ وی بے تضاد اے۔ اگے
+$!D_i$ اوہو جیہڑے \olref{defn:henkin-exp} وچ نیں، لو۔
+ایہ مقرر کرو:
+\begin{align*}
+\Gamma_0 & = \Gamma \\
+\Gamma_{n+1} & = \Gamma_n \cup \{!D_n \}
+\end{align*}
+یعنی $\Gamma_{n+1} = \Gamma \cup \{ !D_0, \dots, !D_n \}$،
+تے $\Gamma' = \bigcup_{n} \Gamma_n$ مقرر کرو۔
+$\Gamma'$ دا سیر شدہ ہونا صاف اے۔
+
+جے $\Gamma'$ متضاد ہوندا، تاں کسے نہ کسے $n$ لئی
+$\Gamma_n$ متضاد ہوندا (مشق: دسو کیوں)۔ ایس لئی
+$\Gamma'$ دے بے تضاد ہون نوں وکھاؤن لئی $n$ اُتے
+استقرا نال ایہ وکھانا کافی اے کہ ہر سیٹ~$\Gamma_n$
+بے تضاد اے۔
+
+استقرا دی بنیاد بس ایہ دعویٰ اے کہ $\Gamma_0 = \Gamma$
+بے تضاد اے، جیہڑا قضیے دا مفروضہ اے۔ استقرا دے
+اگلے قدم لئی فرض کرو $\Gamma_{n}$ بے تضاد اے پر
+$\Gamma_{n+1} =
+\Gamma_n \cup \{!D_n\}$ متضاد اے۔ یاد کرو
+$!D_n$ ایہ اے:
+\iftag{prvEx}
+{$\lexists[x_{n}][!A_{n}(x_n)] \lif !A_{n}(c_{n})$}
+{$\lnot\lforall[x_{n}][!A_{n}(x_n)] \lif \lnot !A_{n}(c_{n})$}،
+جتھے $!A_n(x_n)$، $\Lang{L'}$ دا !!a{formula} اے
+جیہدے وچ صرف متغیر~$x_n$ آزاد اے۔ $c_n$ چُنن دے
+طریقے مطابق (ویکھو \olref{defn:henkin-exp})، $c_n$
+نہ~$!A_n(x_n)$ وچ آوندا اے تے نہ~$\Gamma_n$ وچ۔
+
+جے $\Gamma_n \cup \{!D_n\}$ متضاد اے، تاں
+$\Gamma_n \Proves \lnot !D_n$، تے ایس لئی
+اگلیاں دونیں گلاں درست نیں:
+\iftag{prvEx}{
+\[
+\Gamma_n \Proves \lexists[x_n][!A_n(x_n)]
+\qquad
+\Gamma_n \Proves \lnot !A_n(c_n)
+\]}{
+\[
+\Gamma_n \Proves \lnot\lforall[x_n][!A_n(x_n)]
+\qquad
+\Gamma_n \Proves !A_n(c_n)
+\]}
+چونکہ $c_n$ نہ
+$\Gamma_n$ وچ آوندا اے نہ~$!A_n(x_n)$ وچ،
+\tagrefs{prfAX/{fol:axd:qpr:thm:strong-generalization},prfSC/{fol:seq:qpr:thm:strong-generalization},prfND/{fol:ntd:qpr:thm:strong-generalization},prfTab/{fol:tab:qpr:thm:strong-generalization}}
+لاگو ہوندا اے۔
+\iftag{prvEx}
+{$\Gamma_n \Proves \lnot !A_n(c_n)$}
+{$\Gamma_n \Proves !A_n(c_n)$}
+توں سانوں ایہ ملدا اے:
+\iftag{prvEx}
+{$\Gamma_n \Proves \lforall[x_n][\lnot !A_n(x_n)]$}
+{$\Gamma_n \Proves \lforall[x_n][!A_n(x_n)]$}۔
+ایس طرح ساڈے کول اک پاسے
+\iftag{prvEx}
+{$\Gamma_n \Proves \lexists[x_n][!A_n(x_n)]$ تے
+$\Gamma_n \Proves \lforall[x_n][\lnot !A_n(x_n)]$}
+{$\Gamma_n \Proves \lnot\lforall[x_n][!A_n(x_n)]$ تے
+$\Gamma_n \Proves \lforall[x_n][!A_n(x_n)]$}
+دونیں نیں؛ سو $\Gamma_n$ آپ متضاد اے۔
+\iftag{prvEx}
+{(خیال کرو کہ
+\iftag{prvAll}
+{$\lforall[x_n][\lnot !A_n(x_n)] \Proves
+  \lnot\lexists[x_n][!A_n(x_n)]$}
+{$\lforall[x_n][\lnot !A_n]$ نوں
+  $\lnot\lexists[x_n][\lnot\lnot !A_n(x_n)]$ دے طور اُتے
+  متعین کیتا گیا اے، تے
+  $\lnot\lexists[x_n][\lnot\lnot !A_n(x_n)] \Proves
+  \lnot\lexists[x_n][!A_n(x_n)]$}۔)}{}
+ایہ تضاد اے: $\Gamma_n$ نوں بے تضاد فرض کیتا سی۔
+لہٰذا $\Gamma_n \cup \{ !D_n\}$ بے تضاد اے۔
+\end{proof}
+
+\begin{explain}
+% PNB-COM-013: وجودی خاصیت دا tag prvEx اے،prvAll نہیں؛اگلی رسمی شق ایہو فرق رکھدی اے۔
+ہُن اسیں وکھاواں گے کہ جیہڑے سیٹ
+\emph{مکمل}، بے تضاد تے سیر شدہ نیں، اوہناں دی
+خاصیت ایہ اے کہ \iftag{prvAll}{اوہناں وچ اک
+  کلی طور اُتے مسوّر !!{sentence} اُدوں تے صرف
+  اُدوں ہوندا اے جدوں اوہدیاں ساریاں مثالاں
+  اوہناں وچ ہون}{}\iftag{defAll,defEx}{}{ تے
+  }\iftag{prvEx}{اوہناں وچ اک وجودی طور اُتے
+  مسوّر !!{sentence} اُدوں تے صرف اُدوں ہوندا
+  اے جدوں اوہدی گھٹ توں گھٹ اک مثال اوہناں
+  وچ ہووے}{}۔ اسیں ایہ گل وکھاؤن لئی ورتاں گے
+کہ مکمل، بے تضاد، سیر شدہ سیٹ توں بنائی
+!!{structure} اوہدے سارے مسوّر جملیاں نوں سچا
+بناندی اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:saturated-instances}
+فرض کرو $\Gamma$ مکمل، بے تضاد تے سیر شدہ اے۔
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\lexists[x][!A(x)] \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A(t) \in \Gamma$
+  ہووے، گھٹ توں گھٹ اک بند ٹرم~$t$ لئی۔}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A(t) \in \Gamma$
+  ہووے، ہر بند ٹرم~$t$ لئی۔}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{tagenumerate}{prvEx,prvAll}
+  \tagitem{prvEx}{%
+    \iftag{probEx}{مشق۔}{پہلے فرض کرو کہ $\lexists[x][!A(x)]
+      \in \Gamma$۔ چونکہ $\Gamma$ سیر شدہ اے،
+      $(\lexists[x][!A(x)] \lif !A(c)) \in \Gamma$
+      کسے !!{constant}~$c$ لئی۔
+      \tagrefs{prfAX/{fol:axd:ppr:prop:provability-lif},prfSC/{fol:seq:ppr:prop:provability-lif},prfND/{fol:ntd:ppr:prop:provability-lif},prfTab/{fol:tab:ppr:prop:provability-lif}}
+      دی شق~(1) تے
+      \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-prov-in}
+      مطابق $!A(c) \in \Gamma$۔
+
+    اُلٹے رخ لئی سیر شدگی دی لوڑ نہیں: فرض کرو
+    $!A(t) \in \Gamma$۔ تاں
+    \tagrefs{prfAX/{fol:axd:qpr:prop:provability-quantifiers},prfSC/{fol:seq:qpr:prop:provability-quantifiers},prfND/{fol:ntd:qpr:prop:provability-quantifiers},prfTab/{fol:tab:qpr:prop:provability-quantifiers}}
+    دی شق~(1) مطابق $\Gamma \Proves \lexists[x][!A(x)]$۔
+    \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-prov-in}
+    مطابق $\lexists[x][!A(x)] \in \Gamma$۔}}{}
+  \tagitem{prvAll}{%
+    \iftag{probAll}{مشق۔}{فرض کرو کہ $!A(t) \in \Gamma$
+      ہر بند ٹرم~$t$ لئی۔ برہانِ خلف لئی فرض کرو
+      $\lforall[x][!A(x)] \notin \Gamma$۔ چونکہ
+      $\Gamma$ مکمل اے، ایس لئی
+      $\lnot\lforall[x][!A(x)] \in \Gamma$۔
+      سیر شدگی مطابق
+      \iftag{prvEx}{$(\lexists[x][\lnot !A(x)] \lif \lnot !A(c)) \in
+        \Gamma$}{$(\lnot\lforall[x][!A(x)] \lif \lnot !A(c)) \in
+        \Gamma$} کسے !!{constant}~$c$ لئی۔ مفروضے
+      مطابق، چونکہ $c$ اک بند
+      ٹرم اے، $!A(c) \in \Gamma$۔ پر ایہ
+      $\Gamma$ نوں متضاد بنا دیندا اے۔ (مشق:
+      اوہ !!{derivation} دیو جیہڑی وکھاوے کہ
+      \[
+      \lnot \lforall[x][!A(x)],
+      \iftag{prvEx}{\lexists[x][\lnot !A(x)] \lif \lnot
+        !A(c)}{\lnot\lforall[x][!A(x)] \lif \lnot
+        !A(c)}, !A(c)
+      \]
+      متضاد نیں۔)
+
+      اُلٹے رخ لئی وی سیر شدگی دی لوڑ نہیں:
+      فرض کرو $\lforall[x][!A(x)] \in \Gamma$۔
+      تاں
+      \tagrefs{prfAX/{fol:axd:qpr:prop:provability-quantifiers},prfSC/{fol:seq:qpr:prop:provability-quantifiers},prfND/{fol:ntd:qpr:prop:provability-quantifiers},prfTab/{fol:tab:qpr:prop:provability-quantifiers}}
+      دی شق~(2) مطابق $\Gamma \Proves !A(t)$۔
+      \olref[ccs]{prop:ccs} مطابق سانوں
+      $!A(t) \in \Gamma$ ملدا اے۔}}{}
+  \end{tagenumerate}
+\end{proof}
+
+\end{document}

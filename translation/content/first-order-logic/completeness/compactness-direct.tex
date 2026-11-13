@@ -1,0 +1,232 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: compactness-direct
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{cpd}}
+      {\olfileid{pl}{com}{cpd}}
+
+\olsection{محدود گواہی دے قضیے دا سِدھا ثبوت}
+
+تمامیت دے قضیے نوں ورتے بغیر، اوہدے ثبوت دے ای
+خیالاں نال محدود گواہی دا قضیہ سِدھا ثابت
+کیتا جا سکدا اے۔ تمامیت دے قضیے دے ثبوت وچ
+اسیں !!{sentence}s دے بے تضاد سیٹ~$\Gamma$
+توں شروع کیتا، اوہنوں اک بے تضاد\iftag{FOL}{،
+  سیر شدہ،}{} تے !!{complete}
+!!{sentence}s دے سیٹ~$\Gamma^*$ تک ودھایا،
+تے فیر وکھایا کہ
+% PNB-COM-019: برابری والی صورت وچ نحوی ٹرماں دی بجائے ہم ارز طبقیاں دا نمونہ۔
+\iftag{FOL}{ٹرم
+  نمونے~$\Struct{M(\Gamma^*)}$، یا برابری ہون دی صورت وچ اوہدے
+  ہم ارز طبقیاں دے نمونے}{!!{valuation}~$\pAssign{v(\Gamma^*)}$}
+وچ، جیہنوں~$\Gamma^*$ توں بنایا گیا سی،
+~$\Gamma$ دے سارے !!{sentence}s
+سچے نیں؛ ایس لئی~$\Gamma$ پورا ہون جوگا اے۔
+
+ایہی طریقہ ورت کے اسیں وکھا سکدے آں کہ جملیاں
+دا کوئی محدود طور تے پورا ہون جوگا سیٹ، پورا
+ہون جوگا اے۔ بس صدق دے معاون قضیے تک لے جان والے نتائج
+دے اوہ بیان ثابت کرنے پین گے جنہاں وچ
+”بے تضاد“ دی تھاں ”محدود طور تے پورا
+ہون جوگا“ آ جاندا اے۔
+
+\begin{prop}
+\ollabel{prop:fsat-ccs}
+فرض کرو $\Gamma$،~!!{complete} تے محدود طور تے
+پورا ہون جوگا اے۔ فیر:
+\begin{enumerate}
+\tagitem{prvAnd}{$(!A \land !B) \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A \in \Gamma$
+  تے $!B \in \Gamma$ دونیں ہون۔}{}
+
+\tagitem{prvOr}{$(!A \lor !B) \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں یا $!A \in \Gamma$
+  ہووے یا $!B \in \Gamma$ ہووے۔}{}
+
+\tagitem{prvIf}{$(!A \lif !B) \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں یا $!A \notin \Gamma$
+  ہووے یا $!B \in \Gamma$ ہووے۔}{}
+\end{enumerate}
+\end{prop}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{prop:fsat-ccs}
+ثابت کرو۔ $\Proves$ نوں نہ ورتو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cpd]{prop:fsat-ccs}
+ثابت کرو۔ $\Proves$ نوں نہ ورتو۔
+\end{prob}
+\tagendprob
+
+\iftag{FOL}{%
+\begin{lem}
+\ollabel{lem:fsat-henkin}
+ہر محدود طور تے پورا ہون جوگے
+سیٹ~$\Gamma$ نوں اک سیر شدہ،
+محدود طور تے پورا ہون جوگے
+سیٹ~$\Gamma'$ تک ودھایا جا سکدا اے۔
+\end{lem}
+}{}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{lem:fsat-henkin}
+ثابت کرو۔ (اشارہ: اہم قدم ایہ وکھانا اے کہ جے
+$\Gamma_n$ محدود طور تے پورا ہون جوگا اے،
+تاں $\Gamma_n \cup \{!D_n\}$ وی
+محدود طور تے پورا ہون جوگا اے؛
+!!{derivation}s یا بے تضادی دا سہارا نہ لو۔)
+\end{prob}
+\tagendprob
+
+\iftag{FOL}{
+\begin{prop}\ollabel{prop:fsat-instances}
+فرض کرو $\Gamma$ مکمل، محدود طور تے
+پورا ہون جوگا تے سیر شدہ اے۔
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\lexists[x][!A(x)] \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A(t) \in \Gamma$
+  ہووے کسے اک بند ٹرم~$t$ لئی۔}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A(t) \in \Gamma$
+  ہووے ہر بند ٹرم~$t$ لئی۔}{}
+\end{tagenumerate}
+\end{prop}
+}{}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{prop:fsat-instances}
+ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\begin{lem}
+\ollabel{lem:fsat-lindenbaum}
+ہر محدود طور تے پورا ہون جوگے
+سیٹ~$\Gamma$ نوں !!a{complete} تے
+محدود طور تے پورا ہون جوگے
+سیٹ~$\Gamma^*$ تک ودھایا جا سکدا اے۔
+\end{lem}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{lem:fsat-lindenbaum}
+ثابت کرو۔ (اشارہ: اہم قدم ایہ وکھانا اے
+کہ جے $\Gamma_n$ محدود طور تے پورا
+ہون جوگا اے، تاں یا
+$\Gamma_n \cup \{!A_n\}$ یا
+$\Gamma_n \cup \{\lnot !A_n\}$
+محدود طور تے پورا ہون جوگا اے۔)
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cpd]{lem:fsat-lindenbaum}
+ثابت کرو۔ (اشارہ: اہم قدم ایہ وکھانا اے
+کہ جے $\Gamma_n$ محدود طور تے پورا
+ہون جوگا اے، تاں یا
+$\Gamma_n \cup \{!A_n\}$ یا
+$\Gamma_n \cup \{\lnot !A_n\}$
+محدود طور تے پورا ہون جوگا اے۔)
+\end{prob}
+\tagendprob
+
+\begin{thm}[محدود گواہی]
+\ollabel{thm:compactness-direct}
+$\Gamma$ پورا ہون جوگا اُدوں تے
+صرف اُدوں اے جدوں اوہ محدود
+طور تے پورا ہون جوگا ہووے۔
+\end{thm}
+
+\begin{proof}
+جے $\Gamma$ پورا ہون جوگا اے، تاں
+\iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+موجود اے جیہدی لئی
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$
+ہووے، ہر $!A \in \Gamma$ لئی۔
+ظاہر اے کہ ایہی
+\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+،~$\Gamma$ دے ہر محدود ذیلی سیٹ
+نوں وی پورا کردی اے؛ ایس لئی
+$\Gamma$ محدود طور تے پورا ہون جوگا اے۔
+
+ہُن فرض کرو $\Gamma$ محدود طور تے پورا
+ہون جوگا اے۔\iftag{FOL}{ \olref{lem:fsat-henkin}
+  مطابق اک محدود طور تے پورا ہون جوگا، سیر شدہ
+  سیٹ $\Gamma' \supseteq \Gamma$ موجود اے۔}{}
+\olref{lem:fsat-lindenbaum} مطابق،
+$\iftag{FOL}{\Gamma'}{\Gamma}$
+نوں اک !!a{complete} تے محدود طور تے
+پورا ہون جوگے سیٹ~$\Gamma^*$ تک ودھایا
+جا سکدا اے\iftag{FOL}{، تے $\Gamma^*$ ہن وی
+  سیر شدہ اے}{}۔
+\olref[mod]{defn:termmodel} وانگ
+\iftag{FOL}{ٹرم
+  نمونہ~$\Struct{M(\Gamma^*)}$}{!!{valuation}~$\pAssign{v(\Gamma^*)}$}
+بناؤ۔\iftag{FOL}{ غور کرو کہ
+\olref[mod]{prop:quant-termmodel} اس گل اُتے
+منحصر نہیں سی کہ $\Gamma^*$ بے تضاد اے
+(یا، ایس حوالے نال، !!{complete} یا سیر شدہ
+اے)، بلکہ صرف ایس گل اُتے کہ
+$\Struct{M(\Gamma^*)}$ پوری طرح بند
+ٹرماں نال ڈھکیا ہویا اے۔}{}
+% PNB-COM-010: دونوں شاخاں وچ finite-satisfiability proposition دا حوالہ صاف کیتا۔
+صدق دے معاون قضیے دا ثبوت (\olref[mod]{lem:truth})
+اوہدوں وی چلدا اے جے اسیں
+\olref[ccs]{prop:ccs} دے حوالے دی تھاں
+\olref{prop:fsat-ccs} دا حوالہ رکھ دیئے
+\iftag{FOL}{، تے
+\olref[hen]{prop:saturated-instances}
+دے حوالے دی تھاں \olref{prop:fsat-instances}
+دا حوالہ رکھ دیئے۔
+% PNB-COM-019: برابری موجود ہووے تاں بند ٹرماں دا quotient ضروری؛finite satisfaction congruence دی بنیاد اے۔
+برابری موجود ہووے تاں \olref[ide]{defn:term-model-factor}
+والا طبقیاں دا نمونہ ورتو،نہ الگ الگ نحوی ٹرماں والا نمونہ۔
+برابری دی انعکاسیت،تناظر،تعدیت تے فنکشن/محمول دی بدل پذیری
+دے ہر قدم لئی صرف محدود برابریاں درکار نیں؛اوہناں دے معنوی
+نتیجے مکمل سیٹ وچ شامل ہوندے نیں۔ ایس لئی تعبیر نمائندے دے
+انتخاب توں آزاد اے تے \olref[ide]{lem:truth} دی برابری والی
+صورت وی صدق دے استقرائی ثبوت وچ چل دی اے}{}۔
+% PNB-COM-019: صدق دے معاون قضیے دے اخذی جواز دی تھاں محدود معنوی بندش دا مکمل سبب۔
+ایتھے کسی اخذی قاعدے دا سہارا نہیں: مکمل،محدود طور تے پورا ہون
+جوگے سیٹ دے کسی محدود ذیلی سیٹ دا ہر معنوی نتیجہ اُس وڈے سیٹ
+وچ شامل اے۔ ورنہ مکملیت نال اوہدی نفی شامل ہووے گی،تے اوہ
+محدود ذیلی سیٹ نال نفی ملا کے اک محدود،پورا نہ ہون جوگا ذیلی
+سیٹ بن جائے گا،جو مفروضے دے خلاف اے۔ خاص طور اُتے کذب دا
+مستقل شامل نہیں ہو سکدا،صدق دا مستقل شامل ہوندا اے،تے ہر
+جملے دی نفی اُدوں تے صرف اُدوں شامل اے جدوں اوہ جملہ شامل
+نہ ہووے۔ ایہ محدود معنوی جواز اصل صدق دے معاون قضیے وچ اخذ تے بے تضادی
+والیاں وجوہاں دی تھاں ورتو۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+صدق دے معاون قضیے دے اوہ روپ دا پورا ثبوت
+لکھو (\olref[fol][com][mod]{lem:truth})
+جیہڑا \olref[fol][com][cpd]{thm:compactness-direct}
+دے ثبوت لئی درکار اے۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+صدق دے معاون قضیے دے اوہ روپ دا پورا ثبوت
+لکھو (\olref[pl][com][mod]{lem:truth})
+جیہڑا \olref[pl][com][cpd]{thm:compactness-direct}
+دے ثبوت لئی درکار اے۔
+\end{prob}
+\tagendprob
+
+\end{document}

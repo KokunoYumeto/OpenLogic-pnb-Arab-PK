@@ -1,0 +1,59 @@
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: pairs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{pai}
+\olsection{جوڑے تے پچھلا عدد}
+
+\begin{defn}
+$M$ تے $N$ دا جوڑا، جیہڑا $\tuple{M,N}$ لکھدے آں، ایویں
+متعین ہوندا اے۔
+\[
+\tuple{M,N} \ident \lambd[f][fMN].
+\]
+\end{defn}
+
+بدیہی خیال ایہ اے کہ ایہ اوہ فنکشن اے جیہڑا اک فنکشن قبول
+کردا اے تے اوہنوں جوڑے دے دوہاں رکناں اُتے لاؤندا اے۔ ایس
+خیال توں ایہ جوڑا بناؤن والا فنکشن ملدا اے، جیہڑا دو ٹرم
+لیندا اے تے اوہناں نوں رکھن والا جوڑا واپس دیندا اے۔
+\[
+  \fn{Pair} \ident \lambd[mn][\lambd[f][fmn]]
+\]
+جے جوڑا دِتّا ہووے، اسیں اوہدے رکن وی واپس حاصل کرنا چاہندے آں۔
+ایس لئی دو رکن کڈھن والے فنکشن چاہیدے نیں، جیہڑے دلیل وجوں جوڑا
+لیندے نیں تے اوہدے وچوں پہلا یا دوجا رکن واپس دیندے نیں۔
+\begin{align*}
+  \fn{Fst} & \ident \lambd[p][p(\lambd[mn][m])]\\
+  \fn{Snd} & \ident \lambd[p][p(\lambd[mn][n])]
+\end{align*}
+
+\begin{prob}
+  دسو کہ رکن کڈھن والے فنکشن $\fn{Fst}$ تے $\fn{Snd}$ کیوں
+  کم کردے نیں۔
+\end{prob}
+
+ہُن جوڑیاں دی مدد نال پچھلا عدد دین والے فنکشن نوں
+!!{lambda define} کر سکدے آں۔
+\[
+  \fn{Pred} \ident \lambd[n][\fn{Fst}(n (\lambd[p][\tuple{\fn{Snd}\, {p}, \fn{Succ}(\fn{Snd}\, {p})}]) \tuple{\num 0, \num 0})]
+\]
+یاد رکھو کہ $\num n\, f x$ دی تقلیل $f^{n}(x)$ تک ہوندی
+اے۔ ایس صورت وچ $f$ اک فنکشن اے جیہڑا جوڑا $p$ لیندا اے
+تے نواں جوڑا واپس دیندا اے۔ نویں جوڑے وچ $p$ دا دوجا رکن
+تے اوس دوجے رکن دا جانشین ہوندا اے۔ $x$ جوڑا $\tuple{0,0}$
+اے۔ سو نتیجہ $\tuple{0,0}$ اے جے $n=0$، تے ہور صورت وچ
+$\tuple{\num{n-1}, \num n}$ اے۔ فیر $\fn{Pred}$ نتیجے دا پہلا
+رکن واپس دیندا اے۔
+
+گھٹاؤ دی تعریف $\fn{Pred}$ نوں $a$ اُتے $b$ واری لاؤن نال
+ہو سکدی اے۔
+\[
+\fn{Sub} \ident \lambd[ab][b \fn{Pred}\, a].
+\]
+
+\end{document}

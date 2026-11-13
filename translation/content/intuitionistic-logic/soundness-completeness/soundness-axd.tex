@@ -1,0 +1,59 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: soundness-axd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{sax}
+
+\olsection{مسلّمی \usetoken{P}{derivation} دی صحت مندی}
+
+\begin{editorial}
+  صحت مندی دا ثبوت ایس گل اُتے ٹکیا اے کہ سارے مسلّمے وجدانیت پسند
+  منطق وچ معتبر نیں۔ ایہ گل ہجے ثابت کرنی پئے گی، مثلاً معنیات دے باب وچ۔
+\end{editorial}
+
+\begin{thm}[صحت مندی]
+  \ollabel{thm:soundness}
+  جے $\Gamma \Proves !A$، تاں $ \Gamma \Entails !A$۔
+\end{thm}
+
+\begin{proof}
+  اسیں ثابت کرنے آں کہ جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+  ثبوت گنتی~$n$ اُتے استقرا نال اے۔ ایہ اوہناں !!{formula}s دی گنتی اے جیہڑے اُس !!{derivation} وچ نیں
+  جیہڑا~$!A$ دا~$\Gamma$ توں اے۔
+  اسیں وکھاواں گے کہ جے $!A_1$،
+  \dots، $!A_n = !A$، !!a{derivation} اے~$\Gamma$ توں، تاں $\Gamma
+  \Entails !A_n$۔ دھیان دیو کہ جے $!A_1$، \dots، $!A_n$ اک
+  !!a{derivation} اے، تاں $!A_1$، \dots، $!A_k$ وی اے، ہر $k<n$ لئی۔
+
+  لمبائی~$0$ دے !!{derivation}s نہیں ہوندے، ایس لئی $n=0$ اُتے دعویٰ
+  خالی شرط کارن پورا اے۔ ہُن دعویٰ سارے اوہناں !!{derivation}s لئی قائم اے
+  جیہناں دی لمبائی~$<n$ اے۔ اسیں~$!A_n$ دی دلیل دے حساب نال وکھ وکھ صورتاں
+  ویکھدے آں۔
+
+  \begin{enumerate}
+  \item $!A_n$ مسلّمہ اے۔ سارے مسلّمے معتبر نیں، سو $\Gamma \Entails
+    !A_n$ ہر~$\Gamma$ لئی۔
+  \item $!A_n \in \Gamma$۔ فیر ہر $\mModel{M}$ تے $w$ لئی، جے
+    $\mSat{M}{\Gamma}[w]$، تاں صاف اے کہ $\mSat{M}{\Gamma}{!A_n}[w]$،
+    یعنی $\Gamma \Entails !A$۔
+  \item $!A_n$، \MP{} نال $!A_i$ تے $!A_j \ident !A_i \lif
+    !A_n$ توں نکلدا اے۔ $!A_1$، \dots، $!A_i$ تے $!A_1$، \dots، $!A_j$،
+    !!{derivation}s نیں~$\Gamma$ توں۔ سو استقرائی مفروضے مطابق $\Gamma
+    \Entails !A_i$ تے $\Gamma \Entails !A_i \lif !A_n$۔
+
+    فرض کرو $\mSat{M}{\Gamma}[w]$۔ چونکہ $\mSat{M}{\Gamma}[w]$ تے
+    $\Gamma \Entails !A_i \lif !A_n$، ایس لئی $\mSat{M}{!A_i \lif
+      !A_n}[w]$۔ تعریف مطابق ایہدا مطلب اے کہ ہر اوہ $w'$ جیہڑی
+    $Rww'$ پوری کرے، اوہدے لئی جے $\mSat{M}{!A_i}[w']$، تاں $\mSat{M}{!A_n}[w']$۔
+    چونکہ $R$ انعکاسی اے، $w$ وی اوہناں $w'$ وچ شامل اے جیہڑیاں $Rww'$ پورا
+    کردیاں نیں۔ یعنی جے $\mSat{M}{!A_i}[w]$، تاں $\mSat{M}{!A_n}[w]$۔
+    چونکہ $\Gamma \Entails !A_i$، ایس لئی $\mSat{M}{!A_i}[w]$۔ سو
+    $\mSat{M}{!A_n}[w]$، جیہڑا اسیں وکھانا سی۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

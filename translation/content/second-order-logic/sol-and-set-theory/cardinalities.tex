@@ -1,0 +1,74 @@
+% Part: second-order-logic
+% Chapter: sol-and-sets
+% Section: cardinalities
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{set}{crd}
+
+\olsection{سیٹاں دی کارڈینیلٹی}
+
+\begin{explain}
+جیویں اسیں ایہ ظاہر کر سکدے آں کہ دائرہ متناہی یا لامتناہی اے،
+!!{enumerable} یا !!{nonenumerable} اے، اویویں اسیں~$\Domain{M}$ دے کسے
+ذیلی سیٹ دے متناہی یا لامتناہی، !!{enumerable} یا !!{nonenumerable} ہون دی خاصیت
+دی تعریف وی کر سکدے آں۔
+\end{explain}
+
+\begin{prop}
+ایہ فارمولا $\fn{Inf}(X) \ident$
+\begin{multline*}
+\lexists[u][(\lforall[x][\lforall[y][((X(x) \land X(y) \land \eq[u(x)][u(y)]) \lif
+      \eq[x][y])]] \land \lforall[x][(X(x) \lif X(u(x)))] \land {} \\\lexists[y][(X(y) \land \lforall[x][(X(x)
+      \lif \eq/[y][u(x)])])])]
+\end{multline*}
+متغیر قدر بندی~$s$ دے لحاظ نال اُدوں تے صرف اُدوں پورا اتردا اے جدوں
+$s(X)$ لامتناہی ہووے۔
+% PNB-CMP-078: X اُتے اک بہ اک خود نقشہ تے X وچ بندش شامل؛اصل global u نال متناہی X نوں وی لامتناہی آکھ سکدا سی۔
+\end{prop}
+
+\begin{prop}
+ایہ فارمولا $\fn{Count}(X) \ident $
+\begin{multline*}
+(\lnot\lexists[x][X(x)] \lor {} \\
+\lexists[z][\lexists[u][(X(z) \land
+    \lforall[x][(X(x) \lif X(u(x)))] \land {} \\ \lforall[Y][((Y(z) \land
+      \lforall[x][(Y(x) \lif Y(u(x)))]) \lif X = Y])]])
+)
+\end{multline*}
+متغیر قدر بندی~$s$ دے لحاظ نال اُدوں تے صرف اُدوں پورا اتردا اے جدوں
+$s(X)$، !!{enumerable} ہووے۔
+% PNB-CMP-079: خالی سیٹ لئی الگ disjunct؛اصل z∈X غیر خالی enumerable سیٹ ہی گنّدا سی۔
+\end{prop}
+
+کانتور دے قضیے توں سانوں پتہ اے کہ !!{nonenumerable} سیٹ موجود نیں؛
+اصل وچ لامتناہی سائز دے وکھ وکھ درجے نیں، تے اوہناں دی گنتی وی لامتناہی اے۔
+سیٹ نظریہ سیٹاں دے سائز دا پورا حساب بناؤندا اے تے سیٹاں نوں
+لامتناہی کارڈینیل اعداد دیندا اے۔ قدرتی اعداد متناہی سیٹاں دے سائز ماپن والے
+کارڈینیل اعداد دا کم کردے نیں۔ !!{denumerable}
+سیٹاں دی کارڈینیلٹی پہلی لامتناہی کارڈینیلٹی اے، جیہنوں
+~$\aleph_0$ (”الیف-ناٹ“ یا ”الیف-زیرو“) آکھدے نیں۔ اگلا
+لامتناہی سائز~$\aleph_1$ اے۔ ایہ اوہ سب توں چھوٹا سائز اے جیہڑا
+کسے غیر قابلِ شمار سیٹ دا ہو سکدا اے؛ایہو جیہا سیٹ نہ متناہی ہوندا
+اے نہ سائز~$\aleph_0$ رکھدا اے۔ اسیں ”$X$ دا سائز $\aleph_0$
+اے“ ایویں تعریف کر سکدے آں:
+$\fn{Aleph}_0(X) \liff \fn{Inf}(X) \land \fn{Count}(X)$۔
+سیٹ~$X$ دا سائز~$\aleph_1$ اُدوں تے صرف اُدوں اے جدوں
+اوہدا ہر اوہ ذیلی سیٹ جیہڑا سائز وچ اوہدے توں گھٹ اے، یا تاں
+متناہی ہووے یا اوہدا سائز~$\aleph_0$ ہووے۔ اصل سیٹ آپ نہ
+متناہی ہووے تے نہ اوہدا سائز~$\aleph_0$ ہووے۔
+ایس لئی اسیں ایہ فارمولا لکھ سکدے آں:
+$\fn{Aleph_1}(X) \ident \lforall[Y][((Y \subseteq X \land
+  \lnot\cardeq{Y}{X}) \lif
+  (\lnot\fn{Inf}(Y) \lor \fn{Aleph}_0(Y)))] \land \lnot
+\fn{Count}(X)$۔ سائز~$\aleph_2$ وی ایس طرح تعریف ہوندا اے، وغیرہ۔
+% PNB-CMP-080: Y=X نوں smaller-subset antecedent توں کڈھ کے cardinal strictness،تے X نوں nonenumerable منگیا؛اصل finite X قبول تے aleph_1 X رد کردا سی۔
+
+اک سائز خاص دلچسپی رکھدا اے: استمرار (continuum) دی کارڈینیلٹی۔
+ایہ~$\Pow{\Nat}$ دا سائز اے، یعنی اوہی سائز جیہڑا~$\Real$ دا اے۔
+ایہ گل کہ کوئی سیٹ استمرار دے سائز دا اے، دوجے درجے دی منطق وچ
+وی ظاہر کیتی جا سکدی اے، پر ایس لئی کجھ ہور کم کرنا پیندا اے۔
+
+\end{document}

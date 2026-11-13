@@ -8,20 +8,21 @@
 
 \olfileid{pl}{syn}{val}
 
-\olsection{\usetoken{P}{valuation} تے پورا اترنا}
+\olsection{\usetoken{P}{valuation} (Valuation) تے پورا اترنا (Satisfaction)}
 
 \begin{defn}[!!^{valuation}s]
-$\{\True, \False\}$ نوں دو صداقتی قدراں ``سچ'' تے ``جھوٹ'' دا
-سیٹ منّو۔ $\Lang{L_0}$ لئی \emph{!!{valuation}} اک فنکشن~$\pAssign{v}$ اے
+$\{\True, \False\}$ نوں دو صداقتی قدراں (truth values)، ``سچ''
+(true) تے ``جھوٹ'' (false)، دا سیٹ منّو۔ $\Lang{L_0}$ لئی
+\emph{!!{valuation} (valuation)} اک فنکشن (function)~$\pAssign{v}$ اے
 جیہڑا زبان دے !!{propositional variable}s نوں $\True$ یا $\False$
 وچوں کوئی اک مقرر کردا اے، یعنی $\pAssign{v} \colon
 \PVar \to \{\True, \False \}$۔
 \end{defn}
 
 \begin{defn}
-  دتی ہوئی !!a{valuation}~$\pAssign{v}$ لئی، قدر معلوم کرن والے
-  فنکشن $\pValue{v} \colon \Frm[L_0] \to \{\True, \False \}$ دی
-  استقرائی تعریف ایویں کرو:
+  دتی ہوئی !!a{valuation}~$\pAssign{v}$ لئی، قدر معلوم کرن والے فنکشن
+  (evaluation function) $\pValue{v} \colon \Frm[L_0] \to
+  \{\True, \False \}$ دی استقرائی تعریف (inductive definition) ایویں کرو:
   \begin{align*}
     \iftag{prvFalse}{\pValue{v}(\lfalse) & = \False; \\ }{}
     \iftag{prvTrue}{\pValue{v}(\ltrue) & = \True; \\ }{}
@@ -58,7 +59,7 @@ $\{\True, \False\}$ نوں دو صداقتی قدراں ``سچ'' تے ``جھوٹ
 \end{defn}
 
 \begin{explain}
-ایہ شرطاں اگلے صداقتی جدولاں دے مطابق نیں:
+ایہ شرطاں اگلے صداقتی جدولاں (truth tables) دے مطابق نیں:
 \begin{center}
 \iftag{prvNot}{
   \begin{tabular}{|c||c|} \hline
@@ -118,8 +119,8 @@ $\{\True, \False\}$ نوں دو صداقتی قدراں ``سچ'' تے ``جھوٹ
 \end{explain}
 
 \begin{prob}
-$\Lang{L_0}$ وچ اک سہ رُکنی رابطہ~$\diamondsuit$ شامل کرن اُتے غور
-کرو، جیہدی قدر اگلے طریقے نال دتی گئی اے:
+$\Lang{L_0}$ وچ اک سہ رُکنی رابطہ (ternary connective)~$\diamondsuit$
+شامل کرن اُتے غور کرو، جیہدی قدر (evaluation) اگلے طریقے نال دتی گئی اے:
 \begin{gather*}
   \pValue{v}(\diamondsuit( !A , !B , !C ) ) = \begin{cases}
     \pValue{v}( !B ) &
@@ -128,12 +129,13 @@ $\Lang{L_0}$ وچ اک سہ رُکنی رابطہ~$\diamondsuit$ شامل کرن
     \text{جے $\pValue{v}(!A) = \False $}.
   \end{cases}
 \end{gather*}
-ایس رابطے دا صداقتی جدول لکھو۔
+ایس رابطے دا صداقتی جدول (truth table) لکھو۔
 \end{prob}
 
-\begin{thm}[مقامی تعیین]
+\begin{thm}[مقامی تعیین (Local Determination)]
 \ollabel{thm:LocalDetermination} منّو کہ $\pAssign{v_1}$ تے
-$\pAssign{v_2}$ ایہو جہیاں !!{valuation}s نیں جیہڑیاں~$!A$ وچ آون
+$\pAssign{v_2}$ ایہو جہیاں !!{valuation}s نیں جیہڑیاں مقرر فارمولے
+~$!A$ وچ آون
 والے !!{propositional
 variable}s اُتے متفق نیں، یعنی
 $\pAssign{v_1}(\Obj p_n) = \pAssign{v_2}(\Obj p_n)$ جدوں وی
@@ -143,60 +145,67 @@ $\pValue{v_1}(!A) = \pValue{v_2}(!A)$۔
 \end{thm}
 
 \begin{proof}
-$!A$ اُتے استقرا نال۔
+$!A$ اُتے استقرا (induction) نال۔
 \end{proof}
 
-\begin{defn}[پورا اترنا]
+\begin{defn}[پورا اترنا (Satisfaction)]
 \ollabel{defn:satisfaction} اسیں
   !!a{formula}~$!A$ دے !!a{valuation}~$\pAssign{v}$ نال
-  \emph{پورا اترن} دے تصور، $\pSat{v}{!A}$، دی استقرائی تعریف ایویں
-  کر سکدے آں۔ (اسیں $\pSat/{v}{!A}$ نوں ``$\pSat{v}{!A}$ نہیں''
-  دے معنی وچ لکھدے آں۔)
+  \emph{پورا اترن (satisfaction)} دے تصور، $\pSat{v}{!A}$، دی استقرائی
+  تعریف ایویں کر سکدے آں۔ (اسیں $\pSat/{v}{!A}$ نوں منفی پورا اترنا
+  (negative satisfaction)، یعنی ``$\pSat{v}{!A}$ نہیں''، دے معنی وچ
+  لکھدے آں۔)
 \begin{enumerate}
 \tagitem{prvFalse}{%
   \indcase{!A}{\lfalse}{$\pSat/{v}{\indfrm}$۔}}{}
 
 \tagitem{prvTrue}{%
-  \indcase{!A}{\ltrue}{$\pSat{v}{\indfrm}$۔}}{}
+  \indcase{!A}{\ltrue}{$\pSat{v}{\indfrm}$؛ ایہ صدق مستقل
+  (truth constant) دا معاملہ اے۔}}{}
 
 \item \indcase{!A}{\Obj p_i}{$\pSat{v}{\indfrm}$
-  اُدوں تے صرف اُدوں جدوں $\pAssign{v}(\Obj p_i) = \True$۔}
+  اُدوں تے صرف اُدوں (iff) جدوں $\pAssign{v}(\Obj p_i) = \True$؛
+  ایہ قضیاتی متغیر (propositional variable) دا معاملہ اے۔}
 
 \tagitem{prvNot}{%
   \indcase{!A}{\lnot !B}{$\pSat{v}{\indfrm}$ اُدوں تے صرف اُدوں جدوں
-    $\pSat/{v}{!B}$۔}}{}
+    $\pSat/{v}{!B}$؛ ایہ نفی (negation) دا معاملہ اے۔}}{}
 
 \tagitem{prvAnd}{%
   \indcase{!A}{(!B \land !C)}{$\pSat{v}{\indfrm}$ اُدوں تے صرف اُدوں جدوں
-    $\pSat{v}{!B}$ تے $\pSat{v}{!C}$۔}}{}
+    $\pSat{v}{!B}$ تے $\pSat{v}{!C}$؛ ایہ عطف (conjunction) دا معاملہ اے۔}}{}
 
 \tagitem{prvOr}{%
   \indcase{!A}{(!B \lor !C)}{$\pSat{v}{\indfrm}$ اُدوں تے صرف اُدوں جدوں
-    $\pSat{v}{!B}$ یا $\pSat{v}{!C}$ (یا دونیں)۔}}{}
+    $\pSat{v}{!B}$ یا $\pSat{v}{!C}$ (یا دونیں؛ or both)؛ ایہ فصل
+    (disjunction) دا معاملہ اے۔}}{}
 
 \tagitem{prvIf}{%
   \indcase{!A}{(!B \lif !C)}{$\pSat{v}{\indfrm}$ اُدوں تے صرف اُدوں جدوں
-    $\pSat/{v}{!B}$ یا $\pSat{v}{!C}$ (یا دونیں)۔}}{}
+    $\pSat/{v}{!B}$ یا $\pSat{v}{!C}$ (یا دونیں؛ or both)؛ ایہ شرطیہ
+    (conditional) دا معاملہ اے۔}}{}
 
 \tagitem{prvIff}{%
   \indcase{!A}{(!B \liff !C)}{$\pSat{v}{\indfrm}$ اُدوں تے صرف اُدوں جدوں
-    یا تاں $\pSat{v}{!B}$ تے $\pSat{v}{!C}$ دونیں، یا نہ
-    $\pSat{v}{!B}$ تے نہ $\pSat{v}{!C}$۔}}{}
+    یا تاں $\pSat{v}{!B}$ تے $\pSat{v}{!C}$ دونیں (both)، یا نہ
+    $\pSat{v}{!B}$ تے نہ $\pSat{v}{!C}$ (neither)؛ ایہ دو شرطیہ
+    (biconditional) دا معاملہ اے۔}}{}
 \end{enumerate}
-جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں $\pSat{v}{\Gamma}$ اُدوں تے
+جے $\Gamma$، !!{formula}s دا سیٹ (set of formulas) اے، تاں $\pSat{v}{\Gamma}$ اُدوں تے
 صرف اُدوں جدوں $\pSat{v}{!A}$ ہر~$!A \in \Gamma$ لئی۔
 \end{defn}
 
 \begin{prop}\ollabel{prop:sat-value}
-  $\pSat{v}{!A}$ اُدوں تے صرف اُدوں جدوں $\pValue{v}(!A) = \True$۔
+  $\pSat{v}{!A}$ اُدوں تے صرف اُدوں (iff) جدوں
+  $\pValue{v}(!A) = \True$ (evaluates to True)۔
 \end{prop}
 
 \begin{proof}
-  $!A$ اُتے استقرا نال۔
+  $!A$ اُتے استقرا (induction) نال۔
 \end{proof}
 
 \begin{prob}
-  \olref[pl][syn][val]{prop:sat-value} ثابت کرو۔
+  \olref[pl][syn][val]{prop:sat-value} ثابت (Prove) کرو۔
 \end{prob}
 
 \end{document}

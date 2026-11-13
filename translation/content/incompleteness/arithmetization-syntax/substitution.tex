@@ -1,0 +1,58 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{art}{sub}
+\olsection{تھاں بدل}
+
+یاد رکھو کہ تھانواں بدلنا اوہ عمل اے جیہدے وچ
+!!a{variable}~$u$ دیاں !!a{formula}~$!A$ وچ ساریاں آزاد
+آمدواں دی تھاں ٹرم~$t$ رکھدے آں۔ ایہنوں $\Subst{!A}{t}{u}$
+لکھدے آں۔ ایہ عمل !!{variable}s، !!{formula}s تے ٹرماں
+دے گوڈل نمبراں اُتے کیتا جاوے، تاں بنیادی بازگشتی اے۔
+
+\begin{prop}\ollabel{prop:subst-primrec}
+اک بنیادی بازگشتی فنکشن $\fn{Subst}(x, y, z)$ موجود اے
+جیہدے لئی ایہ مساوات قائم اے:
+\[
+\fn{Subst}(\Gn{!A}, \Gn{t}, \Gn{u}) = \Gn{\Subst{!A}{t}{u}}.
+\]
+\end{prop}
+
+\begin{proof}
+فیر فنکشن $\fn{hSubst}$ دی تعریف بنیادی بازگشت نال
+ایویں کر سکدے آں:
+\begin{multline*}
+\begin{aligned}
+\fn{hSubst}(x, y, z, 0) & = \emptyseq \\
+\fn{hSubst}(x, y, z, i+1) & =
+\end{aligned}\\
+\begin{cases}
+\fn{hSubst}(x, y, z, i) \concat y & \text{جے $\fn{FreeOcc}(x, z, i)$ ہووے} \\
+\fn{append}(\fn{hSubst}(x, y, z, i), (x)_{i}) & \text{نہیں تاں۔}
+\end{cases}
+\end{multline*}
+ہن $\fn{Subst}(x, y, z)$ دی تعریف
+$\fn{hSubst}(x, y, z, \len{x})$ دے برابر رکھ کے کر سکدے آں۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:free-for}
+تعلق $\fn{FreeFor}(x, y, z)$ اُدوں تے صرف اُدوں قائم
+اے جدوں گوڈل نمبر~$y$ والا ٹرم، گوڈل نمبر~$z$ والے متغیر
+لئی، گوڈل نمبر~$x$ والے فارمولے وچ !!{free for} ہووے۔
+ایہ تعلق بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof} مشق۔ \end{proof}
+
+\begin{prob}
+\olref[inc][art][sub]{prop:free-for}
+ثابت کرو۔
+\end{prob}
+
+\end{document}

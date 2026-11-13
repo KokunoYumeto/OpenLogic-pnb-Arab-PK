@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  src: url("fonts/NotoNaskhArabic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Naskh Arabic";
+  src: url("fonts/NotoNaskhArabic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Logic Godel Delimiters";
+  src: url("fonts/OpenLogicGodelDelimiters.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+math .godel-delimiter { font-family: "Open Logic Godel Delimiters"; font-style: normal; }
+@font-face {
+  font-family: "Open Logic Modal Symbols";
+  src: url("fonts/OpenLogicModalSymbols.otf") format("opentype");
+}
+math .modal-operator { font-family: "Open Logic Modal Symbols"; font-style: normal; }
+
+:root {
+  color-scheme: light dark;
+  --rule: #849097;
+  --accent: #166460;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --rule: #91a4ae; --accent: #92dfd3; }
+}
+body {
+  font: 1.18rem/1.75 "Noto Naskh Arabic", serif;
+  margin: 0 auto;
+  max-inline-size: 52rem;
+  padding: 2rem clamp(1rem, 4vw, 3rem);
+}
+h1, h2, h3, h4 { line-height: 1.4; margin-block-start: 1.5em; }
+header { border-block-end: 1px solid var(--rule); margin-block-end: 2rem; padding-block-end: 1rem; }
+header h1 { margin-block-end: .1em; }
+nav ol { padding-inline-start: 1.5em; }
+a { color: var(--accent); text-underline-offset: .18em; }
+blockquote { margin: 1.25em 0; padding-inline-start: 1em; border-inline-start: .15em solid var(--rule); }
+figure, table { margin-inline: 0; }
+figure img { display: block; max-inline-size: 100%; block-size: auto; margin-inline: auto; }
+figcaption { margin-block-start: .5em; }
+table { border-collapse: collapse; }
+td, th { padding: .35em .6em; vertical-align: top; }
+pre, math[display="block"], .proof-trees, .proof-array, .tableau, .table-wrap {
+  overflow-x: auto;
+  max-inline-size: 100%;
+}
+math, pre, code, [lang="en"], .citation { direction: ltr; unicode-bidi: isolate; }
+.proof-trees, .proof-array, .tableau { margin-block: .8em; }
+.proof-trees { display: flex; align-items: end; justify-content: safe center; gap: 1rem; }
+.proof-step, .proof-inference, .proof-premises { display: inline-flex; }
+.proof-step { flex-direction: column; align-items: center; }
+.proof-premises { gap: .65em; align-items: end; padding-inline: .35em; }
+.proof-inference { gap: .3em; align-items: baseline; white-space: nowrap; }
+.proof-conclusion { padding: .12em .25em; }
+.proof-step > .proof-premises + .proof-inference > .proof-conclusion { border-block-start: 1px solid currentColor; }
+.proof-line-double > .proof-premises + .proof-inference > .proof-conclusion { border-block-start: 3px double currentColor; }
+.proof-line-dotted > .proof-premises + .proof-inference > .proof-conclusion { border-block-start-style: dotted; }
+.proof-line-none > .proof-premises + .proof-inference > .proof-conclusion { border-block-start: 0; }
+.proof-left, .proof-right, .proof-line-left, .proof-line-right, .proof-subproof-left, .proof-subproof-right {
+  font-size: .8em;
+}
+.proof-left, .proof-line-left, .proof-subproof-left { order: -1; }
+.proof-right, .proof-line-right, .proof-subproof-right { order: 1; }
+.tableau ul { list-style: none; margin: 0; padding-inline-start: 1.2em; }
+.tableau-branches { border-inline-start: 1px solid var(--rule); }
+.tableau-entry { white-space: nowrap; }
+.tableau-entry > span { margin-inline-end: .45em; }
+.tableau-line, .tableau-just { font-size: .85em; }
+.equation-notes { display: block; margin-block-end: .75em; font-size: .9em; }
+.csl-entry { margin-block: .6em; }
+.citation-note { unicode-bidi: isolate; }

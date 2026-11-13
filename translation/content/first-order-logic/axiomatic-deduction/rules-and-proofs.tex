@@ -1,0 +1,96 @@
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{rul}}
+      {\olfileid{pl}{axd}{rul}}
+
+\olsection{قاعدے تے \usetoken{P}{derivation}}
+
+\begin{explain}
+  مسلّمی !!{derivation}s شاید منطق لئی سب توں سادہ !!{derivation} نظام
+  نیں۔ !!^a{derivation} بس !!{formula}s دا اک سلسلہ اے۔ کسے سلسلے نوں
+  !!a{derivation} منّن لئی اوہدے ہر !!{formula} دا یا تاں کسے مسلّمے
+  دی اک مثال ہونا لازم اے، یا اوہدے توں پہلاں سلسلے وچ آ چکے اک یا ودھ
+  !!{formula}s توں کسے استنباطی قاعدے نال نکلنا لازم اے۔
+  !!^a{derivation} اپنے آخری !!{formula} نوں !!{derive}s کردا اے۔
+\end{explain}
+
+\begin{defn}[!!^{derivability}]
+جے $\Gamma$، $\Lang L$ دے !!{formula}s دا سیٹ اے، تاں~$\Gamma$ توں
+اک \emph{!!{derivation}}، !!{formula}s دا اک محدود سلسلہ $!A_1$،
+\dots،~$!A_n$ اے، جیہدے ہر $i \le n$ لئی ہِٹھ دتیاں وچوں کوئی اک
+گل درست ہووے:
+\begin{enumerate}
+\item $!A_i \in \Gamma$؛ یا
+\item $!A_i$ اک مسلّمہ اے؛ یا
+\item $!A_i$، کسے استنباطی قاعدے نال، کسے $!A_j$ (تے $!A_k$) توں
+  نکلدا اے جتھے $j < i$ (تے $k < i$)۔
+\end{enumerate}
+\end{defn}
+
+درست !!{derivation} کِنوں منّنا اے، ایہہ اس گل اُتے منحصر اے کہ اسیں
+کیہڑے استنباطی قاعدے منّ دے آں (تے ظاہر اے کیہڑیاں گلاں نوں مسلّمے
+منّ دے آں)۔ استنباطی قاعدہ اک جے-تاں بیان اے جیہڑا دسدَا اے کہ کِنہاں
+شرطاں ہِٹھ !!a{derivation} دا قدم~$A_i$ اک درست استنباطی قدم اے۔
+
+\begin{defn}[استنباط دا قاعدہ]
+\emph{استنباط دا قاعدہ}،~$\Gamma$ توں !!a{derivation} وچ درست
+استنباطی قدم ہون لئی اک کافی شرط دیندا اے۔
+\end{defn}
+
+مثال لئی، صرف اک عنصر دا سلسلہ $!A$، جتھے $!A \in \Gamma$، ظاہر اے
+!!a{derivation} منّیا جاندا اے، ایس لئی ہِٹھ دتا بیان اک بہت سادہ
+استنباطی قاعدہ ہو سکدا اے:
+\begin{quote}
+  جے $!A \in \Gamma$، تاں $!A$،~$\Gamma$ توں کسے وی
+  !!{derivation} وچ ہمیشہ اک درست استنباطی قدم اے۔
+\end{quote}
+ایسے طرح جے $!A$ مسلّماں وچوں اک اے، تاں اکیلا $!A$ وی
+!!a{derivation} اے؛ ایس لئی ایہ وی استنباطی قاعدہ اے:
+\begin{quote}
+  جے $!A$ اک مسلّمہ اے، تاں $!A$ اک درست استنباطی قدم اے۔
+\end{quote}
+قاعدہ ہور دلچسپ اُدوں ہوندا اے جدوں اوہ زیرِ غور قدم توں پہلاں آ چکے
+!!{formula}s دا حوالہ دیندا اے۔ ہِٹھ دتے قاعدے نوں \emph{قاعدۂ اثباتِ
+مقدم (modus ponens)} آکھدے نیں:
+\begin{quote}
+  جے $!B \lif !A$ تے $!B$، !!{derivation} وچ اِس توں اوپر آ چکے ہون،
+  تاں~$!A$ اک درست استنباطی قدم اے۔
+\end{quote}
+جے ایہو اکّو استنباطی قاعدہ ہووے، تاں اُتّے دتی !!{derivation} دی
+تعریف دا مطلب ایہ اے: $!A_1$، \dots،~$!A_n$ اُدوں تے صرف اُدوں
+!!a{derivation} اے جدوں ہر $i \le n$ لئی ہِٹھ دتیاں وچوں کوئی اک
+گل درست ہووے:
+\begin{enumerate}
+\item $!A_i \in \Gamma$؛ یا
+\item $!A_i$ اک مسلّمہ اے؛ یا
+\item کسے $j < i$ لئی $!A_j$، $!B \lif !A_i$ ہووے، تے کسے $k < i$
+  لئی $!A_k$،~$!B$ ہووے۔
+\end{enumerate}
+آخری شق آکھدی اے کہ $!A_i$، قاعدۂ اثباتِ مقدم نال~$!A_j$
+($!B \lif !A_i$) تے $!A_k$ ($!B$) توں نکلدا اے۔ جے اسیں $1$
+توں~$n$ تک جا سکیے تے ہر واری ساڈے کول !!a{formula}~$!A_i$
+ایہو جہا ہووے جیہڑا یا تاں~$\Gamma$ وچ ہووے، یا مسلّمہ ہووے، یا
+جیہنوں کوئی استنباطی قاعدہ درست قدم دسے، تاں پورا سلسلہ اک درست
+!!{derivation} منّیا جاندا اے۔
+
+\begin{defn}[!!^{derivability}]
+!!{formula}~$!A$، $\Gamma$ توں \emph{!!{derivable}} اے، جیہنوں
+$\Gamma \Proves !A$ لکھدے آں، جے $\Gamma$ توں !!a{derivation}
+موجود ہووے جیہڑا $!A$ اُتے ختم ہووے۔
+\end{defn}
+
+\begin{defn}[قضیے]
+!!^a{formula}~$!A$ اک \emph{قضیہ} اے جے خالی سیٹ توں $!A$ دا
+!!a{derivation} موجود ہووے۔ اسیں $\Proves !A$ لکھدے آں جے $!A$
+قضیہ اے، تے جے نہیں تاں $\Proves/ !A$ لکھدے آں۔
+\end{defn}
+
+
+\end{document}

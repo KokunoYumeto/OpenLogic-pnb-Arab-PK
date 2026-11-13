@@ -1,0 +1,220 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: modalities-ccs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{mod}
+
+\olsection{امکانی عامل تے مکمل بے تضاد سیٹ}
+
+\begin{explain}
+جدوں اسیں نمونہ~$\mModel{M^\Sigma}$ بناؤندے آں، جیہدے جہاناں دا سیٹ مکمل $\Sigma$-بے تضاد سیٹاں~$\Delta$ نال دِتّا جاندا اے، کسے نارمل امکانی منطق~$\Sigma$ وچ، تاں اینہاں «جہاناں» وچ رسائی دا تعلق~$R^\Sigma$ وی متعین کرنا پئے گا۔ اسیں چاہندے آں کہ رسائی دا تعلق (تے قدر بندی $V^\Sigma)$ ایویں متعین ہون کہ $\mSat{M^\Sigma}{!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں $!A \in
+\Delta$۔ ایہ کیویں کریے؟
+
+رسائی دا تعلق متعین ہو جان تے جہان وچ سچائی دی تعریف ایہ پکا کردی اے کہ \iftag{prvBox}{$\mSat{M^\Sigma}{\Box!A}[\Delta]$
+  اُدوں تے صرف اُدوں جدوں $\mSat{M^\Sigma}{!A}[\Delta']$ ہر ایسے $\Delta'$ لئی ہووے جیہدے لئی
+  $R^\Sigma\Delta\Delta'$ ہووے}{$\mSat{M^\Sigma}{\Diamond!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں
+  $\mSat{M^\Sigma}{!A}[\Delta']$ گھٹ توں گھٹ اک ایسے $\Delta'$ لئی ہووے جیہدے لئی
+  $R^\Sigma\Delta\Delta'$ ہووے}۔ ایہ ثابت کرن لئی کہ
+$\mSat{M^\Sigma}{!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں $!A \in \Delta$، ضروری اے کہ ایہ گل خاص طور تے امکانی عامل نال شروع ہون والے !!{formula}s لئی وی سچی ہووے، یعنی \iftag{prvBox}{$\mSat{M^\Sigma}{\Box!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\Box !A
+  \in \Delta$}{$\mSat{M^\Sigma}{\Diamond!A}[\Delta]$ اُدوں تے صرف اُدوں جدوں $\Diamond !A
+  \in \Delta$}۔ ایس شرط نوں جہان وچ سچائی دی تعریف نال، \iftag{prvBox}{$\Box !A$}{$\Diamond !A$} لئی، جوڑ کے ایہ ملدا اے۔
+\[
+\iftag{prvBox}{%
+  \Box!A \in \Delta \text{ اُدوں تے صرف اُدوں جدوں } !A \in \Delta' \text{
+    ہر ایسے $\Delta'$ لئی جیہدے لئی } R^\Sigma\Delta\Delta'}{%
+  \Diamond!A \in \Delta \text{ اُدوں تے صرف اُدوں جدوں } !A \in \Delta' \text{ گھٹ توں گھٹ اک ایسے }
+    \Delta' \text{ لئی جیہدے لئی } R^\Sigma\Delta\Delta'}
+\]
+\iftag{prvBox}{کھبے توں سجے والا رخ ویکھو۔ ایہ آکھدا اے کہ جے
+  $\Box !A \in \Delta$، تاں $!A \in \Delta'$، کسے وی $!A$ تے کسے وی ایسے
+  $\Delta'$ لئی جیہدے لئی $R^\Sigma\Delta\Delta'$ ہووے۔ جے اسیں ایہ شرط رکھیے کہ
+  $R^\Sigma\Delta\Delta'$ اُدوں تے صرف اُدوں جدوں $!A \in \Delta'$ ہر $\Box!A \in
+  \Delta$ لئی ہووے، تاں ایہ گل پوری ہو جاندی اے۔ «اُدوں تے صرف اُدوں» دے سجے پاسے والی شرط اسیں مختصر ایویں لکھ سکدے آں۔ $\Setabs{!A}{\Box!A \in \Delta}
+  \subseteq \Delta'$۔}{سجے توں کھبے والا رخ ویکھو۔ ایہ آکھدا اے
+  کہ جے $!A \in \Delta'$، تاں $\Diamond!A \in \Delta$، کسے وی $!A$ تے
+  ایسے $\Delta'$ لئی جیہدے لئی $R^\Sigma\Delta\Delta'$ ہووے۔ جے اسیں ایہ شرط رکھیے کہ
+  $R^\Sigma\Delta\Delta'$ جدوں وی $\Diamond!A \in \Delta$ ہر
+  $!A \in \Delta'$ لئی ہووے، تاں ایہ گل پوری ہو جاندی اے۔ «اُدوں تے صرف اُدوں» دے سجے پاسے والی شرط اسیں مختصر ایویں لکھ سکدے آں۔
+  $\Setabs{\Diamond!A}{!A \in \Delta'} \subseteq \Delta$۔}
+
+سو سوال ایہ اے کہ $R^\Sigma$ دی ایہ تعریف سچ مچ پکا کردی اے کہ \iftag{prvBox}{$\Box !A \in \Delta$ اُدوں تے صرف اُدوں جدوں
+  $\mSat{M^\Sigma}{\Box !A}[\Delta]$؟ \iftag{prvDiamond}{کی ایہ گل وی پکی اے کہ }{}}{}\iftag{prvDiamond}{$\Diamond !A \in \Delta$
+  اُدوں تے صرف اُدوں جدوں $\mSat{M^\Sigma}{\Diamond !A}[\Delta]$؟}{} اگلے کجھ نتیجے ایہ گل قائم کرن گے۔
+\end{explain}
+
+\begin{defn}
+  جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں ایہ لکھو۔
+  \begin{align*}
+    \Box\Gamma & = \Setabs{\Box !B}{!B \in \Gamma}\\
+    \Diamond\Gamma & = \Setabs{\Diamond !B}{!B \in \Gamma}\\
+    \intertext{تے}
+    \Box^{-1}\Gamma & = \Setabs{!B}{\Box !B \in \Gamma}\\
+    \Diamond^{-1}\Gamma & = \Setabs{!B}{\Diamond !B \in \Gamma}\\
+  \end{align*}
+\end{defn}
+
+دوجے لفظاں وچ $\Box\Gamma$، $\Gamma$ دا اوہ روپ اے جتھے $\Box$ ہر !!{formula} دے اگے اے جیہڑا~$\Gamma$ وچ اے۔ $\Box^{-1}\Gamma$ سارے اوہناں $\Box$ والے !!{formula}s توں بندا اے جیہڑے~$\Gamma$ وچ نیں، جدوں اوہناں دے شروع والا $\Box$ ہٹا دیندے آں۔ ایس تعریف دی اپنی کوئی بہتی اہمیت نہیں، پر ایس نال علامتی لکھت کِتے سوکھی ہو جاوے گی۔
+
+دھیان دیو کہ $\Box\Box^{-1}\Gamma \subseteq \Gamma$۔
+\[
+\Box\Box^{-1}\Gamma = \Setabs{\Box!B}{\Box!B \in \Gamma}
+\]
+یعنی ایہ صرف~$\Gamma$ دے سارے اوہ !!{formula}s دا سیٹ اے جیہڑے~$\Box$ نال شروع ہوندے نیں۔
+
+\begin{lem}\ollabel{lem:box1}
+  جے $\Gamma \Proves[\Sigma] !A$، تاں $\Box\Gamma \Proves[\Sigma] \Box
+  !A$۔
+\end{lem}
+
+\begin{proof}
+  جے $\Gamma \Proves[\Sigma] !A$، تاں ایسے $!B_1$، \dots، $!B_k
+  \in \Gamma$ نیں کہ $\Sigma \Proves !B_1 \lif (!B_2 \lif \cdots
+  (!B_n \lif !A)\cdots)$۔ کیوں جے $\Sigma$ نارمل اے، قاعدہ \RK{} مطابق
+  $\Sigma \Proves \Box!B_1 \lif (\Box!B_2 \lif \cdots (\Box!B_n \lif
+  \Box!A)\cdots)$، جتھے صاف اے کہ $\Box!B_1$، \dots، $\Box!B_k \in
+  \Box\Gamma$۔ سو تعریف مطابق $\Box\Gamma \Proves[\Sigma] \Box
+  !A$۔
+\end{proof}
+
+\begin{lem}\ollabel{lem:box2}
+  جے $\Box^{-1} \Gamma \Proves[\Sigma] !A$، تاں $\Gamma
+  \Proves[\Sigma] \Box!A$۔
+\end{lem}
+
+\begin{proof}
+  منّ لو $\Box^{-1}\Gamma \Proves[\Sigma] !A$۔ فیر
+  \olref{lem:box1} مطابق $\Box\Box^{-1}\Gamma \Proves \Box!A$۔ پر کیوں جے
+  $\Box\Box^{-1}\Gamma \subseteq \Gamma$، ایس لئی یک رُخیت کارن $\Gamma \Proves[\Sigma]
+  \Box!A$ وی۔
+\end{proof}
+
+\iftag{prvBox}{%
+% لازمیت دا نشان ابتدائی اے۔
+
+\begin{prop}\ollabel{prop:box}
+  جے $\Gamma$ مکمل $\Sigma$-بے تضاد اے، تاں $\Box !A \in
+  \Gamma$ اُدوں تے صرف اُدوں جدوں ہر اوس مکمل $\Sigma$-بے تضاد
+  $\Delta$ لئی، جیہدے لئی $\Box^{-1} \Gamma \subseteq \Delta$ ہووے،
+  $!A \in \Delta$ ہووے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔ «صرف جے» والا رخ سوکھا اے۔ منّ لو $\Box !A \in \Gamma$ تے
+  $\Box^{-1}\Gamma \subseteq \Delta$۔ کیوں جے $\Box!A \in \Gamma$، ایس لئی $!A
+  \in \Box^{-1}\Gamma \subseteq \Delta$، سو $!A \in \Delta$۔
+
+  «جے» والے رخ لئی اسیں اُلٹی نفی ثابت کردے آں۔ منّ لو
+  $\Box!A \notin \Gamma$۔ کیوں جے $\Gamma$ مکمل
+  $\Sigma$-بے تضاد اے، ایس لئی ایہ استنباط تحت بند اے، سو $\Gamma
+  \Proves/[\Sigma] \Box !A$۔ \olref{lem:box2} مطابق
+  $\Box^{-1}\Gamma \Proves/[\Sigma] !A$۔
+  \olref[prf][con]{prop:consistencyfacts}\olref[prf][con]{prop:consistencyfacts-b} مطابق
+  $\Box^{-1}\Gamma \cup \{ \lnot!A \}$، $\Sigma$-بے تضاد اے۔ لنڈن باؤم دے معاون قضیے مطابق اک مکمل $\Sigma$-بے تضاد
+  سیٹ~$\Delta$ اے جیہدے لئی $\Box^{-1}\Gamma \cup \{ \lnot!A \} \subseteq
+  \Delta$۔ بے تضادی کارن $!A \notin \Delta$۔
+\end{proof}
+}{%
+% لازمیت دا نشان ابتدائی نہیں، صرف امکان دا نشان ابتدائی اے۔
+
+\begin{prop}\ollabel{prop:diamond}
+  جے $\Gamma$ مکمل $\Sigma$-بے تضاد اے، تاں $\Diamond !A \in
+  \Gamma$ اُدوں تے صرف اُدوں جدوں کسے ایسے مکمل $\Sigma$-بے تضاد
+  $\Delta$ لئی جیہدے لئی $\Diamond\Delta \subseteq
+  \Gamma$ ہووے، $!A \in \Delta$ ہووے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔ سجے توں کھبے والا حصہ سوکھا اے۔ منّ لو $\Delta$ مکمل $\Sigma$-بے تضاد اے جیہدے لئی
+  $\Diamond\Delta \subseteq \Gamma$ تے $!A \in \Delta$۔ فیر
+  $\Diamond!A \in \Diamond\Delta \subseteq \Gamma$، یعنی $\Diamond!A
+  \in \Gamma$۔
+
+  کھبے توں سجے والے رخ لئی منّ لو $\Diamond !A \in \Gamma$۔ سانوں وکھاؤنا اے کہ اک مکمل $\Sigma$-بے تضاد $\Delta$
+  اے جیہدے لئی $!A \in \Delta$ تے $\Diamond\Delta \subseteq \Gamma$۔ کیوں جے
+  $\Diamond !A \in \Gamma$ تے $\Gamma$، $\Sigma$-بے تضاد اے، ایس لئی
+  $\Box\lnot !A \notin \Gamma$۔ کیوں جے $\Gamma$ مکمل
+  $\Sigma$-بے تضاد اے، ایس لئی ایہ استنباط تحت بند اے، سو $\Gamma
+  \Proves/[\Sigma] \Box\lnot !A$۔ \olref{lem:box2} مطابق
+  $\Box^{-1}\Gamma \Proves/[\Sigma] \lnot !A$۔
+  \olref[prf][con]{prop:consistencyfacts}\olref[prf][con]{prop:consistencyfacts-b} مطابق
+  $\Box^{-1}\Gamma \cup \{ !A \}$، $\Sigma$-بے تضاد اے۔ لنڈن باؤم دے معاون قضیے مطابق اک مکمل $\Sigma$-بے تضاد
+  سیٹ~$\Delta$ اے جیہدے لئی $\Box^{-1}\Gamma \cup \{ !A \} \subseteq
+  \Delta$۔ صاف اے کہ $!A \in \Delta$۔ ایہ ویکھن لئی کہ $\Diamond\Delta
+  \subseteq \Gamma$، منّ لو ایہ گل نہیں۔ فیر کسے $!B \in \Delta$ لئی
+  $\Diamond !B \notin \Gamma$۔ فیر کیوں جے $\Gamma$ مکمل
+  $\Sigma$-بے تضاد اے، ایس لئی $\Box\lnot !B \in \Gamma$۔ پر فیر $\lnot
+  !B \in \Box^{-1}\Gamma \subseteq \Delta$ وی، جیہدے نال $\Delta$
+  تضاد والا ہو جاندا۔
+\end{proof}
+}
+
+\begin{lem}\ollabel{lem:box-iff-diamond}
+  منّ لو $\Gamma$ تے $\Delta$ مکمل
+  $\Sigma$-بے تضاد نیں۔ فیر $\Box^{-1}\Gamma \subseteq \Delta$ اُدوں تے صرف اُدوں جدوں $\Diamond\Delta \subseteq \Gamma$۔
+\end{lem}
+
+\begin{proof}
+  «صرف جے» والا رخ۔ منّ لو $\Box^{-1}\Gamma \subseteq \Delta$ تے
+  $\Diamond!A \in \Diamond\Delta$ (یعنی $!A \in \Delta$)۔
+  $\Diamond!A \in \Gamma$ وکھاؤن لئی
+  $\Box\lnot!A \notin \Gamma$ وکھاؤنا کافی اے، کیوں جے فیر ودھ توں ودھ بے تضادی کارن $\lnot\Box\lnot
+  !A \in \Gamma$۔ ہُن جے $\Box\lnot!A \in \Gamma$، تاں مفروضے مطابق
+  $\lnot!A \in \Delta$، جیہڑی $\Delta$ دی بے تضادی دے اُلٹ اے (کیوں جے $!A
+  \in \Delta$)۔ سو $\Box\lnot!A \notin \Gamma$، جیویں وکھاؤنا سی۔
+
+  «جے» والا رخ۔ منّ لو $\Diamond\Delta
+  \subseteq \Gamma$۔ اسیں اُلٹی نفی ورتدے آں۔ منّ لو $!A
+  \notin \Delta$، تاں جو $\Box!A \notin \Gamma$ وکھائیے۔ جے
+  $!A \notin \Delta$ تاں ودھ توں ودھ بے تضادی کارن $\lnot!A \in \Delta$
+  تے ایس لئی مفروضے مطابق $\Diamond\lnot!A \in \Gamma$۔ پر کسے نارمل امکانی منطق وچ $\Diamond\lnot!A$،
+  $\lnot\Box !A$ دے ہم ارز اے، تے جے دوجا $\Gamma$ وچ اے، تاں بے تضادی کارن
+  $\Box!A \notin\Gamma$، جیویں وکھاؤنا سی۔
+\end{proof}
+
+\iftag{prvBox}{%
+  \iftag{prvDiamond}{%
+% لازمیت تے امکان دے نشان دونیں ابتدائی نیں۔
+% prop:diamond نوں lem:box-iff-diamond ورت کے ثابت کرو۔
+
+\begin{prop}\ollabel{prop:diamond}
+  جے $\Gamma$ مکمل $\Sigma$-بے تضاد اے، تاں $\Diamond !A \in
+  \Gamma$ اُدوں تے صرف اُدوں جدوں کسے ایسے مکمل $\Sigma$-بے تضاد
+  $\Delta$ لئی جیہدے لئی $\Diamond\Delta \subseteq
+  \Gamma$ ہووے، $!A \in \Delta$ ہووے۔
+\end{prop}
+
+\begin{proof}
+منّ لو $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔ $\Diamond!A \in
+\Gamma$ اُدوں تے صرف اُدوں جدوں $\lnot\Box\lnot !A \in \Gamma$، \Dual{} تے استنباط تحت بندش کارن۔
+$\lnot\Box\lnot !A \in \Gamma$ اُدوں تے صرف اُدوں جدوں $\Box\lnot !A \notin \Gamma$،
+\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot} مطابق، کیوں جے
+$\Gamma$ مکمل $\Sigma$-بے تضاد اے۔ \olref{prop:box} مطابق
+$\Box\lnot !A \notin \Gamma$ اُدوں تے صرف اُدوں جدوں کوئی مکمل
+$\Sigma$-بے تضاد $\Delta$ ایسا ہووے کہ $\Box^{-1}\Gamma \subseteq \Delta$ تے
+$\lnot!A \notin \Delta$۔ ہُن کوئی وی ایسا~$\Delta$ ویکھو۔
+\olref{lem:box-iff-diamond} مطابق $\Box^{-1}\Gamma \subseteq \Delta$ اُدوں تے صرف اُدوں جدوں
+$\Diamond\Delta \subseteq \Gamma$۔ نالے $\lnot !A \notin \Delta$ اُدوں تے صرف اُدوں جدوں
+$!A \in \Delta$،
+\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot} مطابق۔ سو
+$\Diamond!A \in \Gamma$ اُدوں تے صرف اُدوں جدوں کوئی مکمل $\Sigma$-بے تضاد
+$\Delta$ ایسا ہووے کہ $\Diamond\Delta \subseteq \Gamma$ تے $!A \in \Delta$۔
+\end{proof}
+
+}{}}{}
+
+\begin{prob}
+  وکھاؤ کہ جے $\Gamma$ مکمل $\Sigma$-بے تضاد اے، تاں
+  \iftag{prvBox}{$\Diamond !A \in \Gamma$ اُدوں تے صرف اُدوں جدوں کوئی مکمل
+    $\Sigma$-بے تضاد $\Delta$ ایسا ہووے کہ $\Box^{-1}\Gamma
+    \subseteq \Delta$ تے $!A \in \Delta$۔}{$\Box !A \in
+    \Gamma$ اُدوں تے صرف اُدوں جدوں ہر اوس مکمل $\Sigma$-بے تضاد
+    $\Delta$ لئی جیہدے لئی $\Box^{-1} \Gamma \subseteq \Delta$ ہووے،
+    $!A \in \Delta$ ہووے۔} \emph{ایہ
+    \olref[nml][com][mod]{lem:box-iff-diamond} ورتے بغیر کرو}۔
+\end{prob}
+
+\end{document}

@@ -1,0 +1,78 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: equality
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{ide}
+
+\olsection{\usetoken{P}{derivation} وچ \usetoken{S}{identity} دی شمولیت}
+
+!!^{derivation}s وچ !!{identity} شامل کرن لئی وادھو ابتدائی سیکوئنٹ
+تے استنباطی قاعدے چاہیدے نیں۔
+
+\begin{defn}[$\eq$ لئی ابتدائی سیکوئنٹ]
+جے $t$ بند ٹرم اے، تاں ${} \Sequent \eq[t][t]$ اک ابتدائی سیکوئنٹ اے۔
+\end{defn}
+
+$\eq$ دے قاعدے ایہ نیں ($t_1$ تے $t_2$ بند ٹرم نیں):
+
+\begin{defish}
+\Axiom$ \eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_1) $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_2)$
+\DisplayProof
+\hfill
+\Axiom$\eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_2) $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_1][t_2], \Gamma  \fCenter \Delta, !A(t_1)$
+\DisplayProof
+\end{defish}
+
+\begin{ex}
+جے $s$ تے $t$ بند ٹرم نیں، تاں $\eq[s][t], !A(s)
+\Proves !A(t)$:
+\begin{prooftree}
+\Axiom$ !A(s) \fCenter !A(s)$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$\eq[s][t], !A(s)  \fCenter !A(s)$
+\RightLabel{$\eq$}
+\UnaryInf$\eq[s][t], !A(s)  \fCenter !A(t)$
+\end{prooftree}
+تساں ایس نوں اکو ہون والیاں چیزاں دی اک دوجے دی تھاں ورتوں دا اصول
+(substitutability of identicals)، یا لائبنز دا قانون (Leibniz' Law)،
+دے ناں نال جان دے ہوؤ گے۔
+
+$\Log{LK}$ ثابت کردا اے کہ $\eq$ متناظر (symmetric) تے متعدی (transitive) اے:
+\begin{prooftree}
+\Axiom$ \fCenter \eq[t_1][t_1] $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ \eq[t_1][t_2] \fCenter \eq[t_1][t_1] $
+\RightLabel{$\eq$}
+\UnaryInf$ \eq[t_1][t_2] \fCenter \eq[t_2][t_1]$
+\DisplayProof\qquad\bottomAlignProof
+\Axiom$ \eq[t_1][t_2] \fCenter \eq[t_1][t_2] $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$\eq[t_2][t_3], \eq[t_1][t_2]  \fCenter \eq[t_1][t_2] $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_2][t_3], \eq[t_1][t_2]  \fCenter \eq[t_1][t_3]$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\eq[t_1][t_2], \eq[t_2][t_3]  \fCenter \eq[t_1][t_3]$
+\end{prooftree}
+کھبے پاسے والے !!{derivation} وچ !!{formula}~$\eq[x][t_1]$ ساڈا
+$!A(x)$ اے۔ سجے پاسے اسیں $!A(x)$ نوں~$\eq[t_1][x]$ لیندے آں۔
+\end{ex}
+
+\begin{prob}
+ہیٹھ دتے سیکوئنٹاں دے !!{derivation}s بناؤ:
+\begin{enumerate}
+\item $\Sequent \lforall[x][\lforall[y][((x = y \land !A(x)) \lif !A(y))]]$
+\item $\lexists[x][!A(x)] \land \lforall[y][\lforall[z][((!A(y) \land
+    !A(z)) \lif y = z)]] \Sequent
+\lexists[x][(!A(x) \land \lforall[y][(!A(y) \lif y = x)])]$
+\end{enumerate}
+\end{prob}
+
+\end{document}

@@ -1,0 +1,50 @@
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: terms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{trm}
+\olsection{ٹرم}
+
+لامبڈا کیلکولس دے ٹرم استقرا نال بنائے جاندے نیں۔ ایہناں لئی
+لامتناہی متغیر $\Obj{v_0}$، $\Obj{v_1}$، \dots، نشان~«$\lambd$»،
+تے قوساں ورتدے آں۔ اسیں $x$، $y$، $z$، \dots{} نوں متغیراں
+لئی تے $M$، $N$، $P$، \dots{} نوں ٹرماں لئی ورتاں گے۔
+
+\begin{defn}[ٹرم] \ollabel{defn:term}
+لامبڈا کیلکولس دے \emph{ٹرماں} دا سیٹ استقرا نال ایویں متعین کردے آں:
+\begin{enumerate}
+  \item \ollabel{defn:term-var} جے $x$ متغیر اے، تاں $x$ اک ٹرم اے۔
+  \item \ollabel{defn:term-abs} جے $x$ متغیر اے تے $M$ ٹرم اے،
+    تاں $(\lambd[x][M])$ اک ٹرم اے۔
+  \item \ollabel{defn:term-app} جے $M$ تے $N$ دوویں ٹرم نیں،
+    تاں $(MN)$ اک ٹرم اے۔
+\end{enumerate}
+\end{defn}
+
+جے ٹرم $(\lambd[x][M])$ قاعدے \olref{defn:term-abs} نال
+بنیا اے، تاں اسیں آکھدے آں کہ ایہ \emph{تجرید} دا نتیجہ اے۔
+$x$ جیہڑا $\lambd[x]$ وچ اے، اوہنوں \emph{!!{parameter}} آکھدے آں۔
+ٹرم $(MN)$ جیہڑا قاعدے \olref{defn:term-app} نال بنیا اے،
+\emph{اطلاق} دا نتیجہ اے۔
+
+اُپر دِتّی تعریف وچ ٹرماں دیاں ساریاں قوساں لکھی جاندیاں نیں۔
+ایہ لکھت بھاری ہو سکدی اے، جیویں ٹرم
+$(\lambd[x][((\lambd[x][x])(\lambd[x][(xx)]))])$ توں دِسدا اے۔
+اسیں قوساں چھڈن دے رواج اگے دساں گے۔ رسمی تعریف نال پر ایہ
+لبھنا سوکھا اے کہ قاعدیاں \olref{defn:term} مطابق ٹرم کیویں بنیا۔
+مثال لئی، ٹرم $(\lambd[x][((\lambd[x][x])(\lambd[x][(xx)]))])$
+بناؤن دا آخری قدم لازماً تجرید اے، جیہدا !!{parameter}~$x$ اے۔
+تجرید ٹرم $((\lambd[x][x])(\lambd[x][(xx)]))$ توں شروع ہوندی اے،
+جیہڑا دو ٹرماں دا اطلاق اے۔ اوہناں وچوں ہر ٹرم آپ تجرید دا
+نتیجہ اے۔ ایس طرح اسیں اگے ودھ سکدے آں۔
+
+\begin{prob}
+دسو کہ $(\lambd[g][(\lambd[x][(g (x x))])
+  (\lambd[x][(g (x x))])])$ کیویں بنیا اے۔
+\end{prob}
+
+\end{document}

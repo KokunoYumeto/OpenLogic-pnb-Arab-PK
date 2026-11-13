@@ -1,0 +1,133 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{prv}}
+      {\olfileid{pl}{seq}{prv}}
+
+\olsection{\usetoken{S}{derivability} تے بے تضادی (Derivability and Consistency)}
+
+ہُن اسیں !!{derivability} دے تعلق دیاں کئی خاصیتاں قائم کراں گے۔ ایہ
+اپنے آپ وچ وی دلچسپ نیں، پر ہر خاصیت تمامیت دے قضیے دے ثبوت وچ اک کردار
+نبھاوے گی۔
+
+\begin{prop}\ollabel{prop:provability-contr}
+  جے $\Gamma \Proves !A$ تے $\Gamma \cup \{!A\}$ متضاد اے، تاں
+  $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+ایہو جہے محدود~$\Gamma_0$ تے~$\Gamma_1 \subseteq \Gamma$ نیں کہ
+$\Log{LK}$، $\Gamma_0 \Sequent !A$ تے $!A, \Gamma_1
+\Sequent \quad$ نوں !!{derive}s کردا اے۔ پہلی~$\Log{LK}$-!!{derivation}،
+یعنی $\Gamma_0 \Sequent !A$ والی، نوں~$\pi_0$ آکھو، تے دوجی
+~$\Log{LK}$-!!{derivation}، یعنی $\Gamma_1, !A
+\Sequent \quad$ والی، نوں~$\pi_1$ آکھو۔ فیر اسیں ایہ !!{derive} کر سکدے آں:
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\pi_0$}
+\Deduce$ \Gamma_0 \fCenter !A $
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!A, \Gamma_1 \fCenter $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma_0,\Gamma_1 \fCenter $
+\end{prooftree}
+
+چونکہ $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_1 \subseteq \Gamma$، سو
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$؛ ایس لئی~$\Gamma$ متضاد اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{\lnot !A\}$
+متضاد اے۔
+\end{prop}
+
+\begin{proof}
+% PNBSEQ-004: finite witnesses replace the source's unrestricted set-valued sequent antecedents.
+پہلاں منّ لو $\Gamma \Proves !A$، یعنی کوئی محدود~$\Gamma_0
+\subseteq \Gamma$ تے کوئی !!a{derivation}~$\pi_0$ ایہو جہے نیں کہ
+$\Gamma_0 \Sequent !A$ اوہدا آخرلا سیکوئنٹ اے۔ اک
+$\LeftR{\lnot}$ قاعدہ شامل کر کے، سانوں~$\lnot !A, \Gamma_0
+\Sequent \quad$ دی !!a{derivation} مل جاندی اے؛ یعنی
+$\Gamma \cup \{\lnot !A\}$ متضاد اے۔
+
+جے $\Gamma \cup \{\lnot !A\}$ متضاد اے، تاں کوئی محدود~$\Gamma_1
+\subseteq \Gamma$ تے کوئی !!a{derivation}~$\pi_1$ ایہو جہے نیں کہ
+$\lnot !A, \Gamma_1 \Sequent \quad$ اوہدا آخرلا سیکوئنٹ اے۔ ہِٹھلی
+!!a{derivation}، $\Gamma_1 \Sequent !A$ دی اے:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\RightR{\lnot}}
+  \UnaryInf$\fCenter !A, \lnot !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\lnot !A, \Gamma_1 \fCenter$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_1 \fCenter !A$
+\end{prooftree}
+ایہ محدود گواہی مطلوبہ اخذ نوں قائم کردی اے۔
+\end{proof}
+
+\begin{prob}
+ثابت کرو کہ $\Gamma \Proves \lnot !A$ اُدوں تے صرف اُدوں جدوں
+$\Gamma \cup \{!A\}$ متضاد اے۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:explicit-inc}
+  جے $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$، تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$۔ تاں کوئی
+  !!a{derivation}~$\pi$ ایہو جہی اے جہدا سیکوئنٹ $\Gamma_0 \Sequent !A$ اے۔
+  سیکوئنٹ $\lnot !A, \Gamma_0 \Sequent \quad$ وی !!{derivable} اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \RightLabel{$\pi$}
+    \Deduce$\Gamma_0 \fCenter !A$
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, !A \fCenter$
+    \RightLabel{\LeftR{\Exchange}}
+    \UnaryInf$!A, \lnot !A \fCenter$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma_0, \lnot !A \fCenter$
+  \end{prooftree}
+  چونکہ $\lnot !A \in \Gamma$ تے $\Gamma_0 \subseteq \Gamma$، ایس توں
+  وکھائی دیندا اے کہ $\Gamma$ متضاد اے۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  جے $\Gamma \cup \{!A\}$ تے $\Gamma \cup \{\lnot !A\}$ دونیں متضاد
+  نیں، تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+ایہو جہے محدود سیٹ $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_1
+\subseteq \Gamma$، تے $\Log{LK}$-!!{derivation}s $\pi_0$ تے $\pi_1$
+نیں، جیہڑے ترتیب وار $!A, \Gamma_0 \Sequent \quad$ تے $\lnot !A,
+\Gamma_1 \Sequent \quad$ دے نیں۔ فیر اسیں ایہ !!{derive} کر سکدے آں:
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\pi_0$}
+\Deduce$ !A, \Gamma_0 \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma_0 \fCenter \lnot !A$
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\lnot !A, \Gamma_1 \fCenter  $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma_0, \Gamma_1 \fCenter $
+\end{prooftree}
+چونکہ $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_1 \subseteq \Gamma$، سو
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$۔ ایس لئی $\Gamma$ متضاد اے۔
+\end{proof}
+
+\end{document}

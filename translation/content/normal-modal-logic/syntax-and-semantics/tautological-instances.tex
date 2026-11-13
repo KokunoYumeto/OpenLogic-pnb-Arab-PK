@@ -1,0 +1,150 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: tautological-instances
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{tau}
+
+\olsection{ہمیشہ صادق فارمولیاں توں بدل نال بنیاں مثالاں}
+
+\begin{explain}
+امکانی عامل توں خالی فارمولا اُدوں ہمیشہ صادق اے جدوں اوہ ہر صداقتی قدر بندی تحت سچا ہووے۔ صاف اے کہ ہر ہمیشہ صادق فارمولا ہر نمونے دے ہر جہان وچ سچا اے۔ پر $\Box$ تے~$\Diamond$ والے !!{formula}s لئی ہمیشہ صادق فارمولے دی تعریف نہیں دِتّی گئی۔ مثلاً کی $\Box p \lor \lnot \Box p$ معتبر اے، جیہڑا خارج شدہ وسط دے اصول دی اک مثال اے؟ \emph{ہمیشہ صادق فارمولے توں بدل نال بنی مثال} دا خیال ایتھے کم آؤندا اے۔ ایہ !!a{formula} اے جیہڑا کسے (غیر امکانی) ہمیشہ صادق فارمولے توں بدل نال بنیا ہووے۔ ایہ حیرانی دی گل نہیں کہ ہر ایسی مثال معتبر اے، پر ایس دا ثبوت فیر وی چاہیدا اے۔
+\end{explain}
+
+\begin{defn}
+  امکانی !!{formula}~$!B$، \emph{ہمیشہ صادق فارمولے توں بدل نال بنی مثال} اُدوں تے صرف اُدوں اے جدوں اک امکانی عامل توں خالی ہمیشہ صادق فارمولا~$!A$ ہووے جیہدے !!{propositional
+    variable}s $p_1$، \dots،~$p_n$ ہون، تے !!{formula}s $!D_1$،
+  \dots،~$!D_n$ ایسے ہون کہ $!B \ident \SSubst{!A}{\subst{!D_1}{p_1},
+    \dots, \subst{!D_n}{p_n}}$۔
+\end{defn}
+
+\begin{lem}\ollabel{lem:valid-taut}
+  منّ لو $!A$ امکانی عامل توں خالی !!{formula} اے جیہدے !!{propositional
+  variable}s $p_1$، \dots، $p_n$ نیں، تے $!D_1$، \dots،
+  $!D_n$ امکانی !!{formula}s نیں۔ فیر کسے وی قدر بندی $\pAssign{v}$،
+  کسے وی نمونے $\mModel{M} = \tuple{W, R, V}$، تے کسے وی $w \in W$ لئی جے
+  $\pAssign{v}(p_i) = \True$ اُدوں تے صرف اُدوں ہووے جدوں $\mSat{M}{!D_i}[w]$، تاں
+  $\pSat{v}{!A}$ اُدوں تے صرف اُدوں ہوندا اے جدوں
+  $\mSat{M}{\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+      \subst{!D_n}{p_n}}}[w]$۔
+\end{lem}
+
+\begin{proof}
+  $!A$ اُتے استقرا نال۔
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\pSat/{v}{\lfalse}$
+      تے $\mSat/{M}{\lfalse}[w]$ دونیں}.}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\pSat{v}{\ltrue}$
+      تے $\mSat{M}{\ltrue}[w]$ دونیں}.}{}
+  \item \indcase{!A}{p_i}{%
+    \begin{align*}
+      \pSat{v}{p_i} \Leftrightarrow {} & \pAssign{v}(p_i) = \True \\
+      & \qquad \text{$\pSat{v}{p_i}$ دی تعریف مطابق}\\
+      \Leftrightarrow {} & \mSat{M}{!D_i}[w] \\
+      &\qquad \text{مفروضے مطابق}\\
+      \Leftrightarrow {} & \mSat{M}{\SSubst{p_i}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+      &\qquad \text{کیوں جے $\SSubst{p_i}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}} \ident !D_i$}.
+      \end{align*}}
+  \tagitem{prvFalse}{\indcase{!A}{\lnot !B}{%
+      \begin{align*}
+        \pSat{v}{\lnot !B} \Leftrightarrow {} & \pSat/{v}{!B}\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق};\\
+        \Leftrightarrow {} & \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{استقرائی مفروضے مطابق}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{\lnot !B}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق}.
+      \end{align*}}}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \land !C} \Leftrightarrow {} &
+        \pSat{v}{!B} \text{ تے } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ تے } \\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{استقرائی مفروضے مطابق}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \land !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ دی تعریف مطابق}.
+      \end{align*}}}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \lor !C} \Leftrightarrow{} &
+        \pSat{v}{!B} \text{ یا } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق};\\
+        \Leftrightarrow{} & \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ یا }\\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{استقرائی مفروضے مطابق}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \lor !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ دی تعریف مطابق}.
+      \end{align*}}}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \lif !C} \Leftrightarrow{} &
+        \pSat/{v}{!B} \text{ یا } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق}\\
+        \Leftrightarrow{} &
+        \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ یا }\\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{استقرائی مفروضے مطابق}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \lif !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ دی تعریف مطابق}.
+      \end{align*}}}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \lif !C} \Leftrightarrow {} &
+        \text{یا تاں } \pSat{v}{!B} \text{ تے } \pSat{v}{!C}\\
+        & \text{or } \pSat/{v}{!B} \text{ تے } \pSat/{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ دی تعریف مطابق}\\
+        \Leftrightarrow {} &
+        \text{یا تاں } \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ تے }\\
+        & \qquad \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\ 
+        &  \text{ یا } \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ تے }\\
+        & \qquad \mSat/{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad\text{استقرائی مفروضے مطابق}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{(!B \liff !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ دی تعریف مطابق}.
+      \end{align*}}}{}
+  \end{enumerate}
+  \end{proof}
+
+\begin{prop}\ollabel{prop:valid-taut}
+  ہمیشہ صادق فارمولیاں توں بدل نال بنیاں ساریاں مثالاں معتبر نیں۔
+\end{prop}
+
+\begin{proof}
+  اُلٹی نفی نال ثابت کرن لئی، منّ لو $!A$ ایسا اے کہ
+  $\mSat/{M}{\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+  \subst{!D_n}{p_n}}}[w]$، کسے نمونے $\mModel{M}$ تے جہان~$w$ لئی۔ قدر بندی
+  $\pAssign{v}$ ایویں متعین کرو کہ $\pAssign{v}(p_i) =
+  \True$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!D_i}[w]$ (تے $\pAssign{v}$،
+  $q \notin \{p_1, \dots, p_n \}$ نوں من مرضی دیاں قدراں دیوے)۔ فیر
+  \olref{lem:valid-taut} مطابق، $\pSat/{v}{!A}$، ایس لئی $!A$ ہمیشہ صادق فارمولا نہیں۔
+\end{proof}
+
+\end{document}

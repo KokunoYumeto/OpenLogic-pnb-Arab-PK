@@ -1,0 +1,397 @@
+% Part: turing-machines 
+% Chapter: undecidability 
+% Section: verification
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{und}{ver} 
+\olsection{نمائندگی دی تصدیق}
+
+\begin{explain}
+ساڈی نمائندگی دے درست کم کرن دی تصدیق لئی سانوں دو
+گلاں ثابت کرنیاں پین گیاں۔ پہلے، ایہ دکھانا پئے گا
+کہ جے~$M$ انپٹ~$w$ اُتے رُکدی اے، تاں
+$!T(M, w) \lif !E(M, w)$ درست اے۔ فیر ایہدا اُلٹ
+دکھانا پئے گا: جے~$!T(M, w) \lif !E(M, w)$ درست
+اے، تاں~$M$ انپٹ~$w$ اُتے واقعی آخرکار
+رُکدی اے۔
+
+ایہ دو نتیجے ثابت کرن دیاں تدبیراں بہت وکھریاں نیں۔
+پہلے نتیجے لئی سانوں دکھانا اے کہ پہلے درجے دی منطق
+دا اک !!a{sentence}، یعنی~$!T(M, w) \lif !E(M, w)$،
+درست اے۔ ایہ دکھان دا سب توں سوکھا طریقہ اک
+!!a{derivation} دینا اے۔ پر ساڈا ثبوت ہر~$M$ تے~$w$
+لئی ٹھیک ہووے؛ ایس لئی ایتھے لامتناہی جملے نیں۔ جیہڑا وی
+!!{sentence} ہووے، اوہدا اک !!a{derivation} دینا پئے گا۔
+ایس لئی اسی استقرا نال ایہ
+ثابت کر سکدے آں کہ~$M$ تے~$w$ جیہو جیہے وی ہون،
+تے~$M$ نوں انپٹ~$w$ اُتے رُکّن لئی جنے وی قدم
+لگّن، $!T(M, w) \lif !E(M, w)$ دا اک
+!!a{derivation} موجود ہووے گا۔
+
+فطری طور اُتے ساڈا استقرا اُنہاں قدماں دی گنتی اُتے
+ہووے گا جیہڑے~$M$ رُکّن والی مکمل حالت تک پہنچن
+توں پہلاں چُکدی اے۔ استقرائی ثبوت وچ اسی قائم
+کراں گے کہ ہر قدم~$n$ لئی، جیہڑا~$M$ انپٹ~$w$
+اُتے چلن وچ چُکدی اے، $!T(M, w) \Entails !C(M, w, n)$،
+جتھے~$!C(M, w, n)$، $M$ دے انپٹ~$w$ اُتے
+چلدیاں~$n$ قدم چُکن توں بعد دی مکمل حالت ٹھیک
+بیان کردا اے۔ ہن جے~$M$ انپٹ~$w$ اُتے، مثلاً،
+$n$ قدم چُکن توں بعد رُکدی اے، تاں~$!C(M, w, n)$
+رُکّن والی مکمل حالت بیان کرے گا۔ اسی ایہ وی
+دکھاواں گے کہ~$!C(M, w, n)
+\Entails !E(M, w)$ جدوں وی~$!C(M, w, n)$ ایسی رُکّن
+والی مکمل حالت بیان کردا اے۔ ایس لئی جے~$M$ انپٹ~$w$
+اُتے رُکدی اے، تاں کسے~$n$ لئی~$M$، $n$ قدم
+چُکن توں بعد رُکّن والی مکمل حالت وچ ہووے گی۔
+فیر~$!T(M, w) \Entails !C(M, w, n)$، جتھے
+$!C(M, w, n)$ رُکّن والی مکمل حالت بیان کردا اے؛
+تے ایس صورت وچ~$!C(M, w, n) \Entails !E(M, w)$
+ہون کرکے سانوں~$T(M, w) \Entails !E(M, w)$ ملدا
+اے، یعنی~$\Entails !T(M, w) \lif !E(M, w)$۔
+
+اُلٹے رخ دی تدبیر بالکل وکھری اے۔ ایتھے اسی
+$\Entails !T(M, w) \lif !E(M, w)$ فرض کرکے
+ثابت کردے آں کہ~$M$ انپٹ~$w$ اُتے رُکدی اے۔
+مفروضے توں~$!T(M, w) \Entails !E(M,
+w)$ ملدا اے، یعنی ہر اُس !!{structure} وچ~$!E(M,
+w)$ سچ اے جتھے~$!T(M, w)$ سچ اے۔ ایس
+لئی اسی اک !!a{structure}~$\Struct{M}$ بیان کراں
+گے جتھے~$!T(M, w)$ سچ اے: اوہدا دائرہ~$\Nat$
+ہووے گا، تے سارے~$\Obj Q_q$ تے~$\Obj S_\sigma$
+دیاں تعبیراں~$M$ دے انپٹ~$w$ اُتے چلن دیاں
+مکمل حالتاں توں ملن گیاں۔ مثال لئی،
+$\Sat{M}{\Obj Q_q(\num{m}, \num{n})}$ اُدوں تے صرف اُدوں
+% PNB-CMP-031: source names T here; the running machine is M.
+جدوں~$M$ انپٹ~$w$ اُتے~$n$ قدم چلن توں بعد
+حالت~$q$ وچ اے تے خانہ~$m$ پڑھ رہی اے۔
+ہن چونکہ مفروضے مطابق~$!T(M, w) \Entails !E(M, w)$،
+تے تعمیر مطابق~$\Sat{M}{!T(M,
+  w)}$، ایس لئی~$\Sat{M}{!E(M, w)}$۔ پر
+$\Sat{M}{!E(M, w)}$ اُدوں تے صرف اُدوں جدوں کوئی
+$n \in \Domain{M} = \Nat$ ایہو جیہا ہووے کہ~$M$
+انپٹ~$w$ اُتے~$n$ قدم چُکن توں بعد رُکّن
+والی مکمل حالت وچ ہووے۔
+\end{explain}
+
+\begin{defn} 
+$!C(M, w, n)$ ایہ !!{sentence} ہووے:
+\[ 
+\Obj Q_q(\num{m}, \num{n}) \land \Obj S_{\sigma_0}(\num{0}, \num{n})
+\land \dots \land \Obj S_{\sigma_k}(\num{k}, \num{n}) \land
+\lforall[x][(\num{k} < x \lif \Obj S_\TMblank(x, \num{n}))]
+\] 
+جتھے~$q$، $M$ دی ویلے~$n$ والی حالت اے،
+$M$ خانہ~$m$ ویلے~$n$ اُتے پڑھ رہی اے، خانے~$i$
+وچ نشان~$\sigma_i$ ویلے~$n$ اُتے اے، $0
+\le i \le k$ لئی؛ تے~$k$ یا تاں ویلے~$0$
+اُتے پٹی دے سب توں سجّے غیر خالی خانے دا نمبر
+اے یا~$n$ قدماں تک سر جیہڑے خانیاں تک پہنچ چکیا
+اے، اوہناں وچ سب توں سجّے خانے دا نمبر، جیہڑا وی وڈا ہووے۔
+\end{defn}
+
+\begin{lem}\ollabel{lem:halt-config-implies-halt}
+جے~$M$ انپٹ~$w$ اُتے~$n$ قدم چُکن
+توں بعد رُکّن والی مکمل حالت وچ اے، تاں
+$!C(M, w, n) \Entails !E(M, w)$۔
+\end{lem}
+
+\begin{proof}
+فرض کرو~$M$ انپٹ~$w$ اُتے~$n$ قدم چُکن توں
+بعد رُکدی اے۔ کوئی حالت~$q$، خانہ~$m$ تے نشان
+~$\sigma$ ایداں دے نیں کہ:
+\begin{enumerate} 
+\item $n$ قدم چُکن توں بعد~$M$ حالت~$q$ وچ
+  خانہ~$m$ پڑھ رہی اے، جتھے~$\sigma$ لکھیا اے۔
+\item حالتی تبدیلی دا فنکشن~$\delta(q, \sigma)$
+  غیر تعریف شدہ اے۔
+\end{enumerate}
+$!C(M, w, n)$ ایس مکمل حالت دا بیان اے تے ایس
+وچ اجزا~$\Obj Q_{q}(\num{m}, \num{n})$ تے~$\Obj
+S_{\sigma}(\num{m}, \num{n})$ شامل ہون گے۔ ایہ
+اجزا مل کے~$!E(M,
+w)$ لازم کردے نیں:
+\[
+\lexists[x][\lexists[y][(\bigvee_{\tuple{q, \sigma} \in
+      X}(\Obj Q_q(x, y) \land \Obj S_\sigma(x, y)))]]
+\]
+% PNB-CMP-032: use the stated halting pair and the S predicate symbol.
+کیوں جے~$\Obj Q_{q}(\num{m}, \num{n}) \land \Obj S_{\sigma}(\num{m},
+\num{n}) \Entails \bigvee_{\tuple{q, \sigma} \in X} (\Obj Q_q(\num{m},
+\num{n}) \land \Obj S_{\sigma}(\num{m}, \num{n}))$،
+ایس لئی کہ~$\tuple{q,\sigma} \in X$ اے۔
+\end{proof}
+
+\begin{explain}
+ایس لئی جے~$M$ انپٹ $w$ اُتے رُکدی اے، تاں
+کوئی~$n$ ایہو جیہا اے کہ~$!C(M,
+w, n) \Entails !E(M,w)$۔ ہن اسی دکھاواں گے
+کہ ہر اُس ویلے~$n$ لئی، جتھے مشین پہلاں نہ رُکی
+ہووے، $!T(M, w) \Entails !C(M, w, n)$۔
+\end{explain}
+
+\begin{lem}
+\ollabel{lem:config}
+% PNB-CMP-033: include the configuration at the first halting step.
+ہر~$n$ لئی، جے~$M$، $n$ قدم چُکن توں پہلاں
+نہ رُکی ہووے، تاں~$!T(M, w)
+\Entails !C(M, w, n)$۔
+\end{lem}
+
+\begin{proof}
+استقرا دی بنیاد: جے~$n = 0$، تاں~$!C(M, w, 0)$
+دے عطف دے سارے جزو~$!T(M, w)$ دے عطف وچ وی نیں۔ ایس
+لئی اوہ ایس توں منطقی طور اُتے نکلدے نیں۔
+
+استقرائی مفروضہ: جے~$M$، $n$ویں قدم توں پہلاں
+نہ رُکی ہووے، تاں~$!T(M,w) \Entails !C(M, w, n)$۔
+سانوں دکھانا اے کہ (جے~$!C(M, w, n)$ رُکّن والی
+مکمل حالت بیان نہ کردا ہووے) تاں~$!T(M, w) \Entails
+!C(M, w, n+1)$۔
+
+% PNB-CMP-034: induction step also needs n=0.
+فرض کرو~$n \ge 0$، تے~$n$ قدم چُکن توں بعد
+$M$، انپٹ~$w$ اُتے شروع ہو کے، حالت~$q$ وچ
+خانہ~$m$ پڑھ رہی اے۔ چونکہ~$M$، $n$ قدم چُکن
+توں بعد نہیں رُکدی، ہِٹھلیاں تِن صورتاں وچوں
+کسے اک صورت دا حکم~$M$ دے
+پروگرام وچ موجود ہووے گا:
+
+\begin{enumerate} 
+\item \ollabel{right} $\delta(q, \sigma) = \tuple{q', \sigma', \TMright}$
+
+\item \ollabel{left} $\delta(q, \sigma) = \tuple{q', \sigma', \TMleft}$
+
+\item \ollabel{stay} $\delta(q, \sigma) = \tuple{q', \sigma', \TMstay}$
+\end{enumerate}
+
+اسی ایہناں تِن صورتاں نوں واری واری ویکھاں گے۔
+
+\begin{enumerate} 
+\item فرض کرو~\olref{right} والے روپ دا حکم موجود اے۔
+  \olref[rep]{defn:tm-descr}\olref[rep]{rep-right} مطابق ایہدے
+  معنی ایہ نیں کہ
+% PNB-CMP-035: omit the old scanned square m from retained-symbol conjuncts.
+\begin{align*} 
+& \lforall[x][\lforall[y][((\Obj Q_{q}(x,
+  y) \land \Obj S_\sigma(x, y)) \lif {}]]\\
+& \qquad (\Obj Q_{q'}(x',
+  y') \land \Obj S_{\sigma'}(x, y') \land !A(x, y)))  
+\intertext{، $!T(M,w)$ دا اک جزو اے۔ ایس توں ہِٹھلا
+  !!{sentence} نکلدا اے (کُلی تخصیص نال~$\num{m}$ نوں
+  $x$ دی تھاں تے~$\num{n}$ نوں~$y$ دی تھاں رکھ کے):}
+& (\Obj Q_{q}(\num{m}, \num{n}) \land \Obj S_{\sigma}(\num{m},
+\num{n})) \lif {}\\
+& \qquad (\Obj Q_{q'}(\num{m}', \num{n}') \land
+\Obj S_{\sigma'}(\num{m}, \num{n}') \land !A(\num{m}, \num{n})).
+\intertext{استقرائی مفروضے مطابق~$!T(M, w) \Entails !C(M, w, n)$،
+  یعنی:}
+& \Obj Q_q(\num{m}, \num{n}) \land \Obj S_{\sigma_0}(\num{0}, \num{n})
+\land \dots \land \Obj S_{\sigma_k}(\num{k}, \num{n}) \land \\
+& \qquad\lforall[x][(\num{k} < x \lif \Obj S_\TMblank(x, \num{n}))]\\
+\intertext{چونکہ~$n$ قدم چُکن توں بعد خانہ~$m$ وچ~$\sigma$
+  اے، ایس لئی متعلقہ جزو~$\Obj S_\sigma(\num{m}, \num{n})$
+  اے؛ لہٰذا ایہ لازم آندا اے:}
+& \Obj Q_{q}(\num{m}, \num{n}) \land \Obj S_{\sigma}(\num{m},
+   \num{n})
+\intertext{ہن سانوں ایہ ملدا اے:}
+& \Obj Q_{q'}(\num{m}', \num{n}') \land \Obj S_{\sigma'}(\num{m},
+  \num{n}') \land {}\\
+& \qquad\bigwedge_{\substack{0\le i\le k\\ i\ne m}}
+  \Obj S_{\sigma_i}(\num{i}, \num{n}') \land {}\\
+& \qquad \lforall[x][(\num{k} < x \lif \Obj S_\TMblank(x, \num{n}'))]
+\end{align*}
+ایہ نتیجہ ایویں ملدا اے: پہلی لکیر پچھلے شرطیہ دے
+تالی توں اثباتِ مقدم نال سدھی نکلدی اے۔ وچلی
+لکیر وچ~$S_{\sigma_m}(\num{m},\num{n}')$ شامل نہیں۔
+ایس لکیر دا ہر جزو $!C(M, w, n)$ دے متعلقہ جزو تے
+$!A(\num{m}, \num{n})$ توں نکلدا اے۔
+
+جے~$m < k$، تاں~$!T(M,w) \Proves \num{m} < \num {k}$
+(\olref[rep]{prop:mlessk})، تے~$<$ دی تعدیت توں
+سانوں~$\lforall[x][(\num{k} < x \lif \num{m} < x)]$
+ملدا اے۔ جے~$m = k$، تاں ایہو
+$\lforall[x][(\num{k} < x \lif \num{m} < x)]$
+صرف منطق نال نکلدا اے۔ آخری لکیر فیر
+$!C(M, w,
+n)$ دے متعلقہ جزو، $\lforall[x][(\num{k} < x \lif \num{m} < x)]$،
+تے~$!A(\num{m},
+\num{n})$ توں نکلدی اے۔ جے~$m<k$، تاں ایہ
+پہلاں ہی~$!C(M, w, n+1)$ اے۔
+
+ہن فرض کرو~$m=k$۔ ایس صورت وچ~$n+1$ قدم
+چُکن توں بعد پٹی دا سر خانہ~$k+1$ تک وی پہنچ چکیا
+اے۔ ہن سر جیہڑے خانیاں تک پہنچیا اے، اوہناں وچوں ایہ سب توں سجّا اے۔
+ایس لئی~$!C(M, w, n+1)$ وچ اک نواں جزو
+$\Obj S_\TMblank(\num{k}',\num{n}')$ اے، تے آخری جزو
+$\lforall[x][(\num{k}' < x \lif \Obj S_\TMblank(x, \num{n}'))]$
+اے۔ سانوں جانچنا اے کہ ایہ دونیں !!{sentence}s
+وی منطقی طور اُتے نکلدے نیں۔
+
+ساڈے کول پہلے ہی
+$\lforall[x][(\num{k} < x \lif \Obj S_\TMblank(x,
+  \num{n}'))]$ اے۔ خاص طور اُتے ایہدے توں
+$\num{k} < \num{k}' \lif
+\Obj S_\TMblank(\num{k}', \num{n}')$ ملدا اے۔ مسلّمے
+$\lforall[x][x <
+  x']$ توں~$\num{k} < \num{k}'$ ملدا اے۔ اثباتِ
+مقدم نال~$\Obj
+S_\TMblank(\num{k}',\num{n}')$ نکلدا اے۔
+
+نالے، چونکہ~$!T(M,w) \Proves \num{k} < \num{k}'$،
+تاں~$<$ دی تعدیت دا مسلّمہ سانوں
+$\lforall[x][(\num{k}' < x \lif \Obj
+  S_\TMblank(x, \num{n}'))]$ دیندا اے۔
+(ایس دی جانچ اسی مشق لئی چھڈدے آں۔)
+
+\item فرض کرو~\olref{left} والے روپ دا حکم موجود اے۔
+  فیر~\olref[rep]{defn:tm-descr}\olref[rep]{rep-left} مطابق:
+% PNB-CMP-035: omit the written square from the left-case retained-symbol conjunction.
+% PNB-CMP-036: left-frame exemption is the written x-prime; edge states match q and q-prime.
+\begin{align*} 
+& \lforall[x][\lforall[y][((\Obj Q_{q}(x', y) \land \Obj
+    S_{\sigma}(x', y)) \lif {}]]\\
+& \qquad (\Obj Q_{q'}(x, y') \land \Obj
+  S_{\sigma'}(x', y') \land !A(x', y))) \land {}\\
+& \lforall[y][((\Obj Q_{q}(\num{0}, y) \land \Obj S_{\sigma}(\num{0},
+    y)) \lif {}]\\
+& \qquad (\Obj Q_{q'}(\num{0}, y') \land \Obj S_{\sigma'}(\num{0}, y')
+  \land !A(\num{0}, y)))
+\intertext{، $!T(M,w)$ دا اک جزو اے۔ جے~$m>0$،
+  تاں~$l = m - 1$ رکھو (یعنی~$m = l+1$)۔ اُتلے
+  !!{sentence} دے پہلے جزو توں ایہ نتیجہ نکلدا اے:}
+& (\Obj Q_{q}(\num{l}', \num{n}) \land \Obj S_{\sigma}(\num{l}', \num{n}))
+\lif {} \\
+& \qquad (\Obj Q_{q'}(\num{l}, \num{n}') \land \Obj S_{\sigma'}(\num{l}',
+\num{n}') \land !A(\num{l}', \num{n}))
+\intertext{دوجی صورت وچ~$l = m = 0$ رکھو تے دوجے
+  جزو توں نکلن والا ہِٹھلا !!{sentence} ویکھو:}
+& ((\Obj Q_{q}(\num{0}, \num{n}) \land \Obj S_{\sigma}(\num{0}, \num{n})) \lif {}\\
+& \qquad   (\Obj Q_{q'}(\num{0}, \num{n}') \land \Obj S_{\sigma'}(\num{0}, \num{n}') \land
+!A(\num{0}, \num{n}))) 
+\intertext{دوہاں وچوں ہر اک جملے نال ایہ نتیجہ نکلدا اے:}
+&  \Obj Q_{q'}(\num{l}, \num{n}') \land \Obj S_{\sigma'}(\num{m},
+  \num{n}') \land {}\\
+&\qquad  \bigwedge_{\substack{0\le i\le k\\ i\ne m}}
+  \Obj S_{\sigma_i}(\num{i}, \num{n}') \land {} \\
+& \qquad  \lforall[x][(\num{k} < x
+  \lif \Obj S_\TMblank(x, \num{n}'))]
+\end{align*}
+پہلاں وانگ۔ (دھیان دیو کہ پہلی صورت وچ
+$\num{l}' \ident \num{l+1}
+\ident \num{m}$ تے دوجی صورت وچ
+$\num{l} \ident \num{0}$۔) پر ایہ عین
+$!C(M, w, n+1)$ اے۔
+
+\item صورت~\olref{stay} مشق لئی چھڈدے آں۔
+\end{enumerate}
+اسی دکھا دتا کہ ہر اُس~$n$ لئی، جیہدے توں پہلاں
+مشین نہ رُکی ہووے، $!T(M, w) \Entails !C(M, w, n)$۔
+\end{proof}
+
+\begin{prob}
+\olref[tur][und][ver]{lem:config} دے ثبوت وچ
+صورت~\olref[tur][und][ver]{stay} مکمل کرو۔
+\end{prob}
+
+\begin{prob}
+$\Obj S_{\sigma_i}(\num{i}, \num{n}')$ دا اک
+!!a{derivation}، $\Obj S_{\sigma_i}(\num{i}, \num{n})$
+تے~$!A(m, n)$ توں دیو (ایس مفروضے ہِٹھ کہ~$i \neq
+m$، یعنی یا~$i < m$ یا~$m < i$)۔
+\end{prob}
+
+\begin{prob}
+$\lforall[x][(\num{k}' < x \lif \Obj
+  S_\TMblank(x, \num{n}'))]$ دا اک !!a{derivation}
+$\lforall[x][(\num{k} < x \lif \Obj
+  S_\TMblank(x, \num{n}'))]$، $\lforall[x][x < x']$ تے
+$\lforall[x][\lforall[y][\lforall[z][ ((x < y \land y < z) \lif x <
+      z)]]]$ توں دیو۔)
+\end{prob}
+
+
+\begin{lem}
+\ollabel{lem:valid-if-halt}
+جے~$M$ انپٹ~$w$ اُتے رُکدی اے، تاں
+$!T(M, w) \lif
+!E(M, w)$ درست اے۔
+\end{lem}
+
+\begin{proof}
+\olref{lem:config} توں سانوں پتا اے کہ رُکّن توں
+پہلاں یا رُکّن دے ویلے~$n$
+اُتے مکمل حالت دا بیان~$!C(M, w, n)$، جیہڑا~$M$
+دی ویلے~$n$ اُتے مکمل حالت دسدے، $!T(M, w)$
+توں نکلدا اے۔ فرض کرو~$M$، $k$ قدم چُکن توں
+بعد رُکدی اے۔ اوس ویلے اوہ خانہ~$m$ پڑھ رہی
+ہووے گی، کسے~$m \in \Nat$ لئی۔ فیر
+$!C(M, w, k)$، $M$ دی رُکّن والی مکمل حالت
+بیان کردا اے؛ یعنی ایس وچ~$\Obj Q_q(\num{m}, \num{k})$
+تے~$\Obj
+S_\sigma(\num{m}, \num{k})$ دونیں جزو شامل نیں،
+جدوکہ~$\delta(q,\sigma)$ غیر تعریف شدہ اے۔
+ایس لئی~\olref{lem:halt-config-implies-halt} مطابق
+$!C(M, w, k) \Entails !E(M,
+w)$۔ پر چونکہ~$!T(M, w) \Entails !C(M, w, k)$،
+ایس لئی~$!T(M, w)
+\Entails !E(M, w)$، تے نتیجتاً
+$!T(M, w) \lif !E(M, w)$ درست اے۔
+\end{proof}
+
+
+\begin{explain} 
+اپنے دعوے دی تصدیق مکمل کرن لئی سانوں اُلٹا
+رخ وی قائم کرنا پئے گا: جے~$!T(M, w) \lif !E(M, w)$
+درست اے، تاں~$M$ انپٹ~$w$ اُتے واقعی
+رُکدی اے۔
+\end{explain}
+
+\begin{lem}
+\ollabel{lem:halt-if-valid}
+جے~$\Entails !T(M, w) \lif !E(M, w)$، تاں~$M$
+انپٹ~$w$ اُتے رُکدی اے۔
+\end{lem}
+
+\begin{proof}
+$\Lang L_M$ دی !!{structure}~$\Struct M$ ویکھو
+جیہدا دائرہ~$\Nat$ اے۔ ایہ~$\Obj 0$ دی تعبیر~$0$،
+$\prime$ دی تعبیر جانشین فنکشن تے~$<$ دی تعبیر “توں گھٹ”
+والے تعلق دے طور اُتے کردی اے؛ تے محمولاں~$\Obj Q_q$
+تے~$\Obj S_\sigma$ دی ایویں:
+\begin{align*}
+  \Assign{\Obj Q_q}{M} & =
+\Setabs{\tuple{m, n}}{\begin{array}{ll}\text{انپٹ~$w$ اُتے شروع ہو کے، $n$ قدم بعد،}\\ \text{$M$ حالت $q$
+  وچ خانہ~$m$ پڑھ رہی اے}\end{array}} \\
+\Assign{\Obj S_\sigma}{M} & = \Setabs{\tuple{m, n}}{\begin{array}{ll}
+\text{انپٹ~$w$ اُتے شروع ہو کے، $n$ قدم بعد،}\\ \text{خانہ~$m$، $M$ دا، وچ
+  نشان~$\sigma$ اے}\end{array}}
+\end{align*}
+ہور لفظاں وچ، اسی !!{structure}~$\Struct{M}$
+ایویں بناندے آں کہ اوہ~$M$ دا انپٹ~$w$
+اُتے حقیقی چلن قدم بہ قدم بیان کرے۔
+% PNB-CMP-037: extend a finite run by retaining its final halting configuration.
+جے مشین رُک جائے تاں بعدلے ویلّیاں لئی آخری
+رُکّن والی مکمل حالت اوہو جیہی رکھو؛ ایویں
+تعبیراں سارے قدرتی عددی ویلّیاں اُتے مقرر ہو جاندیاں نیں۔
+صاف اے کہ~$\Sat{M}{!T(M, w)}$۔ جے
+$\Entails !T(M, w) \lif !E(M, w)$،
+تاں~$\Sat{M}{!E(M, w)}$ وی، یعنی:
+\[
+\Sat{M}{\lexists[x][\lexists[y][(\bigvee_{\tuple{q, \sigma} \in
+      X}(\Obj Q_q(x, y) \land \Obj S_\sigma(x, y)))]]}.
+\]
+چونکہ~$\Domain{M} = \Nat$، ایس لئی کوئی
+$m$، $n \in \Nat$ ضرور ہون گے جنہاں لئی
+$\Sat{M}{\Obj Q_q(\num{m}, \num{n}) \land \Obj S_\sigma(\num{m},
+\num{n})}$، کسے~$q$ تے~$\sigma$ لئی، جتھے~$\delta(q, \sigma)$ غیر تعریف
+شدہ اے۔ $\Struct M$ دی تعریف مطابق ایہدے معنی
+ایہ نیں کہ~$M$، انپٹ~$w$ اُتے شروع ہو کے، $n$
+قدم چُکن توں بعد حالت~$q$ وچ اے تے نشان~$\sigma$
+پڑھ رہی اے، تے حالتی تبدیلی دا فنکشن غیر تعریف
+شدہ اے؛ یعنی~$M$ رُک چکی اے۔
+\end{proof}
+
+\end{document}

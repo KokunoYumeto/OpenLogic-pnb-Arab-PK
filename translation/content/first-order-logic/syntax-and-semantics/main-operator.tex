@@ -1,0 +1,111 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: main-operator
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{mai}
+
+\olsection{فارمولے دا \printtoken{S}{main operator}}
+
+\begin{explain}
+!!a{formula}~$!A$ بناؤن وچ سب توں آخر ورتے عملگر
+دی گل کرنا اکثر فائدہ مند ہوندا اے۔ ایس عملگر نوں
+~$!A$ دا \emph{مرکزی عامل} آکھدے آں۔ بدیہی طور
+تے ایہ $!A$ دا ”سب توں باہرا“ عملگر اے۔ مثال
+لئی، $\lnot !A$ دا مرکزی عامل $\lnot$ اے،
+تے $(!A \lor !B)$ دا مرکزی عامل $\lor$ اے، وغیرہ۔
+\end{explain}
+
+
+\begin{defn}[!!^{main operator}]
+\ollabel{def:main-op}
+!!a{formula}~$!A$ دا \emph{!!{main operator}}
+اینج تعریف کیتا جاندا اے:
+\begin{enumerate}
+\item \indcase*{!A}{!A}{$\indfrm$ دا کوئی !!{main operator} نہیں۔}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ دا !!{main operator}
+  ~$\lnot$ اے۔}}{}
+
+\tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\indfrm$ دا !!{main operator}
+  ~$\land$ اے۔}}{}
+
+\tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\indfrm$ دا !!{main operator}
+  ~$\lor$ اے۔}}{}
+
+\tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\indfrm$ دا !!{main operator}
+  ~$\lif$ اے۔}}{}
+
+\tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\indfrm$ دا !!{main operator}
+  ~$\liff$ اے۔}}{}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ دا !!{main operator}
+  ~$\lforall$ اے۔}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ دا !!{main operator}
+  ~$\lexists$ اے۔}}{}
+\end{enumerate}
+\end{defn}
+
+ہر صورت وچ ساڈی مراد فارمولے دے !!{main operator}
+دی دکھائی گئی خاص \emph{آمد} اے۔ مثال لئی، کیوں جے
+فارمولا $((!D \lif !E) \lif (!E \lif !D))$، $(!B \lif !C)$
+دے روپ وچ اے، جتھے $!B$، $(!D \lif !E)$ اے تے
+$!C$، $(!E \lif !D)$ اے، ایس لئی $\lif$ دی
+دوجی آمد !!{main operator} اے۔
+
+\begin{explain}
+% PNB-SYN-007: اگلے حصے دے صریح فرق مطابق ایتھے چھوٹے فارمولیاں اُتے ایس فنکشن دیاں قدراں نہیں ورتیاں؛ ایہ صورتاں دے لحاظ نال سیدھی تعریف اے، بازگشتی تعریف نہیں۔
+ایہ اک فنکشن دی \emph{صورتاں دے لحاظ نال سیدھی} تعریف اے، جیہڑا سارے
+غیر ایٹمی !!{formula}s نوں اوہناں دے !!{main operator}
+دی آمد نال جوڑدا اے۔ جس طرح !!{formula}s
+استقرائی طور تے تعریف کیتے گئے نیں، ہر
+!!{formula}~$!A$، \olref{def:main-op} دیاں
+صورتاں وچوں اک پوری کردا اے۔ ایہ ضمانت دیندا
+اے کہ ہر غیر ایٹمی !!{formula}~$!A$ لئی
+!!a{main
+  operator} موجود اے۔ کیوں جے ہر !!{formula}
+ایہناں شرطاں وچوں صرف اک پوری کردا اے، تے
+ہر صورت وچ اوہ چھوٹے !!{formula}s وی اکّو طرح
+متعین نیں جیہناں توں $!A$ بنیا اے، اس لئی
+~$!A$ دے !!{main
+  operator} دی آمد اکّو اے، تے ایس طرح
+اسیں اک فنکشن تعریف کر دتا اے۔
+\end{explain}
+
+اسیں !!{formula}s نوں \olref{tab:main-op} وچ
+دتے ناں اوہناں دے !!{main operator} دی علامت
+مطابق دیندے آں۔\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+{ پر یاد رکھو کہ تعریف شدہ عملگر باقاعدہ طور تے
+!!{formula}s وچ نہیں آؤندے۔ اوہ صرف مخفف نیں،
+اس لئی باقاعدہ طور تے کسے فارمولے دے مرکزی عامل
+نہیں بن سکدے۔ لہٰذا سارے !!{formula}s بارے ثبوتاں
+وچ اوہناں دا وکھرا معاملہ کرن دی لوڑ نہیں۔}
+
+% PNB-SYN-002 ماخذ دی درستی: جدول دے عطف، فصل تے شرطیہ مثالاں دیاں بند ہُندیاں قوساں ماخذ وچ ریاضی موڈ توں باہر نیں؛ ایتھے تیناں مکمل فارمولے ریاضی موڈ وچ رکھے نیں۔
+\begin{table}[!h]
+\centering
+\begin{tabular}{c | c | c}
+!!^{main operator} & !!{formula} دی قسم & مثال\\
+\hline
+کوئی نہیں & ایٹمی (!!{formula}) &
+\iftag{prvFalse}{$\lfalse$,}{}
+\iftag{prvTrue}{$\ltrue$,}{}
+$\Atom{R}{t_1, \dots, t_n}$,
+$\eq[t_1][t_2]$\\
+$\lnot$ & نفی & $\lnot !A$ \\
+$\land$ & عطف & $(!A \land !B)$ \\
+$\lor$ & فصل & $(!A \lor !B)$ \\
+$\lif$ & !!{conditional} & $(!A \lif !B)$ \\
+$\liff$ & !!{biconditional} & $(!A \liff !B)$ \\
+$\lforall[][]$ & کُلّی (!!{formula}) & $\lforall[x][!A]$ \\
+$\lexists[][]$ & وجودی (!!{formula}) & $\lexists[x][!A]$
+\end{tabular}
+\caption{!!{formula}s دے ناں تے مرکزی عامل}
+\ollabel{tab:main-op}
+\end{table}
+
+\end{document}

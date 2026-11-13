@@ -1,0 +1,177 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: admissible-derivable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{adm}
+
+\olsection{قبول کرن جوگ تے اخذ ہو سکّن والے قاعدے}
+
+ثبوت دے نظریے دے کئی نتیجے ایس گل بارے نیں، یا ایس گل بارے نتیجے ورتدے نیں، کہ جو کجھ کسے خاص قاعدے نال !!{prove} ہو سکدا اے، کی اوہ سارا اوس قاعدے توں بناں وی !!{prove} ہو سکدا اے۔ قطع ہٹاؤن دا قضیہ سبھ توں مشہور مثال اے۔ ایہ وکھاؤندا اے کہ ہر اوہ سیکوئنٹ جیہڑا~\Cut{} سمیت کسے سیکوئنٹ نظام دے قاعدیاں نال !!{prove} ہو سکدا اے، اوہ~\Cut توں بناں وی !!{prove} ہو سکدا اے۔ ایس طرح دی خاصیت اینی اہم اے کہ ایہدا اک ناں اے۔
+
+\begin{defn}
+قاعدہ~$R$ کسے سیکوئنٹ نظام وچ \emph{قبول کرن جوگ} اے جے ہر اوہ سیکوئنٹ جیہڑا اوس نظام تے قاعدے~$R$ نال ثابت ہو سکدا اے، اوہ~$R$ توں بناں وی ثابت ہو سکدا اے۔
+\end{defn}
+
+\begin{ex}\ollabel{ex:land-deriv}
+قاعدے $\LeftR{\land}$ دیاں شکلاں \Log{G1c} تے \Log{G3c} وچ وکھریاں نیں۔ \Log{G1c} وچ قاعدے دیاں دو شکلاں نیں۔ اک دے مقدمے وچ کھبّا عطف جزو $!A$ اے، مُکھ !!{formula}~$!A \land !B$ دا، تے دوجے دے مقدمے وچ سجّا عطف جزو~$!B$:
+\[
+\Axiom$ !A, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_1$}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_2$}
+\UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+دوجے پاسے \Log{G3c} وچ اکّو قاعدہ اے:
+\[
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_3$}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+ہُن اسیں پُچھ سکدے آں، «کی \Log{G3c} دا قاعدہ $\LeftR{\land}_3$، \Log{G1c} وچ قبول کرن جوگ اے؟» ہاں۔ اسیں $\LeftR{\land}_3$ نال کیتا کوئی وی استنباط صرف~\Log{G1c} دے قاعدیاں نال سیدھا مُڑ بنا سکدے آں۔ $\LeftR{\land}_1$ تے $\LeftR{\land}_2$ دے نال سانوں ساختی قاعدہ~$\LeftR{\Contraction}$ وی چاہیدا اے:
+\[
+\Axiom$!A, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_1$}
+\UnaryInf$!A \land !B, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_2$}
+\UnaryInf$!A \land !B, !A \land !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$!A \land !B \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\end{ex}
+
+اک قاعدے نال کیتے استنباط نوں ہور قاعدیاں نال مُڑ بنانا، ایہ وکھاؤن دا اک طریقہ اے کہ قاعدہ قبول کرن جوگ اے۔ ایہو اکّو طریقہ نہیں۔ کجھ قاعدے قبول کرن جوگ نیں پر ایس طرح مُڑ بنائے نہیں جا سکدے۔ جیہڑے مُڑ بنائے جا سکدے نیں، اوہناں نوں \emph{اخذ ہو سکّن والے} آکھدے آں۔
+
+\begin{defn}
+قاعدہ~$R$،
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+کسے نظام وچ \emph{اخذ ہو سکّن والا} اے جے اک خاکہ وار !!{proof} اے، سیکوئنٹ~$S$ دا، جیہڑا اوس نظام دے قاعدیاں تے مسلّمیاں نوں، نالے~$S_1$، \dots،~$S_n$ دیاں شکلاں والے وادھو شروع دے سیکوئنٹاں نوں ورتدا اے۔
+\end{defn}
+
+!!{proof} جیہڑا \olref{ex:land-deriv} وچ دِتّا اے، وکھاؤندا اے کہ $\LeftR{\land}_3$،~\Log{G1c} وچ اخذ ہو سکّن والا قاعدہ اے۔ وجہ ایہ اے کہ اوہ !!{proof} اک خاکہ وار !!{proof} اے، $\LeftR{\land}_3$ دے نتیجے دا، $\LeftR{\land}_3$ دے مقدمیّاں نوں شروع دے سیکوئنٹ منّ کے تے صرف \Log{G1c} دے قاعدے ورت کے۔ (اوہنے \Log{G1c} دے مسلّمیاں وچوں کوئی نہیں ورتیا۔)
+
+\begin{prop}\ollabel{prop:lor-G3-adm}
+قاعدے $\LeftR{\land}$ تے $\RightR{\lor}$،~\Log{G3c} دے،~\Log{G1c} وچ اخذ ہو سکدے نیں۔
+\end{prop}
+
+\begin{proof}
+  $\LeftR{\land}$ دا ثبوت \olref{ex:land-deriv} وچ دِتّا اے۔ $\RightR{\lor}$ دا ثبوت مشق لئی چھڈّیا اے۔
+\end{proof}
+
+\begin{prob}
+وکھاؤ کہ قاعدہ $\RightR{\lor}$، \Log{G3c} دا،~\Log{G1c} وچ اخذ ہو سکدا اے۔
+\end{prob}
+
+\begin{prob}
+منّ لو $\liff$ اک متعین !!{operator} اے۔ $!A \liff !B$، $(!A \lif !B) \land (!B \lif !A)$ دا چھوٹا روپ اے۔ وکھاؤ کہ قاعدے
+\begin{enumerate}
+\item \Axiom$\Gamma, !A, !B \fCenter \Delta$
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\RightLabel{\LeftR{\liff}}
+\BinaryInf$\Gamma \fCenter \Delta, !A \liff !B$
+\DisplayProof
+\item
+\Axiom$!A, \Gamma \fCenter \Delta, !B$
+\Axiom$!B, \Gamma \fCenter \Delta, !A$
+\RightLabel{\RightR{\liff}}
+\BinaryInf$\Gamma \fCenter \Delta, !A \liff !B$
+\DisplayProof
+\end{enumerate}
+(a)~\Log{G1c} تے (b)~\Log{G3c} وچ اخذ ہو سکدے نیں۔
+\end{prob}
+
+\begin{ex}\ollabel{ex:weak-adm}
+قاعدہ $\RightR{\Weakening}$، \Log{G1c} دا،
+\[
+\Axiom$ \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\]
+~\Log{G3c} وچ قبول کرن جوگ اے۔ ثبوت دا خیال سدھا اے۔ منّ لو !!a{proof}~$\pi$ اے، مقدمے $\Gamma \Sequent \Delta$ دا،~\Log{G3c} وچ۔ !!{formula}~$!A$ نوں ہر سیکوئنٹ دے سجّے پاسے شامل کرو،~$\pi$ وچ۔ مسلّمے مسلّمے رہندے نیں تے درست استنباط ہجے وی درست نیں۔ آخری !!{formula}، نویں !!{proof} دا، $ \Gamma \Sequent
+\Delta, !A$ اے۔
+
+پر قاعدہ $\RightR{\Weakening}$،~\Log{G3c} وچ اخذ نہیں ہو سکدا۔ منّ لو ایہ ہو سکدا اے، یعنی کوئی !!a{proof} لبھیا جا سکدا اے $ \Gamma \Sequent
+\Delta, !A$ دا، صرف~\Log{G3c} دے مسلّمے تے قاعدے ورت کے تے شاید وادھو شروع دا سیکوئنٹ~$\Gamma \Sequent \Delta$ وی ورت کے۔ جے ایہ !!{proof} پورا خاکہ وار اے، جیویں $\RightR{\Weakening}$ دے اخذ ہو سکّن لئی ضروری ہووے گا، تاں اسیں اوہنوں !!a{proof} وچ بدل سکدے آں~$\Sequent !A$ دا، $ \Gamma$ تے~$\Delta$ ہٹا کے۔ ایس طرح وادھو شروع دے سیکوئنٹ~$\Gamma \Sequent \Delta$ خالی سیکوئنٹ~$\quad \Sequent \quad$ بن جان گے۔ خالی سیکوئنٹ وچ کوئی !!{formula}s نہیں، پر~\Log{G3c} دے سارے قاعدیاں دے مقدمیّاں وچ گھٹّو گھٹ اک فعال !!{formula} چاہیدا اے۔ سو ایس خاکہ وار !!{proof} وچ خالی سیکوئنٹ کسے استنباط دا مقدمہ نہیں ہو سکدا۔ ایس لئی !!{proof} صرف اوہدوں خاکہ وار ہو سکدا اے جے ایہ وادھو سیکوئنٹ $ \Gamma \Sequent \Delta$ نوں شروع دے سیکوئنٹ دے طور اُتے اصل وچ نہ ورتے۔ دوجے لفظاں وچ، ایہ $ \Gamma \Sequent
+\Delta, !A$ دا خاکہ وار اخذ ہووے گا جیہڑا صرف~\Log{G3c} دے مسلّمے تے قاعدے ورتدا اے۔ اسیں وکھا چکے ہوواں گے کہ ایس شکل دے ہر سیکوئنٹ دا !!a{proof} اے~\Log{G3c} وچ۔ پر ایہ ممکن نہیں، کیونکہ \Log{G3c} صحت مند اے تے ایس لئی صرف اوہ سیکوئنٹ !!{prove} کر سکدا اے جیہڑے ہر !!{structure} وچ سچے نیں۔ $ \Gamma = \Delta
+= \emptyset$ تے $!A \ident \lfalse$ لے کے، \Log{G3c} نوں مثلاً سیکوئنٹ $ \quad \Sequent \lfalse$ !!{prove} کرنا پئے گا، جیہڑا ایہ نہیں کردا۔
+\end{ex}
+
+آؤ کمزور کرن والا قاعدہ~\Log{G3c} وچ قبول کرن جوگ ہون دا اک سوہنا استقرائی ثبوت دیئیے۔ اصل وچ ذرا مضبوط نتیجہ وی ٹھیک اے، جیویں سہج دلیل وکھاؤندی اے۔ $!A$ نوں~$\pi$ دے ہر سیکوئنٹ دے سجّے پاسے شامل کرن نال اسیں !!{proof} دی بناوٹ نہیں بدل دے، خاص کر اوہدی اُچائی نہیں ودھاؤندے۔ کیونکہ ایہ گل اہم اے، ایہدی اپنی تعریف ہونی چاہیدی اے۔
+
+\begin{defn}
+قاعدہ~$R$،
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+کسے نظام وچ \emph{!!{height} قائم رکھ کے قبول کرن جوگ} (یا \emph{!!{hp}-قبول کرن جوگ}) اے جے جدوں وی $\Proves[h_i] S_i$، $i = 1$، \dots،~$n$ لئی، تاں $\Proves_m S$، جتھے $m = \max(h_1, \dots,
+h_n)$۔
+\end{defn}
+
+ویکھو کہ قاعدہ !!{height} قائم رکھ کے قبول کرن جوگ ہون لئی اینا کافی اے کہ جدوں وی مقدمیّاں~$S_i$ دے !!{proof}s~$\pi_i$ ہون، !!{height}~$h_i = \pheight{\pi_i}$ والے، تاں نتیجے دا !!a{proof}~$\pi$ ہووے جیہدی !!{height}~$\pheight{\pi}$،~$h_i$ دے سبھ توں وڈّے عدد توں ودھ نہ ہووے۔ خاص کر جے اکّو مقدمہ~$S_1$ اے، تاں اینا کافی اے کہ $\pheight{\pi} \le \pheight{\pi_1}$۔ $\RightR{\Weakening}$ تے $\LeftR{\Weakening}$ دی صورت وچ اصل وچ $\pheight{\pi} = \pheight{\pi_1}$ اے، پر ایہ ضروری نہیں۔
+
+\begin{prop}\ollabel{prop:weak-G3c-adm}
+قاعدے $\RightR{\Weakening}$ تے $\LeftR{\Weakening}$، \Log{G1c} دے،~\Log{G3c} وچ !!{height} قائم رکھ کے قبول کرن جوگ نیں۔
+\end{prop}
+
+\begin{proof}
+  سانوں وکھاؤنا پینا اے کہ جے $\Log{G3c} \Proves \Gamma \Sequent \Delta$، !!{proof}~$\pi$ نال جیہدی !!{height}~$\pheight{\pi} = n$ اے، تاں اک \Log{G3c}-!!{proof} $ \pi'$ اے $ \Gamma \Sequent \Delta, !A$ دا جیہدے لئی $\pheight{\pi'} = n$۔ اسیں~$n$ اُتے استقرا نال ایہ ثابت کردے آں۔ جے $n=0$، تاں $\pi$ صرف مسلّمہ $ \Gamma \Sequent \Delta$ اے (یعنی کوئی جوہری $!C$، $ \Gamma$ تے~$\Delta$ دوناں وچ آؤندا اے)، تے $ \Gamma
+  \Sequent \Delta, !A$ وی مسلّمہ اے۔ جے $n = \pheight{\pi} >0$، تاں !!{proof}~$\pi$ دا آخری استنباط اے۔ ورتے گئے قاعدے دے حساب نال وکھ وکھ صورتاں ویکھدے آں۔ اسیں صرف اک مثال دیندے آں۔ منّ لو آخری استنباط $ \RightR{\land}$ سی۔ تاں $ \Delta = \Delta', !B \land !C$ تے آخری استنباط دے سدھے ذیلی !!{proof}s $ \pi_1$ تے~$\pi_2$ دے آخری سیکوئنٹ بالترتیب $ \Gamma \Sequent \Delta', !B$ تے $ \Gamma \Sequent
+  \Delta', !C$ نیں۔ دوجے لفظاں وچ، $\pi$ ایویں دِسدا اے:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma \fCenter \Delta', !B$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma \fCenter \Delta', !C$
+  \RightLabel{\RightR{\land}}
+  \BinaryInf$\Gamma \fCenter \Delta', !B \land !C$
+  \DisplayProof
+  \]
+  ایہ وی اے کہ $n =
+  \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1$۔ سو $\pheight{\pi_1} <
+  n$ تے $\pheight{\pi_2} < n$، تے استقرا دا مفروضہ لگدا اے۔ !!{proof}s $ \pi_1'$ تے~$\pi_2'$، $ \Gamma \Sequent
+  \Delta', !B, !A$ تے $ \Gamma \Sequent \Delta', !C, !A$ دے، موجود نیں۔ $\RightR{\land}$ قاعدہ ورت کے اسیں !!a{proof}~$\pi'$ لیندے آں $ \Gamma
+  \Sequent \Delta', !B \land !C, !A$ دا:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$\Gamma \fCenter \Delta', !B, !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta', !C, !A$
+  \RightLabel{\RightR{\land}}
+  \BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A$
+  \DisplayProof
+  \]
+  ساڈے کول $ \pheight{\pi'} =
+  \max(\pheight{\pi_1'}, \pheight{\pi_2'}) + 1 = \max(\pheight{\pi_1},
+  \pheight{\pi_2}) + 1 = \pheight{\pi}$ اے۔
+\end{proof}
+
+\olref{prop:weak-G3c-adm} بہت کم آؤندا اے۔ اسیں ایہنوں بار بار لاؤن لئی اک لکھت ورتاں گے۔ جے $\pi$، !!a{proof} اے~$\Gamma \Sequent \Delta$ دا، تاں $\pi[\Pi \Sequent \Lambda]$ اوہ نتیجہ اے جیہڑا کھبّے پاسے کمزور کرن دی قبولیت، سارے !!{formula}s~$\Pi$ وچلے نال، تے سجّے پاسے کمزور کرن دی قبولیت، سارے !!{formula}s~$\Lambda$ وچلے نال، لاؤن نال ملدا اے۔ ایہ !!a{proof} اے $ \Gamma, \Pi
+\Sequent \Delta, \Lambda$ دا۔
+
+\end{document}

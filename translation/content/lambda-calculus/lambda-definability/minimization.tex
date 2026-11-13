@@ -1,0 +1,74 @@
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: minimization
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{min}
+\olsection{گھٹ توں گھٹ حل لبھنا}
+
+عام بازگشتی فنکشن اوہ نیں جیہڑے مُڈھلے فنکشوناں $\Zero$،
+$\Succ$، $\Proj{n}{i}$ توں ترکیب، بنیادی بازگشت تے باقاعدہ
+گھٹ توں گھٹ حل لبھن نال حاصل کیتے جا سکدے نیں۔ سارے عام
+بازگشتی فنکشوناں نوں !!{lambda definable} دکھاؤن لئی سانوں
+دکھاؤنا پئے گا کہ کسے !!a{lambda
+  definable} فنکشن توں باقاعدہ گھٹ توں گھٹ حل لبھ کے بنایا
+ہویا فنکشن آپ وی !!{lambda definable} اے۔
+
+\begin{lem}
+  \ollabel{lem:min} جے $f(x_1, \dots, x_k, y)$ باقاعدہ اے تے
+  !!{lambda definable} اے، تاں ہِٹھلی تعریف والا~$g$
+  \[
+  g(x_1, \dots, x_k) = \umin{y}{f(x_1,\dots,x_k, y) = 0}
+  \]
+  وی !!{lambda definable} اے۔
+\end{lem}
+
+\begin{proof}
+  فرض کرو لامبڈا ٹرم~$F$، $\lambda$ نال باقاعدہ فنکشن
+  $f(\vec x, y)$ دی تعریف دیندا اے۔ ~$h$ نوں
+  !!{lambda define} کرن لئی اسیں تلاش دا فنکشن تے مقرر نقطے دا
+  کمبینیٹر ورتدے آں۔
+  \begin{align*}
+    \fn{Search} & \ident \lambd[g][\lambd[f\,\vec{x}\,y][
+        \fn{IsZero} (f\, \vec{x}\, y)\, y\, (g\, \vec{x} (\fn{Succ}\, y)]]\\
+    H & \ident \lambd[\vec x][(Y \, \fn{Search}) F\, \vec{x}\, \num{0}],
+  \end{align*}
+  جتھے $Y$ کوئی وی مقرر نقطے دا کمبینیٹر اے۔ سادے لفظاں وچ،
+  $\fn{Search}$ اپنے آپ نوں سدّن والا فنکشن اے۔~$y$ توں
+  شروع کر کے پرکھو کہ $f\, \vec x\, y$ صفر اے کہ نہیں۔
+  جے صفر اے، تاں~$y$ واپس دیو۔ ہور صورت وچ $\fn{Succ}\, y$
+  نال اوہو فنکشن فیر سدو۔ سو $(Y \, \fn{Search}) F
+  \num{n_1}\dots\num{n_k}\,\num{0}$ اوہ سبھ توں گھٹ~$m$
+  واپس دیندا اے جیہدے لئی $f(n_1,
+  \dots, n_k, m) = 0$۔
+
+  خاص کر کے، دھیان دیو۔
+  \begin{align*}
+    (Y \, \fn{Search}) F \num{n_1}
+    \dots\num{n_k}\, \num{m} & \red \num{m}
+    \intertext{جے $f(n_1, \dots,
+      n_k, m) = 0$، یا}
+    & \red (Y \, \fn{Search}) F\, \num{n_1} \dots\num{n_k}\, \num{m+1}
+    \intertext{ہور صورت وچ۔ کیوں جے $f$ باقاعدہ اے، $f(n_1, \dots, n_k, y)
+      = 0$ کسے $y$ لئی، تے ایس لئی}
+    (Y \, \fn{Search}) F \num{n_1} \dots\num{n_k}\,\num{0}
+    & \red \num{h(n_1, \dots, n_k)}.
+    \end{align*}
+\end{proof}
+
+\begin{prop}
+  ہر عام بازگشتی فنکشن !!{lambda definable} اے۔
+\end{prop}
+
+\begin{proof}
+ \olref[prf]{lem:basic} مطابق سارے مُڈھلے فنکشن
+ !!{lambda definable} نیں۔ \olref[prf]{lem:comp}،
+ \olref[prf]{lem:prim} تے \olref{lem:min} مطابق
+ !!{lambda definable} فنکشن ترکیب، بنیادی بازگشت تے باقاعدہ
+ گھٹ توں گھٹ حل لبھن ہِٹھ بند نیں۔
+\end{proof}
+
+\end{document}

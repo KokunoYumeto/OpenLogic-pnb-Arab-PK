@@ -1,0 +1,207 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: frame-completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{fra}
+
+\olsection{فریماں دے لحاظ نال تمامیت}
+
+\Log{K} دی تمامیت دا قضیہ ہور امکانی نظاماں تک ودھا سکدے آں جدوں اسیں وکھا دیئے کہ دِتّی منطق دے کینونیکل نمونے وچ متعلقہ فریم خاصیت اے۔
+
+\begin{thm}\ollabel{thm:completeframeprops}
+  جے نارمل امکانی منطق $\Sigma$ وچ \olref{tab:correspondencetable} دے کھبے پاسے والے !!{formula}s وچوں کوئی اک شامل اے،
+  تاں~$\Sigma$ دے کینونیکل نمونے وچ سجے پاسے والی متعلقہ خاصیت اے۔
+\end{thm}
+
+\begin{table}[htp]
+  \centering
+    \begin{tabular}{| l || l |}
+      \hline
+      \emph{جے $\Sigma$ وچ \dots شامل اے} & \emph{\dots، $\Sigma$ دا کینونیکل نمونہ ایہ اے۔} \\
+      \hline \hline
+      \Ax{D}:\;\; $\Box!A \lif \Diamond !A$ & \quad ہر جہان توں رسائی والا؛ \\
+      \hline
+      \Ax{T}:\;\; $\Box!A \lif !A$ &\quad  انعکاسی؛\\
+      \hline
+      \Ax{B}: \;\;$!A \lif \Box\Diamond!A$ &\quad  متقابل؛ \\
+      \hline
+      \Ax{4}: \;\; $\Box!A \lif \Box\Box!A$ & \quad متعدی؛ \\
+      \hline 
+      \Ax{5}: \;\; $\Diamond !A \lif \Box\Diamond!A$& \quad اقلیدسی۔\\
+      \hline
+    \end{tabular}
+    \caption{مطابقت دیاں بنیادی گلاں۔}
+    \ollabel{tab:correspondencetable}
+\end{table}
+
+\begin{proof}
+  اسیں اینہاں وچوں ہر اک نوں واری واری لیندے آں۔
+
+  منّ لو $\Sigma$ وچ \Ax{D} شامل اے تے $\Delta \in W^\Sigma$ لے لو۔ سانوں وکھاؤنا اے کہ کوئی $\Delta'$ اے جیہدے لئی $R^\Sigma
+  \Delta\Delta'$۔ ایہ وکھاؤنا کافی اے کہ $\Box^{-1}\Delta$،
+  $\Sigma$-بے تضاد اے، کیوں جے فیر لنڈن باؤم دے معاون قضیے مطابق اک
+  مکمل $\Sigma$-بے تضاد سیٹ $\Delta' \supseteq
+  \Box^{-1}\Delta$ اے، تے $R^\Sigma$ دی تعریف
+  \iftag{prvBox}{}{تے \olref[mod]{lem:box-iff-diamond} }مطابق ساڈے کول
+  $R^\Sigma \Delta\Delta'$ اے۔ سو تضاد کڈھن لئی منّ لو
+  $\Box^{-1}\Delta$، $\Sigma$-بے تضاد \emph{نہیں}، یعنی
+  $\Box^{-1}\Delta \Proves[\Sigma] \lfalse$۔ \olref[mod]{lem:box2} مطابق
+  $\Delta \Proves[\Sigma] \Box\lfalse$، تے کیوں جے $\Sigma$ وچ
+  \Ax{D} شامل اے، ایس لئی $\Delta \Proves[\Sigma] \Diamond\lfalse$ وی۔ پر $\Sigma$
+  نارمل اے، ایس لئی $\Sigma \Proves \lnot\Diamond \lfalse$
+  (\olref[prf][nor]{prop:notDiamondBot})، جیہدے توں $\Delta
+  \Proves[\Sigma] \lnot\Diamond \lfalse$ وی، جو~$\Delta$ دی بے تضادی دے اُلٹ اے۔
+
+  ہُن منّ لو $\Sigma$ وچ \Ax{T} شامل اے، تے $\Delta \in
+  W^\Sigma$ لے لو۔ اسیں $R^\Sigma \Delta\Delta$ وکھاؤنا چاہندے آں،
+  یعنی\iftag{prvBox}{}{ \olref[mod]{lem:box-iff-diamond} مطابق،}
+  $\Box^{-1}\Delta \subseteq \Delta$۔ پر جے $\Box!A \in \Delta$ تاں
+  \Ax{T} مطابق $!A \in \Delta$ وی، جیویں وکھاؤنا سی۔
+
+  ہُن منّ لو $\Sigma$ وچ \Ax{B} شامل اے تے $R^\Sigma
+  \Delta\Delta'$ اے $\Delta$، $\Delta' \in W^\Sigma$ لئی۔ سانوں وکھاؤنا اے کہ $R^\Sigma \Delta'\Delta$، یعنی\iftag{prvBox}{
+    $\Box^{-1}\Delta' \subseteq \Delta$۔
+    \olref[mod]{lem:box-iff-diamond} مطابق ایہ ایس دے ہم ارز اے}{} کہ
+  $\Diamond\Delta \subseteq \Delta'$۔ سو منّ لو $!A \in \Delta$۔
+  \Ax{B} مطابق $\Box\Diamond!A \in \Delta$ وی۔ ایس مفروضے توں کہ
+  $R^\Sigma \Delta\Delta'$\iftag{prvBox}{}{، تے
+    \olref[mod]{lem:box-iff-diamond} توں}، ملدا اے کہ $\Box^{-1}\Delta
+  \subseteq \Delta'$، سو $\Diamond!A \in \Delta'$، جیویں وکھاؤنا سی۔
+
+  ہُن منّ لو $\Sigma$ وچ \Ax{4} شامل اے تے $R^\Sigma
+  \Delta_1\Delta_2$ تے $R^\Sigma \Delta_2\Delta_3$ نیں۔ سانوں
+  $R^\Sigma \Delta_1\Delta_3$ وکھاؤنا اے۔ مفروضے توں\iftag{prvBox}{}{ تے
+    \olref[mod]{lem:box-iff-diamond} توں} سانوں $\Box^{-1}\Delta_1
+  \subseteq \Delta_2$ تے $\Box^{-1}\Delta_2 \subseteq \Delta_3$ دونیں ملدے نیں۔
+  $R^\Sigma \Delta_1\Delta_3$ وکھاؤن لئی
+  $\Box^{-1}\Delta_1 \subseteq \Delta_3$ وکھاؤنا کافی اے۔ سو منّ لو $!B \in
+  \Box^{-1}\Delta_1$، یعنی $\Box!B \in \Delta_1$۔ \Ax{4} مطابق
+  $\Box\Box!B \in \Delta_1$ وی، تے مفروضے توں پہلاں
+  $\Box!B \in \Delta_2$ تے فیر $!B \in \Delta_3$ ملدے نیں، جیویں وکھاؤنا سی۔
+
+  ہُن منّ لو $\Sigma$ وچ \Ax{5} شامل اے تے $R^\Sigma
+  \Delta_1\Delta_2$ تے $R^\Sigma \Delta_1\Delta_3$ نیں۔ سانوں
+  $R^\Sigma \Delta_2\Delta_3$ وکھاؤنا اے۔ پہلے مفروضے توں
+  $\Box^{-1}\Delta_1 \subseteq \Delta_2$ ملدا اے\iftag{prvBox}{}{،
+    \olref[mod]{lem:box-iff-diamond} مطابق}، تے دوجا مفروضہ
+  $\Diamond\Delta_3 \subseteq \Delta_1$\iftag{prvBox}{ دے ہم ارز اے،
+    \olref[mod]{lem:box-iff-diamond} مطابق}{ دے ہم ارز اے}۔
+  $R^\Sigma
+  \Delta_2\Delta_3$ وکھاؤن لئی\iftag{prvBox}{،
+    \olref[mod]{lem:box-iff-diamond} مطابق، ایہ کافی اے کہ}{ سانوں ایہ وکھاؤنا اے کہ}
+  $\Diamond\Delta_3 \subseteq \Delta_2$۔ سو منّ لو $\Diamond!A \in
+  \Diamond\Delta_3$، یعنی $!A \in \Delta_3$۔ دوجے مفروضے مطابق
+  $\Diamond!A \in \Delta_1$، تے \Ax{5} مطابق $\Box\Diamond!A \in
+  \Delta_1$ وی۔ ہُن پہلے مفروضے توں $\Diamond!A \in
+  \Delta_2$ ملدا اے، جیویں وکھاؤنا سی۔
+  \end{proof}
+
+نتیجے وجوں سانوں کئی نظاماں دی تمامیت دے نتیجے ملدے نیں۔ مثلاً اسیں جان دے آں کہ $\Log{S5} = \Log{KT5} =
+\Log{KTB4}$ سارے انعکاسی اقلیدسی نمونیاں دی جماعت دے لحاظ نال مکمل اے، تے ایہ جماعت اوہی اے جیہڑی سارے انعکاسی، متقابل تے متعدی نمونیاں دی جماعت اے۔
+
+\begin{thm}\ollabel{thm:generaldet}
+  منّ لو $\mClass{C}_\Ax{D}$، $\mClass{C}_\Ax{T}$،
+  $\mClass{C}_\Ax{B}$، $\mClass{C}_\Ax{4}$، تے
+  $\mClass{C}_\Ax{5}$ بالترتیب سارے ہر جہان توں رسائی والے، انعکاسی،
+  متقابل، متعدی، تے اقلیدسی نمونیاں دیاں جماعتاں نیں۔ فیر کسے وی سانچیاں $!A_1$، \dots، $!A_n$ لئی، جیہڑے \Ax{D}،
+  \Ax{T}، \Ax{B}، \Ax{4}، تے \Ax{5} وچوں نیں، نظام
+  $\Log{K}!A_1 \dots !A_n$ نوں نمونیاں دی جماعت
+  $\mClass{C} = \mClass{C}_{!A_1} \cap \dots
+  \cap \mClass{C}_{!A_n}$ متعین کردی اے۔
+\end{thm}
+
+\begin{prop}
+  منّ لو $\Sigma$ نارمل امکانی منطق اے۔ فیر
+  \begin{enumerate}
+  \item\ollabel{prop:anotherfive-a}%
+    جے $\Sigma$ وچ سانچہ $\Diamond!A \lif \Box
+    !A$ شامل اے، تاں $\Sigma$ دا کینونیکل نمونہ جزوی فنکشنی اے۔
+  \item جے $\Sigma$ وچ سانچہ $\Diamond!A \liff \Box
+    !A$ شامل اے، تاں $\Sigma$ دا کینونیکل نمونہ فنکشنی اے۔
+  \item جے $\Sigma$ وچ سانچہ $\Box\Box!A \lif \Box
+    !A$ شامل اے، تاں $\Sigma$ دا کینونیکل نمونہ کمزور طور تے گنجان اے۔
+  \end{enumerate}
+(ایہناں فریم خاصیتاں دیاں تعریفاں لئی \olref[frd][acc]{tab:anotherfive} ویکھو۔)
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item منّ لو $\Sigma$ وچ سانچہ $\Diamond !A \lif
+    \Box !A$ شامل اے۔ $R^\Sigma$ نوں جزوی فنکشنی وکھاؤن لئی ثابت کرنا اے کہ کسے وی $\Delta_1$، $\Delta_2$، $\Delta_3 \in
+    W^\Sigma$ لئی جے $R^\Sigma \Delta_1\Delta_2$ تے $R^\Sigma
+    \Delta_1\Delta_3$، تاں $\Delta_2=\Delta_3$۔ کیوں جے $R^\Sigma
+    \Delta_1\Delta_2$، ایس لئی $\Box^{-1}\Delta_1 \subseteq \Delta_2$،
+    تے کیوں جے $R^\Sigma \Delta_1\Delta_3$، ایس لئی $\Box^{-1}\Delta_1
+    \subseteq \Delta_3$\iftag{prvBox}{}{ وی، دونیں
+      \olref[mod]{lem:box-iff-diamond} مطابق}۔ برابری
+    $\Delta_2=\Delta_3$ اوہدوں نکلے گی جے اسیں دونیں شمولیتاں
+    $\Delta_2 \subseteq \Delta_3$ تے $\Delta_3 \subseteq
+    \Delta_2$ ثابت کر سکیے۔ پہلی لئی منّ لو $!A \in \Delta_2$۔ فیر
+    $\Diamond!A \in \Delta_1$، تے سانچے تے استنباط تحت بندش مطابق، جیہڑی $\Delta_1$ دی اے، $\Box!A \in \Delta_1$ وی۔ ایس توں مفروضے مطابق کہ
+    $R^\Sigma \Delta_1\Delta_3$، $!A \in \Delta_3$، جیویں وکھاؤنا سی۔ دوجی شمولیت ایس طرح اے۔
+
+  \item ایہ سدھا حصے~\olref{prop:anotherfive-a} تے
+    \olref{thm:completeframeprops} وچ ہر جہان توں رسائی والے ثبوت توں نکلدا اے۔
+
+  \item منّ لو $\Sigma$ وچ سانچہ $\Box\Box!A \lif \Box!A$ شامل اے۔ $R^\Sigma$ نوں کمزور طور تے گنجان وکھاؤن لئی منّ لو $R^\Sigma
+    \Delta_1\Delta_2$۔ سانوں وکھاؤنا اے کہ اک مکمل $\Sigma$-بے تضاد سیٹ $\Delta_3$ اے جیہدے لئی $R^\Sigma
+    \Delta_1\Delta_3$ تے $R^\Sigma \Delta_3\Delta_2$۔ ایہ رکھو۔
+    \[
+    \Gamma = \Box^{-1}\Delta_1 \cup \Diamond\Delta_2.
+    \]
+    ایہ وکھاؤنا کافی اے کہ $\Gamma$، $\Sigma$-بے تضاد اے۔ فیر لنڈن باؤم دے معاون قضیے مطابق ایہنوں اک مکمل
+    $\Sigma$-بے تضاد سیٹ~$\Delta_3$ تک ودھا سکدے آں جیہدے لئی $\Box^{-1}\Delta_1
+    \subseteq \Delta_3$ تے $\Diamond\Delta_2 \subseteq \Delta_3$،
+    یعنی $R^\Sigma \Delta_1\Delta_3$\iftag{prvBox}{}{ (
+      \olref[mod]{lem:box-iff-diamond} مطابق)} تے $R^\Sigma
+    \Delta_3\Delta_2$\iftag{prvBox}{ (
+      \olref[mod]{lem:box-iff-diamond} مطابق)}{}۔
+
+    تضاد کڈھن لئی منّ لو $\Gamma$ بے تضاد نہیں۔ فیر ایسے !!{formula}s $\Box!A_1$، \dots، $\Box!A_n \in \Delta_1$
+    تے $!B_1$، \dots،~$!B_m \in \Delta_2$ نیں کہ \[!A_1, \dots,
+    !A_n, \Diamond!B_1, \dots, \Diamond!B_m \Proves[\Sigma]
+    \lfalse.\] کیوں جے $\Diamond (!B_1 \land \dots \land !B_m) \to
+    (\Diamond!B_1 \land \dots \land \Diamond!B_m)$ ہر نارمل امکانی منطق وچ !!{derivable} اے، ایس لئی اسیں ایویں دلیل دیندے آں، جیہڑی~$\Delta_2$ دی بے تضادی دے اُلٹ اے۔
+    \begin{align*}
+      !A_1, \dots, !A_n, & \Diamond!B_1, \dots,
+      \Diamond!B_m \Proves[\Sigma] \lfalse \\
+      !A_1, \dots,!A_n & \Proves[\Sigma] (\Diamond!B_1 \land
+      \dots \land \Diamond!B_m) \lif \lfalse\\
+      & \qquad\text{استنباط دے قضیے مطابق}\\
+      & \qquad\text{\olref[prf][prp]{prop:derivabilityfacts}\olref[prf][prp]{prop:derivabilityfacts-deduction}، تے \Taut} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \Diamond(!B_1 \land
+      \dots \land !B_m) \lif \lfalse\\
+      & \qquad \text{کیوں جے $\Sigma$ نارمل اے} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \lnot\Diamond (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{\PL مطابق} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{$\Box\lnot$، $\lnot\Diamond$ دی تھاں} \\
+      \Box!A_1, \dots,\Box!A_n
+      & \Proves[\Sigma] \Box\Box \lnot (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{\olref[mod]{lem:box1} مطابق} \\
+      \Box!A_1, \dots,\Box!A_n
+      & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      &\qquad\text{سانچہ $\Box\Box!A \lif \Box!A$ مطابق} \\
+      \Delta_1 & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      &\qquad\text{یک رُخیت مطابق، \olref[prf][prp]{prop:derivabilityfacts}\olref[prf][prp]{prop:derivabilityfacts-monotonicity}} \\
+      & \Box\lnot (!B_1 \land \dots \land !B_m) \in \Delta_1\\
+      &\qquad\text{استنباط تحت بندش کارن}; \\
+      & \lnot (!B_1 \land \dots \land !B_m) \in \Delta_2\\
+      &\qquad \text{کیوں جے }
+      R^\Sigma \Delta_1\Delta_2. 
+    \end{align*}
+  \end{enumerate}
+\end{proof}
+
+ایہناں مثالاں توں خیال آ سکدا اے کہ امکانی منطق دا ہر نظام~$\Sigma$ \emph{مکمل} اے، ایس معنی وچ کہ اوہ ہر اوہ فارمولا ثابت کردا اے جیہڑا ہر اوس فریم وچ معتبر اے جیہدے وچ $\Sigma$ دا ہر قضیہ معتبر اے۔ پر کئی نظام ایس معنی وچ مکمل نہیں۔
+
+\end{document}

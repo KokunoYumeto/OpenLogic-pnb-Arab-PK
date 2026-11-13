@@ -1,0 +1,54 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{ntd}{فطری استنباط (Natural Deduction)}}
+      {\olchapter{pl}{ntd}{فطری استنباط (Natural Deduction)}}
+
+\begin{editorial}
+ایہ باب Gentzen/Prawitz دے انداز وچ فطری استنباط دا اک نظام پیش کردا اے۔
+
+ثبوتی نظام وجوں فطری استنباط نال متعلقہ مواد شامل یا خارج کرن لئی
+``prfND'' ٹیگ ورتو۔
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{propositional-rules}
+
+\iftag{FOL}{%
+  \olimport{quantifier-rules}
+}{}
+
+\olimport{derivations}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{%
+  \olimport{identity}
+  \olimport{soundness-identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

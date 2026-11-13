@@ -1,0 +1,42 @@
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: church-rosser
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{cr}
+\olsection{چرچ--روسر خاصیت}
+
+\begin{thm}
+\ollabel{thm:church-rosser}
+فرض کرو $M$، $N_1$ تے $N_2$ ٹرم نیں جِنہاں لئی $M \red N_1$
+تے $M \red N_2$۔فیر کوئی ٹرم $P$ موجود اے جیہدے لئی
+$N_1 \red P$ تے $N_2 \red P$۔
+\end{thm}
+
+\begin{cor}
+فرض کرو $M$ دی تقلیل کر کے نارمل روپ حاصل کیتا جا سکدا اے۔
+فیر ایہ نارمل روپ اکّو اے۔
+\end{cor}
+
+\begin{proof}
+جے $M \red N_1$ تے $M \red N_2$،تاں پچھلے قضیے دے مطابق
+کوئی ٹرم~$P$ موجود اے جیہدے لئی $N_1$ تے $N_2$ دوویں~$P$ ول تقلیل ہو
+سکدے نیں۔جے $N_1$ تے~$N_2$ دوویں نارمل روپ وچ ہون،تاں ایہ
+صرف اوس ویلے ہو سکدا اے جدوں $N_1 \ident P \ident N_2$۔
+\end{proof}
+
+آخر وچ،دو ٹرماں $M$ تے~$N$ نوں
+\emph{$\beta$-ہم ارز}،یا صرف \emph{ہم ارز}،اوس ویلے آکھاں گے
+جدوں اوہ تقلیل ہو کے اک سانجھے ٹرم تک پُہنچن۔ دوجے لفظاں وچ، جے کوئی
+$P$ ہووے جس لئی $M \red P$ تے $N \red P$۔ایہنوں
+$M \equal[\beta] N$ لکھدے نیں۔\olref{thm:church-rosser} دی
+مدد نال تُسی پرکھ سکدے او کہ $\equal[\beta]$ ہم ارزی دا اک
+تعلق اے،تے اوس وچ ایہ ودھ خاصیت اے کہ ہر $M$ تے~$N$ لئی،
+جے $M \red N$ یا $N \red M$،تاں $M \equal[\beta] N$۔
+(اصل وچ ایہ وی دکھایا جا سکدا اے کہ $\equal[\beta]$ ایس خاصیت
+والے ہم ارزیت دے تعلقاں وچ \emph{سب توں چھوٹا} اے۔)
+
+\end{document}

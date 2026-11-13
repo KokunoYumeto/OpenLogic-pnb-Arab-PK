@@ -1,0 +1,149 @@
+% Part: model-theory
+% Chapter: models-of-arithmetic
+% Section: non-standard-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{mar}{nst}
+\section{غیر معیاری نمونے}
+
+\begin{explain}
+اسیں $\Lang{L_A}$ لئی !!a{structure} نوں معیاری
+آکھدے آں جے اوہ~$\Struct{N}$ نال ہم شکل ہووے۔
+جے کوئی !!a{structure}، $\Struct{N}$ نال ہم شکل
+نہ ہووے، تاں اوہنوں غیر معیاری آکھیا جاندا اے۔
+\end{explain}
+
+\begin{defn}
+!!{structure}~$\Struct{M}$، $\Lang{L_A}$ لئی،
+\emph{غیر معیاری} اے جے اوہ~$\Struct{N}$ نال ہم
+شکل نہیں۔ اوہ !!{element}s $x \in
+\Domain{M}$ جیہڑے $\Value{\num{n}}{M}$
+دے برابر ہون کسے $n \in \Nat$ لئی،
+~$\Struct{M}$ دے \emph{معیاری اعداد} کہلاندے نیں،
+تے باقی \emph{غیر معیاری اعداد}۔
+\end{defn}
+
+\begin{explain}
+\olref[stm]{prop:standard-domain} مطابق، ہر معیاری
+!!{structure}، $\Lang{L_A}$ لئی، صرف معیاری
+!!{element}s رکھدی اے۔ ایس لئی غیر معیاری
+!!{structure}، جیہڑی رابنسن حساب (Q) دے مسلّمے پورے کردی ہووے،
+وچ گھٹ توں گھٹ اک غیر معیاری
+عنصر ہونا لازم اے۔ بلکہ غیر معیاری !!{element}
+دا وجود خود ضمانت دیندا اے کہ !!{structure}
+غیر معیاری اے۔
+\end{explain}
+
+\begin{prop}
+جے !!a{structure}~$\Struct{M}$، $\Lang{L_A}$ لئی،
+وچ غیر معیاری عدد موجود اے، تاں $\Struct{M}$
+غیر معیاری اے۔
+\end{prop}
+
+\begin{proof}
+الٹ فرض کرو: $\Struct{M}$ معیاری اے، پر
+اوہدے وچ غیر معیاری عدد~$x$ اے۔
+$g\colon \Nat \to \Domain{M}$ اک ہم شکلی ہووے۔
+~$n$ اُتے استقرا نال آسانی نال ویکھیا جا سکدا اے کہ
+$g(\Value{\num{n}}{N}) = \Value{\num{n}}{M}$۔
+دوجے لفظاں وچ، $g$، $\Struct{N}$ دے معیاری
+اعداد نوں~$\Struct{M}$ دے معیاری اعداد ول بھیجدا اے۔
+جے $\Struct{M}$ وچ غیر معیاری عدد ہووے، تاں $g$
+ہر ہدف قدر نہیں لے سکدا (!!{surjective})؛ ایہ مفروضے
+دے خلاف اے۔
+\end{proof}
+
+\begin{prob}
+یاد کرو کہ $\Th{Q}$ وچ ایہ مسلمات نیں:
+\begin{align*}
+& \lforall[x][\lforall[y][(\eq[x'][y'] \lif \eq[x][y])]] \tag{$!Q_1$}\\
+& \lforall[x][\eq/[\Obj 0][x']] \tag{$!Q_2$}\\
+& \lforall[x][(\eq[x][\Obj 0] \lor \lexists[y][\eq[x][y']])] \tag{$!Q_3$}
+\end{align*}
+ایس طرح دیاں !!{structure}s~$\Struct{M_1}$،
+$\Struct{M_2}$، $\Struct{M_3}$ دیو کہ:
+\begin{enumerate}
+\item $\Sat{M_1}{!Q_1}$، $\Sat{M_1}{!Q_2}$، $\Sat/{M_1}{!Q_3}$؛
+\item $\Sat{M_2}{!Q_1}$، $\Sat/{M_2}{!Q_2}$، $\Sat{M_2}{!Q_3}$؛ تے
+\item $\Sat/{M_3}{!Q_1}$، $\Sat{M_3}{!Q_2}$، $\Sat{M_3}{!Q_3}$؛
+\end{enumerate}
+صاف اے کہ ہر اک لئی بس~$\Assign{\Obj{0}}{M_i}$
+تے $\Assign{\prime}{M_i}$ متعین کرنے نیں۔
+\end{prob}
+
+\begin{explain}
+$\Lang{L_A}$ لئی غیر معیاری !!{structure}s
+متعین کرنا کافی آسان اے۔ مثال لئی
+!!{domain}~$\Int$ والی ساخت لے لو تے ساریاں
+غیر منطقی علامتاں دی معمول مطابق تعبیر کرو۔
+کیوں جے منفی اعداد $\num{n}$ دیاں قدراں
+نہیں، کسے وی~$n$ لئی، ایہ ساخت غیر معیاری اے۔
+بے شک ایہ حساب دا \emph{نمونہ} اوس معنی وچ نہیں
+ہووے گی جیہدے وچ اوہ اوہو جملے سچے کرے
+جو~$\Struct{N}$ سچے کردا اے۔ مثال لئی،
+$\lforall[x][\eq/[x'][\Obj{0}]]$ غلط اے۔
+پر محدود گواہی دا قضیہ ورت کے اسیں آسانی نال
+ثابت کر سکدے آں کہ حساب دے غیر معیاری نمونے موجود نیں۔
+\end{explain}
+
+\begin{prop}
+فرض کرو $\Th{TA} = \Setabs{!A}{\Sat{N}{!A}}$،
+~$\Struct{N}$ دا نظریہ اے۔ $\Th{TA}$ دا اک
+!!a{enumerable} غیر معیاری نمونہ موجود اے۔
+\end{prop}
+
+\begin{proof}
+$\Lang{L_A}$ وچ نواں !!{constant}~$c$ شامل کرو
+تے !!{sentence}s دے ایس سیٹ نوں ویکھو:
+\[
+\Gamma = \Th{TA} \cup \{\eq/[c][\num{0}], \eq/[c][\num{1}],
+\eq/[c][\num{2}], \dots\}
+\]
+ہر نمونہ~$\Struct{M^c}$، $\Gamma$ دا، کوئی
+!!a{element}~$x =
+\Assign{c}{M^c}$ رکھے گا جو غیر معیاری اے،
+کیوں جے $x \neq \Value{\num{n}}{M}$
+ہر $n \in \Nat$ لئی۔
+ایہ وی صاف اے کہ $\Sat{M^c}{\Th{TA}}$،
+کیوں جے $\Th{TA} \subseteq \Gamma$۔
+جے اسیں $\Struct{M^c}$ توں
+!!a{structure}~$\Struct{M}$، $\Lang{L_A}$ لئی،
+صرف~$c$ نوں بھلا کے بنا لئیے،
+تاں اوہدے دائرے وچ غیر معیاری~$x$
+ہن وی موجود اے، تے~$\Sat{M}{\Th{TA}}$ وی۔
+پچھلی گل ایس لئی یقینی اے کہ $c$،
+$\Th{TA}$ وچ نہیں آؤندا۔ ودھائی ہوئی زبان گنتی وار اے؛
+لووینہائم--سکولم دے نزولی قضیے مطابق، جے $\Gamma$ دا نمونہ ہووے،
+تاں اوہدا قابلِ شمار نمونہ وی ہووے گا۔ ایس لئی صرف ایس سیٹ دا
+نمونہ ہون دا ثبوت کافی اے۔
+
+اسیں محدود گواہی دے قضیے نال وکھاؤندے آں
+کہ~$\Gamma$ دا نمونہ اے۔ جے~$\Gamma$ دا
+ہر محدود ذیلی سیٹ پورا ہون جوگا اے، تاں
+~$\Gamma$ وی پورا ہون جوگا اے۔
+من مانا محدود ذیلی سیٹ $\Gamma_0 \subseteq
+\Gamma$ ویکھو۔ $\Gamma_0$ وچ~$\Th{TA}$ دے کجھ
+!!{sentence}s تے~$\eq/[c][\num{n}]$
+دی صورت دے کجھ جملے نیں، پر صرف محدود تعداد وچ۔
+فرض کرو $k$ صفر اے جے ایہ ذیلی سیٹ عددی عبارتاں نال برابر نہ
+ہون والی کوئی شرط شامل نہ کرے؛ ہور حال وچ اوہ سب توں وڈا عدد اے جیہدے لئی
+$\eq/[c][\num{k}] \in \Gamma_0$۔
+$\Struct{N_k}$ نوں~$\Struct{N}$ وچ
+تعبیر~$\Assign{c}{N_k} = k+1$
+شامل کرکے متعین کرو۔
+$\Sat{N_k}{\Gamma_0}$: جے $!A
+\in \Th{TA}$، تاں $\Sat{N_k}{!A}$،
+کیوں جے $\Struct{N_k}$، $\Struct{N}$ ورگی اے
+ہر لحاظ نال سوائے~$c$ دے،
+تے $c$، $!A$ وچ نہیں آؤندا۔
+تے $\Sat{N_k}{\eq/[c][\num{n}]}$،
+کیوں جے $n \le k$، تے
+$\Value{c}{N_k} = k+1$۔
+ایس لئی~$\Gamma$ دا ہر محدود ذیلی سیٹ
+پورا ہون جوگا اے۔
+\end{proof}
+
+\end{document}

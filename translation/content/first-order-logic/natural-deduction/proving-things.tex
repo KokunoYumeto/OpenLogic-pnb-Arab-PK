@@ -1,0 +1,314 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{pro}}
+      {\olfileid{pl}{ntd}{pro}}
+
+\olsection{اخذ (\usetoken{P}{derivation}) دیاں مثالاں}
+
+\begin{ex}
+آؤ !!{sentence} $(!A \land !B) \lif !A$ دا !!a{derivation} دیئے۔
+
+پہلاں اسیں مطلوبہ نتیجہ !!{derivation} دے سب توں ہِٹھ لکھدے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+
+اگلا سوال ایہ اے کہ ایس روپ دا !!a{sentence} کس قسم دے استنباط
+توں نکل سکدا اے۔ نتیجے دا !!{main operator}~$\lif$ اے، ایس لئی
+اسیں \Intro{\lif} دا قاعدہ لا کے نتیجے تک پہنچن دی کوشش کراں گے۔
+نال نال ورتے ہوئے مفروضے لکھدے جاؤ تے استنباطی قاعدیاں دے ناں
+لاؤ؛ ایس طرح ثبوت دے آخر وچ ویکھنا سوکھا رہندا اے کہ سارے مفروضے
+!!{discharged} ہو چکے نیں یا نہیں۔
+\begin{prooftree}
+\AxiomC{$\Discharge{!A \land !B}{1}$}
+\DeduceC{$!A$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+
+ہن مفروضے $!A \land !B$ توں $!A$ تک دے قدم بھرنے نیں۔ اتھے ساڈے
+کول صرف اک منطقی رابط، $\land$، اے؛ ایس لئی $\land$ دا اخراجی
+قاعدہ ورتنا پئے گا۔ ایہدے نال ہِٹھلا ثبوت ملدا اے:
+\begin{prooftree}
+\AxiomC{$\Discharge{!A \land !B}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+ہن ساڈے کول $(!A \land
+!B) \lif !A$ دا درست !!{derivation} اے۔
+\end{ex}
+
+\begin{ex}
+ہن آؤ $(\lnot !A \lor !B) \lif (!A \lif !B)$ دا !!a{derivation}
+دیئے۔
+
+پہلاں اسیں مطلوبہ نتیجہ !!{derivation} دے سب توں ہِٹھ لکھدے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+ایہ نتیجہ دین والا منطقی قاعدہ لبھن لئی اسیں نتیجے دے منطقی
+رابطے ویکھدے آں: $\lnot$، $\lor$ تے $\lif$۔ فی الحال ساڈا دھیان
+$\lif$ دی پہلی ورتوں اُتے اے، کیوں جے اخذ دے آخری !!{sentence}
+% PNBNTD-011: the ND tree ends in one sentence, not an end-sequent; retain the main-operator scope.
+دا !!{main operator} ایہی اے۔ $\lnot$، $\lor$ تے $\lif$ دی دوجی
+ورتوں کسے ہور رابطے دے دائرے وچ نیں، ایس لئی اوہناں نوں بعد وچ
+سنبھالاں گے۔ سو اسیں \Intro{\lif} دے قاعدے توں شروع کردے آں۔
+ایس دی درست ورتوں دا روپ ایہ ہووے گا:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\DeduceC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+ہن اگے ودھن دے دو رستے نیں۔ یا اسیں ہِٹھوں اُپر ول کم جاری رکھ کے
+\Intro{\lif} دی اک ہور ورتوں لبھیے، یا اُپروں ہِٹھاں ول کم کر کے
+\Elim{\lor} دا قاعدہ لائیے۔ آؤ دوجا رستہ چنیے۔ مفروضے
+$\lnot !A \lor !B$ نوں \Elim{\lor} دے سب توں کھبے مقدمے وجوں
+ورتاں گے۔ \Elim{\lor} دی درست ورتوں وچ باقی دو مقدمے نتیجے
+$!A \lif !B$ دے عین برابر ہونے چاہیدے نیں؛ البتہ ہر اک نوں
+$\lnot !A \lor !B$ دے دو فصلی جزاں وچوں متعلقہ جز نوں مفروضہ
+من کے وکھرا اخذ کیتا جا سکدا اے۔ ایس لئی ساڈا !!{derivation}
+ایویں لگے گا:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\DeduceC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}$}
+\DeduceC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+سجے پاسے دیاں دو ذیلی شاخاں وچ اسیں $!A \lif !B$ نوں !!{derive}
+کرنا چاہندے آں؛ ایس لئی \Intro{\lif} ورتنا سب توں چنگا اے۔
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}, \Discharge{!A}{3}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}, \Discharge{!A}{4}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{4}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+!!{derivation} دے باقی دو خالی حصیاں لئی سانوں $!B$ دے
+!!{derivation}s چاہیدے نیں: وچکارلی شاخ وچ $\lnot !A$ تے $!A$
+توں، تے سب توں سجی شاخ وچ $!A$ تے $!B$ توں۔
+% PNBNTD-004: source calls the second subsidiary branch "on the left"; the tree makes it rightmost.
+پہلاں وچکارلا حصہ لیندے آں۔ $\lnot
+!A$ تے $!A$، \Elim{\lnot} دے دو مقدمے نیں:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DeduceC{$!B$}
+\end{prooftree}
+\FalseInt لا کے اسیں $!B$ نوں نتیجے وجوں حاصل کر سکدے آں
+تے ایہ شاخ مکمل ہو جاندی اے۔
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+% PNBNTD-005: source intermediate label Intro(false) contradicts its Elim(not) rule and finished tree.
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}, \Discharge{!A}{4}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{4}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+ہن سب توں سجی شاخ ویکھو۔ اتھے ایہ سمجھنا ضروری اے کہ
+!!{derivation} دی تعریف مفروضے \emph{خارج کرن دی اجازت دیندی اے}،
+پر اوہناں نوں خارج کرنا \emph{لازمی نہیں بناؤندی}۔ دوجے لفظاں وچ،
+جے اسیں $!B$ نوں مفروضیاں $!A$ تے $!B$ وچوں اک توں
+اخذ کر لئیے، دوجے نوں ورتے بنا، تاں ایہ ٹھیک اے۔ $!B$ نوں خود $!B$ توں
+!!{derive} کرنا بالکل سادہ اے: اکیلا $!B$ ایہو جیہا
+!!a{derivation} اے تے کوئی استنباط نہیں چاہیدا۔ سو اسیں
+مفروضہ~$!A$ ہٹا سکدے آں۔
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}$}
+\RightLabel{\Intro{\lif}}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+دھیان دیو کہ مکمل !!{derivation} وچ سب توں سجی \Intro{\lif}
+والی استنباطی ورتوں حقیقت وچ کوئی مفروضہ خارج نہیں کردی۔
+\end{ex}
+
+\begin{ex}
+ہن تک سانوں \FalseCl{} دے قاعدے دی لوڑ نہیں پئی۔ ایہ ایس گل
+وچ خاص اے کہ ایہ اوہ مفروضہ وی خارج کرن دی اجازت دیندا اے جیہڑا
+قاعدے دے نتیجے دا ذیلی-!!{formula} نہیں ہوندا۔ ایہ \FalseInt{}
+دے قاعدے نال نیڑے جڑیا ہویا اے۔ اصل وچ \FalseInt{} دا قاعدہ،
+\FalseCl{} دے قاعدے دی اک خاص صورت اے---اک منطق، ”وجدانیت پسند
+منطق“ (intuitionistic logic)، وی اے جیہدے وچ صرف \FalseInt{}
+دی اجازت اے۔ جدوں ہور کوئی طریقہ کم نہ کرے، \FalseCl{} آخری
+چارہ اے۔ مثلاً فرض کرو اسیں $!A \lor \lnot !A$ نوں !!{derive}
+کرنا چاہندے آں۔ ساڈی عام تدبیر $!A \lor \lnot !A$ نوں
+$\Intro{\lor}$ لا کے !!{derive} کرن دی ہووے گی۔ پر ایس لئی
+بنا کسے مفروضے دے یا $!A$ یا $\lnot !A$ نوں !!{derive} کرنا
+پئے گا، تے ایہ نہیں ہو سکدا۔ ہن \FalseCl{} کم آؤندا اے:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+ہن سانوں $\lfalse$ دا !!a{derivation}،
+$\lnot(!A \lor \lnot !A)$ توں چاہیدا اے۔ کیوں جے $\lfalse$،
+$\Elim{\lnot}$ دا نتیجہ اے، اسیں اوہ قاعدہ آزما سکدے آں:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+$\lnot !A$ دا !!a{derivation} لبھن دی ساڈی تدبیر
+$\Intro{\lnot}$ لاون نوں آکھدی اے:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}, \Discharge{!A}{2}$}
+  \DeduceC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+اتھے اسیں $\lfalse$ سوکھ نال حاصل کر سکدے آں: $\Elim{\lnot}$
+نوں مفروضے $\lnot(!A \lor \lnot !A)$ تے
+$!A \lor \lnot !A$ اُتے لا کے۔ دوجا مقدمہ ساڈے نویں مفروضے $!A$
+توں $\Intro{\lor}$ راہیں نکلدا اے:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{!A}{2}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+سجے پاسے اسیں اوہی تدبیر ورتدے آں، پر اتھے $!A$ نوں
+\FalseCl راہیں حاصل کردے آں:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{!A}{2}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{\lnot !A}{3}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{3}
+  \UnaryInfC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+\end{ex}
+
+\begin{prob}
+ہِٹھ لکھیاں گلّاں وکھاؤن والے !!{derivation}s دیو:
+\begin{enumerate}
+\item $!A \land (!B \land !C) \Proves (!A \land !B) \land !C$.
+\item $!A \lor (!B \lor !C) \Proves (!A \lor !B) \lor !C$.
+\item $!A \lif (!B \lif !C) \Proves !B \lif (!A \lif !C)$.
+\item $!A \Proves \lnot\lnot !A$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھ لکھیاں گلّاں وکھاؤن والے !!{derivation}s دیو:
+\begin{enumerate}
+\item $(!A \lor !B) \lif !C \Proves !A \lif !C$.
+\item $(!A \lif !C) \land (!B \lif !C) \Proves (!A \lor !B) \lif !C$.
+\item $\Proves \lnot(!A \land \lnot !A)$.
+\item $!B \lif !A \Proves \lnot !A \lif \lnot !B$.
+\item $\Proves (!A \lif \lnot !A) \lif \lnot !A$.
+\item $\Proves \lnot(!A \lif !B) \lif \lnot !B$.
+\item $!A \lif !C \Proves \lnot (!A \land \lnot !C)$.
+\item $!A \land \lnot !C \Proves \lnot (!A \lif !C)$.
+\item $!A \lor !B, \lnot !B \Proves !A$.
+\item $\lnot !A \lor \lnot !B \Proves \lnot(!A \land !B)$.
+\item $\Proves (\lnot !A \land \lnot !B) \lif\lnot(!A \lor !B)$.
+\item $\Proves \lnot(!A \lor !B) \lif (\lnot !A \land \lnot !B)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھ لکھیاں گلّاں وکھاؤن والے !!{derivation}s دیو:
+\begin{enumerate}
+\item $\lnot(!A \lif !B) \Proves !A$.
+\item $\lnot(!A \land !B) \Proves \lnot !A \lor \lnot !B$.
+\item $!A \lif !B \Proves \lnot !A \lor !B$.
+\item $\Proves \lnot \lnot !A \lif !A$.
+\item $!A \lif !B, \lnot !A \lif !B \Proves !B$.
+\item $(!A \land !B) \lif !C \Proves (!A \lif !C) \lor (!B \lif !C)$.
+\item $(!A \lif !B) \lif !A \Proves !A$.
+\item $\Proves (!A \lif !B) \lor (!B \lif !C)$.
+\end{enumerate}
+(ایہناں ساریاں لئی $\FalseCl$~دا قاعدہ ضروری اے۔)
+\end{prob}
+
+\end{document}

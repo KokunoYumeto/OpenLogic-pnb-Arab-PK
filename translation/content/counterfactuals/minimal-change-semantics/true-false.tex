@@ -1,0 +1,113 @@
+% Part: conditional-logics
+% Chapter: minimal-change-semantics
+% Section: true-false
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{con}{min}{tf}
+
+\olsection{خلافِ واقعہ شرطیاں دی سچائی تے جھوٹ}
+
+خلافِ واقعہ شرطیہ $!A \cif !B$ سچ اے (خالی شرط کارن نہیں) جے سبھ توں
+نیڑلے $!A$ والے جہان سارے $!B$ والے جہان ہون، جیویں \olref{fig:true} وچ
+وکھایا اے۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.6,-1)}]{90}{1}{30}{4}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{غیر خالی شرط نال سچا خلافِ واقعہ شرطیہ}
+\ollabel{fig:true}
+\end{center}
+\end{figure}
+خلافِ واقعہ شرطیہ $w$ اُتے اوہدوں وی سچ اے جے~$w$ دے آلے دوالے گولیاں
+دے نظام وچ $!A$ نوں تھاں دین والا کوئی گولا ای نہیں۔ ایس صورت وچ اوہ
+\emph{خالی شرط کارن} سچ اے (\olref{fig:vacuous} ویکھو)۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \proposition{0}{6.5}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.2,-1)}]{90}{1}{30}{4}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \spherepos{0}{7}{node {$\formula{A}$}}
+\end{tikzpicture}
+\caption{خالی شرط کارن سچا خلافِ واقعہ شرطیہ}
+\ollabel{fig:vacuous}
+\end{center}
+\end{figure}
+
+ایہ دو طریقیاں نال جھوٹا ہو سکدا اے۔ اک صورت ایہ اے کہ سبھ توں نیڑلے
+$!A$ والے جہاناں وچوں سارے $!B$ والے جہان نہ ہون، پر کجھ ہون۔ ایس صورت
+وچ $!A \cif \lnot !B$ وی جھوٹا اے (\olref{fig:false} ویکھو)۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.6,0)}]{90}{1}{30}{3}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{جھوٹا خلافِ واقعہ شرطیہ، اُلٹی تالی والا وی جھوٹا}
+\ollabel{fig:false}
+\end{center}
+\end{figure}
+جے سبھ توں نیڑلے $!A$ والے جہاناں دا $!B$ والے جہاناں نال کوئی سانجھا
+جہان نہیں، تاں $!A \cif !B$ جھوٹا اے۔ پر ایس صورت وچ سبھ توں نیڑلے
+سارے $!A$ والے جہان $\lnot !B$ والے جہان نیں، سو $!A \cif \lnot !B$ سچ
+اے (\olref{fig:false-opposite} ویکھو)۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(-1,0)}]{90}{1}{30}{3}}
+  \path (-1,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{جھوٹا خلافِ واقعہ شرطیہ، اُلٹی تالی والا سچا}
+\ollabel{fig:false-opposite}
+\end{center}
+\end{figure}
+
+سخت شرطیے دے اُلٹ، خلافِ واقعہ شرطیے اتفاقی طور اُتے سچ یا جھوٹ ہو
+سکدے نیں۔ \olref{fig:contingent} والا گولیاں دا نمونہ ویکھو۔
+$!A$ والے جہان جیہڑے~$u$ دے سبھ توں نیڑے نیں، اوہ سارے $!B$ والے جہان نیں، سو
+$\mSat{M}{!A \cif !B}[u]$۔ پر $!A$ والے جہان جیہڑے~$v$ دے سبھ توں نیڑے نیں، اوہناں وچوں کجھ جہان
+$!B$ والے جہان نہیں، سو $\mSat/{M}{!A \cif !B}[v]$۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.6]\small
+  \spheresystem{7}
+  \spheresystem[shift={(0:3.1)},dashed]{4}
+  \propositionintersect{45}{4}{40}{4.5}
+  \begin{scope}
+    \clip \propositionplot{45}{4}{40}{4.5} ;
+    \spherelayer[shift={(0:3.1)}]{3}
+  \end{scope}
+  \proposition[shift={(1.4,-.5)}]{90}{1}{35}{5}
+  \path (0,0) node {$u$};
+  \path (0:3.1) node {$v$};
+  \spherepos{35}{9}{node {$\formula{A}$}}
+  \spherepos{80}{9}{node {$\formula{B}$}}
+\end{tikzpicture}
+\end{center}
+\caption{اتفاقی خلافِ واقعہ شرطیہ}
+\ollabel{fig:contingent}
+\end{figure}
+\end{document}

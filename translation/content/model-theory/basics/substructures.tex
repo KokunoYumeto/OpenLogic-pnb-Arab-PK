@@ -1,0 +1,59 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: substructures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{bas}{sub}
+\olsection{ذیلی \printtoken{p}{structure}}
+
+اک !!a{structure}~$\Struct{M}$ دا !!{domain} دوجی ساخت~$\Struct{M'}$
+دے دائرے دا ذیلی سیٹ ہو سکدا اے۔ پر $\Struct{M}$ نوں
+$\Struct{M'}$ دا ”حصہ“ اُدوں ای سمجھنا چاہیدا اے جدوں نہ صرف
+$\Domain{M}
+\subseteq \Domain{M'}$ ہووے، بلکہ $\Struct{M}$ تے $\Struct{M'}$
+زبان دیاں علامتاں دی تشریح وچ گھٹ توں گھٹ سانجھے حصے~$\Domain{M}$
+اُتے اک دوجے نال ”متفق“ وی ہون۔
+ایتھے زبان اوہی رہندی اے، پر دائرہ چھوٹا ہو سکدا اے؛
+پچھلے گھٹائے روپ وچ زبان گھٹدی سی، دائرہ نہیں۔
+
+\begin{defn}
+\ollabel{defn:substructure}
+!!{structure}s $\Struct M$ تے $\Struct M'$ اکّو زبان~$\Lang L$
+لئی دتیاں ہون۔ اسیں $\Struct M$ نوں $\Struct M'$ دی
+\emph{ذیلی !!{structure}} (substructure)، تے $\Struct M'$ نوں
+$\Struct M$ دی \emph{توسیع} (extension) آکھدے آں، جس نوں
+$\Struct M \substruct \Struct M'$ لکھدے آں، اُدوں تے صرف اُدوں جدوں
+\begin{enumerate}
+\item $\Domain{M} \subseteq \Domain{M'}$،
+\item ہر مستقل $c \in \Lang L$ لئی، $\Assign{c}{M} =
+    \Assign{c}{M'}$؛
+\item ہر $n$-تھانواں والے !!{function} $f \in \Lang L$ لئی
+  $\Assign{f}{M}(a_1, \dots, a_n) = \Assign{f}{M'}(a_1, \dots, a_n)$
+  سارے $a_1$، \dots، $a_n \in \Domain{M}$ لئی۔
+\item ہر $n$-تھانواں والے !!{predicate} $R \in \Lang L$ لئی، $\langle
+  a_1, \dots, a_n\rangle \in \Assign{R}{M}$ اُدوں تے صرف اُدوں جدوں
+  $\langle a_1, \dots,
+  a_n\rangle \in \Assign{R}{M'}$ ہووے، سارے $a_1$، \dots، $a_n \in
+  \Domain{M}$ لئی۔
+\end{enumerate}
+دائرہ غیر خالی اے، ہر مستقل دی قدر ایس وچ اے تے فنکشن دی چھوٹے
+دائرے دیاں قدراں اُتے ورتوں دا نتیجہ وی ایتھے ای رہندا اے۔
+ایہ گلاں دتی ہوئی ساخت دا دائرہ تے کل فنکشن ہون نال لازم نیں۔
+\end{defn}
+
+% PNB-SEM-035: پہلے درجے دی ساخت دا دائرہ غیر خالی اے؛خالی ذیلی سیٹ لئی ایہ دعویٰ نہیں۔
+\begin{rem}
+\ollabel{rem:substructure}
+جے زبان وچ کوئی مستقل یا !!{function}s نہ ہون، تاں ہر غیر خالی $N
+\subseteq \Domain{M}$ اک ذیلی !!{structure}~$\Struct{N}$
+متعین کردا اے جو $\Struct M$ دی اے تے جس دا !!{domain}~$\Domain{N} = N$
+اے؛ ایس لئی $\Assign{R}{N} =
+\Assign{R}{M} \cap N^n$ رکھدے آں۔
+\end{rem}
+
+% ایس بارے کجھ ثابت کریے؟ مثالاں؟
+
+\end{document}

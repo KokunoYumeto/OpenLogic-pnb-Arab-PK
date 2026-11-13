@@ -1,0 +1,86 @@
+% Part: computability
+% Chapter: computability-theory
+% Section: complement-ce
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cmp}{thy}{cmp}
+\olsection[سیٹاں دا متمم]{قابلِ حساب گنتی وار فہرست بنن جوگ
+  سیٹ متمم تحت بند نہیں}
+
+من لو $A$ قابلِ حساب گنتی وار فہرست بنن جوگ اے۔
+کی~$A$ دا متمم،
+$\Complement{A} = \Nat \setminus A$،
+ہمیشہ ایداں دا ای گنتی وار فہرست بنن جوگ
+ہوندا اے؟ اگلا قضیہ تے نتیجہ دسّن گے
+کہ جواب نہیں اے۔
+
+\begin{thm}
+\ollabel{thm:ce-comp}
+من لو $A$ قدرتی اعداد دا کوئی وی سیٹ اے۔
+تاں $A$ قابلِ حساب اے جے تے صرف جے
+$A$ تے $\Complement{A}$ دوویں قابلِ حساب
+گنتی وار فہرست بنن جوگ ہون۔
+\end{thm}
+
+\begin{proof}
+اک پاسے دا ثبوت سوکھا اے: جے $A$ قابلِ حساب
+اے تاں $\Complement{A}$ وی قابلِ حساب اے
+($\Char{A} = 1 \tsub
+\Char{\Complement{A}}$)؛ ایس لئی دوویں
+قابلِ حساب گنتی وار فہرست بنن جوگ نیں۔
+
+دوجے پاسے، من لو $A$ تے~$\Complement{A}$
+دوویں قابلِ حساب گنتی وار فہرست بنن جوگ نیں۔
+من لو $A$، $\cfind{d}$ دا دائرۂ تعریف اے،
+تے $\Complement{A}$، $\cfind{e}$ دا دائرۂ
+تعریف اے۔ $h$ دی تعریف ایویں کرو:
+\[
+h(x) = \umin{s}{(T(d,x,s) \lor T(e,x,s))}.
+\]
+ہور لفظاں وچ، انپٹ~$x$ اُتے $h$،
+$\cfind{d}$ یا $\cfind{e}$ دی رُک جان والی
+حسابی کارروائی لبھدا اے۔ ہن جے $x \in A$
+اے تاں پہلی صورت وچ، تے جے $x \in
+\Complement{A}$ اے تاں دوجی صورت وچ،
+ایہ تلاش ضرور کامیاب ہووے گی۔ ایس لئی
+$h$ اک کُل قابلِ حساب فنکشن اے۔
+% PNB-CMP-018: A is the d-domain, not the e-domain in the frozen source.
+ہن ہر~$x$ لئی $x \in A$ جے تے صرف
+جے $T(d, x, h(x))$، یعنی جے
+$\cfind{d}$ ایتھے تعریف شدہ اے۔
+چونکہ $T(d, x, h(x))$ اک قابلِ حساب
+تعلق اے، ایس لئی $A$ قابلِ حساب اے۔
+\end{proof}
+
+\begin{explain}
+ایس گل نوں غیر رسمی حسابی لفظاں وچ سمجھنا
+سوکھا اے: $A$ بارے فیصلہ کرن لئی،
+انپٹ $x$ اُتے $\cfind{d}$ تے $\cfind{e}$
+دیاں رُک جان والیاں حسابی کارروائیاں
+لبھو۔ دوہاں وچوں اک ضرور رُکے گا؛
+% PNB-CMP-019: search the d/e domains; d, not e, witnesses membership in A.
+جے $\cfind{d}$ رُکے تاں $x$،~$A$
+وچ اے، تے نہیں تاں $x$،~$\Complement{A}$
+وچ اے۔
+\end{explain}
+
+\begin{cor}
+\ollabel{cor:comp-k}
+$\Complement{K_0}$ قابلِ حساب گنتی وار
+فہرست بنن جوگ نہیں اے۔
+\end{cor}
+
+\begin{proof}
+سانوں پتا اے کہ $K_0$ قابلِ حساب گنتی وار
+فہرست بنن جوگ اے، پر قابلِ حساب نہیں۔
+جے $\Complement{K_0}$ وی قابلِ حساب
+گنتی وار فہرست بنن جوگ ہوندا تاں
+\olref{thm:ce-comp} مطابق $K_0$ قابلِ
+حساب ہوندا۔ ایہ \olref[ncp]{thm:K-0}
+نال متصادم اے۔
+\end{proof}
+
+\end{document}

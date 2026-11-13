@@ -1,0 +1,30 @@
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: composition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{com}
+\olsection{\usetoken{S}{lambda definable} فنکشن ترکیب ہِٹھ بند نیں}
+
+\begin{lem}
+!!{lambda definable} فنکشن ترکیب ہِٹھ بند نیں۔
+\end{lem}
+
+\begin{proof}
+فرض کرو $f$ دی تعریف $h$، $g_0,$
+\dots،~$g_{k-1}$ دی ترکیب نال ہوئی اے۔ منّ لئیے کہ $h$، $g_0$،
+\dots،~$g_{k-1}$ بالترتیب $H$، $G_0$، \dots،~$G_{k-1}$ نال
+!!{lambda defined} نیں۔ سانوں ٹرم~$F$ لبھنا اے جیہڑا~$f$ نوں
+!!{lambda define}s۔ اسیں~$F$ نوں سیدھا ایویں متعین کر سکدے آں:
+\[
+F(x_0, \dots, x_{l-1}) = H(G_0(x_0, \dots, x_{l-1}),
+\dots, G_{k-1}(x_0, \dots, x_{l-1})).
+\]
+دوجے لفظاں وچ لامبڈا کیلکولس دی زبان فنکشوناں دی ترکیب ظاہر کرن
+لئی موزوں اے۔
+\end{proof}
+
+\end{document}

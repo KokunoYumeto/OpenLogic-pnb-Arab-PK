@@ -1,0 +1,64 @@
+% Part: first-order logic
+
+\documentclass[../../include/open-logic-part]{subfiles}
+
+\begin{document}
+
+\olpart{fol}{پہلے درجے دی منطق}
+
+\begin{editorial}
+  ایہ حصہ پہلے درجے دی منطق دے مابعد نظریے نوں
+  تمامیت تک بیان کردا اے۔ فی الحال ایہ قضیاتی
+  منطق دی الگ بحث اُتے منحصر نہیں؛ ہر نتیجہ ایتھے
+  ثابت کیتا جاندا اے۔ جے ”FOL“ ٹیگ غلط ہووے
+  تاں ماخذ فائلیں مسوّراں والا مواد کڈھ دیندیاں نیں
+  (تے ”!!{structure}“ دی تھاں
+  ”!!{valuation}“، $\Struct{M}$ دی تھاں
+  $\pAssign{v}$، وغیرہ رکھ دیندیاں نیں)۔
+  اصل وچ قضیاتی منطق والے حصے دا زیادہ تر
+  مواد، پہلے درجے والے مواد وچ ”FOL“ ٹیگ
+  بند کر کے ای بن جاندا اے۔
+
+  جے قضیاتی منطق والا حصہ وی شامل ہووے
+  تاں بہت دہراؤ ہوندا اے۔ البتہ منصوبہ ایہ
+  اے کہ اگے چل کے ایہ حصہ قضیاتی منطق
+  والے مواد نوں وی حساب وچ رکھ سکے:
+  جیہڑا مواد پہلے ای آ چکیا اے اوہنوں
+  اتھوں کڈھ دے، تے قضیاتی منطق والے
+  حصے دے متعلقہ مقاماں دے حوالیاں نال
+  ثبوت مختصر کرے۔
+\end{editorial}
+
+\olimport[introduction]{introduction}
+
+\olimport[syntax-and-semantics]{syntax}
+
+\olimport[syntax-and-semantics]{semantics}
+
+\olimport[models-theories]{models-theories}
+
+\olimport[proof-systems]{proof-systems}
+
+\iftag{prfSC}{%
+  \olimport[sequent-calculus]{sequent-calculus}
+}{}
+
+\iftag{prfND}{%
+  \olimport[natural-deduction]{natural-deduction}
+}{}
+
+\iftag{prfTab}{%
+  \olimport[tableaux]{tableaux}
+}{}
+
+\iftag{prfAX}{%
+  \olimport[axiomatic-deduction]{axiomatic-deduction}
+}{}
+
+\olimport[completeness]{completeness}
+
+\olimport[beyond]{beyond}
+
+\OLEndPartHook
+
+\end{document}

@@ -1,0 +1,178 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: provability-propositional
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{ppr}}
+      {\olfileid{pl}{tab}{ppr}}
+
+\olsection{\usetoken{S}{derivability} تے قضیاتی رابطے (Derivability and the Propositional Connectives)}
+
+\begin{explain}
+  اسیں قائم کردے آں کہ تابلو حساب دا !!{derivability} تعلق~$\Proves$
+  قضیاتی رابطیاں نال جڑے کجھ بنیادی حقائق قائم کرن لئی اینا طاقتور اے،
+  جیویں کہ $!A \land !B \Proves !A$ تے $!A, !A \lif !B \Proves !B$
+  (قاعدۂ اثباتِ مقدم؛ modus ponens)۔ تمامیت دے قضیے دے ثبوت لئی ایہناں
+  حقائق دی لوڑ اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:provability-land}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-land-left} دونیں $!A \land !B \Proves
+    !A$ تے $!A \land !B \Proves !B$۔
+  \item \ollabel{prop:provability-land-right} $!A, !B \Proves !A \land
+    !B$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item دوناں $\{\sFmla{\False}{!A}, \sFmla{\True}{!A \land !B}\}$ تے
+    $\{\sFmla{\False}{!B}, \sFmla{\True}{!A \land !B}\}$ لئی بند
+    !!{tableau}s موجود نیں:
+% PNBTAB-011: normalize eight malformed sFmla sign/formula argument pairs in the four conjunction/disjunction trees.
+    \begin{oltableau}{}
+      [\sFmla{\False}{\formula{A}}, just=\TAss
+        [\sFmla{\True}{\formula{A} \land \formula{B}}, just=\TAss
+          [\sFmla{\True}{\formula{A}},just={\TRule{\True}{\land}[2]}
+            [\sFmla{\True}{\formula{B}},just={\TRule{\True}{\land}[2]}, close
+            ]
+          ]
+        ]
+      ]
+    \end{oltableau}
+    \begin{oltableau}{}
+      [\sFmla{\False}{\formula{B}}, just=\TAss
+        [\sFmla{\True}{\formula{A} \land \formula{B}}, just=\TAss
+          [\sFmla{\True}{\formula{A}},just={\TRule{\True}{\land}[2]}
+            [\sFmla{\True}{\formula{B}},just={\TRule{\True}{\land}[2]}, close
+            ]
+          ]
+        ]
+      ]
+    \end{oltableau}
+    \item $\{\sFmla{\True}{!A},
+      \sFmla{\True}{!B}, \sFmla{\False}{!A \land !B}\}$ لئی بند
+      !!{tableau} ایہ اے:
+      \begin{oltableau}
+        [\sFmla{\False}{\formula{A} \land \formula{B}}, just = \TAss
+          [\sFmla{\True}{\formula{A}}, just = \TAss
+            [\sFmla{\True}{\formula{B}}, just=\TAss
+              [\sFmla{\False}{\formula{A}}, just = {\TRule{\False}{\land}[1]}, close]
+              [\sFmla{\False}{\formula{B}}, just = {\TRule{\False}{\land}[1]}, close]
+            ]
+          ]
+        ]
+      \end{oltableau}
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-lor}
+  \begin{enumerate}
+  \item $\{!A \lor !B, \lnot !A, \lnot !B\}$ متضاد اے۔
+  \item دونیں $!A \Proves !A \lor !B$ تے $!B \Proves !A \lor !B$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item اسیں $\{\sFmla{\True}{!A \lor !B},
+    \sFmla{\True}{\lnot !A}, \sFmla{\True}{\lnot !B}\}$ لئی اک بند
+    !!{tableau} دیندے آں:
+    \begin{oltableau}
+      [\sFmla{\True}{\formula{A} \lor \formula{B}}, just = \TAss
+        [\sFmla{\True}{\lnot \formula{A}}, just = \TAss
+          [\sFmla{\True}{\lnot \formula{B}}, just = \TAss
+            [\sFmla{\False}{\formula{A}}, just = {\TRule{\True}{\lnot}[2]}
+              [\sFmla{\False}{\formula{B}}, just = {\TRule{\True}{\lnot}[3]}
+                [\sFmla{\True}{\formula{A}}, just = {\TRule{\True}{\lor}[1]}, close]
+                [\sFmla{\True}{\formula{B}}, just = {\TRule{\True}{\lor}[1]}, close]
+              ]
+            ]
+          ]
+        ]
+      ]
+    \end{oltableau}
+  \item دوناں $\{\sFmla{\False}{!A \lor !B}, \sFmla{\True}{!A}\}$ تے
+    $\{\sFmla{\False}{!A \lor !B}, \sFmla{\True}{!B}\}$ لئی بند
+    !!{tableau}s موجود نیں:
+    \begin{oltableau}{}
+      [\sFmla{\False}{\formula{A} \lor \formula{B}}, just=\TAss
+        [\sFmla{\True}{\formula{A}}, just=\TAss
+          [\sFmla{\False}{\formula{A}},just={\TRule{\False}{\lor}[1]}
+            [\sFmla{\False}{\formula{B}},just={\TRule{\False}{\lor}[1]}, close
+            ]
+          ]
+        ]
+      ]
+    \end{oltableau}
+    \begin{oltableau}{}
+      [\sFmla{\False}{\formula{A} \lor \formula{B}}, just=\TAss
+        [\sFmla{\True}{\formula{B}}, just=\TAss
+          [\sFmla{\False}{\formula{A}},just={\TRule{\False}{\lor}[1]}
+            [\sFmla{\False}{\formula{B}},just={\TRule{\False}{\lor}[1]}, close
+            ]
+          ]
+        ]
+      ]
+    \end{oltableau}
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-lif}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-lif-left} $!A, !A \lif !B \Proves !B$۔
+  \item \ollabel{prop:provability-lif-right}
+    دونیں $\lnot !A \Proves !A \lif !B$ تے $!B \Proves !A \lif !B$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\{\sFmla{\False}{!B}, \sFmla{\True}{!A \lif !B},
+      \sFmla{\True}{!A}\}$ لئی بند !!{tableau} ایہ اے:
+      \begin{oltableau}
+        [\sFmla{\False}{\formula{B}}, just=\TAss
+          [\sFmla{\True}{\formula{A} \lif \formula{B}}, just=\TAss
+            [\sFmla{\True}{\formula{A}}, just=\TAss
+              [\sFmla{\False}{\formula{A}}, just = {\TRule{\True}{\lif}[2]}, close]
+              [\sFmla{\True}{\formula{B}}, just = {\TRule{\True}{\lif}[2]}, close]
+            ]
+          ]
+        ]
+      \end{oltableau}
+    \item دوناں $\{\sFmla{\False}{!A \lif !B},
+      \sFmla{\True}{\lnot !A}\}$ تے $\{\sFmla{\False}{!A \lif !B},
+      \sFmla{\True}{!B}\}$ لئی بند !!{tableau}s موجود نیں:
+      \begin{oltableau}
+        [\sFmla{\False}{\formula{A} \lif \formula{B}}, just = \TAss
+          [\sFmla{\True}{\lnot \formula{A}}, just = \TAss
+            [\sFmla{\True}{\formula{A}}, just = {\TRule{\False}{\lif}[1]}
+              [\sFmla{\False}{\formula{B}}, just = {\TRule{\False}{\lif}[1]}
+                [\sFmla{\False}{\formula{A}}, just = {\TRule{\True}{\lnot}[2]}, close]
+              ]
+            ]
+          ]
+        ]
+      \end{oltableau}
+      \begin{oltableau}
+        [\sFmla{\False}{\formula{A} \lif \formula{B}}, just = \TAss
+          [\sFmla{\True}{\formula{B}}, just = \TAss
+            [\sFmla{\True}{\formula{A}}, just = {\TRule{\False}{\lif}[1]}
+              [\sFmla{\False}{\formula{B}}, just = {\TRule{\False}{\lif}[1]},close
+              ]
+            ]
+          ]
+        ]
+      \end{oltableau}
+  \end{enumerate}
+\end{proof}
+
+\end{document}

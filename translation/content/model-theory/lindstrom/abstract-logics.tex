@@ -1,0 +1,163 @@
+% Part: first-order-logic
+% Chapter: lindstrom
+% Section: abstract-logics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{lin}{alg}
+\olsection{تجریدی منطقاں}
+
+\begin{defn}
+اک \emph{تجریدی منطق} اک جوڑا $\tuple{L, \models_L}$ اے؛ اِتھے $L$
+اوہ فنکشن اے جو ہر !!{language}~$\Lang{L}$ نوں
+!!{sentence}s دا سیٹ $L(\Lang{L})$ دیندا اے، تے $\models_L$
+اُس !!{language}~$\Lang{L}$ دیاں !!{structure}s تے
+$L(\Lang{L})$ دے !!{element}s وچکار اک رشتہ اے۔ خاص طور اُتے
+$\tuple{F, \models}$ عام پہلے درجے دی منطق اے: $F$ اوہ فنکشن اے
+جو !!{language}~$\Lang{L}$ نوں $\Lang{L}$ دیاں غیر منطقی علامتاں توں بنے
+پہلے درجے دے !!{sentence}s دا سیٹ دیندا اے، تے $\models$
+پہلے درجے دی منطق دا صدقی رشتہ اے۔
+\end{defn}
+
+دھیان دیو کہ کسے مقرر !!{language} لئی اسیں ہن وی
+!!{structure} دا اوہو مفہوم ورتدے آں جو پہلے درجے دی منطق وچ
+سی۔ البتہ اسیں ایہ پہلے توں نہیں مندے کہ !!{sentence}s عام
+طریقے نال $\Lang{L}$ دیاں بنیادی علامتاں توں بنے ہون، نہ ایہ
+کہ رشتہ $\models_L$ پہلے درجے دی منطق وانگ تکراری تعریف نال
+مقرر ہوندا ہووے۔ مثلاً ایہ تعریف پوری طرح عمومی اے؛ ایس دا
+مقصد $\tuple{L,\models_L}$ وچ ایسے !!{sentence}s نوں وی شامل
+کرنا اے جنہاں وچ لامتناہی لمبے
+عطف یا فصل، یا $\lexists$ تے $\lforall$ توں ہٹ کے مسوّر
+(مثلاً «لامتناہی طور تے بہت سارے~$x$ ایس طرح دے نیں کہ \dots»)،
+یا شاید مسوّراں دے لامتناہی لمبے ابتدائی سلسلے ہون۔ ایہ گل
+صاف رکھن لئی کہ $L(\Lang{L})$ دے «!!{sentence}s» لازماً عام
+پہلے درجے دے !!{sentence}s نہیں، ایس باب وچ اسیں اوہناں لئی
+!!{variable}s $!E$, $!F$,~\dots ورتاں گے، تے $!A$, $!B$,~\dots
+صرف عام پہلے درجے دے !!{formula}s لئی رکھاں گے۔
+
+\begin{defn}
+$\Mod(L){!E}$ توں مراد طبقہ $\Setabs{\Struct{M}}{\Struct{M}
+  \models_L !E}$ لوو۔ جے !!{language} صراحت نال دسنی ہووے،
+تاں اسیں $\Mod[L](L){!E}$ لکھدے آں۔ دو
+!!{structure}s $\Struct{M}$ تے $\Struct{N}$،
+$\Lang{L}$ لئی،
+$\tuple{L, \models_L}$ وچ \emph{جملہ وار ہم ارز} ہوندیاں نیں،
+جِنہاں نوں $\Struct{M} \elemequiv[L] \Struct{N}$ لکھدے آں،
+جے $L(\Lang{L})$ دے اوہو !!{sentence}s دوہاں وچ سچ ہون۔
+\end{defn}
+
+\begin{defn}
+اک تجریدی منطق $\tuple{L,\models_L}$،
+!!{language} $\Lang{L}$ لئی \emph{معمول مطابق (normal)} اے جے ایہ
+ہیٹھاں لکھیاں خاصیتاں پوری کرے:
+\begin{enumerate}
+\item (\emph{$L$-یک رُخیت}) !!{language}s $\Lang{L}$ تے
+  $\Lang{L'}$ لئی، جے $\Lang{L} \subseteq \Lang{L'}$، تاں
+  $L(\Lang{L}) \subseteq L(\Lang{L'})$۔
+\item (\emph{توسیع دی خاصیت}) ہر $!E \in L(\Lang{L})$ لئی
+  اک \emph{محدود} ذیلی سیٹ $\Lang{L'}$ موجود اے، جو
+  $\Lang{L}$ دا اے،
+  ایس طرح کہ رشتہ $\Struct{M} \models_L !E$ صرف
+  $\Struct{M}$ دے $\Lang{L'}$ تک گھٹائے روپ اُتے منحصر ہووے؛
+  یعنی جے $\Struct{M}$ تے $\Struct{N}$ دا $\Lang{L'}$ تک
+  گھٹایا روپ اکّو ہووے، تاں $\Struct{M}
+  \models_L !E$ جے تے صرف جے $\Struct{N} \models_L !E$۔
+\item (\emph{ہم شکلی دی خاصیت}) جے $\Struct{M} \models_L !E$
+  تے $\Struct{M} \simeq \Struct{N}$، تاں
+  $\Struct{N} \models_L !E$ وی۔
+\item (\emph{نواں نام رکھن دی خاصیت}) رشتہ $\models_L$ نام
+  بدلنے نال محفوظ رہندا اے: جے !!{language} $\Lang{L}'$
+  $\Lang{L}$ دے ہر نشان $P$ دی تھاں اوہو تعدادِ دلائل
+  والا نشان $P'$ تے ہر مستقل $c$ دی تھاں وکھرا مستقل $c'$
+  رکھ کے بنے، تاں ہر !!{structure}~$\Struct{M}$ تے
+  !!{sentence}~$!E$ لئی $\Struct{M}
+  \models_L !E$ جے تے صرف جے $\Struct{M}' \models_L !E'$،
+  جتھے $\Struct{M}'$ اک $\Lang{L}'$-!!{structure} اے جو
+  $\Lang{L}$ دی اصل ساخت دے اکو دائرے تے تعبیراں نال بن دی اے؛
+  صرف علامتاں دے ناں بدل دے نیں، تے سارے نویں ناں آپس وچ وکھرے نیں۔
+  ایتھے $!E' \in L(\Lang{L}')$۔
+\item (\emph{بولین خاصیت}) تجریدی منطق $\tuple{L,
+  \models_L}$ بولین رابطیاں دے تحت ایس معنی وچ بند اے
+  کہ ہر $!E \in L(\Lang{L})$ لئی کوئی~$!F \in
+  L(\Lang{L})$ موجود اے جس لئی $\Struct{M} \models_L !F$
+  جے تے صرف جے $\Struct{M} \not\models_L !E$، تے ہر
+  $!E$ تے $!F$ لئی کوئی $!G$ موجود اے جس لئی
+  $\Mod(L){!G} = \Mod(L){!E} \cap
+  \Mod(L){!F}$۔ ایس طرح بند جوہری !!{formula}s تے ہور
+  رابطیاں لئی وی۔
+\item (\emph{مسوّر دی خاصیت}) ہر مستقل $c$ جو $\Lang{L}$ وچ اے
+  تے $!E \in L(\Lang{L})$ لئی کوئی $!F \in L(\Lang{L'})$
+  موجود اے ایس طرح کہ
+  \[
+  \Mod[L'](L){!F} = \Setabs{\Struct{M}}{\Expan{M}{a} \in
+  \Mod[L](L){!E} \text{ کسے } a \in \Domain{M}\text{ لئی}},
+  \]
+  جتھے $\Lang{L'} = \Lang{L} \setminus \{c\}$، تے
+  $\Expan{M}{a}$، $\Struct{M}$ دی $\Lang{L}$ تک اوہ توسیع
+  اے جس وچ $a$، $c$ نوں دتی قدر اے۔
+\item (\emph{نسبتی بنانے دی خاصیت}) جے !!a{sentence} $!E \in
+  L(\Lang{L})$ تے نشان $R$, $c_1$, \dots, $c_n$،
+  $\Lang{L}$ وچ نہ ہون، تاں کوئی !!a{sentence} $!F \in
+  L(\Lang{L} \cup \{R,c_1,\ldots,c_n\})$ موجود اے، جس نوں
+  $!E$ دا $\Atom{R}{x, c_1, \dots c_n}$ تک
+  \emph{نسبتی روپ} آکھدے نیں، ایس طرح کہ ہر
+  !!{structure}~$\Struct{M}$ لئی، جدوں منتخب دائرہ غیر خالی ہووے
+  تے اصل زبان دے ہر مستقل دی قدر ایس وچ ہووے۔ ایس باب دیاں
+  تعلقی زباناں لئی ایہ شرطاں اوہ دائرہ ذیلی ساخت بناون لئی لازم نیں:
+  \[
+  \Expan{M}{X, b_1, \ldots, b_n} \models_L !F \text{ اوہدوں تے
+    صرف اوہدوں جدوں } \Struct{N} \models_L !E,
+  \]
+  جتھے $\Struct{N}$، $\Struct{M}$ دی اوہ ذیلی ساخت اے
+  جس دا !!{domain}
+  $\Domain{N} = \Setabs{a\in \Domain{M}}{\tuple{a, b_1, \dots, b_n} \in X}$
+  اے (ویکھو \olref[bas][sub]{rem:substructure})، تے
+  $\Expan{M}{X, b_1, \ldots,
+    b_n}$، $\Struct{M}$ دی اوہ توسیع اے جو بالترتیب
+  $R$, $c_1$, \dots, $c_n$ دی تعبیر
+  $X$, $b_1,$ \dots, $b_n$ نال کردی اے (جتھے
+  $X \subseteq M^{n+1}$)۔
+\end{enumerate}
+\end{defn}
+ 
+\begin{defn}
+دو تجریدی منطقاں $\tuple{L_1, \models_{L_1}}$ تے
+$\tuple{L_2, \models_{L_2}}$ دتیاں ہون۔ اسیں آکھدے آں کہ
+دوجی منطق پہلی دے \emph{گھٹ توں گھٹ برابر اظہار جوگی} اے،
+جس نوں $\tuple{L_1, \models_{L_1}}
+\leq \tuple{L_2, \models_{L_2}}$ لکھدے آں، جے ہر
+!!{language} $\Lang{L}$ تے ہر !!{sentence}
+$!E \in L_1(\Lang{L})$ لئی کوئی !!a{sentence} $!F
+\in L_2(\Lang{L})$ موجود ہووے جس لئی
+$\Mod[L](L_1){!E} =
+\Mod[L](L_2){!F}$۔ منطقاں
+$\tuple{L_1, \models_{L_1}}$ تے
+$\tuple{L_2, \models_{L_2}}$ \emph{ہم ارز} نیں جے
+$\tuple{L_1,
+  \models_{L_1}} \leq \tuple{L_2, \models_{L_2}}$ تے
+$\tuple{L_2,
+  \models_{L_2}} \leq \tuple{L_1, \models_{L_1}}$۔
+\end{defn}
+
+\begin{rem}
+  پہلے درجے دی منطق، یعنی تجریدی منطق $\tuple{F, \models}$،
+  معمول مطابق اے۔ دراصل اُتّے دتیاں خاصیتاں پہلے درجے دی
+  منطق لئی زیادہ تر سیدھیاں نیں۔ صرف ایہ یاد رکھو کہ توسیع
+  دی خاصیت غیر متعلقہ علامتاں توں آزادی
+  (Extensionality/Relevance) اُتے آ ٹکدی اے، تے !!a{sentence} $!E$
+  دا $\Atom{R}{x, c_1, \dots, c_n}$ تک نسبتی روپ لبھن لئی
+  پہلاں وجودی مسوّراں نوں نفی تے عمومی مسوّر دے مساوی روپ وچ لکھو؛ فیر
+  ہر !!{subformula} $\lforall[x][!F]$ دی تھاں
+  $\lforall[x][(\Atom{R}{x, c_1, \dots, c_n} \lif \ !F)]$
+  رکھ کے لبھدا اے۔ ہور ایہ کہ جے
+  $\tuple{L, \models_L}$ معمول مطابق ہووے، تاں
+  $\tuple{F, \models} \leq \tuple{L, \models_{L}}$،
+  جیویں پہلے درجے دے !!{formula}s اُتے استقرا نال
+  دکھایا جا سکدا اے۔ ایس لئی عمومیت گنوائے بغیر اسیں
+  فرض کر سکدے آں کہ ہر پہلے درجے دا !!{sentence} ہر
+  معمول مطابق منطق وچ شامل اے۔
+\end{rem}
+
+\end{document}

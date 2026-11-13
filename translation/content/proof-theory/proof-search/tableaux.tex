@@ -1,0 +1,131 @@
+% Part: proof-theory
+% Chapter: proof-search
+% Section: tableaux
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{ps}{tab}
+
+\olsection{تابلو}
+
+تابلو نظام !!{proof} نظام نیں جیہڑے سیکوئنٹ حساباں نال نیڑے جُڑے نیں تے ثبوت لبھّن لئی خاص طور اُتے راس آؤندے نیں، بھاویں کم ہتھ نال ہووے یا سافٹ ویئر وچ۔ تابلو وچ !!a{proof} سیکوئنٹاں دا درخت بناؤن دی تھاں !!{formula}s دا درخت اے۔ پر قدرتی اخذ توں وکھرے، ایہناں دے قاعدے سیکوئنٹ حساب دے قاعدیاں ورگے نیں۔ تابلو !!{proof} اصل وچ کسے نمونے دی کھُلّی بھال اے۔ ایس لئی ایہناں نوں کدے \emph{معنوی} تابلو یا \emph{سچائی دے درخت} وی آکھدے نیں۔
+
+اک \emph{نشان والا} تابلو نشان والے !!{formula}s دا درخت اے، جیہڑے $ \sFmla{\True}{!A}$ یا $ \sFmla{\False}{!A}$ دی شکل دے ہو سکدے نیں۔ درخت تھلّے ول ودھدے نیں۔ اوہ اوہناں !!{formula}s توں شروع ہوندے نیں جیہڑے دَسّدے نیں کہ اسیں کیہ !!{prove} کرنا چاہنے آں۔ مثال لئی !!{prove} کرن لئی سیکوئنٹ $!A, !B \Sequent !C, !D$، ایہ $ \sFmla{\True}{!A}, \sFmla{\True}{!B},
+\sFmla{\False}{!C}, \sFmla{\True}{!D}$ توں شروع ہووے گا۔ !!^a{structure} جیہڑی $!A$ تے $!B$ نوں سچا تے $!C$ تے $!D$ نوں جھوٹھا کردی اے، اوہ ایہو جیہی !!a{structure} اے جیہڑی وکھاوے گی کہ $!A, !B \Sequent !C, !D$ معتبر نہیں۔
+
+تابلو دی آخری (سبھ توں تھلّی) گنڈھ نوں شاخ ودھاؤن دے قاعدیاں نال ودھایا جا سکدا اے۔ ایہ قاعدے اوسے شاخ اُتے ہور گنڈھاں جوڑدے نیں یا تھلّے دو سانجھیاں گنڈھاں جوڑ کے شاخ نوں دو نویاں شاخاں وچ ونڈ دیندے نیں۔ قاعدے اوسے شاخ اُتے گنڈھ توں اُتّے کسے وی نشان والے !!{formula} اُتے لائے جا سکدے نیں۔ کلاسیکی تابلو نظام \Log{Tc} لئی شاخ ودھاؤن دے قاعدے \olref{tab:Tc} وچ دِتّے نیں۔
+
+\subfile{rules-Tc}
+
+جیویں تسی ویکھ سکدے او، ایہ \Log{G3c} دے اوہی قاعدے نیں، الٹے پاسے لائے ہوئے۔ نشان $ \True$ تے $ \False$ بالترتیب دَسّدے نیں کہ !!a{formula} سیکوئنٹ دے کھبّے یا سجّے پاسے دا مُکھ فارمولا اے۔
+
+تابلو دی شاخ \emph{بند} اے جے اوہدے وچ $ \sFmla{\True}{!A}$ تے $ \sFmla{\False}{!A}$ دونے ہون۔ جے ہر شاخ بند اے، تاں اسیں آکھدے آں کہ سارا تابلو بند اے۔ مثال لئی ایہ $!A \lor (!B \land !C) \Sequent (!A \lor !B) \land
+(!A \lor !C)$ دا کلاز تابلو اے، یعنی $ \sFmla{\True}{!A \lor (!B \land
+!C)}$ تے $ \sFmla{\False}{(!A \lor !B) \land (!A \lor !C)}$ توں شروع ہون والا:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{C}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+      ]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}, checked
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\True}{\formula{B}},
+            just={\TRule{\True}{\land}[3]}, move by=2
+            [\sFmla{\True}{\formula{C}},
+              just={\TRule{\True}{\land}[3]}
+              [\sFmla{\False}{\formula{A}},
+                just={\TRule{\False}{\lor}[4]}
+                [\sFmla{\False}{\formula{B}},
+                  just={\TRule{\False}{\lor}[4]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\True}{\formula{B}},
+            just={\TRule{\True}{\land}[3]}, move by=2
+              [\sFmla{\True}{\formula{C}},
+                just={\TRule{\True}{\land}[3]}
+                [\sFmla{\False}{\formula{A}},
+                  just={\TRule{\False}{\lor}[4]}
+                  [\sFmla{\False}{\formula{C}},
+                  just={\TRule{\False}{\lor}[4]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+ٹِک دے نشان دَسّدے نیں کہ میل کھاندا قاعدہ !!a{formula} اُتے اوہدے تھلّے دیاں ساریاں شاخاں وچ لایا گیا اے۔ $ \otimes$ دا نشان دَسّدا اے کہ شاخ بند اے۔ قاعدیاں دے پچھوں سطراں دے نمبر دَسّدے نیں کہ قاعدہ کِہڑے نشان والے !!{formula}s اُتے لگدا اے (یعنی اوسے شاخ اُتے دَسّی گئی سطر دا !!{formula})۔
+
+تابلو وچ ثبوت لبھنا سوکھا اے۔ اسیں پڑاؤواں وچ تابلو بناؤنے آں۔ پڑاؤ $0$ اُتے بس شروع دے !!{formula}s اُتّے لکھو۔ پڑاؤ $n+1$ اُتے ہر آخری گنڈھ لئی ایہ کرو۔ پہلا (سبھ توں اُتلا) نشان والا فارمولا لبھو جیہدے اُتے ہجے ٹِک نہیں لگی۔ اوس فارمولے اُتے شاخ ودھاؤن دا قاعدہ لاؤ۔ جدوں متعلقہ نشان والے فارمولے والی ہر شاخ اُتے قاعدہ لگ جاوے، تاں فارمولے اُتے ٹِک لا دیو۔ (اُتلی مثال ایس الگورتھم نال بنی اے۔)
+
+نشان والے !!{formula}s جیہڑے $\sFmla{\True}{\lforall}$ تے $ \sFmla{\False}{\lexists}$ دی شکل دے نیں، اوہناں اُتے کدے ٹِک نہیں لگدی، ایس لئی اوہناں نوں خاص طریقے نال سنبھالنا پیندا اے۔ جے اوہ موجود ہون، تاں سانوں پکا کرنا پیندا اے کہ $ \TRule{\True}{\forall}$ تے $ \TRule{\False}{\lexists}$ قاعدے آخر سارے لاگو ٹرماں لئی لگن۔ مثال لئی ایہ ایویں پکا کیتا جا سکدا اے کہ ہر پڑاؤ اُتے ہر شاخ دے ایہو جیہے سارے فارمولیاں اُتے اوہ قاعدے لائیے (اوس سبھ توں اُتلے نشان والے !!{formula} دا کم کرن توں پچھوں جیہڑا ایس شکل دا نہیں)۔ ورتن والا ٹرم $t$ پہلا ایہو جیہا ٹرم~$t$ اے جیہڑا !!{constant}s، جیہڑے پہلاں ای شاخ اُتے آؤندے نیں (یا $\Obj
+c_0$ جے کوئی !!{constant} نہیں آؤندا)، تے !!{function}s، جیہڑے شروع دے !!{formula}s وچ آؤندے نیں، توں بن سکدا اے، تے جیہدے لئی میل کھاندا نشان والا !!{formula} $\sFmla{\True}{!B(t)}$ یا~$\sFmla{\False}{!B(t)}$ پہلاں ای شاخ اُتے نہیں آؤندا۔
+
+جے ایہ بھال بند تابلو نہیں بناؤندی، تاں یا اوہدے وچ اک محدود کھُلّی شاخ اے جیہدے اُتے سارے غیر جوہری !!{formula}s اُتے ٹِک لگی اے، یا بھال اک لامحدود درخت بناؤندی اے جیہدی ہر تھاں شاخ بندی محدود اے تے جیہدی اک لامحدود شاخ ضرور اے۔ عین \olref[cpl]{sec} وانگ اسیں !!a{structure}~$\Struct{M}$ ایویں متعین کر سکدے آں کہ جے $ \sFmla{\True}{!A}$ شاخ اُتے آؤندا اے تاں $\Sat{M}{!A}$، تے جے $ \sFmla{\False}{!A}$ آؤندا اے تاں $\Sat/{M}{!A}$۔ ($\Theta =
+\Setabs{!A}{\sFmla{\True}{!A} \text{ شاخ اُتے}}$ تے $\Xi =
+\Setabs{!A}{\sFmla{\False}{!A} \text{ شاخ اُتے}}$ لو۔)
+
+ایس طریقے نال ثبوت لبھدیاں بنے تابلو سوکھے ای \Log{G3c} دے ثبوتاں وچ ترجمہ کیتے جا سکدے نیں، ہر گنڈھ نوں اک سیکوئنٹ دے کے۔ جے شروع دے فارمولے سیکوئنٹ $ \Gamma \Sequent
+\Delta$ نال میل کھاندے نیں، تاں ہر شروع دے فارمولے اُتے $ \Gamma \Sequent
+\Delta$ دا لیبل لاؤ۔ جے شاخ ودھاؤن دا قاعدہ نشان والے !!{formula} $\sFmla{\True}{!A}$ اُتے لا کے شاخ ودھائی اے، تاں آخری گنڈھ دا لیبل $!A, \Pi \Sequent \Lambda$ اے۔ جے اوہ قاعدہ نشان والے !!{formula} $\sFmla{\False}{!A}$ اُتے لایا اے، تاں آخری گنڈھ دا لیبل $ \Pi \Sequent
+\Lambda, !A$ اے۔ جتھے تابلو \TRule{\True}{\star} قاعدہ لاؤندا اے، اوتھے سیکوئنٹ اُتے \LeftR{\star} قاعدہ لاؤ (مُکھ فارمولا $!A$ رکھ کے)۔ جتھے \TRule{\False}{\star} قاعدہ لاؤندا اے، اوتھے \RightR{\star} قاعدہ لاؤ۔ قاعدے دے مقدمے اوہ سیکوئنٹ نیں جیہڑے تابلو وچ جوڑیاں گئیاں میل کھاندیاں گنڈھاں دے لیبل نیں۔ جدوں تابلو $ \sFmla{\True}{!A}$ تے $ \sFmla{\False}{!A}$ نال بند ہوندا اے، تاں آخری گنڈھ دا لیبل $!A, \Pi \Sequent \Lambda,
+!A$ دی شکل دا سیکوئنٹ ہووے گا۔ تابلو وچ پے در پے کجھ گنڈھاں نوں اوہی سیکوئنٹ دِتّا جاوے گا۔ ودھ نقلاں ہٹا دیو۔ مثال لئی اُتلے تابلو دا ترجمہ ایہ !!{proof} اے:
+\[\small
+\Axiom$!A \fCenter !A, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$!A \fCenter !A \lor !B$
+\Axiom$!A \fCenter !A, !C$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$!A \fCenter !A \lor !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!A \fCenter (!A \lor !B) \land (!A \lor !C)$
+\Axiom$!B, !C \fCenter !A, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$!B, !C \fCenter !A \lor !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C \fCenter !A \lor !B$
+\Axiom$!B, !C \fCenter !A, !C$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$!B, !C \fCenter !A \lor !C$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C \fCenter !A \lor !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!B \land !C \fCenter (!A \lor !B) \land
+(!A \lor !C)$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor (!B \land !C) \fCenter (!A \lor !B) \land
+(!A \lor !C)$
+\DisplayProof
+\]
+
+\end{document}

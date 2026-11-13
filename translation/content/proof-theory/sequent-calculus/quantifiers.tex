@@ -1,0 +1,107 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{qua}
+
+\olsection{باقاعدہ ثبوت تے تھانواں بدلنا}
+
+مسوّراں دے قاعدیاں وچ کجھ اوکڑاں «خاص متغیر دیاں شرطاں» کر کے آؤندیاں نیں جیہڑیاں \LeftR{\lexists} تے~\RightR{\lforall} قاعدیاں اُتے لگدیاں نیں۔ ایہناں وچوں بہتی اوکڑ دور ہو سکدی اے جے پکا کریے کہ ایہناں استنباطاں وچ !!{constant}~$a$ کدے مُڑ نہ ورتیا جاوے۔ آؤ ہِٹھلی تعریف دیئیے۔
+
+\begin{defn}
+!!^a{proof}~$\pi$، \Log{G1c} یا \Log{G3c} وچ، \emph{باقاعدہ} اے جے
+\begin{enumerate}
+  \item کوئی خاص متغیر~$a$ اک توں ودھ \LeftR{\lexists} یا~\RightR{\lforall} استنباط دے خاص متغیر دے طور اُتے نہیں ورتیا جاندا، تے
+  \item جے $a$، \LeftR{\lexists} یا~\RightR{\lforall} استنباط دا خاص متغیر اے، تاں اوہ~$\pi$ وچ صرف اوس استنباط توں اُتّے آؤندا اے۔
+\end{enumerate}
+\end{defn}
+
+\begin{lem}\ollabel{lem:subst-regular}
+جے $\pi$ باقاعدہ اے، $ \Gamma \Sequent \Delta$ اُتے مُکدا اے، $c$ اک !!a{constant} اے جیہڑا~$\pi$ وچ خاص متغیر دے طور اُتے نہیں ورتیا جاندا، تے $t$ ایہو جیہا ٹرم اے جیہدے وچ~$\pi$ دا کوئی خاص متغیر نہیں، تاں $ \Subst{\pi}{t}{c}$، جیہڑا~$\pi$ وچ~$c$ دی ہر موجودگی نوں~$t$ نال بدل کے ملدا اے، باقاعدہ !!{proof} اے۔ $ \Subst{\pi}{t}{c}$ دا آخری سیکوئنٹ $ \Subst{\Gamma}{t}{c}
+\Sequent \Subst{\Delta}{t}{c}$ اے، جتھے $ \Subst{\Gamma}{t}{c} =
+\Setabs{!A(t)}{!A(c) \in \Gamma}$۔
+\end{lem}
+
+\begin{proof}
+  $ \pheight{\pi}$ اُتے استقرا نال۔ جے $ \pheight{\pi} = 0$، تاں ایہ بس اک مسلّمہ اے۔ فیر $ \Subst{\pi}{t}{c}$ وی اک مسلّمہ اے، کیونکہ اوہدے وچ کوئی وی !!{formula}~$!A(c)$، $!A(t)$ بن جاندا اے۔
+
+  جے $ \pheight{\pi} > 0$، تاں~$\pi$ دے آخری استنباط دے حساب نال صورتاں وکھ کردے آں۔ ساختی قاعدیاں (\Log{G1c} وچ) تے قضیاتی جوڑاں دے منطقی قاعدیاں دیاں صورتاں سوکھیاں نیں تے مشقاں لئی چھڈّیاں گئیاں نیں۔ اسیں اوہ صورتاں ویکھدے آں جیہناں وچ $\pi$ مسوّر والے استنباط اُتے مُکدا اے۔
+  \begin{enumerate}
+    \item جے آخری استنباط $\RightR{\lforall}$ اے، تاں $\pi$ دی شکل ایہ اے:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi'$}
+    \Deduce$\Gamma(c) \fCenter \Delta'(c), !A(a,c)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma(c) \fCenter \Delta'(c), \lforall[x][!A(x,c)]$
+    \DisplayProof
+    \]
+    استقرا دے مفروضے نال، $ \Subst{\pi'}{t}{c}$ باقاعدہ !!{proof} اے $ \Gamma(t) \fCenter \Delta'(t), !A(a,t)$ دا۔ کیونکہ $a$،~$\pi$ دا خاص متغیر اے، $a$،~$t$ وچ نہیں آؤندا۔ سو $ \Subst{\pi}{t}{c}$ دا آخری استنباط،
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\pi'}{t}{c}$}
+    \Deduce$\Gamma(t) \fCenter \Delta'(t), !A(a,t)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma(t) \fCenter \Delta'(t), \lforall[x][!A(x,t)]$
+    \DisplayProof
+    \]
+    ٹھیک اے، کیونکہ نتیجے وچ~$a$ نہیں۔
+    \item جے آخری استنباط $\LeftR{\lforall}$ اے \Log{G3c} وچ، تاں $\pi$ دی شکل ایہ اے:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi'$}
+    \Deduce$!A(s(c),c), \lforall[x][!A(x,c)], \Gamma(c) \fCenter \Delta'(c)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x,c)], \Gamma(c) \fCenter \Delta'(c)$
+    \DisplayProof
+    \]
+    استقرا دے مفروضے نال، $ \Subst{\pi'}{t}{c}$ باقاعدہ !!{proof} اے $!A(s(t),t), \lforall[x][!A(x,t)], \Gamma(t) \fCenter
+    \Delta'(t)$ دا۔ $ \Subst{\pi}{t}{c}$ دا آخری استنباط،
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\pi'}{t}{c}$}
+    \Deduce$!A(s(t),t), \lforall[x][!A(x,t)], \Gamma(t) \fCenter \Delta'(t)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x,t)], \Gamma(t) \fCenter \Delta'(t)$
+    \DisplayProof
+    \]
+    ٹھیک اے۔\LeftR{\lforall} والی صورت~\Log{G1c} وچ ایہو جیہی اے، پر ذرا گھٹ گنجل دار۔
+    \item آخری استنباط \RightR{\lexists} یا \LeftR{\lexists} اے۔ ایہ مشق اے۔
+  \end{enumerate}
+  ہر صورت وچ اسیں باقاعدہ !!{proof} دے آخر وچ اک سیکوئنٹ شامل کیتا (یا دو باقاعدہ !!{proof}s دے آخر وچ، دو مقدمیّاں والے قاعدیاں دی صورت وچ)۔ نواں سیکوئنٹ $\pi$ دے آخری سیکوئنٹ توں صرف ایس گل وچ وکھرا اے کہ $c$ نوں ٹرم~$t$ نال بدلیا گیا اے۔ نالے $\pi$ دے خاص متغیر، تے کیونکہ اسیں منّیا سی کہ $t$ وچ~$\pi$ دا کوئی خاص متغیر نہیں، تے $ \Subst{\pi}{t}{c}$ دے خاص متغیر اوہی نیں، ایس لئی نویں آخری سیکوئنٹ وچ $ \Subst{\pi}{t}{c}$ دا کوئی خاص متغیر نہیں۔ سو $ \Subst{\pi}{t}{c}$ باقاعدہ اے۔
+\end{proof}
+
+\begin{prop}
+جے $\pi$، !!a{proof} اے \Log{G1c} یا \Log{G3c} وچ، تاں اک باقاعدہ !!{proof}~$\pi'$ اے جیہدی بناوٹ اوہی اے (خاص کر !!{height} اوہی اے) تے جیہڑا $\pi$ توں بس خاص متغیر بدلّن نال وکھرا اے۔
+\end{prop}
+
+\begin{proof}
+صرف ایس ثبوت لئی~$\pi$ دے خاص متغیر والے استنباط نوں \emph{صاف} آکھو جے اوہدا خاص متغیر کسے ہور استنباط دا خاص متغیر نہیں تے~$\pi$ وچ اوس استنباط دے سدھے ذیلی !!{proof} توں چھُٹ کِتے ہور نہیں آؤندا۔ نئیں تاں اوہنوں \emph{گندا} آکھو۔ منّ لو $n$،~$\pi$ وچ گندے خاص متغیر والے استنباطاں دی گنتی اے۔ اسیں~$n$ اُتے استقرا نال وکھاؤنے آں کہ $\pi$ نوں مطلوبہ باقاعدہ !!{proof}~$\pi'$ وچ بدلیا جا سکدا اے۔ جے $n=0$، تاں~$\pi$ دے سارے خاص متغیر والے استنباط صاف نیں، سو $\pi$ باقاعدہ اے تے ثابت کرن نوں کجھ نہیں۔ نئیں تاں خاص متغیر والا سبھ توں اُتلا استنباط چُنو، منّ لو \RightR{\lforall}۔ذیلی !!{proof}~$\pi_1$،~$\pi$ دا، جیہڑا اوس اُتے مُکدا اے، ایہ شکل رکھدا اے:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\Gamma \fCenter \Delta, !A(c)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+    \DisplayProof
+    \]
+ویکھو کہ چونکہ $c$ خاص متغیر اے، اوہ~$\Gamma$، $ \Delta$ یا $ \lforall[x][!A(x)]$ وچ نہیں آؤندا۔ ثبوت $ \pi_2$ باقاعدہ اے کیونکہ اوہدے وچ خاص متغیر والا کوئی استنباط ہے ای نہیں۔ منّ لو $a$ اک !!a{constant} اے جیہڑا~$\pi$ وچ نہیں آؤندا۔ \olref{lem:subst-regular} نال، $ \Subst{\pi_2}{a}{c}$، $ \Gamma \fCenter \Delta,
+!A(a)$ دا باقاعدہ ثبوت اے جیہدے اُتے اسیں~$\RightR{\lforall}$ لا سکدے آں۔ جے اسیں $ \pi_1$ نوں~$\pi$ وچ ثبوت $ \pi_1'$ نال بدلیے،
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\pi_2}{a}{c}$}
+    \Deduce$\Gamma \fCenter \Delta, !A(a)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+    \DisplayProof
+    \]
+تاں اسیں خاص متغیر والا اک گندا استنباط صاف استنباط نال بدل دِتّا اے، تے اکّو فرق خاص متغیر $c$ نوں~$a$ نال بدلنا اے۔ حاصل ہوئے ثبوت وچ $n-1$ گندے خاص متغیر والے استنباط نیں، تے نتیجہ استقرا دے مفروضے توں نکلدا اے۔
+\end{proof}
+
+اسیں ہُن ثابت کیتے قضیے دا سدھا حوالہ نہیں دیاں گے، پر منّاں گے کہ سارے !!{proof}s جیہڑے اسیں ویکھدے آں باقاعدہ نیں۔ جے اوہ باقاعدہ نہیں، تاں اسیں ہمیشہ خاص متغیر بدل کے اوہناں نوں باقاعدہ بنا سکدے آں۔
+
+\end{document}

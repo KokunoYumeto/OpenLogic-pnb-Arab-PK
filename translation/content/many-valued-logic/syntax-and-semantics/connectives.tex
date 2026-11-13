@@ -1,0 +1,71 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: connectives
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{con}
+
+\olsection{زباناں تے رابطے}
+
+کلاسیکی قضیاتی منطق تے کئی ہور منطقاں وچ \emph{قضیاتی مستقل}
+تے \emph{رابطے} اک مقرر گنتی وچ ورتے جاندے نیں۔ مثلاً اسیں
+ہِٹھلے نشان مُڈھلے نشان وجوں ورتدے آں۔
+\begin{enumerate}
+\tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+\tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+\item منطقی رابطے۔
+  \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+\end{enumerate}
+\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}{%
+اُپرلے مُڈھلے رابطیاں دے نال اسیں اوہ نشان وی ورتدے آں
+جیہڑے مختصر لکھتاں وجوں متعین ہوندے نیں۔ مثلاً
+\startycommalist
+  \iftag{defNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{defAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{defOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{defIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{defIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+  \iftag{defFalse}{\ycomma $\lfalse$ (!!{falsity})}{}%
+  \iftag{defTrue}{\ycomma $\ltrue$ (!!{truth})}۔}{}
+
+کئی قدراں والیاں منطقاں وچ وی اوہی رابطے ورتے جاندے نیں۔
+پر اکثر اکّو منطق وچ، مثلاً عطف دے وکھ وکھ روپ رکھنا کم
+آؤندا اے۔ روپاں نوں وکھ رکھن لئی وکھرے نشان چاہیدے نیں۔
+کجھ کئی قدراں والیاں منطقاں وچ ایسے رابطے وی ہوندے نیں
+جنہاں دا کلاسیکی منطق وچ کوئی ہم ارز نہیں۔ ایس لئی اسیں
+عام نالوں ذرا ودھ کھلھ نال تعریف کراں گے۔
+
+\begin{defn}
+  \emph{قضیاتی زبان} \emph{رابطیاں} دے سیٹ $\Lang L$ توں
+  بندی اے۔ ہر رابطے $\star$ دی اک \emph{مقاماں دی گنتی} اے۔
+  جیہدے مقاماں دی گنتی~$n$ اے، اوہنوں \emph{$n$-مقامی} رابطہ
+  آکھدے آں۔ مقاماں دی گنتی~$0$ ہووے تاں اوہ رابطے
+  \emph{مستقل} وی اکھواؤندے نیں۔ مقاماں دی گنتی~$1$ ہووے
+  تاں \emph{اک مقامی}، تے مقاماں دی گنتی~$2$ ہووے تاں
+  \emph{دو مقامی} اکھواؤندے نیں۔
+\end{defn}
+
+\begin{ex}
+  قضیاتی منطق دی معیاری زبان $\Lang L_0$ وچ ہِٹھلے رابطے نیں۔
+  نال اوہناں دے مقاماں دی گنتی دِتّی اے۔
+  $\lfalse$~($0$)،
+  $\lnot$~($1$)،
+  $\land$~($2$)،
+  $\lor$~($2$)،
+  $\lif$~($2$)۔ اسیں جِنہاں منطقاں نوں ویکھاں گے، اوہناں
+  وچوں بہتیاں وچ ایہو زبان ورتی جاندی اے۔ رواج مطابق کجھ
+  منطقاں وچ کجھ رابطیاں دے نشان وکھرے نیں۔ مثلاً حاصلِ ضرب
+  والی منطق وچ عطف دا نشان اکثر $\odot$ ہوندا اے~$\land$
+  دی تھاں۔ کدے نواں عامل شامل کرنا سوکھا پیندا اے، جیویں
+  تعیّن دا عامل $\triangle$ ($1$-مقامی)۔
+\end{ex}
+
+\end{document}

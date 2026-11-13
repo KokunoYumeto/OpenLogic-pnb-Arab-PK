@@ -1,0 +1,130 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: lukasiewicz
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{inf}{god}
+
+\olsection{گوڈل دیاں منطقاں}
+
+\begin{editorial}
+  ایہ لامتناہی قدراں والی گوڈل دی منطق بارے حصے دا نکا جیہا مسودہ اے۔
+\end{editorial}
+
+\begin{defn}\ollabel{def:goedel}
+لامتناہی قدراں والی گوڈل دی منطق~$\LogGod[\infty]$ ایس میٹرکس
+نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lfalse$، $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V_\infty$۔
+  \item $1$ اکّو مقرر قدر اے، یعنی $V^+ = \{1\}$۔
+  \item صداقتی فنکشن ہِٹھ دِتّے نیں۔
+  \begin{align*}
+    \tf{\lfalse} & = 0\\
+    \tf{\lnot}[\LogGod](x) & = \begin{cases}
+      $1$ & \text{جے } x =0\\
+      $0$ & \text{ہور صورت وچ}
+    \end{cases}\\
+    \tf{\land}[\LogGod](x,y) & = \min(x,y)\\
+    \tf{\lor}[\LogGod](x,y) & = \max(x,y)\\
+    \tf{\lif}[\LogGod](x,y) & = \begin{cases}
+      1 & \text{جے } x \le y\\
+      y & \text{ہور صورت وچ۔}
+    \end{cases}
+    \end{align*}
+\end{enumerate}
+$m$ قدراں والی گوڈل دی منطق ایسے طرح متعین اے، بس $V = V_m$ اے۔
+\end{defn}
+
+\begin{prop}
+  \olref[thr][god]{defn:goedel} وچ متعین منطق $\LogGod[3]$،
+  \olref{def:goedel} وچ متعین منطق $\LogGod[3]$ دے عین برابر اے۔
+\end{prop}
+
+\begin{proof}
+  ایہ گل \olref[thr][god]{defn:goedel} وچ دِتّے رابطیاں دے
+  صداقتی جدولاں نوں \olref{def:goedel} دیاں مساواتاں توں ملن
+  والے جدولاں نال ملا کے دِسدی اے۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}[\LogGod[3]]$ & \\ 
+      \hline  
+      $1$ & $0$ \\ 
+      $1/2$ & $0$ \\
+      $0$ & $1$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1/2$ & $1/2$ & $0$\\ 
+      $0$ & $0$ & $0$ & $0$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1$ & $1$ \\ 
+      $1/2$ & $1$ & $1/2$ & $1/2$ \\
+      $0$ & $1$ & $1/2$ & $0$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1$ & $1$ & $0$  \\ 
+      $0$ & $1$ & $1$ & $1$ 
+    \end{tabular}
+  \end{center}
+\end{proof}
+
+\begin{prop}\ollabel{prop:god-infty-m}
+  جے $\Gamma \Entails[\LogGod[\infty]] !B$، تاں $\Gamma
+  \Entails[\LogGod[m]] !B$ ہر~$m \ge 2$ لئی۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][inf][god]{prop:god-infty-m} ثابت کرو۔
+\end{prob}
+
+اصل وچ اُلٹی گل وی قائم اے۔
+
+$\LogGod[3]$ وانگ، $\LogGod[\infty]$ وچ اوہ سارے !!{formula}s
+ہمیشہ صادق نیں جیہڑے وجدانیت پسند منطق وچ معتبر نیں۔ اوہی
+مثالاں جیہڑیاں ہمیشہ صادق نہیں سن، ~$\LogGod[\infty]$ وچ وی
+ہمیشہ صادق نہیں۔
+\begin{align*}
+  & p \lor \lnot p && (p \lif q) \lif (\lnot p \lor q) \\
+  & \lnot\lnot p \lif p && \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+  & ((p \lif q) \lif p) \lif p && \lnot(p \lif q) \lif (p \land \lnot q)
+\end{align*}
+اوہ !!{formula} جیہڑا وجدانیت پسند منطق وچ معتبر نہیں پر
+~$\LogGod[3]$ وچ ہمیشہ صادق اے، یعنی $(p \lif q) \lor (q \lif
+p)$، ~$\LogGod[\infty]$ وچ وی ہمیشہ صادق اے۔ دراصل
+$\LogGod[\infty]$ نوں وجدانیت پسند منطق وچ سانچا
+$(!A \lif !B) \lor (!B \lif !A)$ شامل کر کے حاصل کر سکدے آں۔
+ایہ گل مائیکل ڈمٹ نے دکھائی سی۔ ایس لئی $\LogGod[\infty]$
+نوں اکثر گوڈل–ڈمٹ منطق~$\Log{LC}$ آکھدے آں۔
+
+\begin{prob}
+  دکھاؤ کہ $(p \lif q) \lor (q \lif p)$، ~$\LogGod[\infty]$
+  وچ ہمیشہ صادق اے۔
+\end{prob}
+
+\begin{prob}
+  دکھاؤ کہ $(p \lif q) \lor (q \lif r) \lor (r \lif s)$،
+  جیہڑا $\LogGod[3]$ وچ ہمیشہ صادق اے، ~$\LogGod[\infty]$ وچ
+  ہمیشہ صادق نہیں۔
+\end{prob}
+
+\end{document}

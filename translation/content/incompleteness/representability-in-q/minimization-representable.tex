@@ -1,0 +1,236 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: minimization-representable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{req}{min}
+% PNB-CMP-057: step6 وچ درمیانی برابری؛آخری سطر وچ مطلوبہ نتیجہ۔
+% PNB-CMP-058: وجودی تعمیم دا گواہ c اے،c' نہیں۔
+% PNB-CMP-059: آخری بیان وچ شروع دا باقاعدگی دا فرض صاف کیتا۔
+\olsection{باقاعدہ کمترین قدر دی تلاش $\Th{Q}$ وچ قابلِ نمائندگی اے}
+
+بغیر مقررہ حد دی تلاش اُتے غور کریے۔ فرض کرو $g(x, z)$ باقاعدہ
+اے تے $\Th{Q}$ وچ قابلِ نمائندگی اے، مثلاً !!{formula}~$!A_g(x, z, y)$
+نال۔ $f$ دی تعریف $f(z) = \umin{x}{[g(x, z) = 0]}$ نال کریے۔
+اسیں کوئی !!a{formula}~$!A_f(z, y)$ لبھنا چاہندے آں جیہڑا~$f$
+دی نمائندگی کرے۔~$f(z)$ دی قدر اوہ عدد~$x$ اے جیہڑا (a) شرط
+$g(x, z) = 0$ پوری کردا اے تے (b) ایہ شرط پوری کرن والے عدداں
+وچوں سبھ توں چھوٹا اے۔ یعنی ہر $w < x$ لئی $g(w, z) \neq 0$۔
+ایس لئی ہِٹھلا فارمولا چُننا سِدھی گل اے۔
+\[
+!A_f(z,y) \ident !A_g(y, z, \Obj 0) \land \lforall[w][(w < y \lif \lnot
+  !A_g(w, z, \Obj 0))].
+\]
+عام صورت وچ سانوں $z$ دی تھاں
+$z_0$، \dots، $z_k$ رکھنے پین گے۔
+
+ثبوت لئی فیر کجھ ایہو جیہے معاون قضیے چاہیدے ہون گے جیہڑے
+$\Th{Q}$ ثابت کر سکدا اے۔
+
+\begin{lem}
+\ollabel{lem:succ} ہر !!{constant}~$a$ تے ہر قدرتی
+عدد~$n$ لئی،
+\[
+\Th{Q} \Proves \eq[(a' + \num n)][(a + \num n)'].
+\]
+\end{lem}
+
+\begin{proof}
+پہلاں وانگ ثبوت $n$ اُتے استقرا نال اے۔ بنیادی صورت $n =
+0$ وچ سانوں وکھانا اے کہ $\Th{Q}$، $\eq[(a' + \Obj 0)][(a + \Obj
+0)']$ ثابت کردا اے۔پر ساڈے کول:
+\begin{align}
+  \Th{Q} & \Proves \eq[(a' + \Obj 0)][a'] \quad \text{مسلّمے $Q_4$ نال}
+  \ollabel{step1}\\
+  \Th{Q} & \Proves  \eq[(a + \Obj 0)][a] \quad \text{مسلّمے $Q_4$ نال}
+  \ollabel{step2} \\
+  \Th{Q} & \Proves \eq[(a + \Obj 0)'][a'] \quad \text{\olref{step2} نال}
+  \ollabel{step3} \\
+  \Th{Q} & \Proves \eq[(a' + \Obj 0)][(a + \Obj 0)'] \quad
+  \text{\olref{step1} تے \olref{step3} نال}\notag
+\end{align}
+استقرائی قدم وچ اسیں فرض کر سکدے آں کہ $\Th{Q}
+\Proves \eq[(a' + \num n)][(a + \num n)']$ پہلاں ثابت ہو چکیا اے۔ کیوں جے
+$\num{n+1}$، $\num{n}'$ اے،سانوں وکھانا اے کہ $\Th{Q}$،
+$\eq[(a' + \num{n}')][(a + \num{n}')']$ ثابت کردا اے۔ساڈے کول:
+\begin{align}
+  \Th{Q} & \Proves \eq[(a' + \num n')][(a' + \num n)'] \quad
+  \text{مسلّمے $!Q_5$ نال} \ollabel{step5}\\
+  \Th{Q} & \Proves \eq[(a' + \num n)'][(a + \num n')'] \quad
+  \text{استقرائی مفروضے،برابری دی ہم آہنگی تے جمع دے جانشینی مسلّمے نال} \ollabel{step6}\\
+  \Th{Q} & \Proves \eq[(a' + \num n')][(a + \num n')'] \quad
+  \text{\olref{step5} تے \olref{step6} نال۔} \notag
+\end{align}
+\end{proof}
+
+یاد رکھو کہ ایہ نتیجہ ایس گل نالوں کمزور اے کہ
+$\Th{Q}$، $\lforall[x][\lforall[y][(x' + y) = (x + y)']]$ ثابت کردا اے۔
+ایہ !!{sentence}~$\Struct{N}$ وچ سچ اے، پر $\Th{Q}$ اینوں
+ثابت نہیں کردا۔
+
+\begin{lem}
+\ollabel{lem:less-zero}
+$\Th{Q} \Proves \lforall[x][\lnot x < \Obj 0]$.
+\end{lem}
+
+\begin{proof}
+اسیں ثبوت غیر رسمی ڈھنگ نال دیندے آں، یعنی رسمی !!{derivation} بنان دے صرف اشارے دیندے آں۔
+
+سانوں $\lnot a < \Obj 0$ کسے وی~$a$ لئی ثابت کرنا اے۔ $<$
+دی تعریف مطابق سانوں $\lnot
+\lexists[y][\eq[(y'+a)][\Obj 0]]$ نوں $\Th{Q}$ وچ ثابت کرنا اے۔اسیں $\lexists[y][\eq[(y'+a)][\Obj 0]]$ فرض کر کے تضاد کڈھاں گے۔فرض کرو
+$\eq[(b'+a)][\Obj 0]$۔$!Q_3$ ورت کے سانوں
+$\eq[a][\Obj 0] \lor \lexists[y][\eq[a][y']]$ ملدا اے۔ہن دوہاں صورتاں نوں وکھ وکھ ویکھدے آں۔
+
+پہلی صورت وچ $\eq[a][\Obj 0]$ قائم اے۔$\eq[(b'+a)][\Obj 0]$ توں سانوں
+$\eq[(b' + \Obj 0)][\Obj 0]$ ملدا اے۔مسلّمے~$!Q_4$ نال،جیہڑا $\Th{Q}$ دا اے،ساڈے کول
+$\eq[(b' + \Obj 0)][b']$ اے،تے ایس لئی $\eq[b'][\Obj 0]$۔پر
+مسلّمے~$!Q_2$ نال ساڈے کول $\eq/[b'][\Obj 0]$ وی اے۔ ایہ تضاد اے۔
+
+دوجی صورت وچ کسے $c$ لئی $\eq[a][c']$۔پر فیر ساڈے کول $\eq[(b' +
+c')][\Obj 0]$ اے۔مسلّمے~$!Q_5$ نال،سانوں $\eq[(b' + c)'][\Obj 0]$ ملدا اے۔ ایہ فیر مسلّمے~$Q_2$ دے خلاف اے۔
+\end{proof}
+
+\begin{lem}
+\ollabel{lem:less-nsucc}
+ہر قدرتی عدد~$n$ لئی،
+  \[
+  \Th{Q} \Proves
+  \lforall[x][(x < \num {n+1} \lif (\eq[x][\Obj 0] \lor \dots \lor
+    \eq[x][\num n]))].
+  \]
+\end{lem}
+
+\begin{proof}
+اسیں~$n$ اُتے استقرا ورتدے آں۔ پہلاں $n = 0$ والی بنیادی صورت ویکھیے۔
+ایس صورت وچ،سانوں $a < \num 1 \lif \eq[a][\Obj 0]$ کسے وی~$a$ لئی
+وکھانا اے۔فرض کرو $a < \num 1$۔فیر $<$ دے تعریفی مسلّمے نال
+ساڈے کول $\lexists[y][\eq[(y'+a)][\Obj 0']]$ اے،کیوں جے $\num 1 \ident
+\Obj 0'$۔
+
+فرض کرو $b$ ایہ شرط پوری کردا اے، یعنی ساڈے کول $\eq[(b'+a)][\Obj 0']$ اے۔
+سانوں $\eq[a][\Obj 0]$ وکھانا اے۔مسلّمے~$!Q_3$ نال،یا تاں
+$\eq[a][\Obj 0]$ اے،یا کسے $c$ لئی $\eq[a][c']$۔پہلی صورت وچ نتیجہ مل گیا۔ ہن فرض کرو $\eq[a][c']$۔فیر
+ساڈے کول $\eq[(b' + c')][\Obj 0']$ اے۔مسلّمے~$!Q_5$ نال،جیہڑا $\Th{Q}$ دا اے،سانوں
+$\eq[(b'+c)'][\Obj 0']$ ملدا اے۔مسلّمے~$!Q_1$ نال،سانوں $\eq[(b' + c)][\Obj
+0]$ ملدا اے۔پر مسلّمے~$!Q_8$ نال،ایس دا مطلب $c < \Obj 0$ اے،جیہڑا
+\olref{lem:less-zero} دے خلاف اے۔
+
+ہن استقرائی قدم لئی $n+1$ دی صورت ثابت کریے،~$n$ دی صورت نوں من کے۔ فرض کرو $a < \num {n+2}$۔فیر $!Q_3$ نال دو صورتاں ملدیاں نیں۔ $\eq[a][\Obj 0]$ تے کسے $b$ لئی
+$\eq[a][b']$۔پہلی صورت وچ $\eq[a][\Obj 0] \lor \dots \lor
+\eq[a][\num{n+1}]$ فوراً نکلدا اے۔دوجی صورت وچ ساڈے کول $b'
+< \num {n+2}$،یعنی $b' < \num{n+1}'$ اے۔مسلّمے~$!Q_8$ نال،کسے $c$ لئی
+$\eq[(c'+b')][\num{n+1}']$۔مسلّمے $!Q_5$ نال
+$\eq[(c'+b)'][\num{n+1}']$۔مسلّمے~$!Q_1$ نال $\eq[(c'+b)][\num{n+1}]$،
+تے ایس لئی $b < \num{n+1}$،مسلّمے~$!Q_8$ نال۔استقرائی مفروضے نال
+$\eq[b][\Obj 0] \lor \dots \lor \eq[b][\num{n}]$۔منطق نال ایس توں
+$\eq[b'][\Obj 0'] \lor \dots \lor \eq[b'][\num{n}']$ ملدا اے،تے ایس لئی
+$\eq[a][\num{1}] \lor \dots \lor \eq[a][\num{n+1}]$،کیوں جے
+$\eq[a][b']$۔
+\end{proof}
+
+\begin{lem}
+  \ollabel{lem:trichotomy} ہر قدرتی عدد~$m$ لئی،
+  \[
+  \Th{Q} \Proves
+  \lforall[y][((y < \num{m} \lor \num{m} < y) \lor \eq[y][\num{m}])].
+  \]
+\end{lem}
+
+\begin{proof}
+$m$ اُتے استقرا ورتدے آں۔ پہلاں $m=0$ دی صورت اُتے غور کریے۔$\Th{Q} \Proves
+\lforall[y][(\eq[y][\Obj 0] \lor \lexists[z][\eq[y][z']])]$،~$!Q_3$ نال۔
+کوئی وی $a$ لو۔ فیر یا تاں $\eq[a][\Obj 0]$ اے،یا کسے~$b$ لئی
+$\eq[a][b']$۔پہلی صورت وچ،ساڈے کول $(a < \Obj 0 \lor \Obj
+0 < a) \lor \eq[a][\Obj 0]$ وی اے۔پر جے $\eq[a][b']$،تاں
+$\eq[(b' + \Obj 0)][(a + \Obj 0)]$،~$\eq$ دی منطق نال۔$!Q_4$ نال $\eq[(a +
+\Obj 0)][a]$،سو ساڈے کول $\eq[(b' + \Obj 0)][a]$ اے،تے ایس لئی
+$\lexists[z][\eq[(z' + \Obj 0)][a]]$۔$<$ دی
+تعریف،جیہڑی $!Q_8$ وچ اے،نال $\Obj 0 < a$۔جے $\Obj 0 < a$،تاں $(\Obj 0 < a \lor a
+< \Obj 0) \lor \eq[a][\Obj 0]$ وی۔
+
+ہن استقرائی مفروضہ من لو۔ ساڈے کول
+\begin{align*}
+  \Th{Q} & \Proves \lforall[y][((y < \num{m} \lor \num{m} < y) \lor
+    \eq[y][\num{m}])]
+  \intertext{اے تے اسیں وکھانا چاہندے آں کہ}
+  \Th{Q} & \Proves \lforall[y][((y < \num{m+1} \lor \num{m+1} < y) \lor
+    \eq[y][\num{m+1}])]
+\end{align*}
+کوئی وی $a$ لو۔ $!Q_3$ نالیا تاں $\eq[a][\Obj 0]$ اے،یا
+کسے~$b$ لئی $\eq[a][b']$۔پہلی صورت وچ،ساڈے کول $\eq[\num{m}' +
+a][\num{m+1}]$ اے،~$!Q_4$ نال،تے ایس لئی $a < \num{m+1}$،~$!Q_8$ نال۔
+
+ہن دوجی صورت $\eq[a][b']$ ویکھیے۔ استقرائی مفروضے نال $(b < \num{m} \lor \num{m} < b) \lor
+    \eq[b][\num{m}]$۔
+
+فصل دا پہلا جز $b < \num{m}$،$!Q_8$ نال،
+$\lexists[z][\eq[(z' + b)][\num{m}]]$ دے برابر اے۔ فرض کرو $c$ وچ ایہ خاصیت اے۔
+جے $\eq[(c' + b)][\num{m}]$،تاں $\eq[(c' + b)'][\num{m}']$ وی۔$!Q_5$
+نال $\eq[(c' + b)'][(c' + b')]$۔ایس لئی $\eq[(c' +
+b')][\num{m}']$۔اسیں $\lexists[u][\eq[(u' + b')][\num{m+1}]]$،~$c$ نوں وجودی تعمیم دا گواہ بنا کے حاصل کردے آں،تے ایہ یاد رکھدے آں کہ $\num{m}'
+\ident \num{m+1}$۔ایس لئی جے $b < \num{m}$،تاں $b' < \num{m+1}$،
+تے ایس لئی $a < \num{m+1}$۔
+
+دوجے جز لئی فرض کرو $\num{m} < b$،یعنی $\lexists[z][\eq[(z' +
+\num{m})][b]]$۔فرض کرو $c$ ایسا~$z$ اے، یعنی $\eq[(c' +
+\num{m})][b]$۔منطق نال $\eq[(c' + \num{m})'][b']$۔$!Q_5$ نال
+$\eq[(c' + \num{m}')][b']$۔کیوں جے $\eq[a][b']$ تے $\num{m}' \ident
+\num{m+1}$،ایس لئی $\eq[(c' + \num{m+1})][a]$۔$!Q_8$ نال $\num{m+1} < a$۔
+
+آخری جز لئی فرض کرو $\eq[b][\num{m}]$۔فیر منطق نال
+$\eq[b'][\num{m}']$،تے ایس لئی $\eq[a][\num{m+1}]$۔
+
+ایس لئی~$m$ تے~$b$ دی صورت وچ فصل دے ہر جز توں اسیں
+~$m+1$ تے~$a$ لئی اوسے نال ملدا جز کڈھ سکدے آں۔
+\end{proof}
+  
+\begin{prop}
+\ollabel{prop:rep-minimization}
+جے $!A_g(x, z, y)$ باقاعدہ فنکشن $g(x, z)$ دی~$\Th{Q}$ وچ نمائندگی کردا اے، تاں
+\[
+!A_f(z,y) \ident !A_g(y, z, \Obj 0) \land \lforall[w][(w < y \lif \lnot
+  !A_g(w, z, \Obj 0))]
+\]
+$f(z) = \umin{x}{[g(x, z) = 0]}$ دی نمائندگی کردا اے۔
+\end{prop}
+
+\begin{proof}
+پہلاں وکھائیے کہ جے $f(n) = m$ ہووے، تاں $\Th{Q} \Proves !A_f(\num n, \num m)$،
+یعنی
+\begin{align}
+  \Th{Q} & \Proves !A_g(\num{m}, \num{n}, \Obj 0) \land \lforall[w][(w <
+    \num{m} \lif \lnot !A_g(w, \num{n}, \Obj 0))]. \notag
+  \intertext{کیوں جے $!A_g(x, z, y)$، $g(x, z)$ دی نمائندگی کردا اے تے $g(m, n) =
+    0$ جدوں $f(n) = m$،ایس لئی ساڈے کول}
+\Th{Q} & \Proves !A_g(\num{m}, \num{n}, \Obj 0). \notag
+\intertext{جے $f(n) = m$،تاں ہر $k < m$ لئی $g(k, n) \neq 0$۔سو}
+\Th{Q} & \Proves \lnot !A_g(\num{k}, \num{n}, \Obj 0). \notag
+\intertext{سانوں}
+\Th{Q} & \Proves \lforall[w][(w < \num{m} \lif \lnot
+  !A_g(w, \num{n}, \Obj 0))]. \ollabel{rep-less}
+\end{align}
+ملدا اے۔ $m = 0$ دی صورت وچ \olref{lem:less-zero} نال تے دوجی صورت وچ \olref{lem:less-nsucc} نال۔
+
+ہن وکھائیے کہ جے $f(n) = m$ ہووے، تاں $\Th{Q} \Proves
+\lforall[y][(!A_f(\num{n}, y) \lif \eq[y][\num{m}])]$۔اسیں فیر دلیل دے اشارے دیندے آں۔ رسمی ثبوت بناؤن دا کم پڑھن والے لئی چھڈدے آں۔
+
+فرض کرو $!A_f(\num{n}, b)$۔ایس توں سانوں (a) $!A_g(b, \num{n},
+\Obj 0)$ تے (b) $\lforall[w][(w < b \lif \lnot !A_g(w, \num{n}, \Obj
+  0))]$ ملدے نیں۔\olref{lem:trichotomy} نال $(b < \num{m} \lor \num{m} < b)
+\lor \eq[b][\num{m}]$۔اسیں وکھاواں گے کہ $b < \num{m}$ تے $\num{m}
+< b$وچوں ہر اک صورت وچ تضاد نکلدا اے۔
+
+جے $\num{m} < b$، تاں~(b) توں $\lnot !A_g(\num{m}, \num{n}, \Obj 0)$
+ملدا اے۔پر $m = f(n)$،سو $g(m, n) = 0$،تے ایس لئی $\Th{Q} \Proves
+!A_g(\num{m}, \num{n}, \Obj 0)$،کیوں جے $!A_g$،~$g$ دی نمائندگی کردا اے۔ایس توں تضاد نکلدا اے۔
+
+ہن فرض کرو $b < \num{m}$۔فیر،کیوں جے \olref{rep-less} نال $\Th{Q} \Proves \lforall[w][(w <
+  \num{m} \lif \lnot !A_g(w, \num{n}, \Obj 0))]$،سانوں
+$\lnot !A_g(b, \num{n}, \Obj 0)$ ملدا اے۔ایہ وی~(a) نال ٹکراندا اے۔
+\end{proof}
+
+\end{document}

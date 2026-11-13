@@ -1,0 +1,298 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: formation-sequences
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{fseq}
+
+\olsection{تشکیل دے سلسلے}
+
+!!{formula}s نوں استقرائی تعریف نال تعریف کرنا، تے !!{formula}s
+دیاں خاصیتاں استقرا نال ثابت کرن دا نال دا طریقہ، اک سوہنا تے
+کارگر ڈھنگ اے۔ پر !!{formula}s دی بناوٹ نوں ہِٹھوں اُتّے ول،
+قدم بہ قدم وی ویکھیا جا سکدا اے۔ ایتھے اسیں ایہ کم
+\emph{تشکیل دے سلسلے} دے تصور نال کردے آں۔
+%
+ایس طریقے نال ٹرم تے !!{formula}s نوں اوہناں دیاں استقرائی
+تعریفاں دا حوالہ دتے بغیر پیش کرن لئی، پہلے اسیں کسے
+زبان~$\Lang L$ دیاں علامتاں توں بنی من مانی لڑی دا تصور دیندے آں۔
+
+\begin{defn}[لڑیاں]
+\ollabel{defn:string}
+فرض کرو $\Lang L$ پہلے درجے دی زبان اے۔ \emph{$\Lang
+L$-لڑی}، $\Lang L$ دیاں علامتاں دا محدود سلسلہ اے۔ جدوں
+سیاق توں زبان~$\Lang L$ صاف ہووے، تاں اسیں
+$\Lang L$-لڑی نوں صرف \emph{لڑی} وی آکھاں گے۔
+\end{defn}
+
+\begin{ex}
+کسے وی پہلے درجے دی زبان $\Lang L$ لئی، سارے
+$\Lang L$-!!{formula}s، $\Lang L$-لڑیاں نیں؛ پر
+لازم نہیں کہ ہر ایسی لڑی فارمولا ہووے۔ مثال لئی،
+\[)(\Obj v_0\lif\lexists\] اک $\Lang L$-لڑی اے،
+پر $\Lang L$-!!{formula} نہیں۔
+\end{ex}
+
+\begin{defn}[ٹرماں لئی تشکیل دے سلسلے]
+\ollabel{defn:fseq-trm}
+$\Lang L$-لڑیاں دا محدود سلسلہ $\tuple{t_0,\dotsc,t_n}$،
+ٹرم $t$ لئی \emph{تشکیل دا سلسلہ} اے جے $t \ident t_n$،
+تے ہر $i \leq n$ لئی یا تاں $t_i$ !!a{variable} یا
+!!a{constant} اے، یا $\Lang L$ وچ اک $k$-مقامی
+!!{function}~$f$ اے تے ایہو جہے $m_1,\dotsc,m_k < i$
+موجود نیں کہ $t_i \ident f(t_{m_1},\dotsc,t_{m_k})$۔
+% PNB-SYN-003: منجمد ماخذ وچ k-مقامی فنکشن لئی m_0 توں m_k تک k+1 دلیلاں سن؛ ایتھے k دلیلاں رکھیاں نیں۔
+جدوں فرق واضح کرن دی لوڑ ہووے، اسیں ٹرماں دے تشکیل دے سلسلیاں نوں
+\emph{ٹرم تشکیل دے سلسلے} آکھاں گے۔
+\end{defn}
+
+\begin{ex}
+ایہ سلسلہ
+\[
+    \tuple{\Obj c_0, \Obj v_0, \Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}, \Atom{\Obj f^1_0}{\Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}}}
+\]
+ٹرم $\Atom{\Obj f^1_0}{\Atom{\Obj
+f^2_0}{\Obj c_0, \Obj v_0}}$ لئی تشکیل دا سلسلہ اے،
+تے ایہ وی:
+\[
+    \tuple{\Obj v_0, \Obj c_0, \Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}, \Atom{\Obj f^1_0}{\Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}}}.
+\]
+\end{ex}
+
+\begin{defn}[فارمولیاں لئی تشکیل دے سلسلے]
+\ollabel{defn:fseq-frm}
+$\Lang L$-لڑیاں دا محدود سلسلہ $\tuple{!A_0,\dotsc,!A_n}$
+$!A$ لئی \emph{تشکیل دا سلسلہ} اے جے $!A \ident !A_n$،
+تے ہر $i \leq n$ لئی یا تاں $!A_i$ ایٹمی !!{formula} اے،
+یا ایہو جہے $j,k < i$ تے !!a{variable}~$x$ موجود نیں
+کہ اگلیاں وچوں کوئی اک صورت پوری ہُندی اے:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A_i \ident \lnot !A_j$.}{}%
+    \tagitem{prvAnd}{$!A_i \ident (!A_j \land !A_k)$.}{}%
+    \tagitem{prvOr}{$!A_i \ident (!A_j \lor !A_k)$.}{}%
+    \tagitem{prvIf}{$!A_i \ident (!A_j \lif !A_k)$.}{}%
+    \tagitem{prvIff}{$!A_i \ident (!A_j \liff !A_k)$.}{}%
+    \tagitem{prvAll}{$!A_i \ident \lforall[x][!A_j]$.}{}%
+    \tagitem{prvEx}{$!A_i \ident \lexists[x][!A_j]$.}{}%
+\end{enumerate}
+جدوں فرق واضح کرن دی لوڑ ہووے، اسیں فارمولیاں دے تشکیل دے سلسلیاں نوں
+\emph{فارمولا تشکیل دے سلسلے} آکھاں گے۔
+\end{defn}
+
+\begin{ex}
+\[
+\tuple{
+    \Atom{\Obj A^1_0}{\Obj v_0},
+    \Atom{\Obj A^1_1}{\Obj c_1},
+    (\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0}),
+    \lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0})]
+}
+\]
+$\lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj
+c_1} \land \Atom{\Obj A^1_0}{\Obj v_0})]$ لئی
+تشکیل دا سلسلہ اے؛ ایہ وی اک اے:
+\begin{multline*}
+\tuple{
+    \Atom{\Obj A^1_0}{\Obj v_0},
+    \Atom{\Obj A^1_1}{\Obj c_1},
+    (\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0}),
+    \Atom{\Obj A^1_1}{\Obj c_1},\\
+    \lforall[\Obj v_1][\Atom{\Obj A^1_0}{\Obj v_0}],
+    \lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0})]
+}.
+\end{multline*}
+%
+دوجی مثال وکھاؤندی اے کہ تشکیل دے سلسلیاں وچ ”فالتو مواد“ وی
+آ سکدا اے: اوہ !!{formula}s جیہڑے دہرائے گئے ہون یا
+بناوٹ وچ کوئی حصہ نہ پاؤندے ہون۔
+\end{ex}
+
+\begin{prop}\ollabel{prop:formed}
+ہر !!{formula}~$!A$ جیہڑا~$\Frm[L]$ وچ اے،
+اوہدے لئی تشکیل دا سلسلہ موجود اے۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $!A$ ایٹمی اے۔ تاں سلسلہ $\tuple{!A}$،
+$!A$ لئی تشکیل دا سلسلہ اے۔
+%
+ہُن فرض کرو $!B$ تے~$!C$ دے تشکیل دے سلسلے
+ترتیب وار $\tuple{!B_0,\dotsc,!B_n}$ تے
+$\tuple{!C_0,\dotsc,!C_m}$ نیں۔
+%
+\begin{enumerate}
+  \tagitem{prvNot}{جے $!A \ident \lnot !B$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,\lnot !B_n}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvAnd}{جے $!A \ident (!B \land !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \land !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvOr}{جے $!A \ident (!B \lor !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lor !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvIf}{جے $!A \ident (!B \lif !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lif !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvIff}{جے $!A \ident (!B \liff !C)$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \liff !C_m)}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvAll}{جے $!A \ident \lforall[x][!B]$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,\lforall[x][!B_n]}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+  \tagitem{prvEx}{جے $!A \ident \lexists[x][!B]$،
+      تاں $\tuple{!B_0,\dotsc,!B_n,\lexists[x][!B_n]}$
+      $!A$ لئی تشکیل دا سلسلہ اے۔}{}
+\end{enumerate}
+!!{formula}s اُتے استقرا دے اصول موجب ہر !!{formula}
+دا تشکیل دا سلسلہ اے۔
+\end{proof}
+
+اسیں اُلٹا رخ وی ثابت کر سکدے آں۔ ایہ اہم اے،
+کیوں جے ایہ وکھاؤندا اے کہ فارمولیاں نوں تعریف
+کرن دے ساڈے دونیں طریقے ہم ارز نیں: اوہ اکّو
+نتیجہ دیندے نیں۔ ایس دا مطلب ایہ وی اے کہ
+اسیں تشکیل دے سلسلے دی لمبائی اُتے عام استقرا
+لا کے فارمولیاں بارے قضیے ثابت کر سکدے آں۔
+
+\begin{lem}
+\ollabel{lem:fseq-init}
+فرض کرو $\tuple{!A_0,\dotsc,!A_n}$،~$!A_n$ لئی
+تشکیل دا سلسلہ اے، تے $k \leq n$۔ تاں
+$\tuple{!A_0,\dotsc,!A_k}$،~$!A_k$ لئی
+تشکیل دا سلسلہ اے۔
+\end{lem}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{lem:fseq-init} ثابت کرو۔
+\end{prob}
+
+\begin{thm}
+\ollabel{thm:fseq-frm-equiv}
+$\Frm[L]$ اوہناں ساریاں $\Lang L$-لڑیاں~$!A$
+دا سیٹ اے جیہناں دی شرط ایہ اے کہ $!A$ لئی فارمولا تشکیل دا سلسلہ موجود اے۔
+\end{thm}
+
+\begin{proof}
+$F$ نوں زبان~$\Lang L$ دیاں اوہناں ساریاں علامتی
+لڑیاں دا سیٹ منّو جنہاں دا تشکیل دا سلسلہ اے۔
+اسیں \olref[fol][syn][fseq]{prop:formed} وچ
+ویکھ چکے آں کہ $\Frm[L] \subseteq F$؛ سو ہُن
+اسیں اُلٹا رخ ثابت کردے آں۔
+
+فرض کرو $!A$ دا تشکیل دا سلسلہ
+$\tuple{!A_0,\dotsc,!A_n}$ اے۔ اسیں ثابت
+کردے آں کہ $!A \in \Frm[L]$؛ ایہ کم
+$n$ یعنی آخری رکن دے اشاریے اُتے مضبوط استقرا نال کردے آں۔
+ساڈا استقرائی مفروضہ اے کہ جیہڑی وی علامتی لڑی
+کسے ایسے تشکیل دے سلسلے دا آخری رکن اے
+جیہدا آخری اشاریہ $m < n$ اے، اوہ $\Frm[L]$ وچ اے۔
+% PNB-SYN-004: ماخذ n اُتے استقرا کردا پر n+1 رکناں نوں لمبائی n آکھدا اے؛ ایتھے آخری اشاریہ مستقل رکھیا اے۔
+تشکیل دے سلسلے دی تعریف موجب یا تاں
+$!A \ident !A_n$ ایٹمی اے، یا ایہو جہے
+$j,k < n$ موجود نیں کہ اگلیاں وچوں کوئی اک صورت اے:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A \ident \lnot !A_j$.}{}%
+    \tagitem{prvAnd}{$!A \ident (!A_j \land !A_k)$.}{}%
+    \tagitem{prvOr}{$!A \ident (!A_j \lor !A_k)$.}{}%
+    \tagitem{prvIf}{$!A \ident (!A_j \lif !A_k)$.}{}%
+    \tagitem{prvIff}{$!A \ident (!A_j \liff !A_k)$.}{}%
+    \tagitem{prvAll}{$!A \ident \lforall[x][!A_j]$.}{}%
+    \tagitem{prvEx}{$!A \ident \lexists[x][!A_j]$.}{}%
+\end{enumerate}
+ہُن اسیں صورتاں دے لحاظ نال دلیل دیندے آں۔
+جے $!A$ ایٹمی اے تاں $!A_n \in \Frm[L]$۔
+ایس دی بجائے فرض کرو کہ $!A \ident (!A_j \land !A_k)$۔
+% PNB-SYN-005: ماخذ دے دو Frm[L_0] حوالیاں نوں پہلے درجے دے Frm[L] نال تے equiv نوں نحوی ident نال درست کیتا اے۔
+\olref[fol][syn][fseq]{lem:fseq-init} موجب
+$\tuple{!A_0,\dotsc,!A_j}$ تے
+$\tuple{!A_0,\dotsc,!A_k}$ ترتیب وار
+$!A_j$ تے~$!A_k$ لئی تشکیل دے سلسلے نیں۔
+ایہ $!A$ دے سلسلے دے پورے توں چھوٹے مُڈھلے
+ذیلی سلسلے نیں؛ اوہناں دے آخری اشاریے
+اصل سلسلے دے آخری اشاریے~$n$ توں گھٹ نیں۔
+ایس لئی استقرائی مفروضے
+موجب $!A_j$ تے~$!A_k$،~$\Frm[L]$ وچ نیں،
+تے !!a{formula} دی تعریف موجب
+$(!A_j \land !A_k)$ وی اوہدے وچ اے۔
+باقی صورتاں لئی وی ایسّے طرح دی دلیل اے۔
+\end{proof}
+
+ٹرماں لئی تشکیل دے سلسلیاں دیاں خاصیتاں
+!!{formula}s دے سلسلیاں دیاں خاصیتاں ورگیاں نیں۔
+
+\begin{prop}
+\ollabel{prop:fseq-trm-equiv}
+$\Trm[L]$ اوہناں ساریاں $\Lang L$-لڑیاں $t$
+دا سیٹ اے جیہناں دی شرط ایہ اے کہ $t$ لئی ٹرم تشکیل دا سلسلہ موجود اے۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{prop:fseq-trm-equiv} ثابت کرو۔
+اشارہ: \olref[fol][syn][fseq]{thm:fseq-frm-equiv}
+دے ثبوت ورگی حکمتِ عملی ورتو۔
+\end{prob}
+
+تشکیل دے سلسلیاں وچ دو طرح دا ”فالتو مواد“ آ
+سکدا اے: دہرائے گئے رکن، تے اوہ رکن جیہڑے
+فارمولے یا ٹرم دی بناوٹ لئی غیر متعلق ہون۔
+اسیں گھٹ توں گھٹ تشکیل دے سلسلیاں نوں ویکھ
+کے دونیں طرح دے فالتو رکناں نوں ہٹا سکدے آں۔
+
+\begin{defn}[گھٹ توں گھٹ تشکیل دے سلسلے]
+\ollabel{defn:minimal-fseq}
+تشکیل دا سلسلہ $\tuple{!A_0, \ldots, !A_n}$،
+جیہڑا فارمولا~$!A$ لئی اے،~$!A$ لئی
+\emph{گھٹ توں گھٹ تشکیل دا سلسلہ} اے جے
+ہر ہور تشکیل دے سلسلے~$s$، جیہڑا~$!A$ لئی ہووے،
+نوں لے کے ایس~$s$ دی لمبائی~$n+1$ توں وڈّی
+یا برابر ہووے۔
+
+ایسّے طرح تشکیل دا سلسلہ $\tuple{t_0, \ldots, t_n}$،
+جیہڑا ٹرم~$t$ لئی اے،~$t$ لئی
+\emph{گھٹ توں گھٹ تشکیل دا سلسلہ} اے جے
+ہر ہور تشکیل دے سلسلے~$s$، جیہڑا~$t$ لئی ہووے،
+نوں لے کے ایس~$s$ دی لمبائی~$n+1$ توں وڈّی
+یا برابر ہووے۔
+\end{defn}
+
+دھیان دیو کہ کسے فارمولے یا ٹرم لئی اک توں
+ودھ گھٹ توں گھٹ تشکیل دے سلسلے ہو سکدے نیں،
+پر اوہناں وچ عین اوہی لڑیاں شامل ہون گیاں۔
+
+\begin{prop}
+\ollabel{prop:subformula-equivs}
+اگلیاں گلاں ہم ارز نیں:
+\begin{enumerate}
+    \item $!B$،~$!A$ دا ذیلی !!{formula} اے۔
+    \item $!B$،~$!A$ دے ہر تشکیل دے سلسلے وچ آؤندا اے۔
+    \item $!B$،~$!A$ دے کسے گھٹ توں گھٹ تشکیل دے سلسلے وچ آؤندا اے۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{prop:subformula-equivs} ثابت کرو۔
+\end{prob}
+
+\begin{history}
+تشکیل دے سلسلے Raymond Smullyan نے اپنی
+کتاب \emph{First-Order Logic} \citep{Smullyan1968}
+وچ پیش کیتے سن۔ تشکیل دے سلسلیاں دیاں ہور خاصیتاں
+\citet{Zuckerman1973} نے ثابت کیتیاں۔
+\end{history}
+
+\end{document}

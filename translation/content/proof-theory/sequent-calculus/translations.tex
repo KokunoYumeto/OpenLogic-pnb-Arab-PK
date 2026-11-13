@@ -1,0 +1,73 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: translations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{tr}
+
+\olsection{\Log{G1c} تے \Log{G3c} وچکار ترجمہ}
+
+اسیں دَسّیا سی کہ \Log{G1c} تے \Log{G3c} دونے کلاسیکی منطق لئی صحت مند تے کامل نیں، یعنی ہر اک عین اوہ سارے سیکوئنٹ ثابت کردا اے جیہڑے ہر !!{structure} وچ سچے نیں۔ خاص کر، اوہ اوہی سیکوئنٹ ثابت کردے نیں۔ ہُن اسیں ایہ گل صحت مندی تے تمامیت دے قضیاں دا چکر پائے بناں، صرف ثبوت دے نظریے نال ثابت کر سکدے آں۔ ایہو جیہا ثبوت \emph{بدلّن دے طریقے} دیندا اے، !!{proof}s، جیہڑے \Log{G1c} دے نیں، نوں !!{proof}s، جیہڑے \Log{G3c} دے نیں، وچ تے الٹ پاسے بدلّن لئی۔
+
+\begin{prop}
+جے $\Log{G1c} \Proves S$، تاں $\Log{G3c} \Proves S$۔
+\end{prop}
+
+\begin{proof}
+  اسیں وکھاؤنے آں کہ جے $\pi$، !!a{proof} اے \Log{G1c} وچ، تاں !!a{proof}~$\pi'$ اے~$S$ دا \Log{G3c} وچ۔ اسیں ایہ $n
+  = \pheight{\pi}$ اُتے استقرا نال کردے آں۔
+
+  جے $n = 0$، تاں $\pi$ مسلّمہ اے۔ مسلّمہ $\lfalse \Sequent
+  \quad$،~\Log{G3c} وچ وی مسلّمہ اے (سیاق $ \Gamma,
+  \Delta$ خالی لو)۔ \Log{G3c} وچ مسلّمے $!A \Sequent !A$ ورتے جا سکدے نیں جیہناں وچ~$!A$ کوئی وی ہو سکدا اے، صرف جوہری نہیں۔ پر اسیں \olref[ex]{prop:G3c-axioms} وچ ثابت کیتا سی کہ ایہو جیہے سارے سیکوئنٹ !!{provable} نیں~\Log{G3c} وچ۔
+
+  جے $n>0$، تاں $\pi$ قاعدے~$R$ اُتے مُکدا اے۔ استقرا دا مفروضہ پکا کردا اے کہ اوس قاعدے دے مقدمیّاں دے !!{proof}s~\Log{G3c} وچ نیں، یعنی سدھے ذیلی !!{proof}s دے ترجمے~\Log{G3c} وچ نیں۔ جے قاعدہ~$R$، \Log{G3c} وچ وی قاعدہ اے، تاں اسیں اوہنوں مقدمیّاں دے ترجمہ ہوئے !!{proof}s اُتے لاؤنے آں۔ جیہڑے قاعدے~\Log{G3c} دے قاعدے وی نہیں، اوہناں لئی اسیں پہلاں ای وکھایا اے کہ گھٹّو گھٹ اوہ قبول کرن جوگ نیں۔ سو جے قاعدہ~$R$، $\LeftR{\land}$ یا $\RightR{\lor}$ سی، تاں \olref[adm]{prop:lor-G3-adm} لاؤ۔ جے کمزور کرن والا قاعدہ سی، تاں \olref[adm]{prop:weak-G3c-adm} لاؤ۔ جے سکڑاؤ دا قاعدہ سی، تاں \olref[inv]{prop:G3c-cont-adm} لاؤ۔
+\end{proof}
+
+\begin{prop}
+جے $\Log{G3c} \Proves S$، تاں $\Log{G1c} \Proves S$۔
+\end{prop}
+
+\begin{proof}
+  اسیں فیر !!{height} اُتے استقرا کردے آں، !!a{proof}~$\pi$ دی جیہڑا $S$ دا اے۔ \Log{G3c} دا ہر مسلّمہ !!{prove} ہو سکدا اے~\Log{G1c} وچ، اک مسلّمہ تے \LeftR{\Weakening} تے \RightR{\Weakening} قاعدیاں دیاں کئی واری ورتوں نال:
+  \[
+  \Axiom$!C \fCenter !C$
+  \RightLabel{\LeftR{\Weakening}}
+  \Deduce$!C, \Gamma \fCenter !C$
+  \RightLabel{\RightR{\Weakening}}
+  \Deduce$!C, \Gamma \fCenter \Delta, !C$
+  \DisplayProof
+\qquad
+  \Axiom$\lfalse \fCenter$
+  \RightLabel{\LeftR{\Weakening}}
+  \Deduce$\lfalse, \Gamma \fCenter$
+  \RightLabel{\RightR{\Weakening}}
+  \Deduce$\lfalse, \Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+  جے $\pi$ قاعدے~$R$ اُتے مُکدا اے، تاں استقرا دا مفروضہ مقدمیّاں دے !!{proof}s \Log{G1c} وچ دیندا اے تے اسیں اوہی قاعدہ~$R$ اوہناں !!{proof}s اُتے لا سکدے آں۔ چھوٹ \LeftR{\land} تے \RightR{\lor} قاعدیاں دی اے، جیہڑے \Log{G1c} تے~\Log{G3c} وچ وکھرے نیں۔ \Log{G3c} دیاں شکلاں \Log{G1c} وچ ایویں اخذ ہو سکدیاں نیں:
+  \[
+  \Axiom$!A, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B, !A \land !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+\qquad
+  \Axiom$\Gamma \fCenter \Delta, !A, !B$
+  \RightLabel{\RightR{\lor}}
+  \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B, !B$
+  \RightLabel{\RightR{\lor}}
+  \UnaryInf$\Gamma \fCenter \Delta, , !A \lor !B, !A \lor !B$
+  \RightLabel{\RightR{\Contraction}}
+  \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B$
+    \DisplayProof
+  \]
+\end{proof}
+
+\end{document}

@@ -1,0 +1,125 @@
+% Part: first-order-logic
+% Chapter: introduction
+% Section: formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{int}{fml}
+
+\section{\usetoken{P}{formula}}
+
+پہلے درجے دی منطق دے !!{sentence}s نوں پوری ٹھیکائی نال
+مقرر کرن تے !!{variable}s دی ورتوں توں پیدا ہون والے
+مسئلیاں نال نمٹن لئی اسیں ایہ طریقہ ورتاں گے۔
+سب توں پہلاں اسیں اظہارات دا اک \emph{وکھرا} سیٹ
+تعریف کراں گے: !!{formula}s۔ ایس توں بعد
+اسیں انہاں وچ !!{variable}s دے کردار نوں ویکھ
+سکاں گے---تے کجھ ہور تصورات، یعنی ”آزاد“ تے
+”پابند“ !!{variable}s، دے سہارے ایہ تعریف
+کر سکاں گے کہ !!a{sentence} کیہ اے (یعنی ایسا
+!!a{formula} جیہدے وچ آزاد !!{variable}s نہ
+ہون)۔ اسیں ایہ صرف ایس لئی نہیں کردے کہ
+”!!{sentence}“ دی تعریف سنبھالن جوگی ہو جائے،
+بلکہ ایس لئی وی کہ معنوی تصور، یعنی پورا اترن،
+دی تعریف دے طریقے وچ ایہ فرق نہایت اہم ہووے گا۔
+
+آؤ اک سادہ پہلے درجے دی زبان لئی ”!!{formula}“
+تعریف کریے، جیہدے وچ صرف اک !!{predicate}~$\Obj P$
+تے اک !!{constant}~$\Obj a$ ہون، تے منطقی
+علامتاں وچ صرف $\lnot$، $\land$ تے~$\lexists$
+ہون۔ ساڈیاں پوری تعریفاں ایہناں توں کہیں عام
+ہون گیاں: اسیں لامتناہی تعداد وچ !!{predicate}s
+تے !!{constant}s دی اجازت دیاں گے۔ اصل وچ
+اسیں !!{function}s نوں وی ویکھاں گے، جیہڑے
+!!{constant}s تے !!{variable}s نال مل کے
+”ٹرم“ بنا سکدے نیں۔ فی الحال صرف $\Obj a$
+تے متغیر ساڈے ٹرم ہون گے۔ البتہ سانوں
+لامتناہی !!{variable}s ضرور چاہیدے نیں۔
+باقاعدہ طور تے اسیں $\Obj v_0$، $\Obj
+v_1$، \dots، نوں متغیر علامتاں ورتاں گے۔
+
+\begin{defn}
+\emph{!!{formula}s} دا سیٹ~$\Frm$ ایویں تعریف ہوندا اے:
+\begin{enumerate}
+\item\ollabel{fmls-atom} $\Atom{\Obj P}{\Obj a}$ تے $\Atom{\Obj
+  P}{\Obj v_i}$ !!{formula}s نیں ($i \in \Nat$)۔
+
+\tagitem{prvNot}{\ollabel{fmls-not}جے $!A$ !!a{formula} اے، تاں $\lnot !A$
+  وی !!{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$ !!{formula}s نیں، تاں $(!A \land
+  !B)$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvEx}{\ollabel{fmls-ex}جے $!A$ !!a{formula} اے تے $x$ !!a{variable}
+  اے، تاں $\lexists[x][!A]$ وی !!a{formula} اے۔}{}
+
+\tagitem{limitClause}{\ollabel{fmls-limit}ایہناں توں سوا ہور کجھ وی !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+\olref{fmls-atom} سانوں دسدا اے کہ
+$\Atom{\Obj P}{\Obj a}$ تے
+$\Atom{\Obj P}{\Obj v_i}$، ہر $i \in
+\Nat$ لئی، !!{formula}s نیں۔ ایہناں نوں
+\emph{ایٹمی} !!{formula}s آکھدے نیں۔
+ایہ ابتدا لئی مواد دیندے نیں۔ باقی شقّاں
+پہلاں بنے فارمولیاں توں نویں !!{formula}s
+بنان دے طریقے دیندیاں نیں۔ مثال لئی،
+\olref{fmls-not} توں سانوں
+$\lnot \Atom{\Obj P}{\Obj v_2}$ اک
+!!a{formula} ملدا اے، کیوں جے
+$\Atom{\Obj P}{\Obj v_2}$ پہلے ہی
+\olref{fmls-atom} مطابق !!a{formula}
+اے۔ فیر \olref{fmls-ex} توں
+$\lexists[\Obj v_2][\lnot \Atom{\Obj P}{\Obj v_2}]$
+وی اک !!{formula} ملدا اے، تے ایس
+طرح اگے۔ \olref{fmls-limit} دسدا
+اے کہ \emph{صرف} ایس طریقے نال
+بنائیاں لڑیاں ہی !!{formula}s شمار
+ہوندیاں نیں۔ خاص طور تے
+$\lexists[\Obj v_0][\Atom{\Obj P}{\Obj a}]$
+تے $\lexists[\Obj
+  v_0][\lexists[\Obj v_0][\Atom{\Obj P}{\Obj a}]]$
+!!{formula}s \emph{ہوندے} نیں؛ پر
+$(\lnot \Atom{\Obj P}{\Obj a})$
+فارمولا نہیں، کیوں جے اوہدے
+باہر وادھو قوسین نیں۔
+
+!!{formula}s نوں ایس طریقے نال تعریف کرن
+نوں \emph{استقرائی تعریف} آکھدے نیں۔
+ایہ سانوں !!{formula}s بارے استقرا
+والے ثبوت دا اک روپ، یعنی
+\emph{ساختی استقرا}، ورت کے قضیے
+ثابت کرن دی اجازت دیندا اے۔
+انہاں تصورات اُتے عمومی بحث
+\olref[mth][ind][idf]{sec} تے
+\olref[mth][ind][sti]{sec} وچ اے؛
+اگے دے ثبوتاں وچ جان توں پہلاں
+تہانوں اوہ حصہ مُڑ ویکھ لینا چاہیدا اے۔
+بنیادی خیال ایہ اے: جے تسی ثابت کرنا
+چاہندے او کہ کوئی گل سارے !!{formula}s
+لئی سچی اے، تاں سب توں پہلاں اوہ
+ایٹمی !!{formula}s لئی ثابت کرو؛
+فیر دکھاؤ کہ \emph{جے} اوہ کسے
+!!{formula}~$!A$ (تے~$!B$) لئی سچی
+اے، تاں $\lnot !A$، $(!A \land !B)$
+تے $\lexists[x][!A]$ لئی \emph{وی}
+سچی اے۔ مثال لئی، ایس نال ایہ گل
+$\lexists[\Obj v_2][\lnot \Atom{\Obj P}{\Obj v_2}]$
+لئی ثابت ہوندی اے: پہلے حصے توں
+پتا لگدا اے کہ ایٹمی !!{formula}~$\Atom{\Obj
+P}{\Obj v_2}$ لئی ایہ سچی اے۔
+فیر دوجے حصے توں
+$\lnot \Atom{\Obj P}{\Obj v_2}$
+لئی سچی ہوندی اے؛ تے اوسے حصے نوں
+دوبارہ لا کے
+$\lexists[\Obj v_2][\lnot \Atom{\Obj P}{\Obj v_2}]$
+لئی وی۔ چونکہ سارے !!{formula}s
+ایٹمی !!{formula}s توں استقرائی
+طریقے نال بندے نیں، ایس لئی
+ایہ دلیل انہاں وچوں ہر اک لئی
+چلدی اے۔
+
+\end{document}

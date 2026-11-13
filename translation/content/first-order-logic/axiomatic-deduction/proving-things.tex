@@ -1,0 +1,134 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{pro}}
+      {\olfileid{pl}{axd}{pro}}
+
+\olsection{\usetoken{P}{derivation} دیاں مثالاں}
+
+
+\begin{ex}
+فرض کرو اسیں $(\lnot !D \lor !E) \lif (!D \lif
+!E)$ ثابت کرنا چاہندے آں۔ ظاہر اے ایہ ساڈے کسے وی مسلّمے دی مثال نہیں؛
+ایس لئی ایہنوں !!{derive} کرن لئی \MP{} دا قاعدہ ورتنا پئے گا۔ ساڈا
+اکّو قاعدہ~MP اے، جیہڑا $!A$ تے $!A \lif !B$ دتے ہون اُتے~$!B$
+نوں درست قدم ٹھہران دی اجازت دیندا اے۔ اک طریقہ ایہ ہو سکدا اے کہ
+\olref[prp]{ax:lor3} وچ $!A$ دی تھاں $\lnot
+!D$، $!B$ دی تھاں $!E$ تے $!C$ دی تھاں $!D \lif !E$ رکھیے،
+یعنی ایہ مثال:
+\[
+(\lnot !D \lif (!D \lif !E)) \lif ((!E \lif (!D \lif !E)) \lif ((\lnot
+!D \lor !E) \lif (!D \lif !E))).
+\]
+کیوں؟ MP نوں دو واری ورتن نال آخری حصہ ملدا اے، تے اوہی اسیں
+چاہندے آں۔ اسیں سوکھ نال ویکھ سکدے آں کہ $\lnot !D \lif (!D \lif !E)$،
+\olref[prp]{ax:lnot2} دی مثال اے، تے $!E \lif (!D \lif !E)$،
+\olref[prp]{ax:lif1} دی مثال اے۔ ایس لئی ساڈا !!{derivation} ایہ اے:
+\begin{derivation}
+  1. &  $\lnot !D \lif (!D \lif !E)$ & \olref[prp]{ax:lnot2} \\
+  2. & $(\lnot !D \lif (!D \lif !E)) \lif {}$\\
+  &\qquad $((!E \lif (!D \lif !E)) \lif ((\lnot !D \lor !E) \lif (!D \lif !E)))$ & \olref[prp]{ax:lor3}\\
+  3. & $(!E \lif (!D \lif !E)) \lif ((\lnot !D \lor !E) \lif (!D \lif !E))$ & 1, 2, \MP\\
+  4. & $!E \lif (!D \lif !E)$ & \olref[prp]{ax:lif1}\\
+  5. & $(\lnot !D \lor !E) \lif (!D \lif !E)$ & 3, 4, \MP
+\end{derivation}
+\end{ex}
+
+\begin{ex}\ollabel{ex:identity}
+آؤ $!D \lif !D$ دا !!a{derivation} لبھن دی کوشش کریے۔ ایہ کسے
+مسلّمے دی مثال نہیں، ایس لئی ایہنوں !!{derive} کرن لئی \MP{} ورتنا
+پئے گا۔ \olref[prp]{ax:lif1}،~$!A \lif !B$ دے روپ دا اک مسلّمہ
+اے جیہدے اُتے اسیں~\MP لا سکدے آں۔ پر ایس حالت وچ \MP{} جیہڑے
+$!B$ نوں درست قدم ٹھہرائے، اوہ لازماً~$!D \lif !D$ ہونا چاہیدا
+اے، کیوں جے اسیں ایہو !!{derive} کرنا چاہندے آں۔ ایس دا مطلب اے
+کہ $!A$ وی $!D$ ہونا چاہیدا اے؛ یعنی اسیں
+\olref[prp]{ax:lif1} دی ایہ مثال ویکھ سکدے آں:
+\[
+!D \lif (!D \lif !D)
+\]
+\MP ورتن لئی ساڈے کول اوہدے مطابق دوجے مقدمے، یعنی~$!A$، دا
+جواز وی ہونا چاہیدا اے۔ پر ایتھے اوہ~$!D$ ہووے گا، تے اسیں
+اکیلا~$!D$ !!{derive} نہیں کر سکاں گے۔ ایس لئی سانوں ہور
+طریقہ چاہیدا اے۔
+
+صرف~$\lif$ نال متعلق دوجا مسلّمہ \olref[prp]{ax:lif2} اے، یعنی
+\[
+(!A \lif (!B \lif !C)) \lif ((!A \lif !B) \lif (!A \lif !C))
+\]
+\MP{} نوں دو واری ورت کے اسیں آخری اندرلا شرطیہ حاصل کر سکدے آں۔
+فیر ایہدا مطلب اے کہ سانوں \olref[prp]{ax:lif2} دی ایسی مثال
+چاہیدی اے جیہدے وچ $!A \lif !C$، اوہ !!{formula}~$!D \lif !D$
+ہووے جیہنوں اسیں ثابت کرنا چاہندے آں۔ ایس لئی $!A$ تے $!C$
+دوویں~$!D$ نیں۔ ہُن $!B$ کیہڑا چُنیے تاں جو $!A \lif (!B \lif !C)$
+تے $!A \lif !B$، یعنی ایتھے $!D \lif (!B \lif !D)$ تے $!D \lif !B$،
+دوویں !!{derivable} ہون؟ پہلا تاں $!B$ دی ہر چُون لئی
+\olref[prp]{ax:lif1} دی مثال اے۔ تے $!D \lif !B$ وی
+\olref[prp]{ax:lif1} دی مثال ہووے گا جے $!B$، $(!D \lif !D)$ ہووے۔
+ایس لئی ساڈا !!{derivation} ایہ اے:
+\begin{derivation}
+  1. & $!D \lif ((!D \lif !D) \lif !D)$ & \olref[prp]{ax:lif1}\\
+  2. & $(!D \lif ((!D \lif !D) \lif !D)) \lif {}$\\
+  & \qquad $((!D \lif (!D \lif !D)) \lif (!D \lif !D))$ & \olref[prp]{ax:lif2}\\
+  3. & $(!D \lif (!D \lif !D)) \lif (!D \lif !D)$ & 1, 2, \MP\\
+  4. & $!D \lif (!D \lif !D)$ & \olref[prp]{ax:lif1}\\
+  5. & $!D \lif !D$ & 3, 4, \MP
+\end{derivation}
+\end{ex}
+
+\begin{ex}\ollabel{ex:chain}
+کدے اسیں دکھانا چاہندے آں کہ کجھ ہور !!{formula}s~$\Gamma$ توں
+کسے !!{formula} دا !!a{derivation} موجود اے۔ مثال لئی، آؤ
+دکھائیے کہ اسیں $!A \lif !C$، $\Gamma = \{!A \lif !B,
+!B \lif !C\}$ توں !!{derive} کر سکدے آں۔
+\begin{derivation}
+  1. & $!A \lif !B$ & \Hyp\\
+  2. & $!B \lif !C$ & \Hyp\\
+  3. & $(!B \lif !C) \lif (!A \lif (!B \lif !C))$ & \olref[prp]{ax:lif1} \\
+  4. & $!A \lif (!B \lif !C)$ & 2, 3, \MP\\
+  5. & $(!A \lif (!B \lif !C)) \lif {}$\\
+  & \qquad $((!A \lif !B) \lif (!A \lif !C))$ & \olref[prp]{ax:lif2}\\
+  6. & $((!A \lif !B) \lif (!A \lif !C))$ & 4, 5, \MP\\
+  7. & $!A \lif !C$ & 1, 6, \MP
+\end{derivation}
+``\Hyp'' نال نشان لگیاں سطراں (``مفروضہ'' لئی) دسدیاں
+نیں کہ اس سطر دا !!{formula}،~$\Gamma$ دا !!a{element} اے۔
+\end{ex}
+
+\begin{prop}
+  \ollabel{prop:chain} جے $\Gamma \Proves !A \lif !B$ تے $\Gamma
+  \Proves !B \lif !C$، تاں $\Gamma \Proves !A \lif !C$
+\end{prop}
+
+\begin{proof}
+  فرض کرو $\Gamma \Proves !A \lif !B$ تے $\Gamma \Proves !B \lif
+  !C$۔ تاں $!A \lif !B$ دا !!a{derivation}~$\Gamma$ توں موجود
+  اے، تے $!B \lif !C$ دا !!a{derivation}~$\Gamma$ توں وی۔ اوہناں
+  نوں اک دوجے دے پچھے جوڑ کے اکّو !!{derivation} بنا لو۔ ہُن پچھلی
+  مثال دے !!{derivation} دیاں سطراں 3--7 شامل کرو۔ ایس نال
+  $!A \lif !C$ دا !!a{derivation}، جیہدے وچ ایہ فارمولا نویں
+  !!{derivation} دی آخری سطر اے،~$\Gamma$ توں ملدا اے۔ دھیان دیو
+  کہ سطراں 4 تے~7 دے جواز درست رہندے نیں جے سطر نمبر~1 دے
+  حوالے نوں $!A \lif !B$ دے !!{derivation} دی آخری سطر دے
+  حوالے نال، تے سطر نمبر~2 دے حوالے نوں $!B \lif !C$ دے
+  !!{derivation} دی آخری سطر دے حوالے نال بدل دتا جائے۔
+\end{proof}
+
+\begin{prob}
+مسلّماں توں !!{derivation}s پیش کر کے دکھاؤ کہ ہِٹھ دتیاں گلاں
+درست نیں:
+\begin{enumerate}
+\item $(!A \land !B) \lif (!B \land !A)$
+\item $((!A \land !B) \lif !C) \lif (!A \lif (!B \lif !C))$
+\item $\lnot(!A \lor !B) \lif \lnot !A$
+\end{enumerate}
+\end{prob}
+
+
+
+\end{document}

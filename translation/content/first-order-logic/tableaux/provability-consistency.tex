@@ -1,0 +1,150 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{prv}}
+      {\olfileid{pl}{tab}{prv}}
+
+\olsection{\usetoken{S}{derivability} تے بے تضادی (Derivability and Consistency)}
+
+ہُن اسیں !!{derivability} دے تعلق دیاں کئی خاصیتاں قائم کراں گے۔ ایہ
+اپنے آپ وچ وی دلچسپ نیں، پر ہر اک تمامیت دے قضیے دے ثبوت وچ کردار
+نبھاوے گی۔
+
+\begin{prop}\ollabel{prop:provability-contr}
+  جے $\Gamma \Proves !A$ تے $\Gamma \cup \{!A\}$ متضاد اے، تاں
+  $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+% PNBTAB-008: Gamma_1 is indexed by C_m in the displayed tableau, not C_n as the source definition says.
+ایہو جیہے دو محدود ذیلی سیٹ $\Gamma_0 = \{!B_1, \dots, !B_n\}$ تے $\Gamma_1
+  =\{!C_1, \dots, !C_m\} \subseteq \Gamma$ موجود نیں کہ
+  \begin{align*}
+    \{\sFmla{\False}{!A}, &
+    \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\} \\
+    \{\sFmla{\True}{!A}, &
+    \sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_m}\}
+  \end{align*}
+  دوناں لئی بند !!{tableau}s موجود نیں۔ $!A$ اُتے \Cut{} قاعدہ لا کے
+  اسیں ایہناں نوں اک بند !!{tableau} وچ جوڑ سکدے آں، جیہڑا دکھاندا اے کہ $\Gamma_0
+  \cup \Gamma_1$ متضاد اے۔ چونکہ $\Gamma_0
+  \subseteq \Gamma$ تے $\Gamma_1 \subseteq \Gamma$، سو $\Gamma_0 \cup
+  \Gamma_1 \subseteq \Gamma$؛ ایس لئی $\Gamma$~متضاد اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{\lnot !A\}$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+پہلاں منّ لو $\Gamma \Proves !A$، یعنی ہیٹھ دِتّے سیٹ لئی بند
+!!{tableau} موجود اے:
+\[
+\{\sFmla{\False}{!A},
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+\]
+$\TRule{\True}{\lnot}$ قاعدہ ورت کے ایس نوں ہیٹھ دِتّے سیٹ دے
+بند !!{tableau} وچ بدلیا جا سکدا اے:
+\[
+\{\sFmla{\True}{\lnot !A},
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}.
+\]
+
+دوجے پاسے، جے پچھلے سیٹ لئی بند !!{tableau} موجود اے، تاں اوہنوں
+پہلے سیٹ دے بند !!{tableau} وچ ایویں بدل سکدے آں: پہلے
+مفروضے~$\sFmla{\True}{\lnot !A}$ اُتے \TRule{\True}{\lnot}
+لا کے نکلے سارے فارمولے تے اوہ مفروضہ ہٹا دِیو، تے
+$\sFmla{\False}{!A}$ مفروضے دے طور تے شامل کر دِیو۔ جے پہلے
+تابلو دی کوئی شاخ $\sFmla{\True}{\lnot !A}$ اُتے
+\TRule{\True}{\lnot} لاون دے نتیجے، یعنی $\sFmla{\False}{!A}$،
+کرکے بند سی، تاں نویں !!{tableau} دی اوہدے مطابق شاخ وی بند اے۔
+جے پراݨے تابلو دی کوئی شاخ مفروضہ $\sFmla{\True}{\lnot !A}$ تے
+$\sFmla{\False}{\lnot !A}$ دوناں ہون کرکے بند سی، تاں
+$\TRule{\False}{\lnot}$ نوں $\sFmla{\False}{\lnot !A}$ اُتے لا کے
+$\sFmla{\True}{!A}$ حاصل کرو۔ شامل کیتے مفروضے
+$\sFmla{\False}{!A}$ نال ایہ شاخ بند ہو جاندی اے۔
+\end{proof}
+
+\begin{prob}
+ثابت کرو کہ $\Gamma \Proves \lnot !A$ اُدوں تے صرف اُدوں جدوں
+$\Gamma \cup \{!A\}$ متضاد اے۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:explicit-inc}
+  جے $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$، تاں $\Gamma$
+  متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$۔ تاں ایہو جیہے
+  $!B_1$، \dots، $!B_n \in \Gamma$ موجود نیں کہ
+  \[
+  \{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+  \]
+  دا بند تابلو موجود اے۔ مفروضہ \sFmla{\False}{!A} دی تھاں
+  \sFmla{\True}{\lnot !A} رکھو، تے مفروضیاں توں بعد
+% PNBTAB-009: True-negation applies to True not-A, not to False A as the frozen prose says.
+  \sFmla{\True}{\lnot !A} اُتے \TRule{\True}{\lnot} لا کے اوہدا نتیجہ
+  درج کرو۔ پراݨے !!{tableau} وچ جیہڑا وی !!{sentence} لکیر~$1$ دے
+  حوالے نال جائز سی، اوہ ہُن نویں !!{tableau} وچ
+% PNBTAB-010: n+1 initial assumptions followed by one derived line place False A at n+2.
+  لکیر~$n+2$ دے حوالے نال جائز اے۔ ایس لئی جے پراݨا !!{tableau}
+  بند سی تاں نواں وی بند اے۔ ایہ دکھاندا اے کہ $\Gamma$ متضاد اے،
+  کیوں جے سارے مفروضے~$\Gamma$ وچ نیں۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  جے $\Gamma \cup \{!A\}$ تے $\Gamma \cup \{\lnot !A\}$ دونیں
+  متضاد نیں، تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  جے ایہو جیہے $!B_1$، \dots، $!B_n \in \Gamma$ تے $!C_1$، \dots،
+  $!C_m \in \Gamma$ موجود نیں کہ
+  \begin{align*}
+    \{\sFmla{\True}{!A}, &
+    \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\} \text{ تے }\\
+    \{\sFmla{\True}{\lnot !A}, &
+    \sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_m}\}
+  \end{align*}
+  دوناں لئی بند !!{tableau}s موجود نیں، تاں اسیں اک جوڑیا ہویا
+  !!{tableau} بنا سکدے آں جیہڑا $\Gamma$ دا تضاد دکھاندا اے۔ اوہدے
+  مفروضے $\sFmla{\True}{!B_1}$، \dots، $\sFmla{\True}{!B_n}$
+  دے نال $\sFmla{\True}{!C_1}$، \dots، $\sFmla{\True}{!C_m}$
+  رکھو تے فیر \Cut{} قاعدہ لاؤ۔ ایس نال دو شاخاں بندیاں نیں: اک
+  $\sFmla{\True}{!A}$ نال شروع ہوندی اے، دوجی
+  $\sFmla{\False}{!A}$ نال۔
+  
+  کھبّے پاسے پہلے !!{tableau} دا اوہ حصہ جوڑو جیہڑا اوہدے مفروضیاں توں
+  ہِٹھاں اے۔ ایتھے ہر قاعدے دا اطلاق ہن وی ٹھیک اے، کیوں جے پہلے
+  !!{tableau} دے سارے مفروضے، $\sFmla{\True}{!A}$ سمیت، موجود نیں۔
+  ایس لئی $\sFmla{\True}{!A}$ دے ہِٹھاں ہر شاخ بند ہو جاندی اے۔
+  
+  سَجّے پاسے دوجے !!{tableau} دا مفروضیاں توں ہِٹھلا حصہ جوڑو، پر
+  $\TRule{\True}{\lnot}$ نوں $\sFmla{\True}{\lnot !A}$ اُتے
+  لاون دے سارے نتیجے ہٹا دِیو۔ $\TRule{\True}{\lnot}$ نوں
+  $\sFmla{\True}{\lnot !A}$ اُتے لاون دا نتیجہ
+  $\sFmla{\False}{!A}$ اے؛ ایہ وی موجود اے، کیوں جے جوڑے ہوئے
+  !!{tableau} دے سَجّے پاسے \Cut{} قاعدے دا ایہی نتیجہ اے۔
+
+  جے دوجے تابلو دی کوئی شاخ ایس کرکے بند سی کہ اوہدے وچ مفروضہ
+  $\sFmla{\True}{\lnot !A}$ (جیہڑا جوڑے ہوئے !!{tableau} وچ ہن
+  مفروضہ نہیں) تے $\sFmla{\False}{\lnot !A}$ دونیں سن، تاں
+  $\TRule{\False}{\lnot}$ نوں $\sFmla{\False}{\lnot !A}$ اُتے لا کے
+  $\sFmla{\True}{!A}$ حاصل کرو۔ ہُن جوڑے ہوئے !!{tableau} دی
+  متعلقہ شاخ وی بند اے، کیوں جے اوہدے وچ \Cut{} قاعدے دا سَجّا نتیجہ
+  $\sFmla{\False}{!A}$ وی موجود اے۔ جے دوجے !!{tableau} دی شاخ
+  کسے ہور سبب توں بند سی، تاں جوڑے ہوئے !!{tableau} دی متعلقہ شاخ
+  وی بند اے، کیوں جے پراݨے دوجے !!{tableau} دی شاخ اُتے
+  $\sFmla{\True}{\lnot !A}$ توں وکھرے !!{signed formula}s وچوں ہر اک جوڑے
+  ہوئے !!{tableau} دی متعلقہ شاخ اُتے وی موجود اے۔
+  \end{proof}
+
+\end{document}

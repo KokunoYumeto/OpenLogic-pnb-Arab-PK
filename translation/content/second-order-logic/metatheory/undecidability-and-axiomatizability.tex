@@ -1,0 +1,57 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: undecidability-and-axiomatizability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{met}{nax}
+
+\olsection{دوجے درجے دی منطق مسلّماں نال متعین نہیں ہو سکدی}
+
+\begin{thm}
+\ollabel{thm:sol-undecidable}
+دوجے درجے دی منطق قابلِ فیصلہ نہیں۔
+\end{thm}
+
+\begin{proof}
+پہلے درجے دا کوئی !!{sentence} پہلے درجے دی منطق وچ اُدوں تے صرف
+اُدوں معتبر اے جدوں اوہ دوجے درجے دی منطق وچ معتبر ہووے۔
+پہلے درجے دی منطق قابلِ فیصلہ نہیں۔
+\end{proof}
+
+\begin{thm}
+\ollabel{cor:sol-not-axiomatizable}
+دوجے درجے دی منطق لئی کوئی !!{derivation} نظام ایسا نہیں
+جیہڑا صحت مند تے تمام دوویں ہووے۔
+\end{thm}
+
+\begin{proof}
+حساب دی زبان دا کوئی !!a{sentence}~$!A$ من لو۔
+$\Sat{N}{!A}$ اُدوں تے صرف اُدوں جدوں $\Th{PA^2} \Entails !A$۔
+من لو $!P$ نظریے~$\Th{PA^2}$ دے نو مسلّماں نوں عطف نال جوڑ کے بنیا جملہ اے۔
+$\Th{PA^2} \Entails !A$ اُدوں تے صرف اُدوں جدوں
+$\Entails !P \lif !A$، یعنی ہر ساخت وچ
+% PNB-CMP-073: source places Sat's closing brace outside inline math.
+$\Sat{M}{!P \lif !A}$۔ ہن ایہہ !!{sentence} ویکھو:
+$\lforall[z][\lforall[u][\lforall[u'][\lforall[u''][\lforall[L][(!P' \lif !A')]]]]]$۔
+ایہ اصل جملے وچ $\Obj{0}$ دی تھاں $z$، $\prime$ دی تھاں
+اک-رُکنی فنکشنی متغیر~$u$، $+$ تے $\times$ دی تھاں بالترتیب
+دو رُکنی فنکشنی متغیر~$u'$ تے~$u''$، تے $<$ دی تھاں
+دو رُکنی تعلقی متغیر~$L$ رکھ کے، فیر انہاں سب اُتے عمومی
+مسوّریت لا کے بنیا اے۔ ایہ خالص دوجے درجے دی منطق دا
+معتبر جملہ اُدوں تے صرف اُدوں اے جدوں پہلا شرطیہ جملہ معتبر اے؛
+ایہ اُدوں تے صرف اُدوں اے جدوں $\Th{PA^2} \Entails !A$،
+تے ایہ اُدوں تے صرف اُدوں اے جدوں $\Sat{N}{!A}$۔
+سو جے دوجے درجے دی منطق لئی کوئی صحت مند تے تمام
+ثبوتی نظام ہووے، تاں اسیں اوس راہیں اک قابلِ حساب گنتی وار
+فہرست~$f\colon \Nat \to \Sent[L_A]$ بنا سکدے آں جیہدیاں
+قدراں عین اوہی !!{sentence}s نیں جیہڑے $\Struct{N}$ وچ سچے نیں۔ ایہ فنکشن
+$\Th{Q}$ وچ کسے پہلے درجے دے فارمولے~$!B_f(x, y)$ نال
+قابلِ نمائندگی ہووے گا۔ فیر !!{formula}~$\lexists[x][!B_f(x, y)]$
+پہلے درجے دے سچ !!{sentence}s دا سیٹ~$\Struct{N}$ وچ متعین
+کرے گا۔ ایہ تارسکی دے قضیے دے خلاف اے۔
+\end{proof}
+
+\end{document}

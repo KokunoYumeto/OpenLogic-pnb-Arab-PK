@@ -1,0 +1,137 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: second-order-arithmetic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{met}{spa}
+
+\olsection{دوجے درجے دا حساب}
+
+یاد کرو کہ پیانو حساب دے نظریے~$\Th{PA}$ وچ~$\Th{Q}$ دے آٹھ
+مسلّمے شامل نیں:
+\begin{align*}
+& \lforall[x][\eq/[x'][\Obj 0]]\\
+& \lforall[x][\lforall[y][(\eq[x'][y'] \lif \eq[x][y])]]\\
+& \lforall[x][(\eq[x][\Obj 0] \lor \lexists[y][\eq[x][y']])]\\ 
+& \lforall[x][\eq[(x + \Obj 0)][x]]\\
+& \lforall[x][\lforall[y][\eq[(x + y')][(x + y)']]]\\
+& \lforall[x][\eq[(x \times \Obj 0)][\Obj 0]]\\
+& \lforall[x][\lforall[y][\eq[(x \times y')][((x \times y) + x)]]]\\
+& \lforall[x][\lforall[y][(x < y \liff \lexists[z][\eq[(z' + x)][y]])]]\\
+\intertext{تے نال ایس روپ دے سارے جملے وی}
+& (!A(\Obj 0) \land \lforall[x][(!A(x) \lif !A(x'))]) \lif \lforall[x][!A(x)].
+\end{align*}
+ایہ آخری بیان اک «خاکہ» اے، یعنی اک روپ جیہدے توں حساب دی زبان دے
+لامتناہی !!{sentence}s بندے نیں، ہر !!{formula}~$!A(x)$ لئی اک۔
+اسیں ایس نوں (پہلے درجے دا) \emph{استقرا دا مسلّماتی خاکہ} آکھدے آں۔
+\emph{دوجے درجے دے} پیانو حساب~$\Th{PA^2}$ وچ استقرا اکّو جملے
+نال بیان ہو سکدا اے۔ $\Th{PA^2}$ وچ اُپرلے پہلے آٹھ مسلّماں دے نال
+(دوجے درجے دا) \emph{استقرا دا مسلّمہ} شامل اے:
+\[
+\lforall[X][((X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]) \lif \lforall[x][X(x)])].
+\]
+ایہ کہندا اے کہ جے !!{domain} دا کوئی ذیلی سیٹ~$X$،
+~$\Assign{\Obj{0}}{M}$ نوں شامل کرے تے دائرے دے کسے وی~$x \in \Domain{M}$
+نوں شامل کرے تاں~$\Assign{\prime}{M}(x)$ نوں وی شامل کرے
+(یعنی اوہ «جانشین لین اُتے بند» ہووے)، تاں اوہ پورے !!{domain} نوں
+شامل کردا اے (یعنی $X =
+\Domain{M})$۔
+
+استقرا دا مسلّمہ ایہ یقینی بناؤندا اے کہ ہر اوہ !!{structure} جیہدے وچ
+ایہ مسلّمہ پورا اتردا اے، اوہدے~$\Domain{M}$ وچ صرف اوہی !!{element}s نیں
+جنہاں دا موجود ہونا مسلّمے لازم کردے نیں، یعنی~$\num{n}$ دیاں
+قدراں، جدوں $n \in \Nat$ ہووے۔ $\Th{PA^2}$ دے کسے نمونے وچ
+غیر معیاری عدد نہیں ہوندا۔
+
+\begin{thm}
+\ollabel{thm:sol-pa-standard}
+جے $\Sat{M}{\Th{PA^2}}$ ہووے، تاں $\Domain{M} =
+\Setabs{\Value{\num{n}}{M}}{n \in \Nat}$۔
+\end{thm}
+
+\begin{proof}
+من لو $N = \Setabs{\Value{\num{n}}{M}}{n \in \Nat}$، تے فرض کرو
+$\Sat{M}{\Th{PA^2}}$۔ بے شک کسے وی $n \in \Nat$ لئی
+$\Value{\num{n}}{M} \in \Domain{M}$، ایس لئی $N \subseteq \Domain{M}$۔
+
+ہُن دوجے رخ دی شمولیت ویکھدے آں۔ متغیراں دی ایہو جیہی قدر بندی~$s$ لو
+جیہدے لئی $s(X) = N$ ہووے۔ مفروضے مطابق:
+\begin{align*}
+\Sat{M}{\lforall[X][((X(\Obj 0) \land \lforall[x][(X(x)
+      \lif X(x'))]) \lif \lforall[x][X(x)])]}, & \text{ ایس لئی}\\
+\Sat{M}{(X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]) \lif
+  \lforall[x][X(x)]}[s]. & 
+\end{align*}
+ایس شرطیہ دا اگلا حصہ ویکھو۔ $\Value{\Obj{0}}{M} \in
+N$، ایس لئی $\Sat{M}{X(\Obj{0})}[s]$۔ عطف دا دوجا جزو،
+$\lforall[x][(X(x) \lif X(x'))]$ وی پورا اتردا اے۔ فرض
+کرو $x \in N$۔ $N$ دی تعریف مطابق،
+$x = \Value{\num{n}}{M}$ ہووے گا، کسے~$n$ لئی۔ فیر
+$\Assign{\prime}{M}(x) = \Value{\num{n+1}}{M} \in N$۔ ایس لئی
+$\Assign{\prime}{M}(x) \in N$۔
+
+اسیں ثابت کیتا اے کہ
+$\Sat{M}{X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]}[s]$۔
+نتیجتاً $\Sat{M}{\lforall[x][X(x)]}[s]$۔ ایس دا مطلب اے کہ
+ہر $x \in \Domain{M}$ لئی $x \in s(X) = N$۔ سو
+$\Domain{M} \subseteq N$۔
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:sol-pa-categorical}
+~$\Th{PA^2}$ دے کوئی وی دو نمونے ہم شکل نیں۔
+\end{cor}
+
+\begin{proof}
+\olref{thm:sol-pa-standard} مطابق $\Th{PA^2}$ دے ہر نمونے دا دائرہ
+$\Value{\num{n}}{M}$ دیاں قدراں نال ای پورا ہو جاندا اے۔ ایہو جیہا ہر
+نمونہ~$\Th{Q}$ دا وی نمونہ اے۔ \olref[mod][mar][stm]{prop:thq-standard}
+مطابق ایسا ہر نمونہ معیاری اے، یعنی~$\Struct{N}$ نال ہم شکل اے۔
+\end{proof}
+
+اُپر اسیں $\Th{PA^2}$ نوں پہلے آٹھ حسابی مسلّماں تے دوجے درجے
+دے استقرا دے مسلّمے والا نظریہ منّیا سی۔ دوجے درجے دی منطق دی
+اظہاری طاقت کر کے دوجے درجے دے پیانو حساب لئی
+حساب دے مسلّماں وچوں \emph{صرف پہلے دو} تے استقرا کافی نیں۔
+
+\begin{prop}\ollabel{prop:sol-pa-definable}
+من لو $\Th{PA^{2\dagger}}$ اوہ دوجے درجے دا نظریہ اے جیہدے وچ
+حساب دے پہلے دو مسلّمے (جانشین دے مسلّمے) تے دوجے درجے دا
+استقرا دا مسلّمہ شامل نیں۔ فیر $\le$، $+$ تے $\times$،
+$\Th{PA^{2\dagger}}$ وچ قابلِ تعریف نیں۔
+\end{prop}
+
+\begin{proof}
+$\le$ دے قابلِ تعریف ہون لئی سانوں اک فارمولا~$!A_\le(x, y)$
+لبھنا پئے گا جیہدے لئی $\Sat{N}{!A_\le(\num n, \num m)}$ اُدوں
+تے صرف اُدوں ہووے جدوں $n \le m$۔ ایہ فارمولا ویکھو:
+\[
+!B(x, Y) \ident Y(x) \land \lforall[y][(Y(y) \lif Y(y'))]
+\]
+صاف اے کہ $!B(\num n, Y)$ کسے سیٹ $Y \subseteq \Nat$ لئی اُدوں
+تے صرف اُدوں پورا اتردا اے جدوں
+$\Setabs{m}{n \le m} \subseteq Y$۔ ایس لئی اسیں
+$!A_\le(x, y) \ident
+\lforall[Y][(!B(x, Y) \lif Y(y))]$ لے سکدے آں۔
+
+جمع دے قابلِ تعریف ہون لئی ویکھو کہ $k+l=m$ اُدوں تے صرف اُدوں
+جدوں کوئی فنکشن $u$ موجود ہووے جیہدے لئی $u(0)=k$،
+$u(n')=u(n)'$ ہر $n$ لئی، تے $m = u(l)$ ہووے۔ ایس ہم ارزی
+نال $\Th{PA^{2\dagger}}$ وچ جمع دی تعریف ایس فارمولے نال کر سکدے آں:
+% PNB-CMP-072: source's quantified w must occur in the recurrence body.
+\[
+!A_+(x,y,z) \ident \lexists[u][(u(\Obj 0)=x \land \lforall[w][u(w')=u
+ (w)'] \land u(y)=z)]
+\] 
+ایتھوں صاف اے کہ $\Sat{N}{!A_+(\num k, \num l, \num m)}$
+اُدوں تے صرف اُدوں ہووے جدوں $k+l=m$۔
+\end{proof}
+
+\begin{prob}
+\olref[sol][met][spa]{prop:sol-pa-definable} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

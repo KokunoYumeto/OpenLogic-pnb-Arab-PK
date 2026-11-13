@@ -1,0 +1,379 @@
+% Part: turing-machines
+% Chapter: undecidability
+% Section: trakhtenbrot
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{und}{tra}
+\olsection{تراختنبرُوت دا قضیہ}
+
+\begin{explain}
+  \olref[rep]{sec} وچ اسی !!{sentence}s~$!T(M,w)$
+  تے~$!E(M,w)$ دی تعریف کیتی سی،
+  ٹیورنگ مشین~$M$ تے انپٹ لڑی~$w$ لئی۔ فیر
+  \olref[ver]{lem:valid-if-halt} تے
+  \olref[ver]{lem:halt-if-valid} وچ دکھایا
+  کہ~$!T(M,w) \lif !E(M,w)$ اُدوں تے صرف اُدوں
+  درست اے جدوں~$M$ انپٹ~$w$ اُتے شروع
+  ہو کے آخرکار رُکدی اے۔ رُکّن دا مسئلہ
+  ناقابلِ فیصلہ اے۔ ایس توں نکلدا اے کہ
+  پہلے درجے دی منطق وچ !!{sentence}s درست نیں یا
+  نہیں، ایہ فیصلہ نہیں ہو سکدا۔ ایہ وی فیصلہ نہیں
+  ہو سکدا کہ اوہ پورے ہو سکدے نیں یا نہیں
+  (\cref{tur:und:uns:thm:decision-prob,tur:und:uns:cor:undecidable-sat})۔
+
+  پر جملیاں دی درستی تے پورا ہو سکّن دیاں تعریفاں
+  ہر قسم دیاں !!{structure}s لئی دتیاں
+  جاندیاں نیں، چاہے اوہ محدود ہون یا لامتناہی۔
+  تُہانوں شاید لگے کہ ایہ فیصلہ کرنا سوکھا
+  ہووے گا کہ اک دتا ہویا !!a{sentence} کسے محدود
+  !!{structure} وچ پورا ہو سکدا اے یا نہیں
+  (یا ساریاں محدود !!{structure}s وچ سچ
+  اے یا نہیں)۔ اسی فیصلے دے مسئلے دی
+  حل نہ ہو سکّن والا ثبوت ایویں ڈھال سکدے
+  آں کہ اوہ ایہناں صورتاں وچ وی فیصلے دا ناممکن ہونا دکھاوے۔
+
+  پہلے~\olref[ver]{lem:halt-if-valid} دے
+  ثبوت ول ویکھو۔ اوتھے اسی اک
+  نمونہ~$\Struct M$ بنایا سی جو~$!T(M,w)$
+  نوں پورا کردا اے تے جیہڑا
+  عین اوہ کم بیان کردا اے جیہڑا مشین~$M$
+  انپٹ~$w$ اُتے شروع ہو کے کردی اے۔
+  اوس نمونے دا دائرہ~$\Nat$ سی، یعنی لامتناہی۔
+  پر جے~$M$ انپٹ~$w$ اُتے واقعی رُکدی
+  ہووے، تاں اسی ایس طرح اک محدود
+  نمونہ~$\Struct M'$ بنا سکدے آں۔ فرض کرو
+  $M$ انپٹ~$w$ اُتے شروع ہو کے~$k$ قدم
+  بعد رُکدی اے۔ دائرہ~$\Domain{M'}$ لئی
+  سیٹ~$\{0, \dots, n\}$ لو، جتھے
+% PNB-CMP-038: leave a point strictly beyond the last executed time and needed tape position.
+  $n$، $k$ تے~$w$ دی لمبائی وچوں وڈے
+  عدد توں اک ودھ اے؛ تے ایہ تعبیر رکھو:
+  \[
+    \Assign{\prime}{M'}(x) = 
+    \begin{cases}
+      x + 1 &\text{جے $x < n$ ہووے}\\
+      n &\text{ورنہ،}
+    \end{cases}
+  \]
+  تے~$\tuple{x,y} \in \Assign{<}{M'}$
+  اُدوں تے صرف اُدوں جدوں~$x < y$ یا~$x = y = n$۔
+  باقی~$\Struct{M'}$ نوں~$\Struct{M}$ وانگ
+  تعریف کرو۔ $\Struct{M'}$ دی تعریف
+  مطابق، عین~\olref[ver]{lem:halt-if-valid}
+  دے ثبوت وانگ، $\Sat{M'}{!T(M,w)}$۔
+  تے چونکہ اسی فرض کیتا اے کہ~$M$
+  انپٹ~$w$ اُتے رُکدی اے، ایس لئی
+  $\Sat{M'}{!E(M,w)}$۔ لہٰذا
+  $\Struct{M'}$، $!T(M,w) \land !E(M,w)$
+  دا محدود نمونہ اے (دھیان دیو کہ
+  اسی~$\lif$ دی تھاں~$\land$ رکھیا اے)۔
+  
+  ثبوت دا ادھا کم ہو گیا: اسی دکھا دتا
+  کہ جے~$M$ انپٹ~$w$ اُتے رُکے، تاں
+  $!T(M,w) \land !E(M,w)$ دا محدود نمونہ
+  اے۔ پر ایہدی اُلٹ گل سچ نہیں۔ کجھ
+  ٹیورنگ مشیناں کسے انپٹ~$w$
+  اُتے نہیں رُکدیاں، پر~$!T(M,w)
+  \land !E(M,w)$ دا فیر وی محدود نمونہ
+  ہو سکدا اے۔ مثال لئی مشین~$M$ لو
+  جیہدی اکّو حالت~$q_0$ تے اکّو
+  حکم~$\delta(q_0,\TMblank) =
+  \tuple{q_0,\TMblank,\TMstay}$ اے۔
+  خالی انپٹ~$w = \emptyseq$
+  اُتے شروع ہو کے ایہ مشین کدی نہیں
+  رُکدی: ایہ لامتناہی چکر وچ اے، پر نہ
+  پٹی بدلدی اے نہ سر ہلاندی اے۔
+  ساریاں مکمل حالتاں اکّو جہیاں نیں
+  (اوہی حالت، سر دی اوہی جگہ، پٹی دے
+  اوہی نشان)۔ اسی اک محدود
+  !!{structure}~$\Struct{M''}$ تعریف کر
+  سکدے آں جیہڑی~$!T(M,\emptyseq) \land
+  !E(M,\emptyseq)$ پورا کردی اے (مشق)۔
+  البتہ اسی~$!T(M,w)$ نوں مناسب طریقے
+  نال بدل سکدے آں تاکہ ایداں دیاں
+  !!{structure}s خارج ہو جان۔
+
+  \begin{prob}
+    ٹیورنگ مشین~$M$ لو جیہدی
+    اکّو حالت~$q_0$ تے اکّو
+% PNB-CMP-039: the sole state and both successor interpretations are M-double-prime.
+    حکم~$\delta(q_0,\TMblank) =
+    \tuple{q_0,\TMblank,\TMstay}$ اے۔
+    $\Domain{M''} = \{0, 1, 2\}$،
+    $\Assign{\prime}{M''}(0) =
+    \Assign{\prime}{M''}(1) = 1$
+    تے~$\Assign{\prime}{M''}(2) = 2$ رکھو؛
+    تے~$\Assign{<}{M''} = \{\tuple{0,1},
+    \tuple{1,1}, \tuple{2,2}\}$۔
+    $\Assign{\Obj Q_{q_0}}{M''}$،
+    $\Assign{\Obj
+    S_{\TMblank}}{M''}$ تے
+    $\Assign{\Obj S_{\TMendtape}}{M''}$
+    ایویں تعریف کرو کہ~$!T(M,\emptyseq)$
+    تے~$!E(M,\emptyseq)$ دونیں سچ
+    ہو جان، تے سمجھاؤ کیوں۔ اشارہ:
+    $\delta(q_0, \TMendtape)$
+    غیر تعریف شدہ اے۔ یقین کرو کہ
+    \begin{align*}
+    & \Obj Q_{q_0}(\num{1}, \num{n}) \land \Obj S_{\TMendtape}(\num{0}, \num{n})
+      \land 
+      \lforall[x][(\num{0} < x \lif \Obj S_\TMblank(x, \num{n}))] \text{\quad ہر $n \in \Nat$ لئی}\\
+    & \lexists[y][(\Obj Q_{q_0}(\num{0}, y) \land \Obj S_{\TMendtape}(\num{0}, y))]
+    \end{align*}
+    دونیں~$\Struct{M''}$ وچ سچ ہون۔
+  \end{prob}
+\end{explain}
+
+ٹیورنگ مشین~$M$ دے انپٹ
+$w = \sigma_{i_1}\dots\sigma_{i_k}$ اُتے
+چلن نوں بیان کرن والے !!{sentence}s ویکھو:
+\begin{enumerate}
+\item عدداں تے~$<$ نوں بیان کرن والے
+مسلّمے (بالکل~\olref[rep]{sec} وچ
+$!T(M,w)$ دی تعریف وانگ)۔
+\item ابتدائی مکمل حالت نوں بیان کرن والے
+مسلّمے: $!T(M,w)$ دی تعریف وانگ۔
+\item اک مکمل حالت توں اگلی مکمل حالت
+ول تبدیلی نوں بیان کرن والے مسلّمے:
+
+اگے~$!A(x, y)$ پہلے وانگ ہووے، تے
+\[
+  !B(y) \ident \lforall[x][(x < y \lif \eq/[x][y])].
+\]
+\begin{enumerate}
+\item \ollabel{rep-right} ہر حکم
+$\delta(q_i, \sigma) =
+  \tuple{q_j, \sigma', \TMright}$
+لئی ایہ !!{sentence}:
+\begin{align*}
+& \lforall[x][\lforall[y][(
+   (\Obj Q_{q_i}(x, y) \land \Obj S_{\sigma}(x, y)) \lif {}]] \\
+&\qquad   (\Obj Q_{q_j}(x', y') \land \Obj S_{\sigma'}(x, y') \land
+!A(x, y) \land !B(y')))
+\end{align*}
+\item \ollabel{rep-left} ہر حکم
+$\delta(q_i, \sigma) =
+  \tuple{q_j, \sigma', \TMleft}$
+لئی ایہ !!{sentence}:
+% PNB-CMP-040: non-edge left writes x-prime and must also force B at the next time.
+\begin{align*}
+& \lforall[x][\lforall[y][
+    ((\Obj Q_{q_i}(x', y) \land \Obj S_{\sigma}(x', y)) \lif {}]]\\
+& \qquad   (\Obj Q_{q_j}(x, y') \land \Obj S_{\sigma'}(x', y') \land
+!A(x', y) \land !B(y'))) \land {}\\
+& \lforall[y][((\Obj Q_{q_i}(\num{0}, y) \land \Obj S_{\sigma}(\num{0},
+    y)) \lif {}]\\
+& \qquad (\Obj Q_{q_j}(\num{0}, y') \land \Obj S_{\sigma'}(\num{0},
+  y') \land !A(\num{0}, y) \land !B(y')))
+\end{align*}
+\item \ollabel{rep-stay} ہر حکم
+$\delta(q_i, \sigma) =
+  \tuple{q_j, \sigma', \TMstay}$
+لئی ایہ !!{sentence}:
+\begin{align*}
+& \lforall[x][\lforall[y][(
+   (\Obj Q_{q_i}(x, y) \land \Obj S_{\sigma}(x, y)) \lif {}]] \\
+&\qquad (\Obj Q_{q_j}(x, y') \land \Obj S_{\sigma'}(x, y') \land
+!A(x, y) \land !B(y')))
+\end{align*}
+\end{enumerate}
+ویکھو کہ~$M$ دیاں حالتی تبدیلیاں بیان
+کرن والے !!{sentence}s وچوں ہر اک
+$!T(M,w)$ دے متعلقہ !!{sentence}
+ورگا اے۔ ہر اک دے آخر وچ
+$!B(y')$ جوڑیا اے۔ $!B(y')$ ایہ
+یقینی بناندا اے کہ «اگلی» مکمل حالت
+دا نمبر~$y'$، پچھلے سارے نمبراں
+$\Obj 0$، $\Obj 0'$، \dots{} توں وکھرا اے۔
+% \item Sentences that express consistency conditions:
+% \begin{enumerate}
+%   \item\ollabel{rep-con-symb}%
+%   !!^a{sentence} that says that no square can have more than one
+%   symbol on it at any given time:
+%   \[\lforall[x][\lforall[y][(\Obj S_{\sigma}(x, y) \lif \lnot \Obj
+%   S_{\sigma'}(x, y))]],\]
+%   for every pair $\sigma \neq \sigma'$ of tape symbols of~$T$.
+%   \item\ollabel{rep-con-state}%
+%   !!^a{sentence} that says that $M$ cannot be in more than one state
+%   at any given time:
+%   \[\lforall[x][\lforall[y][(\Obj Q_{q}(x, y) \lif
+%   \lforall[z][\lnot \Obj
+%   Q_{q'}(z, y))]],\]
+%   for every pair $q \neq q'$ of states of~$T$.
+%   \item\ollabel{rep-con-tape}%
+%   !!^a{sentence} that says that $M$ cannot be on more than one tape
+%   square at any given time:
+%   \[\lforall[x][\lforall[y][(\Obj Q_{q}(x, y) \lif
+%   \lforall[z][\eq/[z][y]\lif \lnot \Obj
+%   Q_{q'}(z, y))]],\]
+%   for every pair $q$, $q'$ of states of~$T$.
+% \end{enumerate}
+\end{enumerate}
+اُتلے سارے !!{sentence}s جوڑ کے بنے عطف نوں
+$!T'(M, w)$ آکھو، ٹیورنگ
+مشین~$M$ تے انپٹ~$w$ لئی۔
+
+\begin{lem}\ollabel{lem:halts-sat}
+  جے~$M$ انپٹ~$w$ اُتے شروع ہو کے
+  رُکدی اے، تاں~$!T'(M,w) \land !E(M,w)$
+  دا اک محدود نمونہ اے۔
+\end{lem}
+
+\begin{proof}
+  $\Struct{M'}$ نوں
+  \olref[ver]{lem:halt-if-valid} دے ثبوت
+  وانگ لو، پر ایہ رکھو:
+  \begin{align*}
+    \Domain{M'} & = \{0, \dots, n\},\\
+    \Assign{\prime}{M'}(x) & = 
+    \begin{cases}
+      x + 1 &\text{جے $x < n$ ہووے}\\
+      n &\text{ورنہ،}
+    \end{cases} \\
+    \tuple{x,y} \in \Assign{<}{M'} &\text{عین اوہدوں جدوں $x < y$ یا $x = y = n$،}
+  \end{align*}
+% PNB-CMP-038: cap strictly beyond the last transition and input extent.
+  جتھے~$n = \max(k,\len{w})+1$،
+  تے~$k$ اوہ سب توں گھٹ عدد اے جیہدے لئی
+  مشین~$M$ انپٹ~$w$ اُتے شروع ہو
+  کے~$k$ قدم چُکّن توں بعد رُک
+  چکی ہووے۔
+  اسی ایہ جانچ مشق لئی چھڈدے آں کہ
+% PNB-CMP-041: E is a named formula, and the modified theory is T-prime.
+  $\Sat{M'}{!T'(M,w) \land !E(M,w)}$۔
+\end{proof}
+
+\begin{prob}
+  \olref[tur][und][tra]{lem:halts-sat}
+  دا ثبوت مکمل کرو: ایہ ثابت کرو کہ
+% PNB-CMP-041: exercise must establish the new T-prime conjunction with !E.
+  $\Sat{M'}{!T'(M,w) \land !E(M,w)}$۔
+\end{prob}
+
+\begin{lem}\ollabel{lem:sat-halts}
+  جے~$!T'(M,w) \land !E(M,w)$ دا
+  اک محدود نمونہ ہووے، تاں~$M$
+  انپٹ~$w$ اُتے شروع ہو کے رُکدی اے۔
+\end{lem}
+
+\begin{proof}
+  اسی متضادِ نقیض ثابت کراں گے۔
+  فرض کرو~$M$ انپٹ~$w$ اُتے شروع ہو
+  کے نہیں رُکدی۔ جے~$!T'(M,w) \land
+  !E(M,w)$ دا سرے توں کوئی نمونہ
+  نہ ہووے تاں کم پورا اے۔ ایس لئی
+% PNB-CMP-042: the assumed model belongs to the lemma's T-prime theory.
+  فرض کرو~$\Struct{M}$،
+  $!T'(M,w) \land !E(M, w)$ دا نمونہ
+  اے۔ سانوں دکھانا اے کہ ایہ محدود
+  نہیں ہو سکدا۔
+  
+  اسی~\olref[ver]{lem:config} وانگ
+  ثابت کر سکدے آں کہ جے~$M$،
+  انپٹ~$w$ اُتے شروع ہو کے
+  $n$ قدم بعد ہن تک نہ رُکی ہووے
+  تے ایہ قدم-گنتی مثبت ہووے،
+% PNB-CMP-043: B is forced at positive successor times, not the zero base.
+  تاں~$!T'(M,w)
+  \Entails !C(M, w, n) \land
+  !B(\num{n})$؛ صفر اُتے ابتدائی
+  مکمل حالت سِدھی ابتدائی مسلّماں
+  توں ملدی اے۔ چونکہ~$M$ انپٹ~$w$
+  اُتے شروع ہو کے کدی نہیں رُکدی،
+  ایس لئی~$!T'(M,w) \Entails !C(M, w, n) \land
+  !B(\num{n})$ ہر مثبت~$n \in \Nat$
+  لئی۔ دھیان دیو کہ
+  \olref[rep]{prop:mlessk} مطابق
+  $!T'(M,w) \Entails \num{k} < \num{n}$
+  ہر~$k < n$ لئی۔ نالے
+  $!B(\num{n}) \Entails \num{k} < \num{n} \lif
+  \eq/[\num{k}][\num{n}]$۔
+  ایس لئی~$\Sat{M}{\eq/[\num{k}][\num{n}]}$
+  ہر~$k < n$ لئی،
+  یعنی ٹرماں~$\num{k}$ دی لامتناہی
+  لڑی دیاں قدراں~$\Struct{M}$ وچ
+  آپس وچ وکھ وکھ ہون گیاں۔ ایس لئی
+  $\Domain{M}$ لامتناہی ہونا
+  ضروری اے؛ ایس لئی~$\Struct{M}$،
+  $!T'(M,w) \land !E(M, w)$
+  دا محدود نمونہ نہیں ہو سکدا۔
+\end{proof}
+
+\begin{prob}
+  \olref[tur][und][tra]{lem:sat-halts}
+  دا ثبوت مکمل کرو: ایہ ثابت کرو کہ
+  جے~$M$ انپٹ~$w$ اُتے شروع ہو کے
+  $n$ قدم بعد نہ رُکی ہووے، تاں
+% PNB-CMP-043: the exercise needs the positive-time qualification.
+  $!T'(M,w) \Entails !B(\num{n})$
+  ہر مثبت عدد لئی۔ صفر دی
+  مکمل حالت ابتدائی مسلّماں توں لو۔
+\end{prob}
+
+\begin{thm}[تراختنبرُوت دا قضیہ]
+  \ollabel{thm:trakhtenbrodt}
+  ایہ فیصلہ نہیں کیتا جا سکدا کہ
+  پہلے درجے دی منطق دا دتا ہویا
+  !!{sentence} کوئی محدود نمونہ رکھدا اے
+  یا نہیں (یعنی اوہ کسے محدود
+  ساخت وچ پورا ہو سکدا اے یا نہیں)۔
+\end{thm}
+
+\begin{proof}
+  فرض کرو کوئی ٹیورنگ مشین~$F$
+  محدود نمونہ ہون دا فیصلہ
+  کردی ہووے۔ فیر کسے وی
+  ٹیورنگ مشین~$M$ تے انپٹ~$w$
+  توں اسی~$!T'(M,w) \land !E(M,w)$
+  جملہ حساب کرکے~$F$ نال فیصلہ
+  کر سکدے آں کہ ایہدا محدود
+  نمونہ اے یا نہیں۔
+  \cref{tur:und:tra:lem:halts-sat,tur:und:tra:lem:sat-halts}
+  مطابق ایہدا محدود نمونہ اُدوں تے
+  صرف اُدوں اے جدوں~$M$ انپٹ~$w$
+  اُتے شروع ہو کے رُکدی اے۔
+  ایس لئی~$F$ نال رُکّن دا
+  مسئلہ حل ہو جائے گا۔ سانوں
+  پتا اے کہ ایہ حل نہیں ہو سکدا۔
+\end{proof}
+
+\begin{cor}\ollabel{cor:fproof-incomp}%
+% PNB-CMP-044: the contradiction uses effective enumeration of derivations.
+  ہر \emph{محدود} ساخت وچ درستی لئی
+  کوئی صحت مند تے کامل !!{derivation} دا نظام،
+  جیہدے اخذ مؤثر طور اُتے گنتی وار
+  فہرست وچ لکھے جا سکن، نہیں ہو سکدا۔
+  ایہ ایہو جیہا !!a{derivation} دا نظام ہووے گا
+  جیہدے وچ~$\Proves !B$
+  اُدوں تے صرف اُدوں ہووے جدوں
+  $\Sat{M}{!B}$ ہر محدود
+  !!{structure}~$\Struct{M}$ وچ ہووے۔
+\end{cor}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[tur][und][tra]{cor:fproof-incomp}
+  ثابت کرو۔ دھیان دیو کہ
+  $!B$ ہر محدود !!{structure}
+  وچ اُدوں تے صرف اُدوں پورا اتردا
+  اے جدوں~$\lnot !B$ کسے وی محدود
+  ساخت وچ پورا نہیں ہو سکدا۔
+  سمجھاؤ کہ محدود نمونہ ہون دا مسئلہ،
+  \olref[tur][und][uns]{thm:valid-ce}
+  والے معنی وچ نیم فیصلہ
+  کرن جوگ کیوں اے۔ ایس
+  توں دلیل دیو کہ جے محدود
+% PNB-CMP-044: effective enumeration is needed for the corollary's decision procedure.
+  درستی لئی کوئی مؤثر
+  !!a{derivation} دا نظام
+  ہووے، تاں محدود نمونہ ہون دا
+  فیصلہ ہو سکدا ہووے گا۔
+\end{prob}
+
+\end{document}

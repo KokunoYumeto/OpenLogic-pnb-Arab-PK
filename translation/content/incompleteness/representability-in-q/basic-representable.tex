@@ -1,0 +1,244 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: basic-representable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{req}{bre}
+\olsection{بنیادی فنکشن~$\Th{Q}$ وچ قابلِ نمائندگی نیں}
+
+پہلاں سانوں وکھانا اے کہ سارے بنیادی فنکشن~$\Th{Q}$ وچ
+قابلِ نمائندگی نیں۔ ایس لئی سانوں وکھانا اے کہ ہر $k$-دلیلی
+بنیادی فنکشن $f(x_0,\dots,x_{k-1})$ نال !!a{formula}
+$!A_f(x_0,\dots,x_{k-1},y)$ کِویں جوڑیے جیہڑا اوہدی نمائندگی کرے۔
+
+اسیں صفر، جانشین، جمع، ضرب، برابری دے امتیازی فنکشن تے
+پروجیکشن فنکشناں دی نمائندگی کر سکاں گے۔ ہر صورت وچ نمائندگی
+کرن والا فارمولا سِدھا اے۔ مثلاً صفر دی نمائندگی فارمولا
+$y = \Obj 0$ کردا اے، جانشین دی نمائندگی !!{formula} $x_0' = y$
+کردا اے، تے جمع دی نمائندگی !!{formula} $(x_0 + x_1) = y$
+کردا اے۔ اصل کم ایہ وکھانا اے کہ $\Th{Q}$ متعلقہ !!{sentence}s
+ثابت کر سکدا اے۔ مثلاً اُتلا !!{formula} جمع دی نمائندگی
+کردا اے جے ایہ وکھائیے کہ قدرتی عدداں $m$ تے $n$ دے ہر جوڑے
+لئی $\Th{Q}$ ایہ دونوں گلاں ثابت کردا اے۔
+\begin{align*}
+& \eq[\num n + \num m][\num {n+m}] \text{ تے}\\
+& \lforall[y][(\eq[(\num n + \num m)][y] \lif \eq[y][\num{n+m}])].
+\end{align*}
+
+\begin{prop}
+\ollabel{prop:rep-zero}
+صفر فنکشن $\Zero(x) = 0$ دی~$\Th{Q}$ وچ نمائندگی فارمولا
+$!A_{\Zero}(x,y) \ident \eq[y][\Obj 0]$ کردا اے۔
+\end{prop}
+
+\begin{prop}
+\ollabel{prop:rep-succ}
+جانشین فنکشن $\Succ(x) = x+1$ دی~$\Th{Q}$ وچ نمائندگی فارمولا
+$!A_{\Succ}(x,y) \ident \eq[y][x']$ کردا اے۔
+\end{prop}
+
+\begin{prop}
+\ollabel{prop:rep-proj}
+پروجیکشن فنکشن $\Proj{n}{i}(x_0, \dots, x_{n-1}) = x_i$
+دی~$\Th{Q}$ وچ نمائندگی ہِٹھلا فارمولا کردا اے۔
+\[!A_{\Proj{n}{i}}(x_0, \dots, x_{n-1}, y) \ident \eq[y][x_i].\]
+\end{prop}
+
+\begin{prob}
+ثابت کرو کہ $\eq[y][\Obj 0]$، $\eq[y][x']$ تے $\eq[y][x_i]$ بالترتیب
+$\Zero$، $\Succ$ تے $\Proj{n}{i}$ دی نمائندگی کردے نیں۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:rep-id}
+% PNB-CMP-054: case دی عام عبارت لئی اک text wrapper؛فارمولے قائم۔
+برابری~$=$ دا امتیازی فنکشن،
+\[
+\Char{=}(x_0, x_1) =
+\begin{cases}
+  1 & \text{جے } x_0 =x_1\\
+  0 & \text{نہیں تاں}
+\end{cases}
+\]
+دی~$\Th{Q}$ وچ نمائندگی ہِٹھلا فارمولا کردا اے۔
+\[
+  !A_{\Char{=}}(x_0, x_1, y) \ident (\eq[x_0][x_1] \land \eq[y][\num{1}]) \lor (\eq/[x_0][x_1] \land
+\eq[y][\num{0}]).
+\]
+\end{prop}
+
+ثبوت لئی ہِٹھلا معاون قضیہ چاہیدا اے۔
+
+\begin{lem}
+\ollabel{lem:q-proves-neq} قدرتی عدداں $n$ تے $m$ لئی جے $n \neq m$ ہووے، تاں $\Th{Q} \Proves \eq/[\num n][\num m]$۔
+\end{lem}
+
+\begin{proof}
+$n$ اُتے استقرا نال وکھاؤ کہ ہر $m$ لئی، جے $n \neq m$، تاں $Q \Proves \eq/[\num n][\num m]$۔
+
+بنیادی صورت وچ $n = 0$ اے۔ جے $m$، $0$ دے برابر نہیں، تاں
+$m = k + 1$، جتھے $k$ کوئی قدرتی عدد اے۔ ساڈے کول اک مسلّمہ اے جیہڑا کہندا اے
+$\lforall[x][\eq/[0][x']]$۔ مسوّر دے اک مسلّمے نال، $x$ دی تھاں $\num k$ رکھ کے، اسیں $\eq/[0][\num k']$ کڈھ سکدے آں۔
+پر $\num k'$ بس $\num m$ ای اے۔
+
+استقرائی قدم وچ اسیں $n$ لئی دعویٰ درست فرض کر سکدے آں،
+تے $n+1$ نوں ویکھدے آں۔ $m$ کوئی وی قدرتی عدد ہووے۔ دو
+صورتاں نیں:یا $m = 0$،یا کسے $k$ لئی $m = k+1$۔ پہلی صورت دا ثبوت اُتلے طریقے نال ہو جاندا اے۔ دوجی صورت وچ
+فرض کرو $n+1 \neq
+k+1$۔ تاں $n \neq k$۔ $n$ لئی استقرائی مفروضے نال ساڈے
+کول $\Th{Q} \Proves \eq/[\num n][\num k]$ اے۔ ساڈے کول
+اک مسلّمہ اے جیہڑا کہندا اے
+$\lforall[x][\lforall[y][\eq[x'][y'] \lif \eq[x][y]]]$۔ مسوّر دا اک مسلّمہ ورت کے ساڈے کول
+$\eq[\num n'][\num k'] \lif \eq[\num n][\num
+  k]$ اے۔ قضیاتی منطق نال اسیں $\Th{Q}$ وچ ایہ کڈھ سکدے آں:
+$\eq/[\num n][\num k] \lif \eq/[\num n'][\num k']$۔
+اثباتِ مقدم دے قاعدے نال اسیں $\eq/[\num n'][\num k']$ کڈھ سکدے آں؛
+ایہو سانوں چاہیدا اے، کیوں جے $\num k'$،$\num m$ اے۔
+\end{proof}
+
+\begin{explain}
+دھیان دیو کہ معاون قضیہ بنیادی گل ایہ آکھدا اے کہ $\Th{Q}$ ثابت کر سکدا اے کہ وکھریاں
+عددی عبارتاں وکھریاں شےواں دسدیاں نیں۔ مثال لئی،$\Th{Q}$
+ایہ ثابت کردا اے: $0'' \neq 0'''$۔ پر ایہ دکھاؤن لئی کہ
+گل ہر صورت وچ درست اے،ذرا احتیاط چاہیدی اے۔ ایہ وی دھیان رکھو کہ اسیں جیہڑا استقرا ورت رہے آں، اوہ
+$\Th{Q}$ دے \emph{باہر} اے۔
+\end{explain}
+
+\begin{proof}[\olref{prop:rep-id} دا ثبوت]
+جے $n = m$ ہووے، تاں $\num{n}$ تے $\num{m}$ اکّو ٹرم نیں،
+تے $\Char{=}(n, m) = 1$۔ پر
+$\Th{Q} \Proves (\eq[\num{n}][\num{m}] \land
+\eq[\num{1}][\num{1}])$،سو اوہ
+$!A_=(\num{n}, \num{m},
+\num{1})$ ثابت کردا اے۔ جے $n \neq m$ ہووے، تاں
+$\Char=(n, m) = 0$۔ \olref{lem:q-proves-neq} نال،
+$\Th{Q} \Proves \eq/[\num{n}][\num{m}]$،تے ایس لئی
+$(\eq/[\num{n}][\num{m}] \land \Obj 0 = \Obj 0)$ وی۔
+سو $\Th{Q}
+\Proves !A_=(\num{n}, \num{m}, \num{0})$۔
+
+دوجے حصے لئی وی دو صورتاں نیں۔ جے $n = m$،سانوں
+دکھانا اے کہ $\Th{Q} \Proves \lforall[y][(!A_=(\num{n}, \num{m}, y)
+  \lif \eq[y][\num{1}])]$۔ غیر رسمی دلیل وچ فرض کرو
+$!A_=(\num{n},
+\num{m}, y)$،یعنی:
+\[
+(\eq[\num{n}][\num{n}] \land \eq[y][\num{1}]) \lor
+(\eq/[\num{n}][\num{n}] \land \eq[y][\num{0}])
+\]
+فصل دا کھبا جز منطق نال $\eq[y][\num{1}]$ دا نتیجہ دیندا اے؛
+اوہدا سجا جز $\eq[\num{n}][\num{n}]$ نال ٹکراندا اے،جیہڑا
+منطق نال ثابت ہو سکدا اے۔
+
+دوجی صورت وچ فرض کرو $n \neq m$۔ تاں
+$!A_=(\num{n},
+\num{m}, y)$ ایہ اے:
+\[
+(\eq[\num{n}][\num{m}] \land \eq[y][\num{1}]) \lor
+(\eq/[\num{n}][\num{m}] \land \eq[y][\num{0}])
+\]
+ایتھے فصل دا کھبا جز $\eq/[\num{n}][\num{m}]$ نال ٹکراندا اے،
+جیہڑا \olref{lem:q-proves-neq} نال $\Th{Q}$ وچ ثابت ہو سکدا اے؛
+فصل دا سجا جز $\eq[y][\num{0}]$ دا نتیجہ دیندا اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:rep-add}
+جمع فنکشن $\Add(x_0, x_1) = x_0+x_1$ دی~$\Th{Q}$ وچ نمائندگی ہِٹھلا فارمولا کردا اے۔
+\[
+  !A_{\Add}(x_0, x_1, y) \ident \eq[y][(x_0 + x_1)].
+\]
+\end{prop}
+
+\begin{lem}
+\ollabel{lem:q-proves-add}
+$\Th{Q} \Proves \eq[(\num{n} + \num{m})][\num{n+m}]$
+\end{lem}
+
+\begin{proof}
+اسیں ایہ $m$ اُتے استقرا نال ثابت کردے آں۔ جے $m = 0$،
+دعویٰ ایہ اے کہ
+$\Th{Q} \Proves \eq[(\num{n} + \Obj 0)][\num{n}]$۔ ایہ
+مسلّمے~$!Q_4$ توں نکلدا اے۔ ہن $m$ لئی دعویٰ فرض کرو؛
+ہن $m+1$ لئی دعویٰ ثابت کریے۔ یعنی وکھائیے کہ
+$\Th{Q} \Proves \eq[(\num{n} +
+  \num{m+1})][\num{n+m+1}]$۔ دھیان دیو کہ $\num{m+1}$
+بس $\num{m}'$ اے، تے $\num{n+m+1}$ بس $\num{n+m}'$ اے۔
+مسلّمے $!Q_5$ نال،$\Th{Q}
+\Proves \eq[(\num{n} + \num{m}')][(\num{n}+\num{m})']$۔
+استقرائی مفروضے نال،
+$\Th{Q} \Proves \eq[(\num{n} + \num{m})][\num{n+m}]$۔ سو
+$\Th{Q} \Proves \eq[(\num{n} + \num{m}')][\num{n+m}']$۔
+\end{proof}
+
+\begin{proof}[\olref{prop:rep-add} دا ثبوت]
+!!{formula}~$!A_\Add(x_0, x_1, y)$ جیہڑا $\Add$ دی نمائندگی کردا اے، ایہ اے
+$\eq[y][(x_0 + x_1)]$۔ پہلاں اسیں دکھاندے آں کہ جے
+$\Add(n, m) = k$،تاں
+$\Th{Q} \Proves !A_\Add(\num{n}, \num{m}, \num{k})$،
+یعنی $\Th{Q}
+\Proves \eq[\num{k}][(\num{n} + \num{m})]$۔ پر کیوں جے
+$k = n + m$، ایس لئی $\num{k}$ عین $\num{n+m}$ اے،تے اسیں
+\olref{lem:q-proves-add} وچ ایہ دکھا چُکے آں:
+$\Th{Q} \Proves \eq[(\num{n} +
+  \num{m})][\num{n+m}]$۔
+
+سانوں ایہ وی دکھانا اے کہ جے $\Add(n, m) = k$،تاں
+\[
+\Th{Q} \Proves \lforall[y][(!A_\Add(\num{n}, \num{m}, y) \lif
+  \eq[y][\num{k}])].
+\]
+فرض کرو ساڈے کول $\eq[(\num{n} + \num{m})][y]$ اے۔
+کیوں جے
+\[
+\Th{Q} \Proves \eq[(\num{n}+\num{m})][\num{n+m}],
+\]
+اسیں کھبے پاسے دی تھاں $\num{n+m}$ رکھ کے
+$\eq[\num{n+m}][y]$ حاصل کر سکدے آں،ہر~$y$ لئی۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:rep-mult}
+ضرب فنکشن $\Mult(x_0, x_1) = x_0 \cdot x_1$ دی~$\Th{Q}$
+وچ نمائندگی ہِٹھلا فارمولا کردا اے۔
+\[
+  !A_{\Mult}(x_0, x_1, y) \ident y = (x_0 \times x_1).
+\]
+\end{prop}
+
+\begin{proof} مشق۔ \end{proof}
+
+\begin{lem}
+\ollabel{lem:q-proves-mult}
+$\Th{Q} \Proves \eq[(\num{n} \times \num{m})][\num{n \cdot m}]$
+\end{lem}
+
+\begin{proof} مشق۔ \end{proof}
+
+\begin{prob}
+\olref[inc][req][bre]{lem:q-proves-mult} ثابت کرو۔
+\end{prob}
+
+\begin{prob}
+\olref[inc][req][bre]{lem:q-proves-mult} ورت کے
+\olref[inc][req][bre]{prop:rep-mult} ثابت کرو۔
+\end{prob}
+
+\begin{explain}
+  یاد رکھو کہ اسیں حساب دی زبان دے فنکشن نشان لئی $\times$
+ورتدے آں تے عدداں اُتے عام ضرب دے عمل لئی $\cdot$۔ ایس لئی
+$\cdot$ عدد دسن والیاں عبارتاں وچکار آ سکدا اے، جیویں
+$m \cdot n$ وچ۔ $\times$ صرف حساب دی زبان دے ٹرماں وچکار
+آندا اے، جیویں $(\num{m} \times \num{n})$ وچ۔ ہور وی اُلجھن
+والی گل ایہ اے کہ $+$، !!{function} تے جمع دے عمل، دونوں لئی
+ورتیا جاندا اے۔ جدوں ایہ ٹرماں وچکار آوے، جیویں
+$(\num{n} + \num{m})$ وچ، تاں ایہ حساب دی زبان دا $2$-دلیلی
+!!{function} اے۔ جدوں ایہ عدداں وچکار آوے، جیویں $n+m$ وچ،
+تاں ایہ جمع دا عمل اے۔ $\num{n+m}$ وچ وی ایہو جمع اے۔
+ایہ عدد~$n+m$ دی معیاری عددی عبارت اے۔
+\end{explain}
+
+\end{document}

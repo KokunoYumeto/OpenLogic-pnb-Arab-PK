@@ -1,0 +1,243 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: complete-sets
+
+% Definition of complete consistent sets. Properties of complete sets required
+% for completeness proved are in provability.tex in the
+% chapter on the proof system used.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{ccs}}
+      {\olfileid{pl}{com}{ccs}}
+      
+\olsection{\usetoken{P}{sentence} دے مکمل بے تضاد سیٹ}
+
+\begin{defn}[مکمل سیٹ]
+\ollabel{def:complete-set} !!{sentence}s دا سیٹ~$\Gamma$
+\emph{!!{complete}} اُدوں تے صرف اُدوں اے جدوں ہر
+!!{sentence}~$!A$ لئی یا تاں $!A \in
+\Gamma$ ہووے یا $\lnot !A \in \Gamma$ ہووے۔
+\end{defn}
+
+\begin{explain}
+!!^{complete} جملیاں دے سیٹ کوئی سوال بے جواب نہیں چھڈدے۔
+ہر !!{sentence}~$!A$ لئی $\Gamma$ ایہ ”دسدا“ اے کہ $!A$
+سچا اے یا جھوٹھا۔ !!{complete} سیٹاں دی اہمیت تمامیت دے
+قضیے دے ثبوت توں اگے وی اے۔ مثال لئی، جیہڑا نظریہ
+!!{complete} ہووے تے مسلّماں راہیں بیان کرن جوگ ہووے،
+اوہدے ہر جملے بارے مؤثر طریقے نال فیصلہ کیتا جا سکدا اے۔
+\end{explain}
+
+\begin{explain}
+!!^{complete} بے تضاد سیٹ تمامیت دے ثبوت وچ اہم نیں،
+کیوں جے اسیں یقین نال کہہ سکدے آں کہ !!{sentence}s دا
+ہر بے تضاد سیٹ~$\Gamma$، کسے !!a{complete} بے تضاد
+سیٹ~$\Gamma^*$ وچ شامل اے۔ !!^a{complete} بے تضاد
+سیٹ وچ ہر !!{sentence}~$!A$ لئی یا $!A$ ہوندا اے یا
+اوہدی نفی $\lnot !A$، پر دونیں نہیں۔ ایہ خاص طور تے
+\iftag{FOL}{جوہری !!{sentence}s}{قضیاتی متغیراں} لئی وی
+سچ اے۔ ایس لئی !!a{complete} بے تضاد سیٹ توں
+\iftag{FOL}{، ایسی زبان وچ جیہڑی مناسب !!{constant}s نال
+ودھائی گئی ہووے،}{} اسیں
+\iftag{FOL}{!!a{structure}}{!!a{valuation}} بنا سکدے
+آں جیہدے وچ \iftag{FOL}{!!{predicate}s دی تعبیر}{قضیاتی
+متغیراں نوں دتی صداقتی قدر} دا تعین ایس گل مطابق
+ہووے گا کہ کِہڑے \iftag{FOL}{جوہری
+!!{sentence}s}{!!{propositional variable}s}
+~$\Gamma^*$ وچ نیں۔ فیر ایہ ثابت کیتا جا سکدا اے کہ ایہ
+\iftag{FOL}{!!{structure}}{!!{valuation}}،~$\Gamma^*$
+دے سارے !!{sentence}s نوں سچا بناندی اے (تے ایس لئی
+~$\Gamma$ دے سارے جملیاں نوں وی)۔ ایس آخری گل دے ثبوت
+لئی لوڑ اے کہ $\lnot !A \in \Gamma^*$ اُدوں تے صرف اُدوں
+جدوں $!A \notin \Gamma^*$، تے $(!A \lor !B) \in
+\Gamma^*$ اُدوں تے صرف اُدوں جدوں $!A \in \Gamma^*$
+یا $!B \in \Gamma^*$، وغیرہ۔
+\end{explain}
+
+اگے اسیں $\Proves$ دی انعکاسیت، یک رُخیت تے تعدیت دیاں
+خاصیتاں اکثر بنا وکھرا ذکر کیتیاں ورتاں گے (ویکھو
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ptn:sec},prfND/{fol:ntd:ptn:sec},prfAX/{fol:axd:ptn:sec},prfTab/{fol:tab:ptn:sec}}}{%
+  \tagrefs{prfSC/{pl:seq:ptn:sec},prfND/{pl:ntd:ptn:sec},prfAX/{pl:axd:ptn:sec},prfTab/{pl:tab:ptn:sec}}})۔
+
+\begin{prop}
+\ollabel{prop:ccs}
+فرض کرو $\Gamma$ !!{complete} تے بے تضاد اے۔ تاں:
+\begin{enumerate}
+\item \ollabel{prop:ccs-prov-in} جے $\Gamma \Proves !A$،
+  تاں $!A \in \Gamma$۔
+
+\tagitem{prvAnd}{\ollabel{prop:ccs-and} $!A \land !B \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں $!A \in \Gamma$ تے $!B \in \Gamma$
+  دونیں ہون۔}{}
+
+\tagitem{prvOr}{\ollabel{prop:ccs-or} $!A \lor !B \in \Gamma$ اُدوں
+  تے صرف اُدوں جدوں $!A \in \Gamma$ یا $!B \in \Gamma$
+  وچوں گھٹ توں گھٹ اک ہووے۔}{}
+
+\tagitem{prvIf}{\ollabel{prop:ccs-if} $!A \lif !B \in \Gamma$ اُدوں
+  تے صرف اُدوں جدوں $!A \notin \Gamma$ یا $!B \in \Gamma$
+  وچوں اک شرط پوری ہووے۔}{}
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+اگلیاں ساریاں گلاں لئی فرض کرو کہ $\Gamma$ !!{complete} تے
+بے تضاد اے۔
+\begin{enumerate}
+\item جے $\Gamma \Proves !A$، تاں $!A \in \Gamma$۔
+
+فرض کرو $\Gamma \Proves !A$۔ برہانِ خلف لئی فرض کرو کہ $!A
+\notin \Gamma$۔ چونکہ $\Gamma$ !!{complete} اے، ایس لئی
+$\lnot !A \in \Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:prv:prop:explicit-inc},
+    prfND/{fol:ntd:prv:prop:explicit-inc},
+    prfAX/{fol:axd:prv:prop:explicit-inc},
+    prfTab/{fol:tab:prv:prop:explicit-inc}}}{%
+  \tagrefs{prfSC/{pl:seq:prv:prop:explicit-inc},
+    prfND/{pl:ntd:prv:prop:explicit-inc},
+    prfAX/{pl:axd:prv:prop:explicit-inc},
+    prfTab/{pl:tab:prv:prop:explicit-inc}}}
+مطابق $\Gamma$ متضاد اے۔ ایہ $\Gamma$ دے بے تضاد ہون
+دے مفروضے دے خلاف اے۔ ایس لئی $!A \notin
+\Gamma$ نہیں ہو سکدا، سو $!A \in \Gamma$۔
+
+\tagitem{defAnd}{}{%
+\iftag{probAnd}{مشق۔}{%
+$!A \land !B \in \Gamma$ اُدوں تے صرف اُدوں جدوں
+$!A \in \Gamma$ تے $!B \in \Gamma$ دونیں ہون:
+
+اگلے رخ لئی فرض کرو $!A \land !B \in \Gamma$۔ فیر
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-land},
+    prfND/{fol:ntd:ppr:prop:provability-land},
+    prfAX/{fol:axd:ppr:prop:provability-land},
+    prfTab/{fol:tab:ppr:prop:provability-land}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-land},
+    prfND/{pl:ntd:ppr:prop:provability-land},
+    prfAX/{pl:axd:ppr:prop:provability-land},
+    prfTab/{pl:tab:ppr:prop:provability-land}}}، شق~(1)
+توں $\Gamma \Proves !A$ تے $\Gamma \Proves !B$۔
+\olref{prop:ccs-prov-in} مطابق $!A \in \Gamma$ تے
+$!B \in \Gamma$، جیویں چاہیدا سی۔
+
+اُلٹے رخ لئی فرض کرو $!A \in \Gamma$ تے $!B \in
+\Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-land},
+    prfND/{fol:ntd:ppr:prop:provability-land},
+    prfAX/{fol:axd:ppr:prop:provability-land},
+    prfTab/{fol:tab:ppr:prop:provability-land}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-land},
+    prfND/{pl:ntd:ppr:prop:provability-land},
+    prfAX/{pl:axd:ppr:prop:provability-land},
+    prfTab/{pl:tab:ppr:prop:provability-land}}}، شق~(2)
+توں $\Gamma \Proves !A \land !B$۔ فیر
+\olref{prop:ccs-prov-in} مطابق $!A \land
+!B \in \Gamma$، جیویں چاہیدا سی۔}}
+
+\tagitem{defOr}{}{%
+\iftag{probOr}{مشق۔}{%
+پہلے اسیں وکھاواں گے کہ جے $!A \lor !B \in \Gamma$،
+تاں یا $!A \in \Gamma$ یا $!B \in \Gamma$۔ فرض کرو
+$!A \lor !B \in \Gamma$، پر $!A
+\notin \Gamma$ تے $!B \notin \Gamma$۔ چونکہ $\Gamma$
+!!{complete} اے، ایس لئی $\lnot !A \in \Gamma$ تے
+$\lnot !B \in \Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},
+    prfND/{fol:ntd:ppr:prop:provability-lor},
+    prfAX/{fol:axd:ppr:prop:provability-lor},
+    prfTab/{fol:tab:ppr:prop:provability-lor}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-lor},
+    prfND/{pl:ntd:ppr:prop:provability-lor},
+    prfAX/{pl:axd:ppr:prop:provability-lor},
+    prfTab/{pl:tab:ppr:prop:provability-lor}}}، شق (1)
+مطابق $\Gamma$ متضاد اے؛ ایہ تضاد اے۔ سو یا $!A
+\in \Gamma$ یا $!B \in \Gamma$۔
+
+اُلٹے رخ لئی فرض کرو کہ $!A \in \Gamma$ یا $!B \in
+\Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},
+    prfND/{fol:ntd:ppr:prop:provability-lor},
+    prfAX/{fol:axd:ppr:prop:provability-lor},
+    prfTab/{fol:tab:ppr:prop:provability-lor}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-lor},
+    prfND/{pl:ntd:ppr:prop:provability-lor},
+    prfAX/{pl:axd:ppr:prop:provability-lor},
+    prfTab/{pl:tab:ppr:prop:provability-lor}}}، شق (2)
+توں $\Gamma \Proves !A \lor !B$۔ فیر
+\olref{prop:ccs-prov-in} مطابق $!A \lor
+!B \in \Gamma$، جیویں چاہیدا سی۔}}
+
+\tagitem{defIf}{}{%
+\iftag{probIf}{مشق۔}{%
+اگلے رخ لئی فرض کرو $!A \lif !B \in \Gamma$، تے
+برہانِ خلف لئی فرض کرو کہ $!A \in \Gamma$ تے
+$!B \notin \Gamma$۔ انہاں مفروضیاں اُتے
+$!A \lif !B \in \Gamma$ تے $!A \in \Gamma$۔
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif},
+    prfND/{fol:ntd:ppr:prop:provability-lif},
+    prfAX/{fol:axd:ppr:prop:provability-lif},
+    prfTab/{fol:tab:ppr:prop:provability-lif}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-lif},
+    prfND/{pl:ntd:ppr:prop:provability-lif},
+    prfAX/{pl:axd:ppr:prop:provability-lif},
+    prfTab/{pl:tab:ppr:prop:provability-lif}}}، شق (1)
+توں $\Gamma \Proves !B$۔ پر فیر
+\olref{prop:ccs-prov-in} مطابق $!B \in
+\Gamma$، جیہڑا $!B \notin \Gamma$ دے مفروضے دے
+خلاف اے۔
+
+اُلٹے رخ لئی پہلے اوہ صورت ویکھو جتھے $!A \notin
+\Gamma$۔ چونکہ $\Gamma$ !!{complete} اے، ایس لئی
+$\lnot !A \in \Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif},
+    prfND/{fol:ntd:ppr:prop:provability-lif},
+    prfAX/{fol:axd:ppr:prop:provability-lif},
+    prfTab/{fol:tab:ppr:prop:provability-lif}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-lif},
+    prfND/{pl:ntd:ppr:prop:provability-lif},
+    prfAX/{pl:axd:ppr:prop:provability-lif},
+    prfTab/{pl:tab:ppr:prop:provability-lif}}}، شق (2)
+توں $\Gamma \Proves !A \lif !B$۔ فیر
+\olref{prop:ccs-prov-in} مطابق $!A \lif !B \in
+\Gamma$، جیویں چاہیدا سی۔
+
+ہُن اوہ صورت ویکھو جتھے $!B \in \Gamma$۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif},
+    prfND/{fol:ntd:ppr:prop:provability-lif},
+    prfTab/{fol:tab:ppr:prop:provability-lif},
+    prfAX/{fol:axd:ppr:prop:provability-lif}}}{%
+  \tagrefs{prfSC/{pl:seq:ppr:prop:provability-lif},
+    prfND/{pl:ntd:ppr:prop:provability-lif},
+    prfTab/{pl:tab:ppr:prop:provability-lif},
+    prfAX/{pl:axd:ppr:prop:provability-lif}}}
+دی شق (2) توں فیر $\Gamma \Proves !A \lif !B$۔
+\olref{prop:ccs-prov-in} مطابق $!A \lif !B \in
+\Gamma$۔}}
+\end{enumerate}
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][ccs]{prop:ccs} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][ccs]{prop:ccs} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\end{document}

@@ -1,0 +1,178 @@
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: fixpoints
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{fp}
+
+\olsection{مقرر نقطے}
+
+فرض کرو اسیں عاملی فنکشن بازگشت نال ٹرم $\fn{Fac}$ دے طور
+اُتے متعین کرنا چاہندے آں، جیہدی خاصیت ایہ ہووے۔
+\[
+\fn{Fac} \ident \lambd[n][\fn{IsZero}\, n\, \num 1 (\fn{Mult}\, n (\fn{Fac}(\fn{Pred} \, n)))]
+\]
+یعنی $n$ دا عامل $1$ اے جے $n = 0$، تے ہور صورت وچ
+$n$ گُنا $n-1$ دا عامل۔ صاف اے کہ ٹرم $\fn{Fac}$ نوں
+ایویں متعین نہیں کر سکدے، کیوں جے سجے پاسے $\fn{Fac}$ آپ
+وی آؤندا اے۔ اپنے آپ دا حوالہ دین والیاں ایہو جیہیاں بازگشتی
+تعریفاں لامبڈا کیلکولس دا حصہ نہیں۔ مثلاً ٹرم دی ایس تعریف وچ
+\[
+\fn{Mult} \ident \lambd[ab][a (\fn{Add}\, a) 0]
+\]
+سجے پاسے صرف پہلاں توں متعین ٹرم آؤندے نیں، جیویں $\fn{Add}$۔
+$\fn{Add}$ نوں اوہدی تعریف والا ٹرم رکھ کے ہمیشہ ہٹا سکدے آں۔
+ایس نال $\fn{Mult}$ خالص لامبڈا ٹرم بن جاندا اے۔ جے $\fn{Add}$
+وچ وی متعین ٹرم ہون، جیویں $\fn{Add}'$ وچ نیں، تاں ایس عمل نوں
+جاری رکھ کے آخر اک خالص لامبڈا ٹرم تک پہنچ سکدے آں۔
+
+پر اُپر دِتّی $\fn{Fac}$ ورگی بازگشتی تعریف لئی ایہ گل
+سچ نہیں۔ جے سجے پاسے $\fn{Fac}$ دی آمد دی تھاں $\fn{Fac}$
+دی اپنی تعریف رکھیے، تاں سانوں ایہ ملدا اے۔
+\begin{align*}
+  \fn{Fac} & \ident \lambd[n][\fn{IsZero}\, n\, \num{1}] \\
+    & \qquad (\fn{Mult}\, n
+  ((\lambd[n][\fn{IsZero} \, n \, \num 1\, (\fn{Mult}\, n\, (\fn{Fac}
+    (\fn{Pred}\, n)))]) (\fn{Pred}\, n)))
+\end{align*}
+تے سجے پاسے $\fn{Fac}$ ہلے وی موجود اے۔ صاف اے کہ ایہ عمل
+دہراؤن نال تعریف لمّی ہوندی جاندی اے تے کدے خالص لامبڈا ٹرم
+نہیں ملدا۔ سو عاملی فنکشن، یا عام طور اُتے بازگشتی فنکشن،
+ایس طریقے نال متعین نہیں کیتے جا سکدے۔
+
+فیر وی بازگشتی تعریف توں اک گل پتا لگدی اے۔ جے $f$ عاملی
+فنکشن دا ٹرم ہووے، تاں ہِٹھلا ٹرم
+\[
+\fn{Fac}' \ident \lambd[g][\lambd[n][\fn{IsZero} \, n \, \num 1\, (\fn{Mult} \, n\, (g (\fn{Pred} n)))]]
+\]
+ٹرم $f$ اُتے لاؤن نال، یعنی $\fn{Fac}'\,f$، عاملی فنکشن ای
+ظاہر کردا اے۔ یعنی جے $\fn{Fac}'$ نوں ایہو جیہا فنکشن
+سمجھیے جیہڑا فنکشن لیندا تے فنکشن واپس دیندا اے، تاں
+$\fn{Fac'}\, f$ دی قدر بس~$f$ اے، بشرطیکہ $f$ عاملی
+فنکشن ہووے۔ فنکشن~$f$ نوں $\fn{Fac}' \, f \equal[\beta] f$
+ہوون اُتے $\fn{Fac}'$ دا \emph{مقرر نقطہ} آکھدے آں۔
+سو عاملی فنکشن $\fn{Fac}'$ دا مقرر نقطہ اے۔
+
+لامبڈا کیلکولس وچ ایہو جیہے ٹرم نیں جیہڑے دِتّے ٹرم دے مقرر
+نقطے کڈھدے نیں۔ ایہناں نال $\fn{Fac}'$ ورگے ٹرم توں عاملی
+فنکشن دی تعریف بنائی جا سکدی اے۔
+
+\begin{defn}
+  \ollabel{defn:Turing-Y}
+  \emph{وائی کمبینیٹر} ایہ ٹرم اے۔
+  \[
+  Y \ident (\lambd[ux][x(uux)])(\lambd[ux][x(uux)]).
+  \]
+\end{defn}
+
+\begin{thm}
+  $Y$ دی خاصیت اے کہ $Yg \red g(Yg)$ ہر ٹرم $g$ لئی اے۔
+  سو $Yg$ ہمیشہ~$g$ دا مقرر نقطہ اے۔
+\end{thm}
+
+\begin{proof}
+  $(\lambd[ux][x(uux)])$ نوں مختصر~$U$ لکھ لئیے، تاں جو
+  $Y \ident UU$۔ فیر
+  \begin{align*}
+    Y g &\ident (\lambd[ux][x(uux)])U\,g \\
+    &\red (\lambd[x][x(UUx)])g\\
+    & \red g(UUg) \ident g(Yg).
+  \end{align*}
+  کیوں جے $g(Yg)$ تے $Yg$ دوہاں دی تقلیل $g(Yg)$ تک ہوندی اے،
+  ایس لئی $g(Yg) \equal[\beta]
+  Yg$، تے $Yg$،~$g$ دا مقرر نقطہ اے۔
+\end{proof}
+
+کیوں جے $Yg$ اک ریڈیکس اے، ایس لئی تقلیل بغیر مُکے جاری رہ
+سکدی اے۔
+\begin{align*}
+  Y g &\red g (Y g) \\
+    &\red g (g (Y g)) \\
+    &\red g(g (g (Y g)))\\
+    &\ldots
+\end{align*}
+سو اسیں $Yg$ نوں $g$ دا اپنے آپ اُتے لامتناہی وار اطلاق
+سمجھ سکدے آں۔ جے~$g$ نوں ایس اُتے اک وار ہور لائیے، تاں
+ایویں آکھ لو کہ کوئی وادھا نہیں ہوندا۔ $g$ نوں~$g$ دے
+~$Yg$ اُتے لامتناہی وار اطلاق دے نتیجے اُتے لاؤنا ہلے وی
+$g$ دا~$Yg$ اُتے لامتناہی وار اطلاق ای اے۔
+
+دھیان دیو کہ $\beta$-تقلیل دے قدماں دا اُپرلا سلسلہ
+~$Yg$ توں شروع ہوندا اے تے لامتناہی اے۔ سو جے $Yg$ نوں
+کسے ٹرم اُتے لائیے، یعنی $(Yg)N$ ویکھیے، تاں اوہ ٹرم وی
+لامتناہی وکھرے ٹرماں تک گھٹدا اے، یعنی $(g(Yg))N$،
+$(g(g(Yg)))N$، \dots۔ فیر وی ہو سکدا اے کہ تقلیل دے
+قدماں دا کوئی \emph{ہور} سلسلہ نارمل روپ اُتے مُک جاوے۔
+
+مثال لئی عاملی فنکشن ویکھو۔ $\fn{Fac}$ دی تعریف
+$Y\, \fn{Fac}'$ دے طور اُتے کرو، یعنی $\fn{Fac'}$ دے مقرر
+نقطے وجوں۔ فیر
+\begin{align*}
+  \fn{Fac}\,\num 3
+  &\red Y\, \fn{Fac}' \, \num 3 \\
+  &\red \fn{Fac}' (Y \,\fn{Fac}') \, \num 3 \\
+  &\ident (\lambd[x][\lambd[n][\fn{IsZero} \, n\, \num 1\,
+      (\fn{Mult}\, n\, (x (\fn{Pred}\, n)))]]) \, \fn{Fac} \, \num 3\\
+  & \red \fn{IsZero} \, \num 3\, \num 1\,
+      (\fn{Mult}\, \num 3\, (\fn{Fac} (\fn{Pred}\, \num 3))) \\
+  &\red  \fn{Mult}\, \num 3 \, (\fn{Fac} \, \num 2).
+  \intertext{ایسے طرح}
+  \fn{Fac}\,\num 2
+  &\red  \fn{Mult}\, \num 2 \, (\fn{Fac} \, \num 1) \\
+  \fn{Fac}\,\num 1
+  &\red  \fn{Mult}\, \num 1 \, (\fn{Fac} \, \num 0)
+  \intertext{پر}
+  \fn{Fac}\,\num 0
+  &\red \fn{Fac}' (Y \,\fn{Fac}') \, \num 0 \\
+  &\ident (\lambd[x][\lambd[n][\fn{IsZero} \, n\, \num 1\,
+      (\fn{Mult}\, n\, (x (\fn{Pred}\, n)))]]) \, \fn{Fac} \, \num 0\\
+  & \red \fn{IsZero} \, \num 0\, \num 1\,
+      (\fn{Mult}\, \num 0\, (\fn{Fac} (\fn{Pred}\, \num 0))).\\
+  &\red \num 1.
+  \intertext{سو سارے قدم جوڑ کے}
+  \fn{Fac}\,\num 3
+  &\red  \fn{Mult}\, \num 3 \,
+  (\fn{Mult} \, \num 2\, (\fn{Mult} \, \num 1\, \num 1)).
+\end{align*}
+
+جیہڑی گل $\fn{Fac'}$ لئی اے، اوہی کسے وی بازگشتی تعریف لئی
+اے۔ فرض کرو ساڈے کول اک بازگشتی مساوات اے۔
+\begin{align*}
+g\,x_1\dots x_n & \equal[\beta] N
+\intertext{ایتھے $N$ وچ~$g$ تے $x_1$، \dots،~$x_n$ آ سکدے نیں۔
+  فیر ہمیشہ اک ایہو جیہا ٹرم~$G \ident (Y \lambd[g][\lambd[x_1\dots x_n][N]])$ اے جیہدے لئی}
+G\,x_1 \dots x_n & \equal[\beta] \Subst{N}{G}{g}.
+\intertext{کیوں جے مقرر نقطے دے قضیے مطابق}
+G \ident (Y \lambd[g][\lambd[x_1\dots x_n][N]]) & \red \lambd[g][\lambd[x_1\dots x_n][N]](Y \lambd[g][\lambd[x_1\dots x_n][N]])\\
+& \ident (\lambd[g][\lambd[x_1\dots x_n][N]])\,G
+\intertext{تے ایس توں}
+G\,x_1 \dots x_n
+& \red (\lambd[g][\lambd[x_1\dots x_n][N]])\,G\,x_1\dots x_n\\
+& \red (\lambd[x_1\dots x_n][\Subst{N}{G}{g}])\,x_1\dots x_n\\
+  & \red \Subst{N}{G}{g}.
+\end{align*}
+
+$Y$ کمبینیٹر، جیہڑا \olref{defn:Turing-Y} وچ دِتّا اے، ایلن ٹیورنگ دا اے۔ الونزو
+چرچ نے اک ہور روپ تجویز کیتا سی جیہنوں اسیں~$Y_C$ آکھاں گے۔
+\[
+Y_C \ident \lambd[g][(\lambd[x][g(xx)])(\lambd[x][g(xx)])].
+\]
+چرچ دا کمبینیٹر ٹیورنگ دے کمبینیٹر نالوں ذرا کمزور اے۔
+ایہدے لئی $Yg
+\equal[\beta] g(Yg)$ اے، پر $Yg \bred g(Yg)$ نہیں۔ منّ لو $V$
+ٹرم $\lambd[x][g(xx)]$ اے، تاں جو $Y_C \ident \lambd[g][VV]$۔
+فیر
+\begin{align*}
+  VV & \ident (\lambd[x][g(xx)])V \red g(VV)
+  \text{ تے ایس لئی}\\
+  Y_C g & \ident (\lambd[g][VV])g \red VV \red g(VV), \text{ پر ایہ وی}\\
+  g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
+\end{align*}
+دوجے لفظاں وچ، $Y_Cg$ تے $g(Y_Cg)$ دوہاں دی تقلیل اکّو ٹرم
+$g(VV)$ تک ہوندی اے۔ سو $Y_Cg
+\equal[\beta] g(Y_Cg)$۔ کئی ورتوں لئی ایہ کافی ہوندا اے۔
+
+\end{document}

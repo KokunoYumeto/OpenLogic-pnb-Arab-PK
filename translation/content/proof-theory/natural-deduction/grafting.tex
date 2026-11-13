@@ -1,0 +1,54 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: grafting
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{gra}
+
+\olsection{\usetoken{P}{proof} جوڑنے}
+
+!!^{proof}s، \Log{N1c} تے~\Log{N1i} وچ، !!{proof}s نیں !!{formula}s~$!A$ دے، مفروضیاں~$!B$ توں۔ منّ لو $!B$ دا اپنا !!a{proof} اے۔!!{proof}~$!B$ دا، !!{proof} نال $!A$ دے~$!B$ توں، کِویں جوڑیئے کہ !!a{proof} ملے~$!A$ دا جیہڑا مفروضہ~$!B$ نہ ورتے؟
+
+اک ڈھنگ ایہ اے کہ مفروضہ~$!B$ نوں !!{proof} وچوں،~$!A$ دے،~\Intro{\lif} لا کے ہٹائیے۔ فیر حاصل !!{proof}،~$!B \lif !A$ دا، !!{proof} نال،~$!B$ دے، جوڑ کے ایہ ملدا اے:
+\[
+\AxiomC{$\Discharge{!B}{x}$}
+\DeduceC{$!A$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!A$}
+\DisplayProof
+\]
+ایہ سدھا اے پر ذرا بھدّا اے۔ $\lif$ نوں شامل ای کیوں کریئے جے اوہنوں جھٹ ہٹا دینا اے؟ $!B \lif !A$ وچوں لنگھن والے ایہو جیہے چکر توں بچ سکنا چاہیدا اے۔ (ایہو جیہے چکراں توں ہمیشہ بچ سکنا ای نارمل روپ دے قضیے دا مضمون اے۔)
+
+\Log{N1c} تے~\Log{N1i} وچ ایس صورت وچ اسیں ایہ چکر سوکھے ای ٹال سکدے آں۔ مفروضیاں~$!B^x$ دی تھاں بس پورا !!{proof} رکھ دیو~$!B$ دا۔ دوجے ثبوتاں دے مفروضیاں دی تھاں !!{proof}s «جوڑنا» کافی کم آؤندا اے، سو ایہنوں تعریف وچ لکھدے آں۔
+
+\begin{defn}
+جے $\delta_1$ اک \Log{N1c}-!!{proof} (یا \Log{N1i}-!!{proof}) اے،~$!A$ دا کھُلّے مفروضے~$!B^x$ توں، تے $\delta_2$ اک \Log{N1c}-!!{proof} (\Log{N1i}-!!{proof}) اے~$!B$ دا، تاں $\Subst{\delta_1}{\delta_2}{!B^x}$ اوہ حاصل اے جیہڑا~$!B^x$ دی ہر اوہ موجودگی، جیہڑی خارج نہیں ہوئی،~$\delta_1$ وچ~$\delta_2$ نال بدل کے ملدا اے۔
+\end{defn}
+
+جے $\delta_1$ تے $\delta_2$ وچ وکھرے مفروضہ !!{formula}s اُتے اکّو نشان نہ لگیا ہووے، تے~$\delta_2$ دے کسے کھُلّے مفروضے وچ~$\delta_1$ دا کوئی خاص متغیر نہ ہووے، تاں حاصل $\Subst{\delta_1}{\delta_2}{!B^x}$ درست !!{proof} اے۔ اوہدے کھُلّے مفروضے $\delta_1$ تے~$\delta_2$ دے کھُلّے مفروضے رَل کے نیں۔ !!{proof}s جوڑدیاں ایہ شرطاں عام طور اُتے پوریاں ہوندیاں نیں۔ پہلی شرط جدوں وی $\delta_1$ تے $\delta_2$ وڈے !!{proof} دے ذیلی ثبوت ہون، پوری ہوندی اے۔ جے دوجی شرط پوری نہ ہووے تاں اسیں~$\delta_1$ دے خاص متغیراں دے ناں بدل کے ایہنوں پوری کر سکدے آں۔
+
+ایہو جیہی تعریف \Log{N2c} تے~\Log{N2i} اُتے وی لگدی اے۔
+
+\begin{defn}
+جے $\delta_1$ اک \Log{N2c}-!!{proof} (یا \Log{N2i}-!!{proof}) اے،~$x:!B, \Gamma_1 \Sequent !A$ دا، تے $\delta_2$ اک \Log{N1c}-!!{proof} (\Log{N1i}-!!{proof}) اے~$\Gamma_2 \Sequent !B$ دا، تاں $\Subst{\delta_1}{\delta_2}{x:!B}$ اوہ حاصل اے جیہڑا ہر مسلّمہ $x:!B \Sequent !B$،~$\delta_1$ وچ،~$\delta_2$ نال بدل کے تے ایہو جیہے مسلّمیاں دے تھلّے ہر سیکوئنٹ دے سیاق وچ $\Gamma_2$ شامل کر کے ملدا اے۔
+\end{defn}
+
+\begin{prop}
+جے $\delta_1 \Proves x:!B, \Gamma_1 \Sequent
+!A$ تے $\delta_2 \Proves \Gamma_2 \Sequent !B$، تاں
+$\Subst{\delta_1}{\delta_2}{x:!B} \Proves \Gamma_1, \Gamma_2 \Sequent
+!A$، بشرطیکہ~$\delta_1$ دا کوئی خاص متغیر~$\Gamma_2$ وچ نہ آوے۔
+\end{prop}
+
+\begin{proof}
+$\pheight{\delta}$ اُتے استقرا نال۔
+\end{proof}
+
+\end{document}

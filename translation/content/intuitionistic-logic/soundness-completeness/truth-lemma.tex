@@ -1,0 +1,66 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: truth-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{tru}
+
+\olsection{سچائی دا معاون قضیہ}
+
+ہیٹھلا معاون قضیہ کینونیکل نمونے وچ پورا اترن دی گل نوں ایس گل نال جوڑدا اے
+کہ کیہڑے !!{formula}s اولی سیٹ $\Delta$ دے !!{element}s نیں۔
+
+\begin{lem}\ollabel{lem:truth}
+  جے $\Delta$ اولی اے، تاں $\mSat{M(\Delta)}{!A}[\sigma]$ اُدوں تے صرف اُدوں
+  اے جدوں $\Delta(\sigma) \Proves !A$۔
+\end{lem}
+
+\begin{proof}
+  ~$!A$ اُتے استقرا نال۔
+  \begin{enumerate}
+    \item \indcase{!A}{\lfalse}{چونکہ $\Delta(\sigma)$ اولی اے، ایس لئی ایہ
+      بے تضاد اے، سو $\Delta(\sigma) \Proves/ \indfrm$۔ تعریف مطابق،
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}
+      \item \indcase{!A}{p}{$\mSat{{}}{}$ دی تعریف مطابق،
+        $\mSat{M(\Delta)}{\indfrm}[\sigma]$ اُدوں تے صرف اُدوں اے جدوں
+        $\sigma \in V(p)$، یعنی $\Delta(\sigma) \Proves \indfrm$۔}
+      \item \indcase!{!A}{\lnot !B}{}
+      \item \indcase{!A}{!B \land
+        !C}{$\mSat{M(\Delta)}{\indfrm}[\sigma]$ اُدوں تے صرف اُدوں اے جدوں
+        $\mSat{M(\Delta)}{!B}[\sigma]$ تے $\mSat{M(\Delta)}{!C}[\sigma]$۔
+        استقرائی مفروضے مطابق $\mSat{M(\Delta)}{!B}[\sigma]$ اُدوں تے صرف
+        اُدوں اے جدوں $\Delta(\sigma) \Proves !B$، تے~$!C$ لئی وی ایسے طرح۔
+        پر $\Delta(\sigma) \Proves !B$ تے $\Delta(\sigma) \Proves !C$
+        دونیں اُدوں تے صرف اُدوں نیں جدوں $\Delta(\sigma) \Proves \indfrm$۔}
+      \item \indcase{!A}{!B \lor
+        !C}{$\mSat{M(\Delta)}{\indfrm}[\sigma]$ اُدوں تے صرف اُدوں اے جدوں
+        $\mSat{M(\Delta)}{!B}[\sigma]$ یا $\mSat{M(\Delta)}{!C}[\sigma]$۔
+        استقرائی مفروضے مطابق ایہ اُدوں تے صرف اُدوں اے جدوں
+        $\Delta(\sigma) \Proves !B$ یا $\Delta(\sigma) \Proves !C$۔
+        اسیں وکھانا اے کہ ایہ اگوں اُدوں تے صرف اُدوں اے جدوں
+        $\Delta(\sigma) \Proves \indfrm$۔ کھبے توں سجے پاسے دا قدم صاف اے۔
+        سجے توں کھبے پاسے دا قدم ایس توں نکلدا اے کہ $\Delta(\sigma)$ اولی اے۔}
+      \item \indcase{!A}{!B \lif !C}{پہلاں کھبے توں سجے پاسے والے قدم دا عکسِ نقیض۔
+        فرض کرو $\Delta(\sigma) \Proves/ !B \lif !C$۔ فیر
+        $\Delta(\sigma) \cup \{!B\} \Proves/ !C$ وی۔ چونکہ $\tuple{!B, !C}$،
+        $\tuple{!B_n, !C_n}$ اے، کسے~$n$ لئی، ایس لئی $\Delta(\sigma.n) =
+        (\Delta(\sigma) \cup \{!B\})^*$، تے $\Delta(\sigma.n) \Proves !B$
+        پر $\Delta(\sigma.n) \Proves/ !C$۔ استقرائی مفروضے مطابق
+        $\mSat{M(\Delta)}{!B}[\sigma.n]$ تے $\mSat/{M(\Delta)}{!C}[\sigma.n]$۔
+        چونکہ $R\sigma(\sigma.n)$، ایس لئی $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔
+
+        ہُن فرض کرو $\Delta(\sigma) \Proves !B \lif !C$ تے منّ لو
+        $R\sigma\sigma'$۔ چونکہ $\Delta(\sigma) \subseteq \Delta(\sigma')$،
+        ایس لئی جے $\Delta(\sigma') \Proves !B$، تاں $\Delta(\sigma') \Proves !C$۔
+        دوجے لفظاں وچ ہر اوہ $\sigma'$ جیہڑی $R\sigma\sigma'$ پوری کرے،
+        اوہدے لئی یا $\Delta(\sigma') \Proves/ !B$ یا $\Delta(\sigma') \Proves !C$۔
+        استقرائی مفروضے مطابق ایہدا مطلب اے کہ جدوں وی $R\sigma\sigma'$،
+        یا $\mSat/{M(\Delta)}{!B}[\sigma']$ یا $\mSat{M(\Delta)}{!C}[\sigma']$،
+        یعنی $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔}
+  \end{enumerate}
+\end{proof}
+
+\end{document}

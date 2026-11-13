@@ -1,0 +1,49 @@
+% part: intuitionistic-logic
+% chapter: semantics
+% section: propositions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sem}{pro}
+
+\olsection{قضیے}
+
+کدے کدے !!a{relational model}~$\mModel{M}$ وچ اوہناں جہاناں دے سیٹ دا ناں رکھنا کم آؤندا اے جیہناں وچ !!a{formula}~$!A$ سچ اے۔ اسیں ایہنوں~$!A$ نال تعریف کیتا \emph{قضیہ} آکھدے آں تے $\Prop{M}{!A}$ لکھدے آں۔
+
+\begin{defn}
+  اسیں فنکشن $V$ دا وادھا کر کے فنکشن $\Prop{M}{!A} \colon \Frm
+  \to \Pow{W}$ استقرا نال ایویں بناؤنے آں:
+  \begin{enumerate}
+  \item $\Prop{M}{\lfalse} = \emptyset$
+  \item $\Prop{M}{p} = V(p)$
+  \item $\Prop{M}{\lnot !B} = {}$
+    \[
+      \Setabs{w \in W}{\text{ہر $w'$ لئی جیہدے نال $Rww'$، $w'
+          \notin \Prop{M}{!B}$}}.
+    \]
+  \item $\Prop{M}{!B \land !C} = \Prop{M}{!B} \cap \Prop{M}{!C}$۔
+  \item $\Prop{M}{!B \lor !C} = \Prop{M}{!B} \cup \Prop{M}{!C}$۔
+  \item $\Prop{M}{!B \lif !C} = {}$
+    \[
+      \Setabs{w \in W}{\text{ہر $w'$ لئی جیہدے نال $Rww'$، جے $w'
+          \in \Prop{M}{!B}$ تاں $w' \in \Prop{M}{!C}$}}.
+    \]
+  \end{enumerate}
+\end{defn}
+
+\begin{prop}
+  \ollabel{prop:propositions-true}
+  $\mModel{M}{!A}[w]$ اُدوں تے صرف اُدوں جدوں $w \in \Prop{M}{!A}$۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[int][sem][pro]{prop:propositions-true} ثابت کرو۔
+\end{prob}
+
+\end{document}

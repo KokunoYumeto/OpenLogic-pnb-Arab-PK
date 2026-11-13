@@ -1,0 +1,168 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: Semantic Notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{sem}
+\olsection{معنوی تصورات}
+
+\begin{explain}
+پہلے درجے دیاں زباناں لئی !!{structure}s دی تعریف مل جان توں بعد
+اسیں جملیاں دیاں کجھ بنیادی معنوی خاصیتاں تے انہاں دے آپسی
+تعلقاں دی تعریف کر سکدے آں۔ انہاں وچ سبھ توں سادہ تصور
+جملے دا \emph{منطقی اعتبار} اے۔ جملہ معتبر اے جے اوہ ہر
+!!{structure} وچ پورا اترے۔ معتبر جملے اوہ نیں جیہڑے اپنے
+غیر منطقی نشاناں دی تعبیر چاہے جیویں وی کیتی جائے، پورے اترن۔
+ایس لئی معتبر جملیاں نوں \emph{منطقی سچائیاں} وی آکھدے نیں:
+اوہ ہر !!{structure} وچ سچے، یعنی پورے اترن والے، ہوندے نیں؛
+لہٰذا انہاں دا سچ صرف انہاں وچ آون والے منطقی نشاناں تے انہاں
+دی نحوی !!{structure} اُتے منحصر اے، غیر منطقی نشاناں یا انہاں دی تعبیر
+اُتے نہیں۔
+\end{explain}
+
+\begin{defn}[منطقی اعتبار]
+اک جملہ $!A$ \emph{معتبر} اے، $\Entails !A$، اُدوں تے صرف اُدوں
+جدوں $\Sat{M}{!A}$ ہر !!{structure}~$\Struct M$ لئی ہووے۔
+\end{defn}
+
+\begin{defn}[منطقی نتیجہ]
+جملیاں دے سیٹ~$\Gamma$ توں جملہ~$!A$ \emph{منطقی طور تے نکلدا اے}،
+$\Gamma \Entails !A$، اُدوں تے صرف اُدوں جدوں ہر اوہ !!{structure}~$\Struct M$
+جیہڑے لئی $\Sat{M}{\Gamma}$ ہووے، اوہدے لئی $\Sat{M}{!A}$ وی ہووے۔
+\end{defn}
+
+
+\begin{defn}[پورا ہون جوگتا]
+جملیاں دا سیٹ~$\Gamma$ \emph{پورا ہون جوگا} اے جے
+$\Sat{M}{\Gamma}$ کسے !!{structure}~$\Struct M$ لئی ہووے۔ جے
+$\Gamma$ پورا ہون جوگا نہ ہووے، تاں اوہنوں \emph{پورا ہون جوگا نہیں} آکھدے نیں۔
+\end{defn}
+
+\begin{prop}
+جملہ $!A$ معتبر اے اُدوں تے صرف اُدوں جدوں $\Gamma \Entails !A$
+جملیاں دے ہر سیٹ~$\Gamma$ لئی ہووے۔
+\end{prop}
+
+\begin{proof}
+اگلی سمت لئی فرض کرو $!A$ معتبر اے، تے $\Gamma$ جملیاں دا
+اک سیٹ اے۔ کوئی !!a{structure}~$\Struct M$ لو جیہڑے لئی
+$\Sat{M}{\Gamma}$ ہووے۔ چونکہ $!A$ معتبر اے، $\Sat{M}{!A}$؛
+لہٰذا $\Gamma \Entails !A$۔
+
+اُلٹی سمت دا متقابلِ عکس ثابت کرن لئی فرض کرو $!A$ معتبر نہیں،
+یعنی کوئی !!a{structure}~$\Struct M$ اے جیہڑے لئی $\Sat/{M}{!A}$۔
+جے $\Gamma = \{ \ltrue \}$ رکھئے، تاں $\ltrue$ دے معتبر ہون کرکے
+$\Sat{M}{\Gamma}$۔ ایس طرح اک !!a{structure}~$\Struct M$
+ایہو جیہی اے کہ $\Sat{M}{\Gamma}$ پر $\Sat/{M}{!A}$؛ لہٰذا
+$\Gamma$ توں $!A$ منطقی طور تے نہیں نکلدا۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:entails-unsat}
+$\Gamma \Entails !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{\lnot !A\}$
+پورا ہون جوگا نہ ہووے۔
+\end{prop}
+
+\begin{proof}
+اگلی سمت لئی فرض کرو $\Gamma \Entails !A$، تے خلافِ فرض کوئی
+!!a{structure}~$\Struct M$ ایہو جیہی اے کہ $\Sat{M}{\Gamma
+  \cup \{ \lnot !A \}}$۔ چونکہ $\Sat{M}{\Gamma}$ تے $\Gamma \Entails
+!A$، اسیں $\Sat{M}{!A}$ لیندے آں۔ نال ہی، چونکہ
+$\Sat{M}{\Gamma\cup \{ \lnot !A \}}$، اسیں $\Sat{M}{\lnot !A}$
+وی لیندے آں۔ ایس طرح $\Sat{M}{!A}$ تے $\Sat/{M}{!A}$ دونے
+ملدے نیں، جو تضاد اے۔ لہٰذا ایہو جیہی !!{structure}~$\Struct M$
+ہو ہی نہیں سکدی، تے $\Gamma \cup \{ \lnot !A \}$ پورا ہون جوگا نہیں۔
+
+الٹی سمت لئی فرض کرو $\Gamma \cup \{ \lnot !A \}$ پورا ہون جوگا نہیں۔
+ایس لئی ہر !!{structure}~$\Struct M$ لئی یا تاں
+$\Sat/{M}{\Gamma}$ ہووے گا یا $\Sat{M}{!A}$۔ لہٰذا ہر اوہ
+!!{structure}~$\Struct M$ جیہڑے لئی $\Sat{M}{\Gamma}$ ہووے،
+اوہدے لئی $\Sat{M}{!A}$ وی ہووے گا؛ سو $\Gamma \Entails !A$۔
+\end{proof}
+
+\begin{prob}
+% PNB-SEM-023: تیجے حصے دا مسوّری نتیجہ تے ثابتہ-بدل جملے ہون لئی صرف چنیا متغیر آزاد ہو سکدا اے۔
+تیجے حصے وچ دتے فارمولے دے آزاد متغیر صرف چنے مسوّری متغیر
+وچوں نیں، تاں جو معنوی نتیجے وچ آون والیاں عبارتاں جملے ہون۔
+\begin{enumerate}
+\item دکھاؤ کہ $\Gamma \Entails \bot$ اُدوں تے صرف اُدوں جدوں $\Gamma$ پورا ہون جوگا نہیں۔
+\item دکھاؤ کہ $\Gamma \cup \{!A\} \Entails \bot$ اُدوں تے صرف اُدوں جدوں $\Gamma \Entails \lnot !A$۔
+\item فرض کرو $c$، $!A$ یا $\Gamma$ وچ نہیں آندا۔ دکھاؤ کہ
+  $\Gamma \Entails \lforall[x][!A]$ اُدوں تے صرف اُدوں جدوں $\Gamma \Entails
+  \Subst{!A}{c}{x}$۔
+\end{enumerate}
+\end{prob}
+
+\begin{prop}
+جے $\Gamma \subseteq \Gamma'$ تے $\Gamma \Entails !A$، تاں $\Gamma'
+\Entails !A$۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $\Gamma \subseteq \Gamma'$ تے $\Gamma \Entails !A$۔
+$\Struct M$ کوئی ایہو جیہی ساخت لو جیہڑے لئی $\Sat{M}{\Gamma'}$؛
+تاں $\Sat{M}{\Gamma}$، تے چونکہ $\Gamma \Entails !A$،
+سانوں $\Sat{M}{!A}$ ملدا اے۔ لہٰذا جدوں وی $\Sat{M}{\Gamma'}$
+ہووے، $\Sat{M}{!A}$ وی ہووے گا؛ ایس لئی $\Gamma' \Entails !A$۔
+\end{proof}
+
+
+\begin{thm}[معنوی استنباط دا قضیہ]
+\ollabel{thm:sem-deduction}
+$\Gamma \cup \{!A\} \Entails !B$ اُدوں تے صرف اُدوں جدوں
+$\Gamma \Entails !A \lif !B$۔
+\end{thm}
+
+\begin{proof}
+اگلی سمت لئی فرض کرو $\Gamma \cup \{ !A \} \Entails !B$، تے
+$\Struct M$ کوئی !!a{structure} اے جیہڑے لئی $\Sat{M}{\Gamma}$۔
+جے $\Sat{M}{!A}$، تاں $\Sat{M}{\Gamma \cup \{ !A \} }$؛ تے چونکہ
+$\Gamma \cup \{ !A \}$ توں $!B$ منطقی طور تے نکلدا اے،
+سانوں $\Sat{M}{!B}$ ملدا اے۔ ایس لئی $\Sat{M}{!A \lif !B}$،
+سو $\Gamma \Entails !A \lif !B$۔
+
+الٹی سمت لئی فرض کرو $\Gamma \Entails !A \lif !B$، تے
+$\Struct M$ کوئی !!a{structure} اے جیہڑے لئی $\Sat{M}{\Gamma \cup \{ !A
+  \}}$۔ فیر $\Sat{M}{\Gamma}$، لہٰذا $\Sat{M}{!A \lif !B}$؛
+تے چونکہ $\Sat{M}{!A}$، اسیں $\Sat{M}{!B}$ لیندے آں۔ ایس لئی
+جدوں وی $\Sat{M}{\Gamma \cup \{ !A \} }$ ہووے، $\Sat{M}{!B}$
+وی ہووے گا؛ سو $\Gamma \cup \{ !A \} \Entails !B$۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:quant-terms}
+  فرض کرو $\Struct{M}$ اک !!a{structure} اے، $!A(x)$ اک ایہو جیہا
+  !!a{formula} اے جیہدا اک آزاد متغیر~$x$ اے، تے $t$~اک بند ٹرم اے۔ تاں:
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{$!A(t) \Entails \lexists[x][!A(x)]$}{}
+    \tagitem{prvAll}{$\lforall[x][!A(x)] \Entails !A(t)$}{}
+  \end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{%
+      \iftag{probEx}{مشق۔}{فرض کرو $\Sat{M}{!A(t)}$۔ $s$ اک
+        ایہو جیہی متغیر قدر بندی لو جیہڑے لئی $s(x) = \Value{t}{M}$۔ فیر
+        $\Sat{M}{!A(t)}[s]$، کیوں جے $!A(t)$ اک !!a{sentence} اے۔
+        \olref[ext]{prop:ext-formulas} دے ذریعے $\Sat{M}{!A(x)}[s]$۔
+        \olref[ass]{prop:sat-quant} دے ذریعے
+        $\Sat{M}{\lexists[x][!A(x)]}$۔}}{}
+    \tagitem{prvAll}{%
+      \iftag{probAll}{مشق۔}{فرض کرو
+        $\Sat{M}{\lforall[x][!A(x)]}$۔ $s$ اک ایہو جیہی متغیر
+        قدر بندی لو جیہڑے لئی $s(x) = \Value{t}{M}$۔
+        \olref[ass]{prop:sat-quant} دے ذریعے $\Sat{M}{!A(x)}[s]$۔
+        \olref[ext]{prop:ext-formulas} دے ذریعے $\Sat{M}{!A(t)}[s]$۔
+        \olref[ass]{prop:sentence-sat-true} دے ذریعے
+        $\Sat{M}{!A(t)}$، کیوں جے $!A(t)$ اک !!a{sentence} اے۔}}{}
+  \end{tagenumerate}
+\end{proof}
+
+\begin{probtag}{probEx,probAll}
+  \olref[fol][syn][sem]{prop:quant-terms} دا ثبوت پورا کرو۔
+\end{probtag}
+
+\end{document}

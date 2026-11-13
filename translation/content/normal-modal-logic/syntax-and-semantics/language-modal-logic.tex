@@ -1,0 +1,106 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: language-modal-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{lan}
+
+\olsection{بنیادی امکانی منطق دی زبان}
+
+\begin{defn}
+بنیادی امکانی منطق دی زبان وچ ایہ نشان ہوندے نیں۔
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+  \tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+  \item !!{propositional variable}s دا !!{denumerable}s سیٹ،
+    یعنی $\Obj
+    p_0$، $\Obj p_1$، $\Obj p_2$، \dots۔
+  \item قضیاتی رابطے۔ \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}۔
+  \tagitem{prvBox}{امکانی عامل $\Box$۔}{}
+  \tagitem{prvDiamond}{امکانی عامل $\Diamond$۔}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+بنیادی امکانی زبان دے \emph{!!^{formula}s} استقرا نال ایویں متعین ہوندے نیں۔
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ اک ایٹمی !!{formula} اے۔}{}
+
+\tagitem{prvTrue}{$\ltrue$ اک ایٹمی !!{formula} اے۔}{}
+
+\item ہر !!{propositional variable} $\Obj p_i$ اک (ایٹمی) !!{formula} اے۔
+
+\tagitem{prvNot}{جے $!A$ !!a{formula} اے، تاں $\lnot !A$ وی
+  !!a{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvOr}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{prvIf}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{prvIff}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \liff !B)$
+  وی !!a{formula} اے۔}{}
+
+\tagitem{prvBox}{جے $!A$ !!a{formula} اے، تاں $\Box !A$ وی
+  !!a{formula} اے۔}{}
+
+\tagitem{prvDiamond}{جے $!A$ !!a{formula} اے، تاں $\Diamond !A$ وی
+  !!a{formula} اے۔}{}
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defBox,defDiamond}
+\begin{defn}
+متعین کیتے عاملاں نال بنے فارمولے ایویں سمجھے جاندے نیں۔
+
+\begin{tagenumerate}{defTrue,defFalse,defNot,defOr,defAnd,defIf,defIff,defBox,defDiamond}
+
+\tagitem{defTrue}{$\ltrue$ ایہدا مختصر روپ اے۔
+  \iftag{prvFalse}{$\lnot\lfalse$}{$(!A \lor \lnot !A)$، کسے
+    مقرر ایٹمی !!{formula}~$!A$ لئی}۔}{}
+
+\tagitem{defFalse}{$\lfalse$ ایہدا مختصر روپ اے۔
+  \iftag{prvTrue}{$\lnot\ltrue$}{$(!A \land \lnot !A)$، کسے
+    مقرر ایٹمی !!{formula}~$!A$ لئی}۔}{}
+
+\tagitem{defNot}{$\lnot !A$، $!A \lif \lfalse$ دا مختصر روپ اے۔}{}
+
+\tagitem{defOr}{$!A \lor !B$ ایہدا مختصر روپ اے۔
+  \iftag{prvAnd}{$\lnot(\lnot !A \land \lnot !B)$}{$\lnot !A \lif
+    !B$}۔}{}
+
+\tagitem{defAnd}{$!A \land !B$ ایہدا مختصر روپ اے۔
+  \iftag{prvOr}{$\lnot(\lnot !A \lor \lnot !B)$}{$\lnot (!A \lif
+    \lnot !B)$}۔}{}
+
+\tagitem{defIf}{$!A \lif !B$ ایہدا مختصر روپ اے۔
+  \iftag{prvOr}{$\lnot !A \lor !B)$}{$\lnot (!A \land \lnot !B)$}۔}{}
+
+\tagitem{defIff}{$!A \liff !B$، $(!A \lif !B) \land (!B
+  \lif !A)$ دا مختصر روپ اے۔}{}
+
+\tagitem{defBox}{$\Box !A$، $\lnot\Diamond\lnot !A$ دا مختصر روپ اے۔}{}
+
+\tagitem{defDiamond}{$\Diamond !A$، $\lnot\Box\lnot !A$ دا مختصر روپ اے۔}{}
+\end{tagenumerate}
+\end{defn}
+\end{tagblock}
+
+جے !!a{formula}~$!A$ وچ $\Box$ یا $\Diamond$ نہ آوے،
+تاں اوہنوں \emph{امکانی عامل توں خالی} آکھدے آں۔
+
+\end{document}

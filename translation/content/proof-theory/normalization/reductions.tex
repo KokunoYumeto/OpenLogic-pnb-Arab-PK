@@ -1,0 +1,271 @@
+% Part: proof-theory
+% Chapter: normalization
+% Section: reductions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{red}
+
+\olsection{تقلیل والیاں تبدیلیاں}
+
+جے \Log{N1i} دے !!a{proof} وچ کسے قطع دی لمبائی~$1$ اے، تاں اوہ ٹوٹا اکّو !!{formula} دی موجودگی توں بنیا اے، تے اوہ !!{formula}، !!a{introduction} اخذ دا نتیجہ وی اے تے !!a{elimination} اخذ دا وڈّا مقدمہ وی۔ نارمل روپ وچ لیاؤن دے ثبوت وچ ایہو جیہے قطع «گھٹائے» جاندے نیں۔ جیہڑا ذیلی !!{proof}، !!{introduction}/!!{elimination} دے ایہو جیہے جوڑے اُتے مُکدا اے، اوہدی تھاں نواں !!{proof} لیاندا جاندا اے جیہدے وچ ایہ اخذاں دا جوڑا ہٹایا گیا ہووے۔ ایس تبدیلی نال نویں قطع بن سکدے نیں۔ پر اسیں ویکھ سکدے آں کہ نویں قطعاں دا درجہ گھٹائے جا رہے قطع توں گھٹ اے۔ ایس لئی نویں !!{proof} دی یا تاں قطع لمبائی گھٹ اے (کیونکہ لمبائی~$1$ والا وڈّے توں وڈّے درجے دا اک قطع ہٹ گیا اے)، یا !!{proof} دا قطع درجہ گھٹ گیا اے (جے اوہو ای وڈّے توں وڈّے درجے والا قطع سی)۔
+
+مثال لئی جے متعلقہ اخذ \Intro{\lif} تے \Elim{\lif} نیں، تاں $!A \ident !B \lif !C$ اے تے اک ذیلی !!{proof}~$\delta_1$ اے جیہڑا ایویں مُکدا اے:
+\[
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$!C$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\]
+ایہ قطع ہٹاؤن لئی اسیں ذیلی ثبوت~$\delta_1$ نوں~$\delta$ وچ ایہدے نال بدل دیندے آں:
+\[
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_2}{\delta_3}{!B^x}$}
+\DeduceC{$!C$}
+\DisplayProof
+\]
+$ \Subst{\delta_2}{\delta_3}{!B^x}$ توں ساڈا مطلب اوہ !!{proof} اے جیہڑا~$\delta_2$ توں ملدا اے، جدوں ہر اوہ مفروضہ~$!B$ جیہدے اُتے~$x$ دا لیبل اے، پورے !!{proof}~$\delta_3$ نال بدل دِتّا جاوے۔ ایس !!{proof} وچ~$!B$ دی شکل دا~$x$ لیبل والا کوئی کھُلّا مفروضہ ہُن نہیں رہندا۔~$x$ لیبل والا کوئی ہور مفروضہ وی نہیں، کیونکہ ہمیشہ وانگ اسیں منّیا اے کہ کوئی دو !!{formula}s اکّو لیبل نال مفروضے دے طور اُتے نہیں آؤندے۔ سو نویں !!{proof} دے اوہی کھُلّے مفروضے نیں جیہڑے~$\delta_1$ دے نیں۔~$\delta_2$ وچ جیہڑا وی اخذ مفروضے خارج کردا اے، اوہ~$\Subst{\delta_2}{\delta_3}{!B^x}$ وچ اوہی مفروضے خارج کردا اے۔ تے~$\delta_3$ وچ مفروضے خارج کرن والے ہر اخذ دیاں کئی نقلاں بن سکدیاں نیں جیہڑیاں~$\Subst{\delta_2}{\delta_3}{!B^x}$ وچ میل کھاندے مفروضے خارج کردیاں نیں۔
+
+کوئی وی قطع جیہڑا سارا $\delta_2$، $\delta_3$ یا $\delta_4$ دے اندر، یا~$\delta_1$ توں پورا باہر~$\delta$ وچ اے، اوہدا اوہی رہندا اے۔ اوہدے وچ اوہی !!{formula}s نیں تے اوہ اوہناں ای اخذاں تھانیں لنگھدا اے، سو خاص کر اوہدا درجہ تے لمبائی~$\delta$ وچ اوہدے نال میل کھاندے قطع جِنّے ای نیں۔ اسیں لمبائی~$1$ والا وڈّے توں وڈّے درجے دا اک قطع ہٹایا اے، ایس لئی اسیں یا قطع لمبائی گھٹائی اے، یا قطع درجہ گھٹایا اے (جے~$\delta$ دی قطع لمبائی~$1$ سی تے ایہو ای وڈّے توں وڈّے درجے والا قطع سی)۔
+
+پر دو گلاں ہو سکدیاں نیں:
+\begin{enumerate}
+  \item سارے $!B^x$ مفروضے $ \delta_3$ نال بدل کے اسیں~$\delta_3$ دے سارے قطعاں دیاں نقلاں ودھا دِتّیاں نیں۔ جے اوہناں وچوں کجھ وڈّے توں وڈّے درجے والے قطع سن، تاں نویں !!{proof} دی قطع لمبائی پرانے !!{proof} دی قطع لمبائی توں ودھ ہو سکدی اے۔ سانوں پکا کرنا پینا اے کہ ایہ نہ ہووے۔ ایس لئی تقلیل والیاں تبدیلیاں صرف \emph{سبھ توں سجّے} وڈّے توں وڈّے درجے والے قطعاں اُتے لاؤنے آں، یعنی ایہو جیہے قطعاں اُتے جنہاں لئی~$\delta$ دی کوئی شاخ، گھٹائے جا رہے قطع توں سجّے، وڈّے توں وڈّے درجے دا کوئی قطع نہیں رکھدی۔ جے~$\delta_3$ وچ کوئی قطع ہووے، تاں اوہ ایتھے گھٹائے جا رہے قطع توں سجّے ہووے گا، ایس لئی اسیں سبھ توں سجّے قطع اُتے کم نہیں کر رہے ہوواں گے۔ ہمیشہ سبھ توں سجّے قطع چُن کے اسیں پکا کردے آں کہ یا !!{proof} دی قطع لمبائی گھٹائیے یا قطع درجہ وی گھٹا دیئیے۔
+  \item جے $!B^x$ مفروضہ $ \delta_2$ وچ !!a{elimination} اخذ دا وڈّا مقدمہ اے، تے~$\delta_3$ دا آخری اخذ \Elim{\lor}، \Elim{\lexists} یا !!a{introduction} اخذ اے، تاں ایہو جیہے مفروضے دی تھاں~$\delta_3$ نوں $ \delta_2$ نال جوڑ کے اسیں اک نواں قطع بنایا اے۔ جیہڑا~$\delta_2$ وچ صرف مفروضہ سی، ہُن یا لمبائی~$1$ دا قطع اے (!!a{introduction} اخذ دا نتیجہ تے !!a{elimination} اخذ دا وڈّا مقدمہ) یا قطع ٹوٹے وچ !!{formula} دی آخری موجودگی اے (!!a{elimination} اخذ دا وڈّا مقدمہ تے~\Elim{\lor} یا \Elim{\lexists} دا نتیجہ)۔ جے $B^x$، \Elim{\lor} یا \Elim{\lexists} دا چھوٹا مقدمہ سی، تاں اوہ پہلاں ای کسے ٹوٹے وچ !!{formula} دی پہلی موجودگی سی، تے ہو سکدا اے کہ اوہ قطع ٹوٹا سی۔ نویں !!{proof} وچ اوہ ٹوٹا ہُن لمّا ہو سکدا اے۔ پر ویکھو کہ ایہ نواں قطع یا پہلاں والا قطع ٹوٹا بناؤن والا !!{formula}~$!B$ اے، تے $\depth{!B} < \depth{!B \lif !C}$۔ سو بھاویں اسیں قطع شامل کیتے یا قطعاں دی لمبائی ودھائی ہووے، ایہناں وچوں کوئی وی وڈّے توں وڈّے درجے والا قطع نہیں۔ ایس طرح اسیں یا قطع درجہ گھٹایا اے، یا، جے اوہو درجے دے قطع باقی نیں، قطع لمبائی گھٹائی اے۔
+\end{enumerate}
+
+لمبائی~$1$ والے قطع نوں گھٹاؤن دے عمل نوں \emph{تقلیل والی تبدیلی} (یا \emph{چکر دی تبدیلی}) آکھدے آں۔ قاعدیاں دے کجھ جوڑیاں دے نمونے \olref{tab:reduction-conversions} وچ دِتّے نیں۔ (باقی مشقاں لئی چھڈّے گئے نیں۔)
+
+\begin{table}
+\begin{multline*}
+\bottomAlignProof
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!C$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\quad \longrightarrow\quad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_2}{\delta_3}{!B^x}$}
+\shortDeduce
+\DeduceC{$!C$}
+\DisplayProof}
+\\[4ex]
+\shoveleft{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\DisplayProof}\qquad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!C$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\DisplayProof}
+\\[4ex]
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{\Intro{\lor}[1]}
+\UnaryInfC{$!B \lor !C$}
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!D$}
+\AxiomC{$\Discharge{!C}{y}$}
+\RightLabel{$\delta_4$}
+\shortDeduce
+\DeduceC{$!D$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!D$}
+\DisplayProof
+\quad \longrightarrow\quad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_3}{\delta_2}{!B^x}$}
+\shortDeduce
+\DeduceC{$!D$}
+\DisplayProof}
+\\[2ex]
+\shoveleft{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(c)$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\Subst{\delta_2}{t}{c}$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\DisplayProof}
+\\[4ex]
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{x}$}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!D$}
+\DischargeRule{\Elim{\lexists}}{x}
+\BinaryInfC{$!D$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\RightLabel{$\Subst{\Subst{\delta_3}{t}{c}}{\delta_2}{!B(t)^x}$}
+\shortDeduce
+\DeduceC{$!D$}
+\DisplayProof}
+\end{multline*}
+\caption{\Log{N1i} لئی تقلیل دیاں کجھ تبدیلیاں۔}
+\ollabel{tab:reduction-conversions}
+\end{table}
+
+\begin{prob}
+جتھے \Intro{\lnot} دے پچھوں \Elim{\lnot} آؤندا اے، اوتھے تقلیل والی تبدیلی دیو۔
+\end{prob}
+
+اک صورت ہجے ویکھنی باقی اے۔ قطع دی تعریف وچ اوہ صورت وی شامل اے جدوں قطع دی لمبائی~$1$ ہووے تے $!A$،~\FalseInt{} دا نتیجہ وی ہووے تے !!a{elimination} اخذ دا وڈّا مقدمہ وی۔ ایہ صورت اوہو جیہے طریقے نال حل ہوندی اے جیویں جدوں $!A$، !!a{introduction} قاعدے دا نتیجہ ہووے۔ مثال لئی ایہ تبدیلی کرو:
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\quad\text{نال}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\UnaryInfC{$!C$}
+\DisplayProof
+\]
+جدوں $!A \ident (!B \lor
+!C)$ یا $!A \ident \lexists[x][!B(x)]$ ہووے، سانوں ذرا دھیان کرنا پیندا اے۔ مثال لئی جے اسیں ایہ تبدیلی کریے
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B \lor !C$}
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!D$}
+\AxiomC{$\Discharge{!C}{x}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!D$}
+\RightLabel{\Elim{\lor}}
+\TrinaryInfC{$!D$}
+\DisplayProof
+\quad\text{نال}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!D$}
+\DisplayProof
+\]
+تاں ہو سکدا اے کہ اسیں قطع !!{formula}~$!D$ والا نواں قطع شامل کر رہیے ہوئیے، تے ایہدی کوئی ضمانت نہیں کہ $\depth{!D} < \depth{!B \lor !C}$!{} ایس لئی ایتھے سانوں اوہو طریقہ ورتنا پینا اے جیہڑا اسیں \Intro{\lor}/\Elim{\lor} دی تقلیل لئی ورتیا سی، تے ایہدے نال بدلنا پینا اے:
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!D$}
+\DisplayProof
+\quad\text{یا}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!C$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!D$}
+\DisplayProof
+\]
+
+\end{document}

@@ -1,0 +1,64 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: provability-quantifiers
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{qpr}
+
+\olsection{\usetoken{S}{derivability} تے مسوّر (Quantifiers)}
+
+\begin{explain}
+  تمامیت دے قضیے لئی ایہ وی لوڑیںدا اے کہ فطری استنباط دے قاعدے
+  ایس حصے وچ قائم کیتے~$\Proves$ بارے حقائق وی دین۔
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:strong-generalization} جے $c$ اک ایہو جہا مستقل اے جیہڑا
+$\Gamma$ یا $!A(x)$ وچ نہیں آؤندا، تے $\Gamma \Proves !A(c)$، تاں $\Gamma
+\Proves \lforall[x][!A(x)]$۔
+\end{thm}
+
+\begin{proof}
+منّ لو $\delta$، $!A(c)$ دی $\Gamma$ توں !!a{derivation} اے۔
+اک \Intro{\lforall} استنباط شامل کر کے اسیں
+$\lforall[x][!A(x)]$ دی !!a{derivation} حاصل کردے آں۔ چونکہ $c$،
+$\Gamma$ یا $!A(x)$ وچ نہیں آؤندا، ایگن متغیر والی شرط پوری ہوندی اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+% PNBNTD-009: OLP-0087's displayed quantifier rules require t to be closed in both branches.
+ایہ دونیں بیان ہر بند ٹرم لئی نیں:
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{ہِٹھلی~$\lexists[x][!A(x)]$ دی~$!A(t)$ توں !!a{derivation} اے:
+\begin{prooftree}
+\AxiomC{$!A(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A(x)]$}
+\end{prooftree}}{}
+
+\tagitem{prvAll}{ہِٹھلی~$!A(t)$ دی
+  ~$\lforall[x][!A(x)]$ توں !!a{derivation} اے:
+\begin{prooftree}
+\AxiomC{$\lforall[x][!A(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(t)$}
+\end{prooftree}}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

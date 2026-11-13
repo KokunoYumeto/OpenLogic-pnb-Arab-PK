@@ -1,0 +1,89 @@
+% Part: many-valued-logic
+% Chapter: sequent-calculus
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{int}
+
+\olsection{جان پہچان}
+
+کلاسیکی منطق دا سیکوئنٹ حساب سوکھا تے کارگر !!{derivation}
+دا نظام اے۔ جے کئی قدراں والی منطق ایہو جیہے میٹرکس نال متعین
+ہووے جیہدیاں صداقتی قدراں محدود گنتی وچ نیں، یعنی $V$ محدود
+ہووے، تاں اوہدے لئی سیکوئنٹ حساب دِتّا جا سکدا اے۔ ایہ کم کرن
+دا خیال کلاسیکی صورت وچ سیکوئنٹاں دے معنیاں تے استنباط دے
+قاعدیاں دے روپ نوں ویکھ کے آؤندا اے۔
+
+ہُن یاد کرو کہ سیکوئنٹ
+\begin{align*}
+    !A_1, \dots, !A_n & \Sequent !B_1, \dots, !B_n
+\intertext{نوں ہِٹھلے !!{formula} دے طور اُتے سمجھ سکدے آں۔}
+    (!A_1 \land \cdots \land !A_m) & \lif (!B_1 \lor \cdots \lor
+!B_n)
+\end{align*}
+دوجے لفظاں وچ، !!^a{valuation}~$\pAssign{v}$ نال سیکوئنٹ
+$\Gamma \Sequent \Delta$ اُدوں تے صرف اُدوں \emph{پورا
+اتردا اے} جدوں یا $\pValue{v}(!A) = \False$ ہووے کسے
+$!A \in \Gamma$ لئی، یا $\pValue{v}(!A) = \True$ ہووے کسے
+$!A \in
+\Delta$ لئی۔ ایس مطلب مطابق ابتدائی سیکوئنٹ $!A \Sequent !A$
+ہمیشہ پورے اتردے نیں، کیوں جے یا $\pValue v(!A) = \True$ اے
+یا $\pValue(!A) =
+\False$۔
+
+~$\Log{LK}$ وچ شرطیے دے استنباطی قاعدے ہِٹھ دِتّے نیں۔
+پاسیاں والے فارمولے $\Gamma$، $\Delta$ چھڈ دِتّے نیں۔
+
+\begin{defish}
+    \Axiom$ \fCenter !A$
+    \Axiom$ !B \fCenter $
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$ !A \lif !B \fCenter $
+    \DisplayProof
+    \hfill
+    \Axiom$ !A \fCenter !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$ \fCenter !A \lif !B $
+    \DisplayProof
+\end{defish}
+
+جے سیکوئنٹ دی اُپرلی معنوی سمجھ ورتیئے، تاں $\LeftR{\lif}$
+قاعدے دا مطلب ایہ اے کہ جے $\pValue v(!A) = \True$ تے
+$\pValue v(!B) = \False$، تاں $\pValue v(!A \lif !B) = \False$۔
+ایسے طرح $\RightR{\lif}$ قاعدہ آکھدا اے کہ جے
+$\pValue v(!A)
+= \False$ یا $\pValue v(!B) = \True$، تاں
+$\pValue v(!A \lif !B) =
+\True$۔ اصل وچ ایہ دوویں شرطیے دو شرطیے نیں۔ $\LeftR{\land}$
+تے $\RightR{\lor}$ دے معیاری قاعدیاں وچ متعلقہ شرطیے دو
+شرطیے نہیں ہوندے۔ پر ایہناں قاعدیاں دے ہور روپ وی نیں جنہاں
+وچ اوہ دو شرطیے ہوندے نیں۔
+
+\begin{defish}
+    \Axiom$!A, !B, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \hfill
+    \Axiom$ \Gamma \fCenter \Delta, !A, !B$
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+    \DisplayProof
+\end{defish}
+
+ایہ بنیادی خیال $n$ قدراں والی منطق اُتے لائیے، تاں
+سیکوئنٹ حساب وچ دو دیاں تھاواں~$n$ تھاواں ہوندیاں نیں،
+ہر صداقتی قدر لئی اک۔ تِن قدراں والی منطق جیہدے لئی
+$V = \{\False, \Undef, \True\}$، اوہدے وچ سیکوئنٹ عبارت
+$\Gamma \mid \Pi \mid \Delta$ اے۔ ایہ !!a{valuation}~$\pAssign v$
+وچ اُدوں تے صرف اُدوں پورا اتردا اے جدوں یا
+$\pValue{v}(!A) =
+\False$ کسے $!A \in \Gamma$ لئی ہووے، یا $\pValue{v}(!A) = \True$
+کسے $!A \in \Delta$ لئی، یا $\pValue{v}(!A) = \Undef$ کسے
+$!A \in \Pi$ لئی۔ ایس کرکے ابتدائی سیکوئنٹ $!A \mid !A \mid !A$
+ہمیشہ پورے اتردے نیں۔
+
+\end{document}

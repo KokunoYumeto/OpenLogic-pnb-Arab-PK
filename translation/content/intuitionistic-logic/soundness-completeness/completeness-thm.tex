@@ -1,0 +1,47 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: completeness-thm
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{cpl}
+
+\olsection{تمامیت دا قضیہ}
+
+\begin{thm}\ollabel{thm:completeness}
+  جے $\Gamma \Entails !A$، تاں $\Gamma \Proves !A$۔
+\end{thm}
+
+\begin{proof}
+  اسیں عکسِ نقیض ثابت کردے آں۔ فرض کرو $\Gamma \Proves/ !A$۔ فیر
+  \olref[lin]{lem:lindenbaum} مطابق اک اولی سیٹ~$\Gamma^* \supseteq \Gamma$
+  اے جیہدے لئی $\Gamma^* \Proves/ !A$۔ کینونیکل نمونہ~$\mModel{M(\Gamma^*)}$،
+  $\Gamma^*$ لئی، \olref[mod]{defn:canonical-model} دی تعریف مطابق لو۔
+  ہر $!B \in \Gamma$ لئی، $\Gamma^* \Proves !B$۔ دھیان دیو کہ
+  $\Gamma^*(\emptyseq) = \Gamma^*$۔ سچائی دے معاون قضیے
+  (\olref[tru]{lem:truth}) توں $\mSat{M(\Gamma^*)}{!B}[\emptyseq]$
+  ہر $!B \in \Gamma$ لئی اے، تے $\mSat/{M(\Gamma^*)}{!A}[\emptyseq]$۔
+  ایس توں پتا لگدا اے کہ $\Gamma \Entails/ !A$۔
+\end{proof}
+
+\begin{prob}
+  وکھاؤ کہ جے $!A$ وچ صرف !!{propositional variable}s، $\lor$ تے~$\land$
+  نیں، تاں $\Entails/ !A$۔ ایس توں نتیجہ کڈھو کہ $\lif$ دی تعریف
+  وجدانیت پسند منطق وچ $\lor$ تے~$\land$ توں نہیں ہو سکدی۔
+\end{prob}
+
+\begin{prob}
+  تمامیت دا قضیہ ورت کے ثابت کرو کہ جے $\Proves !A \lor !B$، تاں
+  $\Proves !A$ یا $\Proves !B$۔ (اشارہ۔ $\mSat/{M_1}{!A}$ تے
+  $\mSat/{M_2}{!B}$ منّ لو تے اک نواں نمونہ $\mModel{M}$ ایویں بناؤ کہ
+  $\mSat/{M}{!A \lor !B}$۔)
+\end{prob}
+
+\begin{prob}
+  وکھاؤ کہ جے $\mModel{M}$ اک تعلقی نمونہ اے جیہڑا خطی ترتیب ورتدا اے،
+  تاں $\mSat{M}{(!A \lif !B)\lor(!B \lif !A)}$۔
+\end{prob}
+
+\end{document}

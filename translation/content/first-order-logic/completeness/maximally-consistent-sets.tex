@@ -1,0 +1,132 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: maximally-consistent-sets
+
+% Definition of maximally consistent sets. Properties of mcs required
+% for completeness proved are in maximally-consistent-sets.tex in the
+% chapter on the proof system used.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{mcs}
+\olsection{\usetoken{P}{sentence} دے زیادہ توں زیادہ بے تضاد سیٹ}
+
+\begin{defn}[زیادہ توں زیادہ بے تضاد سیٹ]
+\ollabel{mcs}
+!!{sentence}s دا سیٹ~$\Gamma$ اُدوں تے صرف اُدوں \emph{زیادہ توں زیادہ بے تضاد} اے جدوں
+\begin{enumerate}
+\item $\Gamma$ بے تضاد اے، تے
+\item جے $\Gamma \subsetneq \Gamma'$ ہووے، تاں $\Gamma'$ متضاد اے۔
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+اُتلی تعریف دے برابر اک ہور تعریف ایہ اے۔ جملیاں دا سیٹ $\Gamma$ اُدوں تے صرف اُدوں \emph{زیادہ توں زیادہ بے تضاد} اے جدوں
+\begin{enumerate}
+\item $\Gamma$ بے تضاد اے، تے
+\item جے $\Gamma \cup \{ !A \}$ بے تضاد اے، تاں $!A \in \Gamma$۔
+\end{enumerate}
+دوجے لفظاں وچ، جیہڑے !!{sentence}s پہلاں ای~$\Gamma$ وچ نہیں، اوہناں نوں زیادہ توں زیادہ بے تضاد سیٹ~$\Gamma$ وچ شامل کرن نال بنیا وڈا سیٹ متضاد ہو جاندا اے۔
+\end{explain}
+
+\begin{explain}
+زیادہ توں زیادہ بے تضاد سیٹ تکمیل دے ثبوت وچ اہم نیں، کیوں جے اسیں ضمانت دے سکدے آں کہ !!{sentence}s دا ہر بے تضاد سیٹ~$\Gamma$ کسے زیادہ توں زیادہ بے تضاد سیٹ~$\Gamma^*$ وچ شامل اے، تے ہر !!{sentence}~$!A$ لئی زیادہ توں زیادہ بے تضاد سیٹ وچ یا $!A$ اے یا اوہدا انکار $\lnot !A$ اے۔ ایہ خاص کر جوہری !!{sentence}s لئی سچ اے، سو !!{constant}s نال ڈھکدے طریقے نال ودھائی زبان دے زیادہ توں زیادہ بے تضاد سیٹ توں اسیں اک !!a{structure} بنا سکدے آں جیہدے وچ !!{predicate}s دی تعبیر ایس حساب نال دِتّی جاندی اے کہ کیہڑے جوہری !!{sentence}s~$\Gamma^*$ وچ نیں۔ فیر وکھایا جا سکدا اے کہ ایہ !!{structure}وچلے سارے !!{sentence}s~$\Gamma^*$ وچ (تے ایس لئی $\Gamma$ وچ وی) سچ کردی اے۔ ایس آخری گل دے ثبوت لئی چاہیدا اے کہ $\lnot !A \in
+\Gamma^*$ اُدوں تے صرف اُدوں جدوں $!A \notin \Gamma^*$، $(!A \lor !B) \in \Gamma^*$ اُدوں تے صرف اُدوں جدوں $!A
+\in \Gamma^*$ یا $!B \in \Gamma^*$، تے ایس طرح اگے۔
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:mcs}
+منّ لو $\Gamma$ زیادہ توں زیادہ بے تضاد اے۔ فیر:
+\begin{enumerate}
+\item \ollabel{prop:mcs-prov-in} جے $\Gamma \Proves !A$، تاں $!A \in
+  \Gamma$۔
+
+\item \ollabel{prop:mcs-either-or} ہر $!A$ لئی، یا $!A \in
+  \Gamma$ یا $\lnot !A \in \Gamma$۔
+
+\tagitem{prvAnd}{\ollabel{prop:mcs-and} $(!A \land !B) \in \Gamma$
+  اُدوں تے صرف اُدوں جدوں دوویں $!A \in \Gamma$ تے $!B \in \Gamma$۔}{}
+
+\tagitem{prvOr}{\ollabel{prop:mcs-or} $(!A \lor !B) \in \Gamma$ اُدوں تے صرف اُدوں جدوں
+  یا $!A \in \Gamma$ یا $!B \in \Gamma$۔}{}
+
+\tagitem{prvIf}{\ollabel{prop:mcs-if} $(!A \lif !B) \in \Gamma$ اُدوں تے صرف اُدوں جدوں
+  یا $!A \notin \Gamma$ یا $!B \in \Gamma$۔}{}
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+ایہناں ساریاں گلاں لئی اسیں منّ لینے آں کہ $\Gamma$ زیادہ توں زیادہ بے تضاد اے۔
+\begin{enumerate}
+\item جے $\Gamma \Proves !A$، تاں $!A \in \Gamma$۔
+
+منّ لو $\Gamma \Proves !A$۔ اُلٹا فرض کرو کہ $!A
+\notin \Gamma$۔ فیر چونکہ $\Gamma$ زیادہ توں زیادہ بے تضاد اے، $\Gamma
+\cup \{!A\}$ متضاد اے، سو $\Gamma \cup \{!A\} \Proves
+\lfalse$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-contr},prfND/{fol:ntd:prv:prop:provability-contr}} مطابق
+$\Gamma$ متضاد اے۔ ایہ اوس فرض دے اُلٹ اے کہ $\Gamma$ بے تضاد اے۔ سو ایہ نہیں ہو سکدا کہ $!A \notin
+\Gamma$، ایس لئی $!A \in \Gamma$۔
+
+\item ہر $!A$ لئی، یا $!A \in \Gamma$ یا $\lnot !A \in \Gamma$۔
+
+اُلٹا فرض کرو کہ کسے~$!A$ لئی دوویں $!A \notin \Gamma$ تے $\lnot !A \notin \Gamma$۔ چونکہ $\Gamma$ زیادہ توں زیادہ بے تضاد اے، $\Gamma \cup \{!A\}$ تے $\Gamma \cup \{\lnot !A\}$ دوویں متضاد نیں، سو $\Gamma \cup \{!A\} \Proves \lfalse$ تے $\Gamma \cup
+\{\lnot !A\} \Proves \lfalse$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-exhaustive},prfND/{fol:ntd:prv:prop:provability-exhaustive}} مطابق
+$\Gamma$ متضاد اے، سو تضاد نکلدا اے۔ ایس لئی کوئی ایہو جیہا !!a{sentence}~$!A$ نہیں ہو سکدا تے ہر $!A$ لئی، یا $!A \in \Gamma$ یا $\lnot !A
+\in \Gamma$۔
+
+\tagitem{defAnd}{}{%
+\iftag{probAnd}{مشق۔}{%
+$(!A \land !B) \in \Gamma$ اُدوں تے صرف اُدوں جدوں دوویں $!A \in \Gamma$ تے $!B \in \Gamma$۔
+
+سدھے پاسے لئی منّ لو $(!A \land !B) \in \Gamma$۔ فیر
+$\Gamma \Proves !A \land !B$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-land-left},prfND/{fol:ntd:prv:prop:provability-land-left}} مطابق
+$\Gamma \Proves !A$ تے $\Gamma \Proves !B$۔ \olref{prop:mcs-prov-in} مطابق $!A \in \Gamma$ تے $!B \in \Gamma$، جیویں چاہیدا سی۔
+
+اُلٹے پاسے لئی منّ لو $!A \in \Gamma$ تے $!B \in
+\Gamma$۔ فیر $\Gamma \Proves !A$ تے $\Gamma \Proves !B$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-land-right},prfND/{fol:ntd:prv:prop:provability-land-right}} مطابق
+$\Gamma \Proves !A \land !B$۔ \olref{prop:mcs-prov-in} مطابق $(!A \land
+!B) \in \Gamma$۔}}
+
+\tagitem{defOr}{}{%
+\iftag{probOr}{مشق۔}{%
+$(!A \lor !B) \in \Gamma$ اُدوں تے صرف اُدوں جدوں یا $!A \in \Gamma$ یا $!B \in \Gamma$۔
+
+سدھے پاسے دی اُلٹی نفی لئی منّ لو $!A
+\notin \Gamma$ تے $!B \notin \Gamma$۔ اسیں وکھاؤنا اے کہ $(!A \lor
+!B) \notin \Gamma$۔ چونکہ $\Gamma$ زیادہ توں زیادہ بے تضاد اے، $\Gamma
+\cup \{!A\} \Proves \lfalse$ تے $\Gamma \cup \{!B\} \Proves \lfalse$۔
+\tagrefs{prfSC/{fol:seq:prv:prop:provability-lor-left},prfND/{fol:ntd:prv:prop:provability-lor-left}} مطابق
+$\Gamma \cup \{(!A \lor !B)\}$ متضاد اے۔ سو $(!A \lor !B)
+\notin \Gamma$، جیویں چاہیدا سی۔
+
+اُلٹے پاسے لئی منّ لو $!A \in \Gamma$ یا $!B \in
+\Gamma$۔ فیر $\Gamma \Proves !A$ یا $\Gamma \Proves !B$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-lor-right},prfND/{fol:ntd:prv:prop:provability-lor-right}} مطابق
+$\Gamma \Proves !A \lor !B$۔ \olref{prop:mcs-prov-in} مطابق $(!A \lor
+!B) \in \Gamma$، جیویں چاہیدا سی۔}}
+
+\tagitem{defIf}{}{%
+\iftag{probIf}{مشق۔}{%
+$(!A \lif !B) \in \Gamma$ اُدوں تے صرف اُدوں جدوں یا $!A \notin \Gamma$ یا $!B \in \Gamma$۔
+
+سدھے پاسے لئی منّ لو $(!A \lif !B) \in \Gamma$، تے اُلٹا فرض کرو کہ $!A \in \Gamma$ تے $!B \notin \Gamma$۔ ایہناں فرضاں اُتے $\Gamma \Proves !A \lif !B$ تے $\Gamma \Proves !A$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-mp},prfND/{fol:ntd:prv:prop:provability-mp}} مطابق
+$\Gamma \Proves !B$۔ پر فیر \olref{prop:mcs-prov-in} مطابق $!B \in
+\Gamma$، جیہڑا اوس فرض دے اُلٹ اے کہ $!B \notin \Gamma$۔
+
+اُلٹے پاسے لئی پہلاں اوہ صورت ویکھو جتھے $!A \notin
+\Gamma$۔ \olref{prop:mcs-either-or} مطابق $\lnot !A \in \Gamma$ تے سو $\Gamma \Proves \lnot !A$۔ \tagrefs{prfSC/{fol:seq:prv:prop:provability-lif},prfND/{fol:ntd:prv:prop:provability-lif}} مطابق
+$\Gamma \Proves !A \lif !B$۔ \olref{prop:mcs-prov-in} فیر لا کے سانوں $(!A \lif !B) \in \Gamma$ ملدا اے، جیویں چاہیدا سی۔
+
+ہُن اوہ صورت ویکھو جتھے $!B \in \Gamma$۔ فیر $\Gamma \Proves !B$ تے \tagrefs{prfSC/{fol:seq:prv:prop:provability-lif},prfND/{fol:ntd:prv:prop:provability-lif}} مطابق
+$\Gamma \Proves !A \lif !B$۔ \olref{prop:mcs-prov-in} مطابق $(!A \lif
+!B) \in \Gamma$۔}}
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref[fol][com][mcs]{prop:mcs} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

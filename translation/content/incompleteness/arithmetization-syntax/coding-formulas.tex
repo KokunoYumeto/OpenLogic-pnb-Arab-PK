@@ -1,0 +1,94 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: coding-formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{art}{frm}
+\olsection{\printtoken{P}{formula} نوں کوڈ دینا}
+
+تعلق $\fn{Term}(x)$ دی تعریف بنیادی بازگشتی ڈھنگ نال ہو جان
+توں بعد اسیں اوہنوں ورت کے !!{formula}s لئی متعلقہ تعلق
+$\fn{Frm}(x)$ دی تعریف وی بنیادی بازگشتی ڈھنگ نال کر سکدے آں۔
+
+\begin{prop}
+تعلق $\fn{Atom}(x)$ اُدوں تے صرف اُدوں قائم اے جدوں $x$ کسے
+ایٹمی !!{formula} دا گوڈل نمبر ہووے۔ ایہ تعلق بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+عدد $x$ کسے ایٹمی !!{formula} دا گوڈل نمبر اُدوں تے صرف اُدوں
+اے جدوں ایہناں وچوں کوئی اک شرط پوری ہووے:
+\begin{enumerate}
+\item ایسے $n$، $j < x$ تے $z < x$ موجود ہون کہ ہر $i < n$
+  لئی $\fn{Term}((z)_i)$ قائم ہووے تے $x = $
+\[
+\Gn{\Obj P^n_j(} \concat \fn{flatten}(z) \concat \Gn{)}.
+\]
+\item ایسے $z_1, z_2 < x$ موجود ہون کہ $\fn{Term}(z_1)$
+  تے $\fn{Term}(z_2)$ دونوں قائم ہون، تے $x = $
+\[
+\Gn{{\eq}(} \concat z_1 \concat \Gn{,} \concat z_2 \concat{\Gn{)}}.
+\]
+  \tagitem{prvFalse}{$x = \Gn{\lfalse}$.}{}
+  \tagitem{prvTrue}{$x = \Gn{\ltrue}$.}{}
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:frm-primrec}
+تعلق $\fn{Frm}(x)$ اُدوں تے صرف اُدوں قائم اے جدوں $x$
+!!a{formula} دا گوڈل نمبر ہووے۔ ایہ تعلق بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+علامتاں دا سلسلہ~$s$ اُدوں تے صرف اُدوں !!a{formula} اے جدوں
+!!{formula} دی تشکیل دا کوئی سلسلہ~$s_0$، \dots، $s_{k-1} = s$
+موجود ہووے جیہڑا وکھاوے کہ تشکیل دے قاعدیاں مطابق ایٹمی
+!!{formula}s توں~$s$ کِویں بنیا۔ ہر $s_i$ دا کوڈ (تے پورے
+سلسلے $\tuple{s_0, \dots, s_{k-1}}$ دا کوڈ وی) کوڈ~$x$ توں
+چھوٹا اے، جیہڑا~$s$ دا کوڈ اے۔
+\end{proof}
+
+\begin{prob}
+\olref[inc][art][trm]{prop:term-primrec} دے پہلے ثبوت دی طرز اُتے
+\olref[inc][art][frm]{prop:frm-primrec} دا تفصیلی ثبوت دیو۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:freeocc-primrec}
+تعلق $\fn{FreeOcc}(x, z, i)$ اُدوں تے صرف اُدوں قائم اے جدوں
+فارمولے دی $i$-ویں علامت، جتھے اوس فارمولے دا گوڈل نمبر~$x$
+اے، گوڈل نمبر~$z$ والے متغیر دی آزاد آمد ہووے۔
+ایہ تعلق بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[inc][art][frm]{prop:freeocc-primrec} ثابت کرو۔ تسیں ایہ
+گل ورت سکدے او کہ !!a{formula} دی ہر اوہ لگاتار ذیلی لڑی
+جیہڑی آپ !!a{formula} ہووے، اوس دی ذیلی !!{formula} اے۔
+\end{prob}
+
+\begin{prop}
+خاصیت $\fn{Sent}(x)$ اُدوں تے صرف اُدوں قائم اے جدوں $x$
+!!a{sentence} دا گوڈل نمبر ہووے۔ ایہ خاصیت بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+!!{sentence} اوہ !!a{formula} اے جیہدے وچ !!{variable}s دی
+کوئی آزاد آمد نہیں ہوندی۔ ایس لئی $\fn{Sent}(x)$ اُدوں تے
+صرف اُدوں قائم اے جدوں
+\begin{multline*}
+\bforall{i<\len{x}}{\bforall{z<x}{}}\\
+(\bexists{j<z}{z=\Gn{\Obj v_j}} \lif \lnot\fn{FreeOcc}(x,z,i)).
+\end{multline*}
+\end{proof}
+
+
+\end{document}

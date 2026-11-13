@@ -1,0 +1,46 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{fml}
+
+\olsection{\usetoken{P}{formula}}
+
+\begin{defn}[فارمولا]
+\ollabel{defn:formulas}
+سیٹ~$\Frm[L]$ وچ قضیاتی زبان~$\Lang L$ دے \emph{!!{formula}s}
+ہوندے نیں۔ ایہ سیٹ استقرا نال ایویں متعین ہوندا اے۔
+\begin{enumerate}
+\item ہر !!{propositional variable}~$\Obj p_i$ اک ایٹمی
+  !!{formula} اے۔
+\item ہر $0$-مقامی رابطہ، یعنی قضیاتی مستقل، جیہڑا~$\Lang L$
+  وچ اے، اک ایٹمی !!{formula} اے۔
+\item جے $\star$ اک $n$-مقامی رابطہ اے جیہڑا~$\Lang L$ وچ اے، تے $!A_1$،
+\dots، $!A_n$، !!{formula}s نیں، تاں $\star(!A_1, \dots, !A_n)$
+!!a{formula} اے۔
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+جے $\star$ اک $1$-مقامی رابطہ اے، تاں $\star(!A_1)$ نوں
+اکثر بس $\star !A_1$ لکھدے آں۔ جے $\star$ اک $2$-مقامی
+رابطہ اے، تاں $\star(!A_1,!A_2)$ نوں اکثر $(!A_1 \star !A_2)$
+لکھدے آں۔
+\end{defn}
+
+رواج مطابق اسیں اکثر سبھ توں باہر دیاں قوساں بِن دسے چھڈ
+دیندے آں۔
+
+\begin{ex}
+  معیاری زبان~$\Lang{L_0}$ وچ $\Obj p_1 \lif (\Obj p_1
+  \land \lnot \Obj p_2)$ اک فارمولا اے۔ حاصلِ ضرب والی منطق
+  دی زبان وچ اینوں $\Obj p_1 \lif (\Obj p_1 \odot
+  \lnot \Obj p_2)$ لکھیا جاندا اے۔ جے $1$-مقامی $\triangle$
+  زبان وچ شامل کریے، تاں ساڈے کول $\triangle (\Obj p_1
+  \land \Obj p_2) \lif (\triangle \Obj p_1 \land \triangle \Obj p_2)$
+  ورگے فارمولے وی ہون گے۔
+\end{ex}
+
+\end{document}

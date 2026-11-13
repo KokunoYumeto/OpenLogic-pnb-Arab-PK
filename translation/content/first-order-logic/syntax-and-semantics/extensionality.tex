@@ -1,0 +1,149 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{ext}
+
+\olsection{غیر متعلقہ علامتاں توں آزادی}
+
+\begin{explain}
+غیر متعلقہ علامتاں توں آزادی، جیہنوں کدے متعلقہ ہون دا اصول وی
+آکھدے نیں، عام لفظاں وچ ایویں دسی جا سکدی اے: !!{formula}~$!A$
+دا !!a{structure}~$\Struct M$ وچ !!a{variable} قدر بندی~$s$
+% PNB-SEM-020: قضیے وچ عین اکّو دائرہ فرض اے؛ اکیلے حجم دی برابری اوہ شرط نہیں۔
+دے لحاظ نال پورا اترنا صرف خود !!{domain} تے اُن
+تعبیراں اُتے منحصر اے جیہڑیاں~$\Struct M$ تے~$s$ زبان دے
+اوہناں اجزا نوں دیندے نیں جیہڑے واقعی~$!A$ وچ آندے نیں۔
+
+ایس اصول دا اک سیدھا نتیجہ ایہ اے: جے دو !!{structure}s~$\Struct M$
+تے~$\Struct M'$ کسے جملے~$!A$ وچ آون والے زبان دے سارے اجزا
+دی تعبیر اُتے متفق ہون تے اوہناں دا دائرہ اک ہووے، تاں
+~$\Struct M$ تے~$\Struct M'$ نوں ایہ گل وی اکّو جیہی دسنی
+پئے گی کہ $!A$ سچ اے یا نہیں۔
+\end{explain}
+
+\begin{prop}[غیر متعلقہ علامتاں توں آزادی]
+  \ollabel{prop:extensionality}
+  فرض کرو $!A$ اک !!a{formula} اے، $\Struct M_1$ تے $\Struct M_2$
+  دو !!{structure}s نیں جیہناں لئی $\Domain{M_1} = \Domain{M_2}$،
+  تے $s$ ایس مشترک $\Domain{M_1} = \Domain{M_2}$ اُتے متغیر
+  قدر بندی اے۔ جے $\Assign{c}{M_1} = \Assign{c}{M_2}$،
+  $\Assign{R}{M_1}=\Assign{R}{M_2}$ تے
+  $\Assign{f}{M_1} = \Assign{f}{M_2}$ ہر اُس !!{constant}~$c$،
+  تعلقی نشان~$R$، تے !!{function}~$f$ لئی جیہڑا~$!A$ وچ آندا اے،
+  تاں $\Sat{M_1}{!A}[s]$ اُدوں تے صرف اُدوں جدوں
+  $\Sat{M_2}{!A}[s]$۔
+\end{prop}
+
+\begin{proof}
+  پہلاں~$t$ اُتے استقرا نال ثابت کرو کہ فارمولے وچ آون والے ہر ٹرم لئی
+  % PNB-SEM-013: ماخذ ہر ٹرم آکھدا اے، پر تعبیراں دی برابری صرف فارمولے وچ آون والیاں علامتاں لئی فرض اے۔
+  $\Value{t}{M_1}[s] = \Value{t}{M_2}[s]$۔ فیر~$!A$ اُتے
+  استقرا کرکے قضیہ ثابت کرو؛ بنیادی استقرائی صورت وچ، جدوں $!A$
+  ایٹمی ہووے، ہُن ثابت کیتا دعویٰ ورتو۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ext]{prop:extensionality} دا ثبوت پوری تفصیل نال
+دیو۔
+\end{prob}
+
+\begin{cor}[!!^{sentence}s لئی غیر متعلقہ علامتاں توں آزادی]
+  \ollabel{cor:extensionality-sent}
+  فرض کرو $!A$ اک !!a{sentence} اے تے $\Struct{M_1}$، $\Struct{M_2}$
+  اوہ نیں جیہڑے \olref{prop:extensionality} وچ دتے نیں۔ تاں
+  $\Sat{M_1}{!A}$ اُدوں تے صرف اُدوں جدوں $\Sat{M_2}{!A}$۔
+\end{cor}
+
+\begin{proof}
+\olref[ass]{cor:sat-sentence} دے ذریعے ایہ \olref{prop:extensionality}
+توں نکلدا اے۔
+\end{proof}
+
+ایس توں ودھ، ٹرم دی قدر تے !!a{structure} دا !!a{formula}
+نوں پورا کرنا یا نہ کرنا، اوہدے ذیلی ٹرماں دیاں قدراں اُتے
+ہی منحصر ہوندا اے۔
+
+\begin{prop}\ollabel{prop:ext-terms}
+فرض کرو $\Struct M$ اک !!a{structure} اے، $t$ تے $t'$ ٹرم نیں،
+تے $s$ متغیر قدر بندی اے۔ تاں
+$\Value{\Subst{t}{t'}{x}}{M}[s] =
+\Value{t}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}]$۔
+\end{prop}
+
+\begin{proof}
+~$t$ اُتے استقرا نال۔
+\begin{enumerate}
+\item جے $t$ ثابتہ اے، مثلاً $t\ident c$، تاں $\Subst{t}{t'}{x} =
+  c$، تے $\Value{c}{M}[s] = \Assign{c}{M} =
+  \Value{c}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}]$۔
+
+\item جے $t$،~$x$ توں وکھرا متغیر اے، مثلاً $t \ident y$، تاں
+  $\Subst{t}{t'}{x} = y$، تے $\Value{y}{M}[s] =
+  \Value{y}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}]$، کیوں جے
+  $\varAssign{s}{\Subst{s}{\Value{t'}{M}[s]}{x}}{x}$۔
+
+\item جے $t \ident x$، تاں $\Subst{t}{t'}{x} = t'$۔ پر
+  $\Value{x}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}] = \Value{t'}{M}[s]$،
+  ~ $\Subst{s}{\Value{t'}{M}[s]}{x}$ دی تعریف مطابق۔
+
+\item جے $t \ident \Atom{f}{t_1,\dots,t_n}$، تاں ساڈے کول ایہ اے:
+% PNB-SEM-014: شروع دا دہرایا برابر نشان ہٹایا اے؛ اگلی سطر دا برابر نشان برقرار اے۔
+\begin{multline*}
+  \Value{\Subst{t}{t'}{x}}{M}[s]  \\
+  \begin{aligned}[b]
+& = \Value{\Atom{f}{\Subst{t_1}{t'}{x}, \dots, \Subst{t_n}{t'}{x}}}{M}[s]\\
+& \qquad    \text{ $\Subst{t}{t'}{x}$ دی تعریف مطابق}\\
+& = \Assign{f}{M}(\Value{\Subst{t_1}{t'}{x}}{M}[s], \dots,
+    \Value{\Subst{t_n}{t'}{x}}{M}[s])\\
+    & \qquad  \text{ $\Value{\Atom{f}{\dots}}{M}[s]$ دی تعریف مطابق}\\
+& = \Assign{f}{M}(\Value{t_1}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}], \dots,
+   \Value{t_n}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}])\\
+& \qquad    \text{ استقرائی مفروضے مطابق}\\
+& = \Value{t}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}]
+    \text{ $\Value{\Atom{f}{\dots}}{M}[\Subst{s}{\Value{t'}{M}[s]}{x}]$ دی تعریف مطابق}
+  \end{aligned}
+\end{multline*}
+\end{enumerate}
+\end{proof}
+
+\begin{prop}\ollabel{prop:ext-formulas} فرض کرو $\Struct M$ اک
+!!a{structure} اے، $!A$ اک !!a{formula}، $t'$ اک ٹرم تے $s$
+متغیر قدر بندی اے۔
+% PNB-SEM-019: فارمولے وچ بدل پچھلی تعریف مطابق اوہدوں ای جائز اے جدوں دتا ٹرم بدل لئی آزاد ہووے۔
+ایہ شرط وی اے کہ دتے فارمولے وچ منتخب متغیر لئی دتا ٹرم بدل لئی
+آزاد ہووے۔ تاں $\Sat{M}{\Subst{!A}{t'}{x}}[s]$ اُدوں تے
+صرف اُدوں جدوں $\Sat{M}{!A}[\Subst{s}{\Value{t'}{M}[s]}{x}]$۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ext]{prop:ext-formulas} ثابت کرو۔
+\end{prob}
+
+\begin{explain}
+  \cref{fol:syn:ext:prop:ext-terms,fol:syn:ext:prop:ext-formulas} دی
+  گل ایہ اے: فرض کرو ساڈے کول ٹرم $t$ یا !!a{formula}~$!A$ اے
+  تے کوئی ہور ٹرم~$t'$ اے، تے اسیں $\Subst{t}{t'}{x}$ دی قدر
+  یا $\Subst{!A}{t'}{x}$ دا !!a{structure}~$\Struct M$
+  وچ !!a{variable} قدر بندی~$s$ دے لحاظ نال پورا اترنا جاننا
+  چاہندے آں۔ فارمولے والے بدل لئی اوپر دتی جائز ہون دی شرط ضروری
+  اے۔ تاں اسیں پہلے بدل کرکے فیر~$\Struct{M}$ تے~$s$
+  دے لحاظ نال قدر یا پورا اترنا ویکھ سکدے آں؛ یا پہلے قدر~$m = \Value{t'}{M}[s]$
+  معلوم کر سکدے آں، جیہڑی~$t'$ دی~$\Struct{M}$ وچ~$s$ دے لحاظ
+  نال قدر اے؛ ایہ حساب کرکے !!{variable} قدر بندی نوں~$\Subst{s}{m}{x}$
+  بنا سکدے آں، تے فیر~$t$ دی قدر~$\Struct{M}$ تے
+  ~$\Subst{s}{m}{x}$ دے لحاظ نال، یا
+  $\Sat{M}{!A}[\Subst{s}{m}{x}]$ ویکھ سکدے آں۔
+  \Cref{fol:syn:ext:prop:ext-terms,fol:syn:ext:prop:ext-formulas}
+  ضمانت دیندے نیں کہ دوناں راہواں نال اک ہی جواب آوے گا۔
+\end{explain}
+
+\end{document}

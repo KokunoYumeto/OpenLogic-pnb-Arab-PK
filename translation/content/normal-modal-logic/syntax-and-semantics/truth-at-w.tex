@@ -1,0 +1,113 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: truth-at-w
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{trw}
+
+\olsection{کسی جہان وچ سچائی}
+
+ہر امکانی نمونہ طے کردا اے کہ اوہدے کہڑے جہاناں وچ کہڑے امکانی !!{formula}s سچے نیں۔ «نمونہ $\mModel{M}$، !!{formula}~$!A$ نوں جہان~$w$ وچ سچا کردا اے» والا تعلق تعلقی معنیات دا بنیادی خیال اے۔ ایس تعلق دی تعریف استقرا نال ہوندی اے تے غیر امکانی عاملاں لئی ایہ سچائی دیاں سارنیاں والی عام تعریف نال میل کھاندا اے۔
+
+\begin{defn}\ollabel{defn:mmodels}
+  \emph{!!a{formula}~$!A$ دا جہان~$w$ وچ سچا ہونا}، نمونے~$\mModel M$ دے لحاظ نال، علامتاں وچ $\mSat{M}{!A}[w]$، ایس طرح استقرا نال متعین ہوندا اے:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{کدے وی $\mSat{M}{\lfalse}[w]$ نہیں ہوندا}۔}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{ہمیشہ $\mSat{M}{\ltrue}[w]$ ہوندا اے}۔}{}
+  \item $\mSat{M}{p}[w]$ اُدوں تے صرف اُدوں جدوں $w \in V(p)$۔
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat/{M}{!B}[w]$}۔}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$} (یا دونیں)۔}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat/{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    یا تاں $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$ دونیں ہون، یا
+    نہ $\mSat{M}{!B}[w]$ ہووے تے نہ $\mSat{M}{!C}[w]$}۔}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Box !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[w']$ ہر اوس $w' \in W$ لئی ہووے جیہدے لئی $Rww'$ ہووے۔}
+  \item\ollabel{defn:sub:mmodels-diamond}
+    \indcase{!A}{\Diamond !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[w']$ گھٹ توں گھٹ اک ایسے $w' \in W$ لئی ہووے جیہدے لئی $Rww'$ ہووے۔}
+  \end{enumerate}
+\end{defn}
+
+دھیان دیو کہ شق~\olref{defn:sub:mmodels-box} مطابق !!a{formula}~$\Box
+!B$، جہان~$w$ وچ سچا ہوندا اے جدوں کوئی~$w'$ ایسا نہ ہووے جیہدے لئی $Rww'$ ہووے۔ ایس صورت وچ $\Box !B$، جہان~$w$ وچ \emph{خالی شرط کارن} سچا اے۔ $\Box !B$، جہان~$w$ وچ سچا ہو سکدا اے بھاویں $!B$ اُتھے سچا نہ ہووے۔ $!B$ دا جہان~$w$ وچ سچا ہونا~$\Diamond !B$ دے جہان~$w$ وچ سچا ہون دی ضمانت نہیں دیندا۔ البتہ جے $Rww$ ہووے، جیویں جدوں $R$ انعکاسی ہووے، تاں ایہ گل پکی اے۔ جے کوئی $w'$ ایسا نہ ہووے جیہدے لئی $Rww'$ ہووے، تاں $\mSat/{M}{\Diamond !A}[w]$، ہر~$!A$ لئی۔
+
+\begin{prob}
+  \olref[nml][syn][rel]{fig:simple} والے نمونے نوں ویکھو۔ ہِیٹھ لکھیاں وچوں کہڑے بیان سچے نیں؟
+    \begin{enumerate}
+    \item $\mSat{M}{q}[w_1]$؛
+    \item $\mSat{M}{\lnot q}[w_3]$؛
+    \item $\mSat{M}{p \lor q}[w_1]$؛
+    \item $\mSat{M}{\Box (p \lor q)}[w_1]$؛
+    \item $\mSat{M}{\Box q}[w_3]$؛
+    \item $\mSat{M}{\Box \bot}[w_3]$؛
+    \item $\mSat{M}{\Diamond q}[w_1]$؛
+    \item $\mSat{M}{\Box q}[w_1]$؛
+    \item $\mSat{M}{\lnot \Box\Box \lnot q}[w_1]$۔
+    \end{enumerate}
+\end{prob}
+
+% \Box تے \Diamond دے دوہرے تعلق دا ثبوت
+\begin{tagblock}{prvDiamond}
+\begin{prop}\ollabel{prop:dual}
+  \begin{enumerate}
+  \item $\mSat{M}{\Box !A}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{\lnot\Diamond\lnot !A}[w]$۔
+  \item $\mSat{M}{\Diamond !A}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{\lnot\Box\lnot !A}[w]$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\mSat{M}{\lnot\Diamond\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{\Diamond\lnot
+      !A}[w]$، $\mSat{M}{}[w]$ دی تعریف مطابق۔ $\mSat{M}{\Diamond\lnot
+      !A}[w]$ اُدوں تے صرف اُدوں جدوں کسے ایسے $w'$ لئی جیہدے لئی $Rww'$ ہووے، $\mSat{M}{\lnot
+      !A}[w']$ ہووے۔ ایس لئی $\mSat/{M}{\Diamond\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں ہر ایسے
+    $w'$ لئی جیہدے لئی $Rww'$ ہووے، $\mSat/{M}{\lnot !A}[w']$ ہووے۔ نالے
+    $\mSat/{M}{\lnot !A}[w']$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!A}[w']$۔ اینہاں نوں جوڑ کے
+    $\mSat{M}{\lnot\Diamond\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں ہر ایسے $w'$ لئی جیہدے لئی $Rww'$ ہووے،
+    $\mSat{M}{!A}[w']$ ہووے۔ فیر $\mSat{M}{}[w]$ دی تعریف مطابق، ایہ اُدوں تے صرف اُدوں ہوندا اے جدوں $\mSat{M}{\Box !A}[w]$۔
+    \item \iftag{probDiamond}{مشق۔}{$\mSat{M}{\lnot\Box\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں
+      $\mSat/{M}{\Box\lnot !A}$۔ $\mSat{M}{\Box\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں ہر ایسے
+      $w'$ لئی جیہدے لئی $Rww'$ ہووے، $\mSat{M}{\lnot !A}[w']$ ہووے۔ ایس لئی
+      $\mSat/{M}{\Box\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں کسے ایسے $w'$ لئی جیہدے لئی $Rww'$ ہووے،
+      $\mSat/{M}{\lnot !A}[w']$ ہووے۔ نالے $\mSat/{M}{\lnot
+        !A}[w']$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!A}[w']$۔ اینہاں نوں جوڑ کے
+      $\mSat{M}{\lnot\Box\lnot !A}[w]$ اُدوں تے صرف اُدوں جدوں کسے ایسے~$w'$ لئی جیہدے لئی
+      $Rww'$ ہووے، $\mSat{M}{!A}[w']$ ہووے۔ فیر
+      $\mSat{M}{}[w]$ دی تعریف مطابق، ایہ اُدوں تے صرف اُدوں ہوندا اے جدوں $\mSat{M}{\Diamond
+        !A}[w]$۔}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probDiamond}
+  \olref[nml][syn][trw]{prop:dual} دا ثبوت پورا کرو۔
+\end{probtag}
+\end{tagblock}
+
+\begin{prob}
+  منّ لو کہ $\mModel{M} = \tuple{W, R, V}$ اک نمونہ اے تے $w_1, w_2 \in
+  W$ لئی ہِیٹھ لکھیاں شرطاں پوری ہوندیاں نیں:
+  \begin{enumerate}
+  \item $w_1 \in V(p)$ اُدوں تے صرف اُدوں جدوں $w_2 \in V(p)$ (ہر !!{propositional variable} $p$ لئی)؛ تے
+  \item ہر $w \in W$ لئی: $Rw_1w$ اُدوں تے صرف اُدوں جدوں $Rw_2w$۔
+  \end{enumerate}
+  !!{formula}s اُتے استقرا نال وکھاؤ کہ سارے !!{formula}s $!A$ لئی
+  $\mSat{M}{!A}[w_1]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!A}[w_2]$۔
+\end{prob}
+
+\begin{probtag}{prvDiamond}
+  منّ لو کہ $\mModel{M} = \tuple{W, R, V}$۔ وکھاؤ کہ
+  $\mSat{M}{\lnot\Diamond !A}[w]$ اُدوں تے صرف اُدوں جدوں
+  $\mSat{M}{\Box\lnot!A}[w]$۔
+\end{probtag}
+
+\end{document}

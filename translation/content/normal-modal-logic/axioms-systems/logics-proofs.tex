@@ -1,0 +1,63 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: logics-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{prf}
+
+\olsection{\usetoken{P}{derivation} تے امکانی نظام}
+
+پہلاں اسیں ایہ متعین کردے آں کہ نارمل امکانی منطقاں وچ !!a{derivation} کیہ ہوندا اے۔ موٹے طور تے !!a{derivation}، !!{formula}s دی لڑی اے جیہدے وچ ہر !!{element} یا تاں کجھ \emph{مسلّمیاں} وچوں کوئی اک (یا اوہدی بدل توں بنی مثال) اے، یا پہلے !!{element}s توں کجھ استنباطی قاعدیاں وچوں کسے اک نال نکلدا اے۔ نارمل امکانی منطقاں لئی ہمیشہ صادق فارمولیاں\iftag{prvDiamond}{، \Ax{K}، تے~\Dual{}}{ تے~\Ax{K}} دیاں ساریاں مثالاں مسلّمے منّیاں جاندیاں نیں۔ ایس توں امکانی نظام~$\Log{K}$، یعنی سبھ توں چھوٹی نارمل امکانی منطق، ملدا اے۔ پر ہور نظام لبھن لئی اسیں ہور مسلّمے شامل کر سکدے آں۔ قاعدے ہمیشہ قاعدۂ اثباتِ مقدم~\MP{} تے لازمیت دا قاعدہ~\Nec نیں۔
+
+\begin{defn}
+  اک امکانی نظام $\Log{K} !A_1 \dots !A_n$ تے اک !!a{formula}~$!B$ دِتّے ہون، تاں اسیں آکھدے آں کہ $!B$،
+  $\Log{K} !A_1 \dots
+  !A_n$ وچ \emph{!!{derivable}} اے، تے اینوں $\Log{K} !A_1 \dots !A_n \Proves !B$ لکھدے آں، اُدوں تے صرف اُدوں جدوں ایسے !!{formula}s $!C_1$، \dots، $!C_k$ ہون کہ $!C_k = !B$ تے ہر $!C_i$ یا تاں ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، یا $\Ax{K}$،\iftag{prvDiamond}{ $\Dual$،}{} $!A_1$،
+  \dots، $!A_n$ وچوں کسے اک دی مثال اے، یا پہلے !!{formula}s توں قاعدیاں \MP{} یا~\Nec نال نکلدا اے۔
+\end{defn}
+
+ہِیٹھلے قضیے نال اسیں $!B \in \Sigma$ وکھا سکدے آں، جے $\Sigma$-!!{derivation} پیش کریے~$!B$ دا۔
+
+\begin{prop}
+  $\Log{K} !A_1 \dots !A_n = \Setabs{!B}{\Log{K} !A_1 \dots !A_n \Proves !B}$.
+\end{prop}
+
+\begin{proof}
+  !!{derivation}s دی لمبائی اُتے استقرا ورت کے وکھاؤنے آں کہ
+  $\Setabs{!B}{\Log{K} !A_1 \dots !A_n \Proves !B} \subseteq
+  \Log{K} !A_1 \dots !A_n$۔
+
+  جے~$!B$ دے !!{derivation} دی لمبائی~$1$ اے، تاں اوہدے وچ صرف اک !!{formula} اے۔ اوہ !!{formula} پچھلے فارمولیاں توں
+  \MP{} یا \Nec نال نہیں نکل سکدا، ایس لئی اوہ یا تاں ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، یا
+  \Ax{K}،\iftag{prvDiamond}{ $\Dual$،}{} یا $!A_1$، \dots،~$!A_n$ وچوں کسے اک دی مثال اے۔ پر $\Log{K}!A_1\dots!A_n$ وچ ایہ وی شامل نیں، ایس لئی $!B \in \Log{K}!A_1 \dots !A_n$۔
+
+  جے $!B$ دے !!{derivation} دی لمبائی~$> 1$ اے، تاں $!B$، \MP{} یا \Nec{} نال اوہناں !!{formula}s توں وی مل سکدا اے جیہڑے !!{derivation} دی آخری سطر اُتے نہیں۔ جے $!B$،
+  $!C$ تے $!C \lif !B$ توں نکلدا اے (\MP نال)، تاں $!C$ تے $!C \lif !B \in
+  \Log{K}!A_1 \dots !A_n$، استقرائی مفروضے مطابق۔ پر ہر امکانی منطق قاعدۂ اثباتِ مقدم تحت بند اے، ایس لئی $!B \in \Log{K}!A_1 \dots
+  !A_n$۔ جے $!B \equiv \Box !C$، $!C$ توں \Nec نال نکلدا اے، تاں $!C
+  \in \Log{K}!A_1 \dots !A_n$، استقرائی مفروضے مطابق۔ پر ہر نارمل امکانی منطق $\Nec$ تحت بند اے، ایس لئی $!B \in
+  \Log{K}!A_1\dots!A_n$۔
+
+  اُلٹے رخ دا شامل ہونا وکھاؤن لئی ثابت کرو کہ
+  $\Sigma = \Setabs{!B}{\Log{K} !A_1 \dots !A_n \Proves !B }$ اک نارمل امکانی منطق اے جیہدے وچ $!A_1$،
+  \dots، $!A_n$ دیاں ساریاں مثالاں شامل نیں، تے دھیان دیو کہ $\Log{K} !A_1 \dots !A_n$ تعریف مطابق سبھ توں چھوٹی ایسی منطق اے۔
+  \begin{enumerate}
+    \item ہر ہمیشہ صادق فارمولا~$!B$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، ایس لئی
+      $\Log{K}!A_1\dots!A_n \Proves !B$، سو $\Sigma$ وچ سارے ہمیشہ صادق فارمولے شامل نیں۔
+    \item جے $\Log{K}!A_1\dots!A_n \Proves !C$ تے
+      $\Log{K}!A_1\dots!A_n \Proves !C \lif !B$، تاں
+      $\Log{K}!A_1\dots!A_n \Proves !B$۔ !!{derivation}، جیہڑا
+      $!C$ دا اے، $!C \lif !B$ دے اخذ نال جوڑو تے سطر~$!B$ شامل کرو۔ آخری سطر دا جواز \MP{} اے۔ سو $\Sigma$ قاعدۂ اثباتِ مقدم تحت بند اے۔
+    \item جے $!B$ دا کوئی !!a{derivation} اے، تاں~$!B$ توں بدل نال بنی ہر مثال دا وی اک !!a{derivation} اے۔ !!{derivation} وچ ہر !!{formula} اُتے اوہی بدل لاؤ۔ (مشق۔ !!{derivation}s دی لمبائی اُتے استقرا نال ثابت کرو کہ نتیجہ وی اک ٹھیک !!{derivation} اے۔) سو $\Sigma$ یکساں بدل تحت بند اے۔ (ہُن اسیں ثابت کر دِتّا اے کہ $\Sigma$ امکانی منطق دیاں ساریاں شرطاں پوریاں کردا اے۔)
+    \item ساڈے کول $\Log{K}!A_1\dots!A_n \Proves \Ax{K}$ اے، ایس لئی $K \in \Sigma$۔
+    \tagitem{prvDiamond}{ساڈے کول
+      $\Log{K}!A_1\dots!A_n \Proves \Dual$ اے، ایس لئی $\Dual \in \Sigma$۔}{}
+    \item جے $\Log{K}!A_1\dots!A_n \Proves !C$، تاں ودھائی سطر~$\Box !C$ دا جواز~\Nec اے۔ ایس لئی $\Sigma$،
+      ~\Nec تحت بند اے۔ سو $\Sigma$ نارمل اے۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,77 @@
+% Part: proof-theory
+% Chapter: normalization
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{seg}
+
+\olsection{ٹوٹے تے قطع}
+
+!!^a{introduction} قاعدے توں پچھوں !!a{elimination} قاعدہ آوے، تاں ایہ !!a{proof} وچ اک چکر اے۔ !!a{proof} نوں نارمل روپ وچ لیاؤن دا مطلب ایہو جیہے چکر ہٹاؤنا اے۔ پر \Elim{\lor} تے \Elim{\lexists} کر کے «اوہ چکر جیہڑا اسیں ہٹاؤنا چاہنے آں» دی تعریف وی ذرا گنجل دار ہو جاندی اے۔ اوکھ ایہ اے کہ ایہناں قاعدیاں کر کے کسے چکر وچ ضروری نہیں کہ !!{elimination} قاعدہ !!{introduction} قاعدے دے \emph{جھٹ پچھوں} آوے۔ وچکار \Elim{\lor} یا \Elim{\lexists} آ سکدا اے، جیویں:
+\[
+\AxiomC{}
+\DeduceC{$\lexists[x][!C(x)]$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lexists}}{y}
+\BinaryInfC{$!A \lif !B$}
+\AxiomC{}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+اصل وچ کِنّے وی \Elim{\lor} یا \Elim{\lexists} قاعدے \Intro{\lif} تے \Elim{\lif} دے وچکار آ سکدے نیں، جیویں:
+\[
+\AxiomC{}
+\DeduceC{$\lexists[x][!C(x)]$}
+\AxiomC{}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\RightLabel{\Elim{\lor}}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lexists}}{y}
+\BinaryInfC{$!A \lif !B$}
+\AxiomC{}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+ایہ مثال وکھاؤندی اے کہ اوہی \Elim{\lif} کئی چکراں وچ وی آ سکدا اے، کیونکہ ایہ اک توں ودھ~\Intro{\lif} قاعدیاں دے پچھوں آؤندا اے۔ ایہ ساریاں صورتاں سمیٹن لئی اسیں \Log{N1i} دے ثبوت وچ !!{formula} دے آؤن دیاں کجھ خاص لڑیاں دی مدد نال چکر دی تعریف دیندے آں۔ ایہناں لڑیاں نوں \emph{ٹوٹے} آکھدے آں۔ ساڈی مثال وچ ایہ~$!A \lif !B$ دے آؤن دی اک لڑی اے، جتھے $\Elim{\lor}$ یا $\Elim{\lexists}$ دا چھوٹا مقدمہ اوہدے نتیجے پچھوں آؤندا اے۔ مثال وچ دو ایہو جیہے ٹوٹے نیں، تے ہر ٹوٹے وچ~$!A \lif !B$ تنّ واری آؤندا اے۔ رسمی تعریف ایہ اے۔
+
+\begin{defn}
+\Log{N1i} دے !!{proof}~$\delta$ وچ اک \emph{ٹوٹا} آؤناں دی لڑی $!A_1$، \dots، $!A_n$ اے، جیہڑے اوسے !!{formula}~$!A$ دے $\delta$ وچ آؤن نیں، جتھے
+\begin{enumerate}
+  \item $!A_1$، \Elim{\lor} یا \Elim{\lexists} دا نتیجہ نہیں؛
+  \item $!A_n$، \Elim{\lor} یا \Elim{\lexists} دا چھوٹا مقدمہ نہیں؛
+  \item $i = 1$، \dots،~$n-1$ لئی، $!A_i$، \Elim{\lor} یا \Elim{\lexists} دا چھوٹا مقدمہ اے تے $A_{i+1}$ اوس اخذ دا نتیجہ اے۔
+\end{enumerate}
+اوس ٹوٹے دی \emph{لمبائی}~$n$ اے۔
+\end{defn}
+
+ہر ٹوٹا ہٹاؤن جوگا چکر نہیں ہوندا۔ جیہڑے ٹوٹے ہٹاؤن جوگے چکر ہوندے نیں، اوہناں نوں \emph{قطع} آکھدے آں۔
+
+\begin{defn}
+اک \emph{قطع} اوہ ٹوٹا اے جیہدے وچ $!A_n$، !!a{elimination} اخذ دا وڈّا مقدمہ اے، تے یا تاں $n=1$ اے تے $!A_1 = !A_n$، !!a{introduction} اخذ دا یا~\FalseInt دا نتیجہ اے، یا فیر~$n>1$ اے۔
+\end{defn}
+
+ویکھو کہ قطع ٹوٹے دا !!a{introduction} قاعدے دے نتیجے توں شروع ہونا ضروری نہیں۔ بس ایہ ضروری اے کہ اوہ !!a{elimination} قاعدے دے وڈّے مقدمے اُتے مُکے۔ پر لمبائی~$1$ والے ٹوٹے نوں قطع منّن لئی اوہدا !!{introduction} قاعدیاں دا نتیجہ ہونا ضروری اے۔
+
+\begin{defn}
+قطع دا \emph{درجہ}~$\depth{!A}$ اے۔ \emph{قطع درجہ}~$\cutrank{\delta}$، جیہڑا !!a{proof}~$\delta$ دا اے،~$\delta$ وچ قطعاں دا سبھ توں وڈّا درجہ اے۔~$\delta$ وچ کوئی قطع \emph{وڈّے توں وڈّے درجے والا} اے جے اوہدا درجہ~$\cutrank{\delta}$ اے، یعنی اوہدا درجہ سبھ توں وڈّا اے۔~$\delta$ دی \emph{قطع لمبائی} اوہدے سارے وڈّے توں وڈّے درجے والے قطعاں دیاں لمبائیاں دا جوڑ اے۔
+\end{defn}
+
+\end{document}

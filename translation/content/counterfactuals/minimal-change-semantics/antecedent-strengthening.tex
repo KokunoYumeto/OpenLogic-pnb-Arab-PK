@@ -1,0 +1,68 @@
+% Part: counterfactuals
+% Chapter: minimal-change-semantics
+% Section: antecedent-strengthening
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{min}{agg}
+
+\olsection{مقدم مضبوط کرنا}
+
+’مقدم مضبوط کرنا‘ دا مطلب استنباط $!A \lif !C \Entails (!A \land !B) \lif !C$
+اے۔ ایہ مادی شرطیے لئی معتبر اے، پر خلافِ واقعہ شرطیاں لئی غیر معتبر۔
+منّ لو ایہ سچ اے کہ جے میں ایہ تیلی رگڑدا، تاں اوہ بل پَیندی۔ (یعنی تیلی
+یا پیکٹ دی رگڑ والی تھاں وچ کوئی خرابی نہیں، میں تیلی نہیں توڑاں گا، وغیرہ۔)
+پر ایہ سچ نہیں کہ جے میں ایہ تیلی بیرلی خلا وچ بالدا، تاں اوہ بل پَیندی۔
+سو ہِیٹھلا استنباط غیر معتبر اے:
+\begin{quote}
+  جے تیلی رگڑی جاندی، تاں بل پَیندی۔
+
+  سو جے تیلی بیرلی خلا وچ رگڑی جاندی، تاں بل پَیندی۔
+\end{quote}
+
+لوئس--سٹالنیکر دی شرطیاں والی تشریح ایہ گل سمجھاندی اے۔ سبھ توں نیڑلا
+جہان جتھے میں تیلی بالدا آں تے ایہ کم بیرلی خلا وچ کردا آں، اصل جہان توں
+اوس سبھ توں نیڑلے جہان نالوں کِتے دُور اے جتھے میں تیلی بالدا آں۔ سو
+بھانویں پچھلے جہان وچ تیلی دا بل پینا سچ اے، پہلے وچ ایہ سچ نہیں۔
+تے ایویں ای ہونا چاہیدا اے۔
+
+\begin{ex}
+  گولیاں والی معنیات وچ ایہ استنباط غیر معتبر اے، یعنی ساڈے کول $p
+  \cif r \Entails/ (p \land q) \cif r$ اے۔ نمونہ $\mModel{M}
+  = \tuple{W, O, V}$ ویکھو، جیہدے وچ $W = \{w, w_1, w_2\}$،
+  $O_w = \{\{w\}, \{w, w_1\}, \{w, w_1, w_2\}\}$، $V(p) = \{w_1, w_2\}$،
+  $V(q) = \{w_2\}$، تے $V(r) = \{w_1\}$۔ $p$ نوں تھاں دین والا گولا
+  $S = \{w, w_1\}$ موجود اے تے $p \lif r$ اوہدے سارے جہاناں اُتے سچ اے،
+  سو $\mSat{M}{p \cif r}[w]$۔ $(p \land q)$ نوں تھاں دین والا گولا
+  $S' = \{w, w_1, w_2\}$ وی موجود اے، پر $\mSat/{M}{(p \land q) \lif r}[w_2]$،
+  سو $\mSat/{M}{(p \land q) \cif r}[w]$ (\olref{fig:antecedent-strengthening} ویکھو)۔
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[layerwidth=1.5,scale=.6]\tiny
+  \spheresystem{3}
+  \propositionintersect{-10}{3}{30}{5}
+  \begin{scope}
+    \clip plot[smooth,tension=1] coordinates
+          {(0,4.5) (30:.95) (4.5,-3.5)} -- (4.5,4.5) ;
+    \spherefill{2}
+  \end{scope}
+  \draw[proposition] plot[dashed,smooth,tension=1] coordinates
+          {(0,4.5) (30:.95) (4.5,-3.5)} ;
+  \proposition{30}{2}{30}{5}
+  \path (0,0) node[world] {$w$};
+  \spherepos{30}{2}{node[world] {$w_1$}}
+  \spherepos{-10}{3}{node[world] {$w_2$}}
+  \spherepos{-10}{4}{node {$q$}}
+  \spherepos{30}{4}{node {$r$}}
+  \draw (1,4.5) node[below] {$p$};
+\end{tikzpicture}
+\caption{مقدم مضبوط کرن دی ردّی مثال}
+\ollabel{fig:antecedent-strengthening}
+\end{center}
+\end{figure}
+\end{ex}
+
+\end{document}

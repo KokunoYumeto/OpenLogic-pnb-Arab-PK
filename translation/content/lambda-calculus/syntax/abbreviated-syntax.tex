@@ -1,0 +1,44 @@
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: abbreviated-syntax
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{abb}
+\olsection{مختصر نحو}
+
+\olref[trm]{defn:term} وچ تعریف کیتے ٹرم کدے لکھنے اوکھے
+ہوندے نیں، ایس لئی ہور مختصر نحو ورتنی سوکھی اے۔ پر ایہ دھیان
+رکھنا اے کہ مختصر لکھت وچ وی ہر ٹرم اکّو طرح پڑھیا جا سکے۔
+وڈی پدھر اُتے ورتی جاندی اک صورت \emph{مختصر ٹرم} اے، جیہڑی
+ایویں لکھی جاندی اے۔
+
+\begin{enumerate}
+\item جدوں قوساں چھڈ دئیے، اطلاق کھبے توں سجے ول جُڑدا اے۔
+  مثلاً جے $M$، $N$، $P$ تے~$Q$ ٹرم نیں، تاں $MNPQ$،
+  $(((MN)P)Q)$ دا مختصر روپ اے۔
+\item قوساں چھڈن اُتے لامبڈا تجرید دا دائرۂ اثر جِنّا ہو سکے
+  وڈا رکھدے آں۔ مثلاً $\lambd[x][MNP]$ نوں
+  $(\lambd[x][MNP])$ پڑھدے آں۔
+\item اک لامبڈا نال کئی متغیراں دی تجرید لکھ سکدے آں۔
+  مثلاً $\lambd[xyz][M]$،
+  $\lambd[x][\lambd[y][\lambd[z][M]]]$ دا مختصر روپ اے۔
+\end{enumerate}
+
+مثلاً،
+\[
+\lambd[xy][xxyx \lambd[z][xz]]
+\]
+ایہ ہِٹھلی عبارت دا مختصر روپ اے:
+\[
+(\lambd[x][(\lambd[y][((((xx)y)x)(\lambd[z][(xz)]))])]).
+\]
+
+\begin{prob}
+مختصر ٹرم $\lambd[g][(\lambd[x][g (x x)])
+  \lambd[x][g (x x)]]$ نوں پورا لکھو۔
+\end{prob}
+
+\end{document}

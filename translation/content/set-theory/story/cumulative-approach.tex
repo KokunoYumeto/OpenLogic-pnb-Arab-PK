@@ -1,0 +1,84 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{story}{approach}
+\olsection{اکٹھا کرن والا مرحلہ وار طریقہ}
+
+ہِیٹھاں ذرا کھول کے دسیا اے کہ اسیں سیٹاں نوں مرحلیاں وچ کیویں ونڈاں گے:
+\begin{quote}
+	سیٹ \emph{مرحلیاں} وچ بندے نیں۔ ہر مرحلے $S$ لئی کجھ مرحلے $S$ توں
+	\emph{پہلاں} آؤندے نیں۔ مرحلے $S$ اُتے، $S$ توں پہلاں دے مرحلیاں وچ بنے
+	سیٹاں دے ہر اکٹھ نوں اک سیٹ بنایا جاندا اے۔ مرحلیاں وچ بنے سیٹاں توں
+	بناں ہور کوئی سیٹ نہیں۔ \citep[p.~323]{Shoenfield:AST}
+\end{quote}
+ایہ \emph{سیٹ دے اکٹھا کرن والے مرحلہ وار تصور} دی اک مُڈھلی جھلک اے۔
+\olref[sth][][]{part} وچ جیہڑا رسمی سیٹ نظریہ اسیں پیش کراں گے، اوہ
+ایس اُتے ٹکیا ہووے گا۔
+
+ایہ گل ہور کھول کے ویکھیے۔ شون فیلڈ دے بیان مطابق ہر مرحلے اُتے
+اسیں نویں سیٹ اوہناں {سیٹاں} توں بناندے آں جیہڑے پچھلے مرحلیاں توں
+ساڈے کول سن۔ سو شون فیلڈ دے خیال مطابق، پہلے مرحلے، یعنی مرحلے $0$ اُتے،
+کوئی \emph{پچھلا} مرحلہ نہیں۔ ایس لئی \emph{ہور وی صاف} اے کہ ساڈے کول
+پچھلے مرحلیاں توں کوئی سیٹ نہیں۔\footnote{اسیں کیوں منّیئے کہ پہلا مرحلہ
+\emph{موجود اے}؟ \stagesord{} دا حاشیہ \olref[z][story]{sec} وچ ویکھو۔}
+سو اسیں صرف اک سیٹ بناندے آں: اوہ سیٹ جیہدے وچ کوئی !!{element}s نہیں،
+$\emptyset$۔ مرحلے $1$ اُتے پچھلے مرحلیاں توں ساڈے کول عین اک سیٹ اے،
+سو اکّو نواں سیٹ $\{\emptyset\}$ اے۔ مرحلے $2$ اُتے پچھلے مرحلیاں توں
+ساڈے کول دو سیٹ نیں تے اسیں دو نویں سیٹ $\{\{\emptyset\}\}$ تے
+$\{\emptyset, \{\emptyset\}\}$ بناندے آں۔ مرحلے $3$ اُتے پچھلے مرحلیاں توں
+ساڈے کول چار سیٹ نیں، سو اسیں باراں نویں سیٹ بناندے آں\ldots۔
+ایس طرح سیٹاں دی اکٹھا کرن والی مرحلہ وار صورت کجھ ایہو جیہی ہووے گی
+(عدد مرحلے دسدے نیں):
+\begin{center}
+	\begin{tikzpicture}[scale=0.6]
+	\tikzset{cut_here/.style={densely dotted}}
+	\draw (-4,6) -- (-1, 0)-- (2,6); 
+	\draw[cut_here] (-5,8)--(-4,6);
+	\draw[cut_here] (2,6)--(3,8);
+	\draw(-1.5, 1)--(-0.5, 1);
+	\draw(-2, 2)--(0, 2);
+	\draw(-2.5, 3)--(0.5,3);
+	\draw(-3, 4)--(1, 4);
+	\draw(-3.5, 5)--(1.5, 5);
+	\draw(-4, 6)--(2, 6);
+	\node[label] at (0, 0) {\small 0};
+	\node[label] at (0.5, 1) {\small 1};
+	\node[label] at (1, 2) {\small 2};
+	\node[label] at (1.5, 3) {\small 3};
+	\node[label] at (2, 4) {\small 4};
+	\node[label] at (2.5, 5) {\small 5};
+	\node[label] at (3, 6) {\small 6};
+	\end{tikzpicture}
+\end{center}
+سو اسیں ایہ بیان کیوں منّیئے؟
+
+اک وجہ ایہ اے کہ ایہ بیان سوہنا اے تے ورتنا سوکھا اے۔ سبھ توں ظاہر
+بیان، یعنی سادے خاصیت توں سیٹ بناؤن دے اصول، دے ڈِگ پَین توں پچھوں
+سانوں کوئی چنگا بیان چاہیدا اے۔
+
+پر ایہ بیان \emph{صرف} سوہنا ای نہیں۔ ساڈے کول چنگی وجہ اے ایہ منّن
+دی کہ ایس بیان اُتے ٹکیا ہر سیٹ نظریہ \emph{بے تضاد} ہووے گا۔ وجہ ایہ اے۔
+
+سیٹ دے اکٹھا کرن والے مرحلہ وار تصور مطابق اسیں سیٹ مرحلیاں وچ بناندے آں،
+تے اوہناں دے !!{element}s ایسی شےواں ہونیاں چاہیدیاں نیں جیہڑیاں
+\emph{پہلاں ای} ساڈے کول سن۔ سو کسے وی مرحلے~$S$ لئی اسیں ایہ سیٹ بنا سکدے آں:
+\[
+	R_S = \Setabs{x}{x \notin x \text{ تے $x$ مرحلے $S$ توں پہلاں موجود سی}}
+\]
+رسل دا پیراڈوکس ثابت کرن والی دلیل ہُن ایہ ثابت کرے گی کہ $R_S$ آپ مرحلے
+$S$ توں پہلاں ساڈے کول نہیں سی۔ تے ایہ تضاد نہیں۔ نالے جے اسیں سیٹ دا
+اکٹھا کرن والا مرحلہ وار تصور منّ لئیے، تاں سانوں ایہ \emph{آس} وی نہیں
+سی رکھنی چاہیدی کہ اسیں رسل دا سیٹ آپ بنا سکاں گے۔ اوہ اوہناں سارے
+سیٹاں دا سیٹ ہووے گا جیہڑے اپنے آپ دے رکن نہیں تے جیہڑے ’’کدی وی ساڈے
+کول ہون گے‘‘۔ مختصر گل ایہ اے کہ (جیویں ثابت کیتا جا سکدا اے) رسل دا سیٹ
+نہ بنا سکنا ایس بیان مطابق \emph{حیرانی} دی گل نہیں۔ اسیں تے ایہو \emph{اندازہ}
+لاندے ساں۔
+
+%In one sense, then, the cumulative-iterative conception of set yields a response to Russell's Paradox which is rather like the \emph{predicativist}'s response. After all, the predicativist said that the collection of all non-self-membered sets$_n$ is a set$_{n+1}$, and this set$_n$ will not be self-membered. (Indeed, most predicativists will treat it as \emph{ungrammatical} to try to ask whether a set is self-membered.)
+%
+%But there is an important difference between the cumulative-iterative approach and the predicativist approach: the cumulative-iterative approach treats all of our entities as being \emph{of the same kind}. The predicativist will presumably have an empty set$_0$ (i.e., a set$_0$ with no !!{element}s), and an empty set$_1$ (i.e., a set$_1$ with no !!{element}s), and these will be \emph{different entities}. But on the cumulative-iterative approach, there is just one empty set, $\emptyset$, and it will be available at every stage of the hierarchy. 
+
+%Indeed, the Axiom of Extensionality, stated at the start of this chapter, will hold true of the elements in this hierarchy (so that there can be \emph{only one} ``empty'' set). But I do not intend to use the cumulative-iterative conception to justify Extensionality (see \cite{Boolos1971}). Again: I suggest that we should accept Extensionality, just because we are interested in extensional collections. 
+
+\end{document}

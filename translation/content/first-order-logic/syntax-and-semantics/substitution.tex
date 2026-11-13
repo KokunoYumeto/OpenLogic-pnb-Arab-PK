@@ -1,0 +1,154 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{sub}
+
+\olsection{تھاں بدل}
+
+\begin{defn}[ٹرم وچ تھانواں بدلنا]
+اسیں $\Subst{s}{t}{x}$ نوں، یعنی $t$ نوں~$x$ دی
+ہر آمد دی تھاں~$s$ وچ \emph{رکھن} دا نتیجہ، بازگشتی
+طور تے تعریف کردے آں:
+\begin{enumerate}
+\item \indcase{s}{c}{$\Subst{\indfrm}{t}{x}$ بس $s$ اے۔}
+
+\item \indcase{s}{y}{$\Subst{\indfrm}{t}{x}$ وی بس~$s$ اے،
+  بشرطیکہ $y$ متغیر ہووے تے $y \not\ident x$ ہووے۔}
+
+\item \indcase{s}{x}{$\Subst{\indfrm}{t}{x}$،~$t$ اے۔}
+
+\item\indcase{s}{\Atom{f}{t_1, \dots, t_n}}{$\Subst{\indfrmp}{t}{x}$،
+  $\Atom{f}{\Subst{t_1}{t}{x}, \dots, \Subst{t_n}{t}{x}}$ اے۔}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+ٹرم~$t$، $x$ لئی~$!A$ وچ \emph{!!{free for}} اے
+جے~$x$ دی کوئی آزاد آمد~$!A$ وچ کسے ایسے مسوّر دے
+دائرۂ اثر وچ نہ آوے جیہڑا~$t$ دے کسے متغیر نوں پابند کردا ہووے۔
+\end{defn}
+
+\begin{ex} ~
+\begin{enumerate}
+\item $\Obj v_8$، $\Obj v_1$ لئی
+$\lexists[\Obj
+  v_3]\Atom{\Obj A^2_4}{\Obj v_3,\Obj v_1}$ وچ بدل لئی آزاد اے۔
+
+\item $\Obj f^2_1(\Obj v_1, \Obj v_2)$، $\Obj
+  v_0$ لئی $\lforall[\Obj v_2]\Atom{\Obj A^2_4}{\Obj v_0,\Obj v_2}$
+  وچ بدل لئی \emph{آزاد نہیں} اے۔
+\end{enumerate}
+\end{ex}
+
+\begin{defn}[!!a{formula} وچ تھانواں بدلنا]
+جے $!A$، !!a{formula} اے، $x$~!!a{variable} اے،
+تے $t$~اوہ ٹرم اے جیہڑا~$x$ لئی~$!A$ وچ
+!!{free for} اے، تاں $\Subst{!A}{t}{x}$،
+$t$ نوں~$x$ دیاں ساریاں آزاد آمدواں دی تھاں
+$!A$ وچ رکھن دا نتیجہ اے۔
+\begin{enumerate}
+\tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\Subst{\indfrm}{t}{x}$،
+    $\lfalse$ اے۔}}{}
+
+\tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\Subst{\indfrm}{t}{x}$،
+    $\ltrue$ اے۔}}{}
+
+\item \indcase{!A}{\Atom{P}{t_1,\dots,
+    t_n}}{$\Subst{\indfrm}{t}{x}$،
+    $\Atom{P}{\Subst{t_1}{t}{x},
+    \dots, \Subst{t_n}{t}{x}}$ اے۔}
+
+\item \indcase{!A}{\eq[t_1][t_2]}{$\Subst{\indfrmp}{t}{x}$،
+  $\Subst{t_1}{t}{x} = \Subst{t_2}{t}{x}$ اے۔}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\Subst{\indfrmp}{t}{x}$،
+    $\lnot \Subst{!B}{t}{x}$ اے۔}}{}
+
+\tagitem{prvAnd}{\indcase{!A}{(!B \land
+    !C)}{$\Subst{\indfrmp}{t}{x}$،
+    $(\Subst{!B}{t}{x} \land
+    \Subst{!C}{t}{x})$ اے۔}}{}
+
+\tagitem{prvOr}{\indcase{!A}{(!B \lor
+    !C)}{$\Subst{\indfrmp}{t}{x}$،
+    $(\Subst{!B}{t}{x} \lor
+    \Subst{!C}{t}{x})$ اے۔}}{}
+
+\tagitem{prvIf}{\indcase{!A}{(!B \lif
+    !C)}{$\Subst{\indfrmp}{t}{x}$،
+    $(\Subst{!B}{t}{x} \lif
+    \Subst{!C}{t}{x})$ اے۔}}{}
+
+\tagitem{prvIff}{\indcase{!A}{(!B \liff
+    !C)}{$\Subst{\indfrmp}{t}{x}$،
+    $(\Subst{!B}{t}{x} \liff
+    \Subst{!C}{t}{x})$ اے۔}}{}
+
+\tagitem{prvAll}{
+\indcase{!A}{\lforall[y][!B]}{$\Subst{\indfrmp}{t}{x}$
+    دا نتیجہ $\lforall[y][\Subst{!B}{t}{x}]$ اے،
+    بشرطیکہ $y$، $x$ توں وکھرا متغیر ہووے؛
+    نہیں تاں $\Subst{\indfrmp}{t}{x}$
+    بس $\indfrm$ اے۔}}{}
+
+\tagitem{prvEx}{
+\indcase{!A}{\lexists[y][!B]}{$\Subst{\indfrmp}{t}{x}$
+    دا نتیجہ $\lexists[y][\Subst{!B}{t}{x}]$ اے،
+    بشرطیکہ $y$، $x$ توں وکھرا متغیر ہووے؛
+    نہیں تاں $\Subst{\indfrmp}{t}{x}$
+    بس $\indfrm$ اے۔}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+دھیان دیو کہ تھانواں بدلنا بے اثر وی ہو سکدا اے:
+جے $x$، $!A$ وچ کِتے وی نہ آوے، تاں
+$\Subst{!A}{t}{x}$ بس~$!A$ اے۔
+
+$t$ دا~$x$ لئی~$!A$ وچ !!{free for} ہونا
+اگلی مثال ورگیاں صورتاں کڈھن لئی ضروری اے۔
+جے $!A \ident \lexists[y][x < y]$
+تے $t \ident y$، تاں $\Subst{!A}{t}{x}$
+دا نتیجہ $\lexists[y][y <
+  y]$ بن جاندا۔ ایتھے آزاد متغیر $y$،
+تھانواں بدلّن توں بعد مسوّر $\lexists[y]$ دی
+پابندی وچ ”پھس“ جاندا اے، جیہڑی گل ساڈے لئی
+ناپسندیدہ اے۔ مثال لئی، اسیں چاہندے آں کہ
+جدوں وی $\lforall[x][!B]$ پورا اترے، تاں
+$\Subst{!B}{t}{x}$ وی پورا اترے۔ پر
+$\lforall[x][\lexists[y][x < y]]$ ویکھو
+(ایتھے $!B$، $\lexists[y][x <
+  y]$ اے)۔ ایہ ایسا جملہ اے جیہڑا، مثال لئی،
+قدرتی عدداں بارے سچ اے: ہر عدد~$x$ لئی اوہدے
+توں وڈّا کوئی عدد~$y$ موجود اے۔ جے اسیں
+$y$ نوں~$x$ دی تھاں رکھن دی اجازت دیندے،
+تاں $\Subst{!B}{y}{x} \ident \lexists[y][y < y]$
+ملدا، جیہڑا جھوٹ اے۔ اسیں ایہ صورت
+ایہ شرط رکھ کے روکدے آں کہ~$t$ وچ موجود
+کوئی وی آزاد متغیر~$!A$ دے کسے مسوّر نال
+پابند نہ ہو جائے۔
+\end{explain}
+
+بوجھل علامت نگاری توں بچن لئی اسیں اکثر ایہ رواج
+ورتدے آں: جے $!A$ اک !!a{formula} اے جیہدے وچ
+!!{variable}~$x$ آزاد ہو سکدا اے، تاں
+اسیں ایہ وکھاؤن لئی~$!A(x)$ وی لکھدے آں۔
+جدوں ایہ صاف ہووے کہ کیہڑا $!A$ تے~$x$
+مراد نیں، تے $t$ اک ٹرم ہووے (فرض کیتا
+جاندا اے کہ اوہ $x$ لئی~$!A(x)$ وچ بدل لئی
+آزاد اے)، تاں اسیں $!A(t)$ نوں
+$\Subst{!A}{t}{x}$ دا مختصر روپ لکھدے آں۔
+مثال لئی، اسیں آکھ سکدے آں، ”$!A(t)$ نوں
+$\lforall[x][!A(x)]$ دی اک مخصوص صورت آکھدے آں۔“
+ایس دا مطلب اے کہ جے $!A$ کوئی وی
+!!{formula} ہووے، $x$~!!a{variable} ہووے،
+تے $t$ اک ایسا ٹرم ہووے جیہڑا~$x$ لئی~$!A$ وچ
+بدل لئی آزاد ہووے، تاں $\Subst{!A}{t}{x}$
+فارمولا~$\lforall[x][!A]$ دی اک مخصوص صورت اے۔
+
+\end{document}

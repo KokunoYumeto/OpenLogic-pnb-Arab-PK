@@ -1,0 +1,71 @@
+% part: intuitionistic-logic
+% chapter: semantics
+% section: relational-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sem}{rel}
+
+\olsection{\usetoken{P}{relational model}}
+
+وجدانیت پسند قضیاتی منطق دی ٹھیک ٹھیک معنیات دین لئی سانوں تعریف کرنی پئے گی
+کہ نمونہ کِہنوں آکھنا اے، تاں جو اوہدے لحاظ نال !!{formula}s دے سچ ہون دی پرکھ
+کر سکیے۔ ایس تعریف دی بنیاد اُتے معنیاتی دھارناواں، جیویں منطقی اعتبار تے معنوی
+نتیجہ، وی تعریف کیتیاں جا سکدیاں نیں۔ اک ایہو جیہی معنیات !!{relational model}s
+دے ذریعے ملدی اے۔
+
+\begin{defn}
+  وجدانیت پسند قضیاتی منطق لئی !!^a{relational model} اک مرتب تِکڑی
+  $\mModel{M} = \tuple{W, R, V}$ اے، جتھے
+  \begin{enumerate}
+  \item $W$ اک غیر خالی سیٹ اے،
+  \item $R$،~$W$ اُتے اک جزوی ترتیب (یعنی اک انعکاسی، ضدِ تقابلی تے متعدی دو رکنی تعلق) اے، تے
+  \item $V$ اک فنکشن اے جیہڑا ہر !!{propositional
+    variable}~$p$ نوں~$W$ دا اک ذیلی سیٹ دیندا اے، تے
+  \item $V$، $R$ دے لحاظ نال گھٹدا نہیں، یعنی جے $w
+    \in V(p)$ تے $Rww'$، تاں $w' \in V(p)$۔
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}\ollabel{defn:true-at-w}
+  اسیں $!A$ دے \emph{$w$ اُتے $\mModel{M}$ وچ سچ ہون}، یعنی
+  $\mSat{M}{!A}[w]$، دی تعریف استقرائی طور اُتے ایویں کردے آں:
+  \begin{enumerate}
+  \item \indcase{!A}{p}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں، جدوں $w \in V(p)$۔}
+  \item \indcase{!A}{\lfalse}{$\mSat{M}{\indfrm}[w]$ نہیں۔}
+  \item \indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں، جدوں کوئی
+    $w'$ ایہو جیہی نہ ہووے کہ $Rww'$ تے $\mSat{M}{!B}[w']$۔}
+  \item \indcase{!A}{!B \land !C}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں، جدوں
+    $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$ دونیں۔}
+  \item \indcase{!A}{!B \lor !C}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں، جدوں
+    $\mSat{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$ (یا دونیں)۔}
+  \item \indcase{!A}{!B \lif !C}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں، جدوں ہر
+    اوہ $w'$ جیہڑی $Rww'$ پوری کرے، اوہدے لئی $\mSat{M}{!B}[w']$ نہیں
+    یا $\mSat{M}{!C}[w']$ اے} (یا دونیں)۔
+  \end{enumerate}
+  اسیں $\mSat/{M}{!A}[w]$ لکھدے آں جے $\mSat{M}{!A}[w]$ نہیں۔ جے $\Gamma$،
+  !!{formula}s دا اک سیٹ اے، تاں $\mSat{M}{\Gamma}[w]$ دا مطلب اے کہ
+  $\mSat{M}{!B}[w]$ ہر $!B \in \Gamma$ لئی اے۔
+\end{defn}
+
+\begin{prob}
+  وکھاؤ کہ \olref[int][sem][rel]{defn:true-at-w} دے مطابق
+  $\mSat{M}{\lnot !A}[w]$ اُدوں تے صرف اُدوں اے جدوں $\mSat{M}{!A \lif \lfalse}[w]$۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:true-monotonic}
+  جہاناں اُتے سچائی~$R$ دے لحاظ نال گھٹدی نہیں۔ یعنی جے
+  $\mSat{M}{!A}[w]$ تے $Rww'$، تاں $\mSat{M}{!A}[w']$۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[int][sem][rel]{prop:true-monotonic} ثابت کرو۔
+\end{prob}
+
+\end{document}

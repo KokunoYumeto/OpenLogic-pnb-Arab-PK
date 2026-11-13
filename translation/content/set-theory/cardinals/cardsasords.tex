@@ -1,0 +1,76 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{cardinals}{cardsasords}
+\olsection{کارڈینل عدد ترتیبی عدداں وجوں}
+
+اصل وچ کارڈینل عدداں دا ساڈا نظریہ ترتیبی عدداں دا نظریہ (بے جھجک) ورتے گا۔ یعنی اسیں کارڈینل عدداں دی تعریف کجھ خاص ترتیبی عدداں وجوں ای دیواں گے۔ خاص طور اُتے ایہ تعریف دیواں گے:
+
+\begin{defn}\ollabel{defcardinalasordinal}
+جے $A$ نوں حُسنِ ترتیب دتی جا سکدی اے، تاں $\card{A}$ سبھ توں چھوٹا ترتیبی عدد $\gamma$ اے جیہدے لئی $\cardeq{A}{\gamma}$۔ کسے وی ترتیبی عدد $\gamma$ لئی، اسیں آکھدے آں کہ $\gamma$ اک \emph{کارڈینل عدد} اے اُدوں تے صرف اُدوں جدوں $\gamma = \card{\gamma}$۔
+\end{defn}
+
+اسیں ہُن ای عبارت «$A$ نوں حُسنِ ترتیب دتی جا سکدی اے» ورتی اے۔ جیویں ریاضی وچ لگ بھگ ہمیشہ ہُندا اے، ایتھے «سکدی اے» والی گل موجودگی دے دعوے نوں ذرا ڈھلّے طریقے نال آکھدی اے۔ «$A$ نوں حُسنِ ترتیب دتی جا سکدی اے» دا بس مطلب اے «اک تعلق موجود اے جیہڑا~$A$ نوں حُسنِ ترتیب دیندا اے»۔
+
+پر \olref{defcardinalasordinal} وچ اک اڑچن اے۔ اسیں چاہندے آں کہ \emph{ہر} سیٹ دی وڈائی ہووے، یعنی $\card{A}$ ہر~$A$ لئی موجود ہووے۔ پر ہُن دتی تعریف اک شرط نال شروع ہُندی اے، «\emph{جے} $A$ نوں حُسنِ ترتیب دتی جا سکدی اے\ldots»۔ جے کوئی ایہو جیہا سیٹ $A$ اے جیہنوں حُسنِ ترتیب نہیں دتی جا سکدی، تاں ساڈی تعریف نال شے~$\card{A}$ دی تعریف ای نہیں ہووے گی۔
+
+سو \olref{defcardinalasordinal} ورتن لئی سانوں ضمانت چاہیدی اے کہ ہر سیٹ نوں حُسنِ ترتیب دتی جا سکدی اے۔ افسوس، ایہ ضمانت~$\ZF$ وچ نہیں ملدی۔ سو جے اسیں \olref{defcardinalasordinal} ورتنا اے، تاں اک نواں مسلّمہ پاؤن توں بناں چارہ نہیں، مثلاً:
+\begin{axiom}[حُسنِ ترتیب]
+ہر سیٹ نوں حُسنِ ترتیب دتی جا سکدی اے۔
+\end{axiom}
+حُسنِ ترتیب دا مسلّمہ منّن جوگا اے یا نہیں، ایہدی گل اسیں \olref[choice][]{chap} وچ کراں گے۔ پر اگے اسیں ایہنوں ورتاں گے۔ ایہ ورت کے ثابت کرنا بڑا سِدھا اے کہ کارڈینل عدد (\olref{defcardinalasordinal} دی تعریف مطابق) موجود نیں تے چنگیاں خاصیتاں رکھدے نیں:
+
+\begin{lem}\ollabel{lem:CardinalsExist}
+ہر سیٹ $A$ لئی:
+\begin{enumerate}
+	\item\ollabel{cardaexists} $\card{A}$ موجود اے تے اکّو اک اے۔
+	\item\ollabel{cardaapprox}  $\cardeq{\card{A}}{A}$۔
+	\item\ollabel{cardaidem}  $\card{A}$ کارڈینل عدد اے، یعنی
+	$\card{A} = \card{\card{A}}$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+$A$ مقرر کرو۔ حُسنِ ترتیب دے مسلّمے نال اک حُسنِ ترتیب $\tuple{A, R}$ موجود اے۔ \olref[ordinals][ordtype]{thmOrdinalRepresentation} مطابق $\tuple{A,
+R}$ اکّو اک ترتیبی عدد $\beta$ نال ہم ساخت اے۔ سو $\cardeq{A}{\beta}$۔ لامتناہی درجیاں اُتے استقرا نال، اکّو اک سبھ توں چھوٹا ترتیبی عدد $\gamma$ اے جیہدے لئی $\cardeq{A}{\gamma}$۔ سو $\card{A}
+= \gamma$، تے \olref{cardaexists} تے \olref{cardaapprox} ثابت ہو گئے۔ \olref{cardaidem} ثابت کرن لئی دھیان دیو کہ جے $\delta \in \gamma$، تاں $\cardless{\delta}{A}$، جیویں اسیں $\gamma$ چُنیا سی۔ ایس لئی $\cardless{\delta}{\gamma}$ وی، کیوں جے ہم تعدادیت اک ہم ارزی دا تعلق اے (\olref[sfr][siz][equ]{equinumerosityisequi})۔ سو $\gamma =
+\card{\gamma}$۔
+%So, for reductio, suppose that there is some ordinal $\delta \in \gamma$ such that $\cardeq{\gamma}{\delta}$. Then, $\cardeq{\cardeq{A}{\gamma}}{\delta}$ so that $\cardeq{A}{\delta}$ by \olref[sfr][set][equ]{equinumerosityisequi}, which contradicts the choice of $\gamma$ as the least ordinal such that $\cardeq{A}{\gamma}$. 
+\end{proof}
+
+اگلا نتیجہ کانتور دے اصول دی ضمانت دیندا اے تے کجھ ہور وی دسدا اے۔
+(دھیان دیو کہ کارڈینل عدداں نوں اپنی ترتیب ترتیبی عدداں توں ملدی اے، یعنی $\cardfont{a} < \cardfont{b}$ اُدوں تے صرف اُدوں جدوں $\cardfont{a} \in \cardfont{b}$۔ ہِیٹھ ایہ لکھدیاں، جنہاں شےواں دا سانوں پتا اے کہ اوہ کارڈینل عدد نیں، اوہناں لئی اسیں فراکتور اکھر ورتاں گے۔ ایہ کافی رواجی اے۔ اک ہور عام طریقہ یونانی اکھر ورتنا اے، کیوں جے کارڈینل عدد ترتیبی عدد نیں، پر یونانی ورن مالا دے وچکارلے اکھر چُنو، جیویں $\kappa, \lambda$۔)
+\begin{lem}\ollabel{lem:CardinalsBehaveRight}
+کسے وی دو سیٹاں $A$ تے $B$ لئی:
+\begin{align*}
+	\cardeq{A}{B} &\text{ اُدوں تے صرف اُدوں جدوں } \card{A} = \card{B}\\
+	\cardle{A}{B} &\text{ اُدوں تے صرف اُدوں جدوں } \card{A} \leq \card{B}\\
+	\cardless{A}{B}&\text{ اُدوں تے صرف اُدوں جدوں } \card{A} < \card{B}
+\end{align*}
+\end{lem}
+
+\begin{proof}
+اسیں دوجے دعوے دی کھبّے توں سجّے ول سمت ثابت کراں گے (ہور صورتاں ایس ورگیاں نیں تے مشق لئی چھڈیاں نیں)۔ سو ہِیٹھلا خاکہ ویکھو:
+\begin{center}
+	\begin{tikzpicture}
+	\node (nodea) {$A$};
+	\node[right = 6em of nodea] (nodeb) {$B$};
+	\node[below = 2em of nodea] (nodecarda) {$\card{A}$};
+	\node[below = 2em of nodeb] (nodecardb) {$\card{B}$};
+	\draw[->] (nodea)--(nodeb);
+	\draw[<->] (nodea)--(nodecarda);
+	\draw[<->] (nodeb)--(nodecardb);
+	\draw[->, dashed] (nodecarda)--(nodecardb);
+\end{tikzpicture}
+\end{center}
+دو سِریاں والے تیر !!{bijection}s دسّدے نیں، جیہناں دی موجودگی دی ضمانت \olref{lem:CardinalsExist} دیندا اے۔ $\cardle{A}{B}$ منّن نال اک !!a{injection} $A\to B$ اے۔ ہُن $\card{A}$ توں $A$، فیر $B$، تے فیر $\card{B}$ ول تیراں دے پچھے چل کے سانوں اک !!a{injection} $\card{A} \to \card{B}$ ملدی اے (ٹُٹّواں تیر)۔
+\end{proof}\noindent اسیں \olref{lem:CardinalsBehaveRight} ورت کے شروڈر–برنسٹین دا قضیہ وی فیر ثابت کر سکدے آں۔ ایہ دعویٰ اے کہ جے $\cardle{A}{B}$ تے $\cardle{B}{A}$، تاں $\cardeq{A}{B}$۔ اسیں ایہنوں \olref[sfr][siz][sb]{thm:schroder-bernstein} وجوں بیان کیتا سی، پر پہلا ثبوت، کجھ محنت نال، \olref[sfr][infinite][card-sb]{sec} وچ دتا سی۔ ہُن ویکھو:
+
+\begin{proof}[شروڈر–برنسٹین دا دوبارہ ثبوت]
+جے $\cardle{A}{B}$ تے $\cardle{B}{A}$، تاں $\card{A} \leq \card{B}$ تے $\card{B} \leq \card{A}$، \olref{lem:CardinalsBehaveRight} مطابق۔ سو $\card{A} = \card{B}$ تے $\cardeq{A}{B}$، تِن صورتاں دے اصول تے \olref{lem:CardinalsBehaveRight} مطابق۔
+\end{proof}
+\noindent
+بھاویں ایہ بڑا سوکھا ثبوت اے، ایہ لُکّویں طور اُتے بدل رکھن دے اصول (\olref[ordinals][ordtype]{thmOrdinalRepresentation} لئی) تے حُسنِ ترتیب دے مسلّمے (\olref{lem:CardinalsBehaveRight} دی ضمانت لئی) دوہاں اُتے ٹکدا اے۔ دوجے پاسے \olref[sfr][infinite][card-sb]{sec} دا ثبوت اپنے زور اُتے کِتے ودھ کھلوتا سی (اصل وچ ایہ~$\Zminus$ وچ دِتا جا سکدا اے)۔
+
+\end{document}

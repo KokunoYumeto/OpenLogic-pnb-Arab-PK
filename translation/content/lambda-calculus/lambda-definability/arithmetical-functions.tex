@@ -1,0 +1,142 @@
+% Part: lambda-calculus
+% Chapter: lambda-definablity
+% Section: arithmetical-functions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{rep}{arf}
+\olsection{\usetoken{S}{lambda definable} حسابی فنکشن}
+
+\begin{prop}
+  \ollabel{prop:succ-ld}
+  جانشین فنکشن~$\Succ$، !!{lambda definable} اے۔
+\end{prop}
+
+\begin{proof}
+جانشین فنکشن نوں جیہڑا ٹرم !!{lambda define}s، اوہ ایہ اے۔
+\begin{align*}
+  \fn{Succ} & \ident \lambd[a][\lambd[fx][f ({a} f x)]].
+  \intertext{ساڈے لکھت دے رواج مطابق ایہ ہِٹھلی لکھت دا مختصر روپ اے۔}
+  \fn{Succ} & \ident \lambd[a][\lambd[f][\lambd[x][(f (({a} f) x))]]].
+  \intertext{$\fn{Succ}$ اوہ فنکشن اے جیہڑا دلیل وجوں عدد~$a$
+    لیندا اے تے ہور فنکشن $\lambd[fx][f ({a}
+      f x)]$ دیندا اے۔ ایہ فنکشن آپ چرچ عدد نہیں۔ پر جے دلیل $a$
+    چرچ عدد ہووے، تاں ایہدی تقلیل نال چرچ عدد ملدا اے۔ ویکھو۔}
+   (\lambd[a][\lambd[fx][f ({a} f x)]])\,\num{n} & \redone
+   \lambd[fx][f ({\num{n}} f x)].
+   \intertext{اندرلا ٹرم $\num{n}fx$ اک ریڈیکس اے، کیوں جے
+     $\num{n}$، $\lambd[fx][f^nx]$ اے۔ سو $\num{n}fx \redone f^nx$،
+     تے سارے ٹرم لئی سانوں ایہ ملدا اے۔}
+   \fn{Succ}\, \num n & \red \lambd[fx][f(f^n(x))],
+\end{align*}
+یعنی $\num{n+1}$۔
+\end{proof}
+
+\begin{ex}
+  ویکھیے کہ $\fn{Succ}$ نوں~$\num{0}$، یعنی $\lambd[fx][x]$،
+  اُتے لائیے تاں کیہ ہوندا اے۔ اسیں ٹرم پورے لکھدے آں۔
+  \begin{align*}
+    \fn{Succ}\, \num{0} & \ident (\lambd[a][\lambd[f][\lambd[x][(f (({a} f) x))]]])(\lambd[f][\lambd[x][x]])\\
+    & \redone \lambd[f][\lambd[x][(f (({(\lambd[f][\lambd[x][x]])} f) x))]] \\
+    & \redone \lambd[f][\lambd[x][(f ({(\lambd[x][x])} x))]] \\
+    & \redone \lambd[f][\lambd[x][(f x)]] \ident \num{1}\\
+  \end{align*}
+\end{ex}
+
+\begin{prob}
+  ہِٹھلا ٹرم
+  \begin{align*}
+    \fn{Succ}' & \ident \lambd[{n}][\lambd[fx][{n} f (f x)]]
+  \end{align*}
+  جانشین فنکشن نوں !!{lambda define}s۔ دسو کیوں۔
+\end{prob}
+
+\begin{prop}
+  \ollabel{prop:add-ld}
+  جمع دا فنکشن~$\Add$، !!{lambda definable} اے۔
+\end{prop}
+
+\begin{proof}
+جمع ہِٹھلے ٹرماں نال !!{lambda defined} اے۔
+\begin{align*}
+  \fn{Add} & \ident \lambd[{a}{b}][\lambd[fx][{a} f ({b} f x)]]
+\intertext{یا دوجے طریقے نال}
+  \fn{Add}' & \ident \lambd[{a}{b}][{a}\, \fn{Succ} \, {b}].
+\intertext{جمع دا پہلا طریقہ ایویں کم کردا اے۔ $\fn{Add}$ پہلاں
+  دو عدد ${a}$ تے ${b}$ قبول کردا اے۔ نتیجہ اوہ فنکشن اے جیہڑا
+  $f$ تے $x$ لیندا اے تے $af(bfx)$ واپس دیندا اے۔ جے $a$ تے $b$ چرچ
+  عدد $\num{n}$ تے $\num{m}$ ہون، تاں ایس دی تقلیل $f^{n+m}(x)$
+  تک ہوندی اے، جیہڑا $f^{n}(f^{m}(x))$ دے عین برابر اے۔ ہولی ہولی
+  قدم ویکھیے۔}
+  (\lambd[{a}{b}][\lambd[fx][{a} f ({b} f x)]])\num n\,\num m & \redone
+  \lambd[fx][\num{n}\, f (\num {m}\, f x)] \\
+  & \redone \lambd[fx][\num{n}\, f (f^m x)] \\
+  & \redone \lambd[fx][f^n (f^m x)] \ident \num {n+m}.
+\intertext{جمع دا دوجا روپ $\fn{Add'}$ وکھرے طریقے نال کم کردا اے۔
+  اینوں دو چرچ عدداں $\num{n}$ تے $\num{m}$ اُتے لائیے، تاں}
+\fn{Add}' \num n \,\num m
+& \redone \num{n}\, \fn{Succ}\, \num{m}.
+\intertext{پر $\num{n} f x$ دی تقلیل ہمیشہ $f^n(x)$ تک ہوندی اے۔
+  ایس لئی}
+  \num{n}\,  \fn{Succ}\, \num{m} & \red \fn{Succ}^n(\num{m}).
+\end{align*}
+تے کیوں جے $\fn{Succ}$ جانشین فنکشن نوں !!{lambda define}s تے
+جانشین فنکشن $n$ واری~$m$ اُتے لاؤن نال $n+m$ ملدا اے، ایس
+لئی ایس دی اگلی تقلیل~$\num{n+m}$ تک ہوندی اے۔
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:mult-ld}
+  ضرب ہِٹھلے ٹرم نال !!{lambda definable} اے۔
+  \[
+  \fn{Mult} \ident \lambd[ab][\lambd[fx][a (b f) x]]
+  \]
+\end{prop}
+
+\begin{proof}
+  ایہ کم کیویں ہوندا اے، ویکھن لئی فرض کرو $\fn{Mult}$ نوں چرچ
+  عدداں $\num{n}$ تے $\num{m}$ اُتے لاؤندے آں۔ $\fn{Mult} \, \num{n} \, \num{m}$
+  دی تقلیل $\lambd[fx][\num{n}(\num{m}\, f)x]$ تک ہوندی اے۔
+  ٹرم $\num{m} f$ اوہ فنکشن متعین کردا اے جیہڑا $f$ نوں اپنی
+  دلیل اُتے $m$ واری لاؤندا اے۔ سو $\num{n} (\num{m} f) x$ فنکشن
+  «$f$ نوں $m$ واری لاؤ» آپ $n$ واری~$x$ اُتے لاؤندا اے۔
+  دوجے لفظاں وچ اسیں $f$ نوں $x$ اُتے $n\cdot
+  m$ واری لاؤندے آں۔ پر نتیجے دا نارمل ٹرم بس چرچ عدد
+  $\num{nm}$ اے۔
+\end{proof}
+
+\begin{editorial}
+اسیں $\eta$-تقلیل نال ایس ٹرم نوں ہور سوکھا کر سکدے آں۔
+\[
+  \fn{Mult} \ident \lambd[ab][\lambd[f][a (b f)]].
+\]
+
+پر فیر پہلاں $\eta$-تقلیل سمجھاؤنی پئے گی۔
+\end{editorial}
+
+\begin{prob}
+ضرب ہِٹھلے ٹرم نال !!{lambda defined} ہو سکدی اے۔
+\[
+  \fn{Mult}' \ident \lambd[ab][a (\fn{Add}\, a) \num{0}].
+\]
+دسو ایہ کیوں کم کردا اے۔
+\end{prob}
+
+گھات چڑھاؤن دی تعریف $\lambd$-ٹرم دے طور اُتے حیرانی جوگی
+سادی اے۔
+\[
+  \fn{Exp} \ident \lambd[be][e b].
+\]
+پہلی دلیل $b$ بُنیاد اے تے دوجی~$e$ گھات۔ ساڈی عددی لکھت
+مطابق سمجھ ایہ اے کہ $e f$، $f^e$ اے۔ جے ایہ سمجھنا اوکھا
+لگے، تاں گھات چڑھاؤن دی تعریف بار بار ضرب نال وی کر سکدے آں۔
+\[
+  \fn{Exp}' \ident \lambd[be][e (\fn{Mult}\, b) \num{1}].
+\]
+
+چرچ عدداں لئی پچھلا عدد تے گھٹاؤ اِنّے سوکھے نہیں جِنّے
+لگدے نیں۔ ایہناں لئی جوڑیاں نوں اک خاص روپ وچ لکھنا پیندا اے۔
+
+\end{document}

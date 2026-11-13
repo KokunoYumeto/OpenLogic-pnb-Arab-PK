@@ -1,0 +1,269 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{ide}
+\olsection{برابری}
+
+\begin{explain}
+پچھلے حصے وچ ٹرماں توں بنے نمونے دی تعمیر،
+اوہناں سیٹاں~$\Gamma$ لئی پہلے درجے دی منطق
+دی تمامیت قائم کرن واسطے کافی اے جِنہاں وچ~$\eq$
+نہیں آندا۔ ٹرماں توں بنا نمونہ
+$!A \in \Gamma^*$ دے ہر اوہ جملے نوں پورا کردا
+اے جیہدے وچ~$\eq$ نہیں؛ ایس لئی
+$!A \in \Gamma$ دے سارے جملے وی پورے ہوندے
+نیں۔ پر جے~$\eq$ موجود ہووے تاں ایہ نمونہ کم
+نہیں کردا۔ کیوں جے فیر~$\Gamma^*$ وچ
+!!a{sentence}~$\eq[t][t']$ ہو سکدا اے، جد کہ
+ٹرماں توں بنے نمونے وچ ہر ٹرم دی قدر اوہ ٹرم
+آپ اے۔ ایس لئی جے $t$ تے $t'$ وکھرے ٹرم
+ہون، تاں نمونے وچ اوہناں دیاں قدراں، یعنی
+بالترتیب $t$ تے $t'$، وی وکھریاں ہون گیاں؛
+چنانچہ $\eq[t][t']$ جھوٹا ہووے گا۔ ایس
+مشکل نوں اسیں ہم ارز طبقیاں راہیں ونڈ
+(factoring) دی تعمیر نال دور کر سکدے آں۔
+\end{explain}
+
+\begin{defn}
+  فرض کرو $\Gamma^*$، زبان~$\Lang L$ دے جملیاں
+  دا بے تضاد تے !!{complete} سیٹ اے۔
+  تعلق~$\approx$، زبان~$\Lang L$ دے بند
+  ٹرماں دے سیٹ اُتے ایویں متعین کردے آں:
+  \[
+  t \approx t' \text{\quad اُدوں تے صرف اُدوں \quad} \eq[t][t'] \in \Gamma^*
+  \]
+\end{defn}
+
+\begin{prop}
+\ollabel{prop:approx-equiv}
+تعلق~$\approx$ دیاں اگلیاں خاصیتاں نیں:
+\begin{enumerate}
+\item $\approx$ انعکاسی اے۔
+\item $\approx$ متناظر اے۔
+\item $\approx$ متعدی اے۔
+\item جے $t \approx t'$، $f$ اک
+  !!a{function} اے، تے $t_1$، \dots،
+  $t_{i-1}$، $t_{i+1}$، \dots، $t_n$
+  بند ٹرم نیں، تاں
+\[
+\Atom{f}{t_1,\dots, t_{i-1}, t, t_{i+1}, \dots, t_n} \approx
+\Atom{f}{t_1,\dots, t_{i-1}, t', t_{i+1}, \dots, t_n}.
+\]
+\item جے $t \approx t'$، $R$ اک
+  !!a{predicate} اے، تے $t_1$، \dots،
+  $t_{i-1}$، $t_{i+1}$، \dots، $t_n$
+  بند ٹرم نیں، تاں
+\begin{multline*}
+\Atom{R}{t_1,\dots, t_{i-1}, t, t_{i+1}, \dots, t_n} \in \Gamma^* \text{ اُدوں تے صرف اُدوں } \\
+\Atom{R}{t_1,\dots, t_{i-1}, t', t_{i+1}, \dots, t_n} \in \Gamma^*.
+\end{multline*}
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+چونکہ~$\Gamma^*$ بے تضاد تے
+!!{complete} اے، ایس لئی
+$\eq[t][t'] \in \Gamma^*$ اُدوں تے صرف اُدوں
+اے جدوں $\Gamma^* \Proves \eq[t][t']$۔
+لہٰذا اگلیاں گلاں وکھانا کافی اے:
+\begin{enumerate}
+\item $\Gamma^* \Proves \eq[t][t]$
+  ہر بند ٹرم~$t$ لئی۔
+\item جے $\Gamma^* \Proves \eq[t][t']$، تاں
+  $\Gamma^* \Proves \eq[t'][t]$۔
+\item جے $\Gamma^* \Proves \eq[t][t']$ تے
+  $\Gamma^* \Proves \eq[t'][t'']$، تاں
+  $\Gamma^* \Proves \eq[t][t'']$۔
+\item جے $\Gamma^* \Proves \eq[t][t']$، تاں
+% PNB-COM-005: frozen source has an extra comma after t_{i+1} in the first function term; only that comma is removed here.
+\[
+\Gamma^* \Proves
+\eq[\Atom{f}{t_1,\dots,t_{i-1},t,t_{i+1},\dots,t_n}][\Atom{f}{t_1,\dots,t_{i-1},t',t_{i+1},\dots,t_n}]
+\]
+ہر $n$-مقامی !!{function}~$f$ تے بند
+ٹرماں $t_1$، \dots، $t_{i-1}$،
+$t_{i+1}$، \dots،~$t_n$ لئی۔
+\item جے $\Gamma^* \Proves \eq[t][t']$
+تے
+$\Gamma^* \Proves
+\Atom{R}{t_1,\dots,t_{i-1},t,t_{i+1},\dots,t_n}$،
+تاں
+$\Gamma^* \Proves \Atom{R}{t_1,\dots,t_{i-1},t',t_{i+1},\dots,t_n}$
+ہر $n$-مقامی !!{predicate}~$R$ تے بند
+ٹرماں $t_1$، \dots، $t_{i-1}$،
+$t_{i+1}$، \dots،~$t_n$ لئی۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref[fol][com][ide]{prop:approx-equiv} دا ثبوت مکمل کرو۔
+\end{prob}
+
+\begin{defn}
+فرض کرو $\Gamma^*$، زبان~$\Lang L$ وچ اک
+بے تضاد تے !!{complete} سیٹ اے، $t$ اک
+بند ٹرم اے، تے $\approx$ پچھلی تعریف والا
+تعلق اے۔
+% PNB-COM-015: اصل Trm[L] وچ کھلے ٹرم وی نیں؛quotient-domain صرف بند ٹرماں دا اے۔
+بند ٹرماں دا سیٹ ایویں وکھ لکھو:
+$\mathcal{T} = \Setabs{t \in \Trm[L]}{t\text{ بند اے}}$۔ فیر:
+\[
+\equivrep{t}{\approx} = \Setabs{t'}{t'\in \mathcal{T}, t \approx t'}
+\]
+تے $\equivclass{\mathcal{T}}{\approx} = \Setabs{\equivrep{t}{\approx}}{t \in \mathcal{T}}$۔
+\end{defn}
+
+\begin{defn}
+\ollabel{defn:term-model-factor}
+فرض کرو $\Struct M = \Struct M(\Gamma^*)$،
+\olref[mod]{defn:termmodel} والا
+$\Gamma^*$ لئی ٹرماں توں بنا نمونہ اے۔
+فیر $\Struct{\equivclass{M}{\approx}}$
+اگلی !!{structure} اے:
+\begin{enumerate}
+\item $\Domain{\equivclass{M}{\approx}} = \equivclass{\mathcal{T}}{\approx}$۔
+\item $\Assign{c}{\equivclass{M}{\approx}} = \equivrep{c}{\approx}$
+\item $\Assign{f}{\equivclass{M}{\approx}}(\equivrep{t_1}{\approx}, \dots,
+  \equivrep{t_n}{\approx}) = \equivrep{\Atom{f}{t_1,\dots, t_n}}{\approx}$
+\item $\tuple{\equivrep{t_1}{\approx}, \dots, \equivrep{t_n}{\approx}} \in
+  \Assign{R}{\equivclass{M}{\approx}}$ اُدوں تے
+  صرف اُدوں جدوں
+  $\Sat{M}{\Atom{R}{t_1,\dots, t_n}}$؛ یعنی
+  اُدوں تے صرف اُدوں جدوں
+  $\Atom{R}{t_1,\dots, t_n} \in \Gamma^*$۔
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+غور کرو کہ
+$\Assign{f}{\equivclass{M}{\approx}}$
+تے $\Assign{R}{\equivclass{M}{\approx}}$
+دی تعریف، $\equivclass{\mathcal{T}}{\approx}$
+دے عناصر نوں $\equivrep{t}{\approx}$ دی
+صورت وچ لکھ کے کیتی اے؛ یعنی ہر طبقے دے
+\emph{نمائندے}~$t \in \equivrep{t}{\approx}$
+راہیں۔ سانوں یقینی بنانا پئے گا کہ ایہ
+تعریفاں نمائندیاں دے انتخاب اُتے منحصر نہ
+ہون۔ مطلب، جے کوئی ہور انتخاب~$t'$ اوہی
+ہم ارزیت طبقہ دیندا اے
+($\equivrep{t}{\approx} = \equivrep{t'}{\approx}$)،
+تاں تعریفاں دا نتیجہ وی اوہی رہے۔ مثال
+لئی جے $R$ اک جگہ والا !!{predicate}
+اے، تاں تعریف دی آخری شق آکھدی اے کہ
+$\equivrep{t}{\approx} \in
+\Assign{R}{\equivclass{M}{\approx}}$ اُدوں
+تے صرف اُدوں جدوں
+% PNB-COM-006: the frozen source negates R(t) here; representative independence requires the other representative t' in this hypothetical counterexample.
+$\Sat{M}{\Atom{R}{t}}$۔ پر جے کسے ہور
+ٹرم~$t'$ لئی $t \approx t'$ ہووے تے
+$\Sat/{M}{\Atom{R}{t'}}$، تاں تعریف
+$\equivrep{t'}{\approx} \notin
+\Assign{R}{\equivclass{M}{\approx}}$
+منگے گی۔ جدوں $t \approx t'$ اے، تاں
+$\equivrep{t}{\approx} =
+\equivrep{t'}{\approx}$؛ پر
+$\equivrep{t}{\approx}
+\in \Assign{R}{\equivclass{M}{\approx}}$
+تے $\equivrep{t}{\approx}
+\notin \Assign{R}{\equivclass{M}{\approx}}$
+اکّو ویلے نہیں ہو سکدے۔
+\olref{prop:approx-equiv} یقین دیندا اے کہ
+ایہ تضاد نہیں آ سکدا۔
+\end{explain}
+
+\begin{prop}
+$\Struct{\equivclass{M}{\approx}}$
+صحیح طرح متعین اے؛ یعنی جے $t_1$،
+  \dots، $t_n$، $t_1'$، \dots، $t_n'$
+  بند ٹرم نیں، تے $t_i \approx t_i'$
+  ہووے، تاں
+\begin{enumerate}
+\item $\equivrep{\Atom{f}{t_1,\dots, t_n}}{\approx} =
+    \equivrep{\Atom{f}{t_1',\dots, t_n'}}{\approx}$؛ یعنی
+  \[
+  \Atom{f}{t_1,\dots, t_n} \approx \Atom{f}{t_1',\dots, t_n'}
+  \]
+  تے
+\item $\Sat{M}{\Atom{R}{t_1,\dots, t_n}}$
+  اُدوں تے صرف اُدوں جدوں
+  $\Sat{M}{\Atom{R}{t_1',\dots, t_n'}}$؛ یعنی
+  \[
+    \Atom{R}{t_1,\dots, t_n} \in \Gamma^* \text{ اُدوں تے صرف اُدوں }
+    \Atom{R}{t_1',\dots, t_n'} \in \Gamma^*.
+  \]
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+$n$ اُتے استقرا نال ایہ
+\olref{prop:approx-equiv} توں نکلدا اے۔
+\end{proof}
+
+ٹرماں توں بنے نمونے وانگ، صدق والا
+معاون قضیہ ثابت کرن توں پہلاں سانوں
+اگلا معاون قضیہ چاہیدا اے۔
+
+\begin{lem}
+\ollabel{lem:val-in-termmodel-factored}
+فرض کرو $\Struct M = \Struct M
+(\Gamma^*)$؛ فیر ہر بند ٹرم لئی
+% PNB-COM-014: factored-value statement وی بند ٹرم بارے اے۔
+$\Value{t}{\equivclass{M}{\approx}} = \equivrep{t}
+{\approx}$۔
+\end{lem}
+\begin{proof}
+ایہدا ثبوت \olref[mod]{lem:val-in-termmodel}
+دے ثبوت ورگا اے۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][com][ide]{lem:val-in-termmodel-factored}
+دا ثبوت مکمل کرو۔
+\end{prob}
+
+\begin{lem}
+\ollabel{lem:truth}
+$\Sat{\equivclass{M}{\approx}}{!A}$
+اُدوں تے صرف اُدوں جدوں $!A \in
+\Gamma^*$، ہر جملے~$!A$ لئی۔
+\end{lem}
+
+\begin{proof}
+$!A$ اُتے استقرا نال، ٹھیک
+\olref[mod]{lem:truth} دے ثبوت وانگ۔
+اکّو صورت نوں وادھو دھیان دی لوڑ اے:
+جدوں $!A \ident \eq[t][t']$ ہووے۔
+\begin{align*}
+\Sat{\equivclass{M}{\approx}}{\eq[t][t']} & \text{ اُدوں تے صرف اُدوں } \equivrep{t}{\approx} = \equivrep{t'}{\approx}
+\text{ ($\Struct{\equivclass{M}{\approx}}$ دی تعریف نال)}\\
+& \text{ اُدوں تے صرف اُدوں } t \approx t' \text{ ($\equivrep{t}{\approx}$ دی تعریف نال)}\\
+& \text{ اُدوں تے صرف اُدوں } \eq[t][t'] \in \Gamma^* \text{ ($\approx$ دی تعریف نال)۔}
+\end{align*}
+\end{proof}
+
+\begin{digress}
+غور کرو، جتھے $\Struct{M(\Gamma^*)}$
+ہمیشہ !!{enumerable} تے لامحدود اے،
+اُتھے $\Struct{\equivclass{M}{\approx}}$
+محدود وی ہو سکدا اے: ہو سکدا اے کہ
+ہم ارزیت دے طبقے
+$\equivrep{t}{\approx}$ گنتی وچ
+صرف محدود ہون۔ ایہ امید دے مطابق اے،
+کیوں جے~$\Gamma$ وچ ایسے
+!!{sentence}s ہو سکدے نیں جیہڑے ہر
+اوہ !!{structure} محدود ہون دی شرط
+رکھدے نیں جیہدے وچ ایہ سچے ہون۔
+مثال لئی
+$\lforall[x][\lforall[y][x =
+y]]$ اک بے تضاد !!{sentence} اے، پر
+ایہ صرف اوہناں !!{structure}s وچ
+سچا اے جِنہاں دے !!a{domain} وچ
+بالکل اک !!{element} ہووے۔
+\end{digress}
+
+\end{document}

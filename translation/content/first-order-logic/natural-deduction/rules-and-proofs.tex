@@ -1,0 +1,52 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{rul}}
+      {\olfileid{pl}{ntd}{rul}}
+
+\olsection{قاعدے تے \usetoken{P}{derivation}}
+
+\begin{explain}
+فطری استنباط دے نظام ریاضیاتی ثبوت وچ ورتے جاندے غیر رسمی استدلال دے
+بہت نیڑے ہون لئی بنائے جاندے نیں (ایس کرکے ایہ کجھ حد تک
+``فطری'' نیں)۔ فطری استنباط دے ثبوت مفروضیاں توں شروع ہوندے نیں۔
+فیر استنباطی قاعدے لاگو کیتے جاندے نیں۔ \Intro{\lnot}, \Intro{\lif},
+\iftag{FOL}{\Elim{\lor} تے
+  \Elim{\lexists}}{ تے \Elim{\lor}} استنباطی قاعدیاں راہیں مفروضے
+``!!{discharged}'' کیتے جاندے نیں، تے وضاحت لئی !!{discharged}
+مفروضے دا لیبل اوہ استنباط دے نال لکھیا جاندا اے۔
+\end{explain}
+
+\begin{defn}[مفروضہ]
+\emph{مفروضہ} اوہ !!{sentence} اے جیہڑا کسے وی شاخ دے سب توں اُپرلے
+مقام اُتے ہووے۔
+\end{defn}
+
+فطری استنباط وچ !!^{derivation}s، !!{sentence}s دے کجھ خاص درخت نیں،
+جنہاں وچ سب توں اُپرلے !!{sentence}s مفروضے ہوندے نیں، تے جے
+% PNBNTD-001: source calls these upper sentence nodes "sequents"; the target uses sentences.
+!!a{sentence} اک، دو یا تِن ہور جملیاں دے ہِٹھاں آوے، تاں اوہ لازمی طور
+تے استنباطی قاعدے مطابق ٹھیک نکلے۔ استنباط دے اُتّے والے
+!!{sentence}s نوں \emph{مقدمے} تے ہِٹھلے !!{sentence} نوں
+\emph{نتیجہ} آکھدے نیں۔ قاعدے جوڑیاں وچ آؤندے نیں: ہر !!{operator}
+لئی اک تعارفی تے اک اخراجی قاعدہ۔ ایہ نتیجے وچ !!a{operator} شامل
+کردے یا قاعدے دے مقدمے وچوں !!a{operator} ہٹا دیندے نیں۔ کجھ قاعدے
+خاص قسم دے مفروضے نوں \emph{!!{discharged}} کرن دی اجازت دیندے نیں۔
+کیہڑا مفروضہ کیہڑے استنباط نال !!{discharged} ہوندا اے، ایہ دسن لئی
+اسیں مفروضے تے استنباط دوناں نوں لیبل وی دیندے آں۔ ایہ مفروضہ
+``$\Discharge{!A}{n}$.'' لکھ کے وکھایا جاندا اے۔
+
+% Only include this sentence is on of \land, lor, lif or lnot is defined.
+
+\iftag{notprvNot,notprvAnd,notprvOr,notprvIf}{}%
+	{رواج اے کہ سارے !!{operator}s $\land$, $\lor$, $\lif$, $\lnot$، تے $\lfalse$ لئی قاعدیاں نوں ویکھیا جائے، بھاویں ایہناں وچوں کجھ تعریف شدہ وی ہون۔}
+
+
+
+\end{document}

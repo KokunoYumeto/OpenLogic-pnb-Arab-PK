@@ -1,0 +1,62 @@
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: properties-accessibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{acc}
+
+\olsection{سمے دے فریماں دیاں خاصیتاں}
+
+ساڈے سمے دے نمونے تعلق~$\prec$ اُتے کوئی شرط نہیں لاؤندے، ایس لئی
+ساڈے جانے پہچانے مسلّمیاں وچوں صرف~$K$، یا اوہدے برابر دے
+$K_{\Gtemp}$ تے~$K_{\Htemp}$، سارے نمونیاں وچ لاگو ہوندے نیں:
+\begin{align*}
+\tag{$K_{\Gtemp}$}  \Gtemp (p \to q) & \to (\Gtemp p \to \Gtemp q)\\
+\tag{$K_{\Htemp}$}  \Htemp (p \to q) & \to (\Htemp p \to \Htemp q)
+\end{align*}
+
+پر جے اسیں چاہندے آں کہ ساڈے نمونے سماں وکھاؤن اُتے ہور سخت شرطاں لاؤن،
+مثلاً ایہ یقینی بنائیے کہ $\prec$ اک سیدھی ترتیب اے، تاں ساڈے
+نمونیاں وچ ہور بیان وی معتبر ہون گے۔
+
+\begin{table}[t]
+  \begin{tabular}{| p{.48\textwidth} || p{.48\textwidth} |}
+    \hline
+    {\emph{جے $\prec$ \dots اے}} & {\emph{تاں \dots،~$\mModel{M}$ وچ سچ اے}} \\
+    \hline \hline
+    \emph{متعدی}: \newline
+    $\forall u \forall v \forall w ((u \prec v \land v \prec w) \lif u \prec w)$ & 
+    $\Ftemp \Ftemp p \lif \Ftemp p$  \\
+    \hline 
+    \emph{سیدھی ترتیب}: \newline
+    $\forall w \forall v (w \prec v \lor w = v \lor v \prec w)$ &  
+    $(\Ftemp \Ptemp  p \lor \Ptemp \Ftemp p) \lif (\Ptemp p \lor p \lor \Ftemp p)$\\
+    \hline
+    \emph{گنجان}: \newline
+    $\forall w \forall v (w \prec v \to \exists u(w \prec u \land u \prec v))$ &  
+    $\Ftemp p \lif \Ftemp \Ftemp p$ \\
+    \hline
+    \emph{لنگھے پاسے بے حد}: \newline
+    $\forall w \exists v( v \prec w)$ &  
+    $\Htemp p \to \Ptemp p$ \\
+    \hline
+    \emph{آؤن والے پاسے بے حد}: \newline
+    $\forall w \exists v( w \prec v)$ &  
+    $\Gtemp p \to \Ftemp p$ \\
+    \hline
+  \end{tabular}
+  \caption{سمے دے فریماں دیاں کجھ خاصیتاں تے اوہناں دے برابر فارمولے۔}
+  \ollabel{tab:correspondence}
+\end{table} 
+
+\olref{tab:correspondence} دیاں کئی خاصیتاں سمے نوں وکھاؤن والے
+نمونے لئی چنگیاں لگ سکدیاں نیں۔ پر ایہ گل دھیان وچ رکھو کہ بھاویں
+اسیں تعلق $\prec$ اُتے من چاہیاں شرطاں لا سکدے آں، ساریاں شرطاں دے
+برابر ایسے !!{formula}s نہیں ہوندے جیہڑے سمے دی منطق دی زبان وچ لکھے
+جا سکن۔ مثلاً غیر انعکاسی ہون دی شرط، یعنی
+$\forall w \lnot (w \prec w)$، دے برابر سمے دی منطق دا کوئی فارمولا نہیں۔
+
+\end{document}

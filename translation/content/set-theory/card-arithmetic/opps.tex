@@ -1,0 +1,105 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{opps}
+\olsection{بنیادی عملاں دی تعریف}
+
+کارڈینل عدداں دا حساب تعریف کرنا ترتیبی عدداں دے حساب نالوں سوکھا اے، کیوں جے ایتھے ترتیب دا حساب رکھن دی لوڑ نہیں۔ اسیں جوڑ، ضرب تے گھات دی تعریف اکّو واری دیواں گے۔
+
+\begin{defn}
+جدوں $\cardfont{a}$ تے $\cardfont{b}$ کارڈینل عدد نیں:
+\begin{align*}
+	\cardfont{a} \cardplus \cardfont{b} &\defis
+	\card{\cardfont{a} \disjointsum \cardfont{b}}\\
+	\cardfont{a} \cardtimes \cardfont{b} &\defis
+	\card{\cardfont{a} \times \cardfont{b}}\\
+	\cardexpo{\cardfont{a}}{\cardfont{b}} &\defis
+	\card{\funfromto{\cardfont{b}}{\cardfont{a}}}
+\end{align*}
+جتھے $\funfromto{X}{Y} = \Setabs{f}{f \text{ اک فنکشن اے } X \to Y}$۔
+(ایہ وکھانا سوکھا اے کہ $\funfromto{X}{Y}$ کسے وی دو سیٹاں $X$ تے $Y$ لئی موجود اے۔ اسیں ایہ مشق لئی چھڈدے آں۔)
+\end{defn}
+
+\begin{prob}
+$\Zminus$ وچ ثابت کرو کہ $\funfromto{X}{Y}$ کسے وی دو سیٹاں $X$ تے~$Y$ لئی موجود اے۔ $\ZF$ وچ کم کردیاں، $\setrank{\funfromto{X}{Y}}$ دا حساب $\setrank{X}$ تے $\setrank{Y}$ توں لاؤ، جیویں \olref[sth][ord-arithmetic][using-addition]{rankcomputation} وچ کیتا اے۔
+\end{prob}
+
+ایہ تعریف ذرا سمجھا دیئیے۔ جوڑ لئی وکھ وکھ حصیاں والے جوڑ $\disjointsum$ دا خیال ورتیا اے، جیہدی تعریف \olref[ord-arithmetic][add]{defdissum} وچ دتی اے۔ محدود صورتاں وچ ایس تعریف توں ٹھیک حاصل نکلدا اے، ایہ ویکھنا سوکھا اے۔ ضرب بارے، \olref[sfr][set][pai]{cardnmprod} دسدا اے کہ جے $A$ دے $n$ رکن نیں تے $B$ دے $m$ رکن نیں، تاں $A \times B$ دے $n \cdot m$ رکن نیں۔ سو ساڈی تعریف ایس خیال نوں لامتناہی درجیاں والی ضرب تک ودھا دیندی اے۔ گھات وی ایس طرح اے۔ اسیں بس محدود صورت دا خیال لامتناہی درجیاں تک ودھاؤندے آں۔ سچ مُچ کجھ گلاں وچ لامتناہی درجیاں والے کارڈینل عدداں دا حساب «عام» حساب نال کِتے ودھ ملدا اے، لامتناہی درجیاں والے ترتیبی عدداں دے حساب نالوں۔
+
+\begin{prop}\ollabel{cardplustimescommute}
+$\cardplus$ تے $\cardtimes$ تبادلی نیں تے شرکتیت رکھدے نیں۔
+\end{prop}
+
+\begin{proof}
+تبادلیت لئی \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} مطابق اینا ویکھنا کافی اے کہ $\cardeq{(\cardfont{a} \disjointsum
+\cardfont{b})}{(\cardfont{b} \disjointsum \cardfont{a})}$ تے
+$\cardeq{(\cardfont{a} \times \cardfont{b})}{(\cardfont{b} \times
+\cardfont{a})}$۔ شرکتیت اسیں مشق لئی چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+ثابت کرو کہ $\cardplus$ تے $\cardtimes$ شرکتیت رکھدے نیں۔
+\end{prob}
+
+\begin{prop}
+$A$ لامتناہی اے اُدوں تے صرف اُدوں جدوں $\card{A} \cardplus 1 = 1 \cardplus \card{A} = \card{A}$۔
+\end{prop}
+
+\begin{proof}
+جیویں \olref[cardinals][classing]{generalinfinitycharacter} وچ کیتا اے، \olref[ord-arithmetic][using-addition]{ordinfinitycharacter} تے \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} توں۔
+\end{proof}
+
+ایس توں سمجھ آؤندی اے کہ ترتیبی تے کارڈینل جوڑ یا ضرب لئی وکھرے نشان کیوں ورتنے پَیندے نیں۔ ایہ عمل سچ مُچ \emph{وکھرے} نیں۔ اگلے دو نتیجے وکھاندے نیں کہ ترتیبی گھات تے کارڈینل گھات وی وکھرے عمل نیں۔ (چیتے کرو کہ \olref[z][infinity-again]{defnomega} توں لازم آؤندا اے کہ $2 = \{0,
+1\}$۔)
+
+\begin{lem}\ollabel{lem:SizePowerset2Exp}
+$\card{\Pow{A}} = \cardexpo{2}{\card{A}}$، کسے وی $A$ لئی۔
+\end{lem}
+
+\begin{proof}
+ہر ذیلی سیٹ $B \subseteq A$ لئی $\chi_B \in \funfromto{A}{2}$ ایویں دِتا ہووے:
+\begin{align*}
+	\chi_{B}(x) &\defis
+	\begin{cases}
+		1 & \text{جے }x\in B\\
+		0 & \text{ہور صورت وچ۔}
+	\end{cases}
+\end{align*}
+ہُن $f(B) = \chi_B$ ہووے۔ ایس نال اک !!a{bijection} $f \colon \Pow{A}
+\to \funfromto{A}{2}$ تعریف ہُندی اے۔ سو $\cardeq{\Pow{A}}{\funfromto{A}{2}}$۔
+اِس توں $\cardeq{\Pow{A}}{\funfromto{\card{A}}{2}}$، ایس لئی
+$\card{\Pow{A}} = \card{\funfromto{\card{A}}{2}} =
+2^{\card{A}}$۔
+\end{proof}
+
+ایس نِکّے جیہے ثبوت وچ بنیادی طور اُتے \olref[sfr][siz][red-alt]{sec} دی گل وی آ جاندی اے۔ اوتھے اسیں وکھایا سی کہ $\Pow{\omega}$ دا گنتی وار فہرست نہ بن سکنا، لامتناہی دو ہندسی لڑیواں دے سیٹ $\Bin^\omega$ دا گنتی وار فہرست نہ بن سکنا وکھا کے کیویں ثابت ہو سکدا اے۔ اصل وچ $\Bin^{\omega}$ بس $\funfromto{\omega}{2}$ اے۔ تے پچھلے ثبوت نے وکھایا کہ \olref[sfr][siz][red-alt]{sec} والی دلیل کسے وی سیٹ~$A$ نوں~$\omega$ دی تھاں رکھ کے چل پَئے گی۔ ایس نتیجے توں کارڈینل گھات بارے اک گل جھٹ نکلدی اے۔
+
+\begin{cor}\ollabel{cantorcor}
+$\cardfont{a} < \cardexpo{2}{\cardfont{a}}$ کسے وی کارڈینل عدد~$\cardfont{a}$ لئی۔
+\end{cor}
+
+\begin{proof}
+کانتور دے قضیے (\olref[sfr][siz][car]{thm:cantor}) تے \olref{lem:SizePowerset2Exp} توں۔
+\end{proof}
+\noindent
+سو $\omega < \cardexpo{2}{\omega}$۔ پر دھیان دیو کہ ایہ \emph{کارڈینل} گھات دا نتیجہ اے۔ اینوں \emph{ترتیبی} گھات نال ملا کے ویکھو، کیوں جے اوس صورت وچ $\omega =
+\ordexpo{2}{\omega}$ (\olref[ord-arithmetic][expo]{sec} ویکھو)۔
+
+کارڈینل گھات دی گل کردیاں اسیں ذرا ہور ٹھیک طرح دس سکدے آں کہ $\Real$ کیہڑے «معنی وچ» !!{nonenumerable} اے۔
+
+\begin{thm}\ollabel{continuumis2aleph0}
+$\card{\Real} = \cardexpo{2}{\omega}$
+\end{thm}
+
+\begin{proof}[ثبوت دا خاکہ]
+ایہ ثابت کرن دے کئی طریقے نیں۔ سبھ توں سِدھا طریقہ ایہ اے کہ $\cardle{\Pow{\omega}}{\Real}$ تے $\cardle{\Real}{\Pow{\omega}}$ وکھائیے، فیر شروڈر–برنسٹین توں کڈھیے کہ $\cardeq{\Real}{\Pow{\omega}}$، تے \olref[card-arithmetic][opps]{lem:SizePowerset2Exp} توں کڈھیے کہ $\card{\Real} = \cardexpo{2}{\omega}$۔ انجیکشن $f \colon
+\Pow{\omega} \to \Real$ تے $g \colon \Real \to \Pow{\omega}$ دی تعریف اسیں اک (سمجھ ودھاؤن والی) مشق لئی چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+\olref[sth][card-arithmetic][opps]{continuumis2aleph0} دا ثبوت پورا کرو۔ وکھاؤ کہ $\cardle{\Pow{\omega}}{\Real}$ تے
+$\cardle{\Real}{\Pow{\omega}}$۔
+\end{prob}
+
+\end{document}

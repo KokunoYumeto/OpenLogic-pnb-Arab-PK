@@ -1,0 +1,162 @@
+% Part: incompleteness
+% Chapter: incompleteness-provability
+% Section: rosser-thm
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{inp}{ros}
+
+\olsection{روسر دا قضیہ}
+
+کی اسیں گوڈل دا ثبوت بدل کے ہور مضبوط نتیجہ لے سکدے آں،
+جیہدے وچ “$\omega$-بے تضاد” دی تھاں صرف “بے تضاد” کافی
+ہووے؟ روسر دے لبھے طریقے نال جواب “ہاں” اے۔ روسر دی ترکیب
+ایہ اے کہ اک بدلیا ہویا !!{derivability} محمول
+$\ORProv_T(y)$، $\OProv[\Th{T}](y)$ دی تھاں ورتیا جائے۔
+
+\begin{thm}
+\ollabel{thm:rosser}
+فرض کرو $\Th{T}$ کوئی وی بے تضاد !!{axiomatizable} نظریہ
+اے جیہڑا $\Th{Q}$ دی توسیع اے۔ تاں $\Th{T}$ مکمل نہیں۔
+\end{thm}
+
+\begin{proof}
+چیتے رکھو کہ $\OProv[\Th{T}](y)$ دی تعریف
+$\lexists[x][\OPrf[\Th{T}](x,
+  y)]$ اے۔ ایتھے $\OPrf[\Th{T}](x, y)$ اوس قابلِ فیصلہ
+تعلق دی نمائندگی کردا اے جیہڑا اُدوں تے صرف اُدوں قائم اے
+جدوں $x$، اوس !!a{derivation} دا گوڈل نمبر ہووے جیہڑا گوڈل
+نمبر~$y$ والے !!{sentence} دا اخذ اے۔ ایس طرح $x$ تے~$y$
+وچلا اوہ تعلق وی قابلِ فیصلہ اے جیہڑا اُدوں قائم اے جدوں $x$،
+گوڈل نمبر~$y$ والے جملے دی \emph{تردید} دا گوڈل نمبر ہووے۔
+$\fn{not}(x)$ نوں ایہو جیہا بنیادی بازگشتی فنکشن منّ لئیے کہ
+جے $x$، فارمولا $!A$ دا کوڈ ہووے، تاں $\fn{not}(x)$،
+$\lnot
+!A$ دا کوڈ اے۔ تاں $\Refut[\Th{T}](x, y)$ اُدوں تے صرف
+اُدوں قائم اے جدوں $\Prf[\Th{T}](x, \fn{not}(y))$ قائم اے۔
+منّ لئیے کہ $\ORefut[\Th{T}](x, y)$ اوہدی نمائندگی کردا اے۔
+تاں جے $\Th{T} \Proves \lnot !A$ تے $\delta$ متعلقہ
+!!{derivation} اے، تاں $\Th{Q} \Proves
+\ORefut[\Th{T}](\gn{\delta}, \gn{!A})$۔ اسیں
+$\ORProv[\Th{T}](y)$ دی تعریف ایویں کردے آں،
+\[
+\lexists[x][(\OPrf[\Th{T}](x,y) \land \lforall[z][(z < x \lif \lnot
+  \ORefut[\Th{T}](z,y))])].
+\]
+موٹے طور اُتے $\ORProv[\Th{T}](y)$ آکھدا اے کہ $y$ دا
+$\Th{T}$ وچ اک ثبوت اے، تے $y$ دی کوئی تردید ایس ثبوت
+توں چھوٹے کوڈ والی نہیں۔ جے $\Th{T}$ بے تضاد اے، تاں سچائی
+دے لحاظ نال $\ORProv[\Th{T}](y)$ اوہناں ای عدداں لئی قائم اے
+جنہاں لئی $\OProv[\Th{T}](y)$ قائم اے۔ پر $\Th{T}$ وچ
+\emph{ثبوت پذیری} دے لحاظ نال دونہاں دیاں خاصیتاں وکھریاں نیں۔
+ہن اسیں سچائی تے ثبوت پذیری دا فرق جان دے آں۔ جے $\Th{T}$
+\emph{مت}ضاد اے، تاں ایہ دونیں اوہناں ای عدداں لئی
+قائم \emph{نہیں} ہوندے!{} (اکثر $\ORProv[\Th{T}](y)$
+نوں “$y$ روسر دے لحاظ نال ثابت ہو سکدا اے” پڑھیا جاندا اے۔
+پر ایس نال بھلیکھا پے سکدا اے۔ روسر والی خاصیت ثبوت پذیری
+دی کوئی خاص قسم نہیں۔ متضاد نظرییاں وچ کجھ !!{sentence}s
+ثابت ہو سکدے نیں پر روسر والی شرط پوری نہیں کردے۔ بھلیکھے
+توں بچن لئی اسیں بس “$y$ شمووَبل (shmovable) اے” وی پڑھ
+سکدے آں۔)
+
+مقرر نقطے دے لمے نال اک فارمولا $!R_\Th{T}$ ملدا اے جیہدے لئی
+\begin{equation}
+  \Th{Q} \Proves !R_\Th{T} \liff \lnot \ORProv[\Th{T}](\gn{!R_\Th{T}}).
+  \ollabel{RT}
+\end{equation}
+\olref[1in]{thm:first-incompleteness} دے ثبوت توں وکھ،
+ایتھے اسیں ایہ وکھاواں گے کہ جے $\Th{T}$ بے تضاد اے، تاں
+$\Th{T}$، $!R_\Th{T}$ نوں !!{derive} نہیں کردا تے
+$\Th{T}$، $\lnot !R_\Th{T}$ نوں وی !!{derive} نہیں کردا۔
+(یعنی ایتھے $\omega$-بے تضادی دا مفروضہ ضروری نہیں۔)
+
+پہلاں وکھائیے کہ $\Th{T} \Proves/ !R_{\Th{T}}$۔ فرض کرو
+ایہ ثابت ہوندا اے۔ تاں $!R_{\Th{T}}$ دا $T$ توں
+!!a{derivation} اے۔ اوہدا گوڈل نمبر $n$ منّ لئیے۔
+تاں $\Th{Q} \Proves \OPrf[\Th{T}](\num{n}, \gn{!R_{\Th{T}}})$،
+کیوں جے $\OPrf[\Th{T}]$، $\Prf[\Th{T}]$ دی~$\Th{Q}$
+وچ نمائندگی کردا اے۔ نالے ہر $k < n$ لئی، $k$،
+$\lnot !R_{\Th{T}}$ دے کسے !!a{derivation} دا گوڈل
+نمبر نہیں، کیوں جے $\Th{T}$ بے تضاد اے۔ سو ہر $k < n$ لئی
+$\Th{Q} \Proves \lnot
+\ORefut[\Th{T}](\num{k}, \gn{!R_{\Th{T}}})$۔
+\olref[req][min]{lem:less-nsucc} مطابق
+$\Th{Q} \Proves \lforall[z][(z < \num{n} \lif \lnot \ORefut[\Th{T}](z,
+  \gn{!R_{\Th{T}}}))]$۔ ایس لئی
+\[
+\Th{Q} \Proves \lexists[x][(\OPrf[\Th{T}](x,\gn{!R_{\Th{T}}}) \land \lforall[z][(z
+    < x \lif \lnot \ORefut[\Th{T}](z,\gn{!R_{\Th{T}}}))])],
+\]
+تے ایہ اوہی $\ORProv[\Th{T}](\gn{!R_{\Th{T}}})$ اے۔
+\olref{RT} نال $\Th{Q} \Proves \lnot !R_{\Th{T}}$۔
+کیوں جے $\Th{T}$، $\Th{Q}$ دی توسیع اے، ایس لئی
+$\Th{T} \Proves \lnot !R_{\Th{T}}$ وی۔ پر اسیں فرض کیتا اے کہ
+$\Th{T} \Proves !R_{\Th{T}}$۔ تاں $\Th{T}$ متضاد ہو جائے گا،
+جیہڑا قضیے دے مفروضے دے خلاف اے۔
+
+ہن وکھائیے کہ $\Th{T} \Proves/ \lnot !R_{\Th{T}}$۔ فرض کرو
+ایہ ثابت ہوندا اے، تے $n$، $\lnot !R_{\Th{T}}$ دے کسے
+!!a{derivation} دا گوڈل نمبر اے۔ تاں
+$\Refut[\Th{T}](n, \Gn{!R_{\Th{T}}})$ قائم اے۔ کیوں جے
+$\ORefut[\Th{T}]$، $\Refut[\Th{T}]$ دی $\Th{Q}$ وچ
+نمائندگی کردا اے، ایس لئی $\Th{Q} \Proves
+\ORefut[\Th{T}](\num{n}, \gn{!R_{\Th{T}}})$۔ اسیں فیر
+وکھاواں گے کہ $\Th{T}$ متضاد ہو جائے گا، کیوں جے اوہ
+$!R_{\Th{T}}$ وی !!{derive} کرے گا۔ ساڈے کول اے کہ
+\begin{align*}
+\Th{Q} & \Proves !R_{\Th{T}} \liff \lnot \ORProv[\Th{T}](\gn{!R_{\Th{T}}}),
+\intertext{تے کیوں جے $\Th{T}$،~$\Th{Q}$ دی توسیع اے، ایہ وکھانا کافی اے کہ}
+\Th{Q} & \Proves \lnot \ORProv[\Th{T}](\gn{!R_{\Th{T}}}).
+\end{align*}
+!!{sentence} $\lnot
+\ORProv[\Th{T}](\gn{!R_{\Th{T}}})$، یعنی
+\begin{align*}
+  \lnot & \lexists[x][(\OPrf[\Th{T}](x,\gn{!R_{\Th{T}}}) \land
+    \lforall[z][(z < x \lif \lnot \ORefut[\Th{T}](z,\gn{!R_{\Th{T}}}))])],
+  \intertext{منطقی طور اُتے ایس دے ہم ارز اے}
+  & \lforall[x][(\OPrf[\Th{T}](x,\gn{!R_{\Th{T}}}) \lif
+    \lexists[z][(z < x \land \ORefut[\Th{T}](z,\gn{!R_{\Th{T}}}))])].
+\end{align*}
+اسیں منطق تے $\Th{Q}$ دے !!{derive}s کیتے حقائق نال
+غیر رسمی دلیل دیواں گے۔ کوئی وی $x$ لئیے تے فرض کریے کہ
+$\OPrf[\Th{T}](x,
+\gn{!R_{\Th{T}}})$۔ اسیں پہلاں جان دے آں کہ
+$\Th{T} \Proves/ !R_{\Th{T}}$، ایس لئی ہر مقرر $k$ لئی
+$\Th{Q} \Proves \lnot \OPrf[\Th{T}](\num{k}, \gn{!R_{\Th{T}}})$۔
+سو ہر $k$ لئی $\eq/[x][\num{k}]$۔ خاص طور اُتے (a)
+$\eq/[x][\num{n}]$۔ نالے
+$\lnot(\eq[x][\num{0}]
+\lor \eq[x][\num{1}] \lor \dots \lor \eq[x][\num{n-1}])$۔
+ایس توں \olref[req][min]{lem:less-nsucc} نال (b)
+$\lnot(x < \num{n})$ ملدا اے۔
+\olref[req][min]{lem:trichotomy} نال $\num{n} < x$ ملدا اے۔
+کیوں جے $\Th{Q} \Proves
+\ORefut[\Th{T}](\num{n}, \gn{!R_{\Th{T}}})$، ایس لئی
+$\num{n} < x \land
+\ORefut[\Th{T}](\num{n}, \gn{!R_{\Th{T}}})$، تے ایس توں
+$\lexists[z][(z < x
+\land \ORefut[\Th{T}](z,\gn{!R_{\Th{T}}}))]$ ملدا اے۔
+کیوں جے $x$ کوئی وی ہو سکدا سی، ایس لئی مطلوب نتیجہ ملدا اے،
+\[
+\lforall[x][(\OPrf[\Th{T}](x,\gn{!R_{\Th{T}}}) \lif
+  \lexists[z][(z < x \land \ORefut[\Th{T}](z,\gn{!R_{\Th{T}}}))])].
+\]
+\end{proof}
+
+\begin{prob}
+قدرتی عدداں دے دو سیٹ $A$ تے $B$ نوں
+\emph{قابلِ حساب طریقے نال وکھ نہ ہو سکّن والے} آکھدے آں
+جے کوئی ایہو جیہا !!{decidable} سیٹ~$X$ نہ ہووے جیہدے لئی
+$A \subseteq X$ تے $B \subseteq \Complement{X}$۔
+(ایتھے $\Complement{X}$، $\Nat \setminus X$ اے، یعنی
+$X$ دا متمم۔) فرض کرو $\Th{T}$، $\Th{Q}$ دی بے تضاد
+!!{axiomatizable} توسیع اے۔ فرض کرو $A$ اوہناں !!{sentence}s
+دے گوڈل نمبراں دا سیٹ اے جیہڑے~$\Th{T}$ وچ ثابت ہو سکدے
+نیں، تے $B$ اوہناں جملیاں دے گوڈل نمبراں دا سیٹ اے جنہاں دی
+تردید~$\Th{T}$ وچ ہو سکدی اے۔ ثابت کرو کہ $A$ تے~$B$
+قابلِ حساب طریقے نال وکھ نہیں کیتے جا سکدے۔
+\end{prob}
+
+\end{document}

@@ -1,0 +1,51 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{con}
+
+\olsection{بے تضادی}
+
+بے تضادی !!{formula}s دے سیٹاں دی اک اہم خاصیت اے۔ !!{formula}s دا سیٹ تضاد والا اے جے اوہدے توں کوئی تضاد، جیویں~$\lfalse$، !!{derivable} اے۔ ہور صورت وچ ایہ بے تضاد اے۔ جے سیٹ تضاد والا اے، تاں اوہدے سارے !!{formula}s کسے نمونے دے کسے جہان وچ اکٹھے سچے نہیں ہو سکدے۔ تمامیت دے قضیے لئی اسیں اُلٹا رخ ثابت کردے آں۔ ہر بے تضاد سیٹ کسے نمونے دے کسے جہان وچ سچا ہوندا اے، یعنی «کینونیکل نمونے» وچ۔
+
+\begin{defn}
+  سیٹ $\Gamma$ نظام~$\Sigma$ دے لحاظ نال \emph{بے تضاد}، یا جیویں اسیں آکھاں گے، $\Sigma$-بے تضاد، اُدوں تے صرف اُدوں اے جدوں $\Gamma
+  \Proves/[\Sigma] \lfalse$۔
+\end{defn}
+
+سو مثلاً سیٹ $\{ \Box(p \lif q), \Box p, \lnot\Box q \}$ قضیاتی منطق دے لحاظ نال بے تضاد اے، پر
+\Log{K} دے لحاظ نال بے تضاد نہیں۔ ایس طرح سیٹ $\{ \Diamond p, \Box\Diamond
+p \lif q, \lnot q \}$، \Log{K5} دے لحاظ نال بے تضاد نہیں۔
+
+\begin{prop}\ollabel{prop:consistencyfacts}
+  منّ لو $\Gamma$، !!{formula}s دا سیٹ اے۔ فیر
+  \begin{enumerate}
+  \item $\Gamma$، $\Sigma$-بے تضاد اُدوں تے صرف اُدوں اے جدوں کوئی ایسا !!{formula}~$!A$ ہووے کہ $\Gamma \Proves/[\Sigma]
+    !A$۔
+  \item \ollabel{prop:consistencyfacts-b}%
+    $\Gamma \Proves[\Sigma] !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{
+    \lnot!A \}$، $\Sigma$-بے تضاد نہ ہووے۔
+  \item \ollabel{prop:consistencyfacts-c}%
+    جے $\Gamma$، $\Sigma$-بے تضاد اے، تاں کسے وی !!{formula}
+    $!A$ لئی، یا تاں $\Gamma \cup \{ !A \}$،
+    $\Sigma$-بے تضاد اے، یا $\Gamma \cup \{ \lnot!A \}$،
+    $\Sigma$-بے تضاد اے۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  کلاسیکی قضیاتی منطق ورت کے ایہ گلاں سوکھیاں نکلدیاں نیں۔ اسیں \olref{prop:consistencyfacts-c} دی دلیل دیندے آں۔ اُلٹی نفی راہیں منّ لو $\Gamma \cup \{ !A \}$،
+  $\Gamma \cup \{ \lnot!A \}$ وچوں کوئی وی $\Sigma$-بے تضاد نہیں۔ فیر
+  \olref{prop:consistencyfacts-b} مطابق $\Gamma, !A \Proves[\Sigma]
+  \lfalse$ تے $\Gamma, \lnot !A \Proves[\Sigma] \lfalse$ دونیں۔ استنباط دے قضیے مطابق $\Gamma \Proves[\Sigma] !A \to \lfalse$ تے
+  $\Gamma \Proves[\Sigma] \lnot!A \lif \lfalse$۔ پر $(!A \lif
+  \lfalse) \lif ((\lnot!A \lif \lfalse) \lif \lfalse)$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، سو
+  \olref[prp]{prop:derivabilityfacts}\olref[prp]{prop:derivabilityfacts-ruleT} مطابق،
+  $\Gamma \Proves[\Sigma] \lfalse$۔
+\end{proof}
+
+\end{document}

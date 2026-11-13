@@ -1,0 +1,57 @@
+% Part: first-order-logic
+% Chapter: axiomatic-proofs
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{ide}
+
+\olsection{\usetoken{P}{derivation} نال \usetoken{S}{identity}}
+
+!!{derivation}s وچ $\eq$ نوں شامل کرن لئی اسیں بس نویں مسلّمے دے
+خاکے شامل کردے آں۔ !!{derivation} تے $\Proves$ دیاں تعریفاں
+اوہو رہندیاں نیں؛ ہُن نویں مسلّماں نوں وی اجازت اے۔
+
+\begin{defn}[!!{identity} دے مسلّمے]
+\begin{align}
+\ollabel{ax:id1} & \eq[t][t], \\
+\ollabel{ax:id2} & \eq[t_1][t_2] \lif (!B(t_1) \lif
+  !B(t_2)),
+\end{align}
+% PNBAXD-010: ماخذ دے ’’بند ٹرم‘‘ نوں اگلیاں بے قید قضیاں نال ملا کے ایتھے عام ٹرم کیتا۔
+کسے وی ٹرماں $t$, $t_1$, $t_2$ لئی۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:sound}
+  مسلّمے \olref{ax:id1} تے \olref{ax:id2} منطقی طور تے معتبر نیں۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][axd][ide]{prop:sound} ثابت کرو۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:iden1}
+ $\Gamma \Proves \eq[t][t]$، کسے وی ٹرم $t$ تے سیٹ~$\Gamma$ لئی۔
+\end{prop}
+
+\begin{prop}\ollabel{prop:iden2}
+  جے $\Gamma \Proves !A(t_1)$ تے $\Gamma \Proves
+  \eq[t_1][t_2]$، تاں $\Gamma \Proves !A(t_2)$۔
+\end{prop}
+
+\begin{proof}
+!!{formula}
+\[
+(\eq[t_1][t_2] \lif (!A(t_1) \lif !A(t_2)))
+\]
+~\olref{ax:id2} دی اک مثال اے۔ نتیجہ \MP نوں دو واری
+لاون نال نکلدا اے۔
+\end{proof}
+
+\end{document}

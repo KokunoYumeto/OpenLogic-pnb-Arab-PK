@@ -1,0 +1,147 @@
+% Part: incompleteness
+% Chapter: incompleteness-provability
+% Section: second-incompleteness-thm
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{inp}{2in}
+
+\olsection{نامکملیت دا دوجا قضیہ}
+
+اسیں ایہہ گل کیویں بیان کریے کہ $\Th{PA}$ اپنی بے تضادی نوں
+ثابت نہیں کردا؟ $\Th{PA}$ نوں متضاد کہنا ایہہ کہنا اے کہ
+$\Th{PA} \Proves \eq[0][1]$۔ ایس لئی بے تضادی دے جملے
+$\OCon[\Th{PA}]$ نوں !!{sentence} $\lnot
+\OProv[\Th{PA}](\gn{\eq[0][1]})$ دے روپ وچ لے سکدے آں؛فیر
+ہِٹھلا قضیہ مطلوبہ نتیجہ دیندا اے:
+
+\begin{thm}
+\ollabel{thm:second-incompleteness} 
+جے $\Th{PA}$ بے تضاد اے تاں $\Th{PA}$، $\OCon[\Th{PA}]$
+نوں !!{derive} نہیں کردا۔
+\end{thm}
+
+ایہہ دھیان وچ رکھنا اہم اے کہ قضیہ $\OCon[\Th{PA}]$ دی خاص
+نمائندگی اُتے منحصر اے،یعنی $\OProv[\Th{PA}](y)$ دی خاص
+نمائندگی اُتے۔ سانوں صرف ایہہ چاہیدا اے کہ
+$\OProv[\Th{PA}](y)$ دی نمائندگی تین !!{derivability} شرطاں
+پوری کرے؛ایس لئی قضیہ ہر اُس نظریے تک وی پھیلدا اے جس دا
+!!a{derivability} محمول ایہناں خاصیتاں نوں پورا کردا ہووے۔
+
+گوڈل دی دلیل دا خاکہ پڑھنا فائدہ مند اے،کیونکہ قضیہ چنگے
+اختتامی نکتے وانگ سامنے آ جاندا اے۔ دلیل ایویں اے۔
+$!G_\Th{PA}$ اوہ گوڈل جملہ ہووے جیہڑا اسیں
+\olref[1in]{thm:first-incompleteness} دے ثبوت وچ بنایا سی۔ اسیں
+دکھا چکے آں: «جے $\Th{PA}$ بے تضاد اے تاں $\Th{PA}$،
+$!G_\Th{PA}$ نوں !!{derive} نہیں کردا»۔ جے اس گل نوں
+$\Th{PA}$ دے \emph{اندر} رسمی بنائیے،تاں ہِٹھلا نتیجہ ثابت
+ہوندا اے:
+\[
+\OCon[\Th{PA}] \lif \lnot \OProv[\Th{PA}](\gn{!G_\Th{PA}}).
+\]
+% PNB-CMP-071: B9 bare Prov دی تھاں formal OProv؛اصل اگلی تمام صورتاں نال مطابقت۔
+ہن منّو $\Th{PA}$، $\OCon[\Th{PA}]$ نوں !!{derive}s کردا
+اے۔ فیر اوہ $\lnot
+\OProv[\Th{PA}](\gn{!G_\Th{PA}})$ نوں وی !!{derive}s کردا اے۔
+پر کیوں جے $!G_\Th{PA}$ گوڈل جملہ اے،ایہہ
+$!G_\Th{PA}$ نال ہم ارز اے۔ ایس لئی
+$\Th{PA}$، $!G_\Th{PA}$ نوں !!{derive}s کردا اے۔
+
+پر اسیں جاندے آں کہ جے $\Th{PA}$ بے تضاد ہووے تاں اوہ
+$!G_\Th{PA}$ نوں !!{derive} نہیں کردا!{} سو جے $\Th{PA}$
+بے تضاد اے تاں اوہ $\OCon[\Th{PA}]$ نوں !!{derive} نہیں
+کر سکدا۔
+
+دلیل نوں ہور دقیق بناؤن لئی $!G_\Th{PA}$ نوں
+$\Th{PA}$ لئی گوڈل جملہ منّاں گے،تے !!{derivability} شرطاں
+(P1)--(P3) نال دکھاواں گے کہ $\Th{PA}$،
+$\OCon[\Th{PA}] \lif
+!G_\Th{PA}$ نوں !!{derive}s کردا اے۔ ایس توں پتا لگے گا کہ
+$\Th{PA}$، $\OCon[\Th{PA}]$ نوں !!{derive} نہیں کردا۔
+ہِٹھاں $\Th{PA}$ دے اندر ایس ثبوت دا خاکہ اے۔ (سہولت لئی
+اسیں $\Th{PA}$ دے ذیلی اشاریے چھڈ دیندے آں۔)
+\begin{align}
+& !G \liff \lnot \OProv(\gn{!G}) \ollabel{G2-1}\\
+& \qquad\text{$!G$، گوڈل دا جملہ اے}\notag \\
+& !G \lif \lnot \OProv(\gn{!G}) \ollabel{G2-2}\\
+  & \qquad\text{\olref{G2-1} توں} \notag\\
+& !G \lif
+  (\OProv(\gn{!G}) \lif \lfalse) \ollabel{G2-3}\\
+  & \qquad\text{\olref{G2-2} توں منطق نال}\notag\\
+& \OProv(\gn{
+    !G \lif
+    (\OProv(\gn{!G}) \lif \lfalse)
+  }) \ollabel{G2-4}\\
+  & \qquad\text{\olref{G2-3} توں شرط P1 نال} \notag\\
+& \OProv(\gn{!G}) \lif
+  \OProv(\gn{
+    (\OProv(\gn{!G}) \lif \lfalse)
+    }) \ollabel{G2-5}\\
+  & \qquad\text{\olref{G2-4} توں شرط P2 نال} \notag\\
+& \OProv(\gn{!G}) \lif (\OProv(\gn{\OProv(\gn{!G})}) \lif \OProv(\gn{\lfalse})) \ollabel{G2-6}\\
+  & \qquad\text{\olref{G2-5} توں شرط P2 تے منطق نال} \notag\\
+& \OProv(\gn{!G}) \lif 
+  \OProv(\gn{\OProv(\gn{!G})}) \ollabel{G2-7}\\
+   & \qquad\text{شرط P3 نال} \notag\\
+& \OProv(\gn{!G}) \lif \OProv(\gn{\lfalse}) \ollabel{G2-8}\\
+  & \qquad \text{\olref{G2-6} تے \olref{G2-7} توں منطق نال}\notag\\
+& \OCon \lif \lnot \OProv(\gn{!G}) \ollabel{G2-9}\\
+  & \qquad\text{\olref{G2-8} دے عکسِ نقیض تے $\OCon \ident \lnot \OProv(\gn{\lfalse})$ نال}\notag \\
+& \OCon \lif !G \notag\\
+  & \qquad\text{\olref{G2-1} تے \olref{G2-9} توں منطق نال}\notag
+\end{align}
+اُتلی دلیل وچ منطق دی ورتوں صرف قضیاتی منطق دے بنیادی حقائق
+نیں۔ مثال لئی \olref{G2-3}،
+$\Proves \lnot!A \liff (!A\lif
+\lfalse)$ ورتدا اے،تے \olref{G2-8}،
+$!A \lif (!B \lif !C), !A \lif !B
+\Proves !A \lif !C$ ورتدا اے۔ \olref{G2-5} تے
+\olref{G2-6} وچ شرط~P2 دی ورتوں P2 دیاں انہاں مثالاں اُتے
+منحصر اے:
+$\OProv(\gn{!A \lif !B}) \lif
+(\OProv(\gn{!A}) \lif \OProv(\gn{!B}))$۔ پہلی مثال وچ
+$!A \ident
+!G$ تے $!B \ident \OProv(\gn{!G}) \lif \lfalse$؛
+% PNB-CMP-071: B11 آخری P2 instance وچ G دے formula marker ! بحال۔
+دوجی وچ $!A
+\ident \OProv(\gn{!G})$ تے $!B \ident \lfalse$۔
+
+نامکملیت دے دوجے قضیے دا ہور عمومی روپ ایہ اے:
+
+\begin{thm}
+\ollabel{thm:second-incompleteness-gen} منّو $\Th{T}$ کوئی وی
+بے تضاد، !!{axiomatized} نظریہ اے جیہڑا $\Th{Q}$ دی توسیع
+کردا اے؛تے $\OProv[\Th{T}](y)$ کوئی وی ایسا فارمولا ہووے
+جیہڑا $\Th{T}$ لئی !!{derivability} شرطاں P1--P3 پوری کردا
+اے۔ فیر $\Th{T}$، $\OCon[T]$ نوں !!{derive} نہیں کردا۔
+\end{thm}
+
+\begin{prob}
+دکھاؤ کہ $\Th{PA}$، $!G_{\Th{PA}} \lif \OCon[\Th{PA}]$
+نوں !!{derive}s کردا اے۔
+\end{prob}
+
+\begin{digress}
+ایس گل دا حاصل ایہہ اے کہ ریاضی دا کوئی وی «معقول» بے تضاد
+نظریہ اپنی بے تضادی دا جملہ !!{derive} نہیں کر سکدا۔ منّو
+$\Th{T}$ ریاضی دا نظریہ اے جیہڑے وچ $\Th{Q}$ تے ہلبرٹ
+دی «محدود وسیلی» دلیلاں (اوہناں توں جو وی مراد ہووے) شامل نیں۔
+تاں پورا $\Th{T}$، $\Th{T}$ دی بے تضادی دا جملہ
+!!{derive} نہیں کر سکدا؛سو لازماً اوہدا محدود
+وسیلی حصہ وی $\Th{T}$ دی بے تضادی دا جملہ !!{derive} نہیں
+کر سکدا۔ ایس معنی وچ «پوری ریاضی» لئی محدود وسیلی بے تضادی
+دا ثبوت نہیں ہو سکدا۔
+
+«محدود وسیلی» لفظ دی تعبیر وچ کجھ گنجائش اے،تے گوڈل
+1931 دے مقالے وچ ایہہ امکان منّدا اے کہ جیہڑی گل نوں اسیں
+«محدود وسیلی» سمجھدے آں اوہ ریاضی دیاں انہاں قسماں توں باہر
+ہووے جنہاں نوں ہلبرٹ رسمی بنانا چاہندا سی۔ پر ایتھے گوڈل
+نے کھُل دلی دکھائی؛اج ایہہ سمجھنا اوکھا اے کہ کوئی شے معقول
+طور تے «محدود وسیلی» وی کہلائے تے،مثلاً $\Th{ZFC}$،یعنی
+انتخاب دے مسلّمے سمیت زرمیلو--فرینکل سیٹ نظریے،وچ رسمی طور
+بیان وی نہ کیتی جا سکے۔
+\end{digress}
+
+\end{document}

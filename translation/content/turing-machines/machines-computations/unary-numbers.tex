@@ -1,0 +1,407 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: unary-numbers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{mac}{una}
+\olsection{اعداد دی اک نشانی نمائندگی}
+
+\begin{explain}
+ٹیورنگ مشیناں اپنی پٹی
+اُتے لکھے نشاناں دے
+سلسلّیاں اُتے کم کردیاں
+نیں۔ مشین دے ورتے
+حرفاں دے مجموعے دے
+مطابق ایہ سلسلے کئی
+طرح دے انپٹ تے آؤٹ پٹ
+دکھا سکدے نیں۔ خاص طور
+اُتے، \emph{حسابی}
+فنکشن، یعنی قدرتی
+اعداد دے فنکشن، دا
+حساب کرن والیاں ٹیورنگ
+مشیناں وچ ساڈی دلچسپی
+اے۔ مثبت صحیح اعداد
+نوں دکھان دا اک سادہ
+طریقہ ایہ اے کہ ہر عدد
+نوں اکّو نشان~$\TMstroke$
+دی لڑی نال کوڈ کریے۔
+جے $n \in \Nat$ ہووے
+تاں $\TMstroke^n$، $n = 0$
+ہون اُتے خالی سلسلہ
+اے، تے باقی صورت وچ
+ٹھیک $n$ عدد~$\TMstroke$
+نشاناں دا سلسلہ اے۔
+\end{explain}
+
+\begin{defn}[حسابی کارروائی]
+ٹیورنگ مشین~$M$ فنکشن
+$f\colon \Nat^k \to \Nat$
+دا \emph{حساب کردی اے}
+اُدوں تے صرف اُدوں جدوں
+$M$ ہِٹھلے انپٹ اُتے
+رُکے:
+\[
+\TMstroke^{n_1} \TMblank \TMstroke^{n_2} \TMblank \dots \TMblank \TMstroke^{n_k}
+\]
+تے آؤٹ پٹ
+$\TMstroke^{f(n_1, \dots, n_k)}$
+ہووے۔
+\end{defn}
+
+\begin{prob}
+ایہدی تعریف دیو کہ
+ٹیورنگ مشین~$M$ فنکشن
+$f\colon \Nat^k \to \Nat^m$
+دا حساب کدوں کردی اے۔
+\end{prob}
+
+\begin{ex}\ollabel{ex:adder}
+\emph{جمع:}
+آؤ فنکشن $f(n,m) = n + m$
+دا حساب کرن والی مشین
+بنائیے۔ مشین دی پٹی
+اُتے شروع وچ $\TMstroke$
+نشاناں دے دو ٹکڑے
+ہون، جنہاں دیاں لمبائیاں
+$n$ تے~$m$ ہون، تے
+رُکّن ویلے $n+m$~$\TMstroke$
+نشاناں دا اک ٹکڑا رہ
+جاوے۔ انپٹ دے ایہہ دو
+$\TMstroke$ ٹکڑے اک~$\TMblank$
+نال وکھ کیتے ہوندے
+نیں۔ ایس لئی اک طریقہ
+ایہ اے کہ $\TMblank$
+والے خانے اُتے اک لکیر
+لکھی جاوے تے آخری~$\TMstroke$
+مٹا دتا جاوے۔
+\begin{figure}\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [right of=B] {$q_2$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+           edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge [loop above] node {\TMtrans{\TMstroke}{\TMblank}{\TMstay}} (C);
+\end{tikzpicture}
+\]\caption{$f(x,y) = x+y$ دا حساب کرن والی مشین}
+\ollabel{fig:adder}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+\olref[tur][mac][una]{ex:adder}
+وچلی مشین دیاں مکمل
+حالتاں دا سلسلہ
+انپٹ~$\tuple{3,2}$ لئی
+قدم بہ قدم لکھو۔ جے
+مشین $0+0$ دا حساب
+کرے تاں کیہ ہوندا اے؟
+\end{prob}
+
+\begin{explain}
+\olref[rep]{ex:doubler}
+وچ اسی اک ٹیورنگ مشین
+دی مثال دتی سی جیڑی
+انپٹ وجوں~$\TMstroke$
+نشاناں دی لڑی لیندی
+اے تے پٹی اُتے دوگنے
+~$\TMstroke$ نشاناں دی
+لڑی نال رُکدی اے:
+دوگنا کرن والی مشین۔
+پر آؤٹ پٹ وچ
+$\TMblank$ نشان دوگنے
+~$\TMstroke$ ٹکڑے دے
+کھبے پاسے رہ جاندے
+نیں۔ ایس لئی ایہ مشین
+فنکشن $f(x) = 2x$ دا حساب
+نہیں کردی، بھاویں تسی شاید
+ایہ سمجھیا ہووے کہ کردی اے۔ اسی ایس
+مسئلے نوں ٹھیک کرن دے
+دو طریقے بیان کراں گے۔
+\end{explain}
+
+\begin{ex}
+\olref{fig:doubler-disc}
+وچلی مشین فنکشن $f(x) =
+2x$ دا حساب کردی اے۔
+\olref[rep]{ex:doubler}
+وچلی مشین ہر انپٹ
+$\TMstroke$ مٹا کے
+دور سجے پاسے دو
+$\TMstroke$ لکھدی اے؛
+ایس دے برعکس ایہ
+مشین انپٹ دی ہر
+~$\TMstroke$ لئی
+سجّے پاسے صرف اک
+~$\TMstroke$ ودھاؤندی
+اے۔ ایہنوں انپٹ
+دے ختم ہون دی جگہ
+یاد رکھنی پیندی اے،
+ایس لئی انپٹ تے
+نواں لکھیاں لکیراں
+دے وچ اک~$\TMblank$
+چھڈدی اے، جیہنوں
+آخر وچ~$\TMstroke$
+نال بھر دیندی اے۔
+نالے انپٹ وچ اپنی
+موجودہ جگہ یاد
+رکھن لئی اسی انپٹ
+دے ٹکڑے دا اک
+~$\TMstroke$ عارضی
+طور اُتے~$\TMblank$
+نال بدل دیندے آں۔
+  \begin{figure}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (0)              {$q_0$};
+  \node[state]         (1) [above of=0] {$q_1$};
+  \node[state]         (2) [above of=1] {$q_2$};
+  \node[state]         (3) [right of=2] {$q_3$};
+  \node[state]         (4) [below of=3] {$q_4$};
+  \node[state]         (5) [below of=4] {$q_5$};
+  \node[state]         (6) [above right of=4] {$q_6$};
+  \node[state]         (7) [below of=6] {$q_7$};
+  \node[state]         (8) [below of=7] {$q_8$};
+
+  \path (0) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMright}} (1)
+%    (0) edge node {\TMtrans{\TMblank}{\TMblank}{\TMstay}} (h)
+    (1) edge [loop left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (1)
+      edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (2)
+    (2) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (2)
+        edge node {\TMtrans{\TMblank}{\TMstroke}{\TMleft}} (3)
+    (3) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (3)
+        edge node[left] {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (4)
+    (4) edge        node[left] {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+    (5) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+        edge              node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (0)
+    (4) edge      node[sloped] {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (6)
+    (6) edge              node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (7)
+    (7) edge [loop right] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (7)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (8)
+    (8) edge [loop right] node {\TMtrans{\TMstroke}{\TMblank}{\TMstay}} (8);
+    \end{tikzpicture}
+\]
+\caption{$f(x) = 2x$ دا حساب کرن والی مشین}
+\ollabel{fig:doubler-disc}
+\end{figure}
+\end{ex}
+
+\begin{ex}\ollabel{ex:mover}
+$f(x) = 2x$ دا حساب
+کرن دا دوجا طریقہ
+ایہ اے کہ اصل
+دوگنا کرن والی مشین
+نوں برقرار رکھیا جاوے،
+پر آخر وچ ہور حالتاں
+تے حکم شامل کیتے
+جان جیڑے دوگنی لکیراں
+دا ٹکڑا پٹی دے بالکل
+کھبے پاسے لے جان۔
+\olref{fig:mover} وچلی
+مشین صرف ایہ آخری
+کم کردی اے۔ جے شروع
+وچ پٹی اُتے پہلے
+$\TMblank$ نشاناں دا
+ٹکڑا، فیر~$\TMstroke$
+نشاناں دا ٹکڑا ہووے
+(تے سر~$\TMblank$
+دے ٹکڑے وچ کسے وی
+جگہ ہووے)، تاں ایہ
+مشین~$\TMstroke$
+نشاناں نوں اک اک کر
+کے مٹا کے پٹی دے
+شروع وچ لکھدی اے۔
+کم پورا ہون دا پتا
+لاؤن لئی ایہ پہلے
+$\TMstroke$ ٹکڑے دے
+آخر اُتے اک~$\TMendtape$
+نشان لاؤندی اے،
+جیہڑا آخر وچ مٹا
+دتا جاندا اے۔ اسی
+حالتاں نوں نمبر دینا~$q_6$
+توں شروع کیتا اے
+تاں جو ایہناں نوں
+دوگنا کرن والی مشین
+نال جوڑ سکئیے۔ صرف
+اک ہور حکم
+$\delta(q_0,
+\TMblank) = \tuple{q_6,\TMblank,\TMstay}$
+دی لوڑ اے؛ یعنی
+~$q_0$ توں~$q_6$
+تک اک تیر جس اُتے
+~$\TMtrans{\TMblank}{\TMblank}{\TMstay}$
+لکھیا ہووے۔ (اک
+باریک مسئلہ اے:
+نتیجے والی مشین
+انپٹ~$x=0$ لئی
+کم نہیں کردی۔ ایہنوں
+اسی مشق لئی چھڈدے
+آں۔)
+\begin{figure}
+  \[
+  \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                      semithick]
+    \tikzstyle{every state}=[fill=none,draw=black,text=black]
+    \node[initial,state] (6)              {$q_6$};
+    \node[state]         (7) [right of=6] {$q_7$};
+    \node[state]         (8) [right of=7] {$q_8$};
+    \node[state]         (9) [below of=8] {$q_9$};
+    \node[state]         (10) [left of=9] {$q_{10}$};
+    \node[state]         (11) [left of=10]  {$q_{11}$};
+    \node[state]         (12) [below of=11]  {$q_{12}$};
+    \node[state]         (13) [right of=12] {$q_{13}$};
+    \node[state]         (14) [right of=13] {$q_{14}$};
+    \path
+    (6)  edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (7)
+    (7)  edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (7)
+         edge node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (8)
+    (8)  edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (8)
+         edge node {\TMtrans{\TMblank}{\TMendtape}{\TMleft}} (9)
+    (9)  edge [loop right] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (9)
+         edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (10)
+    (10) edge node[above] {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (11)
+    (11) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (11)
+         edge node[left] {\begin{tabular}{@{}l@{}}
+          \TMtrans{\TMendtape}{\TMendtape}{\TMright}\\
+          \TMtrans{\TMstroke}{\TMstroke}{\TMright}
+         \end{tabular}} (12)
+    (12) edge node[] {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (13)
+    (13) edge [loop below] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (13)
+         edge node[sloped] {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (11)
+    (13) edge node {\TMtrans{\TMendtape}{\TMblank}{\TMstay}} (14);
+  \end{tikzpicture}
+  \]
+  \caption{$\TMstroke$ نشاناں دا ٹکڑا کھبے پاسے لے جانا}
+  \ollabel{fig:mover}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+\olref[tur][mac][una]{ex:mover}
+وچ اسی اوہ مشین بیان کیتی اے
+جیڑی
+\olref[tur][mac][una]{fig:doubler-disc}
+وچلی دوگنا کرن والی
+مشین تے
+\olref[tur][mac][una]{fig:mover}
+وچلی ٹکڑا سرکاؤن
+والی مشین نوں
+ملا کے بندی اے۔
+جے ایہ جوڑی ہوئی
+مشین انپٹ~$x=0$
+اُتے، یعنی خالی پٹی
+اُتے، شروع کیتی
+جاوے تاں کیہ
+ہوندا اے؟ مشین
+نوں کِویں بدلو گے
+تاں جو ایس صورت
+وچ اوہ آؤٹ پٹ~$2x=0$
+نال رُکے؟ (ایہ
+کم اک حالت تے
+اک حالتی تبدیلی
+ودھا کے ہو جانا
+چاہیدا اے۔)
+\end{prob}
+
+\begin{prob}
+\emph{تفریق:} اک
+ٹیورنگ مشین بناؤ
+جیڑی لکیراں دیاں دو
+غیر خالی لڑیاں
+انپٹ وجوں لے،
+جنہاں دیاں لمبائیاں
+$n$ تے~$m$ ہون،
+جتھے $n >
+m$، تے فنکشن
+$f(n,m) = n - m$
+دا حساب کرے۔
+\end{prob}
+
+\begin{prob}
+\emph{برابری:} اک
+ٹیورنگ مشین بناؤ
+جیڑی ہِٹھلے فنکشن
+دا حساب کرے:
+\[
+\fn{equality}(n,m) = 
+\begin{cases}
+  \text{1} & \text{جے~$n = m$} \\
+  \text{0} & \text{جے~$n \neq m$}
+\end{cases}
+\]
+جتھے~$n$ تے~$m \in \PosInt$
+نیں۔
+\end{prob}
+
+\begin{prob}
+فنکشن $\min(x,y)$
+دا حساب کرن لئی
+ٹیورنگ مشین بناؤ،
+جتھے $x$ تے $y$
+مثبت صحیح اعداد
+نیں؛ پٹی اُتے اوہ
+$\TMstroke$ نشاناں
+دیاں لڑیاں نال
+دکھائے جاندے نیں
+جنہاں دے وچ
+اک $\TMblank$ ہوندا
+اے۔ مشین دے
+حرفاں دے مجموعے
+وچ ہور نشان وی
+ورت سکدے او۔
+
+فنکشن $\min$
+اپنے آرگومنٹاں وچوں
+سب توں چھوٹی
+قدر چُنندا اے؛
+ایس لئی
+$\min(3,5)=3$،
+$\min(20,16)=16$،
+$\min(4,4)=4$
+تے ایس طرح اگے۔
+\end{prob}
+
+\begin{defn}
+ٹیورنگ مشین~$M$
+جزوی فنکشن
+$f\colon \Nat^k
+  \pto \Nat$ دا
+حساب کردی اے
+اُدوں تے صرف
+اُدوں جدوں:
+  \begin{enumerate}
+    \item $M$ انپٹ
+    $\TMstroke^{n_1}\concat\TMblank\concat
+    \dots \concat\TMblank\concat\TMstroke^{n_k}$
+    اُتے آؤٹ پٹ
+    $\TMstroke^{m}$
+    نال رُکدی اے، جے
+    $f(n_1, \dots, n_k) = m$
+    ہووے۔
+    \item $M$ یا تاں بالکل
+    نہیں رُکدی،
+    یا ایہو جیہے آؤٹ پٹ
+    نال رُکدی اے
+    جیڑا صرف
+    ~$\TMstroke$
+    نشاناں دا اک
+    ٹکڑا نہیں، جے
+    $f(n_1, \dots, n_k)$
+    غیر تعریف شدہ
+    ہووے۔
+  \end{enumerate}
+\end{defn}
+
+\end{document}

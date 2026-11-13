@@ -1,0 +1,157 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{add}
+\olsection{ترتیبی جوڑ}
+
+منّ لو اسیں $\alpha$ تے $\beta$ نوں جوڑنا چاہندے آں۔ اسیں $\beta$ دی اک {نقل}، $\alpha$ دی اک نقل توں عین پچھوں رکھ سکدے آں۔ (سانوں \emph{نقلاں} لینیاں پیندیاں نیں، کیوں جے \olref[ordinals][basic]{ordinalsaresubsets} توں سانوں پتا اے کہ یا تاں $\alpha
+\subseteq \beta$ یا $\beta \subseteq \alpha$۔) سہج سمجھ مطابق ایہدا اثر ایہ اے کہ اسیں قدماں دی اک $\alpha$ لڑی توں لنگھدے آں \emph{تے فیر} اک $\beta$ لڑی توں لنگھدے آں۔ جیہڑی لڑی بنے گی اوہ حُسنِ ترتیب والی ہووے گی۔ سو \olref[ordinals][ordtype]{thmOrdinalRepresentation} مطابق اوہ اک (اکّو اک) ترتیبی عدد نال ہم ساخت اے۔ اوس ترتیبی عدد نوں $\alpha$ تے $\beta$ دا \emph{جوڑ} سمجھ سکدے آں۔
+
+ایہ ترتیبی جوڑ دے پچھے سہج خیال اے۔ اینوں ٹھیک طرح تعریف کرن لئی پہلاں اسیں سیٹاں دیاں \emph{نقلاں} لین دا خیال ورتدے آں۔ طریقہ ایہ اے کہ اپنی مرضی دے نشان، $0$ تے $1$، لا کے چیتا رکھیے کہ کیہڑی شے کتھوں آئی۔
+
+\begin{defn}\ollabel{defdissum}
+$A$ تے $B$ دا \emph{وکھ وکھ حصیاں والا جوڑ} $A \disjointsum B = (A\times
+\{0\}) \cup (B \times \{1\})$ اے۔
+\end{defn}
+
+اگے اسیں ترتیبی عدداں دیاں جوڑیاں اُتے اک ترتیب تعریف کردے آں۔
+
+\begin{defn}
+کسے وی ترتیبی عدداں $\alpha_1, \alpha_2, \beta_1, \beta_2$ لئی ایویں آکھو:
+\begin{align*}
+	\tuple{\alpha_1, \alpha_2} \rlexless \tuple{\beta_1, \beta_2}\text{ اُدوں تے صرف اُدوں جدوں }&
+	\text{یا تاں $\alpha_2 \in \beta_2$}\\
+	& \text{یا دوویں $\alpha_2 = \beta_2$ تے $\alpha_1 \in \beta_1$}
+\end{align*}
+\end{defn}
+
+ایہ \emph{اُلٹی لغتی ترتیب} اے، کیوں جے پہلاں دوجا رکن ویکھ کے ترتیب لاندے او، تے فیر پہلا۔ چیتے کرو کہ اسیں $\alpha \ordplus \beta$ نوں $\alpha$ دی اک نقل تے اوہدے پچھوں $\beta$ دی اک نقل دی ترتیب دی قسم وجوں تعریف کرنا چاہندے ساں۔ ایہ کرن لئی اسیں آکھدے آں:
+
+\begin{defn}\ollabel{defordplus}
+کسے وی ترتیبی عدداں $\alpha$، $\beta$ لئی، اوہناں دا جوڑ $ \alpha \ordplus
+\beta = \ordtype{\alpha \disjointsum \beta, \rlexless}$ اے۔
+\end{defn}
+\noindent
+دھیان دیو کہ ایتھے اسیں لکھت نوں ذرا کھلّھ نال ورتیا اے۔ پورا ٹھیک لکھن لئی «$\Setabs{\tuple{x,y}\in \alpha\disjointsum\beta}{x \rlexless y}$» لکھنا چاہیدا اے، «$\rlexless$» دی تھاں۔ پر مختصر رکھن لئی اسیں اگے وی ایویں ای لکھاں گے۔
+
+ہِیٹھلا نتیجہ، \olref[ordinals][ordtype]{thmOrdinalRepresentation} نال رَل کے، پکا کردا اے کہ ساڈی تعریف ٹھیک بنی اے۔
+
+\begin{lem}\ollabel{ordsumlessiswo}
+$\tuple{\alpha \disjointsum \beta, \rlexless}$ حُسنِ ترتیب والی ساخت اے، کسے وی ترتیبی عدداں $\alpha$ تے $\beta$ لئی۔
+\end{lem}
+
+\begin{proof}
+صاف اے کہ $\rlexless$، $\alpha \disjointsum \beta$ اُتے جُڑیا ہویا اے۔ ایہ وکھاؤن لئی کہ اوہ بنیاد والا تعلق اے، کوئی غیر خالی $X \subseteq \alpha
+\disjointsum \beta$ مقرر کرو۔ $Y$، $X$ دا اوہ ذیلی سیٹ ہووے جیہدے رکناں دا دوجا محدد جِنّا ہو سکے چھوٹا اے، یعنی $Y = \Setabs{\tuple{\gamma, i} \in X}{(\forall \tuple{\delta, j} \in X)i \leq j}$۔ ہُن $Y$ دا اوہ رکن چُنو جیہدا پہلا محدد سبھ توں چھوٹا اے۔
+\end{proof}
+\noindent
+سو ساڈے کول ترتیبی جوڑ دی اک صاف تے کھلّھی تعریف اے۔ ہِیٹھلی گل کوئی حیرانی والی نہیں (چیتے کرو کہ $1 = \{0\}$، \olref[z][infinity-again]{defnomega} مطابق):
+\begin{prop}
+$\alpha \ordplus  1 = \ordsucc{\alpha}$، کسے وی ترتیبی عدد $\alpha$ لئی۔
+\end{prop}
+
+\begin{proof}
+ہم ساخت نقشہ $f$ ویکھو، جیہڑا $\ordsucc{\alpha} = \alpha \cup
+\{\alpha\}$ توں $\alpha\disjointsum1 = (\alpha \times \{0\})
+\disjointsum (\{0\} \times \{1\})$ ول اے، تے $f(\gamma) =
+\tuple{\gamma, 0}$ نال دتا اے $\gamma \in \alpha$ لئی، تے $f(\alpha) = \tuple{0,
+1}$۔
+\end{proof}
+\noindent
+نالے وکھانا سوکھا اے کہ جوڑ کجھ بازگشتی شرطاں اُتے پورا اتردا اے۔
+
+\begin{lem}\ollabel{ordadditionrecursion}
+کسے وی ترتیبی عدداں $\alpha, \beta$ لئی:
+\begin{align*}
+	\alpha\ordplus 0 &= \alpha\\
+	\alpha \ordplus  (\beta\ordplus 1) &= (\alpha \ordplus  \beta) \ordplus  1\\
+	\alpha  \ordplus  \beta &= \supstrict_{\delta < \beta}(\alpha \ordplus  \delta) && \text{جے $\beta $ حدّی ترتیبی عدد اے}
+\end{align*}
+\end{lem}
+
+\begin{proof}
+اسیں واری واری ہر صورت ویکھدے آں۔ پہلاں:
+\begin{align*}
+	\alpha \ordplus  0 
+	& = \ordtype{(\alpha \times \{0\}) \cup (0 \times \{1\}), \rlexless} \\
+	&= \ordtype{(\alpha \times \{0\}) \cup \{0\}, \rlexless}\\
+	&= \alpha\\
+	\alpha \ordplus (\beta \ordplus  1) 
+	%&= \ordtype{(\alpha\times \{0\}) \cup (\ordtype{\beta \ordplus  1}\times \{1\}), \rlexless} \\
+	&= \ordtype{(\alpha\times \{0\}) \cup (\ordsucc{\beta}\times \{1\}), \rlexless} \\
+	&= \ordtype{(\alpha\times \{0\}) \cup (\beta \times \{1\}), \rlexless} \ordplus 1\\
+	&= (\alpha \ordplus  \beta) \ordplus  1
+\end{align*}
+ہُن $\beta \neq \emptyset$ حدّی ہووے۔ جے $\delta < \beta$ تاں $\delta\ordplus 1 < \beta$ وی، سو $\alpha \ordplus  \delta$، $\alpha \ordplus  \beta$ دا حقیقی مُڈھلا ٹکڑا اے۔ سو $\alpha
+\ordplus  \beta$، $X = \Setabs{\alpha
+\ordplus  \delta}{\delta < \beta}$ دی سخت اُپَرلی حد اے۔ نالے جے $\alpha \leq \gamma <
+\alpha \ordplus  \beta$ تاں صاف اے کہ $\gamma = \alpha \ordplus
+\delta$ کسے $\delta < \beta$ لئی۔ سو $\alpha \ordplus  \beta =
+\supstrict_{\delta< \beta}(\alpha\ordplus \delta)$۔
+\end{proof}
+
+پر ایہ اک خاص گل اے۔ ترتیبی جوڑ دی تعریف کرن لئی اسیں \emph{اِس دی تھاں} بس لامتناہی درجیاں والی بازگشت دا قضیہ ورت سکدے ساں، تے بازگشت دیاں مساواتاں این اویویں رکھ سکدے ساں جیویں \olref{ordadditionrecursion} وچ دتیاں نیں (بھاویں «$\ordsucc{\beta}$» ورتدے، «$\beta \ordplus 1$» دی تھاں)۔
+
+سو ترتیبی عدداں اُتے عملاں دی تعریف دے دو وکھرے طریقے نیں۔ اسیں اک حُسنِ ترتیب والا سیٹ صاف صاف بنا کے تے اوہدی ترتیب دی قسم ویکھ کے، \emph{بناوٹ راہیں} عمل دی تعریف کر سکدے آں۔ یا بس بازگشت دیاں مساواتاں رکھ کے، \emph{بازگشت راہیں} تعریف کر سکدے آں۔ پر ٹھیک طرح کریے تاں حاصل اکّو اے۔ کیوں جے \olref[ordinals][ordtype]{thmOrdinalRepresentation} ضمانت دیندا اے کہ ایہ مساواتاں \emph{اکّو اک} ترتیبی عدد طے کردیاں نیں۔
+
+کئی طرحاں ترتیبی حساب، قدرتی عدداں دے جوڑ وانگ ای چلدا اے۔ مثلاً اسیں ایہ ثابت کر سکدے آں:
+
+\begin{lem}\ollabel{ordinaladditionisnice}
+جے $\alpha, \beta, \gamma$ ترتیبی عدد نیں، تاں:
+\begin{enumerate}
+	\item\ollabel{ordaddition1} جے $\beta < \gamma$ تاں $\alpha
+	\ordplus  \beta < \alpha \ordplus  \gamma$
+	\item\ollabel{ordaddition2} جے $\alpha \ordplus  \beta =
+	\alpha\ordplus \gamma$ تاں $\beta = \gamma$
+	\item\ollabel{ordaddition3} $\alpha \ordplus  (\beta \ordplus
+	\gamma) = (\alpha \ordplus  \beta) \ordplus  \gamma$، یعنی جوڑ شرکتیت رکھدا اے۔
+	\item\ollabel{ordaddition4} جے $\alpha \leq \beta$ تاں $\alpha
+	\ordplus  \gamma \leq \beta \ordplus \gamma$
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+اسیں \olref{ordaddition3} ثابت کردے آں تے باقی مشق لئی چھڈدے آں۔ ثبوت $\gamma$ اُتے سادہ لامتناہی درجیاں والے استقرا نال اے، \olref{ordadditionrecursion} ورت کے۔ جدوں $\gamma = 0$:
+\[
+(\alpha \ordplus  \beta) \ordplus  0 = \alpha \ordplus  \beta  = \alpha \ordplus  (\beta \ordplus  0)
+\]
+جدوں $\gamma = \delta\ordplus 1$، استقرا لئی منّ لو $(\alpha
+\ordplus  \beta) \ordplus  \delta = \alpha \ordplus  (\beta \ordplus
+\delta)$۔ ہُن \olref{ordadditionrecursion} تِنّ وار ورت کے:
+\begin{align*}
+	(\alpha \ordplus  \beta) \ordplus  (\delta \ordplus  1) & = ((\alpha \ordplus  \beta) \ordplus  \delta)\ordplus 1\\
+	& = (\alpha \ordplus  (\beta \ordplus  \delta)) \ordplus  1\\
+	& = \alpha \ordplus  ((\beta \ordplus  \delta)\ordplus 1)\\
+	& = \alpha \ordplus  (\beta \ordplus  (\delta\ordplus 1))
+\end{align*}
+جدوں $\gamma$ حدّی ترتیبی عدد اے، استقرا لئی منّ لو کہ جے $\delta \in \gamma$ تاں $(\alpha \ordplus  \beta) \ordplus  \delta =
+\alpha \ordplus  (\beta \ordplus  \delta)$۔ ہُن:
+\begin{align*}
+	(\alpha \ordplus  \beta) \ordplus  \gamma & = \supstrict_{\delta < \gamma}((\alpha \ordplus  \beta) \ordplus  \delta) \\
+	&= \supstrict_{\delta < \gamma}(\alpha \ordplus  (\beta \ordplus  \delta))\\
+	&= \alpha \ordplus  \supstrict_{\delta < \gamma}(\beta \ordplus  \delta)\\
+	& = \alpha \ordplus  (\beta \ordplus  \gamma)
+\end{align*}
+\end{proof}
+
+\begin{prob}
+\olref[sth][ord-arithmetic][add]{ordinaladditionisnice} دا باقی حصہ ثابت کرو۔
+\end{prob}
+
+ایہناں طرحاں ترتیبی جوڑ تہانوں بڑا جانیا پچھانیا لگنا چاہیدا اے۔ پر اک بہت ضروری گل وچ ترتیبی جوڑ قدرتی عدداں دے جوڑ ورگا \emph{نہیں} اے۔
+
+\begin{prop}\ollabel{ordsumnotcommute}
+ترتیبی جوڑ {تبادلی نہیں} اے۔ $1 \ordplus  \omega = \omega <
+\omega \ordplus  1$۔
+\end{prop}
+
+\begin{proof}
+دھیان دیو کہ $1 \ordplus  \omega = \supstrict_{n < \omega} (1 \ordplus n)
+= \omega \in \omega \cup \{\omega\} = \ordsucc{\omega} = \omega
+\ordplus  1$۔
+\end{proof}
+\noindent
+بھاویں پہلی واری ایہ گل حیران کرے، \emph{ایہ گل حیرانی والی نہیں ہونی چاہیدی}۔ اک پاسے، جدوں تسی $1 \ordplus  \omega$ ویکھدے او، تسی اوہ ترتیب دی قسم سوچدے او جیہڑی سارے قدرتی عدداں توں \emph{پہلاں} اک ہور رکن رکھن نال ملدی اے۔ \olref[sfr][infinite][hilbert]{sec} وچ ہلبرٹ دے ہوٹل والی دلیل وانگ سوچیے، تاں سہج سمجھ مطابق ایس وادھو پہلے رکن نال پوری ترتیب دی قسم نوں کوئی فرق نہیں پینا چاہیدا۔ دوجے پاسے، جدوں تسی $\omega \ordplus  1$ ویکھدے او، تسی اوہ ترتیب دی قسم سوچدے او جیہڑی سارے قدرتی عدداں توں \emph{پچھوں} اک ہور رکن رکھن نال ملدی اے۔ تے ایہ بالکل وکھری گل اے!
+
+\end{document}

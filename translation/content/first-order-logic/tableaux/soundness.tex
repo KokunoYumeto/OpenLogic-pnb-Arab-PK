@@ -1,0 +1,254 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: soundness.tex
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{sou}}
+      {\olfileid{pl}{tab}{sou}}
+      
+\olsection{صحت مندی (Soundness)}
+
+\begin{explain}
+!!^a{derivation} نظام، جیویں تابلو، \emph{صحت مند (sound)} اے جے اوہ
+اوہ گلاں !!{derive} نہیں کر سکدا جیہڑیاں اصل وچ قائم نہیں۔ ایس لئی
+صحت مندی !!{derivation} نظاماں دی ضمانت شدہ حفاظتی خاصیت دی اک قسم اے۔
+جیہڑی ثبوتی-نظریاتی خاصیت دی گل ہو رہی ہووے، اوہدے مطابق اسیں، مثال
+لئی، ایہ جاننا چاہندے آں کہ
+\begin{enumerate}
+\item ہر !!{derivable}~$!A$، \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے؛
+\item جے کوئی !!a{sentence} کجھ ہور جملیاں توں !!{derivable} اے، تاں اوہ
+  اوہناں دا منطقی نتیجہ وی اے؛
+\item جے !!{sentence}s دا اک سیٹ متضاد اے، تاں اوہ پورا ہون جوگ نہیں۔
+\end{enumerate}
+ایہ !!a{derivation} نظام دیاں اہم خاصیتاں نیں۔ جے ایہناں وچوں کوئی
+وی خاصیت قائم نہ ہووے، تاں !!{derivation} نظام ناقص اے---اوہ لوڑ
+توں ودھ !!{derive} کرے گا۔ ایس کرکے !!a{derivation} نظام دی صحت
+مندی قائم کرنا نہایت ضروری اے۔
+
+چونکہ ایہ ساریاں ثبوتی-نظریاتی خاصیتاں کسے نہ کسے قسم دے بند
+!!{tableau}s راہیں تعریف کیتیاں گئیاں نیں، ایس لئی اُپرلے (1)--(3)
+ثابت کرن لئی بند !!{tableau}s دیاں معنوی خاصیتاں بارے کجھ ثابت کرنا
+پیندا اے۔ اسیں پہلے تعریف کراں گے کہ کسے ساخت وچ !!a{signed
+  formula} دے پورا ہون دا کی مطلب اے، تے فیر وکھاواں گے کہ جے کوئی
+!!{tableau} بند ہووے تاں کوئی وی ساخت اوہدے سارے مفروضیاں نوں پورا
+نہیں کردی۔ (1)--(3) فیر ایس نتیجے دے ذیلی قضیاں دے طور تے نکلن گے۔
+\end{explain}
+
+\begin{defn}
+\iftag{FOL}{!!^a{structure}}{!!^a{valuation}}~$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+!!a{signed formula} $\sFmla{\True}{!A}$ نوں \emph{پورا کردی اے (satisfies)}
+اُدوں تے صرف اُدوں جدوں
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$؛ تے اوہ
+$\sFmla{\False}{!A}$ نوں اُدوں تے صرف اُدوں پورا کردی اے جدوں
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$۔ $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+!!{signed formula}s دے سیٹ~$\Gamma$ نوں اُدوں تے صرف اُدوں پورا
+کردی اے جدوں ہر $\sFmla{S}{!A} \in \Gamma$ نوں پورا کردی اے۔
+$\Gamma$، \emph{پورا ہون جوگ (satisfiable)} اے جے کوئی
+\iftag{FOL}{!!a{structure}}{!!a{valuation}} اوہنوں پورا کردی ہووے،
+ورنہ اوہ \emph{پورا ہون جوگ نہیں (unsatisfiable)}۔
+\end{defn}
+
+\begin{thm}[صحت مندی (Soundness)]
+  \ollabel{thm:tableau-soundness}
+  جے $\Gamma$ لئی اک بند !!{tableau} اے، تاں $\Gamma$ پورا ہون جوگ نہیں۔
+\end{thm}
+
+\begin{proof}
+اک !!a{tableau} دی شاخ نوں پورا ہون جوگ آکھاں گے اُدوں تے صرف اُدوں
+جدوں اوس اُتے موجود !!{signed formula}s دا سیٹ پورا ہون جوگ ہووے؛
+تے !!a{tableau} نوں پورا ہون جوگ آکھاں گے جے اوہدے وچ گھٹّو گھٹ
+اک پورا ہون جوگ شاخ ہووے۔
+
+اسیں ہِٹھلی گل وکھاندے آں: پورا ہون جوگ !!{tableau} نوں استنباط دے
+کسے وی اک قاعدے نال ودھاؤن دا نتیجہ ہمیشہ اک پورا ہون جوگ
+!!{tableau} ہوندا اے۔ ایس نال قضیہ ثابت ہو جاوے گا: ہر بند
+!!{tableau}، صرف~$\Gamma$ دے مفروضیاں اُتے مشتمل ابتدائی
+!!{tableau} اُتے استنباط دے قاعدے لا کے بندا اے۔ سو جے $\Gamma$
+پورا ہون جوگ ہوندا، تاں اوہدے لئی ہر !!{tableau} وی پورا ہون جوگ
+ہوندا۔ پر بند !!{tableau} صاف طور تے پورا ہون جوگ نہیں: ہر شاخ
+وچ $\sFmla{\True}{!A}$ تے $\sFmla{\False}{!A}$ دونیں ہوندے نیں،
+تے کسے ساخت لئی ایہ ممکن نہیں کہ اوہ اکّو ویلے~$!A$ نوں پورا
+وی کرے تے نہ وی کرے۔
+
+فرض کرو ساڈے کول اک پورا ہون جوگ !!{tableau} اے، یعنی ایہو جہا
+!!a{tableau} جیہدے وچ گھٹّو گھٹ اک پورا ہون جوگ شاخ اے۔ استنباط دا
+قاعدہ لاون نال یا تاں کسے شاخ وچ !!{signed formula}s شامل ہوندے
+نیں، یا اوہ شاخ دو حصیاں وچ ونڈدی اے۔ جے !!{tableau} دی کوئی
+پورا ہون جوگ شاخ ایس قاعدے دی ورتوں نال ودھائی نہیں گئی، تاں اوہ
+ودھے ہوئے !!{tableau} وچ وی پورا ہون جوگ رہندی اے؛ ایس لئی ودھیا
+ہویا تابلو پورا ہون جوگ اے۔ سو سانوں صرف اوہ صورت ویکھنی اے جتھے
+قاعدہ اک پورا ہون جوگ شاخ اُتے لاگو ہوندا اے۔
+
+منّ لو $\Gamma$ اوس شاخ دے !!{signed formula}s دا سیٹ اے، تے
+$\sFmla{S}{!A} \in \Gamma$ اوہ !!{signed formula} اے جیہدے اُتے
+قاعدہ لاگو ہوندا اے۔ جے قاعدہ شاخ نوں نہیں ونڈدا، تاں سانوں
+وکھانا اے کہ ودھی ہوئی شاخ، یعنی $\Gamma$ نال قاعدے دے نتیجے
+جوڑ کے، ہن وی پورا ہون جوگ اے۔ جے قاعدہ شاخ نوں ونڈدا اے، تاں
+سانوں وکھانا اے کہ بنیاں دو شاخاں وچوں گھٹّو گھٹ اک پورا ہون جوگ اے۔
+
+پہلے اسیں اوہ ممکن استنباط ویکھدے آں جیہڑے شاخ نوں نہیں ونڈدے۔
+\begin{enumerate}
+\item $\TRule{\True}{\lnot}$ نوں
+  $\sFmla{\True}{\lnot !B} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے۔ فیر ودھی ہوئی
+  شاخ وچ $\Gamma \cup \{\sFmla{\False}{!B}\}$ دے !!{signed formula}s
+  ہوندے نیں۔ فرض کرو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$۔ خاص طور تے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !B}$۔ ایس لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$، یعنی
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$،
+  $\sFmla{\False}{!B}$ نوں پورا کردی اے۔
+\item $\TRule{\False}{\lnot}$ نوں
+  $\sFmla{\False}{\lnot !B} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔
+\item $\TRule{\True}{\land}$ نوں
+  $\sFmla{\True}{!B \land !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے، جیہدے نال
+  شاخ اُتے دو نویں !!{signed formula}s آ جاندے نیں:
+  $\sFmla{\True}{!B}$ تے $\sFmla{\True}{!C}$۔ فرض کرو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، خاص طور تے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B \land !C}$۔ فیر
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ تے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ ایس دا مطلب اے کہ
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ دوناں
+  $\sFmla{\True}{!B}$ تے $\sFmla{\True}{!C}$ نوں پورا کردی اے۔
+\item $\TRule{\False}{\lor}$ نوں
+  $\sFmla{\False}{!B \lor !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔
+\item $\TRule{\False}{\lif}$ نوں
+  $\sFmla{\False}{!B \lif !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: ایس نال شاخ
+  اُتے دو نویں !!{signed formula}s، $\sFmla{\True}{!B}$ تے
+  $\sFmla{\False}{!C}$، آ جاندے نیں۔ فرض کرو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، خاص طور تے
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B \lif !C}$۔ فیر
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ تے
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ ایس دا مطلب اے کہ
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ دوناں
+  $\sFmla{\True}{!B}$ تے $\sFmla{\False}{!C}$ نوں پورا کردی اے۔
+
+% PNBTAB-013: five B(x) occurrences in the FOL universal cases are corrected to A(x); see the source-correction analysis.
+\iftag{FOL}{%
+\item $\TRule{\True}{\lforall}$ نوں
+  $\sFmla{\True}{\lforall[x][!A(x)]} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: ایس نال
+  شاخ اُتے نواں !!{signed formula}~$\sFmla{\True}{!A(t)}$ آ جاندا
+  اے۔ فرض کرو $\Sat{M}{\Gamma}$، خاص طور تے
+  $\Sat{M}{\lforall[x][!A(x)]}$۔
+  \olref[syn][sem]{prop:quant-terms} مطابق $\Sat{M}{!A(t)}$۔
+  ایس لئی $\Struct{M}$، $\sFmla{\True}{!A(t)}$ نوں پورا کردی اے۔
+
+\item $\TRule{\False}{\lforall}$ نوں
+  $\sFmla{\False}{\lforall[x][!A(x)]} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: ایس نال
+  نواں !!{signed formula}~$\sFmla{\False}{!A(a)}$ آ جاندا اے،
+  جتھے $a$ اک !!a{constant} اے جیہڑا~$\Gamma$ وچ نہیں آؤندا۔
+  چونکہ $\Gamma$ پورا ہون جوگ اے، کوئی ساخت~$\Struct{M}$ موجود اے
+  جیہدے لئی $\Sat{M}{\Gamma}$، خاص طور تے
+  $\Sat/{M}{\lforall[x][!A(x)]}$۔ سانوں وکھانا اے کہ
+  $\Gamma \cup \{\sFmla{\False}{!A(a)}\}$ پورا ہون جوگ اے۔
+  ایس لئی اسیں مناسب ساخت~$\Struct{M'}$ ایویں تعریف کردے آں۔
+
+  \olref[syn][ass]{prop:sat-quant} مطابق
+  $\Sat/{M}{\lforall[x][!A(x)]}$ اُدوں تے صرف اُدوں جدوں کسے
+  متغیر تعیّن~$s$ لئی $\Sat/{M}{!A(x)}[s]$۔ ہن $\Struct{M'}$
+  نوں $\Struct{M}$ ورگی ساخت لو، سوائے ایس دے کہ
+  $\Assign{a}{M'} = s(x)$۔
+  \olref[syn][ext]{cor:extensionality-sent} مطابق ہر
+  $\sFmla{\True}{!C} \in \Gamma$ لئی $\Sat{M'}{!C}$، تے ہر
+  $\sFmla{\False}{!C} \in \Gamma$ لئی $\Sat/{M'}{!C}$، کیوں جے
+  $a$،~$\Gamma$ وچ نہیں آؤندا۔
+
+  \olref[syn][ext]{prop:extensionality} مطابق
+  $\Sat/{M'}{!A(x)}[s]$۔
+  \olref[syn][ext]{prop:ext-formulas} مطابق
+  $\Sat/{M'}{!A(a)}[s]$۔ چونکہ $!A(a)$ اک !!a{sentence} اے،
+  \olref[syn][ass]{prop:sentence-sat-true} مطابق
+  $\Sat/{M'}{!A(a)}$؛ یعنی $\Struct{M'}$،
+  $\sFmla{\False}{!A(a)}$ نوں پورا کردی اے۔
+\item $\TRule{\True}{\lexists}$ نوں
+  $\sFmla{\True}{\lexists[x][!B(x)]} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔
+\item $\TRule{\False}{\lexists}$ نوں
+  $\sFmla{\False}{\lexists[x][!B(x)]} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔}{}
+\end{enumerate}
+ہن شاخ نوں ونڈن والے ممکن استنباط ویکھدے آں۔
+\begin{enumerate}
+\item $\TRule{\False}{\land}$ نوں
+  $\sFmla{\False}{!B \land !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے۔ ایہدے نال
+  دو شاخاں بندیاں نیں: کھبّی شاخ $\sFmla{\False}{!B}$ راہیں اگے
+  ودھدی اے، تے سجّی $\sFmla{\False}{!C}$ راہیں۔ فرض کرو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، خاص طور تے
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B \land !C}$۔ فیر
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$ یا
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ پہلی صورت وچ
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$،
+  $\sFmla{\False}{!B}$ نوں پورا کردی اے، یعنی
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ کھبّی شاخ دے
+  سارے فارمولیاں نوں پورا کردی اے۔ دوجی صورت وچ
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$،
+  $\sFmla{\False}{!C}$ نوں پورا کردی اے، یعنی
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ سجّی شاخ دے
+  سارے فارمولیاں نوں پورا کردی اے۔
+\item $\TRule{\True}{\lor}$ نوں
+  $\sFmla{\True}{!B \lor !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔
+\item $\TRule{\True}{\lif}$ نوں
+  $\sFmla{\True}{!B \lif !C} \in \Gamma$ اُتے لا کے شاخ ودھائی جاندی اے: مشق۔
+\item شاخ \Cut{} لا کے ودھائی جاندی اے: ایس نال دو شاخاں بندیاں
+  نیں، اک وچ $\sFmla{\True}{!B}$ تے دوجی وچ
+  $\sFmla{\False}{!B}$۔ چونکہ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ تے یا تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ یا
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$، ایس لئی
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ کھبّی یا سجّی شاخ
+  وچوں اک نوں پورا کردی اے۔
+\end{enumerate}
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][tab][sou]{thm:tableau-soundness} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][tab][sou]{thm:tableau-soundness} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$ \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے۔
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+\end{cor}
+
+\begin{proof}
+  جے $\Gamma \Proves !A$، تاں کجھ $!B_1$، \dots، $!B_n \in
+  \Gamma$ ایہو جہے نیں کہ
+  $\{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots,
+  \sFmla{\True}{!B_n}\}$ لئی اک بند !!{tableau} اے۔
+  \olref{thm:tableau-soundness} مطابق ہر
+  \iftag{FOL}{!!{structure}}{!!{valuation}}~$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+  یا تاں کسے $!B_i$ نوں کاذب بناندی اے یا $!A$ نوں صادق۔
+  ایس لئی جے $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ وی۔
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+جے $\Gamma$ پورا ہون جوگ اے، تاں ایہ بے تضاد اے۔
+\end{cor}
+
+\begin{proof}
+اسیں متقابلِ عکس ثابت کردے آں۔ فرض کرو $\Gamma$ بے تضاد نہیں۔
+فیر کجھ $!B_1$، \dots، $!B_n \in \Gamma$ نیں تے
+$\{\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}$ لئی
+اک بند !!{tableau} اے۔ \olref{thm:tableau-soundness} مطابق کوئی
+$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ایہو جہی نہیں کہ
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B_i}$ ہر
+$i=1$، \dots،~$n$ لئی قائم ہووے۔ پر ایس دا
+مطلب اے کہ $\Gamma$ پورا ہون جوگ نہیں۔
+\end{proof}
+
+\end{document}

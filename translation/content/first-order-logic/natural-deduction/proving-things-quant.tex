@@ -1,0 +1,261 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{prq}
+
+\olsection{مسوّراں نال \usetoken{P}{derivation}}
+
+\begin{ex}
+مسوّراں نال کم کردے ہوئیاں اسیں دھیان رکھنا اے کہ ایگن متغیر
+دی شرط نہ ٹُٹے۔ کدی کدی ایس لئی کجھ استنباط لاون دی ترتیب نوں
+بدل کے ویکھنا پیندا اے۔ عام طور اُتے پہلے اوہ قاعدے سنبھالن نال
+مدد ملدی اے جیہڑے ایگن متغیر دی شرط دے تابع نیں؛ مکمل ثبوت وچ
+اوہ ہِٹھلے پاسے ہون گے۔
+
+آؤ ویکھئیے کہ !!{formula}
+$\lexists[x][\lnot !A(x)] \lif \lnot \lforall[x][!A(x)]$
+دا !!a{derivation} کیویں دیاں گے۔ معمول وانگ، شروع وچ اسیں ایہ
+لکھدے آں:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$\lexists[x][\lnot !A(x)]\lif \lnot \lforall[x][!A(x)]$}
+\end{prooftree}
+فیر اسیں لکھدے آں کہ آخری قدم نوں \Intro{\lif} دے قاعدے نال
+جائز ٹھہراون لئی کیہ چاہیدا اے:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lexists[x][\lnot !A(x)]}{1}$}
+\DeduceC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$\lexists[x][\lnot !A(x)]\lif \lnot \lforall[x][!A(x)]$}
+\end{prooftree}
+کیوں جے $\lnot \lforall[x][!A(x)]$ اُتے لاون لئی کوئی صاف
+ظاہر قاعدہ نہیں لبھدا، اسیں !!{derivation} نوں ایس طرح ترتیب
+دیواں گے کہ \Elim{\lexists} دا قاعدہ ورت سکئیے۔ اتھے ایگن
+متغیر دی شرط دھیان وچ رکھنی اے، تے ایہو جیہا مستقل چننا اے جیہڑا
+% PNBNTD-006: the source cites existential A, but its major premise is existential not-A.
+$\lexists[x][\lnot !A(x)]$ وچ یا اوہناں مفروضیاں وچ نہ آوے
+جنہاں اُتے ایہ اخذ نربھر اے۔ (پر اتھے کوئی !!{constant}s آؤندے
+ہی نہیں، ایس لئی کوئی وی انتخاب ٹھیک اے۔)
+\begin{prooftree}
+\AxiomC{$\Discharge{\lexists[x][\lnot !A(x)]}{1}$}
+\AxiomC{$\Discharge{\lnot !A(a)}{2}$}
+\DeduceC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Elim{\lexists}}{2}
+\BinaryInfC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$\lexists[x][\lnot !A(x)] \lif \lnot \lforall[x][!A(x)]$}
+\end{prooftree}
+$\lnot \lforall[x][!A(x)]$ اخذ کرن لئی اسیں \Intro{\lnot}
+دا قاعدہ آزماواں گے: ایس لئی اک تضاد اخذ کرنا ہووے گا، ممکن اے
+کہ $\lforall[x][!A(x)]$ نوں وادھو مفروضہ بنا کے۔ ظاہر اے، ایس
+تضاد وچ مفروضہ $\lnot !A(a)$ وی کم آ سکدا اے، جیہڑا
+\Elim{\lexists} دے استنباط نال خارج ہووے گا۔ اسیں ایہدا روپ
+ایویں بنا سکدے آں:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lexists[x][\lnot !A(x)]}{1}$}
+\AxiomC{$\Discharge{\lnot !A(a)}{2}, \Discharge{\lforall[x][!A(x)]}{3}$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{3}
+\UnaryInfC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Elim{\lexists}}{2}
+\BinaryInfC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$\lexists[x][\lnot !A(x)]\lif \lnot \lforall[x][!A(x)]$}
+\end{prooftree}
+لگدا اے کہ ہن اسیں تضاد دے نیڑے آ گئے آں۔ لاون لئی سب توں
+سوکھا قاعدہ \Elim{\lforall} اے، جیہدے نال ایگن متغیر دی
+کوئی شرط نہیں۔ کلی مسوّر والے~$x$ دی تھاں اسیں کوئی وی بند ٹرم
+رکھ سکدے آں؛ ایس لئی تضاد تک پہنچن واسطے اوہی مستقل~$a$
+ورتنا سب توں مناسب اے۔
+% PNBNTD-007: source says "any term"; the governing universal-elimination rule requires a closed term.
+\begin{prooftree}
+\AxiomC{$\Discharge{\lexists[x][\lnot !A(x)]}{1}$}
+\AxiomC{$\Discharge{\lnot !A(a)}{2}$}
+\AxiomC{$\Discharge{\lforall[x][!A(x)]}{3}$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(a)$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{3}
+\UnaryInfC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Elim{\lexists}}{2}
+\BinaryInfC{$\lnot \lforall[x][!A(x)]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$\lexists[x][\lnot !A(x)]\lif \lnot \lforall[x][!A(x)]$}
+\end{prooftree}
+
+خاص کر مسوّراں نال کم کردے ہوئیاں، ایس مرحلے اُتے دُوبارہ جانچنا
+ضروری اے کہ ایگن متغیر دی شرط نہیں ٹُٹی۔ اسیں جیہڑا واحد قاعدہ
+ایگن متغیر دی شرط دے تابع لایا، اوہ \Elim{\exists} سی؛ تے
+ایگن متغیر~$a$ کسے وی اوہ مفروضے وچ نہیں آؤندا جیہدے
+اُتے ایہ اخذ نربھر اے۔ ایس لئی ایہ درست !!{derivation} اے۔
+\end{ex}
+
+\begin{ex}
+کدی اسیں ہور !!{formula}s توں !!a{formula} اخذ کردے آں۔
+ایہناں صورتاں وچ کجھ مفروضے خارج نہ ہوئے وی رہ سکدے نیں۔
+ساڈے لئی مفروضیاں تے آخری مقصد، دونیں دا حساب رکھنا ضروری اے۔
+
+آؤ ویکھئیے کہ !!{formula} $\lexists[x][!C(x,b)]$ دا
+!!a{derivation} مفروضیاں $\lexists[x][(!A(x)
+\land !B(x))]$ تے $\lforall[x][(!B(x) \lif !C(x,b))]$
+توں کیویں دیاں گے۔ معمول وانگ شروع کر کے نتیجہ سب توں ہِٹھ
+لکھدے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$\lexists[x][!C(x,b)]$}
+\end{prooftree}
+
+ساڈے کول ورتن لئی دو مقدمے نیں۔ پہلے مقدمے نوں ورتن لئی، یعنی
+$\lexists[x][!C(x, b)]$ دا !!a{derivation}
+$\lexists[x][(!A(x) \land !B(x))]$ توں لبھن دی کوشش
+وچ، اسیں \Elim{\lexists} دا قاعدہ ورتاں گے۔ ایس قاعدے اُتے
+ایگن متغیر دی شرط لگدی اے، ایس لئی اسیں ایہ قاعدہ پہلے
+لاواں گے۔ نتیجہ ایہ اے:
+\begin{prooftree}
+\AxiomC{$\lexists[x][(!A(x) \land !B(x))]$}
+\AxiomC{$\Discharge{!A(a) \land !B(a)}{1}$}
+\DeduceC{$\lexists[x][!C(x,b)]$}
+\DischargeRule{\Elim{\lexists}}{1}
+\BinaryInfC{$\lexists[x][!C(x,b)]$}
+\end{prooftree}
+اسیں جنہاں دو مفروضیاں نال کم کر رہے آں، اوہناں وچ~$!B$
+سانجھا اے۔ ایس ویلے $!B(a)$ نوں وکھ کرن لئی \Elim{\land}
+لاونا فائدہ مند ہو سکدا اے۔
+\begin{prooftree}
+% PNBNTD-008: source intermediate tree reverses the final conjunction parenthesis and argument bracket.
+\AxiomC{$\lexists[x][(!A(x) \land !B(x))]$}
+\AxiomC{$\Discharge{!A(a) 
+\land !B(a)}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!B(a)$}
+\DeduceC{$\lexists[x][!C(x,b)]$}
+\DischargeRule{\Elim{\lexists}}{1}
+\BinaryInfC{$\lexists[x][!C(x,b)]$}
+\end{prooftree}
+
+ساڈا دوجا مفروضہ~$\lforall[x][(!B(x) \lif
+  !C(x,b))]$ اے۔ اتھے ایگن متغیر دی شرط نہیں، سو اسیں
+\Elim{\lforall} لا کے $x$ دی تھاں !!{constant}~$a$ رکھ سکدے
+آں؛ ایس نال $!B(a) \lif !C(a, b)$ ملدا اے۔ ہن ساڈے کول
+$!B(a) \lif !C(a,b)$ تے $!B(a)$، دونیں نیں۔ اگلا قدم
+\Elim{\lif} دے قاعدے دی سیدھی ورتوں ہونا چاہیدا اے۔
+\begin{prooftree}
+\AxiomC{$\lexists[x][(!A(x) \land !B(x))]$}
+\AxiomC{$\lforall[x][(!B(x) \lif !C(x,b))]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(a) \lif !C(a,b)$}
+\AxiomC{$\Discharge{!A(a) 
+\land !B(a)}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!B(a)$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C(a,b)$}
+\DeduceC{$\lexists[x][!C(x,b)]$}
+\DischargeRule{\Elim{\lexists}}{1}
+\insertBetweenHyps{\hspace{-5em}}
+\BinaryInfC{$\lexists[x][!C(x,b)]$}
+\end{prooftree}
+ہن منزل بہت نیڑے اے!{} \Intro{\lexists} دی اک ورتوں
+نال مقصد حاصل ہو جاندا اے۔
+\begin{prooftree}
+\AxiomC{$\lexists[x][(!A(x) \land !B(x))]$}
+\AxiomC{$\lforall[x][(!B(x) \lif !C(x,b))]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(a) \lif !C(a,b)$}
+\AxiomC{$\Discharge{!A(a) 
+\land !B(a)}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!B(a)$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C(a,b)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!C(x,b)]$}
+\DischargeRule{\Elim{\lexists}}{1}
+\insertBetweenHyps{\hspace{-5em}}
+\BinaryInfC{$\lexists[x][!C(x,b)]$}
+\end{prooftree}
+ہر قدم اُتے اسیں ایگن متغیر دی شرط نہ ٹُٹن دی جانچ کیتی،
+ایس لئی اسیں بھروسے نال آکھ سکدے آں کہ ایہ درست
+!!{derivation} اے۔
+\end{ex}
+
+\begin{ex}
+!!{formula} $\lnot\lforall[x][!A(x)]$ دا !!a{derivation}
+مفروضیاں $\lforall[x][!A(x)] 
+\lif \lexists[y][!B(y)]$ تے $\lnot\lexists[y][!B(y)]$
+توں دیو۔ معمول وانگ اسیں مطلوبہ !!{formula}
+سب توں ہِٹھ لکھدے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$\lnot\lforall[x][!A(x)]$}
+\end{prooftree}
+!!{derivation} دی آخری سطر اک نفی اے، سو آؤ
+\Intro{\lnot} آزما کے ویکھئیے۔ ایس لئی سانوں لبھنا ہووے گا
+کہ تضاد کیویں !!{derive} کیتا جاوے۔
+\begin{prooftree}
+\AxiomC{$\Discharge{\lforall[x][!A(x)]}{1}$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot\lforall[x][!A(x)]$}
+\end{prooftree}
+ہن تک ٹھیک اے۔ اسیں \Elim{\lforall} لا سکدے آں، پر ایہ
+صاف نہیں کہ ایس نال ساڈے مقصد تک پہنچن وچ مدد ملے گی۔ ایس دی
+تھاں اپنا اک مفروضہ ورتدے آں۔ $\lforall[x][!A(x)] \lif
+\lexists[y][!B(y)]$ نوں $\lforall[x][!A(x)]$ نال ملا کے
+اسیں \Elim{\lif} دا قاعدہ لا سکدے آں۔
+\begin{prooftree}
+\AxiomC{$\lforall[x][!A(x)] \lif \lexists[y][!B(y)]$}
+\AxiomC{$\Discharge{\lforall[x][!A(x)]}{1}$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$\lexists[y][!B(y)]$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot\lforall[x][!A(x)]$}
+\end{prooftree}
+ہن اک آخری مفروضہ ورتنا رہ گیا اے، تے لگدا اے کہ
+\Elim{\lnot} لا کے ایہ سانوں تضاد تک پہنچا دے گا۔
+\begin{prooftree}
+\AxiomC{$\lnot\lexists[y][!B(y)]$}
+\AxiomC{$\lforall[x][!A(x)] \lif \lexists[y][!B(y)]$}
+\AxiomC{$\Discharge{\lforall[x][!A(x)]}{1}$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$\lexists[y][!B(y)]$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot\lforall[x][!A(x)]$}
+\end{prooftree}
+\end{ex}
+
+\begin{prob}
+ہِٹھ لکھیاں گلّاں وکھاؤن والے !!{derivation}s دیو:
+\begin{enumerate}
+\item $\Proves (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) \lif
+\lforall[z][(!A(z) \land !B(z))]$.
+\item $\Proves (\lexists[x][!A(x)] \lor \lexists[y][!B(y)]) \lif
+\lexists[z][(!A(z) \lor !B(z))]$.
+\item $\lforall[x][(!A(x) \lif !B)] \Proves \lexists[y][!A(y)] \lif !B$.
+\item $\lforall[x][\lnot !A(x)] \Proves \lnot\lexists[x][!A(x)]$.
+\item $\Proves \lnot\lexists[x][!A(x)] \lif \lforall[x][\lnot !A(x)]$.
+\item $\Proves \lnot\lexists[x][\lforall[y][((!A(x,y) \lif \lnot
+!A(y,y)) \land (\lnot !A(y,y) \lif !A(x,y)))]]$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھ لکھیاں گلّاں وکھاؤن والے !!{derivation}s دیو:
+\begin{enumerate}
+\item $\Proves \lnot\lforall[x][!A(x)] \lif \lexists[x][\lnot!A(x)]$.
+\item $(\lforall[x][!A(x)] \lif !B) \Proves \lexists[y][(!A(y) \lif !B)]$.
+\item $\Proves \lexists[x][(!A(x) \lif \lforall[y][!A(y)])]$.
+\end{enumerate}
+(ایہناں ساریاں لئی $\FalseCl$~دا قاعدہ ضروری اے۔)
+\end{prob}
+
+\end{document}

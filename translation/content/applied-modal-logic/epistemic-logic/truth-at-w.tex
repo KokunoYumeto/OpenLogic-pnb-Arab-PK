@@ -1,0 +1,116 @@
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: truth-at-w
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{trw}
+
+\olsection{کسے جہان اُتے سچائی}
+
+معیاری امکانی منطق وانگ، علم دا ہر نمونہ طے کردا اے کہ اوہدے
+کہڑے جہاناں اُتے کہڑے !!{formula}s سچ نیں۔ تعلقی معنیات دی بنیادی
+گل لئی اسیں اوہی لکھت ورتدے آں، «نمونہ $\mModel{M}$، !!{formula}~$!A$
+نوں جہان~$w$ اُتے سچ کردا اے»۔ ایہ تعلق استقرا نال متعین ہوندا اے تے
+سارے غیر امکانی عاملاں لئی معیاری امکانی منطق والا ای اے۔
+
+\begin{defn}\ollabel{defn:mmodels}
+  \emph{!!a{formula}~$!A$ دا~$w$ اُتے سچ ہونا}، نمونے~$\mModel M$
+  وچ، نشانیاں وچ $\mSat{M}{!A}[w]$، استقرا نال ایویں متعین ہوندا اے:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{کدی نہیں کہ $\mSat{M}{\lfalse}[w]$}۔}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{ہمیشہ $\mSat{M}{\ltrue}[w]$}۔}{}
+  \item $\mSat{M}{p}[w]$ اُدوں تے صرف اُدوں جدوں $w \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے
+    صرف اُدوں جدوں $\mSat/{M}{!B}[w]$}۔}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$}
+    (یا دونیں)۔}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$
+    دونیں ہون، یا نہ $\mSat{M}{!B}[w]$ ہووے تے نہ $\mSat{M}{!C}[w]$}۔}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Knows_a !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[w']$ ہر اوہ $w' \in W$ لئی ہووے جیہدے لئی $R_a ww'$}
+  \end{enumerate}
+\end{defn}
+
+پر ایتھے سانوں اپنے رسائی تعلقاں دیاں قیداں بارے سوچنا پئے گا۔
+آخر شق~\olref{defn:sub:mmodels-box} مطابق، !!a{formula}~$\Knows_a !B$
+~$w$ اُتے اوہدوں سچ اے جدوں کوئی~$w'$ ایسا نہیں جیہدے لئی $R_a ww'$۔
+ایہ شق معیاری امکانی منطق والی ای اے۔ جے کسے جہان توں اگے کوئی جہان
+نہیں، تاں سارے $\Box$ والے فارمولے اوتھے خالی شرط کر کے سچ نیں۔
+جے $\Knows$ نوں \emph{علم} دا نشان سمجھدے آں، تاں ایہ گل عام سمجھ
+دے بہت اُلٹ لگدی اے۔ آخر اسیں سمجھدے آں کہ ایہو جیہی \emph{کوئی}
+صورت نہیں جیہدے وچ فاعل نوں $!A$ تے $\lnot !A$ دونہاں دا پتا
+اکّو ویلے ہو سکدا اے۔
+
+اک حل ایہ اے کہ علم دی منطق وچ رسائی دا تعلق ہمیشہ
+\emph{انعکاسی} ہووے۔ ایہ موٹے طور اُتے ایس خیال نال میل کھاندا اے
+کہ اصلی جہان فاعل دی جانکاری نال میل کھاندا اے۔ عام طور اُتے علم
+دیاں منطقاں ایس 5 ورتدیاں نیں، پر دوجے کمزور نظام وی ورت سکدے نیں،
+ایس گل مطابق کہ $\Knows_a$ دا تعلق عین کیہڑی گل دا نشان بننا اے۔
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}}]{$w_1$}; 
+      \node[world] (w2) [label={[align=right]right:\mTrue{p}\\ \mTrue{q}},
+        above right=of w1]{$w_2$}; 
+      \node[world] (w3) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}},
+        below right=of w1] {$w_3$};
+      \draw[<->] (w1) to node {$a$} (w2);
+      \draw[->,loop left] (w1) to node {$a,b$} (w1);
+      \draw[<->] (w1) to [swap] node {$b$} (w3);
+      \draw[->,loop above] (w2) to node {$a,b$} (w2) ;
+      \draw[->,loop below] (w3) to node {$a,b$} (w3) ;
+    \end{tikzpicture}
+  \end{center}
+  \caption{علم دا اک سادہ نمونہ۔}
+  \ollabel{fig:simple}
+\end{figure}
+
+\begin{prob}
+  ویکھو ہِیٹھلیاں وچوں کہڑیاں گلاں
+  \olref[aml][el][trw]{fig:simple} وچ سچ نیں:
+  \begin{enumerate}
+    \item $\mSat{M}{\lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_a \lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_b \lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_b q \lor \Knows_b \lnot q}[w_2]$;
+    \item $\mSat{M}{\Knows_a( \Knows_b q \lor \Knows_b \lnot q)}[w_2]$;
+    \item $\mSat{M}{\EKnows_{\{a,b\}} \lnot q}[w_3]$;
+    \end{enumerate}
+\end{prob}
+
+کسے جہان اُتے سچائی دی بنیادی تعریف ہُن مل گئی اے۔ معیاری
+امکانی منطق دے ہور معنیاتی خیال، جیویں امکانی اعتبار تے استلزام،
+ایسے ای ایتھے آ جاندے نیں۔ اوہناں نوں عاملاں دی ایس نویں تعبیر
+اُتے لائی دا اے۔
+
+ہُن اسیں سانجھے علم دے عامل~$\CKnows_G$ لئی وی سچائی دیاں شرطاں
+دے سکدے آں۔ \olref[sfr][rel][ops]{sec} توں یاد کرو کہ
+\emph{تعدی تحت بندش}~$R^+$، تعلق~$R$ دی، ایویں متعین ہوندی اے:
+\begin{align*}
+  R^+ &= \bigcup_{ n \in \mathbb{N}} R^n,
+\intertext{جتھے}
+  R^0 & = R \text{ تے}\\
+  R^{n+1} & = \Setabs{\tuple{x, z}}{\exists y (R^n xy \land Ryz)}.
+\end{align*}
+فیر جتھے $G$ فاعلاں دی جماعت اے، اسیں $R_G = ( \bigcup_{b
+\in G} R_b )^+$ نوں سارے فاعلاں دے رسائی تعلقاں دے میل دی تعدی
+تحت بندش وجوں متعین کردے آں۔
+
+\begin{defn}
+جے $G' \subseteq G$، تاں $\mSat{M}{\CKnows_{G'} !A}[ w]$ اُدوں تے
+صرف اُدوں جدوں ہر اوہ $w'$ لئی جیہدے لئی $R_{G'} w w'$، ایہ ہووے
+کہ $\mSat{M}{!A}[w']$۔
+\end{defn}
+
+\end{document}

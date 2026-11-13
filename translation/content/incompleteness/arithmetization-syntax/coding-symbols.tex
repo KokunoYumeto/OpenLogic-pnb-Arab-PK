@@ -1,0 +1,121 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: coding-symbols
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{art}{cod}
+\olsection{علامتاں نوں کوڈ دینا}
+
+پہلے درجے دی منطق دی بنیادی زبان~$\Lang L$ ایہ علامتاں ورتدی اے:
+\[
+\lfalse \quad \lnot \quad \lor \quad \land \quad \lif \quad \lforall
+\quad \lexists \quad \eq \quad ( \quad ) \quad ,
+\]
+نال ایہ متغیراں تے !!{constant}s دے !!{enumerable} مجموعے،
+تے دلیلاں دی ہر ممکن تعداد لئی !!{function}s تے !!{predicate}s
+دے !!{enumerable} مجموعے وی ورتدی اے۔ اسیں ہر علامت نوں
+\emph{کوڈ} وجوں اک عدد ایس طرح دے سکدے آں کہ ہر علامت دا
+اپنا وکھرا کوڈ ہووے تے دو وکھریاں علامتاں دا کوڈ اکّو نہ ہووے۔
+ایہ ممکن اے، کیوں جے ساریاں علامتاں دا مجموعہ !!{enumerable}
+اے، تے ایس مجموعے تے قدرتی عدداں دے مجموعے وچ !!a{bijection}
+اے۔ پر اسیں ایہ وی یقینی بنانا چاہندے آں کہ کوڈ توں علامت تے
+اوہدے بارے کجھ معلومات (مثلاً !!a{function} دیاں دلیلاں دی
+تعداد) قابلِ حساب طریقے نال واپس لبھ سکّیے۔ ایہ کرن دے کئی
+طریقے نیں۔ ایتھے اسیں اک طریقہ دیندے آں جیہڑا بنیادی بازگشتی
+فنکشن ورتدا اے۔ (یاد رکھو کہ $\tuple{n_0, \dots, n_k}$ اوہ عدد
+اے جیہڑا $n_0$, \dots, $n_k$ دے سلسلے دا کوڈ اے۔)
+
+\begin{defn}
+جے $s$ زبان~$\Lang L$ دی اک علامت ہووے، تاں
+اوہدا \emph{علامتی کوڈ}~$\scode s$ اینج مقرر کردے آں:
+\begin{enumerate}
+\item جے $s$ منطقی علامتاں وچوں ہووے، تاں
+  $\scode s$ دی قدر ایہ جدول دندا اے:
+\[
+\begin{array}{cccccccccc}
+  \lfalse & \lnot & \lor & \land & \lif & \lforall \\
+\tuple{0, 0} & \tuple{0, 1} & \tuple{0, 2} & \tuple{0, 3} &
+\tuple{0, 4} & \tuple{0, 5} \\
+\lexists & \eq & ( & ) & ,\\
+\tuple{0, 6} & \tuple{0, 7} &
+\tuple{0, 8} & \tuple{0, 9} & \tuple{0, 10}
+\end{array}
+\]
+\item جے $s$، $i$-واں متغیر $\Obj v_i$ ہووے،
+  تاں $\scode s = \tuple{1, i}$۔
+\item جے $s$، $i$-واں !!{constant}~$\Obj c_i$
+  ہووے، تاں $\scode s = \tuple{2, i}$۔
+\item جے $s$، $i$-واں $n$-دلیلی
+  !!{function}~$\Obj f_i^n$ ہووے، تاں
+  $\scode s = \tuple{3, n, i}$۔
+\item جے $s$، $i$-واں $n$-دلیلی
+  !!{predicate}~$\Obj P_i^n$ ہووے، تاں
+  $\scode s = \tuple{4, n, i}$۔
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+ایہ تعلق بنیادی بازگشتی نیں:
+\begin{enumerate}
+\item $\fn{Fn}(x, n)$ اُدوں تے صرف اُدوں جدوں $x$،
+  $\Obj f^n_i$ دا کوڈ ہووے، کسے~$i$ لئی۔ سو $x$ اک $n$-دلیلی !!{function} دا کوڈ اے۔
+\item $\fn{Pred}(x, n)$ اُدوں تے صرف اُدوں جدوں $x$،
+  $\Obj P^n_i$ دا کوڈ ہووے، کسے~$i$ لئی، یا $x$، $\eq$ دا کوڈ ہووے تے $n = 2$۔ سو $x$ اک
+  $n$-دلیلی !!{predicate} دا کوڈ اے۔
+\end{enumerate}
+\end{prop}
+
+\begin{defn}
+جے $s_0, \dots, s_{n-1}$ علامتاں دا سلسلہ
+ہووے، تاں اوہدا \emph{گوڈل نمبر}
+$\tuple{\scode{s_0}, \dots, \scode{s_{n-1}}}$ اے۔
+\end{defn}
+
+\begin{explain}
+دھیان رکھو کہ \emph{کوڈ} تے \emph{گوڈل نمبر} وکھ وکھ
+چیزاں نیں۔ مثلاً متغیر~$\Obj v_5$ دا کوڈ~$\scode{\Obj
+  v_5} = \tuple{1, 5} = 2^2\cdot 3^6$ اے۔ پر متغیر~$\Obj v_5$
+نوں ٹرم وجوں ویکھیے تاں اوہ علامتاں دا اک سلسلہ وی اے، جیہدی
+لمبائی~$1$ اے۔ ایس \emph{گوڈل نمبر}~$\Gn{\Obj v_5}$ دی قدر،
+جدوں \emph{ٹرم}~$\Obj v_5$ دی گل ہووے، ایہ اے:
+$\tuple{\scode{\Obj v_5}} = 2^{\scode{\Obj
+    v_5} + 1} = 2^{2^2\cdot 3^6 + 1}$۔
+\end{explain}
+
+\begin{ex}
+یاد کرو کہ جے $k_0$, \dots, $k_{n-1}$
+عدداں دا سلسلہ ہووے، تاں اولی عدداں دیاں قوتاں
+والی کوڈکاری وچ سلسلے دا کوڈ
+$\tuple{k_0, \dots, k_{n-1}}$ ایہ اے:
+\[
+2^{k_0+1}\cdot3^{k_1+1}\cdot \dots \cdot p_{n-1}^{k_{n-1}+1},
+\]
+ایتھے $p_i$، $i$-واں اولی عدد اے
+(گنتی $p_0 = 2$ توں شروع ہوندی اے)۔
+سو مثلاً فارمولا $\eq[\Obj v_0][\Obj 0]$،
+یا ہور کھول کے ${\eq}(\Obj v_0,\Obj c_0)$،
+دا گوڈل نمبر ایہ اے:
+\[
+\tuple{\scode{\eq},\scode{(},\scode{\Obj v_0},\scode{,}, \scode{\Obj
+    c_0},\scode{)}}.
+\]
+ایتھے $\scode{\eq}$، $\tuple{0,7} = 2^{0+1}\cdot
+3^{7+1}$ اے، $\scode{\Obj v_0}$،
+$\tuple{1,0} = 2^{1+1}\cdot3^{0+1}$ اے،
+تے ایداں ہی اگے۔ ایس لئی $\Gn{=(\Obj v_0,\Obj c_0)}$
+ایہ بندا اے:
+\begin{multline*}
+2^{\scode{=} + 1}\cdot 3^{\scode{(}+1}\cdot 5^{\scode{\Obj v_0}+1}
+\cdot 7^{\scode{,} + 1} \cdot 11^{\scode{\Obj c_0}+1} \cdot
+13^{\scode{)}+1} = \\
+2^{2^1\cdot 3^8 + 1}\cdot 3^{2^1\cdot 3^9+1}\cdot 5^{2^2\cdot 3^1+1}
+\cdot 7^{2^1\cdot 3^{11} + 1} \cdot 11^{2^3\cdot3^1+1} \cdot
+13^{2^1\cdot3^{10}+1} = \\
+2^{13\,123}\cdot 3^{39\,367}\cdot 5^{13}\cdot 7^{354\,295}\cdot11^{25}\cdot13^{118\,099}.
+\end{multline*}
+\end{ex}
+
+\end{document}

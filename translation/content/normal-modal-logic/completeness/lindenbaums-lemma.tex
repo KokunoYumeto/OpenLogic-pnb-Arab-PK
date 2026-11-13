@@ -1,0 +1,77 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: lindenbaums-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{lin}
+
+\olsection{لنڈن باؤم دا معاون قضیہ}
+
+لنڈن باؤم دا معاون قضیہ ثابت کردا اے کہ !!{formula}s دا ہر $\Sigma$-بے تضاد سیٹ گھٹ توں گھٹ اک \emph{مکمل}
+$\Sigma$-بے تضاد سیٹ وچ شامل اے۔ کینونیکل نمونے دی ساڈی بناوٹ وکھاوے گی کہ ہر مکمل $\Sigma$-بے تضاد سیٹ~$\Delta$ لئی کینونیکل نمونے وچ اک ایسا جہان اے جتھے ~$\Delta$ دے سارے !!{formula}s تے صرف اوہو، سچے نیں۔ سو لنڈن باؤم دا معاون قضیہ پکا کردا اے کہ ہر $\Sigma$-بے تضاد سیٹ کینونیکل نمونے دے کسے جہان وچ سچا اے۔
+
+\begin{thm}[لنڈن باؤم دا معاون قضیہ]\ollabel{thm:lindenbaum}
+  جے $\Gamma$، $\Sigma$-بے تضاد اے، تاں اک مکمل
+  $\Sigma$-بے تضاد سیٹ $\Delta$ اے جیہڑا~$\Gamma$ نوں ودھاؤندا اے۔
+\end{thm}
+
+\begin{proof}
+منّ لو $!A_0$، $!A_1$، \dots{} زبان دے سارے فارمولیاں دی پوری فہرست اے (دہراؤ دی اجازت اے)۔ مثلاً $\Obj p_0$ توں فہرست شروع کرو، تے ہر مرحلے $n \ge 1$ اُتے لمبائی~$n$ والے اوہ سارے محدود گنتی دے فارمولے لکھو جیہناں وچ صرف $\Obj p_0$،
+\dots،~$\Obj p_n$ وچوں متغیر آؤندے نیں۔ اسیں !!{formula}s دے سیٹ $\Delta_n$،~$n$ اُتے استقرا نال متعین کردے آں، تے فیر $\Delta = \bigcup_n \Delta_n$ رکھدے آں۔ پہلاں $\Delta_0 = \Gamma$ رکھو۔ منّ لو $\Delta_n$ متعین ہو چکیا اے۔ $\Delta_{n+1}$ دی تعریف ایویں کردے آں۔
+\[
+\Delta_{n+1} =
+\begin{cases}
+  \Delta_n \cup \{!A_n\}, & \text{جے $\Delta_n \cup \{ !A_n\}$،
+    $\Sigma$-بے تضاد اے؛} \\
+  \Delta_n \cup \{ \lnot !A_n\}, & \text{ہور صورت وچ۔}
+\end{cases}
+\]
+ہُن $\Delta = \bigcup_{n=0}^\infty \Delta_n$ رکھو۔
+
+سانوں وکھاؤنا اے کہ ایس تعریف توں سچ مچ ایسا سیٹ $\Delta$ ملدا اے جیہدے وچ مطلوب خاصیتاں نیں، یعنی $\Gamma \subseteq \Delta$ تے
+$\Delta$ مکمل $\Sigma$-بے تضاد اے۔
+
+صاف اے کہ $\Gamma \subseteq \Delta$، کیوں جے $\Delta_0 \subseteq
+\Delta$ بناوٹ مطابق، تے $\Delta_0 = \Gamma$۔ اصل وچ $\Delta_n
+\subseteq \Delta$ ہر~$n$ لئی، کیوں جے $\Delta$ سارے~$\Delta_n$ دا اکٹھ اے۔ (بناوٹ دے ہر قدم وچ اسیں پہلاں بنے سیٹ وچ اک !!a{formula} پاؤندے آں، ایس لئی $\Delta_n \subseteq
+\Delta_{n+1}$۔ سو کیوں جے $\subseteq$ متعدی اے، ایس لئی $\Delta_n \subseteq
+\Delta_{m}$ جدوں وی $n \le m$۔) بناوٹ دے ہر مرحلے اسیں یا تاں $!A_n$ یا $\lnot !A_n$ پاؤندے آں، تے ہر !!{formula} سارے~$!A_n$ دی فہرست وچ (گھٹ توں گھٹ اک واری) آؤندا اے۔ سو ہر $!A$ لئی یا تاں $!A
+\in \Delta$ یا $\lnot !A \in \Delta$، ایس لئی تعریف مطابق $\Delta$ مکمل اے۔
+
+آخر وچ سانوں وکھاؤنا اے کہ $\Delta$، $\Sigma$-بے تضاد اے۔ ایس لئی اسیں دو گلاں وکھاؤنے آں۔ (الف) جے $\Delta$، $\Sigma$ دے لحاظ نال تضاد والا ہوندا، تاں کوئی $\Delta_n$ وی $\Sigma$ دے لحاظ نال تضاد والا ہوندا، تے (ب) سارے $\Delta_n$،
+$\Sigma$-بے تضاد نیں۔
+
+سو منّ لو $\Delta$، $\Sigma$ دے لحاظ نال تضاد والا ہوندا۔ فیر $\Delta
+\Proves[\Sigma] \lfalse$، یعنی ایسے $!A_1$، \dots،~$!A_k \in
+\Delta$ نیں جیہناں لئی $\Sigma \Proves !A_1 \lif (!A_2 \lif \cdots (!A_k
+\lif \lfalse)\dots)$۔ کیوں جے $\Delta = \bigcup_{n=0}^\infty \Delta_n$، ایس لئی ہر
+$!A_i \in \Delta_{n_i}$ کسے~$n_i$ لئی۔ منّ لو $n$ ایہناں وچوں سبھ توں وڈا اے۔ کیوں جے $n_i \le n$، ایس لئی $\Delta_{n_i} \subseteq \Delta_n$۔ سو سارے
+$!A_i$ کسے~$\Delta_n$ وچ نیں۔ ایس دا مطلب ہووے گا $\Delta_n
+\Proves[\Sigma] \lfalse$، یعنی $\Delta_n$، $\Sigma$ دے لحاظ نال تضاد والا اے۔
+
+ہر $\Delta_n$ نوں $\Sigma$-بے تضاد وکھاؤن لئی اسیں~$n$ اُتے سادا استقرا ورتدے آں۔ $\Delta_0 = \Gamma$، تے اسیں منّیا سی کہ $\Gamma$،
+$\Sigma$-بے تضاد اے۔ سو دعویٰ $n = 0$ لئی سچا اے۔ ہُن منّ لو دعویٰ
+$n$ لئی سچا اے، یعنی $\Delta_n$، $\Sigma$-بے تضاد اے۔ $\Delta_{n+1}$ یا تاں
+$\Delta_n \cup \{!A_n\}$ اے جے اوہ $\Sigma$-بے تضاد اے، ہور صورت وچ $\Delta_n \cup \{\lnot!A_n\}$ اے۔ پہلی صورت وچ
+$\Delta_{n+1}$ صاف طور تے $\Sigma$-بے تضاد اے۔ پر
+\olref[prf][con]{prop:consistencyfacts}\olref[prf][con]{prop:consistencyfacts-c} مطابق،
+$\Delta_n \cup \{!A_n\}$ یا $\Delta_n \cup \{\lnot!A_n\}$ وچوں کوئی اک بے تضاد اے، سو $\Delta_{n+1}$ دوجی صورت وچ وی بے تضاد اے۔
+\end{proof}
+
+\begin{cor}\ollabel{cor:provability-characterization}
+  $\Gamma \Proves[\Sigma] !A$ اُدوں تے صرف اُدوں جدوں $!A \in \Delta$ ہر اوس مکمل $\Sigma$-بے تضاد سیٹ $\Delta$ لئی ہووے جیہڑا $\Gamma$ نوں ودھاؤندا اے (اوہدوں وی جدوں $\Gamma = \emptyset$۔ اوس صورت وچ امکانی نظام $\Sigma$ دی اک ہور پچھان ملدی اے)۔
+\end{cor}
+
+\begin{proof}
+  منّ لو $\Gamma \Proves[\Sigma] !A$، تے $\Delta$ کوئی وی مکمل $\Sigma$-بے تضاد سیٹ ہووے جیہڑا $\Gamma$ نوں ودھاؤندا اے۔ جے $!A
+  \notin \Delta$ تاں ودھ توں ودھ بے تضادی کارن $\lnot!A \in \Delta$، تے ایس لئی
+  $\Delta \Proves[\Sigma] !A$ (یک رُخیت کارن) تے $\Delta
+  \Proves[\Sigma] \lnot!A$ (انعکاس کارن)، سو $\Delta$ تضاد والا اے۔ اُلٹے پاسے جے $\Gamma \Proves/[\Sigma] !A$، تاں
+  $\Gamma \cup \{ \lnot!A \}$، $\Sigma$-بے تضاد اے، تے لنڈن باؤم دے معاون قضیے مطابق اک مکمل بے تضاد سیٹ $\Delta$ اے جیہڑا $\Gamma \cup \{ \lnot!A \}$ نوں ودھاؤندا اے۔ بے تضادی کارن $!A
+  \notin \Delta$۔
+\end{proof}
+
+\end{document}

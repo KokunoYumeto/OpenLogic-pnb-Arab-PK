@@ -1,0 +1,47 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: decidability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{dec}
+
+\olsection{فیصلہ کرن دی اہلیت}
+دھیان دیو کہ تمامیت دے قضیے دا ثبوت ہر $\Gamma \Proves/ !A$ لئی سانوں اک
+لامتناہی گنتی دے جہاناں والا نمونہ دیندا اے، جیہڑا ایس گل دا گواہ اے کہ
+$\Gamma \Entails/ !A$۔ ہیٹھلا بیان وکھاندا اے کہ $\Entails !A$ ثابت کرن
+لئی ایہ ثابت کرنا کافی اے کہ $\mSat{M}{!A}$ سارے محدود نمونیاں لئی اے
+(یعنی اوہ نمونے جیہناں دے جہاناں دا سیٹ محدود اے)۔
+
+\begin{thm}\ollabel{thm:decidability}
+  جے $\Entails/ !A$، تاں اک محدود نمونہ اے جیہدے وچ $\mSat/{M'}{!A}$۔
+\end{thm}
+
+\begin{proof}
+  منّ لو $\mModel{M}=\tuple{W, R, V}$ ایہو جیہا اے کہ $\mSat/{M}{!A}$ تے $P$
+  اوہناں !!{propositional variable}s دا سیٹ اے جیہڑے~$!A$ وچ آندے نیں۔
+  $\mModel{M'}=\tuple{W', R', V'}$ دی تعریف لئی $W' = \Setabs{[w]}{w \in W}$
+  رکھو، جتھے $[w] = \Setabs{p \in P}{w \in V(p)}$، $R'$ نوں ذیلی سیٹ ہون
+  دا تعلق رکھو تے $V'(p)=\Setabs{[w]}{p \in [w]}$ رکھو۔ ایہ صاف ہونا چاہیدا
+  اے کہ $W'$ اک محدود سیٹ اے تے $\mModel{M'}$ !!a{relational model} اے۔
+
+  ~$!A$ اُتے استقرا نال وکھایا جا سکدا اے کہ
+  \[
+    \mSat{M}{!A}[w] \text{ اُدوں تے صرف اُدوں جدوں } \mSat{M'}{!A}[{[w]}]
+  \]
+  اوہناں سارے !!{formula}s $!A$ لئی جیہناں دے !!{propositional variable}s
+  صرف~$P$ وچوں ہون۔ ایہ پڑھّن والے لئی مشق چھڈّی اے۔
+\end{proof}
+
+\begin{prob}
+\olref[int][sc][dec]{thm:decidability} دا ثبوت مکمل کرو۔ وکھاؤ کہ
+$\mSat{M,w}{!A}$ اُدوں تے صرف اُدوں اے جدوں $\mSat{M',[w]}{!A}$، اوہناں
+سارے !!{formula}s~$!A$ لئی جیہناں دے قضیاتی متغیر صرف~$P$ وچوں ہون۔
+\end{prob}
+
+\olref{thm:decidability} توں ایہ نتیجہ نکلدا اے کہ فیصلہ کرن لئی اک الگورتھم
+موجود اے کہ آیا~$\Entails !A$۔
+
+\end{document}

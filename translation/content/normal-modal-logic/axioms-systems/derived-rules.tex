@@ -1,0 +1,137 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: derived-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{der}
+
+\olsection{اخذ کیتے قاعدے}
+
+!!{derivation}s لبھن تے لکھن وچ اوکھ اے، کم لمّا اے تے گلّاں وار وار لکھنیاں پیندیاں نیں۔ مثال لئی اسیں اکثر
+$!A \lif !B$ توں $\Box !A \lif \Box !B$ تک جانا چاہندے آں، یعنی قاعدہ~\RK لاؤنا چاہندے آں۔ ایس لئی پہلاں \Nec لاؤنا، فیر~\Ax{K} دی مناسب مثال لکھنی، تے فیر~\MP لاؤنا پیندا اے۔ $!A \lif
+!B$ تے $!B \lif !C$ توں $!A \lif !C$ تک جان لئی ہمیشہ صادق فارمولے توں بنی ایہ (لمّی) مثال لکھنی پیندی اے۔
+\[
+(!A \lif !B) \lif ((!B \lif !C) \lif (!A \lif !C))
+\]
+تے \MP{} دو واری لاؤنا پیندا اے۔ اکثر اسیں اک ذیلی !!{formula} دی تھاں ایسا فارمولا رکھنا چاہندے آں جیہڑا اوہدے نال ہم ارز ہووے۔ مثال لئی \iftag{prvDiamond}{$\Diamond
+  !A$ دی تھاں $\lnot\Box\lnot !A$}{$\Box !A$ دی تھاں $\lnot\Diamond\lnot !A$}، یا
+$\lnot\lnot !A$ دی تھاں $!A$۔ ایس لئی سارا !!{derivation} لکھن دی تھاں صرف ایہ دسنا سوکھا اے کہ وچکارلے قدم کیوں !!{derivable} نیں۔ ایس کم لئی آؤ !!{derivability} بارے کجھ گلاں اکٹھیاں کریے۔
+
+\begin{prop}
+  جے $\Log{K} \Proves !A_1$، \dots، $\Log{K} \Proves !A_n$، تے $!B$،
+  $!A_1$، \dots، $!A_n$ توں قضیاتی منطق دے مطابق نکلدا اے، تاں
+  $\Log{K} \Proves !B$۔
+\end{prop}
+
+\begin{proof}
+  جے $!B$، $!A_1$، \dots،~$!A_n$ توں قضیاتی منطق دے مطابق نکلدا اے، تاں
+  \[
+  !A_1 \lif (!A_2 \lif \cdots (!A_n \lif !B)\dots)
+  \]
+  ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے۔ \MP{} نوں $n$ واری لاؤن نال~$!B$ دا !!{derivation} ملدا اے۔
+\end{proof}
+
+ایس قضیے دی ورتوں نوں اسیں~\PL نال ظاہر کراں گے۔
+
+\begin{prop}
+  جے $\Log{K} \Proves !A_1 \lif (!A_2 \lif \cdots (!A_{n-1} \lif
+  !A_n)\dots)$، تاں $\Log{K} \Proves \Box !A_1 \lif (\Box !A_2 \lif
+  \cdots (\Box !A_{n-1} \lif \Box !A_n)\dots)$۔
+\end{prop}
+
+\begin{proof}
+  $n$ اُتے استقرا نال، جیویں \olref[nor]{prop:rk} دے ثبوت وچ۔
+\end{proof}
+
+ایس قضیے دی ورتوں نوں اسیں~\RK نال ظاہر کراں گے۔ مثال نال ویکھیے کہ !!{derivability} دے نتیجے ثابت کرن وچ ایہ گلاں کِویں سوکھ کردیاں نیں۔
+
+\begin{prop}
+  $\Log{K} \Proves (\Box!A \land \Box!B) \lif \Box (!A \land !B)$
+\end{prop}
+
+\begin{proof}
+  \begin{derivation}
+    1. & $\Log{K} \Proves !A \lif (!B \lif (!A \land !B))$ & \Taut \\
+    2. & $\Log{K} \Proves \Box!A \lif (\Box !B \lif \Box(!A \land !B)))$ & \RK, 1\\
+    3. & $\Log{K} \Proves (\Box!A \land \Box!B) \lif \Box(!A \land !B)$ & \PL, 2
+  \end{derivation}
+\end{proof}
+
+\begin{prop}\ollabel{prop:rewriting}
+  جے $\Log{K} \Proves !A \liff !B$ تے $\Log{K} \Proves
+  \Subst{!C}{!A}{q}$، تاں $\Log{K} \Proves \Subst{!C}{B}{q}$۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[nml][prf][der]{prop:rewriting} ثابت کرن لئی~$!C$ دی پیچیدگی اُتے استقرا نال ایہ وکھاؤ کہ جے $\Log{K} \Proves !A \liff !B$،
+  تاں $\Log{K} \Proves \Subst{!C}{!A}{q} \liff \Subst{!C}{!B}{q}$۔
+\end{prob}
+
+ایہ قضیہ خاص کر اُدوں کم آؤندا اے جدوں اسیں $\Diamond$ نوں $\Box$ وچ بدلنا ہووے (یا اُلٹے پاسے)، یا کسے !!a{formula} دے اندر دوہری نفی ہٹاؤنی ہووے۔ اگے \olref{prop:rewriting} دی ورتوں اُتے اسیں «$!A$، $!B$ دی تھاں» لکھاں گے جدوں وی اک !!a{formula}~$!C(!B)$ نوں~$!C(!A)$ دی تھاں لکھدے آں۔ دوجے لفظاں وچ «$!A$، $!B$ دی تھاں» ایہدا اختصار اے۔
+  \begin{derivation}
+    & $\Proves !C(!A)$ \\
+    & $\Proves !A \liff !B$\\
+    & $\Proves !C(!B)$ & \olref{prop:rewriting} مطابق
+  \end{derivation}
+مثال ویکھو۔
+
+\begin{prop}
+  $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$
+\end{prop}
+
+\begin{proof}
+  \iftag{prvDiamond}{% امکان دا نشان ابتدائی اے۔
+  \begin{derivation}
+    1. & $\Log{K} \Proves \Diamond \lnot p \liff \lnot\Box\lnot\lnot p$ &
+    \Dual\\
+    2. & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot p$ & \PL, 1\\
+    3. & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & $p$، $\lnot\lnot p$ دی تھاں\\
+  \end{derivation}
+  }{% امکان دا نشان تعریف نال ملدا اے۔
+  \begin{derivation}
+    1. & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot p$ & \Taut\\
+    2. & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & $p$، $\lnot\lnot p$ دی تھاں\\
+  \end{derivation}
+  سطر~$1$ اُتے فارمولا $\lnot q \lif \lnot q$ دی مثال اے، جیہڑی
+  $\Box\lnot\lnot p$ نوں~$q$ دی تھاں رکھ کے ملدی اے۔ $\Diamond\lnot p$ تے
+  $\lnot\Box\lnot\lnot p$ عین اکّو نیں، کیوں جے $\Diamond$ دی تعریف
+  ~$\lnot\Box\lnot$ اے۔}
+\end{proof}
+
+اُپرلے !!{derivation} وچ آخری قدم «$p$، $\lnot\lnot p$ دی تھاں» ایہدا اختصار اے۔
+  \begin{derivation}
+    & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot
+    p$\\
+    & $\Log{K} \Proves \lnot\lnot p \liff p$ & \Taut\\
+    & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & \olref{prop:rewriting} مطابق
+  \end{derivation}
+$!C(q)$، $!A$ تے $!B$ دیاں تھاواں، \olref{prop:rewriting} مطابق، ایتھے بالترتیب $\lnot \Box q \lif \Diamond \lnot p$،
+$\lnot\lnot p$ تے~$p$ نے لئیاں نیں۔
+
+جدوں !!a{formula} وچ ذیلی !!{formula} $\lnot\Diamond !A$ ہووے، تاں اوہدے بدلے $\Box\lnot !A$ رکھ سکدے آں، \olref{prop:rewriting} ورت کے، کیوں جے
+$\Log{K} \Proves \lnot\Diamond !A \liff \Box\lnot !A$۔ ایہ تے ایہو جیہے ہور بدل صرف «$\Box\lnot$،
+$\lnot\Diamond$ دی تھاں» نال ظاہر کراں گے۔
+
+ہِیٹھلا قضیہ ایس گل دا جواز دیندا اے کہ !!{derivability} دے نتیجے سانچیاں دے روپ وچ ثابت کر سکدے آں۔ مثلاً پچھلے قضیے توں صرف $\Log{K} \Proves \lnot\Box p \lif
+\Diamond \lnot p$ ای نہیں، بلکہ $\Log{K} \Proves \lnot\Box !A \lif \Diamond
+\lnot !A$ وی ملدا اے، کسے وی~$!A$ لئی۔
+
+\begin{prop}
+  جے $!A$، $!B$ توں بدل نال بنی مثال اے تے $\Log{K} \Proves !B$،
+  تاں $\Log{K} \Proves !A$۔
+\end{prop}
+
+\begin{proof}
+  ایہ پرکھنا لمّا پر عام کم اے (!!{derivation} دی لمبائی اُتے استقرا، جیہڑا~$!B$ دا اے نال) کہ سارے !!{derivation} اُتے بدل لاؤن نال وی اک ٹھیک
+  !!{derivation} ملدا اے۔ خاص طور تے، ہمیشہ صادق فارمولے توں بدل نال بنیاں مثالاں دے اگے بدل وی ہمیشہ صادق فارمولیاں توں بدل نال بنیاں مثالاں نیں۔ ~\iftag{prvDiamond}{\Dual{} تے~}{}\Ax{K} دیاں مثالاں دے بدل خود~\iftag{prvDiamond}{\Dual{}
+    تے~}{}\Ax{K} دیاں مثالاں نیں۔ نالے \MP{} تے~\Nec{} دی ورتوں اُدوں وی ٹھیک رہندی اے جدوں !!{formula}s نوں !!{propositional variable}s دی تھاں مقدمے (یا مقدمیاں) تے نتیجے دوناں وچ رکھیے۔
+\end{proof}
+
+\end{document}

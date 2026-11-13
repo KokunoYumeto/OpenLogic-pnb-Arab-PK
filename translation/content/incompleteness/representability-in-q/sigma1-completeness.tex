@@ -1,0 +1,302 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: sigma1-completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{inp}{s1c}
+\olsection{\texorpdfstring{$\Sigma_1$}{Sigma-1} دی تمامیت}
+
+بھاویں $\Th{Q}$ تے ایس دیاں بے تضاد تے مسلّمہ بند ہو سکّن والیاں
+توسیعاں نامکمل نیں، اسیں ویکھ چکے آں کہ $\Th{Q}$ عددی ٹرماں بارے
+کئی بنیادی گلاں ثابت کردا اے۔ ایہ نتیجہ ہور وی اگے ودھایا جا
+سکدا اے۔ ایہ سمجھّن لئی کہ~$\Th{Q}$ وچ کجھ ثابت ہو سکّن دی حد
+کِتھے تک اے، اسیں $\Delta_0$، $\Sigma_1$ تے $\Pi_1$ !!{formula}s
+دے تصور متعارف کراندے آں۔ موٹے طور اُتے، $\Sigma_1$ !!{formula}
+اوہ اے جیہدی صورت $\lexists[x][!B(x)]$ ہووے، جتھے $!B$ صرف
+قضیاتی رابطیاں تے محدود مسوّراں نال بنیا ہووے۔ اسیں وکھاواں گے
+کہ جے $!A$ اک $\Sigma_1$ !!{sentence} اے جیہڑا $\Struct{N}$
+وچ سچ اے، تاں $\Th{Q} \Proves !A$ (\olref{thm:sigma1-completeness})۔
+
+\begin{defn}
+\ollabel{defn:bd-quant}
+% PNB-CMP-061: حد والے ٹرم وچ ایس مسوّر دا متغیر نہیں؛ہور آزاد متغیر آ سکدے نیں۔
+\emph{محدود وجودی !!{formula}} دی صورت
+$\lexists[x][(x < t \land !A(x))]$ ہوندی اے، جتھے $t$ کوئی وی
+ایہو جیہا ٹرم اے جیہدے وچ ایس مسوّر دا متغیر نہ آوے۔ رواج
+مطابق اسیں ایہنوں $\bexists{x < t}{!A(x)}$ لکھدے آں۔
+%
+\emph{محدود کلی !!{formula}} دی صورت
+$\lforall[x][(x < t \lif !A(x))]$ ہوندی اے، جتھے $t$ کوئی وی
+ایہو جیہا ٹرم اے جیہدے وچ ایس مسوّر دا متغیر نہ آوے۔ رواج
+مطابق اسیں ایہنوں $\bforall{x < t}{!A(x)}$ لکھدے آں۔
+\end{defn}
+
+\begin{defn}
+\ollabel{defn:delta0-sigma1-pi1-frm}
+!!{formula} $!B$، $\Delta_0$ اے جے اوہ جوہری !!{formula}s توں
+صرف قضیاتی رابطے تے محدود مسوّر ورت کے بنیا ہووے۔
+%
+!!{formula} $!A$، $\Sigma_1$ اے جے $!A \ident \lexists[x][!B(x)]$،
+جتھے $!B$، $\Delta_0$ اے۔
+%
+!!{formula} $!A$، $\Pi_1$ اے جے $!A \ident \lforall[x][!B(x)]$،
+جتھے $!B$، $\Delta_0$ اے۔
+\end{defn}
+
+\begin{lem}
+\ollabel{lem:q-proves-clterm-id} فرض کرو $t$ اک بند ٹرم اے
+جیہدے لئی $\Value{t}{N} = n$۔ تاں $\Th{Q} \Proves \eq[t][\num n]$۔
+\end{lem}
+
+\begin{proof}
+اسیں ایہ گل~$t$ دی پیچیدگی اُتے استقرا نال ثابت کردے آں۔
+بنیادی صورت وچ $\Value{\Obj 0}{N} = 0$ تے
+$\Th{Q} \Proves \eq[\Obj 0][\num 0]$، کیوں جے $\num 0 \ident \Obj 0$۔
+%
+استقرائی قدم لئی، $t_1$ تے $t_2$ ایہو جیہے ٹرم منّو جنہاں
+لئی $\Value{t_1}{N} = n_1$، $\Value{t_2}{N} = n_2$،
+$\Th{Q} \Proves \eq[t_1][\num n_1]$ تے
+$\Th{Q} \Proves \eq[t_2][\num n_2]$۔
+
+فیر $\Value{(t_1')}{N} = n_1 + 1$ اے۔ سانوں $\Th{Q} \Proves
+\eq[t_1'][{\num n_1}']$ ملدا اے جدوں اسیں پہلے درجے دی منطق
+وچ برابری دے قاعدے استقرائی مفروضے تے !!{formula}
+$\eq[\num{n_1}'][\num{n_1}']$ اُتے لاندے آں۔ ایس لئی عددی
+ٹرماں دی تعریف نال $\Th{Q} \Proves \eq[t_1'][\num{n_1 + 1}]$ ملدا اے۔
+
+جمع دی صورت وچ
+\[
+      \Value{(t_1 + t_2)}{N}
+    = \Value{t_1}{N} + \Value{t_2}{N}
+    = n_1 + n_2.
+\]
+استقرائی مفروضے تے برابری دے قاعدیاں نال
+$\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1} + t_2]$ ملدا اے۔
+برابری دے قاعدے دوجی واری لائیے تاں
+$\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1} + \num{n_2}]$ ملدا اے۔
+\olref[inc][req][bre]{lem:q-proves-add} نال
+$\Th{Q} \Proves \eq[\num{n_1} + \num{n_2}][\num{n_1 + n_2}]$
+ملدا اے، ایس لئی $\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1 + n_2}]$۔
+
+~$\times$ دی صورت وچ وی ایہو جیہی دلیل ورتی جا سکدی اے، جتھے
+اسیں \olref[inc][req][bre]{lem:q-proves-mult} ورتدے آں۔
+%
+ایس طرح حساب دے سارے بند ٹرم شامل ہو گئے۔ ایس لئی
+$\Th{Q} \Proves \eq[t][\num n]$ ہر اُس بند ٹرم~$t$ لئی
+جیہدے واسطے $\Value{t}{N} = n$۔
+\end{proof}
+
+\begin{prob}
+\olref{lem:q-proves-clterm-id} دے جس حصے وچ~$\times$ آؤندا اے،
+اوہدا تفصیلی ثبوت دیو۔
+\end{prob}
+
+\begin{lem}
+\ollabel{lem:atomic-completeness}
+فرض کرو $t_1$ تے $t_2$ بند ٹرم نیں۔تاں
+\begin{enumerate}
+\item جے $\Value{t_1}{N} = \Value{t_2}{N}$،
+    تاں $\Th{Q} \Proves \eq[t_1][t_2]$۔
+\item جے $\Value{t_1}{N} \neq \Value{t_2}{N}$،
+    تاں $\Th{Q} \Proves \eq/[t_1][t_2]$۔
+\item جے $\Value{t_1}{N} < \Value{t_2}{N}$،
+    تاں $\Th{Q} \Proves t_1 < t_2$۔
+\item جے $\Value{t_2}{N} \leq \Value{t_1}{N}$،
+    تاں $\Th{Q} \Proves \lnot(t_1 < t_2)$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+دتے ہوئے ٹرماں $t_1$ تے $t_2$ لئی اسیں $n = \Value{t_1}{N}$
+تے $m = \Value{t_2}{N}$ مقرر کردے آں۔
+
+% PNB-CMP-062: دوجے ٹرم دی معیاری قدر m اے؛بلاشرط n نہیں۔
+فرض کرو $!A \ident t_1 = t_2$۔ \olref{lem:q-proves-clterm-id}
+نال $\Th{Q} \Proves \eq[t_1][\num n]$ تے $\Th{Q} \Proves \eq[t_2][\num m]$۔
+جے $n = m$، تاں $\Th{Q} \Proves \eq[\num n][\num m]$، تے برابری
+دی تعدّیت نال $\Th{Q} \Proves \eq[t_1][t_2]$ ملدا اے۔
+جے $n \neq m$، تاں $\Th{Q} \Proves \eq/[\num n][\num m]$، تے
+فیر برابری دی تعدّیت ورت کے $\Th{Q} \Proves \eq/[t_1][t_2]$ ملدا اے۔
+
+ہن $!A \ident t_1 < t_2$ منّو۔ دونیں صورتاں وچ اسیں
+مسلّمے~$!Q_8$ نوں ورتاں گے۔ ایہ مسلّمہ آکھدا اے کہ
+$x < y \liff \lexists[z][\eq[z' + x][y]]$ سارے $x,y$ لئی۔
+
+% PNB-CMP-063: بند عددی جمع Q8 دے گواہ دے ترتیب وار روپ وچ؛Q دی عام تبادلی خاصیت نہیں۔
+فرض کرو $\Sat{N}{t_1 < t_2}$۔ تاں کوئی $k \in \Nat$ اے
+جیہدے لئی $n + k + 1 = m$۔ \olref{lem:q-proves-clterm-id} نال
+$\Th{Q} \Proves \eq[t_1][\num n]$ تے $\Th{Q} \Proves \eq[t_2][\num m]$۔
+فیر ایس لیما دا پہلا حصہ تے بند عددی جمع دی معیاری قدر ورت کے
+$\Th{Q} \Proves \eq[{\num k}' + \num n][\num m]$ ملدا اے۔
+برابری دی تعدّیت تے برابر ٹرماں دی بدل نال
+$\Th{Q} \Proves \eq[{\num k}' + t_1][t_2]$ ملدا اے۔
+ایس لئی $\Th{Q} \Proves \lexists[z][\eq[z' + t_1][t_2]]$۔
+~$!Q_8$ نوں سجے پاسے توں کھبے پاسے ول ورت کے
+$\Th{Q} \Proves t_1 < t_2$ ملدا اے۔
+
+% PNB-CMP-064: صفر نال مثبت برابری Q2 نال تضاد؛Q3 سابق دا مسلّمہ اے۔
+ہن فرض کرو $\Sat/{N}{t_1 < t_2}$، یعنی $m \leq n$۔
+%
+اسیں~$\Th{Q}$ وچ کم کردے آں تے $t_1 < t_2$ فرض کردے آں۔
+~$!Q_8$ نوں کھبے پاسے توں سجے پاسے ول ورتن نال کوئی~$z$
+ملدا اے جیہدے لئی $\eq[z' + t_1][t_2]$۔
+کیوں جے $\Th{Q} \Proves \eq[t_1][\num n]$ تے
+$\Th{Q} \Proves \eq[t_2][\num m]$، ایس لئی $\eq[z' + \num n][\num m]$۔
+%
+~$m$ اُتے باہرونی استقرا نال، ~$!Q_5$ تے جانشیناں دی برابری
+توں اصل ٹرماں دی برابری والا مسلّمہ ورت کے،
+$\eq[z' + \num{n - m}][\Obj 0]$ ملدا اے۔
+جے $m = n$، تاں جمع وچ صفر دے مسلّمے نال $\eq[z'][\Obj 0]$
+ملدا اے، جیہڑا~$!Q_2$ نال تضاد دیندا اے۔
+جے $m < n$، تاں $\eq[(z' + \num{n - m - 1})'][\Obj 0]$
+فیر~$!Q_5$ نال ملدا اے۔ ایہ وی~$!Q_2$ نال تضاد دیندا اے۔
+ایس لئی $\Th{Q} \Proves \lnot(t_1 < t_2)$۔
+\end{proof}
+
+\begin{lem}
+\ollabel{lem:bounded-quant-equiv}
+فرض کرو $!A$ اک !!a{formula} اے، $t$ اک بند ٹرم اے تے
+$k=\Value{t}{N}$۔ تاں
+\begin{enumerate}
+\item $\Th{Q} \Proves \bforall{x<t}{!A(x)}$ اُدوں تے صرف اُدوں جدوں $\Th{Q} \Proves
+    !A(\num 0) \land \dots \land !A(\num{k-1})$۔
+\item $\Th{Q} \Proves \bexists{x<t}{!A(x)}$ اُدوں تے صرف اُدوں جدوں $\Th{Q} \Proves
+    !A(\num 0) \lor \dots \lor !A(\num{k-1})$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+    اسیں محدود کلی مسوّر دی صورت ثابت کردے آں۔
+    جے $\Value{t}{N} = 0$، تاں ہم ارزی دا کھبا پاسا~$\Th{Q}$
+    وچ ثابت ہو سکدا اے، کیوں جے \olref[inc][req][min]{lem:less-zero}
+    مطابق کوئی $x<\num 0$ نہیں۔
+    % PNB-CMP-065: کلی مسوّر دی صفر حد والی صورت وچ سچا خالی اقتران ورتیا اے۔
+    ایس طرح اسیں خالی اقتران نوں $\ltrue$ منّ سکدے آں، جیہڑا
+    ~$\Th{Q}$ وچ وی ثابت ہو سکدا اے۔
+    %
+    ہن فرض کرو $\Value{t}{N} = k+1$، جتھے~$k$ کوئی قدرتی عدد اے۔
+    \olref{lem:q-proves-clterm-id} نال اسیں منّ سکدے آں کہ
+    ساڈے کول $\bforall{x<\num{k+1}}{!A(x)}$ دی صورت دا !!a{formula} اے۔
+    
+    فرض کرو $\Th{Q} \Proves \bforall{x<\num{k+1}}{!A(x)}$،
+    تے $n \leq k$ منّو۔ \olref{lem:atomic-completeness} نال
+    $\Th{Q} \Proves \num n < \num{k+1}$، ایس لئی منطق نال
+    $\Th{Q} \Proves !A(\num n)$ ملدا اے۔ ایس دلیل نوں ہر عدد
+    لئی اک واری، کل $k+1$ وار ورتیئے، یعنی ہر $n \leq k$ لئی،
+    تاں مطلوبہ $\Th{Q} \Proves !A(\num 0)
+    \land \dots \land !A(\num k)$ ملدا اے۔
+    
+    دوجے رخ لئی فرض کرو $\Th{Q} \Proves
+    !A(\num 0) \land \dots \land !A(\num k)$۔ اسیں
+    $\Th{Q}$ وچ کم کردیاں $x < \num{k+1}$ فرض کردے آں۔
+    \olref[inc][req][min]{lem:less-nsucc} نال
+    $x = \num 0 \lor \dots \lor x = \num k$ ملدا اے۔ ایس توں
+    منطق نال~$!A(x)$ تے فیر کلی دعویٰ
+    $\bforall{x<\num{k+1}}{!A(x)}$ ملدا اے۔
+    
+    محدود وجودی مسوّر والے !!{formula}s لئی ہم ارزی دا ثبوت
+    وی ایس طرح دا اے۔
+\end{proof}
+
+\begin{prob}
+\olref{lem:bounded-quant-equiv} دی وجودی صورت دا تفصیلی ثبوت دیو۔
+\end{prob}
+
+\begin{lem}
+\ollabel{lem:delta0-completeness}
+جے $!A$ اک $\Delta_0$ !!{sentence} اے جیہڑا
+$\Struct{N}$ وچ سچ اے،تاں $\Th{Q} \Proves !A$۔
+\end{lem}
+
+\begin{proof}
+اسیں ایہ گل !!{formula} دی پیچیدگی اُتے استقرا نال ثابت کردے آں۔
+%
+بنیادی صورت \olref{lem:atomic-completeness} توں ملدی اے۔
+ہن اسیں استقرائی قدم ول آندے آں۔ سوکھ لئی نفی دی صورت نوں
+اوس !!{formula} دی بناوٹ مطابق اگے ونڈدے آں جیہدے اُتے
+نفی لائی گئی اے۔
+
+\begin{enumerate}
+\item فرض کرو $(!A \land !B)$، $\Struct{N}$ وچ سچ اے۔
+ایس لئی $!A$ تے $!B$،~$\Struct{N}$ وچ سچے نیں۔
+استقرائی مفروضے نال $\Th{Q} \Proves !A$ تے
+$\Th{Q} \Proves !B$، ایس لئی منطق نال $\Th{Q} \Proves (!A \land !B)$۔
+%
+\item فرض کرو $\lnot (!A \land !B)$، $\Struct{N}$ وچ سچ اے۔
+تاں $\lnot !A$ یا $\lnot !B$، $\Struct{N}$ وچ سچ اے۔
+عمومیت قائم رکھدیاں پہلی صورت منّ لئیے۔ استقرائی مفروضے نال
+$\Th{Q} \Proves \lnot !A$، تے منطق نال
+$\Th{Q} \Proves \lnot (!A \land !B)$۔
+%
+\item فرض کرو $(!A \lor !B)$، $\Struct{N}$ وچ سچ اے۔
+تاں یا $!A$، $\Struct{N}$ وچ سچ اے، یا $!B$، $\Struct{N}$
+وچ سچ اے۔ عمومیت قائم رکھدیاں پہلی صورت منّ لئیے۔ استقرائی
+مفروضے نال $\Th{Q} \Proves !A$، تے منطق نال
+$\Th{Q} \Proves (!A \lor !B)$۔
+%
+\item فرض کرو $\lnot(!A \lor !B)$، $\Struct{N}$ وچ سچ اے۔
+ایس لئی $\lnot !A$ تے $\lnot !B$، $\Struct{N}$ وچ سچے نیں۔
+استقرائی مفروضے نال $\Th{Q} \Proves \lnot !A$ تے
+$\Th{Q} \Proves \lnot !B$، تے منطق نال
+$\Th{Q} \Proves \lnot(!A \lor !B)$۔
+%
+\item فرض کرو $\bforall{x<t}{!A(x)}$،~$\Struct{N}$ وچ سچ اے،
+جتھے $t$ اک بند ٹرم اے تے $k=\Value{t}{N}$۔
+استقرائی مفروضے تے منطق نال، جے $!A(\num n)$،~$\Struct{N}$ وچ
+ہر $n < \Value{t}{N}$ لئی سچ اے، تاں
+$\Th{Q} \Proves !A(\num 0) \land \dots \land !A(\num{k-1})$۔
+\olref{lem:bounded-quant-equiv} نال $\Th{Q} \Proves \bforall{x<t}{!A(x)}$ ملدا اے۔
+%
+\item محدود وجودی مسوّر دی صورت وچ ساڈے کول
+$\bexists{x < t}{!A(x)}$ دی صورت دا !!a{sentence} اے۔
+ایہ صورت محدود کلی مسوّر والی صورت ورگی اے۔
+%
+\item فرض کرو $\lnot \bforall{x<t}{!A(x)}$،~$\Struct{N}$ وچ
+سچ اے، جتھے $t$ اک بند ٹرم اے۔ ایہ !!{sentence} اوس
+!!{sentence} دے ہم ارز اے جیہدی صورت $\bexists{x<t}{\lnot !A(x)}$
+اے۔ ایہ ہم ارزی~$\Th{Q}$ وچ اخذ کیتی جا سکدی اے۔ ایس لئی
+اسیں محدود وجودی مسوّراں والی دلیل ورت سکدے آں۔
+%
+\item ایس طرح فرض کرو $\lnot \bexists{x<t}!A(x)$، $\Struct{N}$
+وچ سچ اے، جتھے $t$ اک بند ٹرم اے۔ ایہ !!{sentence}،
+$\Th{Q}$ وچ $\bforall{x<t}{\lnot!A(x)}$ دے ہم ارز اے۔
+ایس لئی اسیں محدود کلی مسوّراں والی دلیل ورت سکدے آں۔
+%
+\item آخر اُتے فرض کرو $\lnot !A$، $\Struct{N}$ وچ سچ اے۔
+ہن دو صورتاں رہ جاندیاں نیں۔ پہلی وچ $!A$ جوہری اے تے
+دوجی وچ $\lnot !A \ident \lnot\lnot !B$ اے، کسے
+$\Delta_0$ !!{sentence} $!B$ لئی۔
+جے $!A$ جوہری اے، تاں \olref{lem:atomic-completeness} نال
+$\Th{Q} \Proves \lnot !A$۔
+جے $\lnot !A \ident \lnot\lnot !B$، تاں منطق نال~$\Th{Q}$
+وچ ایہدی~$!B$ نال ہم ارزی ثابت ہو سکدی اے۔ ہم ارز جملہ~$\Struct{N}$
+وچ سچ اے، کیوں جے $\lnot !A$،~$\Struct{N}$ وچ سچ اے۔
+ایس لئی استقرائی مفروضے نال $\Th{Q} \Proves \lnot !A$۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref{lem:delta0-completeness} دی وجودی صورت دا تفصیلی ثبوت دیو۔
+\end{prob}
+
+\begin{thm}
+\ollabel{thm:sigma1-completeness}
+جے $!A$ اک $\Sigma_1$ !!{sentence} اے جیہڑا
+~$\Struct{N}$ وچ سچ اے،تاں $\Th{Q} \Proves !A$۔
+\end{thm}
+
+\begin{proof}
+جے $\lexists{x}!A(x)$ اک $\Sigma_1$ !!{sentence} اے جیہڑا
+~$\Struct{N}$ وچ سچ اے، تاں کوئی قدرتی عدد~$n$ تے متغیر
+قدر بندی~$s$ موجود نیں جنہاں لئی $s(x) = n$ تے
+$\Sat{N}{!A(x)}[s]$۔ پورا اترن دے تعلق دیاں معیاری خاصیتاں
+توں $\Sat{N}{!A(\num n)}$ ملدا اے۔ ہن $!A(\num n)$ اک
+$\Delta_0$ !!{formula} اے، ایس لئی \olref{lem:delta0-completeness}
+نال $\Th{Q} \Proves !A(\num n)$، تے فیر منطق نال
+$\Th{Q} \Proves \lexists[x][!A(x)]$۔
+\end{proof}
+
+\end{document}

@@ -1,0 +1,163 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: completeness-theorem
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{cth}}
+      {\olfileid{pl}{com}{cth}}
+
+\olsection{تمامیت دا قضیہ}
+
+\begin{explain}
+آؤ ہُن اپنے نتائج اکٹھے کریے: ایس توں تمامیت دا قضیہ ملدا اے۔
+\end{explain}
+
+\begin{thm}[تمامیت دا قضیہ]
+\ollabel{thm:completeness}
+فرض کرو $\Gamma$، !!{sentence}s دا اک سیٹ اے۔
+جے $\Gamma$ بے تضاد اے، تاں اوہ پورا ہون جوگا اے۔
+\end{thm}
+
+\begin{proof}
+فرض کرو $\Gamma$ بے تضاد اے۔\iftag{FOL}{
+\olref[hen]{lem:henkin} مطابق اک سیر شدہ،
+بے تضاد سیٹ $\Gamma' \supseteq \Gamma$
+موجود اے۔}{} \olref[lin]{lem:lindenbaum}
+مطابق اک $\Gamma^* \supseteq
+\iftag{FOL}{\Gamma'}{\Gamma}$ موجود اے
+جیہڑا بے تضاد تے !!{complete} اے۔
+\iftag{FOL}{
+  چونکہ $\Gamma' \subseteq \Gamma^*$،
+  ہر !!{formula}~$!A(x)$ لئی
+  $\Gamma^*$ وچ ایس صورت دا !!a{sentence}
+  موجود اے:
+  \iftag{prvEx}
+        {$\lexists[x][!A(x)] \lif !A(c)$}
+        {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c)$}
+  ایس لئی $\Gamma^*$ سیر شدہ اے۔ جے
+  $\Gamma$ وچ~$\eq$ نہیں، تاں}{ایس صورت وچ}
+\olref[mod]{lem:truth} مطابق،
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$
+اُدوں تے صرف اُدوں جدوں $!A \in
+\Gamma^*$۔ ایس توں خاص طور اُتے ہر
+$!A \in \Gamma$ لئی
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$
+ملدا اے؛ لہٰذا $\Gamma$ پورا ہون جوگا اے۔
+\iftag{FOL}{
+  جے $\Gamma$ وچ~$\eq$ موجود اے،
+  تاں \olref[ide]{lem:truth} مطابق
+  سارے !!{sentence}s~$!A$ لئی
+  $\Sat{\equivclass{M}{\approx}}{!A}$
+  اُدوں تے صرف اُدوں جدوں $!A \in \Gamma^*$۔
+  خاص طور اُتے
+  $\Sat{\equivclass{M}{\approx}}{!A}$
+  ہر $!A \in \Gamma$ لئی
+  اے، ایس لئی $\Gamma$ پورا ہون جوگا اے۔}{}
+\end{proof}
+
+\begin{cor}[تمامیت دا قضیہ، دوجا بیان]
+\ollabel{cor:completeness}
+ہر $\Gamma$ تے !!{sentence}s~$!A$ وچوں ہر اک لئی:
+جے $\Gamma \Entails !A$، تاں
+$\Gamma \Proves !A$۔
+\end{cor}
+
+\begin{proof}
+غور کرو کہ \olref{cor:completeness} تے
+\olref{thm:completeness} وچ $\Gamma$
+دونیں وار کلی طور اُتے مسوّر اے۔ الجھن
+توں بچن لئی \olref{thm:completeness}
+نوں ہور متغیر نال فیر بیان کریے:
+!!{sentence}s دے ہر سیٹ~$\Delta$
+لئی، جے $\Delta$ بے تضاد اے، تاں
+اوہ پورا ہون جوگا اے۔ اِس دا
+عکسِ نقیض ایہ اے: جے $\Delta$
+پورا ہون جوگا نہیں، تاں
+$\Delta$ متضاد اے۔ ایس نوں اسیں
+نتیجے دا ثبوت دین لئی ورتاں گے۔
+
+فرض کرو $\Gamma \Entails !A$۔ فیر
+$\Gamma \cup \{\lnot !A\}$
+\olref[syn][sem]{prop:entails-unsat}
+مطابق پورا ہون جوگا نہیں۔
+$\Gamma \cup \{\lnot !A\}$
+نوں اپنا $\Delta$ لے کے،
+\olref{thm:completeness} دے پچھلے
+بیان توں ملدا اے کہ
+$\Gamma \cup \{\lnot !A\}$
+متضاد اے۔ ہُن
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:prv:prop:prov-incons},
+    prfSC/{fol:seq:prv:prop:prov-incons},
+    prfND/{fol:ntd:prv:prop:prov-incons},
+    prfTab/{fol:tab:prv:prop:prov-incons}}}{%
+  \tagrefs{prfAX/{pl:axd:prv:prop:prov-incons},
+    prfSC/{pl:seq:prv:prop:prov-incons},
+    prfND/{pl:ntd:prv:prop:prov-incons},
+    prfTab/{pl:tab:prv:prop:prov-incons}}}
+مطابق $\Gamma \Proves !A$۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cth]{cor:completeness}
+ورت کے \olref[fol][com][cth]{thm:completeness}
+ثابت کرو، تے ایس طرح وکھاؤ کہ تمامیت دے
+قضیے دے دونیں بیان ہم ارز نیں۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cth]{cor:completeness}
+ورت کے \olref[pl][com][cth]{thm:completeness}
+ثابت کرو، تے ایس طرح وکھاؤ کہ تمامیت دے
+قضیے دے دونیں بیان ہم ارز نیں۔
+\end{prob}
+\tagendprob
+
+\tagprob{FOL}
+\begin{prob}
+!!a{derivation} نظام دے مکمل ہون لئی
+اوہدے قاعدے اینے زورآور ہونے چاہیدے نیں
+کہ ہر پورا ہون جوگ نہ ہون والا سیٹ
+متضاد ثابت ہو سکے۔ تمامیت ثابت کرن
+لئی !!{derivation} دے کہڑے قاعدے
+لازمی سن؟ کی انہاں وچوں کوئی قاعدہ
+ثبوت وچ کتھے وی نہیں ورتیا گیا؟
+ایہناں سوالاں دا جواب دین لئی اک فہرست
+یا خاکہ بناؤ جیہڑا وکھاوے کہ
+!!{derivation} دے کہڑے قاعدے
+\olref[fol][com][cth]{thm:completeness}
+دے ثبوت تک لے جان والے کہڑے
+نتیجیاں وچ ورتے گئے۔ اِنہاں ثبوتاں
+وچ قاعدیاں دی غیر صریح ورتوں وی
+ضرور نشان زد کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+!!a{derivation} نظام دے مکمل ہون لئی
+اوہدے قاعدے اینے زورآور ہونے چاہیدے نیں
+کہ ہر پورا ہون جوگ نہ ہون والا سیٹ
+متضاد ثابت ہو سکے۔ تمامیت ثابت کرن
+لئی !!{derivation} دے کہڑے قاعدے
+لازمی سن؟ کی انہاں وچوں کوئی قاعدہ
+ثبوت وچ کتھے وی نہیں ورتیا گیا؟
+ایہناں سوالاں دا جواب دین لئی اک فہرست
+یا خاکہ بناؤ جیہڑا وکھاوے کہ
+!!{derivation} دے کہڑے قاعدے
+\olref[pl][com][cth]{thm:completeness}
+دے ثبوت تک لے جان والے کہڑے
+نتیجیاں وچ ورتے گئے۔ اِنہاں ثبوتاں
+وچ قاعدیاں دی غیر صریح ورتوں وی
+ضرور نشان زد کرو۔
+\end{prob}
+\tagendprob
+
+\end{document}

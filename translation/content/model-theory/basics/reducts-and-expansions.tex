@@ -1,0 +1,72 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: reducts-and-expansions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{bas}{red}
+\section{ساختاں دے گھٹائے تے ودھائے روپ}
+
+اکثر ایہناں زباناں دا مقابلہ کرنا فائدہ مند یا ضروری ہوندا اے جنہاں
+دیاں کجھ علامتاں سانجھیاں ہوون، تے انہاں زباناں دیاں !!{structure}s
+دا وی۔ سبھ توں عام صورت ایہ اے کہ !!a{language}~$\Lang{L}$ دیاں
+ساریاں علامتاں !!a{language}~$\Lang{L'}$ وچ وی شامل ہون، یعنی
+$\Lang{L} \subseteq
+\Lang{L'}$۔ فیر $\Lang{L}$-!!{structure}~$\Struct{M}$ نوں
+وادھو علامتاں دی تشریح شامل کرکے ہمیشہ اک $\Lang{L'}$-!!{structure}
+بنایا جا سکدا اے، جدکہ سانجھیاں علامتاں دی تشریح اوہی رکھی جاندی اے۔
+دوجے پاسے، $\Lang{L'}$-ساخت~$\Struct{M'}$ توں اوہناں علامتاں دیاں
+تشریحاں ”بھلا“ کے، جیہڑیاں~$\Lang{L}$ وچ نہیں آندیاں، اک
+$\Lang{L}$-ساخت حاصل کیتی جا سکدی اے۔
+ایتھے زبان دیاں علامتاں تے اوہناں دیاں تشریحاں گھٹدیاں یا ودھدیاں نیں؛
+دائرہ اوہی رہندا اے، دائرے دے عنصر کڈن یا شامل کرن دی گل نہیں۔
+
+\begin{defn}
+\ollabel{defn:reduct}
+فرض کرو $\Lang L \subseteq \Lang L'$، $\Struct M$ اک
+$\Lang L$-!!{structure} اے تے $\Struct M'$ اک $\Lang L'$-!!{structure}
+اے۔ $\Struct M$، $\Struct M'$ دا $\Lang L$ تک \emph{گھٹایا روپ}
+(reduct) اے، تے $\Struct M'$، $\Struct M$ دا $\Lang L'$ تک
+\emph{ودھایا روپ} (expansion) اے، اُدوں تے صرف اُدوں جدوں
+\begin{enumerate}
+\item $\Domain{M} = \Domain{M'}$
+\item ہر !!{constant}~$c \in \Lang L$ لئی، $\Assign{c}{M} =
+  \Assign{c}{M'}$۔
+\item ہر !!{function}~$f \in \Lang L$ لئی، $\Assign{f}{M} =
+  \Assign{f}{M'}$۔
+\item ہر !!{predicate}~$P \in \Lang L$ لئی، $\Assign{P}{M} =
+  \Assign{P}{M'}$۔
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+\ollabel{prop:reduct}
+جے اک $\Lang{L}$-!!{structure}~$\Struct{M}$، اک
+$\Lang{L'}$-!!{structure}~$\Struct{M'}$ دا گھٹایا روپ اے، تاں
+ہر $\Lang{L}$-!!{sentence}s~$!A$ لئی
+\[
+\Sat{M}{!A} \text{ اُدوں تے صرف اُدوں } \Sat{M'}{!A}.
+\]
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[mod][bas][red]{prop:reduct} ثابت کرو۔
+\end{prob}
+
+\begin{defn}
+جدوں ساڈے کول اک $\Lang{L}$-ساخت $\Struct{M}$ ہووے، تے
+$\Lang{L'} =
+\Lang{L} \cup \{P\}$، $\Lang{L}$ وچ صرف اک $n$-تھانواں والا
+!!{predicate}~$P$ شامل کرکے ملی ودھی زبان ہووے، تے
+$R \subseteq \Domain{M}^n$ اک $n$-تھانواں والا تعلق ہووے، تاں
+$\Expan{M}{R}$ اوس ودھائے روپ~$\Struct{M'}$ لئی لکھدے آں
+جو~$\Struct{M}$ دا اے تے جس وچ $\Assign{P}{M'} = R$۔
+\end{defn}
+
+\end{document}

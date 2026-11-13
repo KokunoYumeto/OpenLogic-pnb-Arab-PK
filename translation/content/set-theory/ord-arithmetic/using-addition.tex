@@ -1,0 +1,101 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{using-addition}
+\olsection{ترتیبی جوڑ دی ورتوں}
+
+ترتیبی عدداں دا جوڑ ورت کے اسیں وکھ وکھ سیٹاں دے درجے، \olref[spine][rank]{defnsetrank} دے معنی وچ، سِدھے ای حساب لا کے کڈھ سکدے آں۔
+
+\begin{lem}\ollabel{rankcomputation}
+جے $\setrank{A} = \alpha$ تے $\setrank{B} = \beta$، تاں:
+\begin{enumerate}
+	\item\ollabel{exrankpow} $\setrank{\Pow{A}} = \alpha\ordplus 1$
+	\item\ollabel{exrankpair} $\setrank{\{A, B\}} = \max(\alpha,
+	\beta) \ordplus 1$
+	\item\ollabel{exrankcup} $\setrank{A \cup B} = \max(\alpha,
+	\beta)$
+	\item\ollabel{exranktuple} $\setrank{\tuple{A,B}} = \max(\alpha,
+	\beta) \ordplus  2$
+	\item\ollabel{exranktimes} $\setrank{A \times B} \leq \max(\alpha,
+	\beta) \ordplus  2$
+	\item\ollabel{exrankunion} $\setrank{\bigcup A} = \alpha$ جدوں
+	$\alpha$ خالی یا حدّی اے۔ $\setrank{\bigcup A} = \gamma$ جدوں
+	$\alpha = \gamma\ordplus 1$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+سارے ثبوت وچ اسیں \olref[spine][rank]{ranksupstrict} وار وار ورتدے آں۔
+
+\emph{\olref{exrankpow}۔} جے $x \subseteq A$ تاں $\setrank{x} \leq
+\setrank{A}$۔ سو $\setrank{\Pow{A}} \leq \alpha \ordplus  1$۔ کیوں جے خاص طور اُتے $A
+\in \Pow{A}$، ایس لئی $\setrank{\Pow{A}} = \alpha \ordplus  1$۔
+
+\emph{\olref{exrankpair}۔} \olref[spine][rank]{ranksupstrict} مطابق۔
+
+\emph{\olref{exrankcup}۔} \olref[spine][rank]{ranksupstrict} مطابق۔
+
+\emph{\olref{exranktuple}۔} \olref{exrankpair} دو واری ورتو۔
+
+\emph{\olref{exranktimes}۔} دھیان دیو کہ $A \times B \subseteq
+\Pow{\Pow{A \cup B}}$، تے \olref{exranktuple} ورتو۔
+
+\emph{\olref{exrankunion}۔} جے $\alpha = \gamma\ordplus 1$، تاں کوئی
+$c \in A$ اے جیہدے لئی $\setrank{c} = \gamma$، تے $A$ دا کوئی !!{element} ایہتوں ودھ درجے دا نہیں۔ سو $\setrank{\bigcup A} = \gamma$۔ جے $\alpha$ حدّی ترتیبی عدد اے، تاں $A$ وچ ایہو جیہے !!{element}s نیں جیہناں دا درجہ جِنّا چاہو $\alpha$ دے نیڑے (پر سختی نال اوہتوں گھٹ) اے۔ ایس لئی $\bigcup A$ وچ وی ایہو جیہے !!{element}s نیں جیہناں دا درجہ جِنّا چاہو $\alpha$ دے نیڑے (پر سختی نال اوہتوں گھٹ) اے۔ سو $\setrank{\bigcup A} = \alpha$۔
+\end{proof}
+\noindent
+\olref{exranktimes} وچ \emph{نا}برابری کیوں اے، ایہ وکھانا اسیں مشق لئی چھڈدے آں۔
+
+\begin{prob}
+ایہو جیہے سیٹ $A$ تے $B$ دیو کہ $\setrank{A \times B}=
+\max(\setrank{A}, \setrank{B})$۔ ایہو جیہے سیٹ $A$ تے $B$ دیو کہ
+$\setrank{A \times B}\max(\setrank{A}, \setrank{B}) \ordplus  2$۔
+کی کوئی ہور درجہ ممکن اے؟
+\end{prob}
+
+ہُن اسیں ایہ وی وکھا سکدے آں کہ کسے ترتیبی عدد نوں «محدود» یا «لامتناہی» آکھن دے کئی واجب معنی آپس وچ ملدے نیں۔
+
+\begin{lem}\ollabel{ordinfinitycharacter}
+کسے وی ترتیبی عدد $\alpha$ لئی ہِیٹھلیاں گلاں برابر نیں:
+\begin{enumerate}
+	\item\ollabel{ord:notinomega} $\alpha\notin \omega$، یعنی
+	$\alpha$ قدرتی عدد نہیں
+	\item\ollabel{ord:omegaplus} $\omega \leq \alpha$
+	\item\ollabel{ord:oneplus} $1 \ordplus  \alpha = \alpha$
+	%\alpha \approx \alpha \ordplus 1$
+	\item\ollabel{ord:plusone} $\alpha \approx \alpha\ordplus 1$،
+	یعنی $\alpha$ تے $\alpha\ordplus 1$ دے رکناں دی گنتی برابر اے
+	\item\ollabel{ord:infinite} $\alpha$ ڈیڈیکنڈ لامتناہی اے
+	\end{enumerate}
+\end{lem}
+\noindent
+سو ساڈے کول اک ترتیبی عدد دے محدود یا لامتناہی ہون نوں سمجھن دے پنج طریقے نیں، جیہناں دی برابری ثابت کیتی جا سکدی اے۔
+
+\begin{proof}
+\emph{\olref{ord:notinomega} $\Rightarrow$ \olref{ord:omegaplus}۔}
+تِن صورتاں دے اصول مطابق۔
+
+\emph{\olref{ord:omegaplus} $\Rightarrow$ \olref{ord:oneplus}۔}
+$\alpha \geq \omega$ مقرر کرو۔ لامتناہی درجیاں اُتے استقرا نال اک سبھ توں چھوٹا ترتیبی عدد $\gamma$ اے (شاید $0$)، جیہدے لئی اک حدّی ترتیبی عدد $\beta$ اے ایویں کہ $\alpha = \beta \ordplus \gamma$۔ ہُن:
+\[
+	1 \ordplus \alpha =
+	1 \ordplus (\beta \ordplus \gamma) =
+	(1 \ordplus \beta) \ordplus \gamma =
+	\supstrict_{\delta < \beta} (1 \ordplus  \delta) \ordplus  \gamma =
+	\beta \ordplus  \gamma =
+	\alpha.
+\]
+\emph{\olref{ord:oneplus} $\Rightarrow$ \olref{ord:plusone}۔}
+صاف اے کہ اک !!a{bijection} $f \colon (\alpha \disjointsum 1) \to (1
+\disjointsum \alpha)$ اے۔ جے $1 \ordplus \alpha = \alpha$، تاں اک ہم ساخت نقشہ $g \colon (1 \disjointsum \alpha) \to \alpha$ اے۔ ہُن $\comp{f}{g}$ ویکھو۔
+
+\emph{\olref{ord:plusone} $\Rightarrow$ \olref{ord:infinite}۔}
+جے $\alpha \approx \alpha \ordplus 1$، تاں اک !!a{bijection} $f \colon
+(\alpha \disjointsum 1) \to \alpha$ اے۔ $g(\gamma) = f(\gamma, 0)$ تعریف کرو ہر $\gamma < \alpha$ لئی۔ ایہ !!{injection} گواہ اے کہ $\alpha$ ڈیڈیکنڈ لامتناہی اے، کیوں جے $f(0,1) \in \alpha \setminus \ran{g}$۔
+
+\emph{\olref{ord:infinite} $\Rightarrow$ \olref{ord:notinomega}۔}
+ایہ \olref[z][infinity-again]{naturalnumbersarentinfinite} اے۔
+\end{proof}
+
+\end{document}

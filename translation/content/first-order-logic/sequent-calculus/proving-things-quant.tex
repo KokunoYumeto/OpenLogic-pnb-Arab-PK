@@ -1,0 +1,106 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{prq}
+
+\olsection{مسوّراں نال \usetoken{P}{derivation} (Derivation with Quantifiers)}
+
+\begin{ex}
+اک $\Log{LK}$-!!{derivation} سیکوئنٹ $\lexists[x][\lnot !A(x)]
+\Sequent \lnot \lforall[x][!A(x)]$ لئی دیو (Give an LK derivation)۔
+
+مسوّراں نال کم کردیاں سانوں ایہ یقینی بنانا پیندا اے کہ ایگن متغیر دی شرط
+(eigenvariable condition) دی خلاف ورزی نہ ہووے، تے کدی کدی ایس لئی کجھ استنباط
+کرن دی ترتیب نال ردّوبدل کرنا پیندا اے۔ عام طور تے، ایگن متغیر دی شرط والے
+قاعدیاں نوں پہلاں نمٹاؤن دی کوشش فائدہ دیندی اے (مکمل ثبوت وچ اوہ ہور ہِٹھاں
+ہون گے)۔ نالے، اگوں ویکھ کے ایہ اندازہ لاؤن دی کوشش کرنا چنگا اے کہ ابتدائی
+سیکوئنٹ (initial sequent) کیہو جہا ہو سکدا اے۔ ساڈی صورت وچ اوہنوں $!A(a)
+\Sequent !A(a)$ ورگا ہونا پئے گا۔ ایس دا مطلب اے کہ جدوں اسیں مسوّراں دے
+قاعدیاں نوں ``اُلٹے پاسے'' لاندے آں، تاں اکّو ٹرم (same term)—جیہنوں اسیں
+$a$ آکھاں گے—$\lforall$ تے $\lexists$ دے دونیں قاعدیاں لئی چُننا پئے گا۔ جے
+اسیں ہر قاعدے لئی وکھرا ٹرم چُنیے، تاں آخر نوں $!A(a) \Sequent !A(b)$ ورگا
+کجھ ملے گا، جیہڑا ظاہر اے اخذ ہون جوگ نہیں۔
+
+معمول وانگ شروع کردیاں اسیں لکھدے آں
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lexists[x][\lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+اسیں یا \LeftR{\exists} قاعدہ لا سکدے آں یا \RightR{\lnot} قاعدہ۔ کیوں جے
+\LeftR{\exists} قاعدہ ایگن متغیر دی شرط دے تابع اے، ایس نوں بعد دی تھاں
+ہُنّے نمٹا لینا چنگا اے؛ سو اسیں پہلاں ایہو قاعدہ لاواں گے۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x][!A(x)]$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][\lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+\LeftR{\lnot} تے \RightR{\lnot} قاعدے پچھلے پاسے ول (backwards) لاؤن نال سانوں
+ایہ ملدا اے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lforall[x][!A(x)] \fCenter !A(a)$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A(a), \lforall[x][!A(x)] \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\lforall[x][!A(x)], \lnot !A(a) \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x] !A(x)$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x] \lnot !A(x) \fCenter \lnot \lforall[x] !A(x)$
+\end{prooftree}
+ایس مقام اُتے ساڈی اکّو چون \LeftR{\forall} قاعدہ لانا اے۔ کیوں جے ایہ قاعدہ
+ایگن متغیر والی پابندی دے تابع نہیں، سو ایتھے کوئی رکاوٹ نہیں۔ یاد رکھو، اسیں
+$!A(a) \Sequent !A(a)$ دے روپ دا ابتدائی سیکوئنٹ حاصل کرنا چاہنے آں؛ ایس لئی
+قاعدہ لاندیاں سانوں $a$ نوں $!A$ وچ رکھن والا ٹرم چُننا چاہیدا اے۔
+\begin{prooftree}
+\Axiom$!A(a) \fCenter !A(a)$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!A(x)] \fCenter !A(a)$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A(a), \lforall[x][!A(x)] \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\lforall[x][!A(x)], \lnot !A(a) \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x][!A(x)]$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][ \lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+خاص کر مسوّراں نال کم کردیاں، ایس مقام اُتے دوبارہ جانچنا ضروری اے کہ ایگن
+متغیر دی شرط دی خلاف ورزی تے نہیں ہوئی۔ اسیں جیہڑا اکّو قاعدہ لایا اے جیہڑا
+ایگن متغیر دی شرط دے تابع اے، اوہ \LeftR{\exists} سی؛ تے ایگن متغیر~$a$
+اوہدے ہِٹھلے سیکوئنٹ (lower sequent)، یعنی آخرلے سیکوئنٹ (end-sequent)، وچ
+نہیں آندا۔ ایس لئی ایہ اک درست !!{derivation} اے۔
+\end{ex}
+
+\begin{prob}
+ہِٹھلے سیکوئنٹاں دیاں !!{derivation}s دیو (Give derivations):
+\begin{enumerate}
+\item $\Sequent (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) \lif
+\lforall[z][(!A(z) \land !B(z))]$.
+\item $\Sequent (\lexists[x][!A(x)] \lor \lexists[y][!B(y)]) \lif
+\lexists[z][(!A(z) \lor !B(z))]$.
+\item $\lforall[x][(!A(x) \lif !B)] \Sequent \lexists[y][!A(y)] \lif !B$.
+\item $\lforall[x][\lnot !A(x)] \Sequent \lnot\lexists[x][!A(x)]$.
+\item $\Sequent \lnot\lexists[x][!A(x)] \lif \lforall[x][\lnot !A(x)]$.
+\item $\Sequent \lnot\lexists[x][\lforall[y][((!A(x,y) \lif \lnot
+!A(y,y)) \land (\lnot !A(y,y) \lif !A(x,y)))]]$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھلے سیکوئنٹاں دیاں !!{derivation}s دیو (Give derivations):
+\begin{enumerate}
+\item $\Sequent \lnot\lforall[x][!A(x)] \lif \lexists[x][\lnot!A(x)]$.
+\item $(\lforall[x][!A(x)] \lif !B) \Sequent \lexists[y][(!A(y) \lif !B)]$.
+\item $\Sequent \lexists[x][(!A(x) \lif \lforall[y][!A(y)])]$.
+\end{enumerate}
+(ایہناں ساریاں لئی $\RightR{\Contraction}$ قاعدے دی لوڑ اے (These all require the rule)۔)
+\end{prob}
+
+\end{document}

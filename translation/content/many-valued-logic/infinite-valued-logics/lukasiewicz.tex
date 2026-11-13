@@ -1,0 +1,108 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: lukasiewicz
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{inf}{luk}
+
+\olsection{لوکاشیویچ دی منطق}
+
+\begin{editorial}
+  ایہ لامتناہی قدراں والی لوکاشیویچ دی منطق بارے حصے دا نکا جیہا مسودہ اے۔
+\end{editorial}
+
+\begin{defn}\ollabel{def:lukasiewicz}
+لامتناہی قدراں والی لوکاشیویچ دی منطق~$\LogLuk[\infty]$ ایس
+میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V_\infty$۔
+  \item $1$ اکّو مقرر قدر اے، یعنی $V^+ = \{1\}$۔
+  \item صداقتی فنکشن ہِٹھ دِتّے نیں۔
+  \begin{align*}
+    \tf{\lnot}[\LogLuk](x) & = 1 - x\\
+    \tf{\land}[\LogLuk](x,y) & = \min(x,y)\\
+    \tf{\lor}[\LogLuk](x,y) & = \max(x,y)\\
+    \tf{\lif}[\LogLuk](x,y) & = \min(1,1-(x-y)) = \begin{cases}
+      1 & \text{جے } x \le y\\
+      1-(x-y) & \text{ہور صورت وچ۔}
+    \end{cases}
+    \end{align*}
+\end{enumerate}
+$m$ قدراں والی لوکاشیویچ دی منطق ایسے طرح متعین اے، بس $V = V_m$ اے۔
+\end{defn}
+
+\begin{prop}
+  \olref[thr][luk]{def:lukasiewicz} وچ متعین منطق $\LogLuk[3]$،
+  \olref{def:lukasiewicz} وچ متعین منطق $\LogLuk[3]$ دے عین برابر اے۔
+\end{prop}
+
+\begin{proof}
+  ایہ گل \olref[thr][luk]{def:lukasiewicz} وچ دِتّے رابطیاں دے
+  صداقتی جدولاں نوں \olref{def:lukasiewicz} دیاں مساواتاں توں
+  ملن والے جدولاں نال ملا کے دِسدی اے۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}$ & \\ 
+      \hline  
+      $1$ & $0$ \\ 
+      $1/2$ & $1/2$ \\
+      $0$ & $1$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1/2$ & $1/2$ & $0$\\ 
+      $0$ & $0$ & $0$ & $0$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1$ & $1$ \\ 
+      $1/2$ & $1$ & $1/2$ & $1/2$ \\
+      $0$ & $1$ & $1/2$ & $0$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1$ & $1$ & $1/2$  \\ 
+      $0$ & $1$ & $1$ & $1$ 
+    \end{tabular}
+  \end{center}
+\end{proof}
+
+\begin{prop}\ollabel{prop:luk-infty-m}
+  جے $\Gamma \Entails[\LogLuk[\infty]] !B$، تاں $\Gamma
+  \Entails[\LogLuk[m]] !B$ ہر~$m \ge 2$ لئی۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][inf][luk]{prop:luk-infty-m} ثابت کرو۔
+\end{prob}
+
+اصل وچ اُلٹی گل وی قائم اے۔
+
+لامتناہی قدراں والی لوکاشیویچ دی منطق سبھ توں مقبول دھندلی
+منطق اے۔ دھندلی منطق بارے لکھتاں وچ شرطیہ اکثر $\lnot !A \lor !B$
+وجوں متعین ہوندا اے۔ ایس توں لامتناہی قدراں والی کلینی دی مضبوط منطق
+بنے گی۔
+
+\begin{prob}
+  دکھاؤ کہ $(p \lif q) \lor (q \lif p)$، ~$\LogLuk[\infty]$
+  وچ ہمیشہ صادق اے۔
+\end{prob}
+
+\end{document}

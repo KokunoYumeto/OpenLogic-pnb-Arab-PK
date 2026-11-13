@@ -1,0 +1,199 @@
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: examples-of-filtrations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{exf}
+
+\olsection{فلٹریشناں دیاں مثالاں}
+
+اسیں ہن تک ایہ نہیں وکھایا کہ کوئی فلٹریشن ہے۔ پر ہر نمونے $\mModel{M}$ لئی $\mModel{M}$ دیاں $\Gamma$ راہیں کئی فلٹریشناں نیں۔ خاص طور تے دو پچھاندے آں، سبھ توں باریک تے سبھ توں موٹی فلٹریشن۔ اکّو نمونے دیاں فلٹریشناں دے رسائی دے تعلق وکھرے ہون گے (کیوں جے \olref[fil]{defn:filtration} سدھا مقرر کردی اے کہ $W^*$ تے~$V^*$ کیہ ہون)۔ سبھ توں باریک فلٹریشن وچ تعلق والے جہاناں دیاں جوڑیاں جِنّیاں ہو سکّن گھٹ ہون گیاں، تے سبھ توں موٹی وچ جِنّیاں ہو سکّن ودھ۔
+
+\begin{defn}
+  جتھے $\Gamma$ ذیلی فارمولیاں تحت بند اے، نمونے دی \emph{سبھ توں باریک} فلٹریشن $\mModel{M^*}$، نمونے $\mModel{M}$ دی، ایویں متعین اے۔
+  \[
+  R^*[u][v] \quad \text{اُدوں تے صرف اُدوں جدوں} \quad \exists u'\in [u] \;
+  \exists v' \in [v] : Ru'v'.
+  \]
+\end{defn}
+
+\begin{prop}\ollabel{prop:finest}
+  سبھ توں باریک فلٹریشن $\mModel{M^*}$ سچ مچ فلٹریشن اے۔
+\end{prop}
+
+\begin{proof}
+  سانوں پرکھنا اے کہ ایویں متعین کیتا $R^*$،
+  \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R} دیاں شرطاں پوریاں کردا اے۔ اسیں تینوں شرطاں واری واری پرکھدے آں۔
+
+  جے $Ruv$، تاں کیوں جے $u \in [u]$ تے $v \in [v]$، ایس لئی $R^*[u][v]$ وی،
+  سو \olref[fil]{defn:filtration-R1} پوری اے۔
+
+  \iftag{prvBox}{\iftag{probBox}{
+      \olref[fil]{defn:filtration-R2} دی پرکھ مشق لئی چھڈدے آں۔}{
+        \olref[fil]{defn:filtration-R2} لئی منّ لو $\Box!A \in \Gamma$،
+        $R^*[u][v]$ تے $\mSat{M}{\Box!A}[u]$۔
+        $R^*$ دی تعریف مطابق ایسے $u' \equiv u$ تے $v' \equiv v$ نیں جیہناں لئی
+        $Ru'v'$۔ کیوں جے $u$ تے $u'$، $\Gamma$ اُتے اکّو فیصلے دیندے نیں، ایس لئی
+        $\mSat{M}{\Box!A}[u']$ وی، سو $\mSat{M}{!A}[v']$۔ کیوں جے
+        $\Gamma$ ذیلی !!{formula}s تحت بند اے، $v$ تے $v'$،
+        $!A$ اُتے اکّو فیصلے دیندے نیں، سو $\mSat{M}{!A}[v]$، جیویں وکھاؤنا سی۔}}{}
+
+  \iftag{prvDiamond}{\iftag{probDiamond}{
+      \olref[fil]{defn:filtration-R3} دی پرکھ مشق لئی چھڈدے آں۔}{
+        \olref[fil]{defn:filtration-R3} پرکھن لئی منّ لو $\Diamond!A \in
+        \Gamma$، $R^*[u][v]$ تے $\mSat{M}{!A}[v]$۔
+        $R^*$ دی تعریف مطابق ایسے $u' \equiv u$ تے $v' \equiv v$ نیں جیہناں لئی
+        $Ru'v'$۔ کیوں جے $v$ تے $v'$،~$\Gamma$ اُتے اکّو فیصلے دیندے نیں، تے $\Gamma$ ذیلی !!{formula}s تحت بند اے، ایس لئی $\mSat{M}{!A}[v']$ وی، سو
+        $\mSat{M}{\Diamond !A}[u']$۔ کیوں جے $u$ تے $u'$ وی
+        $\Gamma$ اُتے اکّو فیصلے دیندے نیں، ایس لئی $\mSat{M}{\Diamond !A}[u]$۔}}{}
+\end{proof}
+
+\begin{probtag}{probBox,probDiamond}
+  \olref[nml][fil][exf]{prop:finest} دا ثبوت پورا کرو۔
+\end{probtag}
+
+\begin{defn}
+  جتھے $\Gamma$ ذیلی فارمولیاں تحت بند اے، نمونے دی \emph{سبھ توں موٹی}
+  فلٹریشن~$\mModel{M^*}$، نمونے~$\mModel{M}$ دی، ایویں متعین اے کہ $R^*[u][v]$ اُدوں تے صرف اُدوں ہووے جدوں
+  \iftag{notprvBox,notprvDiamond}{ہِیٹھلی شرط پوری ہووے۔}{ہِیٹھلیاں \emph{دونیں} شرطاں پوریاں ہون۔}
+  \begin{tagenumerate}{prvBox,prvDiamond}
+  \tagitem{prvBox}{\ollabel{defn:coarsest-Box}جے $\Box!A \in \Gamma$
+    تے $\mSat{M}{\Box!A}[u]$، تاں
+    $\mSat{M}{!A}[v]$\iftag{prvDiamond}{؛}{۔}}{}
+  \tagitem{prvDiamond}{\ollabel{defn:coarsest-Diamond}جے $\Diamond!A
+    \in \Gamma$ تے $\mSat{M}{!A}[v]$، تاں
+    $\mSat{M}{\Diamond!A}[u]$۔}{}
+  \end{tagenumerate}
+\end{defn}
+
+\begin{prop}
+  سبھ توں موٹی فلٹریشن $\mModel{M^*}$ سچ مچ فلٹریشن اے۔
+\end{prop}
+
+\begin{proof}
+  $R^*$ دی تعریف دِتّی ہون تے پرکھن لئی صرف ایہ شرط رہ جاندی اے کہ $Ruv$ توں $R^*[u][v]$ نکلدا اے۔ سو منّ لو
+  $Ruv$۔ \iftag{prvBox}{منّ لو $\Box!A \in \Gamma$ تے
+    $\mSat{M}{\Box!A}[u]$۔ فیر صاف اے کہ
+    $\mSat{M}{!A}[v]$\iftag{prvDiamond}{، تے
+      \olref{defn:coarsest-Box} پوری اے۔ }{۔}}{}\iftag{prvDiamond}{منّ لو $\Diamond!A \in
+    \Gamma$ تے $\mSat{M}{!A}[v]$۔ فیر $\mSat{M}{\Diamond!A}[u]$
+    کیوں جے~$Ruv$\iftag{prvBox}{، تے \olref{defn:coarsest-Diamond} پوری اے}{}۔}{}
+\end{proof}
+
+\begin{ex}
+  منّ لو $W = \PosInt$، $Rnm$ اُدوں تے صرف اُدوں جدوں $m = n + 1$، تے $V(p) = \Setabs{2n}{n \in
+    \Nat}$۔ نمونہ $\mModel{M} = \tuple{W, R, V}$،
+  \olref{fig:ex-filtration} وچ وکھایا گیا اے۔ جہان $1$، $2$ وغیرہ نیں۔ ہر جہان توں ٹھیک اک ہور جہان، یعنی اوہدا اگلا، رسائی وچ اے، تے $p$ سارے جفت عدداں اُتے سچا اے تے صرف اوہناں اُتے۔
+
+  \begin{figure}
+    \centering
+    \begin{tikzpicture}[modal]
+      \node[world] (1) [label=below:\mFalse{p}] {$1$};
+      \node[world] (2) [label=below:\mTrue{p}, right=of 1] {$2$};
+      \node[world] (3) [label=below:\mFalse{p}, right=of 2] {$3$};
+      \node[world] (4) [label=below:\mTrue{p}, right=of 3] {$4$};
+      \node[phantom] (5) [right=of 4] {};
+      \draw[->] (1) to (2);
+      \draw[->] (2) to (3);
+      \draw[->] (3) to (4);
+      \draw[dotted] (4) to (5);
+    \end{tikzpicture}
+
+    \begin{tikzpicture}[modal]
+      \node[world] (1) [label=below:\mFalse{p}] {$[1]$};
+      \node[world] (2) [label=below:\mTrue{p}, right=of 1] {$[2]$};
+      \draw[->,bend left] (1) to (2);
+      \draw[->,bend left] (2) to (1);
+      
+      \node[world] (3) [label=below:\mFalse{p},right=of 2] {$[1]$};
+      \node[world] (4) [label=below:\mTrue{p}, right=of 3] {$[2]$};
+      \draw[->,bend left] (3) to (4);
+      \draw[->,bend left] (4) to (3);
+      \draw[->,reflexive above] (4) to (4);
+    \end{tikzpicture}
+    \caption{اک لامتناہی نمونہ تے اوہدیاں فلٹریشناں۔}
+    \ollabel{fig:ex-filtration}
+  \end{figure}
+
+  ہُن منّ لو $\Gamma$ ذیلی !!{formula}s دا سیٹ، جیہڑا~$\Box p \lif p$ دا اے،
+  یعنی $\{p, \Box p, \Box p \lif p\}$۔ $p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے، $\Box p$ سارے طاق عدداں اُتے تے صرف اوہناں اُتے سچا اے، سو $\Box p \lif p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے۔ دوجے لفظاں وچ ہر طاق عدد $\Box p$ نوں سچا پر $p$ تے $\Box
+  p \lif p$ نوں جھوٹھا کردا اے۔ ہر جفت عدد $p$ تے $\Box p \lif p$ نوں سچا پر $\Box p$ نوں جھوٹھا کردا اے۔ سو $W^* = \{ [1], [2] \}$، جتھے $[1] =
+  \{1, 3, 5, \dots\}$ تے $[2] = \{2, 4, 6, \dots\}$۔ کیوں جے $2 \in
+  V(p)$، ایس لئی $[2] \in V^*(p)$۔ کیوں جے $1 \notin V(p)$، ایس لئی $[1] \notin
+  V^*(p)$۔ سو $V^*(p) = \{[2]\}$۔
+
+  $W^*$ اُتے ٹکی ہر فلٹریشن دے رسائی دے تعلق وچ
+  $\tuple{[1], [2]}, \tuple{[2],[1]}$ شامل ہونے ضروری نیں۔ کیوں جے $R12$، ایس لئی
+  $R^*[1][2]$ ہونا چاہیدا اے،
+  \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R1} مطابق۔ کیوں جے
+  $R23$، ایس لئی $R^*[2][3]$ ہونا چاہیدا اے، تے $[3]=[1]$۔ اوہدے وچ
+  $\tuple{[1],[1]}$ شامل نہیں ہو سکدا۔ جے ہووے تاں $R^*[1][1]$،
+  $\mSat{M}{\Box p}[1]$ پر $\mSat/{M}{p}[1]$، جیہڑا
+  \olref[fil]{defn:filtration-R2} دے اُلٹ اے۔ کوئی شرط ایہ نہیں منگدی تے نہ منع کردی اے کہ
+  $R^*[2][2]$۔ سو~$\mModel{M}$ دیاں دو ممکن فلٹریشناں نیں، جیہڑیاں رسائی دے اینہاں دو تعلقاں نال جُڑیاں نیں۔
+  \[
+  \{\tuple{[1],[2]}, \tuple{[2],[1]}\} \text{ تے }
+  \{\tuple{[1],[2]}, \tuple{[2],[1]}, \tuple{[2],[2]}\}.
+  \]
+  دوناں صورتاں وچ $p$ تے $\Box p \lif p$ جھوٹھے نیں تے $\Box p$ سچا اے~$[1]$ اُتے۔ $p$ تے $\Box p \lif p$ سچے نیں تے $\Box p$ جھوٹھا اے~$[2]$ اُتے۔
+\end{ex}
+
+\begin{prob}
+  ہِیٹھلا نمونہ $\mModel{M} = \tuple{W, R, V}$ ویکھو جیہدے وچ $W
+  = \Setabs{0\sigma}{\sigma \in \Bin^*}$، یعنی $0$ تے~$1$ دیاں اوہناں لڑیاں دا سیٹ جیہڑیاں~$0$ نال شروع ہوندیاں نیں، تے $R\sigma\sigma'$ اُدوں تے صرف اُدوں جدوں $\sigma' =
+  \sigma 0$ یا $\sigma' = \sigma 1$، تے $V(p) = \Setabs{\sigma
+    0}{\sigma \in \Bin^*}$ تے $V(q) = \Setabs{\sigma 1}{\sigma \in
+    \Bin^* \setminus \{1\}}$۔ ایہدا خاکہ ایہ اے۔
+  \begin{center}
+    \begin{tikzpicture}[modal,
+        node distance=2cm
+      ]
+
+      \node[world] (0) [label={below:\mTrue{p}\\\mFalse{q}},font=\tiny] {$0$};
+      \node[world] (00) [label={below:\mTrue{p}\\\mFalse{q}},
+        above right=of 0,font=\tiny] {$00$};
+      \node[world] (000) [label={below:\mTrue{p}\\\mFalse{q}},
+        right=of 00, yshift=.8cm, font=\tiny] {$000$};
+      \node[phantom] (0000) [right=of 000, yshift=.5cm] {};
+      \node[phantom] (0001) [right=of 000, yshift=-.5cm] {};
+      \node[world] (001) [label={below:\mFalse{p}\\\mTrue{q}},
+        right=of 00, yshift=-.8cm, font=\tiny] {$001$};
+      \node[phantom](0010) [right=of 001, yshift=.5cm] {};
+      \node[phantom](0011) [right=of 001, yshift=-.5cm] {};
+      \node[world] (01) [label={below:\mFalse{p}\\\mTrue{q}},
+        below right=of 0,font=\tiny] {$01$};
+      \node[world] (010) [label={below:\mTrue{p}\\\mFalse{q}},
+        right=of 01, yshift=.8cm,font=\tiny] {$010$};
+      \node[phantom] (0100) [right=of 010, yshift=.5cm] {};
+      \node[phantom] (0101) [right=of 010, yshift=-.5cm] {};
+      \node[world] (011) [label={below:\mFalse{p}\\\mTrue{q}},
+        right=of 01, yshift=-.8cm,font=\tiny] {$011$};
+      \node[phantom] (0110) [right=of 011, yshift=.5cm] {};
+      \node[phantom] (0111) [right=of 011, yshift=-.5cm] {};
+
+      \draw[->] (0) to (00);
+      \draw[->] (0) to (01);
+      \draw[->] (00) to (000);
+      \draw[dotted] (000) to (0000);
+      \draw[dotted] (000) to (0001);
+      \draw[->] (00) to (001);
+      \draw[dotted] (001) to (0010);
+      \draw[dotted] (001) to (0011);
+      \draw[->] (01) to (010);
+      \draw[dotted] (010) to (0100);
+      \draw[dotted] (010) to (0101);
+      \draw[->] (01) to (011);
+      \draw[dotted] (011) to (0110);
+      \draw[dotted] (011) to (0111);
+    \end{tikzpicture}
+  \end{center}
+  $\mSat/{M}{\Box(p \lor q) \lif (\Box p \lor \Box q)}[w]$ ہر~$w$ لئی اے۔
+
+  منّ لو $\Gamma$ ذیلی !!{formula}s دا سیٹ اے جیہڑا~$\Box(p \lor q) \lif
+  (\Box p \lor \Box q)$ دا اے۔ $W^*$ تے~$V^*$ کیہ نیں؟~$\mModel{M}$ دی سبھ توں باریک فلٹریشن دا رسائی تعلق کیہ اے؟ سبھ توں موٹی دا؟
+\end{prob}
+
+\end{document}

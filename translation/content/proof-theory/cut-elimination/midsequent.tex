@@ -1,0 +1,151 @@
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: midsequent
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{mid}
+
+\olsection{درمیانے سیکوئنٹ دا قضیہ تے ہیربرانڈ دا قضیہ}
+
+قطع ہٹاؤن دے قضیے دا اک اہم نتیجہ درمیانے سیکوئنٹ دا قضیہ اے۔ ایہ کہندا اے کہ جے !!a{proof}~$\pi$،~$\Gamma \Sequent \Delta$ دا، اے جیہدے وچ ہر !!{formula} دے مسوّر شروع وچ نیں، تاں اک !!a{proof}~$\pi'$ اے جیہدے وچ سیکوئنٹ $S \ident \Pi \Sequent
+\Lambda$ اے (جیہنوں \emph{درمیانا سیکوئنٹ} آکھدے آں)، ایویں کہ $S$ توں اُتّے~$\pi'$ وچ سارے استنباط قضیائی نیں تے~$S$ توں تھلّے سارے استنباط مسوّراں والے نیں۔ (!!^a{formula}~$!A$، \emph{مسوّر-مُڈھلا} (یا \emph{مسوّر-مُڈھلے روپ وچ}) اے جے اوہدی شکل
+\[\mathsf{Q}_1x_1\dots\mathsf{Q}_nx_n\,!B(x_1,\dots,x_n)\]
+ہووے، جتھے ہر $\mathsf{Q}_i$ یا $\lforall$ اے یا~$\lexists$۔) درمیانے سیکوئنٹ دے قضیے دا اک اہم نتیجہ ہیربرانڈ دا قضیہ اے۔ اوہدی عام صورت دَسنی ذرا اوکھی اے، پر بہت عام بولی وچ ایویں اے۔ پہلے درجے دی منطق دے ہر !!{provable} !!{sentence}~$!A$ لئی، اک قضیائی ہمیشہ سچا فارمولا~$!A'$ اے جیہدے توں $!A$ نوں !!{prove}d کیتا جا سکدا اے۔اوہناں !!{sentence}s لئی جیہڑے~$\lexists[x][!B(x)]$ دی شکل دے نیں، جتھے $!B$ وچ کوئی مسوّر نہیں، ایہ صورت اے:
+
+\begin{thm}[ہیربرانڈ دا قضیہ]
+منّ لو $!B(x)$ وچ کوئی مسوّر نہیں تے $\Proves 
+\lexists[x][!B(x)]$۔ تاں ٹرم~$t_1$، \dots، $t_n$ ایہو جیہے نیں کہ $\Proves !B(t_1) \lor \dots \lor !B(t_n)$۔
+\end{thm}
+
+!!{formula}~$!B(t_1) \lor \dots \lor !B(t_n)$ نوں~$\lexists[x][!B(x)]$ دی \emph{ہیربرانڈ والی فصلی عبارت} آکھدے آں۔ چونکہ $!B$ وچ مسوّر نہیں، ایس فصلی عبارت وچ وی نہیں۔ سو جے ایہ !!{provable} اے، تاں قطع توں بناں ثبوت نال !!{provable} اے، تے ایس لئی ایہو جیہے !!a{proof} نال جیہڑا بس قضیائی استنباط ورتدا اے۔ سو ایہ ہمیشہ سچا فارمولا اے۔
+
+ہیربرانڈ دے قضیے دا اوکھا حصہ ایہ وکھاؤنا اے کہ ہر !!{provable}
+!!{formula}~$\lexists[x][!B(x)]$ لئی ہیربرانڈ والی فصلی عبارت موجود اے۔ اُلٹی گل، یعنی جے $\lexists[x][!B(x)]$ دی ہیربرانڈ والی فصلی عبارت اے تاں ایہ ثابت ہو سکدا اے، سوکھی اے۔ اصل وچ $\lexists[x][!B(x)]$ ہیربرانڈ والی فصلی عبارت دا منطقی نتیجہ اے۔ مثلاً ایہ !!a{proof} اے~$\Log{G3c}$ وچ اوس صورت دا جتھے $n=2$:
+\[
+\Axiom$!B(t_1) \fCenter \lexists[x][!B(x)], !B(t_1), !B(t_2)$
+\Axiom$!B(t_2) \fCenter \lexists[x][!B(x)], !B(t_1), !B(t_2)$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!B(t_1) \lor !B(t_2) \fCenter \lexists[x][!B(x)], !B(t_1), !B(t_2)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$!B(t_1) \lor !B(t_2) \fCenter \lexists[x][!B(x)], !B(t_2)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$!B(t_1) \lor !B(t_2) \fCenter \lexists[x][!B(x)]$
+\DisplayProof
+\]
+
+ہیربرانڈ والی فصلی عبارت کڈھن لئی، !!a{proof}~$\pi$ توں جیہڑا~$\Sequent
+\lexists[x][!B(x)]$ دا اے، اوہ صورت ویکھو جتھے سارے $\RightR{\lexists}$ استنباط، قطع توں بناں !!{proof}~$\pi$ وچ، آخر اُتے نیں:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$ \fCenter \lexists[x][!B(x)], !B(t_1), \dots, !B(t_n)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \fCenter \lexists[x][!B(x)], !B(t_2), \dots, !B(t_n)$
+\RightLabel{$(n-1) \times \RightR{\lexists}$}
+\Deduce$ \fCenter \lexists[x][!B(x)]$
+\DisplayProof
+\]
+جے ایہ سارے $\RightR{\lexists}$ استنباط نیں~$\pi$ وچ جیہناں وچ $\lexists[x][!B(x)]$ سرگردہ اے، تاں~$\pi_1'$ وچ ہور کوئی مسوّر والا استنباط نہیں۔ کیوں جے $!B(x)$ وچ ہور کوئی مسوّر نہیں تے آخری سیکوئنٹ دے کھبّے کوئی !!{formula}s نہیں۔ دوجے لفظاں وچ، $\fCenter \lexists[x][!B(x)], !B(t_1),
+\dots, !B(t_n)$،~$\pi$ دا درمیانا سیکوئنٹ اے۔ نالے چونکہ درمیانے سیکوئنٹ توں اُتّے کوئی مسوّر والا استنباط نہیں، ایس لئی اوہدے اُتلے سارے سیکوئنٹاں وچ $\lexists[x][!B(x)]$ اے تے ایہ موجودگیاں نہ سرگردہ نیں نہ مُکھ۔ سو ایہناں نوں !!{proof}~$\pi_1$ وچوں مٹا سکدے آں، تے!!a{proof} ملدا اے~$\fCenter !B(t_1), \dots, !B(t_n)$ دا۔ $n-1$ واری $\RightR{\lor}$ لا کے !!a{proof} ملدا اے ہیربرانڈ والی فصلی عبارت~$\Sequent !B(t_1) \lor \dots \lor !B(t_n)$ دا۔
+
+اوکڑ ایہ اے کہ قطع توں بناں !!{proof} وچ وی، جیہڑا $\Sequent \lexists[x][!B(x)]$ دا اے، اسیں ایہ نہیں منّ سکدے کہ سارے \RightR{\lexists} استنباط آخر اُتے اکّو جُٹ وچ نیں۔ ایہناں \RightR{\lexists} استنباطاں دے وچکار ایہو جیہے استنباط ہو سکدے نیں جیہناں وچ کوئی $!B(t_i)$ مُکھ اے۔ ایس لئی درمیانے سیکوئنٹ دا قضیہ چاہیدا اے۔
+
+\begin{thm}[درمیانے سیکوئنٹ دا قضیہ]\ollabel{thm:midsequent}
+جے اک \Log{G3c}-!!{proof}~$\pi$ اے $\Gamma \Sequent \Delta$ دا، جتھے سارے !!{formula}s، $\Gamma$ تے $\Delta$ وچ، مسوّر-مُڈھلے نیں، تاں اک !!a{proof}~$\pi'$ اے جیہدے وچ ایہو جیہا سیکوئنٹ $\Pi \Sequent \Lambda$ اے کہ اوہدے تھلّے سارے استنباط مسوّراں والے تے اُتّے سارے استنباط قضیائی نیں۔
+\end{thm}
+
+\begin{proof}
+~$\pi$ وچ مسوّر والے استنباط دا \emph{ترتیبی عدد} اوہدے تھلّے والے قضیائی استنباطاں دی گنتی نوں آکھو، تے~$o(\pi)$، $\pi$ دا ترتیبی عدد، اوہدے سارے مسوّر والے استنباطاں دے ترتیبی عدداں دا جوڑ اے۔ جے $o(\pi) = 0$، تاں کسے مسوّر والے استنباط دے تھلّے کوئی قضیائی استنباط نہیں، تے کم ہو گیا۔ کیوں جے سارے مسوّر والے استنباطاں دا اک ای مقدمہ اے، ایس لئی بس اک سبھ توں اُتلا مسوّر والا استنباط اے۔ اوہدا مقدمہ درمیانا سیکوئنٹ اے۔
+
+جے $o(\pi) > 0$، تاں سبھ توں تھلّا مسوّر والا استنباط چُنو جیہدا ترتیبی عدد $>0$ اے۔ چونکہ اوہدا ترتیبی عدد $>0$ اے، اوہدے تھلّے کوئی قضیائی استنباط ضرور اے۔ چونکہ اوہ سبھ توں تھلّا اے، ایس دا نتیجہ کسے مسوّر والے استنباط دا مقدمہ نہیں ہو سکدا۔ نہیں تاں اوہدے تھلّے والے دوجے مسوّر والے استنباط دے تھلّے وی کوئی قضیائی استنباط ہوندا۔ اسیں (کئی!) صورتاں وکھ کردے آں، ایس حساب نال کہ مسوّر والا استنباط کیہڑا اے تے اوہدے تھلّے قضیائی استنباط کیہڑا اے۔ چونکہ آخری سیکوئنٹ وچ بس مسوّر-مُڈھلے فارمولے نیں، مسوّر والے استنباط دا مُکھ فارمولا اگلے قضیائی استنباط وچ سرگردہ نہیں ہو سکدا۔ نہیں تاں اوس استنباط دے مُکھ فارمولے وچ اک مسوّر قضیائی جوڑ دے دائرے اندر ہوندا۔ ذیلی !!{formula} والی خاصیت نال ایہ ذیلی !!{formula}، آخری سیکوئنٹ دے کسے !!a{formula} دا، ہونا پینا سی۔ سو مسوّر والے استنباط دا مُکھ !!{formula} تھلّے والے قضیائی استنباط دے سیاق دا !!a{element} اے۔
+
+ایہ دو مثالاں نیں۔
+
+پہلاں منّ لو اک $\RightR{\lforall}$ اے جیہڑا $\LeftR{\lif}$ دے سجّے مقدمے اُتے مُکدا اے۔ فیر~$\pi$ دا متعلقہ ذیلی !!{proof}، ذیلی !!{proof}~$\pi_1$ وچ مُکدا اے۔
+\[
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma' \fCenter \Delta', \lforall[x][!A(x)], !B$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!C, \Gamma' \fCenter \Delta', !A(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$!C, \Gamma' \fCenter \Delta', \lforall[x][!A(x)]$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Gamma' \fCenter \Delta', \lforall[x][!A(x)]$
+\DisplayProof
+\]
+اسیں منّ سکدے آں کہ $\pi$ باقاعدہ اے، سو خاص متغیر~$c$،~$\pi_3$ توں باہر نہیں آؤندا۔ خاص کر ایہ $!B
+\lif !C$ یا~$\pi_2$ وچ نہیں آؤندا۔ ہُن ثبوت~$\pi_1'$ ویکھو:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma' \fCenter \Delta', \lforall[x][!A(x)], !A(c), !B$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!C, \Gamma' \fCenter \Delta', \lforall[x][!A(x)], !A(c)$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Gamma' \fCenter \Delta', \lforall[x][!A(x)], !A(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$!B \lif !C, \Gamma' \fCenter \Delta', \lforall[x][!A(x)], \lforall[x][!A(x)]$
+\DisplayProof
+\]
+جتھے $\pi_2'$،~$\pi_2$ توں سجّے پاسے~$!A(c)$ نال کمزور کر کے ملیا اے۔ (ایس نال کوئی استنباط نہیں ودھدا، خاص کر کوئی مسوّر والا استنباط نہیں جیہڑا ترتیبی عدد بدل دے۔ نالے~$\pi_2$ دی کوئی خاص متغیر والی شرط نہیں ٹُٹدی، کیوں جے~$!A(c)$ وچلا کوئی ثابت~$\pi_2$ وچ خاص متغیر وجوں نہیں ورتیا جاندا۔) \RightR{\lforall} دی خاص متغیر والی شرط ہن وی پوری اے، کیوں جے $c$،~$!B \lif !C$ وچ نہیں آؤندا۔
+
+سکیڑن دی قبولیت ورت کے !!a{proof}~$\pi_1''$ لیندے آں $!B \lif !C, \Gamma' \fCenter \Delta',
+\lforall[x][!A(x)]$ دا۔ $\RightR{\Contraction}$ دی قبولیت دا ثبوت، $\lforall[x][!A(x)]$ لئی، تے ایس ثبوت وچ ورتیا $\RightR{\lforall}$ دی اُلٹ دا ثبوت، کسے استنباط دا ترتیبی عدد نہیں بدل دے۔ ودھ توں ودھ استنباط مٹاندے نیں۔ سو~$\pi_1''$ وچ~$\pi_1$ توں ودھ مسوّر والے استنباط نہیں، تے~$\pi_1''$ دے ہر مسوّر والے استنباط دے تھلّے اوہنے ای قضیائی استنباط نیں جِنّے~$\pi_1$ وچ اوہدے میل کھاندے استنباط دے تھلّے سن۔ آخرلا \RightR{\lforall} ایس توں چھُٹ اے۔ اوہدے تھلّے اک \LeftR{\lif}،~$\pi$ وچ، سی جیہڑا اسیں اوہدے اُتّے چُک دِتّا اے،~$\pi_1''$ وچ۔ $\pi_1$ نوں $\pi$ وچ $\pi_1''$ نال بدلو۔ حاصل !!{proof} دا ترتیبی عدد گھٹ اے، کیوں جے گھٹ توں گھٹ $\RightR{\lforall}$ استنباط دا ترتیبی عدد (گھٹ توں گھٹ)~$1$ گھٹیا اے۔ ہُن استقرا دا مفروضہ لاؤ۔
+
+جتھے مسوّر والا استنباط \RightR{\lexists} اے، صورتاں ہور وی سوکھیاں نیں, کیوں جے سکیڑن دی لوڑ نہیں تے کسے خاص متغیر والی شرط دی فکر نہیں۔ مثلاً منّ لو $\RightR{\lexists}$ پچھوں $\RightR{\land}$ آؤندا اے (ایس واری کھبّے مقدمے وجوں)۔ متعلقہ ذیلی !!{proof}، $\pi_1$، اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !A(t), !B$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$!\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !B$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !B \land !C$
+\DisplayProof
+\]
+$\pi_1$ نوں~$\pi$ وچ $\pi_1'$ نال بدلو:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !A(t), !B$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !A(t), !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !A(t), !B \land !C$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma' \fCenter \Delta', \lexists[x][!A(x)], !B \land !C$
+\DisplayProof
+\]
+جتھے $\pi_3'$، $\pi_3$ توں سجّے پاسے~$!A(t)$ نال کمزور کر کے ملیا اے۔ ایس کمزور کرن وچ~$!A(t)$ نوں بس ہر سیکوئنٹ دے سجّے شامل کیتا جاندا اے،~$\pi_3$ وچ۔ سو کسے مسوّر والے استنباط دا ترتیبی عدد نہیں بدلدا۔~$\pi'$ وچ مسوّر والے استنباطاں دے ترتیبی عدد اوہی نیں جیہڑے~$\pi$ وچ نیں، بس \RightR{\lexists} استنباط دا ترتیبی عدد، جیہدی تھاں~\RightR{\land} نال بدلی سی،~$1$ گھٹیا اے۔ استقرا دا مفروضہ لگدا اے۔
+\end{proof}
+
+\begin{prob}
+\olref{thm:midsequent} دے ثبوت دیاں اوہ صورتاں دسو جیہناں وچ \LeftR{\lexists}،~\RightR{\lif} دے مقدمے اُتے مُکدا اے، تے جیہناں وچ \LeftR{\lforall}،~\LeftR{\lor} دے کھبّے مقدمے اُتے مُکدا اے۔
+\end{prob}
+
+\begin{proof}[ہیربرانڈ دے قضیے دا ثبوت]
+منّ لو $\pi$، $\Sequent \lexists[x][!A(x)]$ اُتے مُکدا اے۔ \olref{thm:midsequent} نال $\pi$ نوں !!a{proof}~$\pi'$ وچ بدل سکدے آں جیہدے وچ درمیانا سیکوئنٹ~$S$ لازماً ایس شکل دا اے:
+\[\Sequent
+\lexists[x][!A(x)], !A(t_1), \dots, !A(t_n).\]
+چونکہ $S$ توں اُتّے سارے استنباط قضیائی نیں، $\lexists[x][!A(x)]$،~$S$ توں اُتلے کسے استنباط وچ مُکھ نہیں ہو سکدا۔ چونکہ ایہ جوہری نہیں، ایہ مسلّمے وچ مُکھ نہیں ہو سکدا۔ چونکہ $\lexists[x][!A(x)]$، $!A(t_1)$ دا حقیقی ذیلی فارمولا نہیں ہو سکدا (چیتے کرو $!A(x)$ وچ کوئی مسوّر نہیں)، ایس لئی ایہ~$S$ توں اُتّے سرگردہ وی نہیں ہو سکدا۔ سو $\lexists[x][!A(x)]$ نوں~$S$ اُتے مُکّن والے ذیلی !!{proof} وچوں مٹاؤن نال درست !!{proof} ملدا اے $\Sequent !A(t_1), \dots, !A(t_n)$ دا۔ ایہدے توں !!a{proof} مل سکدا اے $\Sequent !A(t_1) \lor \dots \lor !A(t_n)$ دا، $n-1$ واری $\RightR{\lor}$ لا کے۔
+\end{proof}
+
+% \begin{prob}
+% Find a Herbrand disjunction of $\lexists[x][\lforall[y][(!A(x) \lif
+% !A(y))]]$ by finding a cut-free !!{proof} of $\Sequent
+% \lexists[x][\lforall[y][(!A(x) \lif !A(y))]]$ and applying the
+% transformation in \olref{thm:midsequent} to find a midsequent (if
+% necessary).
+% \end{prob}
+
+\end{document}

@@ -1,0 +1,160 @@
+% part: intuitionistic-logic
+% chapter: propositions-as-types
+% section: reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{red}
+
+\olsection{تقلیل}
+
+قدرتی اخذ دے !!{derivation}s وچ، جے !!a{introduction} قاعدے توں پچھوں !!a{elimination} قاعدہ آوے، تاں ایہ اک چکر اے جیہڑا «گھٹایا» جا سکدا اے۔ مثال لئی $\Intro{\land}$ توں پچھوں $\Elim{\land}$ آوے تاں دونے «اک دوجے نوں کٹ دیندے نیں»، کیونکہ $\Elim{\land}$ دا نتیجہ ہمیشہ اوس عطف دے دو جزواں وچوں اک اے جیہڑا \Intro{\land} بناؤندا اے، تے $\Intro{\land}$ دے مقدمے اوہ دونے جزو نیں۔ سو جے سانوں !!a{derivation} دوواں وچوں کسے جزو دا چاہیدا اے، تاں اسیں اوہی !!{derivation} ورت سکدے آں، عطف نوں شامل کر کے فیر ہٹاؤن دی لوڑ نہیں۔ ایہ ملدا اے:
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \RightLabel{$\Intro{\land}$}
+  \BinaryInfC{$!A_1 \land !A_2$}
+  \RightLabel{$\Elim{\land}_i$}
+  \UnaryInfC{$!A_i$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta_i$}
+  \DeduceC{$!A_i$}
+  \DisplayProof
+\end{gather*}
+
+ایس سادے کرن نال جُڑے ثبوت ٹرماں اُتے وی تقلیل دا ایہو جیہا تعلق سوچ سکدے آں۔ جے $N_1$،~$\delta_1$ دا ثبوت ٹرم اے تے $N_2$،~$\delta_2$ دا، تاں اسیں آکھ سکدے آں کہ کھبّے پاسے دے ثبوت دا ثبوت ٹرم (اک قدم وچ) سجّے پاسے دے ثبوت دے ٹرم تک گھٹ جاندا اے:
+\[
+  \proj{i}{\pair{N_1, N_2}} \redone N_i
+\]
+نوع بندی والے لامبڈا کیلکولس وچ ایہ حاصلِ ضرب دی نوع لئی \emph{بیٹا تقلیل} دا قاعدہ اے۔
+
+قدرتی اخذ وچ استنباطاں دے ایہو جیہے جوڑے نوں \emph{قطع} آکھدے آں، جیویں \Intro{\land} پچھوں \Elim{\land}، یعنی ایسا جوڑا جیہڑا گھٹایا جا سکدا اے۔ نوع بندی والے لامبڈا کیلکولس وچ $\redone$ دے کھبّے پاسے دے ٹرم نوں \emph{ریڈیکس} تے سجّے پاسے دے ٹرم نوں \emph{کانٹریکٹم} آکھدے آں۔ بناں نوع بندی والے لامبڈا کیلکولس وچ صرف $(\lambd[x][N])Q$ نوں ریڈیکس منّیا جاندا اے۔ نوع بندی والے لامبڈا کیلکولس وچ نحوی بناوٹ نوں $ \pair{N}{M}$، $\proj{i}{N}$، $\inj{i}{!A}{N}$، $\dcase{N}{x_1}{M_1}{x_2}{M_2}$ تے $\abort{!A}{N}$ والے ٹرماں تک ودھایا جاندا اے، تے ایہناں نال میل کھاندے ریڈیکس وی نیں۔
+
+ایویں ای فصل لئی وی تقلیل اے:
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\delta_i$}
+  \DeduceC{$!C$}
+  \DisplayProof
+\end{gather*}
+ایہ ثبوت ٹرماں اُتے ایس تقلیل نال میل کھاندا اے:
+\begin{gather*}
+  \dcase{\inj[!A_i]{i}{M}}{x_1}{N_1}{x_2}{N_2} \redone \Subst{N_i}{M}{x_i}
+\end{gather*}
+جتھے $M$،~$\delta$ دا ثبوت ٹرم اے تے $N_i$،~$\delta_i$ دا۔ ایہ جوڑ دیاں نوعاں لئی بیٹا تقلیل دا قاعدہ اے۔ ایتھے $\Subst{M}{N_i}{x}$ دا مطلب اے متغیر~$x$ دیاں ساریاں آزاد موجودگیاں نوں $M$ وچ~$N_i$ نال بدل دیو۔
+
+فنکشن دی نوع دی تقلیل، اوہ چکر ہٹاؤن نال میل کھاندی اے جتھے $\Intro\lif$ توں پچھوں $\Elim\lif$ آؤندا اے۔
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{$\Discharge{!A}{x}$}
+  \RightLabel{$\delta$}
+  \DeduceC{$!B$}
+  \DischargeRule{$\Intro{\lif}$}{x}
+  \UnaryInfC{$!A \lif !B$}
+  \AxiomC{}
+  \RightLabel{$\delta'$}
+  \DeduceC{$!A$}
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInfC{$!B$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta'$}
+  \DeduceC{$!A$}
+  \RightLabel{$\delta$}
+  \DeduceC{$!B$}
+  \DisplayProof
+\end{gather*}
+ثبوت ٹرماں لئی ایہ عام بیٹا تقلیل اے:
+\begin{gather*}
+  (\lambd[\typeof{x}{!A}][N]M)
+  \redone \Subst{N}{M}{x}
+\end{gather*}
+
+!!{proof}s اُتے تقلیل والیاں تبدیلیاں توں علاوہ، اسیں تھاں بدلّن والیاں تبدیلیاں وی سوچ سکدے آں۔ ایہ اوہناں (ذیلی) !!{proof}s اُتے لگدیاں نیں جیہڑے \Elim{\lor} توں پچھوں ہور !!{elimination} قاعدے اُتے مُکدے نیں۔ مثال:
+\begin{multline*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \\
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C_i$}
+  \DisplayProof
+\end{multline*}
+جے $ \delta$، $\delta_1$ تے $\delta_2$ دے ثبوت ٹرم بالترتیب $M$، $N_1$ تے $N_2$ نیں، تاں ثبوت ٹرماں، یعنی $\lambd$ ٹرماں لئی میل کھاندا تقلیل دا قاعدہ ایہ اے:
+\[
+  \proj{i}{\dcase{M}{x_1}{N_1}{x_2}{N_2}} \redone 
+\dcase{M}{x_1}{\proj{i}{N_1}}{x_2}{\proj{i}{N_2}}
+\]
+
+اسیں چکر !!{proof}s دے آخر توں ہٹاؤن دے نال نال !!{proof}s دے اندر توں وی ہٹا سکدے آں۔ ایس لئی تقلیل والی تبدیلی اوس ذیلی !!{proof} اُتے لاؤ جیہڑا چکر اُتے مُکدا اے۔ ایویں ای $\beta$-تقلیل $\lambd$-ٹرماں دے ذیلی ٹرماں اُتے وی لگدی اے۔ جے $N$، $M$ دا ذیلی ٹرم اے تے $N \redone
+N'$، تاں ذیلی ٹرم $N$ نوں~$M$ وچ $N'$ نال بدل کے $M'$ حاصل کر سکدے آں۔ ایس صورت وچ اسیں $M \redone M'$ وی لکھدے آں۔ جے اک لڑی $M = M_1
+\redone M_2 \redone M_2 \redone \dots \redone M_k = M'$ اے (ایہ صورت وی شامل اے جتھے $k=1$، یعنی $M = M'$)، تاں اسیں $M \red M'$ لکھدے آں۔
+
+!!{proof}، جیہدے کسے وی ذیلی !!{proof} اُتے کوئی تبدیلی نہیں لگ سکدی، نوں \emph{نارمل} آکھدے آں۔ ایویں ای $\lambd$-ٹرم جیہدے اُتے (یا جیہدے کسے ذیلی ٹرم اُتے) کوئی تبدیلی نہیں لگ سکدی، \emph{نارمل} اے۔ نارمل $\lambd$-ٹرم نوں \emph{نارمل روپ} وی آکھدے آں۔
+
+\end{document}

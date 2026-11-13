@@ -1,0 +1,146 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: representable-comp
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{req}{rpc}
+\olsection{$\Th{Q}$ وچ قابلِ نمائندگی فنکشن قابلِ حساب نیں}
+
+اسیں ثابت کراں گے کہ جیہڑے فنکشن دی~$\Th{Q}$ وچ نمائندگی
+ہو سکدی اے، اوہ قابلِ حساب اے۔ پہلاں سانوں~$\Th{Q}$ وچ
+قابلِ نمائندگی فنکشناں بارے اک معاون قضیہ ثابت کرنا پینا اے۔
+
+\begin{lem}\ollabel{lem:rep-q}
+  جے $f(x_0,
+  \dots, x_k)$ دی~$\Th{Q}$ وچ نمائندگی ہو سکدی اے،
+  تاں کوئی !!a{formula}~$!A(x_0, \dots, x_k, y)$ ایہو جیہا
+موجود اے کہ
+  \[
+  \Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k}, \num{m})
+  \quad\text{جے تے صرف جے}\quad m = f(n_0, \dots, n_k).
+  \]
+\end{lem}
+
+\begin{proof}
+  «جے» والی سمت
+\olref[int]{defn:representable-fn}\olref[int]{defn:rep:a}
+اے۔ «صرف جے» والی سمت لئی فرض
+کرو $\Th{Q} \Proves !A_f(\num{n_0},
+\dots, \num{n_k}, \num{m})$، پر
+$m \neq f(n_0, \dots, n_k)$۔ من لو $l =
+f(n_0, \dots, n_k)$۔ شرط
+\olref[int]{defn:representable-fn}\olref[int]{defn:rep:a}
+مطابق، $\Th{Q}
+\Proves !A_f(\num{n_0}, \dots, \num{n_k}, \num{l})$۔
+شرط
+\olref[int]{defn:representable-fn}\olref[int]{defn:rep:b}
+مطابق، ایہ وی ثابت ہوندا اے:
+$\lforall[y][(!A_f(\num{n_0}, \dots, \num{n_k}, y) \lif \num{l} =
+y)]$۔ منطق تے ایس مفروضے نوں ورت کے کہ
+$\Th{Q} \Proves
+!A_f(\num{n_0}, \dots, \num{n_k}, \num{m})$، سانوں
+ایہ ملدا اے کہ $\Th{Q}
+\Proves \eq[\num{l}][\num{m}]$۔ دوجے پاسے،
+\olref[bre]{lem:q-proves-neq} مطابق، $\Th{Q} \Proves
+\eq/[\num{l}][\num{m}]$۔ ایس توں نکلدا اے کہ $\Th{Q}$ بے تضاد نہیں۔ پر ایہ ہو نہیں سکدا،
+کیوں جے معیاری نمونہ $\Th{Q}$ اُتے پورا اُتردا اے (ویکھو
+\olref[int][def]{def:standard-model})،
+$\Sat{N}{\Th{Q}}$؛ تے صحت مندی دے قضیے مطابق جیہڑے نظریے کسے نمونے وچ پورے اتردے نیں، اوہ ہمیشہ بے تضاد ہوندے نیں
+(\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},
+prfSC/{fol:seq:sou:cor:consistency-soundness},
+prfND/{fol:ntd:sou:cor:consistency-soundness},
+prfTab/{fol:tab:sou:cor:consistency-soundness}})۔
+\end{proof}
+
+\begin{lem}
+جیہڑے فنکشن دی $\Th{Q}$ وچ نمائندگی ہو سکدی اے، اوہ قابلِ حساب اے۔
+\end{lem}
+
+\begin{proof}
+پہلاں ایس گل دی سِدھی وجہ ویکھیے۔~$f$ دی قدر کڈھن لئی
+اسیں حساب دی زبان وچ سارے ممکن !!{derivation}s~$\delta$ دی
+فہرست بناواں گے۔ ایہ مشینی طریقے نال ہو سکدا اے۔ ہر اک نوں
+پرکھاں گے کہ اوہ ایس نظریے دے مسلّمیاں توں !!a{derivation} اے
+جیہدا آخرلا !!a{formula} ایس روپ وچ ہووے یا نہیں:
+~$!A_f(\num{n_0}, \dots,
+\num{n_k}, \num{m})$ (یعنی
+\olref{lem:rep-q} والا !!{formula}، جیہڑا $f$
+دی~$\Th{Q}$ وچ نمائندگی کردا اے)۔ جے ہووے،
+تاں \olref{lem:rep-q} مطابق
+$m = f(n_0, \dots, n_k)$، تے سانوں~$f$
+دی قدر مل گئی۔ تلاش ضرور رُکے گی، کیوں جے
+$\Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k},
+\num{f(n_0, \dots, n_k)})$؛ سو آخرکار سانوں
+ٹھیک قسم دا اک $\delta$ مل جائے گا۔
+
+ایہ طریقہ ہلے پوری طرح متعین نہیں، کیوں جے ایہ نرے عدداں دی تھاں !!{derivation}s
+تے !!{formula}s اُتے عمل کردا اے، تے اسیں
+ایہ وی ٹھیک ٹھیک نہیں دسّیا کہ «سارے ممکن
+!!{derivation}s دی فہرست بنانا» مشینی طریقے
+نال کیوں ممکن اے۔ پر، جیویں اسیں ویکھ چکے آں، ٹرماں، !!{formula}s تے !!{derivation}s
+نوں گوڈل نمبراں نال کوڈ کیتا جا سکدا اے۔
+اسیں حساب دا اک ٹھیک طرح متعین نمونہ، یعنی
+عمومی بازگشتی فنکشن، وی متعارف کرا چُکے
+آں۔ تے اسیں ویکھیا اے کہ تعلق
+$\Prf[\Th{Q}](d,y)$ (جیہڑا عین اوس ویلے
+سچ اے جدوں $d$ اوس !!a{derivation} دا گوڈل نمبر ہووے جیہڑا گوڈل
+نمبر~$y$ والے !!{formula} نوں~$\Th{Q}$ دے مسلّمیاں توں کڈھدا اے)
+(بنیادی) بازگشتی اے۔ ہور بنیادی
+بازگشتی فنکشن جیہڑے سانوں چاہیدے
+ہون گے، اوہ $\fn{num}$
+(\olref[art][trm]{prop:num-primrec}) تے
+$\fn{Subst}$
+(\olref[art][sub]{prop:subst-primrec})
+نیں۔ انہاں توں~$f$ نوں کمترین قدر
+دی تلاش راہیں تعریف کیتا جا سکدا
+اے؛ سو $f$ بازگشتی اے۔
+
+پہلاں ایہ تعریف کرو:
+\begin{multline*}
+  A(n_0, \dots, n_k, m) = \\
+  \fn{Subst}(\fn{Subst}(\dots\fn{Subst}(\Gn{!A_f}, \fn{num}(n_0), \Gn{x_0}),\\ \dots),
+  \fn{num}(n_k),  \Gn{x_k}), \fn{num}(m), \Gn{y})
+\end{multline*}
+ایہ لکھت اوکھی لگدی اے۔ ایہ فنکشن
+$A(n_0, \dots, n_k,
+m) = \Gn{!A_f(\num{n_0}, \dots, \num{n_k}, \num{m})}$
+اے۔
+
+ہن تعلق~$R(n_0, \dots, n_k, s)$ ویکھو،
+جیہڑا اُدوں قائم اے جدوں $(s)_0$ اوس !!a{derivation} دا گوڈل نمبر
+ہووے جیہڑا~$\Th{Q}$ توں
+$!A_f(\num{n_0}, \dots, \num{n_k}, \num{(s)_1})$
+دا اخذ اے:
+\[
+R(n_0, \dots, n_k, s) \quad\text{جے تے صرف جے}\quad \Prf[\Th{Q}]((s)_0, A(n_0,
+\dots, n_k, (s)_1))
+\]
+جے اسیں اک~$s$ لبھ سکّیے جیہدے لئی
+$R(n_0, \dots, n_k, s)$ سچ ہووے،
+تاں سانوں عدداں دا اک جوڑا مل گیا---$(s)_0$ تے~$(s)_1$---ایہو جیہا کہ $(s)_0$،~$A_f(\num{n_0}, \dots,
+\num{n_k}, (s)_1)$ دے
+!!a{derivation} دا گوڈل نمبر اے۔
+سو~$s$ دی تلاش غیر رسمی ثبوت
+وچ $d$ تے $m$ دی جوڑی لبھّن
+وانگ اے۔ تے ایہوجیہا~$s$
+«لبھّن» والا قابلِ حساب فنکشن
+باقاعدہ کمترین قدر دی تلاش
+راہیں تعریف کیتا جا سکدا اے۔
+دھیان دیو کہ $R$ باقاعدہ اے۔ ہر $n_0$، \dots، $n_k$ لئی
+!!a{derivation}~$\delta$ موجود
+اے جیہڑا ایہ دکھاندا اے کہ
+$\Th{Q} \Proves !A_f(\num{n_0}, \dots,
+\num{n_k}, \num{f(n_0, \dots, n_k)})$؛
+سو $R(n_0, \dots, n_k, s)$،
+$s = \tuple{\Gn{\delta}, f(n_0, \dots, n_k)}$
+لئی سچ اے۔ ایس لئی اسیں $f$
+نوں ایویں لکھ سکدے آں:
+\[
+f(n_0,\dots,n_{k}) = (\umin{s}{R(n_0, \dots, n_k, s)})_1.
+\]
+\end{proof}
+
+\end{document}

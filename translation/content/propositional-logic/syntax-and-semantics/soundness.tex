@@ -1,0 +1,27 @@
+% Part: propositional-logic
+% Chapter: propositional-logic 
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{prp}{snd}
+
+\olsection{قضیاتی منطق دی صحت مندی}
+
+\begin{thm}[صحت مندی]
+\ollabel{thm:soundness}
+جے $\Gamma\Proves!A$، تاں $\Gamma \Entails !A$۔
+\end{thm}
+
+\begin{proof}
+قضیاں اُتے استقرا نال۔ جے $!A$ مسلّمہ اے، تاں $\Entails
+!A$ تے ایس لئی بدرجہ اولیٰ $\Gamma \Entails!A$۔ ایویں ای جے $!A \in \Gamma$، تاں $\Gamma \Entails!A$۔ استقرائی قدم لئی منّ لو $!A$، \emph{شرطیہ توں نتیجہ کڈھن دے قاعدے} نال $!C$ تے $!C\lif!A$ توں ملیا اے۔ استقرا دے مفروضے دے طور اُتے ایہ وی منّ لو کہ قضیہ $!C\lif !A$ تے $!C$ لئی ٹھیک اے۔ \olref[sem]{prop:semanticalfacts} دی تِیجی مدّ توں مطلوبہ نتیجہ ملدا اے۔
+\end{proof}
+
+\begin{cor}
+جے $\Gamma$ پورا ہون جوگا اے، تاں $\Gamma$ بے تضاد اے۔ سو قضیاتی منطق بے تضاد اے۔
+\end{cor}
+
+\end{document}

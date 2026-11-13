@@ -1,0 +1,218 @@
+% Part: computability
+% Chapter: recursive-functions
+% Section: pr-relations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cmp}{rec}{prr}
+\olsection{بنیادی بازگشتی تعلق}
+
+
+\begin{defn}
+تعلق $R(\vec x)$ نوں بنیادی بازگشتی
+اوہدوں کہندے نیں جدوں اوہدا خصوصیتی
+فنکشن
+\[
+\Char{R}(\vec x) = \left\{
+  \begin{array}{ll}
+  1 & \mbox{جے $R(\vec x)$ درست ہووے} \\
+  0 & \mbox{ورنہ}
+  \end{array}
+\right.
+\]
+بنیادی بازگشتی ہووے۔
+\end{defn}
+
+دوجے لفظاں وچ، جدوں اسی بنیادی
+بازگشتی تعلق $R(\vec x)$ دی گل
+کردے آں، تاں مراد اوہ تعلق اے
+جیہڑا $\Char{R}(\vec x) = 1$
+دے روپ وچ لکھیا جا سکدا اے،
+جتھے $\Char{R}$ اک بنیادی
+بازگشتی فنکشن اے جیہڑا ہر انپٹ
+اُتے یا 1 یا 0 واپس دیندا اے۔
+مثال لئی، تعلق $\fn{IsZero}(x)$
+اوہدوں تے صرف اوہدوں درست اے
+جدوں $x = 0$ ہووے؛ ایہ فنکشن
+$\Char{\fn{IsZero}}$ دے مطابق اے،
+جیہڑا بنیادی بازگشت راہیں
+ایویں متعین اے:
+\begin{align*}
+\Char{\fn{IsZero}}(0) & = 1,\\
+\Char{\fn{IsZero}}(x+1) & = 0.
+\end{align*}
+
+ایہ صاف ہونا چاہیدا اے کہ تعلقاں
+نوں ہور بنیادی بازگشتی فنکشناں
+نال ترکیب دے روپ وچ ورتیا جا
+سکدا اے۔ ایس لئی ہیٹھلے تعلق
+وی بنیادی بازگشتی نیں:
+\begin{enumerate}
+\item برابری دا تعلق، $x = y$،
+  جیہڑا $\fn{IsZero}(\left|x -
+  y\right|)$ راہیں متعین اے۔
+\item چھوٹا یا برابر ہوون دا تعلق،
+  $x \leq y$، جیہڑا $\fn{IsZero}(x
+  \tsub y)$ راہیں متعین اے۔
+\end{enumerate}
+
+
+\begin{prop}
+  بنیادی بازگشتی تعلقاں دا سیٹ
+  بولیائی عملاں تحت بند اے؛ یعنی
+  جے $P(\vec x)$ تے $Q(\vec x)$
+  بنیادی بازگشتی نیں، تاں
+  ایہ وی نیں:
+  \begin{enumerate}
+  \item $\lnot P(\vec x)$
+  \item $P(\vec x) \land Q(\vec x)$
+  \item $P(\vec x) \lor Q(\vec x)$
+  \item $P(\vec x) \lif Q(\vec x)$
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  فرض کرو $P(\vec x)$ تے $Q(\vec x)$
+  بنیادی بازگشتی نیں، یعنی اوہناں دے
+  خصوصیتی فنکشن $\Char{P}$ تے
+  $\Char{Q}$ ایہو جیہے نیں۔ سانوں
+  دکھانا اے کہ $\lnot P(\vec x)$
+  وغیرہ دے خصوصیتی فنکشن وی
+  بنیادی بازگشتی نیں:
+  \[
+  \Char{\lnot P}(\vec x) = \begin{cases}
+    0 & \text{جے $\Char{P}(\vec x) = 1$ ہووے}\\
+    1 & \text{ورنہ}
+  \end{cases}
+  \]
+  اسی $\Char{\lnot P}(\vec x)$
+  نوں $1 \tsub \Char{P}(\vec x)$
+  دے روپ وچ متعین کر سکدے آں:
+  \[
+  \Char{P \land Q}(\vec x) = \begin{cases}
+    1 & \text{جے $\Char{P}(\vec x) = \Char{Q}(\vec x) = 1$ ہووے}\\
+    0 & \text{ورنہ}
+  \end{cases}
+  \]
+  اسی $\Char{P \land Q}(\vec x)$
+  نوں $\Char{P}(\vec x) \cdot
+  \Char{Q}(\vec x)$ یا
+  $\fn{min}(\Char{P}(\vec x), \Char{Q}(\vec
+  x))$ دے روپ وچ متعین کر سکدے آں۔
+  اِس طرح،
+  \begin{align*}
+    \Char{P \lor Q}(\vec x) & = \fn{max}(\Char{P}(\vec x), \Char{Q}(\vec x)) \text{ تے}\\
+    \Char{P \lif Q}(\vec x) & = \fn{max}(1 \tsub
+  \Char{P}(\vec x), \Char{Q}(\vec x)).
+  \end{align*}
+\end{proof}
+
+\begin{prop}
+  بنیادی بازگشتی تعلقاں دا سیٹ
+  محدود مسوّریت تحت بند اے؛ یعنی
+  جے $R(\vec x, z)$ بنیادی
+  بازگشتی تعلق اے، تاں ایہ تعلق
+  وی بنیادی بازگشتی نیں:
+  \begin{align*}
+    & \bforall{z < y}{R(\vec x, z)} \text{ تے}\\
+    & \bexists{z < y}{R(\vec x, z)}.
+  \end{align*}
+  $\bforall{z < y}{R(\vec x, z)}$
+  ، $\vec x$ تے $y$ لئی اوہدوں
+  تے صرف اوہدوں درست اے جدوں
+  $R(\vec x, z)$ ہر اوہ~$z$
+  لئی درست ہووے جیہڑا~$y$
+  توں چھوٹا اے؛ اِسے طرح
+  $\bexists{z < y}{R(\vec x, z)}$
+  لئی وی متعلقہ وجودی شرط اے۔
+\end{prop}
+
+\begin{proof}
+  رواجاً اسی $\bforall{z < 0}{R(\vec x, z)}$
+  نوں درست منّدے آں (سادہ وجہ
+  ایہ اے کہ کوئی $z$،~$0$
+  توں چھوٹا نہیں) تے
+  $\bexists{z < 0}{R(\vec x, z)}$
+  نوں غلط منّدے آں۔ محدود کلی
+  مسوّر محدود حاصلِ ضرب یا
+  وار وار گھٹ قدر وانگ کم کردا
+  اے؛ یعنی جے $P(\vec x, y) \defiff \bforall{z <
+  y}{R(\vec x, z)}$، تاں
+  $\Char{P}(\vec x, y)$ ایویں
+  متعین کیتا جا سکدا اے:
+  \begin{align*}
+    \Char{P}(\vec x, 0) & = 1\\
+    \Char{P}(\vec x, y+1) & =
+    \fn{min}(\Char{P}(\vec x, y), \Char{R}(\vec x, y)).
+  \end{align*}
+  محدود وجودی مسوّریت نوں
+  اِسے طرح $\fn{max}$ ورت کے
+  متعین کیتا جا سکدا اے۔
+  یا فیر محدود کلی مسوّریت
+  توں ایہ ہم ارزی ورت کے:
+  $\bexists{z < y}{R(\vec x, z)}
+  \liff \lnot \bforall{z < y}{\lnot R(\vec x, z)}$۔
+  غور کرو کہ، مثال لئی،
+  $\bexists{x \leq y}{\dots
+  x\dots}$ دے روپ دا محدود
+  مسوّر $\bexists{x < y+1}{\dots x \dots}$
+  دے برابر اے۔
+\end{proof}
+
+\begin{prob}
+  دکھاؤ کہ تِن-جگہ تعلق $x \equiv y \mod n$
+  (یعنی modulo~$n$ دے حساب نال مطابقت)
+  بنیادی بازگشتی اے۔
+\end{prob}
+
+اک ہور کم آؤن والا بنیادی بازگشتی
+فنکشن شرطی فنکشن $\fn{cond}(x,y,z)$
+اے، جیہڑا ایویں متعین اے:
+\begin{align*}
+  \fn{cond}(x,y,z) & = \begin{cases}
+  y & \text{جے $x = 0$ ہووے} \\
+  z & \text{ورنہ}.
+\end{cases}
+\intertext{ایہ بازگشتی طور اُتے ایویں متعین اے}
+\fn{cond}(0,y,z) & = y,\\
+\fn{cond}(x+1,y,z) & = z.
+\end{align*}
+ایس نوں ورت کے بنیادی بازگشتی
+تعلقاں راہیں صورتاں دے حساب
+نال بنیادی بازگشتی فنکشناں
+دیاں تعریفاں دا جواز دتا جا
+سکدا اے:
+
+\begin{prop}
+جے $g_0(\vec x)$، \dots،~$g_m(\vec x)$
+بنیادی بازگشتی فنکشن نیں، تے
+$R_0(\vec x)$، \dots، $R_{m-1}(\vec x)$
+بنیادی بازگشتی تعلق نیں، تاں
+ہیٹھ تعریف کیتا فنکشن $f$
+\[
+f(\vec x) = \begin{cases}
+    g_0(\vec x) & \text{جے $R_0(\vec{x})$ ہووے} \\
+    g_1(\vec x) & \text{جے $R_1(\vec{x})$ ہووے تے $R_0(\vec{x})$ نہ ہووے} \\
+    \vdots & \\
+    g_{m-1}(\vec x) & \text{جے $R_{m-1}(\vec{x})$ ہووے تے پچھلیاں وچوں کوئی شرط پوری نہ ہووے}
+    \\
+    g_m(\vec x) & \mbox{ورنہ}
+\end{cases}
+\]
+وی بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  جدوں $m = 1$ ہووے، ایہ بس
+  ایس طرح متعین فنکشن اے:
+  \[
+  f(\vec x) = \fn{cond}(\Char{\lnot R_0}(\vec x),g_0(\vec x),g_1(\vec
+  x)).
+  \]
+  جے $m$، $1$ توں وڈا ہووے،
+  تاں اِس روپ دیاں تعریفاں
+  دی ترکیب کر سکدے آں۔
+\end{proof}
+\end{document}

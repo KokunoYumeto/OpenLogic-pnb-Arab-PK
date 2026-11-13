@@ -1,0 +1,51 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: valuations-sat
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{val}
+
+\olsection{\usetoken{P}{valuation} تے پورا اترنا}
+
+\begin{defn}[!!^{valuation}s]
+منّ لو $V$ صداقتی قدراں دا سیٹ اے۔ \emph{!!{valuation}}،
+جیہڑی $\Lang{L}$ توں~$V$ وچ اے، اوہ فنکشن~$\pAssign{v}$ اے
+جیہڑا !!a{element}~$V$ وچوں زبان دے !!{propositional variable}s
+وچوں ہر اک نوں دیندا اے، یعنی $\pAssign{v} \colon
+\PVar \to V$۔
+\end{defn}
+
+\begin{defn}\ollabel{defn:pValue}
+  فرض کرو !!a{valuation}~$\pAssign{v}$ صداقتی قدراں دے
+  سیٹ~$V$ وچ اے، تے ایہ سیٹ کئی قدراں والی منطق~$\Log L$ دا اے۔
+  فیر قدر کڈھن والا فنکشن $\pValue{v} \colon \Frm[L] \to V$
+  استقرا نال ایویں متعین کرو۔
+  \begin{enumerate}
+    \item $\pValue{v}(\Obj p_n) = \pAssign{v}(\Obj p_n)$۔
+    \item جے $\star$ اک $0$-مقامی رابطہ اے، تاں $\pValue{v}(\star)  = \tf{\star}[\Log L]$۔
+    \item جے $\star$ اک $n$-مقامی رابطہ اے، تاں
+    \[
+      \pValue{v}(\star(!A_1, \dots, !A_n)) = \tf{\star}[\Log L]
+      (\pValue{v}(!A_1), \dots, \pValue{v}(!A_n)).
+    \]
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}[پورا اترنا]
+\ollabel{defn:satisfaction} !!{formula}~$!A$،
+!!a{valuation}~$\pAssign{v}$ نال \emph{پورا اتردا اے}، یعنی
+$\pSat{v}{!A}[\Log L]$، اُدوں تے صرف اُدوں جدوں
+$\pValue{v}(!A)[\Log L] \in V^+$، جتھے $V^+$، منطق~$\Log L$
+دیاں مقرر صداقتی قدراں دا سیٹ اے۔
+
+  اسیں $\pSat/{v}{!A}[\Log L]$ دا مطلب «$\pSat{v}{!A}[\Log
+  L]$ نہیں» لیندے آں۔ جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں
+  $\pSat{v}{\Gamma}[\Log
+  L]$ اُدوں تے صرف اُدوں جدوں $\pSat{v}{!A}[\Log L]$ ہووے
+  ہر~$!A \in \Gamma$ لئی۔
+\end{defn}
+
+\end{document}

@@ -1,0 +1,114 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: sequents
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{seq}
+
+\olsection{سیکوئنٹاں نال قدرتی اخذ۔ \Log{N2c} تے~\Log{N2i}}
+
+!!^a{proof}~$\delta$، \Log{G1c} یا \Log{G1i} وچ، وکھاؤندا اے کہ اوہدا آخری !!{formula}~$!A$ اوہدے کھُلّے مفروضیاں توں نکلدا اے۔ جے $\Gamma$ اوہناں !!{formula}s~$!B$ دا سیٹ اے جیہناں لئی $!B^x$،~$\delta$ وچ کھُلّا مفروضہ اے، تاں ایہ $\delta \Proves \Gamma
+\Sequent !A$ لکھ سکدے آں۔ ایس توں لگدا اے کہ سیکوئنٹاں لئی وی قدرتی اخذ دا نظام لکھ سکدے آں۔ ایہو جیہے نظام وچ ہر سیکوئنٹ ایہ دسدا اے کہ سجّے والا !!{formula} کیہڑے کھُلّے مفروضیاں اُتے ٹِکدا اے، یعنی سیکوئنٹ اُتے مُکّن والے ذیلی !!{proof} وچ کیہڑے مفروضے کھُلّے نیں۔ ایہ سیکوئنٹاں نال قدرتی اخذ اے، یا «سیکوئنٹ طرز وچ» قدرتی اخذ۔ حاصل نظاماں نوں \Log{N2c} تے~\Log{N2i} آکھدے آں۔
+
+\Log{N1} تے \Log{N2} دا میل ہور نیڑا کرن لئی، کھبّے پاسے دے سیٹ~$\Gamma$ نشان لگے !!{formula}s~$x:!B$ دے منّ لئیے۔ چونکہ \Log{N1} دے قاعدے بس مقدمیّاں وچلے !!{formula}s اُتے، یعنی آخری !!{formula}s سدھے ذیلی !!{proof}s دے اُتے کم کردے نیں، ایس لئی \Log{N2} دے قاعدے بس سیکوئنٹ دی تالی اُتے کم کردے نیں۔ سو سیکوئنٹاں دے کھبّے نشان لگے فارمولیاں نوں بس سیاق آکھ سکدے آں۔
+
+مفروضیاں دی تھاں \Log{N2} دے ثبوتاں وچ سبھ توں اُتلے سیکوئنٹ ایس شکل دے مسلّمے نیں:
+\[x:!A \Sequent !A.\]
+قاعدے عین \Log{N1} دے قاعدیاں نال میل کھاندے نیں تے \olref{tab:N2} وچ دِتّے نیں۔
+
+\subfile{rules-N2}
+
+جیویں \Log{N1c} تے \Log{N1i} وچ، سانوں ایہ کھُل دینی پئے گی کہ \Intro{\lif}، \Intro{\lnot}، \Elim{\lor} تے \Elim{\lexists} قاعدے مفروضے خارج کر سکدے نیں پر ضروری نہیں کہ کرن۔ ایس لئی \Log{N2c} تے~\Log{N2i} وچ وی میل کھاندے قاعدیاں دی درست ورتوں اوہدوں منّنے آں جدوں سیاق دے متعلقہ !!{formula}s $!A$، $!B$ تے $!A(a)$ متعلقہ مقدمے دے سیاق وچ موجود نہیں۔
+
+\begin{prop}
+جے $\delta$ اک !!a{proof} اے~\Log{N1c} یا \Log{N1i} وچ،~$!A$ دا، تاں اک !!a{proof}~$\delta'$ اے $\Gamma \Sequent !A$ دا،~\Log{N2c} (\Log{N2i}) وچ، جتھے $\Gamma$ سارے~$x:!B$ دا سیٹ اے جیہناں لئی $!B^x$،~$\delta$ دا کھُلّا مفروضہ اے۔
+\end{prop}
+
+\begin{proof}
+$n=\pheight{\delta}$ اُتے استقرا نال۔ جے $n=0$، تاں $\delta$ اکّو کھُلّا مفروضہ~$!A^x$ اے۔ فیر $\Gamma = \{x:!A\}$ تے $\Gamma
+  \Sequent !A$، \Log{N2c} یا~\Log{N2i} دا مسلّمہ اے۔
+
+جے $n>0$، تاں~$\delta$ دے آخری استنباط مطابق صورتاں وکھ کردے آں۔ اسیں بس اک صورت دسدے آں، باقی مشقاں وجوں چھڈیاں نیں۔
+
+منّ لو آخری استنباط $\Intro{\lif}$ اے۔ فیر $\delta$ ایتھے مُکدا اے:
+\[
+  \AxiomC{$\Discharge{!B}{x}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \DischargeRule{\Intro{\lif}}{x}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \]
+استقرا دے مفروضے نال !!a{proof}~$\delta_1'$ اے~\Log{N2c} (\Log{N2i}) وچ، $\Gamma' \Sequent !C$ دا، جتھے $\Gamma'$ اوہ نشان لگے مفروضے نیں جیہڑے~$\delta_1$ وچ کھُلّے نیں۔ جے $!B^x$، $\delta_1$ دا کھُلّا مفروضہ اے، تاں \Intro{\lif} استنباط اُتے ایہ خارج ہو جاندا اے تے~$\delta$ دے کھُلّے مفروضے $\Gamma =
+  \Gamma' \setminus \{x:!B\}$ نیں۔ دوجے لفظاں وچ، $\delta_1'$، !!a{proof} اے~$x:!B, \Gamma \Sequent !C$ دا تے اسیں $\delta'$ ایہ لے سکدے آں:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1'$}
+  \Deduce$x:B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+جے $!B^x$،~$\delta_1$ دا کھُلّا مفروضہ نہیں، تاں \Intro{\lif} کوئی مفروضہ خارج نہیں کردا تے $\delta$ تے $\delta_1$ دے کھُلّے مفروضے اوہی نیں۔ چونکہ سیاق دا فارمولا $x:!B$، \Intro{\lif} دے مقدمے وچ،~\Log{N2c} تے~\Log{N2i} وچ، ہونا ضروری نہیں، ایس لئی $\delta'$ ایہ لے سکدے آں:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1'$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+
+جتھے $\delta$ کسے ہور قاعدے اُتے مُکدا اے، اوہ صورتاں ایہو جیہیاں نیں۔
+\end{proof}
+
+\begin{prop}
+جے $\delta$ اک !!a{proof} اے \Log{N2c} یا \Log{N2i} وچ، $\Gamma
+\Sequent !A$ دا، تاں اک !!a{proof}~$\delta'$ اے \Log{N1c} (\Log{N1i}) وچ، جیہدا آخری !!{formula}~$!A$ اے تے کھُلّے مفروضے $!B^x$ نیں ہر $x:!B \in \Gamma$ لئی۔
+\end{prop}
+
+\begin{proof}
+فیر !!{height}~$n$ اُتے استقرا نال اگے ودھدے آں،~$\delta$ دی اُچائی اُتے۔ جے $n=0$، تاں $\delta$ مسلّمہ اے، $x:!A \Sequent !A$۔ !!{proof}~$\delta'$ مفروضہ~$!A^x$ اے۔
+
+جے $n>0$، تاں~$\delta$ دے آخری استنباط مطابق صورتاں وکھ کردے آں۔ مثلاً جے استنباط~$\Intro{\lif}$ اے، تاں $\delta$ ایتھے مُکدا اے:
+\[
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x:!B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \quad\text{ or }\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+استقرا دے مفروضے نال !!a{proof} اے~\Log{N1c} (\Log{N1i}) وچ،~$!C$ دا۔ پہلی صورت وچ $!B^x$،~$\delta'$ دا کھُلّا مفروضہ اے۔ دوجی صورت وچ نہیں۔ اسیں !!{proof}~$\delta'$ بالترتیب ایہ لے سکدے آں:
+\[
+  \bottomAlignProof
+  \AxiomC{$\Discharge{!B}{x}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \DischargeRule{\Intro{\lif}}{x}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \quad\text{ or }\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \RightLabel{\Intro{\lif}}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \]
+\end{proof}
+
+\end{document}

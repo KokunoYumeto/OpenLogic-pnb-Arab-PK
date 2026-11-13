@@ -1,0 +1,105 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: composition-representable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{req}{cmp}
+\olsection{ترکیب $\Th{Q}$ وچ قابلِ نمائندگی اے}
+
+فرض کرو $h$ دی تعریف ایہ اے:
+\[
+h(x_0,\dots,x_{l-1}) = f(g_0(x_0,\dots,x_{l-1}), \dots,
+g_{k-1}(x_0,\dots,x_{l-1})).
+\]
+اسیں پہلے ای !!{formula}s $!A_f, !A_{g_0}, \dots, !A_{g_{k-1}}$
+لبھ چکے آں جیہڑے بالترتیب فنکشناں $f$ تے $g_0$، \dots،~$g_{k-1}$
+دی نمائندگی کردے نیں۔ سانوں !!a{formula}~$!A_h$ لبھنا اے جیہڑا
+$h$ دی نمائندگی کرے۔
+
+پہلاں اوہ سوکھی صورت ویکھیے جتھے سارے فنکشن $1$-دلیلی نیں،
+یعنی $h(x) = f(g(x))$۔ جے $!A_f(y, z)$،$f$
+دی نمائندگی کردا اے،تے $!A_g(x, y)$،$g$ دی نمائندگی کردا اے،
+تاں سانوں !!a{formula}~$!A_h(x, z)$ چاہیدا اے جیہڑا $h$ دی
+نمائندگی کرے۔ دھیان دیو کہ $h(x) = z$ اُدوں تے صرف اُدوں اے جدوں
+کوئی~$y$ ایسا ہووے جیہدے لئی $z = f(y)$ تے $y = g(x)$
+دونوں درست ہون۔ جے $h(x) = z$ ہووے، تاں $g(x)$ ایسا~$y$ اے۔
+جے کوئی ایسا $y$ موجود ہووے، تاں $y = g(x)$ تے $z = f(y)$
+توں $z = f(g(x))$ نکلدا اے۔ ایس توں لگدا اے کہ
+$\lexists[y][(!A_g(x, y) \land !A_f(y,
+  z))]$،$!A_h(x, z)$ لئی اک مناسب فارمولا لگدا اے۔ سانوں بس ایہ پرکھنا اے کہ $\Th{Q}$ متعلقہ !!{formula}s ثابت کردا اے۔
+
+\begin{prop}
+\ollabel{prop:rep1}
+جے $h(n) = m$ ہووے، تاں $\Th{Q} \Proves !A_h(\num{n}, \num{m})$۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $h(n) = m$، یعنی $f(g(n)) = m$۔ $k = g(n)$ من لو۔ ایس توں ایہ ملدا اے۔
+\begin{align*}
+  \Th{Q} & \Proves !A_g(\num{n}, \num{k})
+  \intertext{کیوں جے $!A_g$، $g$ دی نمائندگی کردا اے، تے}
+  \Th{Q} & \Proves !A_f(\num{k}, \num{m})
+  \intertext{کیوں جے $!A_f$، $f$ دی نمائندگی کردا اے۔ ایس لئی}
+  \Th{Q} & \Proves !A_g(\num{n}, \num{k}) \land !A_f(\num{k}, \num{m})
+  \intertext{تے ایس دے نتیجے وچ ایہ وی:}
+  \Th{Q} & \Proves \lexists[y][(!A_g(\num{n}, y) \land !A_f(y, \num{m}))],
+\end{align*}
+یعنی $\Th{Q} \Proves !A_h(\num{n}, \num{m})$۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:rep2}
+جے $h(n) = m$ ہووے، تاں $\Th{Q} \Proves \lforall[z][(!A_h(\num{n}, z) \lif
+  z = \num{m})]$۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $h(n) = m$، یعنی $f(g(n)) = m$۔ $k = g(n)$ من لو۔ ایس توں ایہ ملدا اے۔
+\begin{align*}
+  \Th{Q} & \Proves \lforall[y][(!A_g(\num{n}, y) \lif \eq[y][\num{k}])]
+  \intertext{کیوں جے $!A_g$، $g$ دی نمائندگی کردا اے، تے}
+  \Th{Q} & \Proves \lforall[z][(!A_f(\num{k}, z) \lif \eq[z][\num{m}])]
+  \intertext{کیوں جے $!A_f$،$f$ دی نمائندگی کردا اے۔ تھوڑی جیہی منطق نال ایہ وی وکھا سکدے آں۔}
+  \Th{Q} & \Proves \lforall[z][(\lexists[y][(!A_g(\num{n}, y) \land
+      !A_f(y, z))] \lif \eq[z][\num{m}])].
+\end{align*}
+یعنی $\Th{Q} \Proves \lforall[y][(!A_h(\num n, y) \lif \eq[y][\num m])]$۔
+\end{proof}
+
+ایہو خیال اوکھی صورت وچ وی چلدا اے جتھے $f$ تے~$g_i$ دیاں
+دلیلاں دی تعداد $1$ توں ودھ اے۔
+
+\begin{prop}
+\ollabel{prop:rep-composition}
+جے $!A_f(y_0, \dots, y_{k-1}, z)$،$f(y_0, \dots, y_{k-1})$
+دی~$\Th{Q}$ وچ نمائندگی کردا اے،تے
+$!A_{g_i}(x_0, \dots, x_{l-1}, y)$،
+$g_i(x_0, \dots, x_{l-1})$ دی~$\Th{Q}$ وچ نمائندگی کردا اے،تاں
+% PNB-CMP-055: دونیں quantifier scopes مکمل conjunction دے آخر تک۔
+\begin{multline*}
+  \lexists[y_0\dots][\lexists[y_{k-1}][(!A_{g_0}(x_0,\dots,x_{l-1},y_0) \land
+      \dots \land {}\\
+  !A_{g_{k-1}}(x_0,\dots,x_{l-1},y_{k-1}) \land !A_f(y_0,\dots,y_{k-1},z))]]
+\end{multline*}
+ہِٹھ لکھے فنکشن دی نمائندگی کردا اے۔
+\[
+h(x_0, \dots, x_{l-1}) = f(g_0(x_0, \dots, x_{l-1}), \dots, g_{k-1}(x_0,
+\dots, x_{l-1})).
+\]
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+% PNB-CMP-056: قدر تے یکتائی دے دونوں ثبوت guide نیں،اک دہرایا حوالہ نہیں۔
+\olref[inc][req][cmp]{prop:rep1} تے
+\olref[inc][req][cmp]{prop:rep2} دے ثبوت سامنے رکھ کے
+\olref[inc][req][cmp]{prop:rep-composition} دا پورا ثبوت دیو۔
+\end{prob}
+
+\end{document}

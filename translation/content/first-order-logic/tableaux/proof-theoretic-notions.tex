@@ -1,0 +1,198 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{ptn}}
+      {\olfileid{pl}{tab}{ptn}}
+      
+\olsection{ثبوتی-نظریاتی تصورات (Proof-Theoretic Notions)}
+
+\begin{editorial}
+ایہ حصہ تابلواں لئی ثابت پذیری دے تعلق تے بے تضادی دیاں
+تعریفاں اکٹھیاں کردا اے۔
+\end{editorial}
+
+\begin{explain}
+جیویں اسیں کئی اہم معنوی تصورات (منطقی اعتبار، منطقی نتیجہ تے پورا ہون
+جوگتا) دی تعریف دِتّی اے، ہُن اسیں اوہناں دے مطابق
+\emph{ثبوتی-نظریاتی تصورات (proof-theoretic notions)} دی تعریف دیندے آں۔
+ایہناں دی تعریف !!{sentence}s دے !!{structure}s وچ پورا اترن ول رجوع
+کر کے نہیں، بلکہ مخصوص بند !!{tableau}x دے موجود ہون ول رجوع کر کے
+دِتّی جاندی اے۔ ایہ اک اہم دریافت سی کہ ایہ تصورات آپو وچ میل کھاندے
+نیں۔ اوہناں دے میل کھان دی گل \emph{صحت مندی (soundness)} تے
+\emph{تمامیت دے قضیاں (completeness theorems)} دا مضمون اے۔
+\end{explain}
+
+
+\begin{defn}[قضیے (Theorems)]
+!!{sentence}~$!A$ اک \emph{قضیہ (theorem)} اے جے
+$\sFmla{\False}{!A}$ لئی کوئی بند !!{tableau} موجود اے۔ اسیں
+$\Proves !A$ لکھدے آں جے $!A$ قضیہ اے، تے جے نہیں تاں
+$\Proves/ !A$ لکھدے آں۔
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+!!^a{sentence} $!A$، !!{sentence}s دے سیٹ~$\Gamma$ توں
+\emph{!!{derivable}} اے، یعنی $\Gamma \Proves !A$، اُدوں تے صرف
+اُدوں جدوں کوئی محدود سیٹ $\{!B_1, \dots, !B_n\} \subseteq \Gamma$
+موجود ہووے تے ہیٹھ دِتّے سیٹ لئی بند !!{tableau} موجود ہووے:
+\[
+\{
+  \sFmla{\False}{!A},
+  \sFmla{\True}{!B_1}, \dots,
+  \sFmla{\True}{!B_n}
+  \}.
+\]
+جے $!A$، $\Gamma$ توں !!{derivable} نہیں اے، تاں اسیں
+$\Gamma \Proves/ !A$ لکھدے آں۔
+\end{defn}
+
+\begin{defn}[بے تضادی (Consistency)]
+!!{sentence}s دا سیٹ~$\Gamma$ \emph{متضاد (inconsistent)} اے اُدوں تے
+صرف اُدوں جدوں کوئی محدود سیٹ $\{!B_1, \dots, !B_n\} \subseteq
+\Gamma$ موجود ہووے تے ہیٹھ دِتّے سیٹ لئی بند !!{tableau} موجود ہووے:
+\[
+\{
+  \sFmla{\True}{!B_1}, \dots,
+  \sFmla{\True}{!B_n}  
+  \}.
+\]
+جے $\Gamma$ متضاد نہیں اے، تاں اسیں اوہنوں \emph{بے تضاد
+(consistent)} آکھدے آں۔
+\end{defn}
+
+\begin{prop}[انعکاسیت (Reflexivity)]
+\ollabel{prop:reflexivity}
+جے $!A \in \Gamma$ اے، تاں $\Gamma \Proves !A$۔
+\end{prop}
+
+\begin{proof}
+جے $!A \in \Gamma$ اے، تاں $\{!A\}$، $\Gamma$ دا محدود ذیلی سیٹ
+اے تے ایہ !!{tableau}
+\begin{oltableau}
+  [\sFmla{\False}{\formula{A}}, just = \TAss
+    [\sFmla{\True}{\formula{A}}, just = \TAss,close]
+  ]
+\end{oltableau}
+بند اے۔
+\end{proof}
+  
+
+\begin{prop}[یک رُخیت (Monotonicity)]
+\ollabel{prop:monotonicity}
+جے $\Gamma \subseteq \Delta$ تے $\Gamma \Proves !A$، تاں $\Delta
+\Proves !A$۔
+\end{prop}
+
+\begin{proof}
+$\Gamma$ دا ہر محدود ذیلی سیٹ، $\Delta$ دا وی محدود ذیلی سیٹ اے۔
+\end{proof}
+
+\begin{prop}[تعدیت (Transitivity)]
+\ollabel{prop:transitivity}
+جے $\Gamma \Proves !A$ تے $\{!A\} \cup
+\Delta \Proves !B$، تاں $\Gamma \cup \Delta \Proves !B$۔
+\end{prop}
+
+\begin{proof}
+جے $\{!A\} \cup \Delta \Proves !B$، تاں کوئی محدود ذیلی سیٹ $\Delta_0 =
+\{!C_1, \dots, !C_n\} \subseteq \Delta$ موجود اے جیہدے لئی
+% PNBTAB-007: each D_i is a sentence in Gamma; the frozen source incorrectly uses D_m subseteq Gamma.
+\begin{align*}
+\{\sFmla{\False}{!B}, & \sFmla{\True}{!A}, \sFmla{\True}{!C_1},
+\dots, \sFmla{\True}{!C_n}\}
+\intertext{اک بند !!{tableau} موجود اے۔ جے $\Gamma \Proves !A$، تاں
+  ایہو جیہے $!D_1$، \dots، $!D_m \in \Gamma$ موجود نیں کہ}
+\{\sFmla{\False}{!A}, & \sFmla{\True}{!D_1},
+\dots, \sFmla{\True}{!D_m}\}
+\end{align*}
+لئی بند !!{tableau} موجود اے۔
+
+ہُن اوہ !!{tableau} ویکھو جیہدے مفروضے ایہ نیں:
+\[
+\sFmla{\False}{!B},
+\sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_n},
+\sFmla{\True}{!D_1}, \dots, \sFmla{\True}{!D_m}.
+\]
+$!A$ اُتے \Cut{} قاعدہ لاؤ۔ ایس نال دو شاخاں بندیاں نیں: اک وچ
+$\sFmla{\True}{!A}$ تے دوجی وچ $\sFmla{\False}{!A}$ اے۔ ایس طرح،
+پہلی شاخ اُتے
+\[
+\{\sFmla{\False}{!B}, \sFmla{\True}{!A},
+\sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_n}\}
+\]
+دے سارے علامت لائے فارمولے موجود نیں۔ ایہناں مفروضیاں لئی بند !!{tableau}
+موجود ہون کرکے اسیں اوہنوں ایس شاخ نال جوڑ سکدے آں؛
+$\sFmla{\True}{!A}$ وچوں لنگھن والی ہر شاخ بند ہو جاندی اے۔ دوجی شاخ
+اُتے
+\[
+\{\sFmla{\False}{!A}, \sFmla{\True}{!D_1}, \dots,
+\sFmla{\True}{!D_m}\}
+\]
+دے سارے علامت لائے فارمولے موجود نیں، ایس لئی اوہدے نال وی متعلقہ بند
+!!{tableau} جوڑ کے پوری دوسری شاخ بند کیتی جا سکدی اے۔ ایس توں
+$\Gamma \cup \Delta \Proves !B$ ثابت ہوندا اے۔
+\end{proof}
+
+خیال کرو کہ ایس دا خاص مطلب ایہ وی اے: جے $\Gamma \Proves !A$ تے $!A
+\Proves !B$، تاں $\Gamma \Proves !B$۔ ایہ وی نتیجہ نکلدا اے کہ جے $!A_1,
+\dots, !A_n \Proves !B$ تے $\Gamma \Proves !A_i$ ہر~$i$ لئی، تاں
+$\Gamma \Proves !B$۔
+
+\begin{prop}
+\ollabel{prop:incons}
+$\Gamma$ متضاد اے اُدوں تے صرف اُدوں جدوں $\Gamma \Proves !A$
+  ہر !!{sentence}~$!A$ لئی ہووے۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][tab][ptn]{prop:incons} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][tab][ptn]{prop:incons} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}[محدود گواہی (Compactness)]
+  \ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item جے $\Gamma \Proves !A$، تاں کوئی محدود ذیلی سیٹ $\Gamma_0
+    \subseteq \Gamma$ موجود اے جیہدے لئی $\Gamma_0 \Proves !A$۔
+  \item جے $\Gamma$ دا ہر محدود ذیلی سیٹ بے تضاد اے، تاں $\Gamma$
+    وی بے تضاد اے۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item جے $\Gamma \Proves !A$، تاں کوئی محدود ذیلی سیٹ
+      $\Gamma_0 = \{!B_1, \dots, !B_n\}$ موجود اے تے ایہناں لئی بند !!{tableau}
+      موجود اے:
+      \[
+      \{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+      \]
+      ایہ !!{tableau} $\Gamma_0 \Proves !A$ وی دکھاندا اے۔
+    \item جے $\Gamma$ متضاد اے، تاں کسے محدود ذیلی سیٹ
+      $\Gamma_0 = \{!B_1, \dots, !B_n\}$ لئی ہیٹھ دِتّے سیٹ دا بند
+      !!{tableau} موجود اے:
+      \[
+      \{\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+      \]
+      ایہ بند !!{tableau} دکھاندا اے کہ $\Gamma_0$ متضاد اے۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,60 @@
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: deduction-theorem-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{ddq}
+
+\olsection{مسوّراں سمیت استنباط دا قضیہ}
+
+\begin{thm}[استنباط دا قضیہ]
+\ollabel{thm:deduction-thm-q} جے $\Gamma \cup \{!A\} \Proves !B$،
+تاں $\Gamma \Proves !A \lif !B$۔
+\end{thm}
+
+\begin{proof}
+اسیں فیر $!B$ دے $\Gamma \cup \{!A\}$ توں !!{derivation} دی
+لمبائی اُتے استقرا کردے آں۔
+
+استقرا دی بنیاد دا ثبوت بالکل اوہی اے جیہڑا
+\olref[ded]{thm:deduction-thm} دے ثبوت وچ اے۔
+
+استقرائی قدم لئی فیر فرض کرو کہ $!B$ دا !!{derivation}،
+$\Gamma \cup \{!A\}$ توں، ایسے قدم~$!B$ اُتے ختم ہوندا اے جیہڑا
+استنباط دے قاعدے نال درست ٹھہردا اے۔ جے ایہ قاعدہ اثباتِ مقدم اے،
+تاں اسیں \olref[ded]{thm:deduction-thm} دے ثبوت وانگ اگے ودھدے آں۔
+جے قاعدہ \QR اے، تاں اسیں جاندے آں کہ $!B \ident !C \lif \lforall[x][!D(x)]$
+تے $!C \lif !D(a)$ دے روپ دا !!a{formula} پہلے !!{derivation}
+وچ آ چکیا اے؛ ایتھے $a$ نہ~$!C$ وچ، نہ~$!A$ وچ، تے نہ~$\Gamma$
+وچ آؤندا اے۔ ایس لئی ساڈے کول اے:
+% PNBAXD-005: دوجی میٹا شرطیہ وچ اک کھلا بریکٹ بند کیتا۔
+\begin{align*}
+  \Gamma \cup \{!A\} & \Proves !C \lif !D(a),\\
+  \intertext{تے استقرائی مفروضہ لاگو ہوندا اے، یعنی ساڈے کول اے}
+    \Gamma & \Proves !A \lif (!C \lif !D(a)).\\
+  \intertext{ایس توں}
+  & \Proves (!A \lif (!C \lif !D(a))) \lif ((!A \land !C) \lif !D(a))\\
+  \intertext{تے قاعدۂ اثباتِ مقدم نال ملدا اے}
+  \Gamma & \Proves (!A \land !C) \lif !D(a).\\
+  \intertext{کیوں جے خاص مستقل دی غیر حاضری والی شرط ہُن وی پوری اے، اسیں ایس !!{derivation} وچ \QR نال درست ہون والا اک قدم ودھا سکدے آں، تے حاصل کردے آں}
+    \Gamma & \Proves (!A \land !C) \lif \lforall[x][!D(x)].\\
+    \intertext{ساڈے کول ایہ وی اے}
+    & \Proves ((!A \land !C) \lif \lforall[x][!D(x)]) \lif (!A \lif (!C \lif \lforall[x][!D(x)])),\\
+    \intertext{لہٰذا قاعدۂ اثباتِ مقدم نال}
+    \Gamma & \Proves !A \lif (!C \lif \lforall[x][!D(x)]),
+\end{align*}
+% PNBAXD-004: آخری نتیجے وچ ماخذ توں رہ گیا A والا شرطیہ بحال کیتا۔
+یعنی $\Gamma \Proves !A \lif !B$۔
+
+اوہ حالت جتھے $!B$ قاعدے \QR نال درست ٹھہردا اے، پر اوہدا روپ
+$\lexists[x][!D(x)] \lif !C$ اے، مشق لئی چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+  \olref[fol][axd][ddq]{thm:deduction-thm-q} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

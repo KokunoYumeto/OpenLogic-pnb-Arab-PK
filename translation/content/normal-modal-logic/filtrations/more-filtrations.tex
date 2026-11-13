@@ -1,0 +1,115 @@
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: more-filtrations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{acc}
+
+\olsection{فلٹریشناں تے رسائی دیاں خاصیتاں}
+
+جیویں دَسیا، ہمہ گیر، ہر جہان توں رسائی والے، تے انعکاسی نمونیاں دیاں فلٹریشناں بالترتیب ہمیشہ ہمہ گیر، ہر جہان توں رسائی والیاں، یا انعکاسی وی ہوندیاں نیں۔ پر متقابل یا متعدی نمونے دی ہر فلٹریشن بالترتیب متقابل یا متعدی نہیں ہوندی۔ کجھ صورتاں وچ فلٹریشناں ایویں متعین ہو سکدیاں نیں کہ ایہ گل قائم رہے۔ ایس لئی اسیں سبھ توں موٹی فلٹریشن دی تعریف وانگ اگے ودھدے آں، پر~$R^*$ دی تعریف وچ ہور شرطاں شامل کردے آں۔ منّ لو $\Gamma$ ذیلی !!{formula}s تحت بند اے۔ تعلقاں~$C_i(u,v)$ نوں ویکھو، جیہڑے
+\olref{tab:Cn-filtrations} وچ، جہاناں $u$، $v$ دے وچ، نمونے
+$\mModel{M} =\tuple{W, R, V}$ وچ نیں۔ اسیں ایہناں شرطاں دے جوڑاں نال $R^*[u][v]$ متعین کر سکدے آں۔ مثلاً جے اسیں طے کریے کہ $R^*[u][v]$ اُدوں تے صرف اُدوں اے جدوں شرط $C_1(u,v)$ قائم اے، تاں عین سبھ توں موٹی فلٹریشن ملدی اے۔ جے طے کریے کہ $R^*[u][v]$ اُدوں تے صرف اُدوں اے جدوں $C_1(u,v)$ تے $C_2(u, v)$ دونیں قائم نیں، تاں وکھری فلٹریشن ملدی اے۔ ایہ سبھ توں موٹی فلٹریشن نالوں «باریک» اے، کیوں جے $C_1(u,v)$ تے $C_2(u,v)$ دوناں نوں پورا کرن والے جہاناں دے جوڑے، صرف $C_1(u,v)$ نوں پورا کرن والیاں توں گھٹ نیں۔
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|ll|}
+    \hline
+    \multirow{2}{*}{$C_1(u,v)$:}
+    \iftag{prvBox}{&
+      جے $\Box!A \in \Gamma$ تے $\mSat{M}{\Box!A}[u]$
+      تاں $\mSat{M}{!A}[v]$;\iftag{prvDiamond}{ تے}{}\\}{}
+    \iftag{prvDiamond}{&
+      جے $\Diamond!A \in \Gamma$  تے $\mSat{M}{!A}[v]$
+      تاں $\mSat{M}{\Diamond!A}[u]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_2(u,v)$:} 
+    \iftag{prvBox}{&
+      جے $\Box!A \in \Gamma$ تے $\mSat{M}{\Box!A}[v]$
+      تاں $\mSat{M}{!A}[u]$;\iftag{prvDiamond}{ تے}{}\\}{}
+    \iftag{prvDiamond}{&
+      جے $\Diamond!A \in \Gamma$ تے $\mSat{M}{!A}[u]$
+      تاں $\mSat{M}{\Diamond!A}[v]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_3(u,v)$:}
+    \iftag{prvBox}{&
+      جے $\Box!A \in \Gamma$ تے $\mSat{M}{\Box!A}[u]$
+      تاں $\mSat{M}{\Box!A}[v]$;\iftag{prvDiamond}{ تے}{}\\}{}
+    \iftag{prvDiamond}{&
+      جے $\Diamond!A \in \Gamma$ تے $\mSat{M}{\Diamond!A}[v]$
+      تاں $\mSat{M}{\Diamond!A}[u]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_4(u,v)$:}
+    \iftag{prvBox}{&
+      جے $\Box!A \in \Gamma$ تے $\mSat{M}{\Box!A}[v]$
+      تاں $\mSat{M}{\Box!A}[u]$;\iftag{prvDiamond}{ تے}{}\\}{}
+    \iftag{prvDiamond}{&
+      جے $\Diamond!A \in \Gamma$ تے $\mSat{M}{\Diamond!A}[u]$
+      تاں $\mSat{M}{\Diamond!A}[v]$; \\}{}
+    \hline
+    \end{tabular}
+  \caption{فلٹریشناں متعین کرن لئی ممکن جہاناں اُتے شرطاں۔}
+  \ollabel{tab:Cn-filtrations}
+\end{table}
+
+\begin{thm}\ollabel{thm:more-filtrations}
+  منّ لو $\mModel{M} =\tuple{W,R,V}$ اک نمونہ اے تے $\Gamma$ ذیلی !!{formula}s تحت بند اے۔ منّ لو $W^*$ تے $V^*$ اوویں متعین نیں جیویں
+  \olref[fil]{defn:filtration} وچ۔ فیر
+  \begin{enumerate}
+  \item منّ لو $R^*[u][v]$ اُدوں تے صرف اُدوں جدوں $C_1(u, v) \land
+    C_2(u,v)$۔ فیر $R^*$ متقابل اے، تے $\mModel{M^*} =
+    \tuple{W^*,R^*,V^*}$ فلٹریشن اے جے $\mModel{M}$ متقابل اے۔
+  \item منّ لو $R^*[u][v]$ اُدوں تے صرف اُدوں جدوں $C_1(u, v)
+    \land C_3(u,v)$۔ فیر $R^*$ متعدی اے، تے
+    $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ فلٹریشن اے جے $\mModel{M}$
+    متعدی اے۔
+  \item منّ لو $R^*[u][v]$ اُدوں تے صرف اُدوں جدوں $C_1(u, v) \land C_2(u,v)
+    \land C_3(u,v) \land C_4(u,v)$۔ فیر $R^*$ متقابل تے متعدی اے، تے
+    $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ فلٹریشن اے جے $\mModel{M}$ متقابل تے متعدی اے۔
+  \item منّ لو $R^*$ ایویں متعین اے کہ $R^*[u][v]$ اُدوں تے صرف اُدوں جدوں $C_1(u,
+    v) \land C_3(u,v) \land C_4(u,v)$۔ فیر $R^*$ متعدی تے اقلیدسی اے، تے
+    $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ فلٹریشن اے جے $\mModel{M}$ متعدی تے اقلیدسی اے۔
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  \begin{enumerate}
+    \item صاف اے کہ $R^*$ متقابل اے، کیوں جے $C_1(u,v)
+      \Leftrightarrow C_2(v,u)$ تے $C_2(u,v) \Leftrightarrow
+      C_1(v,u)$۔ سو ایہ وکھاؤنا باقی اے کہ جے $\mModel{M}$ متقابل اے تاں $\mModel{M^*}$،~$\Gamma$ راہیں فلٹریشن اے۔ شرط $C_1(u,v)$ پکا کردی اے کہ
+      \iftag{prvBox}{%
+        \iftag{prvDiamond}{%
+          \olref[fil]{defn:filtration-R2} تے
+          \olref[fil]{defn:filtration-R3}، جیہڑیاں
+          \olref[fil]{defn:filtration} دیاں نیں،}{%
+          \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R2} دی شرط}}{%
+        \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R3} دی شرط}
+      پوری ہوندی اے۔ سو سانوں بس
+      \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R1} پرکھنی اے،
+      یعنی $Ruv$ توں $R^*[u][v]$ نکلدا اے۔
+
+      سو منّ لو $Ruv$۔ $R^*[u][v]$ وکھاؤن لئی سانوں
+      $C_1(u,v)$ تے $C_2(u,v)$ ثابت کرنے پین گے۔ $C_1$ لئی \iftag{prvBox}{جے $\Box!A
+        \in\Gamma$ تے $\mSat{M}{\Box!A}[u]$، تاں
+        $\mSat{M}{!A}[v]$ وی (کیوں جے $Ruv$)۔\iftag{prvDiamond}{ ایس طرح،
+        }{}}{}\iftag{prvDiamond}{جے $\Diamond!A \in \Gamma$ تے
+        $\mSat{M}{!A}[v]$، تاں $\mSat{M}{\Diamond!A}[u]$ کیوں جے
+        $Ruv$۔}{} $C_2$ لئی \iftag{prvBox}{جے $\Box!A \in \Gamma$ تے
+        $\mSat{M}{\Box!A}[v]$، تاں $Ruv$ توں تقابل کارن $Rvu$ نکلدا اے، سو
+        $\mSat{M}{!A}[u]$۔\iftag{prvDiamond}{ ایس طرح،
+        }{}}{}\iftag{prvDiamond}{جے $\Diamond!A \in\Gamma$ تے
+        $\mSat{M}{!A}[u]$، تاں $\mSat{M}{\Diamond!A}[v]$ (کیوں جے تقابل کارن $Rvu$)۔}{}
+    \item مشق۔
+    \item مشق۔
+    \item مشق۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[nml][fil][acc]{thm:more-filtrations} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

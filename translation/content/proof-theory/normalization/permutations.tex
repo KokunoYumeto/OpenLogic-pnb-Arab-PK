@@ -1,0 +1,369 @@
+% Part: proof-theory
+% Chapter: normalization
+% Section: permutations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{per}
+
+\olsection{تھاں بدلّن والیاں تبدیلیاں}
+
+\Log{N1i} وچ قطع اوہ ٹوٹے نیں جیہڑے !!a{elimination} قاعدے دے وڈّے مقدمے اُتے مُکدے نیں۔ نارمل روپ وچ لیاؤن دے ثبوت وچ اک صورت ایہ اے کہ وڈّے توں وڈّے درجے والے قطعاں دی لمبائی گھٹائیے، تے اوہدے نال !!{proof} دی قطع لمبائی وی گھٹائیے۔ لمبائی $>1$ والا قطع کئی طریقیاں نال مُک سکدا اے۔ ایہ ایس اُتے منحصر اے کہ قطع وچ~$!A$ دی آخری !!{formula} موجودگی کِہڑے قاعدے (\Elim{\lor} یا \Elim{\lexists}) دا نتیجہ اے، تے اوہ کِہڑے !!{elimination} اخذ دا وڈّا مقدمہ اے۔
+
+مثال لئی جے متعلقہ اخذ \Elim{\lor} تے \Elim{\land} نیں، تاں $!A \ident !B \lor !C$ اے تے اک ذیلی !!{proof}~$\delta_1$ اے جیہڑا ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B \land !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!B \land !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\]
+قطع وچ آخری !!{formula} موجودگی~$!A_n$،~\Elim{\lor} دا نتیجہ اے، یعنی تھلّا $!B \land !C$۔ اوہدے توں پہلوں !!{formula} موجودگی~$!A_{n-1}$،~\Elim{\lor} دے چھوٹے مقدمیّاں وچوں اک اے۔
+
+ایس قطع دی لمبائی گھٹاؤن لئی اسیں \Elim{\lor} تے \Elim{\land} اخذاں دی ترتیب الٹ سکدے آں، یعنی اوہناں دیاں تھاواں بدل سکدے آں۔ مطلب ایہ کہ ذیلی ثبوت~$\delta_1$ نوں~$\delta$ وچ ایہدے نال بدل دیندے آں:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B$}
+\DisplayProof
+\]
+جیہڑے قطع \Elim{\land} دے مقدمے اُتے، \Elim{\lor} توں تھلّے، مُکدے سن، اوہ ہُن \Elim{\land} دے اوہناں اخذاں وچوں اک دے مقدمے اُتے مُکدے نیں جیہڑے \Elim{\lor} دے چھوٹے مقدمیّاں توں اُتّے نیں۔ یعنی ہر اک دی لمبائی~$1$ گھٹ گئی اے۔
+
+نالے کوئی وی قطع جیہڑا سارا $\delta_2$، $\delta_3$ یا $\delta_4$ دے اندر، یا~$\delta_1$ توں پورا باہر~$\delta$ وچ اے، اوہدا اوہی رہندا اے۔ اوہدے وچ اوہی !!{formula}s نیں تے اوہ اوہناں ای اخذاں تھانیں لنگھدا اے، سو خاص کر اوہدا درجہ تے لمبائی~$\delta$ وچ اوہدے نال میل کھاندے قطع جِنّے ای نیں۔ سو نویں !!{proof} دا قطع درجہ ودھیا نہیں تے نویں !!{proof} دی قطع لمبائی پرانے !!{proof} دی قطع لمبائی توں گھٹ اے۔
+
+\begin{prob}
+تھاں بدلّن والی تبدیلی توں پچھوں گھٹّو گھٹ اک قطع دی لمبائی~$1$ گھٹدی اے۔ جے اسیں \Elim{\land} دی تھاں اک~\Elim{\lor} دے پار بدل دیئیے، تاں اصل وچ دو قطع ٹوٹیاں دی لمبائی گھٹدی اے، ایس لئی ایس صورت وچ !!{proof} دی قطع لمبائی گھٹّو گھٹ~$2$ گھٹدی اے۔ کی ایہو جیہی اک تبدیلی نال !!a{proof} دی قطع لمبائی~$2$ توں ودھ گھٹ سکدی اے؟ کی قطع \emph{درجہ} گھٹ سکدا اے؟
+\end{prob}
+
+!!a{elimination} قاعدے نوں \Elim{\lor} یا \Elim{\lexists} قاعدے توں اُتّے لے جان دے عمل نوں \emph{تھاں بدلّن والی تبدیلی} آکھدے آں۔ قاعدیاں دے کجھ جوڑیاں دے نمونے \olref{tab:permutation-conversions} وچ دِتّے نیں۔ (باقی مشقاں لئی چھڈّے گئے نیں۔)
+
+% \begin{table}
+% \begin{multline*}
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!C$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!C$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B(t)$}
+% \DisplayProof}
+% \end{multline*}
+% \caption{Some permutation conversions for \Log{N1i}.}
+% \ollabel{tab:permutation-conversions}
+% \end{table}
+
+{\small
+\begin{longtable}{@{}l@{}}
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\quad\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DisplayProof
+\quad$\longrightarrow$\\[8ex]
+\quad\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B(t)$}
+\DisplayProof
+\\
+\caption{\Log{N1i} لئی تھاں بدلّن دیاں کجھ تبدیلیاں۔}
+\ollabel{tab:permutation-conversions}
+\end{longtable}
+}
+
+\begin{prob}
+جتھے \Elim{\lor} دے پچھوں \Elim{\lor} یا \Elim{\lnot} آؤندا اے، اوتھے تھاں بدلّن والیاں تبدیلیاں دیو۔
+\end{prob}
+
+\begin{prob}
+جتھے \Elim{\lexists} دے پچھوں \Elim{\exists} آؤندا اے، اوتھے تھاں بدلّن والیاں تبدیلیاں دیو۔ دسو کہ پچھلی صورت وچ خاص متغیر دی کوئی شرط کیوں نہیں ٹُٹدی۔
+\end{prob}
+
+سانوں یقین کر لینا چاہیدا اے کہ تھاں بدلّن والی تبدیلی لاؤن ویلے اسیں کِتے خاص متغیر دی کوئی شرط نہ توڑ دیئیے۔ ایہ ویکھو:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\DisplayProof
+\]
+جے اسیں ایہنوں ایہدے نال بدلیے
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\]
+تاں فکر ہو سکدی اے کہ خاص متغیر~$c$ شاید، منّ لو،~$!D$ وچ آؤندا ہووے۔ آخر مفروضہ $!D$ اصل~$\Elim{\lexists}$ توں اُتّے خارج ہو جاندا اے، ایس لئی اصل !!{proof} وچ ایہ~\Elim{\exists} اخذ دے وڈّے مقدمے توں اُتّے کھُلّے کسے مفروضے وچ نہیں آؤندا، تے اوتھے خاص متغیر دی شرط پوری اے۔ پر نویں !!{proof} وچ $!D$ نوں~\Elim{\lexists} اخذاں توں پچھوں ای خارج کیتا جاندا اے، سو خاص متغیر دی شرط ٹُٹ جاؤ گی۔ پر چیتے رکھو کہ اسیں منّیا اے کہ ساڈے !!{proof}s باقاعدہ نیں۔ ہر خاص متغیر اکّو اخذ دا خاص متغیر اے تے !!{proof} وچ صرف \Elim{\lexists} دے چھوٹے مقدمے توں اُتّے آؤندا اے۔ خاص کر $c$، $\delta_3$ یا~$\delta_4$ وچ نہیں آ سکدا۔
+
+ایہ مثال اک ہور گل وی وکھاؤندی اے۔ ویکھو کہ نویں !!{proof} وچ~$\delta_5$ دیاں دو نقلاں نیں۔ ایہدا مطلب اے کہ جے $\delta_5$ وچ وڈّے توں وڈّے درجے والا قطع اے، تاں اسیں قطع لمبائی \emph{نہیں} گھٹائی۔ ایس لئی تھاں بدلّن والی تبدیلی صرف اوہدوں لائیے جدوں سانوں پتا ہووے کہ $\delta_5$ وچ وڈّے توں وڈّے درجے والا کوئی قطع نہیں۔ ایہ پکا کرن لئی اسیں ہمیشہ وڈّے توں وڈّے درجے والا \emph{سبھ توں اُتّلا} قطع چُناں گے، یعنی وڈّے توں وڈّے درجے والا ایہو جیہا قطع جیہدے ذیلی !!{proof} وچ (ایس صورت وچ،~$\delta_1$) وڈّے توں وڈّے درجے والا کوئی قطع اوس ذیلی !!{proof} دے آخری اخذ توں اُتّے نہیں مُکدا۔ ایس نال~$\delta_5$ وچ (یا $\delta_2$، $\delta_3$ یا~$\delta_4$ وچ وی) ہور وڈّے توں وڈّے درجے والے قطع ہون دی گنجائش نہیں رہندی۔
+
+\end{document}

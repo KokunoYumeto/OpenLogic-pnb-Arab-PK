@@ -1,0 +1,116 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: quantifier-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{qrl}
+
+\olsection{مسوّراں دے قاعدے}
+
+\subsection{$\lforall$ لئی قاعدے}
+
+\begin{defish}
+\AxiomC{$!A(a)$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][\Atom{!A}{x}]$}
+\DisplayProof
+\hfill
+\AxiomC{$\lforall[x][\Atom{!A}{x}]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(t)$}
+\DisplayProof
+\end{defish}
+
+$\lforall$ دے قاعدیاں وچ $t$ اک بند ٹرم اے (ایہوجیہا ٹرم جیہدے
+وچ کوئی متغیر نہ ہووے)، تے $a$~اک !!a{constant} اے جیہڑا
+نتیجے~$\lforall[x][!A(x)]$ وچ یا کسے اوہ مفروضے وچ نہیں آؤندا
+جیہڑا مقدمے~$!A(a)$ اُتے ختم ہون والے !!{derivation} وچ
+!!{undischarged} ہووے۔ اسیں $a$ نوں \Intro{\lforall} استنباط دا
+\emph{ایگن متغیر} آکھدے آں۔\footnote{اسیں ``ایگن متغیر'' دا ناں
+ورتدے آں، بھاویں اُتّے والے قاعدے وچ $a$ اک مستقل اے۔ ایہدا
+تاریخی سبب اے۔}
+
+\subsection{$\lexists$ لئی قاعدے}
+
+\begin{defish}
+\AxiomC{$\Atom{!A}{t}$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][\Atom{!A}{x}]$}
+\DisplayProof
+\hfill
+\AxiomC{$\lexists[x][\Atom{!A}{x}]$}
+\AxiomC{[$\Atom{!A}{a}$]$^n$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{n}
+\BinaryInfC{$!C$}
+\DisplayProof
+\end{defish}
+
+ایتھے وی $t$ بند ٹرم اے، تے $a$ اک !!a{constant} اے جیہڑا
+مقدمے $\lexists[x][!A(x)]$ وچ، نتیجے~$!C$ وچ، یا دوہاں
+مقدمیاں اُتے ختم ہون والیاں !!{derivation}s دے کسے وی
+!!{undischarged} مفروضے وچ نہیں آؤندا ($!A(a)$ والے مفروضیاں
+توں سوا)۔ اسیں $a$ نوں \Elim{\lexists} استنباط دا
+\emph{ایگن متغیر} آکھدے آں۔
+
+% PNBNTD-002: source says absent from premises, but universal introduction has premise A(a); use conclusion and undischarged assumptions.
+ایگن متغیر دا متعلقہ نتیجے وچ، وجودی اخراج دے وجودی مقدمے وچ،
+تے مقدمیاں تک جان والیاں
+!!{derivation}s دے اوہناں مفروضیاں وچ نہ آؤنا جیہڑے
+!!{undischarged} ہون، \Intro{\lforall} یا \Elim{\lexists}
+استنباط لئی \emph{ایگن متغیر دی شرط} آکھیا جاندا اے۔
+
+\begin{explain}
+ایہ رواج یاد کرو: جے $!A$ اک !!a{formula} اے جیہدے وچ
+!!{variable}~$x$ آزاد ہووے، اسیں ایہنوں~$!A(x)$ لکھ کے ظاہر کردے
+آں۔ اوسے سیاق وچ $!A(t)$،~$\Subst{!A}{t}{x}$ دا مختصر روپ اے۔
+اس لئی اسیں $\Intro\lexists$ دا قاعدہ ایویں وی لکھ سکدے آں:
+\begin{prooftree}
+\AxiomC{$\Subst{!A}{t}{x}$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A]$}
+\end{prooftree}
+یاد رکھو کہ $t$ پہلے ای~$!A$ وچ آ سکدا اے؛ مثلاً $!A$،
+~$\Atom{\Obj P}{t,x}$ ہو سکدا اے۔ ایس لئی
+$\lexists[x][\Atom{\Obj P}{t,x}]$ دا
+$\Atom{\Obj P}{t,t}$ توں استنباط~$\Intro\lexists$ دی درست ورتوں اے: مقدمے
+وچ~$t$ دیاں اک یا ودھ آمدواں، پر لازمی نہیں کہ ساریاں،
+پابند !!{variable}~$x$ نال ``بدل'' سکدے او۔ پر
+$\Intro\lforall$ تے~$\Elim\lexists$ دیاں ایگن متغیر شرطاں منگدیاں
+نیں کہ !!{constant}~$a$،~$!A$ وچ نہ آوے۔ ایس لئی
+$\lforall[x][\Atom{\Obj P}{a,x}]$ نوں
+$\Atom{\Obj P}{a,a}$ توں~$\Intro\lforall$ نال درست طور تے اخذ نہیں کر سکدے۔
+\end{explain}
+
+\begin{explain}
+% PNBNTD-003: source's "anything" is constrained by its prior closed-term requirement; no further restriction on closed t.
+\Intro{\lexists} تے \Elim{\lforall} وچ بند ٹرم~$t$ اُتے ہور
+کوئی پابندی نہیں، ایس لئی کسے اضافی شرط دی فکر نہیں کرنی پیندی۔
+دوجے پاسے، \Elim{\lexists} تے \Intro{\lforall} دے قاعدیاں وچ
+ایگن متغیر دی شرط منگدی اے کہ !!{constant}~$a$ نتیجے یا کسے
+!!{undischarged} مفروضے وچ کتے وی نہ آوے۔ ایہ شرط نظام دی
+صحت مندی یقینی بناؤن لئی ضروری اے؛ یعنی نظام صرف اوہ
+!!{sentence}s، !!{undischarged} مفروضیاں توں !!{derive}s کرے
+جیہڑے اوہناں توں منطقی طور تے نکلدے ہون۔ ایس شرط توں بغیر
+ہِٹھلا استنباط جائز ہو جاندا:
+\begin{prooftree}
+  \AxiomC{$\lexists[x][!A(x)]$}
+  \AxiomC{$\Discharge{!A(a)}{1}$}
+  \RightLabel{*\Intro{\lforall}}
+  \UnaryInfC{$\lforall[x][!A(x)]$}
+  \RightLabel{\Elim{\lexists}}
+  \BinaryInfC{$\lforall[x][!A(x)]$}
+\end{prooftree}
+پر $\lexists[x][!A(x)] \Entails/ \lforall[x][!A(x)]$۔
+
+چونکہ مسوّراں دے اخراجی قاعدے !!{variable}s دی تھان بند ٹرم
+رکھن دی ای اجازت دیندے نیں، ایس توں نکلدا اے کہ !!{sentence}s دے
+کسے سیٹ توں اخذ ہو سکدا ہر !!{formula} خود وی اک
+!!a{sentence} اے۔
+\end{explain}
+
+
+\end{document}

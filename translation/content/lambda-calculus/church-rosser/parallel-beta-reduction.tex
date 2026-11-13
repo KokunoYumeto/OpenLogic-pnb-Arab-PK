@@ -1,0 +1,161 @@
+% Part: lambda-calculus
+% Chapter: church-rosser
+% Section: parallel-beta-reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{cr}{pb}
+
+\olsection{متوازی $\beta$-تقلیل}
+
+اسیں \emph{متوازی $\beta$-تقلیل} دا خیال پیش کردے آں تے
+ثابت کردے آں کہ ایہدے وچ چرچ–روسر خاصیت اے۔
+
+\begin{defn}[متوازی $\beta$-تقلیل، $\bredpar$] \ollabel{defn:bredpar}
+  ٹرماں دی متوازی تقلیل ($\bredpar$) استقرا نال ایویں متعین ہوندی اے۔
+  \begin{enumerate}
+    \item \ollabel{defn:bredpar1} $x \bredpar x$۔
+    \item \ollabel{defn:bredpar2} جے $N \xrightarrow{\beta} N'$، تاں $ \lambd[x][N] \bredpar
+      \lambd[x][N']$۔
+    \item \ollabel{defn:bredpar3} جے $P \bredpar P'$ تے $Q \bredpar Q'$، تاں $PQ \bredpar
+      P'Q'$۔
+    \item \ollabel{defn:bredpar4} جے $N \bredpar N'$ تے $Q \bredpar Q'$، تاں
+      $(\lambd[x][N])Q \bredpar \Subst{N'}{Q'}{x}$۔
+  \end{enumerate}
+\end{defn}
+
+متوازی $\beta$-تقلیل نال ٹرم دے جِنّے مرضی ریڈیکس اکّو قدم
+وچ سکیڑ سکدے آں۔ $\beta$-تقلیل نالوں فرق ایہ اے کہ اک قدم
+وچ صرف اوہی ریڈیکس سکیڑے جا سکدے نیں جیہڑے اصل ٹرم وچ
+موجود نیں۔ جیہڑے متوازی $\beta$-تقلیل دے نتیجے وچ پیدا ہون،
+اوہ اوس قدم وچ نہیں سکیڑے جا سکدے۔ مثلاً ٹرم
+$(\lambd[f][fx])(\lambd[y][y])$ دی متوازی $\beta$-تقلیل نال
+یا اوہو ٹرم ملدا اے یا $(\lambd[y][y])x$۔ ایس قدم وچ
+~$x$ تک نہیں پہنچ سکدے، بھاویں $\beta$-تقلیل نال~$x$ مل
+سکدا اے۔ وجہ ایہ اے کہ ایہ ریڈیکس متوازی $\beta$-تقلیل
+دے اک قدم پچھوں ای پیدا ہوندا اے۔ متوازی $\beta$-تقلیل
+دا دوجا قدم لا کے~$x$ مل جاندا اے۔
+
+\begin{thm}\ollabel{thm:refl}
+  $M \bredpar M$۔
+\end{thm}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{thm:refl} ثابت کرو۔
+\end{prob}
+
+\begin{defn}[$\beta$-مکمل تقلیل]\ollabel{defn:bcd}
+  \emph{$\beta$-مکمل تقلیل}~$\bcd{M}$، جیہڑی $M$ توں ملدی اے،
+  استقرا نال ایویں متعین ہوندی اے۔
+  \begin{align}
+    \bcd{x} &= x \ollabel{defn:bcd1} \\
+    \bcd{(\lambd[x][N])} &= \lambd[x][\bcd{N}] \ollabel{defn:bcd2}\\
+    \bcd{(PQ)} &= \bcd{P}\bcd{Q} && \text{جے $P$، $\lambd$ تجرید نہیں}
+    \ollabel{defn:bcd3} \\
+    \bcd{((\lambd[x][N])Q)} &= \Subst{\bcd{N}}{\bcd{Q}}{x} \ollabel{defn:bcd4}
+  \end{align}
+\end{defn}
+
+جیویں ناں توں پتا لگدا اے، ٹرم دی $\beta$-مکمل تقلیل
+«پوری متوازی تقلیل» اے۔ متوازی $\beta$-تقلیل وچ اسیں
+کوئی ریڈیکس اویویں چھڈ سکدے آں۔ مکمل تقلیل وچ اوہناں ساریاں
+نوں سکیڑنا لازمی اے۔ ایس لئی $(\lambd[f][fx])(\lambd[y][y])$
+دی مکمل تقلیل $(\lambd[y][y])x$ اے۔ اصل ٹرم آپ نتیجہ نہیں اے۔
+
+\begin{editorial}
+  ایس تعریف وچ دِقّت ایہ اے کہ اسیں ہلے نہیں دسیا کہ
+  ($\lambd$-)ٹرماں اُتے فنکشن بازگشت نال کیویں متعین کردے نیں۔
+  ایہ اگّے ٹھیک کراں گے۔
+\end{editorial}
+
+\begin{lem}\ollabel{lem:comp}
+  جے $M \bredpar M'$ تے $R \bredpar R'$، تاں $\Subst{M}{R}{y}
+  \bredpar \Subst{M'}{R'}{y}$۔
+\end{lem}
+
+\begin{proof}
+  $M \bredpar M'$ دے !!{derivation} اُتے استقرا نال۔
+  \begin{enumerate}
+    \item آخری قدم \olref{defn:bredpar1} اے۔ مشق۔
+    \item آخری قدم \olref{defn:bredpar2} اے۔ فیر $M$ دی شکل
+      $\lambd[x][N]$ تے $M'$ دی شکل $\lambd[x][N']$ اے،
+      جتھے $N \bredpar N'$۔ اسیں ثابت کرنا اے کہ
+      $\Subst{(\lambd[x][N])}{R}{y} \bredpar
+      \Subst{(\lambd[x][N'])}{R'}{y}$، یعنی
+      $\lambd[x][\Subst{N}{R}{y}] \bredpar
+      \lambd[x][\Subst{N'}{R}{y}]$۔ ایہ \olref{defn:bredpar2}
+      تے استقرائی مفروضے توں سیدھا ملدا اے۔
+    \item آخری قدم \olref{defn:bredpar3} اے۔ مشق۔
+    \item آخری قدم \olref{defn:bredpar4} اے۔ $M$ دی شکل
+      $(\lambd[x][N])Q$ تے $M'$ دی شکل $\Subst{N'}{Q'}{x}$ اے۔
+      اسیں ثابت کرنا اے کہ $\Subst{((\lambd[x][N])Q)}{R}{y} \bredpar
+      \Subst{\Subst{N'}{Q'}{x}}{R'}{y}$، یعنی
+      $(\lambd[x][\Subst{N}{R}{y}])\Subst{Q}{R}{y} \bredpar
+      \Subst{\Subst{N'}{R'}{y}}{\Subst{Q'}{R'}{y}}{x}$۔ ایہ
+      \olref{defn:bredpar4} تے استقرائی مفروضے توں ملدا اے۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{lem:comp} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{lem}\ollabel{lem:cont}
+  جے $M \bredpar M'$، تاں $M' \bredpar \bcd{M}$۔
+\end{lem}
+\begin{proof}
+  $M \bredpar M'$ دے !!{derivation} اُتے استقرا نال۔
+  \begin{enumerate}
+    \item آخری قاعدہ \olref{defn:bredpar1} اے۔ مشق۔
+    \item آخری قاعدہ \olref{defn:bredpar2} اے۔ $M$ دی شکل
+      $\lambd[x][N]$ تے $M'$ دی شکل $\lambd[x][N']$ اے، جتھے
+      $N \bredpar N'$۔ اسیں دکھاؤنا اے کہ $\lambd[x][N'] \bredpar
+      \bcd{(\lambd[x][N])}$، یعنی $\lambd[x][N'] \bredpar
+      \lambd[x][\bcd{N}]$، جیویں \olref{defn:bcd2} دسدا اے۔
+      ایہ \olref{defn:bredpar2} تے استقرائی مفروضے توں ملدا اے۔
+    \item آخری قاعدہ \olref{defn:bredpar3} اے۔ $M$ دی شکل $PQ$
+      تے $M'$ دی شکل $P'Q'$ اے، کجھ $P$، $Q$، $P'$ تے $Q'$ لئی
+      جیہناں وچ $P \bredpar P'$ تے $Q \bredpar Q'$۔
+      استقرائی مفروضے مطابق $P'
+      \bredpar \bcd{P}$ تے $Q' \bredpar \bcd{Q}$۔
+      \begin{enumerate}
+        \item جے $P$ دی شکل $\lambd[x][N]$ اے، کجھ $x$ تے $N$ لئی،
+          تاں $P'$ دی شکل $\lambd[x][N']$ ہونی چاہیدی اے، کسے
+          $N'$ لئی جیہدے نال $N \bredpar N'$۔ استقرائی مفروضے
+          مطابق $N' \bredpar \bcd{N}$ تے $Q' \bredpar \bcd{Q}$۔
+          فیر $(\lambd[x][N'])Q' \bredpar
+          \Subst{\bcd{N}}{\bcd{Q}}{x}$، \olref{defn:bredpar4} مطابق۔
+        \item جے $P$ کوئی $\lambd$ تجرید نہیں، تاں $P'Q' \bredpar
+          \bcd{P}\bcd{Q}$، \olref{defn:bredpar3} مطابق۔ سجا
+          پاسا $ \bcd{PQ}$ اے، \olref{defn:bcd3} مطابق۔
+      \end{enumerate}
+    \item آخری قاعدہ \olref{defn:bredpar4} اے۔ $M$ دی شکل
+      $(\lambd[x][N])Q$ تے $M'$ دی شکل $\Subst{N'}{Q'}{x}$ اے،
+      کجھ $x$، $N$، $Q$، $N'$ تے~$Q'$ لئی جیہناں وچ
+      $N \bredpar N'$ تے $Q \bredpar
+      Q'$۔ استقرائی مفروضے مطابق $N' \bredpar \bcd{N}$ تے
+      $Q' \bredpar \bcd{Q}$۔ \olref{lem:comp} مطابق
+      $\Subst{N'}{Q'}{x} \bredpar \Subst{\bcd{N}}{\bcd{Q}}{x}$،
+      جیہدا سجا پاسا عین $\bcd{((\lambd[x][N])Q)}$ اے۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{lem:cont} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{thm}\ollabel{thm:cr}
+  $\bredpar$ وچ چرچ–روسر خاصیت اے۔
+\end{thm}
+
+\begin{proof}
+  \olref{lem:cont} توں سیدھا ملدا اے۔
+\end{proof}
+
+\end{document}

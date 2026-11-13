@@ -1,0 +1,99 @@
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: bisimulations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{bsd}
+
+\olsection{بائی سیمولیشناں}
+
+ساڈی علم دی زبان دی اظہاری طاقت بارے اک ہور سوال نمونیاں تے
+اوہناں وچ لاگو ہون والے فارمولیاں دے تعلق بارے اے۔ فریم خاصیت تے
+فارمولے دے میل والے نتیجیاں توں اسیں ویکھیا اے کہ جدوں کجھ فارمولے
+کسے فریم وچ معتبر ہون، تاں اوہ ایہ وی یقینی بناؤندے نیں کہ فریم
+کجھ خاصیتاں پوریاں کردا اے۔ پر مثلاً کی ساڈی امکانی زبان سانوں
+اک ایسے جہان، جیہدے توں اوہدے اپنے ول تیر اے، تے جہاناں دی اک
+لامتناہی لڑی، جیہدے وچ ہر جہان توں اگلے ول تیر اے، وچ فرق دسن
+دیندی اے؟ یعنی کی کوئی ایسا فارمولا $A$ اے جیہڑا ایہناں دو جہاناں
+وچوں صرف اک اُتے لاگو ہو سکدا اے؟
+
+بائی سیمولیشن اک تعلق اے جیہڑا تعلقی نمونیاں وچ ایہ دسن لئی
+متعین کر سکدے آں کہ اوہناں دی بناوٹ اثر دے لحاظ نال اکو جیہی اے۔
+اسیں ویکھاں گے کہ ایہ نمونیاں دی اوہ ہم ارزی پھڑدا اے جیہڑی ساڈی
+علم دی زبان وچ ظاہر ہو سکدی اے۔
+
+\begin{defn}[بائی سیمولیشن]
+منّ لو $M_1 = \tuple{W_1, R_1, V_1}$ تے $M_2 = \tuple{W_2, R_2, V_2}$
+دو تعلقی نمونے نیں۔ منّ لو $\mathcal{R} \subseteq W_1 \times W_2$
+اک دو رکنی تعلق اے۔ $\mathcal{R}$ نوں \emph{بائی سیمولیشن} آکھدے
+آں جدوں ہر $\tuple{w_1, w_2} \in \mathcal{R}$ لئی ایہ ہووے:
+
+\begin{enumerate}
+  \item $w_1 \in V_1(p)$ اُدوں تے صرف اُدوں جدوں $w_2 \in V_2(p)$،
+    سارے !!{propositional variable}s~$p$ لئی۔
+  \item سارے فاعلاں $a \in A$ تے جہاناں $v_1 \in W_1$ لئی، جے
+    $R_{1_a} w_1 v_1$، تاں کوئی $v_2 \in W_2$ اے جیہدے لئی
+    $R_{2_a} w_2 v_2$ تے $\tuple{v_1, v_2} \in \mathcal{R}$۔
+  \item سارے فاعلاں $a \in A$ تے جہاناں $v_2 \in W_2$ لئی، جے
+    $R_{2_a} w_2 v_2$، تاں کوئی $v_1 \in W_1$ اے جیہدے لئی
+    $R_{1_a} w_1 v_1$ تے $\tuple{v_1, v_2} \in \mathcal{R}$۔
+\end{enumerate}
+
+جدوں $M_1$ تے $M_2$ وچ کوئی بائی سیمولیشن اے جیہڑی جہاناں
+$w_1$ تے $w_2$ نوں جوڑدی اے، تاں اسیں
+$\tuple{M_1, w_1} \leftrightarroweq \tuple{M_2, w_2}$ وی لکھ سکدے
+آں، تے $\tuple{M_1, w_1}$ تے $\tuple{M_2, w_2}$ نوں
+\emph{بائی سیمولیشن نال جڑے} آکھدے آں۔
+\end{defn}
+
+بائی سیمولیشن تعلق دیاں وکھ وکھ شقّاں وکھ وکھ گلاں یقینی بناؤندیاں
+نیں۔ شق 1 یقینی بناؤندی اے کہ بائی سیمولیشن نال جڑے جہان امکانی
+عامل توں خالی اوہی فارمولے پورے کرن گے، کیوں جے سارے
+!!{propositional variable}s اُتے میل اے۔ دوجیاں دو شقّاں نوں کدی
+کدی واری واری «اگے» تے «پچھے» آکھدے نیں۔ اوہ یقینی بناؤندیاں نیں
+کہ رسائی دے تعلقاں دی بناوٹ اکو جیہی ہووے گی۔
+
+\begin{thm}
+جے $\tuple{M_1, w_1} \leftrightarroweq \tuple{M_2, w_2}$، تاں ہر
+!!{formula}~$!A$ لئی $\mSat{M_1}{!A}[w_1]$ اُدوں تے صرف اُدوں
+جدوں $\mSat{M_2}{!A}[w_2]$۔
+\end{thm}
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) {$w_1$}; 
+      \node[world] (w2) [above left=of w1]{$w_2$}; 
+      \node[world] (w3) [above right=of w1] {$w_3$};
+      \draw[<->] (w1) to node {$a$} (w2);
+      \draw[->,loop below] (w1) to node {$a$} (w1);
+      \draw[<->] (w1) to [swap] node {$a$} (w3);
+      \draw[->,loop above] (w2) to node {$a$} (w2) ;
+      \draw[->,loop above] (w3) to node {$a$} (w3) ;
+      
+      \node[world](v1)[right of=w1, xshift=1.5in]{$v_1$};
+      \node[world](v2)[above of=v1]{$v_2$};
+      \draw[<->] (v1) to node {$a$} (v2);
+      \draw[->,loop below] (v1) to node {$a$} (v1);
+      \draw[->,loop above] (v2) to node {$a$} (v2) ;
+
+      \draw[-,dotted] (w1) to (v1) ;
+      \draw[-,dotted,bend left=45] (w2) to (v2) ;
+      \draw[-,dotted,bend left=30] (w3) to (v2) ;
+    \end{tikzpicture}
+  \end{center}
+  \caption{بائی سیمولیشن نال جڑے دو نمونے۔}
+  \ollabel{fig:bisimilar}
+\end{figure}
+
+\olref{fig:bisimilar} وچ وکھائے دونیں نمونے کجھ وکھرے نیں، پر
+اک بائی سیمولیشن جہاناں $w_1$ تے~$v_1$ نوں جوڑدی اے۔ ایہ بائی
+سیمولیشن $w_2$ تے $w_3$ دونہاں نوں~$v_2$ نال وی جوڑے گی۔
+گل ایہ اے کہ ساڈی امکانی زبان وچ لکھن جوگ کوئی شے ایہناں وچ فرق
+نہیں دس سکدی۔ پر جے $w_2$ تے~$w_3$ وکھ وکھ
+!!{propositional variable}s پورے کردے ہون، تاں صورت وکھری ہووے گی۔
+
+\end{document}

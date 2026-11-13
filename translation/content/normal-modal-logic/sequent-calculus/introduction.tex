@@ -1,0 +1,48 @@
+% Part: normal-modal-logic
+% Chapter: sequent-calculus
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{seq}{int}
+
+\olsection{جان پہچان}
+
+قضیاتی منطق دا سیکوئنٹ حساب وادھو قاعدیاں نال ودھایا جا سکدا اے،
+جیہڑے~\iftag{prvBox}{$\Box$\iftag{prvDiamond}{ تے~}{}}{}%
+\iftag{prvDiamond}{$\Diamond$}{} لئی نیں۔ مثلاً~$\Log{K}$ لئی
+\Log{LK} دے نال ایہ وی نیں:
+\[
+  \iftag{prvBox}{\iftag{prvDiamond}{% <> and [] primitive
+    \Axiom$\Gamma \fCenter \Delta, !A$
+    \RightLabel{$\Box$}
+    \UnaryInf$\Box\Gamma \fCenter \Diamond\Delta, \Box!A$
+    \DisplayProof  
+    \qquad
+    \Axiom$!A, \Gamma \fCenter \Delta$
+    \RightLabel{$\Diamond$}
+    \UnaryInf$\Diamond!A, \Box\Gamma \fCenter \Diamond\Delta$
+    \DisplayProof
+}{% only Box primitive
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{$\Box$}
+\UnaryInf$\Box\Gamma \fCenter \Box!A$
+\DisplayProof
+}}{% only <> primitive
+  \Axiom$!A \fCenter \Delta$
+  \RightLabel{$\Diamond$}
+  \UnaryInf$\Diamond!A \fCenter \Diamond\Delta$
+  \DisplayProof
+}
+\]
+~$\Log{K}$ نوں ودھاؤن والیاں منطقاں لئی ہور قاعدے وی لانے پین گے۔
+
+ہر امکانی منطق دا ایسا سیکوئنٹ حساب نہیں۔ ایہ گل~$\Log{S5}$ اُتے
+وی لاگو اے، جیہدی معنیات سادی اے (رسائی دے تعلق ورتے بغیر وی اوہدی
+تعریف ہو سکدی اے)۔ اوہدے لئی~$\Log{LK}$ توں بنیا کوئی ایسا سیکوئنٹ
+حساب معلوم نہیں جیہڑا قاعدہ~\Cut توں بغیر مکمل ہووے۔ پر اوہدا اک مکمل
+\emph{ہائپر سیکوئنٹ} حساب اے جیہدے وچ کٹ دا قاعدہ نہیں۔
+
+\end{document}

@@ -1,0 +1,51 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{sid}
+
+\olsection{\usetoken{S}{identity} نال صحت مندی}
+
+\begin{prop}
+$\eq$ دے قاعدیاں سمیت فطری استنباط صحت مند اے۔
+\end{prop}
+
+\begin{proof}
+$\eq[t][t]$ دے روپ دا ہر !!{formula} منطقی طور تے معتبر اے، کیوں جے
+ہر !!{structure}~$\Struct M$ لئی $\Sat{M}{\eq[t][t]}$۔ (چیتے رہے کہ
+اسیں ٹرم $t$ نوں بند منّیا اے، یعنی ایس وچ کوئی متغیر نہیں، ایس لئی
+متغیراں دیاں قدر بندیاں غیر متعلق نیں۔)
+
+فرض کرو کہ کسے !!a{derivation} دا آخری استنباط \Elim{\eq} اے، یعنی
+!!{derivation} دی ہیٹھ دتی صورت اے:
+\begin{prooftree}
+  \AxiomC{$\Gamma_1$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$\eq[t_1][t_2]$}
+  \AxiomC{$\Gamma_2$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A(t_1)$}
+  \RightLabel{\Elim{\eq}}
+  \BinaryInfC{$!A(t_2)$}
+\end{prooftree}
+$\eq[t_1][t_2]$ تے $!A(t_1)$ دے مقدمے ترتیب وار !!{undischarged}
+مفروضیاں~$\Gamma_1$ تے $\Gamma_2$ توں !!{derive} کیتے گئے نیں۔
+اسیں وکھانا چاہندے آں کہ $!A(t_2)$، $\Gamma_1 \cup \Gamma_2$ توں
+نکلدا اے۔ اوہ !!a{structure}~$\Struct{M}$ لو جیہدے لئی
+$\Sat{M}{\Gamma_1 \cup
+  \Gamma_2}$۔ استقرا دے مفروضے مطابق، $\Sat{M}{!A(t_1)}$ تے
+$\Sat{M}{\eq[t_1][t_2]}$۔ ایس لئی
+$\Value{t_1}{M} = \Value{t_2}{M}$۔ $s$ کوئی وی متغیر قدر بندی ہووے،
+تے $m = \Value{t_1}{M} = \Value{t_2}{M}$۔
+\olref[fol][syn][ext]{prop:ext-formulas} دے مطابق
+$\Sat{M}{!A(t_1)}[s]$ تب تے صرف تب، جدوں
+$\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$، تے ایہ تب تے صرف تب، جدوں
+$\Sat{M}{!A(t_2)}[s]$۔ چونکہ $\Sat{M}{!A(t_1)}$، ایس لئی
+$\Sat{M}{!A(t_2)}$۔
+\end{proof}
+
+\end{document}

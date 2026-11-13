@@ -1,0 +1,216 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: multiple-designation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{mul}
+
+\olsection{$\True$ دے نال ہور مقرر قدراں}
+
+ہُن تک جیہڑیاں منطقاں ویکھیاں نیں، اوہناں ساریاں وچ مقرر
+صداقتی قدراں دا سیٹ $V^+ = \{\True\}$ سی۔ یعنی کوئی گل
+اُدوں تے صرف اُدوں سچ منّی جاندی سی جدوں اوہدی صداقتی
+قدر~$\True$ ہووے۔ پر کوئی گل بس~$\False$ نہ ہووے تاں وی
+اوہنوں سچ منّ سکدے آں۔ فیر میٹرکس وچ، مثلاً، $V^+ = \{\True, \Undef\}$
+رکھ کے اک منطق ملے گی۔
+
+\begin{defn}
+\emph{تناقض دی منطق}~$\LogLP$ ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ تے $\Undef$ مقرر نیں، یعنی $V^+ = \{\True, \Undef\}$۔
+  \item صداقتی فنکشن کلینی دی مضبوط منطق والے ای نیں۔
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+ہالدین دی \emph{بے معنائی دی منطق}~$\LogHal$ ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ تے $1$-مقامی رابطہ~$+$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ تے $\Undef$ مقرر نیں، یعنی $V^+ = \{\True, \Undef\}$۔
+  \item کلینی دی کمزور منطق والے صداقتی فنکشن، نال «بے معنی اے» والا عامل۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+    $\tf{+}$ & \\ 
+    \hline  
+    $\True$ & $\False$ \\ 
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$ 
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+ایہناں دے صداقتی جدول کلینی دیاں منطقاں والے نیں، پر ایہناں
+وچ \emph{ہمیشہ صادق فارمولے نیں}۔
+
+\begin{prop}\ollabel{prop:LP-taut-CL}
+  $\LogLP$ دے ہمیشہ صادق فارمولے اوہی نیں جیہڑے کلاسیکی
+  قضیاتی منطق وچ ہمیشہ صادق نیں۔
+\end{prop}
+
+\begin{proof}
+  \olref[syn][sub]{prop:mvl-cl} مطابق جے $\Entails[\LogLP] !A$،
+  تاں $\Entails[\LogCL] !A$۔ اُلٹی سمت دکھاؤن لئی اسیں
+  دکھاؤندے آں کہ جے کوئی !!a{valuation}~$\pAssign v\colon \PVar \to \{\False, \True,
+  \Undef\}$ ایہو جیہی اے کہ $\pValue v(!A)[\LogKs] = \False$، تاں
+  کوئی !!a{valuation}~$\pAssign {v'}\colon \PVar \to \{\False, \True\}$
+  ایہو جیہی اے کہ $\pValue {v'}(!A)[\LogCL] = \False$۔ ایس توں
+  $\LogLP$ والا نتیجہ مل جاندا اے، کیوں جے $\LogKs$ تے $\LogLP$
+  دے خاص صداقتی فنکشن اکّو نیں، تے $\False$ اکّو صداقتی قدر
+  اے جیہڑی $\LogLP$ وچ مقرر نہیں۔ ایہو اک فرق $\LogLP$ تے~$\LogKs$
+  وچ اے۔ سو جے $\Entails/[\LogLP] !A$، تاں کسے
+  !!{valuation}~$\pAssign v$ لئی $\pValue v(!A)[\LogLP] = \pValue
+  v[\LogKs](!A) = \False$۔ جیہڑا دعویٰ ثابت کر رہے آں، اوہدے
+  مطابق $\pValue{v'}[\LogCL](!A) = \False$، یعنی $\Entails/[\LogCL] !A$۔
+
+  دعویٰ ثابت کرن لئی پہلاں $\pAssign {v'}$ دی تعریف ایویں کردے آں۔
+  \[
+    \pAssign {v'}(p) =
+    \begin{cases}
+    \True & \text{جے } \pAssign {v}(p) \in \{\True, \Undef\}\\
+    \False & \text{ہور صورت وچ}
+  \end{cases}
+  \]
+  ہُن $!A$ اُتے استقرا نال دکھاؤندے آں کہ (الف) جے
+  $\pValue v(!A)[\LogKs]
+  = \False$، تاں $\pValue {v'}(!A)[\LogCL] = \False$، تے (ب) جے
+  $\pValue v(!A)[\LogKs] = \True$، تاں $\pValue {v'}(!A)[\LogCL] =
+  \True$۔
+  \begin{enumerate}
+    \item استقرا دی مُڈھلی صورت $!A \ident p$ اے۔
+    \olref[syn][val]{defn:pValue} مطابق $\pValue v(!A)[\LogKs]
+    = \pAssign v(p) = \pValue {v'}(!A)[\LogCL]$، جیہدے توں
+    (الف) تے (ب) دوویں ملدے نیں۔
+
+    استقرائی قدم لئی ایہ صورتاں ویکھو۔
+    \item $!A \ident \lnot !B$۔
+    \begin{enumerate}
+      \item منّ لو $\pValue v(\lnot!B)[\LogKs] = \False$۔
+      $\tf{\lnot}[\LogKs]$ دی تعریف مطابق $\pValue v(!B)[\LogKs]  =
+      \True$۔ استقرائی مفروضے دی صورت (ب) توں $\pValue
+      {v'}(!B)[\LogCL]  = \True$ ملدا اے، سو $\pValue {v'}(\lnot !B)[\LogCL] = \False$۔
+      \item منّ لو $\pValue v(\lnot!B)[\LogKs] = \True$۔
+      $\tf{\lnot}[\LogKs]$ دی تعریف مطابق $\pValue v(!B)[\LogKs]  =
+      \False$۔ استقرائی مفروضے دی صورت (الف) توں $\pValue
+      {v'}(!B)[\LogCL]  = \False$ ملدا اے، سو $\pValue {v'}(\lnot !B)[\LogCL] = \True$۔
+    \end{enumerate}
+
+    \item $!A \ident (!B \land !C)$۔
+    \begin{enumerate}
+      \item منّ لو $\pValue v(!B \land !C)[\LogKs] = \False$۔
+      $\tf{\land}[\LogKs]$ دی تعریف مطابق $\pValue v(!B)[\LogKs]  =
+      \False$ یا $\pValue v(!B)[\LogKs]  = \False$۔ استقرائی
+      مفروضے دی صورت (الف) توں $\pValue {v'}(!B)[\LogCL]  = \False$
+      یا $\pValue {v'}(!C)[\LogCL]  = \False$ ملدا اے، سو $\pValue {v'}(!B \land
+      !C)[\LogCL] = \False$۔
+      \item منّ لو $\pValue v(!B \land !C)[\LogKs] = \True$۔
+      $\tf{\land}[\LogKs]$ دی تعریف مطابق $\pValue v(!B)[\LogKs]  =
+      \True$ تے $\pValue v(!B)[\LogKs]  = \True$۔ استقرائی
+      مفروضے دی صورت (ب) توں $\pValue {v'}(!B)[\LogCL]  = \True$
+      تے $\pValue {v'}(!C)[\LogCL]  = \True$ ملدا اے، سو $\pValue {v'}(!B \land
+      !C)[\LogCL] = \True$۔
+    \end{enumerate}
+  \end{enumerate}
+
+  باقی دو صورتاں ایسے طرح نیں تے مشق لئی چھڈیاں نیں۔ ہور
+  طریقہ ایہ اے کہ اُپرلا ثبوت اوہناں سارے !!{formula}s لئی
+  نتیجہ قائم کردا اے جنہاں وچ صرف $\lnot$ تے~$\land$ نیں۔
+  ہُن ایہ گل ورت سکدے آں کہ $\LogKs$ تے $\LogCL$ دوہاں
+  وچ ہر $\pAssign v$ لئی $\pValue v(!B \lor
+  !C) = \pValue v(\lnot(\lnot!B \land \lnot !C))$ تے $\pValue v(!B \lif
+  !C) = \pValue v(\lnot(!B \land \lnot !C))$۔
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][thr][mul]{prop:LP-taut-CL} دا ثبوت پورا کرو۔
+  یعنی (الف) تے (ب) اوہناں صورتاں لئی ثابت کرو جتھے
+  $!A \ident (!B \lor !C)$ تے $!A \ident (!B \lif !C)$۔
+\end{prob}
+
+\begin{prob}
+ثابت کرو کہ ہر کلاسیکی ہمیشہ صادق فارمولا~$\LogHal$ وچ وی
+ہمیشہ صادق اے۔
+\end{prob}
+
+بھاویں ایہناں دے ہمیشہ صادق فارمولے کلاسیکی منطق والے ای نیں،
+منطقی نتیجے دے تعلق وکھرے نیں۔ مثلاً $\LogLP$
+\emph{تضاد برداشت کرن والی} اے، ایس معنٰی وچ کہ
+$\lnot p, p \Entails/ q$۔ ایس لئی تضاد توں کجھ وی کڈھن دا
+اصول $\lnot !A, !A \Entails !B$ عام طور اُتے قائم نہیں۔
+(ایہ $!A$ تے $!B$ دیاں کجھ صورتاں وچ قائم اے، مثلاً جے
+$!B$ ہمیشہ صادق ہووے۔)
+
+\begin{prob}
+  ہِٹھلے تعلقاں وچوں کیہڑے (الف)~$\LogLP$ وچ تے (ب)~$\LogHal$
+  وچ قائم نیں؟ ہر اک لئی صداقتی جدول دیو۔
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $\lnot q, p \lif q \Entails \lnot p$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $\lnot p, p \Entails q$
+    \item $p \Entails p \lor q$
+    \item $p \lif q, q\lif r \Entails p \lif r$
+  \end{enumerate}
+\end{prob}
+
+جے $\Undef$ نوں $\LogLuk[3]$ وچ مقرر قدر بنا دیو، تاں کیہ ہووے گا؟
+
+\begin{defn}
+  منطق \emph{تِن قدراں والی آر-مِنگل}~$\LogRM[3]$ ایس میٹرکس نال متعین اے۔
+  \begin{enumerate}
+    \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+    $\lfalse$، $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+    \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+    \item $\True$ تے $\Undef$ مقرر نیں، یعنی $V^+ = \{\True, \Undef\}$۔
+    \item صداقتی فنکشن لوکاشیویچ دی منطق~$\LogLuk[3]$ والے ای نیں۔
+  \end{enumerate}
+\end{defn}
+
+\begin{prob}
+  ہِٹھلے تعلقاں وچوں کیہڑے $\LogRM[3]$ وچ قائم نیں؟
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $\lnot p, p \Entails q$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+کدے وکھ وکھ صداقتی جدولاں توں صرف مقرر قدراں بدل کے اکّو
+منطق، یعنی اکّو منطقی نتیجے دا تعلق، مل سکدا اے۔ مثلاً ایہ
+اُدوں ہوندا اے جدوں گوڈل دی منطق وچ $V^+ = \{\True,
+\Undef\}$، ~$\{\True\}$ دی تھاں لئیے۔
+
+\begin{prop}\ollabel{prop:gl-udes}
+  جیہدے وچ $V = \{\False, \Undef,\True\}$، $V^+=\{\True,
+  \Undef\}$ تے $3$ قدراں والی گوڈل دی منطق دے صداقتی فنکشن
+  ہون، اوہ میٹرکس کلاسیکی منطق متعین کردا اے۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][thr][mul]{prop:gl-udes} ثابت کرن لئی دکھاؤ
+  کہ منطق~$\Log L$، جیہڑی گوڈل دی منطق وانگ متعین اے پر
+  $V^+=\{\True,\Undef\}$ اے، اوہدے لئی جے $\Gamma \Entails/[\Log L] !B$،
+  تاں $\Gamma \Entails/[\LogCL] !B$۔ \olref[mvl][thr][mul]{prop:LP-taut-CL}
+  دے خیال ورتو۔ پر (الف) تے (ب) ثابت کرن دی تھاں دکھاؤ کہ
+  $\pValue v(!A)[\LogGod] = \False$ اُدوں تے صرف اُدوں اے
+  جدوں $\pValue {v'}(!A)[\LogCL] = \False$۔ ایس توں
+  $\pValue
+  v(!A)[\LogGod] \in \{\True,\Undef\}$ اُدوں تے صرف اُدوں اے
+  جدوں $\pValue {v'}(!A)[\LogCL] =
+  \True$۔ سمجھاؤ کہ ایس توں قضیہ کیوں ملدا اے۔
+\end{prob}
+
+\end{document}

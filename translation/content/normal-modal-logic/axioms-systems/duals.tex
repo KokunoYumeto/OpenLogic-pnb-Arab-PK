@@ -1,0 +1,37 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: duals
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{dua}
+
+\olsection{دوہرے \usetoken{P}{formula}}
+
+\begin{defn}\ollabel{def:duals}
+  !!{formula}s \Ax{T}، \Ax{B}، \Ax{4} تے
+  \Ax{5} وچوں ہر اک دا \emph{دوہرا} اے، جیہڑا ہِیٹھلے پاسے لائے ہیرے دے نشان نال ایویں ظاہر ہوندا اے۔
+  \begin{align}
+    \tag{\Ax{T_\Diamond}} p & \lif \Diamond p\\
+    \tag{\Ax{B_\Diamond}} \Diamond\Box p & \lif p\\
+    \tag{\Ax{4_\Diamond}} \Diamond\Diamond p & \lif \Diamond p\\
+    \tag{\Ax{5_\Diamond}} \Diamond\Box p & \lif \Box p
+    \end{align}
+\end{defn}
+
+اُپرلے دوہرے !!{formula}s وچوں ہر اک اپنے نال جڑے !!{formula} توں ایویں ملدا اے۔ $\lnot p$ نوں $p$ دی تھاں رکھو، اُلٹی نفی بناؤ، $\lnot\Box\lnot$ دی تھاں $\Diamond$ رکھو، تے $\lnot\Diamond\lnot$ دی تھاں~$\Box$ رکھو۔ \Ax{D}، یعنی $\Box!A \lif \Diamond!A$، ایس معنی وچ اپنا آپ دوہرا اے۔
+
+\begin{prop}\ollabel{prop:dualsys}
+  ہر !!{formula}~$!A$ لئی جیہڑا \olref[nml][prf][dua]{def:duals} وچ اے،
+  $\Log{K}!A = \Log{K}!A_{\Diamond}$۔
+\end{prop}
+\begin{proof}
+  مشق۔
+\end{proof}
+\begin{prob}
+  \olref[nml][prf][dua]{prop:dualsys} ثابت کرو۔
+\end{prob}
+
+\end{document}

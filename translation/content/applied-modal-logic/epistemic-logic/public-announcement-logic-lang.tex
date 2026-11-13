@@ -1,0 +1,79 @@
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: language-epistemic-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{pal}
+
+\olsection{عام اعلان دی منطق}
+
+علم دی تبدیلی دیاں منطقاں سانوں وکھاؤن دیندیاں نیں کہ فاعلاں دا
+علم سمے نال، یا نویں جانکاری ملن نال، کِویں بدلدا اے۔ ایہناں وچوں
+کئی، علم دی تبدیلی نوں جانکاری دے \emph{واقعیاں} یا \emph{تبدیلیاں}
+نال وکھاؤندیاں نیں۔ سبھ توں سادی تبدیلی عام اعلان اے۔ اوہدے وچ اک
+فارمولے دا سچا اعلان ہوندا اے تے سارے فاعل ایہ ہوندا اکٹھے ویکھدے
+نیں۔ ایس لئی اسیں زبان نوں ایویں ودھاؤندے آں۔
+
+\begin{defn}
+منّ لو $G$ فاعلاں دے نشاناں دا سیٹ اے۔ کئی فاعلاں والی علم دی منطق
+دی عام اعلان والی بنیادی زبان وچ ایہ شامل نیں:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+  \tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+  \item !!{propositional variable}s دا اک !!{denumerable}s سیٹ: $\Obj
+    p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item قضیاتی رابطے: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}۔
+  \item علم دا عامل $\Knows_a$ جتھے $a \in G$۔
+  \item عام اعلان دا عامل $[!B]$، جتھے $!B$ اک !!a{formula} اے۔
+\end{enumerate}
+\end{defn}
+
+عام اعلان دا عامل باکس والے عامل وانگ کم کردا اے۔ ایس حساب نال
+ساڈی زبان دی استقرائی تعریف ایویں اے:
+
+\begin{defn}
+علم دی زبان دے \emph{!!^{formula}s} استقرا نال ایویں متعین ہوندے نیں:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ اک ایٹمی !!{formula} اے۔}{}
+
+\tagitem{prvTrue}{$\ltrue$ اک ایٹمی !!{formula} اے۔}{}
+
+\item ہر قضیاتی متغیر $\Obj p_i$ اک (ایٹمی) !!{formula} اے۔
+
+\tagitem{prvNot}{جے $!A$ اک !!a{formula} اے، تاں $\lnot !A$ وی
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvAnd}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \land
+  !B)$ اک !!a{formula} اے۔}{}
+
+\tagitem{prvOr}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lor !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIf}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \lif !B)$
+  اک !!a{formula} اے۔}{}
+
+\tagitem{prvIff}{جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(!A \liff !B)$
+  اک !!a{formula} اے۔}{}
+
+\item جے $!A$ اک !!a{formula} اے تے $a \in G$، تاں $\Knows_a !A$
+  اک !!a{formula} اے۔
+
+\item جے $!A$ تے $!B$، !!{formula}s نیں، تاں $[!A] !B$ اک !!a{formula} اے۔
+
+\tagitem{limitClause}{ہور کوئی شے !!a{formula} نہیں۔}{}
+\end{enumerate}
+\end{defn}
+
+!!{formula} $[!A] !B$ دی مراد ایہ اے، «$!A$ دا سچا اعلان ہوون
+پچھوں~$!B$ لاگو اے۔» کدی کدی عام اعلان دے سیاق وچ سانجھے علم دی گل
+کرنی وی فائدے والی اے، ایس لئی زبان وچ سانجھے علم دا عامل~$\CKnows_G
+!A$ وی شامل ہو سکدا اے۔
+
+\end{document}

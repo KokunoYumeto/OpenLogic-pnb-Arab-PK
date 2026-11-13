@@ -1,0 +1,72 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{sem}
+
+\olsection{معنیاتی مفہوم}
+
+منّ لو کئی قدراں والی منطق $\Log L$ اک میٹرکس نال دِتّی اے۔
+فیر اسیں~$\Log L$ لئی عام معنیاتی مفہوم متعین کر سکدے آں۔
+
+\begin{defn}
+\begin{enumerate}
+\item !!^a{formula}~$!A$ \emph{پورا اترن جوگ} اے جے
+  کسے~$\pAssign{v}$ لئی $\pSat{v}{!A}$۔ ایہ
+  \emph{پورا نہ اترن جوگ} اے جے کسے وی $\pAssign{v}$ لئی
+  $\pSat{v}{!A}$ نہ ہووے۔
+\item !!^a{formula}~$!A$ \emph{ہمیشہ صادق} اے جے $\pSat{v}{!A}$
+  ساریاں !!{valuation}s~$v$ لئی ہووے۔
+\item جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں $\Gamma \Entails !A$،
+  یعنی «$\Gamma$ دا منطقی نتیجہ $!A$ اے»، اُدوں تے صرف اُدوں
+  جدوں $\pSat{v}{!A}$ ہر اوہ !!{valuation}~$\pAssign{v}$ لئی
+  ہووے جیہدے لئی $\pSat{v}{\Gamma}$ اے۔
+\item جے $\Gamma$، !!{formula}s دا سیٹ اے، تاں $\Gamma$
+  \emph{اکٹھے پورے اترن جوگ} اے جے کوئی !!a{valuation}~$\pAssign{v}$
+  ایہو جیہی ہووے کہ $\pSat{v}{\Gamma}$۔ ہور صورت وچ $\Gamma$
+  \emph{اکٹھے پورے نہ اترن جوگ} اے۔
+\end{enumerate}
+\end{defn}
+
+ایہناں مفہوماں بارے کجھ اوہو گلّاں سچ نیں جیہڑیاں کلاسیکی
+منطق وچ سچ نیں۔
+
+\begin{prop}
+\ollabel{prop:semanticalfacts}
+\begin{enumerate}
+\item $!A$ اُدوں تے صرف اُدوں ہمیشہ صادق اے جدوں
+  $\emptyset \Entails !A$۔
+\item جے $\Gamma$ اکٹھے پورے اترن جوگ اے، تاں $\Gamma$ دا ہر
+  محدود ذیلی سیٹ وی اکٹھے پورے اترن جوگ اے۔
+\item\ollabel{def:monotonicity}%
+یک رُخیت۔ جے $\Gamma \subseteq \Delta$ تے $\Gamma \Entails !A$،
+  تاں $\Delta \Entails !A$ وی اے۔
+\item\ollabel{def:Cut}%
+تعدّی۔ جے $\Gamma \Entails !A$ تے
+  $\Delta \cup \{ !A\} \Entails !B$، تاں $\Gamma \cup \Delta \Entails
+  !B$۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[mvl][syn][sem]{prop:semanticalfacts} ثابت کرو۔
+\end{prob}
+
+کلاسیکی منطق وچ اسیں منطقی نتیجے تے شرطیہ دا جوڑ ویکھ سکدے
+آں۔ مثلاً \emph{قاعدۂ اثباتِ مقدم} معتبر اے۔ جے $\Gamma
+\Entails !A$ تے $\Gamma \Entails !A \lif !B$، تاں $\Gamma \Entails
+!B$۔ کلاسیکی منطق وچ $\Entails$ تے $\lif$ دا اک ہور اہم
+جوڑ معنوی استنباط دا قضیہ اے۔ $\Gamma \Entails !A
+\lif !B$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{!A\} \Entails !B$۔
+ایہ نتیجے کئی قدراں والیاں منطقاں وچ ہمیشہ قائم \emph{نہیں}
+ہوندے۔ ایہناں دا قائم ہونا صداقتی فنکشن~$\tf{\lif}$ اُتے منحصر اے۔
+
+\end{document}

@@ -1,0 +1,218 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{cpl}
+
+\olsection{\Log{K} لئی تمامیت}
+
+\begin{explain}
+  ایہ وکھاؤن لئی کہ !!{tableau}s دا طریقہ مکمل اے، اسیں ثابت کرنا اے
+  کہ جدوں $\Gamma \Proves !A$ وکھاؤن والا بند !!{tableau} کوئی نہ ہووے،
+  تاں $\Gamma \Entails/ !A$، یعنی ردّی نمونہ موجود اے۔ پر «کوئی بند
+  !!{tableau} نہیں» دا مطلب اے کہ تابلو بناؤن دا ہر طریقہ بندش تک پہنچن
+  وچ ناکام ہووے گا۔ گل ایہ اے کہ جے ایہ سارے طریقے بندش تک نہیں پہنچدے،
+  تاں اک خاص \emph{ترتیب وار تے ساریاں صورتاں سمیٹن والا} طریقہ وی
+  بندش تک نہیں پہنچدا۔ تے جے کوئی بند !!{tableau} موجود اے، تاں ایہ
+  ترتیب وار تے ساریاں صورتاں نوں سمیٹن والا طریقہ بندش تک پہنچے گا۔
+  اوس اکلے تابلو دیاں کھلیاں شاخاں وچ ردّی نمونہ متعین کرن لئی لوڑ والی
+  ساری جانکاری ہووے گی۔ تابلو دی اک کھلی شاخ توں ملدے ردّی نمونے دے
+  جہان اوہ سارے اگیتے ہون گے جیہڑے اوس شاخ اُتے ورتے گئے نیں۔ کوئی
+  !!a{propositional
+    variable}~$p$، $\sigma$ اُتے اُدوں تے صرف اُدوں سچ اے
+  جدوں $\sFmla{\True}{p}[\sigma]$ شاخ اُتے آوے۔
+\end{explain}
+
+\begin{defn}
+  !!a{tableau} دی شاخ مکمل اکھواؤندی اے جے جدوں وی اوہدے وچ اگیتے والا
+  !!{formula} $\sFmla{S}{!A}[\sigma]$ ہووے جیہدے اُتے کوئی قاعدہ
+  لگ سکدا اے، تاں اوہدے وچ ایہ وی ہون:
+  \begin{enumerate}
+    \item قضیاتی قاعدہ جے اکّو شاخ اُتے نتیجے لاؤندا اے، تاں اوہدے
+      سارے متعلقہ نتیجے، یعنی اوہ اگیتے والے !!{formula}s۔
+    \item قضیاتی قاعدہ جے شاخ ونڈدا اے، تاں اوہدے متعلقہ نتیجے والے
+      !!{formula}s وچوں کوئی اک۔
+    \item امکانی قاعدے نوں جے نواں اگیتا چاہیدا اے، تاں گھٹ توں گھٹ
+      اک ممکن نتیجہ۔
+    \item امکانی قاعدے نوں جے پہلاں ورتیا ہویا اگیتا چاہیدا اے، تاں
+      شاخ اُتے آئے ہر اگیتے لئی متعلقہ نتیجہ۔
+  \end{enumerate}
+\end{defn}
+
+\begin{explain}
+مثلاً مکمل شاخ وچ $\sFmla{\True}{!B}[\sigma]$ تے
+$\sFmla{\True}{!C}[\sigma]$ دونیں ہوندے نیں جدوں اوہدے وچ
+$\sFmla{\True}{!B \land !C}$ ہووے۔ جے اوہدے وچ
+$\sFmla{\True}{!B \lor !C}[\sigma]$ اے، تاں
+$\sFmla{\False}{!B}[\sigma]$ تے $\sFmla{\True}{!C}[\sigma]$ وچوں
+گھٹ توں گھٹ اک ہوندا اے۔ جے اوہدے وچ \iftag{prvBox}
+{$\sFmla{\False}{\Box}[\sigma]$} {$\sFmla{\True}{\Diamond}[\sigma]$}
+ہووے، تاں اوہدے وچ \iftag{prvBox} {$\sFmla{\False}{\Box}[\sigma.n]$}
+{$\sFmla{\True}{\Diamond}[\sigma.n]$} گھٹ توں گھٹ اک~$n$ لئی وی ہوندا اے۔ تے جدوں وی اوہدے وچ \iftag{prvBox} {$\sFmla{\True}{\Box}[\sigma]$}
+{$\sFmla{\False}{\Diamond}[\sigma]$} ہووے، اوہدے وچ \iftag{prvBox}
+{$\sFmla{\True}{\Box}[\sigma.n]$}
+{$\sFmla{\False}{\Diamond}[\sigma.n]$} ہر ایسے~$n$ لئی ہوندا اے
+جیہدے لئی $\sigma.n$ شاخ اُتے ورتیا ہویا اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:complete-tableau}
+  ہر محدود $\Gamma$ دا !!a{tableau} ہوندا اے جیہدے وچ ہر شاخ مکمل اے۔
+\end{prop}
+
+\begin{proof}
+  !!a{tableau} دی کوئی کھلی شاخ، جیہڑا~$\Gamma$ لئی بنیا اے، ویکھو۔ شاخ اُتے محدود
+  گنتی وچ ایسے اگیتے والے !!{formula}s نیں جیہناں اُتے قاعدہ لگ سکدا
+  اے۔ کوئی ترتیب مقرر کر لو (مثلاً اُتّوں ہِیٹھاں ول)۔ ایس ترتیب وچ
+  اجیہے اگیتے والے !!{formula}s وچوں ہر اوس لئی جیہدے لئی شرطاں (1)--(4) پہلاں
+  توں پوریاں نہیں، اوہدے اُتے لگ سکن والے قاعدے لا کے شاخ ودھاؤ۔
+  کجھ صورتاں وچ شاخ ونڈی جائے گی۔ ملن والی ہر شاخ دے سِرے اُتے
+  باقی سارے اگیتے والے !!{formula}s لئی قاعدہ لاؤ۔ اگیتے والے
+  !!{formula}s دی گنتی محدود اے، تے شاخ اُتے ورتے ہوئے اگیتیاں دی گنتی
+  وی محدود اے۔ ایس لئی ایہ طریقہ آخرکار اصل شاخ نوں ودھاؤن والیاں
+  (ہو سکدا اے کئی) شاخاں دیندا اے۔ ایہ طریقہ ہر اک اُتے لاؤ تے
+  دہراؤ۔ پر بناوٹ مطابق، ہر شاخ بند اے۔
+\end{proof}
+
+\begin{thm}[تمامیت]
+  \ollabel{thm:tableau-completeness}
+  جے $\Gamma$ دا کوئی بند !!{tableau} نہیں، تاں $\Gamma$ پورا ہون جوگ اے۔
+\end{thm}
+
+\begin{proof}
+قضیے مطابق، $\Gamma$ دا اک !!a{tableau} اے جیہدے وچ ہر شاخ مکمل اے۔
+اوہدا کوئی بند !!{tableau} نہیں، ایس لئی اوہدا اک !!a{tableau} اے
+جیہدے وچ گھٹ توں گھٹ اک شاخ کھلی تے مکمل اے۔ منّ لو $\Delta$ اوس
+شاخ اُتے اگیتے والے !!{formula}s دا سیٹ اے، تے $P(\Delta)$ اوہدے وچ
+آئے اگیتیاں دا سیٹ اے۔
+
+اسیں اک نمونہ~$\mModel{M(\Delta)} = \tuple{P(\Delta), R, V}$ متعین
+کردے آں۔ اوہدے جہان~$\Delta$ وچ آئے اگیتے نیں، تے رسائی دا تعلق ایویں اے:
+\[
+R\sigma\sigma' \quad \text{اُدوں تے صرف اُدوں جدوں} \quad
+\sigma'=\sigma.n \quad \text{کسے~$n$ لئی}
+\]
+تے
+\[
+V(p) = \Setabs{\sigma}{\sFmla{\True}{p}[\sigma] \in \Delta}.
+\]
+اسیں~$!A$ اُتے استقرا نال وکھاؤنے آں کہ جے $\sFmla{\True}{!A}[\sigma] \in
+\Delta$، تاں $\mSat{M(\Delta)}{!A}[\sigma]$، تے جے
+$\sFmla{\False}{!A}[\sigma] \in \Delta$، تاں
+$\mSat/{M(\Delta)}{!A}[\sigma]$۔
+
+\begin{enumerate}
+  \item \indcase{!A}{p}{جے $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$،
+    تاں $\sigma \in V(p)$ (~$V$ دی تعریف مطابق)، ایس لئی
+    $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں
+    $\sFmla{\True}{\indfrm}[\sigma] \notin \Delta$، کیوں جے جے ایہ
+    اوہدے وچ ہوندا تاں شاخ بند ہوندی۔ سو $\sigma \notin V(p)$، ایس لئی
+    $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}
+  \item \indcase{!A}{\lnot !B}{\iftag{probNot}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\False}{!B}[\sigma] \in \Delta$، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat/{M(\Delta)}{!B}[\sigma]$،
+      سو $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\True}{!B}[\sigma] \in \Delta$، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat{M(\Delta)}{!B}[\sigma]$،
+      سو $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+  \item \indcase{!A}{!B \land !C}{\iftag{probAnd}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\True}{!B}[\sigma] \in \Delta$ تے
+      $\sFmla{\True}{!C}[\sigma] \in \Delta$ دونیں، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat{M(\Delta)}{!B}[\sigma]$ تے
+      $\mSat{M(\Delta)}{!C}[\sigma]$۔ سو
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\False}{!B}[\sigma] \in \Delta$ یا
+      $\sFmla{\False}{!C}[\sigma] \in \Delta$، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat/{M(\Delta)}{!B}[\sigma]$ یا
+      $\mSat/{M(\Delta)}{!B}[\sigma]$۔ سو
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+  \item \indcase{!A}{!B \lor !C}{\iftag{probOr}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\True}{!B}[\sigma] \in \Delta$ یا
+      $\sFmla{\True}{!C}[\sigma] \in \Delta$، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat{M(\Delta)}{!B}[\sigma]$ یا
+      $\mSat{M(\Delta)}{!C}[\sigma]$۔ سو
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\False}{!B}[\sigma] \in \Delta$ تے
+      $\sFmla{\False}{!C}[\sigma] \in \Delta$ دونیں، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat/{M(\Delta)}{!B}[\sigma]$ تے
+      $\mSat/{M(\Delta)}{!B}[\sigma]$ دونیں۔ سو
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+  \item \indcase{!A}{!B \lif !C}{\iftag{probIf}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\False}{!B}[\sigma] \in \Delta$ یا
+      $\sFmla{\True}{!C}[\sigma] \in \Delta$، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat/{M(\Delta)}{!B}[\sigma]$ یا
+      $\mSat{M(\Delta)}{!C}[\sigma]$۔ سو
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں
+      $\sFmla{\True}{!B}[\sigma] \in \Delta$ تے
+      $\sFmla{\False}{!C}[\sigma] \in \Delta$ دونیں، کیوں جے شاخ مکمل اے۔
+      استقرائی مفروضے مطابق، $\mSat{M(\Delta)}{!B}[\sigma]$ تے
+      $\mSat/{M(\Delta)}{!B}[\sigma]$ دونیں۔ سو
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+  \item \indcase{!A}{\Box !B}{\iftag{probBox}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں شاخ مکمل
+      ہون کر کے $\sFmla{\True}{!B}[\sigma.n] \in \Delta$ شاخ اُتے
+      ورتے ہوئے ہر $\sigma.n$ لئی اے، یعنی ہر اوہ $\sigma'
+      \in P(\Delta)$ لئی جیہدے لئی $R\sigma\sigma'$۔ استقرائی مفروضے
+      مطابق، $\mSat{M(\Delta)}{!B}[\sigma']$ ہر اوہ $\sigma'$ لئی
+      اے جیہدے لئی $R\sigma\sigma'$۔ سو
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں کسے
+      $\sigma.n$ لئی $\sFmla{\False}{!B}[\sigma.n] \in \Delta$، کیوں
+      جے شاخ مکمل اے۔ استقرائی مفروضے مطابق،
+      $\mSat/{M(\Delta)}{!B}[\sigma.n]$۔ $R\sigma(\sigma.n)$ ہون
+      کر کے کوئی~$\sigma'$ اے جیہدے لئی
+      $\mSat/{M(\Delta)}{!B}[\sigma']$۔ سو
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+  \item \indcase{!A}{\Diamond !B}{\iftag{probDiamond}{مشق۔}{جے
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$، تاں کسے
+      $\sigma.n$ لئی $\sFmla{\True}{!B}[\sigma.n] \in \Delta$، کیوں
+      جے شاخ مکمل اے۔ استقرائی مفروضے مطابق،
+      $\mSat{M(\Delta)}{!B}[\sigma.n]$۔ $R\sigma(\sigma.n)$ ہون
+      کر کے کوئی~$\sigma'$ اے جیہدے لئی
+      $\mSat{M(\Delta)}{!B}[\sigma']$۔ سو
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$۔
+
+جے $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$، تاں شاخ
+      مکمل ہون کر کے $\sFmla{\False}{!B}[\sigma.n] \in \Delta$
+      شاخ اُتے ورتے ہوئے ہر $\sigma.n$ لئی اے، یعنی ہر اوہ
+      $\sigma' \in P(\Delta)$ لئی جیہدے لئی $R\sigma\sigma'$۔
+      استقرائی مفروضے مطابق، $\mSat/{M(\Delta)}{!B}[\sigma']$
+      ہر اوہ $\sigma'$ لئی اے جیہدے لئی $R\sigma\sigma'$۔ سو
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$۔}}
+\end{enumerate}
+$\Gamma \subseteq \Delta$ ہون کر کے $\mSat{M(\Delta)}{\Gamma}$۔
+\end{proof}
+
+\begin{prob}
+\olref[nml][tab][cpl]{thm:tableau-completeness} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{cor}
+\ollabel{cor:entailment-completeness}
+جے $\Gamma \Entails !A$، تاں $\Gamma \Proves !A$۔
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:weak-completeness}
+جے $!A$ سارے نمونیاں وچ سچ اے، تاں $\Proves !A$۔
+\end{cor}
+
+\end{document}

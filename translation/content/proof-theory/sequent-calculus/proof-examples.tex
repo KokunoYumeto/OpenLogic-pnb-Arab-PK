@@ -1,0 +1,279 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: proof-examples
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{ex}
+
+\olsection{ثبوتاں دیاں مثالاں}
+
+سیکوئنٹاں دے !!{proof}s دین لئی عام طور اُتے سوکھا اے کہ آخری سیکوئنٹ توں اُتّے ول چلیے۔ اوہدے وچ !!a{formula} نوں فعال !!{formula} چُنو تے میل کھاندے قاعدے دے مقدمے سیکوئنٹ توں اُتّے لکھو۔ فیر ایویں کردے جاؤ جدوں تک مسلّمیّاں تک نہ پہنچ جاؤ۔ مثال لئی منّ لو اسیں ایہ سیکوئنٹ ثابت کرنا چاہنے آں:
+\[(!C \land !D) \lif !E \Sequent !C \lif (!D \lif !E)\]
+$!C \lif (!D \lif !E)$ ویکھو۔ ایہ $!A \lif !B$ دی شکل دا اے تے سیکوئنٹ دے سجّے پاسے آؤندا اے۔ پورے سیکوئنٹ نوں $\RightR{\lif}$ قاعدے، جیہڑا \Log{G1c} دا اے، نال ملاؤن توں
+\[\Axiom$ !A, \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof\]
+پتا لگدا اے کہ سانوں $\Gamma = \{!C \lif (!D \lif !E)\}$، $\Delta =
+\emptyset$، $!A \ident !C$ تے $!B \ident !D \lif !E$ لینا چاہیدا اے۔ سو ثبوت دا آخری استنباط ایہ ہو سکدا اے:
+\[\Axiom$ !C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+جے اسیں ایس خیال نوں مُڑ لائیے، $!D \lif !E$ نوں فعال فارمولا رکھ کے، تاں ایہ ملدا اے:
+\[\Axiom$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+ہُن سانوں $(!C \land !D) \lif !E$ ول دھیان دینا تے $\LeftR{\lif}$ قاعدہ، جیہڑا \Log{G1c} دا اے، ورتنا پینا اے:
+\[\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof\]
+ایہدے توں ایہ ملدا اے:
+\[\Axiom$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!D, !C, !E \fCenter !E$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+کھبّے پاسے دے سبھ توں اُتلے سیکوئنٹ وچ !!{formula} $!C \land !D$ نوں مُکھ رکھ کے تے $\RightR{\land}$ قاعدہ ورت کے سانوں ایہ ملدا اے:
+\[
+\Axiom$!D, !C \fCenter !E, !C$
+\Axiom$!D, !C \fCenter !E, !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!D, !C, !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof
+\]
+ہُن تک کم ٹھیک چلدا اے۔ ویکھو کہ جیہڑا کجھ اسیں کیتا اے، اوہ \Log{G3c} وچ وی چلدا اے، کیونکہ ہُن تک ورتے قاعدے \Log{G1c} تے~\Log{G3c} وچ اوہی نیں۔ اسیں !!a{proof} دے ایس ٹوٹے تک پہنچ گئے آں جتھے سارے اُتلے سیکوئنٹاں دے کھبّے تے سجّے پاسے اوہی !!{formula} اے۔ پر اوہ ہجے پورے مسلّمے نہیں۔
+
+\Log{G1c} وچ سانوں !!{proof}s، سبھ توں اُتلے سیکوئنٹاں دے،، $!A \Sequent !A$ دی شکل والے مسلّمیّاں توں دینے پین گے۔ ایہ کمزور کرن دے قاعدیاں نال سوکھا اے۔ مثال لئی !!{prove} ہو سکدا اے ایویں، سبھ توں کھبّا اُتلا سیکوئنٹ $!D, !C \Sequent
+!E, !C$:
+\[
+\Axiom$!C \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !C$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !C$
+\]
+سارا رلا کے ساڈے کول !!a{proof} اے \Log{G1c} وچ، جیہڑا ایویں دِسدا اے:
+\[
+\Axiom$!C \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !C$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !C$
+\Axiom$!D \fCenter !D$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !D$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!E \fCenter !E$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!C, !E \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C, !E \fCenter !E$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof
+\]
+ایس ثبوت دی بناوٹ (خاص کر اُچائی) ایس اُتے منحصر نہیں کہ !!{formula}s $!C$، $!D$ تے~$!E$ کیہ نیں۔ اسیں اُتلے !!{proof} وچ ایہ نشان کسے وی !!{formula}s نال بدل سکدے آں تے حاصل ہجے وی !!{proof} ہووے گا~\Log{G1c} وچ۔ \Log{G1c} دا ثبوت \emph{خاکہ وار} اے۔
+
+\Log{G3c} وچ مسلّمے $!A, \Gamma \Sequent
+\Delta, !A$ دی شکل والے سیکوئنٹ نیں، جتھے $!A$ جوہری ہونا چاہیدا اے۔ سو بھاویں $!D, !C \Sequent
+!E, !C$، \Log{G3c} دا مسلّمہ لگدا اے ($\Gamma = \{!D\}$، $\Delta =
+\{!E\}$)، اوہ \emph{سچ مُچ} مسلّمہ اوہدوں ای اے جے $!C$ جوہری اے۔ ساڈا ثبوت ٹوٹا \Log{G3c} وچ پورا ثبوت اوہدوں ای اے جے $!C$، $!D$ تے $!E$ جوہری !!{formula}s نیں۔
+
+بھاویں عین گل ایہ اے کہ اسیں ہجے ایہ نہیں وکھایا کہ
+\[\Log{G1c} \Proves (!C \land !D) \lif !E \fCenter !C \lif (!D \lif
+!E),\]
+پر عملی طور اُتے سانوں اینا ای کرن دی لوڑ اے (تے اینا ای کر سکدے آں)۔ وجہ ایہ اے کہ $!A, \Gamma \Sequent \Delta, !A$ دی شکل دا ہر سیکوئنٹ \Log{G3c} وچ ثابت ہو سکدا اے، بھاویں $!A$ آپ جوہری نہ ہووے۔ اسیں ایہ گہرائی~$\depth{!A}$ اُتے استقرا نال وکھا سکدے آں، جیہڑی~$!A$ دی اے۔
+
+\begin{defn}\ollabel{defn:depth}
+\emph{گہرائی}~$\depth{!A}$، !!a{formula} دی، ایویں متعین اے:
+\begin{enumerate}
+  \item جے $!A$ جوہری اے، تاں $\depth{!A} = 0$۔
+  \item جے $!A \ident \lnot !B$، $!A \ident \lforall[x][A]$، یا $!A \ident \lexists[x][A]$، تاں $\depth{!A} = \depth{!B} + 1$۔
+  \item جے $!A \ident (!B \land !C)$، $(!B \lor !C)$، یا $(!B \lif
+  !C)$، تاں $\depth{!A} = \max(\depth{!B},\depth{!C}) + 1$۔
+\end{enumerate}
+\end{defn}
+
+ایہ ثابت کرنا اوکھا نہیں کہ $\depth{A(x)} = \depth{A(t)}$ ہر ٹرم~$t$ لئی۔ ساڈے لئی اہم گل ایہ اے کہ ہر قاعدے وچ مُکھ !!{formula} دی گہرائی ہمیشہ فعال !!{formula}s دی گہرائی توں ودھ اے۔ مثال لئی ساڈے کول ایہ اے:
+\begin{align*}
+\depth{P(x)} = \depth{P(a)} & = 0,\\
+\depth{\lforall[x][P(x)]} & = 1,\\
+\depth{(\lforall[x][P(x)] \lif P(a))} & = \max(1,0) + 1 = 2.
+\end{align*}
+اسیں ایس گل نوں ورت کے~$\depth{!A}$ اُتے استقرا نال کجھ نتیجے ثابت کر سکدے آں، جیویں ہِٹھلا نتیجہ۔
+
+\begin{prop}\ollabel{prop:G1c-axioms}
+ہر~$!A$ لئی !!a{proof} اے $\Log{G1c}$ وچ $!A \Sequent !A$ دا، جیہدے وچ سارے مسلّمے جوہری نیں۔
+\end{prop}
+
+\begin{proof}
+  ~$ \depth{!A}$ اُتے استقرا نال۔ جے $\depth{!A} = 0$، تاں $!A$ جوہری اے تے $!A \Sequent !A$ پہلاں ای مطلوبہ شکل دا !!{proof} اے~\Log{G1c} وچ۔ جے $\depth{!A} > 0$، تاں $!A$ گھٹ گہرائی والے !!{formula}s توں بنیا اے، جیویں $!A \ident \lnot !B$، $!A \ident
+  (!B \land !C)$، یا $!A \ident \lforall[x][A(x)]$۔ استقرا دا مفروضہ ایہ اے کہ ہر $!D$ لئی جیہدے لئی $\depth{!D} < \depth{!A}$، جوہری مسلّمیّاں توں $\Log{G1c} \Proves !D \Sequent !D$۔
+
+  جے $!A \ident \lnot !B$، تاں $\depth{!B} < \depth{!A}$ تے استقرا دے مفروضے نال !!a{proof}~$\pi_1$ اے \Log{G1c} وچ، جوہری مسلّمیّاں توں $!B \Sequent !B$ دا۔ اسیں ایہنوں ایویں ودھا کے !!a{proof} بنا سکدے آں $\lnot !B \Sequent \lnot !B$ دا:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!B \fCenter !B$
+  \RightLabel{\LeftR{\lnot}}
+  \UnaryInf$\lnot !B, !B \fCenter $
+  \RightLabel{\RightR{\lnot}}
+  \UnaryInf$\lnot !B \fCenter \lnot !B$
+  \DisplayProof
+\]
+
+  جے $!A \ident (!B \land !C)$، تاں $\depth{!B} < \depth{!A}$ تے $\depth{!C} < \depth{!A}$۔ استقرا دے مفروضے نال !!{proof}s~$\pi_1$ تے~$\pi_2$ نیں \Log{G1c} وچ، جوہری مسلّمیّاں توں $!B
+  \Sequent !B$ تے $!C \Sequent !C$ دے۔ اسیں ایہناں نوں ایویں ودھا کے !!a{proof} بنا سکدے آں $!B \land !C \Sequent !B \land !C$ دا:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!B, \fCenter !B$
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!B, !C, \fCenter !B$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!B \land !C, !C\fCenter !B$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!B \land !C, !B \land !C \fCenter !B$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!C, \fCenter !C$
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!B, !C, \fCenter !C$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!B \land !C, !C \fCenter !C$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!B \land !C, !B \land !C \fCenter !C$
+  \RightLabel{\RightR{\land}}
+  \BinaryInf$!B \land !C \fCenter !B \land !C$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!B \land !C \fCenter !B$
+  \DisplayProof
+  \]
+
+  ہُن منّ لو $!A \ident \lforall[x][B(x)]$۔ اک !!a{constant}~$c$ لو جیہڑا $\lforall[x][B(x)]$ وچ نہیں آؤندا۔ فیر $\depth{B(c)} =
+  \depth{!B(x)} < \depth{!A}$ تے استقرا دے مفروضے نال !!a{proof}~$\pi_1$ اے \Log{G1c} وچ، جوہری مسلّمیّاں توں $!B(c)
+  \Sequent !B(c)$ دا۔ اسیں ایہنوں ایویں ودھا کے !!a{proof} بنا سکدے آں $\lforall[x][B(x)] \Sequent \lforall[x][B(x)]$ دا:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!B(c) \fCenter !B(c)$
+  \RightLabel{\LeftR{\lforall}}
+  \UnaryInf$\lforall[x][!B(x)] \fCenter !B(c)$
+  \RightLabel{\RightR{\lforall}}
+  \UnaryInf$\lforall[x][!B(x)] \fCenter \lforall[x][!B(x)]$
+  \DisplayProof
+\]
+
+  باقی صورتاں مشقاں لئی چھڈّیاں گئیاں نیں۔
+\end{proof}
+
+\begin{prob}
+  \olref{prop:G1c-axioms} دا ثبوت اوہ صورتاں کر کے پورا کرو جیہناں وچ $!A \ident (!B \lor !C)$، $!A \ident (!B \lif !C)$ تے $!A \ident \lexists[x][B(x)]$۔
+\end{prob}
+
+ساڈے مقصد لئی اسیں ایہ !!{proof} وی ورت سکدے ساں
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \fCenter !B$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\fCenter !B, \lnot !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B \fCenter \lnot !B$
+\DisplayProof
+\]
+اوس صورت وچ جتھے $!A \ident \lnot !B$۔ پر کجھ سیکوئنٹ نظام نیں جیہناں وچ ایہ کم نہ کردا۔ وجدانی سیکوئنٹ حساب \Log{G1i}، \Log{G1c} ورگا اے، پر اوہ ہر سیکوئنٹ دے سجّے پاسے ودھ توں ودھ اک !!{formula} دی کھُل دیندا اے۔ جے $\Delta = \emptyset$، تاں پہلا !!{proof}، !!a{proof} وی ہووے گا~\Log{G1i} وچ، پر دوجا نہیں، کیونکہ اک سیکوئنٹ دے سجّے پاسے $!B$ تے~$\lnot !B$ دونے نیں۔
+
+ویکھو کہ \Log{G1c} وچ وی اسیں قاعدیاں دی ہور ترتیب نہیں ورت سکدے ساں اوس صورت وچ جتھے $!A \ident \lforall[x][!B(x)]$۔ ہِٹھلا \emph{نہیں} !!a{proof} اے
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!B(c) \fCenter !B(c)$
+  \RightLabel{\RightR{\lforall}}
+  \UnaryInf$!B(c) \fCenter \lforall[x][!B(x)]$
+  \RightLabel{\LeftR{\lforall}}
+  \UnaryInf$\lforall[x][!B(x)] \fCenter \lforall[x][!B(x)]$
+  \DisplayProof
+\]
+کیونکہ~$\RightR{\lforall}$ دی خاص متغیر والی شرط ٹُٹدی اے۔
+
+\begin{prop}\ollabel{prop:G3c-axioms}
+$!A, \Gamma
+\Sequent \Delta, !A$ دی شکل دا ہر سیکوئنٹ (جتھے $!A$ دا جوہری ہونا \emph{ضروری نہیں})~\Log{G3c} وچ ثابت ہو سکدا اے۔
+\end{prop}
+
+\begin{proof}
+ثبوت \olref{prop:G1c-axioms} دے ثبوت ورگا ای اے، پر استقرا دے مفروضے بارے دھیان رکھنا پیندا اے۔ جتھے $n =
+\depth{!A} = 0$، اوہ صورت فیر سوکھی اے۔ جے $n=0$، تاں $!A$ جوہری اے، تے $!A,
+\Gamma \Sequent \Delta, !A$،~\Log{G3c} دا مسلّمہ اے۔
+
+ہُن منّ لو $n>0$۔ فیر اسیں صورتاں وکھ کردے آں۔ استقرا دا مفروضہ ایہ اے کہ ہر $D!$ لئی جیہدے لئی $\depth{!D} < n$، تے ہر $\Pi$ تے $\Lambda$ لئی، $\Log{G3c} \Proves !D, \Pi \Sequent \Lambda, !D$۔ ایہ صورت $!A \ident (!B \land !C)$ لئی اے۔ اسیں استقرا دا مفروضہ دو واری ورتدے آں۔ اک واری $!D = !B$، $\Pi = !C, \Gamma$ تے $\Lambda
+= \Delta$ لئی، !!a{proof}~$\pi_1$ لین واسطے $!B, !C, \Gamma \Sequent
+\Delta, !B$ دا، تے اک واری $!D = !C$، $\Pi = !B, \Lambda$ تے $\Lambda
+= \Delta$ لئی، !!a{proof}~$\pi_2$ لین واسطے $!B, !C, \Gamma \Sequent
+\Delta, !C$ دا۔ ایہ !!{proof} اے~$!B \land !C, \Gamma \Sequent
+\Delta, !B \land !C$ دا:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, \Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !C$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!B \land !C, \Gamma \fCenter \Delta, !B \land !C$
+\DisplayProof
+\]
+
+$!A \ident \lforall[x][!B(x)]$ لئی !!a{constant} چُنو جیہڑا~$\lforall[x][!B(x)]$، $\Gamma$ یا~$\Delta$ وچ نہیں۔ استقرا دا مفروضہ $!D = !B(c)$، $\Pi = \lforall[x][!B(x)], \Gamma$ تے $\Lambda = \Delta$ لئی لاؤ۔ ایہدے نال !!a{proof}~$\pi_1$ ملدا اے $!B(c),
+\lforall[x][!B(x)], \Gamma \Sequent \Delta, !B(c)$ دا، جیہدے توں سانوں ایہ ملدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B(c), \lforall[x][!B(x)], \Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\DisplayProof
+\]
+$\RightR{\lforall}$ دی خاص متغیر والی شرط ساڈے~$c$ چُنن دے طریقے نال پوری ہوندی اے۔
+\end{proof}
+
+\begin{prob}
+  \olref{prop:G3c-axioms} دا ثبوت اوہ صورتاں کر کے اگے ودھاؤ جیہناں وچ $!A \ident (!B \lif !C)$ تے $!A \ident
+  \lexists[x][B(x)]$۔
+\end{prob}
+
+\end{document}

@@ -1,0 +1,75 @@
+% part: intuitionistic-logic
+% chapter: propositions-as-types
+% section: terms-to-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{tp}
+
+\olsection{ثبوت ٹرماں توں \usetoken{P}{derivation} مُڑ لبھنا}
+
+ہُن دوجے پاسے ویکھدے آں، یعنی ثبوت ٹرم~$N$ نوں مُڑ !!a{proof} وچ ترجمہ کرنا، \Log{N2i} وچ۔ عام طور اُتے ایہ صرف اوس سیاق دے لحاظ نال ہو سکدا اے جیہدے وچ $x : !A$ جوڑا ہر اوس متغیر~$x$ لئی ہووے جیہڑا دِتّے ثبوت ٹرم وچ آزاد آؤندا اے۔ پر پہلاں ایہو جیہی مثال لئیے جیہدے وچ کوئی آزاد متغیر نہیں، یعنی ایہ ٹرم:
+\[
+\lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}]
+\]
+ایہ $\lambd[\typeof{x}{!A \land !B}][N_1]$ دی شکل دا اے۔ کیونکہ \Log{tN2i} دا اکّو قاعدہ جیہڑا ایس شکل دا ٹرم بناؤندا اے،~\Intro{\lif} اے، ایس لئی سانوں پتا اے کہ !!{proof} جیہڑا~$N$ کوڈ کردا اے،~\Intro{\lif} اُتے ضرور مُکدا اے، یعنی ایویں:
+\[
+  \Axiom$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif !C$
+  \DisplayProof
+  \]
+سانوں ہجے پتا نہیں کہ $!C$ کیہ اے، پر سانوں پتا اے کہ اگلا جزو $!A \land !B$ اے تے مقدمے دے سیاق وچ $x:!A \land !B$ ضرور ہووے گا۔
+
+ہُن مقدمے نال جُڑیا ثبوت ٹرم پہلاں ای طے اے، $ \pair{\proj{2}{x}}{\proj{1}{x}}$۔ !!{proof} جیہڑا \emph{ایہ ٹرم} کوڈ کردا اے، \Intro{\land} اُتے ضرور مُکدا اے۔ سانوں ہجے پتا نہیں کہ $!C$ کیہ اے، پر کیونکہ ایہ~\Intro{\land} دا نتیجہ اے، سانوں پتا اے کہ ایہ عطف ضرور اے، یعنی $!C \ident (!C_1 \land !C_2)$۔ اسیں ثبوت مُڑ بناؤندے آں:
+\[
+  \Axiom$x : !A\land !B \fCenter \proj{2}{x} : !C_1$
+  \Axiom$x : !A\land !B \fCenter \proj{1}{x} : !C_2$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C_1 \land !C_2$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!C_1 \land !C_2)$
+  \DisplayProof
+  \]
+ثبوت ٹرم $\pi_2(x)$ دا مطلب اے کہ کھبّے پاسے دا اُتلا سیکوئنٹ \Elim{\land}[2] نال ملیا سی، یعنی مقدمے دی شکل $!D
+\land !C_1$ اے۔ سجّے پاسے اسیں طے کر سکدے آں کہ $!C_2$ تک پہنچاؤن والا استنباط \Elim{\land}[1] ضرور اے، تے مقدمے دی شکل $!C_2 \land !E$ اے۔
+\[
+  \Axiom$x : !A\land !B \fCenter x: !D\land !C_1$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !C_1$
+  \Axiom$x : !A\land !B \fCenter x: !C_2\land !E$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !C_2$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C_1 \land !C_2$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!C_1 \land !C_2)$
+  \DisplayProof
+  \]
+ہُن کیونکہ سبھ توں اُتلے سیکوئنٹاں دے ثبوت ٹرم متغیر نیں، سانوں پتا اے کہ اوہ مسلّمے ضرور نیں۔ ایس نال $!C_1$، $!C_2$، $!D$ تے $!E$ طے ہوندے نیں۔ $!D \ident !A$ تے $!C_1 \ident !B$، نئیں تاں کھبّا سیکوئنٹ مسلّمہ نہیں۔ تے $!C_2 \ident !A$ تے $!E \ident !B$، نئیں تاں سجّا سیکوئنٹ مسلّمہ نہیں۔ اسیں پورا ثبوت مُڑ لبھ لیا اے:
+\[
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !B$
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+
+\end{document}

@@ -1,0 +1,77 @@
+% part: intuitionistic-logic
+% chapter: propositions-as-types
+% section: proofs-to-terms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{pt}
+
+\olsection{\usetoken{P}{derivation} نوں ثبوت ٹرماں وچ بدلنا}
+
+قدرتی اخذ دے !!{proof}s نوں ثبوت ٹرماں وچ بدلّن دا طریقہ، یعنی~\Log{N2i} دے !!{proof}s دا \Log{tN2i} دے !!{proof}s وچ ترجمہ، بہت سدھا اے۔ !!{formula} جیہڑا کسے سیکوئنٹ دے سجّے پاسے اے، اوہدے کھبّے پاسے اک ثبوت ٹرم لکھو، !!{derivation} وچ ہر ایہو جیہے فارمولے لئی۔ ایہدے نال $ \Gamma \Sequent M :
+!A$ دی شکل دے سیکوئنٹ ملدے نیں۔ فیر اسیں آکھاں گے کہ $M$،~$!A$ دا \emph{گواہ اے}، سیاق~$\Gamma$ وچ۔ کِہڑا ثبوت ٹرم لکھنا اے، ایہ سارا \Log{tN2i} دے قاعدے طے کردے نیں۔
+
+\begin{prop}
+ہر !!{proof}~$\delta$، $ \Gamma \Sequent !A$ دا \Log{N2i} وچ، !!a{proof}~$\delta'$ نال میل کھاندا اے، $ \Gamma \Sequent N : !A$ دا \Log{tN2i} وچ۔ ثبوت ٹرم $N$،~$\delta$ نال اکّو طرح طے ہوندا اے۔
+\end{prop}
+
+\begin{proof}
+اسیں~$\delta$ دی اُچائی اُتے استقرا کردے آں۔ جے $\delta$ مسلّمہ $x:!A \Sequent !A$ اے، تاں $\delta'$ مسلّمہ~$x:!A \Sequent
+x:!A$ اے۔ جے $\delta$ استنباطی قاعدے اُتے مُکدا اے، تاں استقرا دا مفروضہ ہر مقدمے لئی ثبوت ٹرم دیندا اے، تے \Log{tN2i}-!!{proof}s وی، اوہناں سیکوئنٹاں دے جیہڑے ہر مقدمے نال میل کھاندے نیں تے ایہ ثبوت ٹرم رکھدے نیں۔ اسیں \Log{tN2i} دا میل کھاندا قاعدہ لاؤنے آں۔ میل کھاندا ثبوت ٹرم \Log{tN2i} دا استنباطی قاعدہ طے کردا اے۔
+\end{proof}
+
+\begin{ex}
+  بہت سدھا !!{proof} ویکھو \Log{N1i} وچ، $(!A \land !B)
+  \lif (!B \land !A)$ دا:
+  \[
+  \AxiomC{$\Discharge{!A\land !B}{x}$}
+  \RightLabel{\Elim\land[2]}
+  \UnaryInfC{$!B$}
+  \AxiomC{$\Discharge{!A\land !B}{x}$}
+  \RightLabel{\Elim\land[1]}
+  \UnaryInfC{$!A$}
+  \RightLabel{\Intro\land}
+  \BinaryInfC{$!B \land !A$}
+  \DischargeRule{\Intro\lif}{x}
+  \UnaryInfC{$(!A \land !B) \lif (!B \land !A)$}
+  \DisplayProof
+  \]
+  \Log{N2i} وچ ایہ ایویں دِسدا اے:
+  \[
+  \Axiom$x : !A\land !B \fCenter !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter !B$
+  \Axiom$x : !A\land !B \fCenter !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+  اسیں ثبوت ٹرم اُتّوں تھلّے ول دیندے آں۔ مسلّمیاں دے ثبوت ٹرم اوہی نیں جیہڑا سیاق وچ متغیر اے، یعنی~$x$۔ فیر $ \Elim\land[i]$ نال جُڑے ثبوت ٹرم $\proj{2}{x}$ تے~$\proj{1}{x}$ طے ہوندے نیں۔ جدوں اسیں \Intro{\land} لاؤنے آں، ایہ دونے ثبوت ٹرم رلا دیندے آں، $ \pair{\proj{2}{x}}{\proj{1}{x}}$۔
+  آخر \Intro{\lif} قاعدہ $\lambd$-تجرید لاؤندا اے،~$x$ نوں بندھدا اے تے ایہ درج کردا اے کہ $x$ مفروضے~$!A \land
+  !B$ دا لیبل سی، $ \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}]$۔
+  فیر !!{proof}، \Log{tN2i} وچ، ایہ اے:
+  \[
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !B$
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+\end{ex}
+
+\end{document}

@@ -1,0 +1,55 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: modal-validity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{val}
+
+\olsection{منطقی اعتبار}
+
+\begin{explain}
+  !!^{formula}s جیہڑے سارے نمونیاں وچ سچے نیں، یعنی ہر نمونے دے ہر جہان وچ سچے نیں، خاص طور تے دھیان جوگ نیں۔ اوہ اوہناں امکانی قضیاں نوں ظاہر کردے نیں جیہڑے $\Box$ تے $\Diamond$ دی تعبیر جو وی ہووے سچے رہندے نیں، جے تعبیر ایس معنی وچ «نارمل» ہووے کہ اوہ ممکن جہاناں دے کسے رسائی دے تعلق توں بندی اے۔ اسیں اینج دے !!{formula}s نوں \emph{معتبر} آکھدے آں۔ مثال لئی $\Box(p \land q) \lif \Box p$ معتبر اے۔ کجھ !!{formula}s، جیہڑے $\Box$ دی سچائی نال جڑی تعبیر دے آسرے معتبر لگ سکدے نیں، جیویں $\Box p \lif p$، دراصل معتبر نہیں۔ تعلقی نمونیاں دی اک خاص گل ایہ اے کہ $\Box$ تے $\Diamond$ دیاں وکھ وکھ تعبیراں رسائی دے تعلقاں دیاں وکھ وکھ قسماں نال دتیاں جا سکدیاں نیں۔ ایس توں خیال آؤندا اے کہ منطقی اعتبار دی تعریف \emph{سارے} نمونیاں دے لحاظ نال تے \emph{کسے خاص قسم دے} سارے نمونیاں دے لحاظ نال وی کر سکدے آں۔ مثال لئی پتا لگے گا کہ $\Box p \lif p$ اوہناں سارے نمونیاں وچ سچا اے جتھے ہر جہان اپنے آپ توں رسائی وچ اے، یعنی $R$ انعکاسی اے۔ نمونیاں دیاں جماعتاں دے لحاظ نال منطقی اعتبار دی تعریف نال اسیں ایہ گل مختصر ایویں آکھ سکدے آں: $\Box p \lif p$ انعکاسی نمونیاں دی جماعت وچ معتبر اے۔
+\end{explain}
+
+\begin{defn}
+  !!^a{formula}~$!A$ نمونیاں دی جماعت $\mClass{C}$ وچ \emph{معتبر} اے جے اوہ~$\mClass{C}$ دے ہر نمونے وچ سچا اے (یعنی~$\mClass{C}$ دے ہر نمونے دے ہر جہان وچ سچا اے)۔ جے $!A$،~$\mClass{C}$ وچ معتبر اے، تاں اسیں $\mClass{C} \Entails !A$ لکھدے آں، تے $\Entails !A$ لکھدے آں جے $!A$ \emph{سارے} نمونیاں دی جماعت وچ معتبر اے۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:subset-class}
+  جے $!A$، $\mClass{C}$ وچ معتبر اے، تاں اوہ ہر جماعت
+  $\mClass{C}' \subseteq \mClass{C}$ وچ وی معتبر اے۔
+\end{prop}
+
+\begin{prop}\ollabel{prop:Nec-rule}
+  جے $!A$ معتبر اے، تاں $\Box!A$ وی معتبر اے۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $\Entails !A$۔ $\Entails \Box!A$ وکھاؤن لئی $\mModel{M} =
+  \tuple{W, R, V}$ کوئی نمونہ لے لو تے $w \in W$ کوئی جہان۔ جے $Rww'$ تاں
+  $\mSat{M}{!A}[w']$، کیوں جے $!A$ معتبر اے، تے ایس لئی
+  $\mSat{M}{\Box!A}[w]$ وی۔ کیوں جے $\mModel{M}$ تے $w$ آپو اپنی تھاں کوئی وی ہو سکدے سن، ایس لئی
+  $\Entails \Box!A$۔
+\end{proof}
+
+\begin{prob}
+  وکھاؤ کہ ہِیٹھ لکھے فارمولے معتبر نیں:
+  \begin{enumerate}
+  \item $\Box p \lif \Box (q \lif p)$؛
+  \item $\Box \lnot \lfalse$؛
+  \item $\Box p \lif (\Box q \lif \Box p)$۔
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+  وکھاؤ کہ $!A \lif \Box!A$ اوہناں نمونیاں دی جماعت $\mClass{C}$ وچ معتبر اے جیہڑے
+  $\mModel{M} = \tuple{W, R, V}$ نیں تے جیہناں لئی $W = \{w\}$ اے۔ ایویں ای وکھاؤ کہ
+  $!B \lif \Box !A$ تے $\Diamond !A \lif !B$ اوہناں نمونیاں دی جماعت وچ معتبر نیں جیہڑے
+  $\mModel{M} = \tuple{W, R, V}$ نیں تے جیہناں لئی
+  $R = \emptyset$ اے۔
+\end{prob}
+
+\end{document}

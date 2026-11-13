@@ -1,0 +1,63 @@
+% Part: methods
+% Chapter: proofs
+% Section: example-2
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mth}{prf}{ex2}
+
+\olsection{اک ہور مثال}
+
+\begin{prop}
+جے $A \subseteq C$، تاں $A \cup (C \setminus A) = C$۔
+\end{prop}
+
+\begin{proof}
+  منّ لو $A \subseteq C$۔ اسیں وکھاؤنا چاہندے آں کہ $A \cup (C
+  \setminus A) = C$۔
+  \begin{quote}
+    پہلاں اسیں ویکھدے آں کہ ایہ اک شرطیہ بیان اے۔ ایتھے ساریاں لئی ہون دی گل اَن کہی اے۔ قضیہ سارے سیٹاں $A$ تے $C$ لئی اے۔ سو $A$ تے $C$ من مانے سیٹاں لئی متغیر نیں۔ ایہو جیہا بیان ثابت کرن لئی اسیں مقدم منّدے آں تے تالی ثابت کردے آں۔
+
+    اسیں مفروضہ شرط $A \subseteq C$ ورت کے اگے ودھدے آں۔ آؤ~$\subseteq$ دی تعریف کھولھیے۔ شرط دا مطلب اے کہ~$A$ دے سارے !!{element}s،~$C$ دے !!{element}s وی نیں۔ آؤ ایہ گل لکھ لئیے، ایہ اہم گل اے جیہڑی سارے ثبوت وچ ورتاں گے۔
+  \end{quote}
+  تعریف~$\subseteq$ مطابق، کیوں جے $A \subseteq C$، سو سارے $z$ لئی، جے $z \in A$ تاں $z \in C$۔
+  \begin{quote}
+    اسیں منّی ہوئی شرط وچ دتیاں ساریاں تعریفاں کھولھ لئیاں نیں۔ ہُن نتیجے ول جا سکدے آں۔ اسیں وکھاؤنا چاہندے آں کہ $A \cup (C \setminus A) = C$۔ سو پچھلی مثال وانگ ثبوت دی بناوٹ رکھدے آں۔ وکھاؤ کہ $A \cup (C \setminus A)$ دا ہر !!{element}،~$C$ دا !!a{element} وی اے، تے اُلٹے پاسے، $C$ دا ہر !!{element}، $A \cup (C
+    \setminus A)$ دا !!a{element} اے۔ ایہنوں مختصر ایویں لکھ سکدے آں، $A \cup (C \setminus A)
+    \subseteq C$ تے $C \subseteq A \cup (C \setminus A)$۔ (ایتھے اسیں تعریف کھولھن توں اُلٹ کم کردے آں، پر ایس نال ثبوت پڑھنا ذرا سوکھا ہُندا اے۔) کیوں جے ایہ عطف اے، سانوں دوویں حصے ثابت کرنے پَین گے۔ پہلا حصہ، یعنی $A \cup (C \setminus A)$ دا ہر !!{element}،~$C$ دا !!a{element} وی اے، وکھاؤن لئی اسیں منّدے آں کہ $z \in A \cup (C \setminus A)$، جتھے~$z$ من مانا اے، تے وکھاؤندے آں کہ $z \in C$۔ $\cup$ دی تعریف مطابق اسیں نتیجہ کڈھ سکدے آں کہ $z \in A$ یا $z \in C \setminus A$، کیوں جے $z \in A \cup (C \setminus A)$۔ ہُن تہانوں ایس طریقے دی سمجھ آؤندی ہونی چاہیدی اے۔
+    \end{quote}
+  $A \cup (C \setminus A) = C$ اُدوں تے صرف اُدوں جدوں $A \cup (C \setminus A) \subseteq
+  C$ تے $C \subseteq (A \cup (C \setminus A)$۔ پہلاں اسیں ثابت کردے آں کہ $A \cup (C \setminus A) \subseteq C$۔ $z \in A \cup (C
+  \setminus A)$ ہووے۔ سو یا $z \in A$ یا $z \in (C \setminus A)$۔
+  \begin{quote}
+    اسیں اک فصل تک پہنچے آں تے اوہتوں ثابت کرنا چاہندے آں کہ $z \in C$۔ اسیں ایہ کم صورتاں وکھ کر کے کردے آں۔
+  \end{quote}
+  صورت ۱۔ $z \in A$۔ کیوں جے سارے $z$ لئی جے $z \in A$ تاں $z \in C$، سو $z \in C$۔
+  \begin{quote}
+    ایتھے اسیں پہلاں لکھی گل ورتی اے جیہڑی قضیے دی شرط $A \subseteq C$ توں نکلی سی۔ پہلی صورت پوری ہوئی۔ ہُن دوجی صورت $z \in (C
+    \setminus A)$ ول آؤ۔ چیتے کرو کہ $C \setminus A$ دوہاں سیٹاں دے \emph{فرق} نوں دسدا اے، یعنی~$C$ دے اوہناں سارے !!{element}s دا سیٹ جیہڑے~$A$ دے !!{element}s نہیں۔ پر $C$ دا ہر !!{element} جیہڑا~$A$ وچ نہیں، خاص کر کے~$C$ دا !!a{element} اے۔
+  \end{quote}
+  صورت ۲۔ $z \in (C \setminus A)$۔ ایہدا مطلب اے کہ $z \in C$ تے $z
+  \notin A$۔ سو خاص کر کے $z \in C$۔
+  \begin{quote}
+    چنگا، پہلی سمت ثابت ہو گئی۔ ہُن دوجی سمت لئیے۔ ایتھے اسیں ثابت کردے آں کہ $C \subseteq A \cup (C \setminus
+    A)$۔ سو منّدے آں کہ $z \in C$ تے ثابت کردے آں کہ $z \in A \cup (C
+    \setminus A)$۔
+  \end{quote}
+  ہُن $z \in C$ ہووے۔ اسیں وکھاؤنا چاہندے آں کہ $z \in A$ یا $z \in C
+  \setminus A$۔
+  \begin{quote}
+    کیوں جے $A$ دے سارے !!{element}s، $C$ دے !!{element}s وی نیں، تے $C
+    \setminus A$ اوہناں ساریاں شےواں دا سیٹ اے جیہڑیاں $C$ دے !!{element}s نیں پر $A$ دے نہیں، سو $z$ یا $A$ وچ اے یا $C
+    \setminus A$ وچ۔ جے تہانوں پہلاں ای پتا نہیں کہ نتیجہ کیوں سچ اے، تاں ایہ گل ذرا دھندلی لگ سکدی اے۔ ایہنوں قدم بہ قدم ثابت کرنا چنگا اے۔ اک سوکھی گل ورتنی کم آوے گی جیہڑی اسیں ثبوت توں بناں دس سکدے آں، $z \in A$ یا $z \notin A$۔ اینوں «تیجی صورت نہ ہون دا اصول» آکھدے نیں۔ کسے وی بیان~$p$ لئی، یا $p$ سچ اے یا اوہدی نفی سچ اے۔ (ایتھے $p$ ایہ بیان اے کہ $z \in A$۔) ایہ فصل اے، سو اسیں فیر صورتاں وکھ کر کے ثبوت دے سکدے آں۔
+  \end{quote}
+  یا $z \in A$ یا $z \notin A$۔ پہلی صورت وچ $z \in A \cup
+  (C \setminus A)$۔ دوجی صورت وچ $z \in C$ تے $z \notin A$، سو $z \in C \setminus A$۔ پر فیر $z \in A \cup (C \setminus A)$۔
+  \begin{quote}
+    ساڈا ثبوت پورا اے۔ اسیں وکھا دتا اے کہ $A \cup (C \setminus A) = C$۔
+  \end{quote}
+\end{proof}
+
+\end{document}

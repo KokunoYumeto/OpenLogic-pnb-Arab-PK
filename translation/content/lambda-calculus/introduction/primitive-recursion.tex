@@ -1,0 +1,144 @@
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: primitive-recursion
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{pr}
+\olsection{\usetoken{S}{lambda definable} فنکشن بنیادی بازگشت ہِٹھ بند نیں}
+
+ہُن بنیادی بازگشت لئی سانوں کجھ کم کرنا پئے گا۔ اسیں ایہ کم
+پڑاؤواں وچ کراں گے۔ پہلاں وانگ منّ لئیے کہ ساڈے کول ٹرم $G$ تے $H$
+پہلاں ای نیں، جیہڑے فنکشن $g$ تے~$h$ نوں بالترتیب !!{lambda define} کردے نیں۔
+سانوں اوہ ٹرم $H$ چاہیدا اے جیہڑا ہِٹھ دِتّے فنکشن~$f$ نوں
+!!{lambda define}s:
+\begin{align*}
+f(0, \vec z) & = g(\vec z) \\
+f(x+1, \vec z) & = h(z, f(x,\vec z), \vec z).
+\end{align*}
+سو عام طور اُتے، جے لامبڈا ٹرم $G'$ تے~$H'$ دِتّے ہون، تاں
+ایہو جیہا ٹرم~$F$ لبھنا کافی اے جیہدے لئی
+\begin{align*}
+F(\num{0}, \vec z) & \equiv G(\vec z) \\
+F(\overline{n+1}, \vec z) & \equiv H(\num{n}, F(\num{n}, \vec z), \vec z)
+\end{align*}
+ہر قدرتی عدد~$n$ لئی ہووے۔ $G'$ تے~$H'$ فنکشن $g$ تے~$h$ نوں
+!!{lambda define} کردے نیں، ایس لئی جدوں وی اسیں چرچ عدد $\num{\vec m}$
+نوں $\vec z$ دی تھاں رکھاں گے، $F(\num{n+1}, \num{\vec m})$
+تقلیل ہو کے صحیح جواب والے نارمل روپ تک پُہنچے گا۔
+
+پر ایس کم لئی ایہو جیہا ٹرم~$F$ لبھنا کافی اے جیہڑا ایہ شرطاں
+پوریاں کرے:
+\begin{align*}
+F(\num 0) & \equiv G \\
+F(\overline {n+1}) & \equiv H(\num{n},F(\num{n}))
+\intertext{ہر قدرتی عدد $n$ لئی، جتھے}
+G & = \lambd[\vec z][G'(\vec z)] \text{ تے}\\
+H(u,v) & = \lambd[\vec z][H'(u,v(u,\vec z),\vec z)].
+\end{align*}
+دوجے لفظاں وچ، لامبڈا دی ایس ترکیب نال وادھو پیرامیٹراں $\vec z$
+دی وکھری فکر نہیں کرنی پیندی۔ اوہ لامبڈا لکھت وچ ای سما جاندے نیں۔
+
+ٹرم $F$ دی تعریف توں پہلاں سانوں ترتیب وار جوڑیاں نوں ورتن دا
+طریقہ چاہیدا اے۔ اگلا لمہ ایہ طریقہ دیندا اے۔
+
+\begin{lem}
+اک لامبڈا ٹرم $D$ موجود اے جیہدے لئی لامبڈا ٹرماں $M$ تے~$N$
+دے ہر جوڑے اُتے $D(M,N)(\num{0}) \red M$ تے $D(M,N)(\num{1}) \red N$۔
+\end{lem}
+
+\begin{proof}
+پہلاں لامبڈا ٹرم $K$ دی تعریف ایویں کرو:
+\[
+K(y) = \lambd[x][y].
+\]
+دوجے لفظاں وچ، $K$ اوہ ٹرم $\lambd[y][\lambd[x][y]]$ اے۔ ہور
+طرح ویکھیے تاں ہر $M$ لئی، $K(M)$ اک مستقل فنکشن اے جیہڑا
+ہر انپٹ اُتے~$M$ واپس کردا اے۔
+
+ہُن $D(x,y,z)$ دی تعریف $D(x,y,z) = z (K(y))x$ نال کرو۔ فیر
+ساڈے کول
+\begin{align*}
+D(M,N,\num 0) & \red \num 0 (K(N)) M \red M \text{ تے}\\
+D(M,N,\num 1) & \red \num 1 (K(N)) M \red K(N) M \red N,
+\end{align*}
+جیویں سانوں چاہیدا سی۔
+\end{proof}
+
+خیال ایہ اے کہ $D(M,N)$ جوڑے $\tuple{M, N}$ دی نمائندگی کردا اے۔
+جے منّ لئیے کہ $P$ ایہو جیہے جوڑے دی نمائندگی کردا اے، تاں $P(\num 0)$
+تے $P(\num 1)$ بالترتیب کھبے تے سجے حصے نوں چُندے نیں، یعنی
+$(P)_0$ تے $(P)_1$۔ اسیں ایہ آخری دو لکھتاں ورتاں گے۔
+
+\begin{lem}
+!!{lambda definable} فنکشن بنیادی بازگشت ہِٹھ بند نیں۔
+\end{lem}
+
+\begin{proof}
+سانوں ایہ دکھاؤنا اے کہ کوئی وی ٹرم $G$ تے $H$ دِتّے ہون، اسیں
+ایہو جیہا ٹرم $F$ لبھ سکدے آں جیہدے لئی
+\begin{align*}
+F(\num{0}) & \equiv G \\
+F(\num{n+1}) & \equiv H(\num{n}, F(\num{n}))
+\end{align*}
+ہر قدرتی عدد~$n$ لئی ہووے۔ موٹا خیال ایہ اے کہ چرچ اعداں نوں
+وار وار عمل کرن والے ٹرم سمجھ کے \emph{جوڑیاں} دیاں لڑیّاں دا حساب کریے:
+\[
+\tuple{\num 0, F(\num 0)}, \tuple{\num 1, F(\num 1)}, \dots,
+\]
+دھیان دیو کہ پہلا جوڑا بس $\tuple{\num 0, G}$ اے۔ جے جوڑا
+$\tuple{\num{n}, F(\num{n})}$ دِتّا ہووے، تاں اگلے جوڑے
+$\tuple{\num{n+1}, F(\num{n+1})}$ نوں
+$\tuple{\num{n+1}, H(\num{n}, F(\num{n}))}$ دے ہم ارز ہونا چاہیدا اے۔
+اسیں اک لامبڈا ٹرم~$T$ بناواں گے جیہڑا ایہ اک قدم دا بدل کردا اے۔
+
+تفصیل ایہ اے۔ $T(u)$ دی تعریف ایویں کرو:
+\[
+T(u) = \tuple{S((u)_0), H((u)_0,(u)_1)}.
+\]
+ہُن ایہ پرکھنا سوکھا اے کہ کسے وی عدد~$n$ لئی،
+\[
+T(\tuple{\num{n}, M}) \red \tuple{\num{n+1}, H(\num{n}, M)}.
+\]
+جیویں اُتے دَسّیا سی، $G$ تے $H$ دِتّے ہون تاں~$F(u)$ دی تعریف
+ایویں کرو:
+\[
+F(u) = (u(T,\tuple{\num 0, G}))_1.
+\]
+دوجے لفظاں وچ، انپٹ~$\num{n}$ اُتے، $F$، $T$ نوں $n$ واری
+$\tuple{\num 0, G}$ توں شروع کر کے لاگو کردا اے، تے فیر دوجا جزو
+واپس کردا اے۔ شروع وچ ساڈے کول ایہ اے:
+\begin{enumerate}
+\item $\num{0} (T, \tuple{\num 0, G}) \equiv \tuple{\num{0}, G}$
+\item $F(\num{0}) \equiv G$
+\end{enumerate}
+~$n$ اُتے استقرا نال اسیں ہر قدرتی عدد لئی ایہ دکھا سکدے آں:
+\begin{enumerate}
+\item $\num{n+1}(T, \tuple{\num{0}, G}) \equiv \tuple{\num{n+1}, F(\num{n+1})}$
+\item $F(\num{n+1}) \equiv H(\num{n}, F(\num{n}))$
+\end{enumerate}
+دوجی گل لئی ساڈے کول ایہ اے:
+\begin{align*}
+F(\num{n+1}) & \red (\num{n+1}(T, \tuple{\num 0, G}))_1 \\
+& \equiv (T(\num{n} (T, \tuple{\num 0, G})))_1 \\
+& \equiv (T(\tuple{\num{n}, F(\num{n})}))_1 \\
+& \equiv (\tuple{\num{n+1}, H(\num{n}, F(\num{n}))})_1 \\
+& \equiv H(\num{n}, F(\num{n})).
+\end{align*}
+ایتھے اسیں آخری توں پہلی سطر وچ استقرا دا مفروضہ ورتیا اے۔ پہلی
+گل لئی ساڈے کول ایہ اے:
+\begin{align*}
+\num{n+1} (T, \tuple{\num 0, G}) &
+\equiv T(\num{n} (T, \tuple{\num 0, G})) \\
+& \equiv T( \tuple{\num{n}, F(\num{n})}) \\
+& \equiv \tuple{\num{n+1}, H(\num{n}, F(\num{n}))} \\
+& \equiv \tuple{\num{n+1}, F(\num{n+1})}.
+\end{align*}
+ایتھے اسیں آخری سطر وچ دوجی گل ورتی اے۔ سو اسیں دکھا دِتّا اے کہ
+$F(\num 0) \equiv G$ تے ہر $n$ لئی $F(\num {n+1}) \equiv H(\num
+n, F(\num{n}))$۔ سانوں عین ایہو چاہیدا سی۔
+\end{proof}
+
+\end{document}

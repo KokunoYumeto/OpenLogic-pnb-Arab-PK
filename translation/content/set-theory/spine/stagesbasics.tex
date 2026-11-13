@@ -1,0 +1,103 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{Valphabasic}
+\olsection{مرحلیاں دیاں بنیادی خاصیتاں}
+
+$V_\alpha$ والے سیٹاں دی تعریف دی بنیادی اہمیت سمجھاؤن لئی اسیں اوہناں
+بارے کجھ بنیادی نتیجے دیواں گے۔ پہلاں اک تعریف دیندے آں:\footnote{’’ذیلی
+سیٹاں تحت بند‘‘ لئی کوئی معیاری اصطلاح نہیں۔ اصل وچ ایہدے لئی انگریزی ناں «potent» اے، جیہڑا
+\citet{ButtonLT1} ورتدا اے۔}
+\begin{defn}
+سیٹ $A$ \emph{اپنے رکناں دے ذیلی سیٹاں تحت بند} اُدوں تے صرف اُدوں اے
+جدوں $\forall x((\exists y \in A)x \subseteq y \lif x \in A)$۔
+\end{defn}
+\begin{lem}\ollabel{Valphabasicprops}
+ہر ترتیبی عدد $\alpha$ لئی:
+\begin{enumerate}
+	\item\ollabel{Valphatrans} ہر $V_\alpha$ متعدی اے۔
+	\item\ollabel{Valphapotent} ہر $V_\alpha$ اپنے رکناں دے ذیلی سیٹاں تحت بند اے۔
+	\item\ollabel{Valphacum} جے $\gamma \in \alpha$، تاں $V_\gamma
+	\in V_\alpha$ (تے ایس لئی $V_\gamma \subseteq V_\alpha$ وی،
+	\olref{Valphatrans} نال)۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+اسیں ایہ لامتناہی درجیاں اُتے (اکو ویلے) استقرا نال ثابت کردے آں۔
+استقرا لئی منّ لو \olref{Valphatrans}--\olref{Valphacum} ہر ترتیبی
+عدد $\beta < \alpha$ لئی قائم نیں۔
+
+$\alpha = \emptyset$ والی صورت ظاہر اے۔
+
+منّ لو $\alpha = \ordsucc{\beta}$۔ \olref{Valphacum} وکھاؤن لئی، جے
+$\gamma \in \alpha$، تاں مفروضے نال $V_\gamma \subseteq V_\beta$،
+سو $V_\gamma \in \Pow{V_\beta} = V_\alpha$۔
+\olref{Valphapotent} وکھاؤن لئی منّ لو $A \subseteq B \in V_\alpha$،
+یعنی $A \subseteq B \subseteq V_\beta$۔ تاں $A \subseteq V_\beta$،
+سو $A \in V_\alpha$۔ \olref{Valphatrans} وکھاؤن لئی دھیان دیو کہ
+جے $x \in A \in V_\alpha$، تاں $A \subseteq V_\beta$، سو $x \in V_\beta$،
+سو $x \subseteq V_\beta$ کیوں جے مفروضے نال $V_\beta$ متعدی اے۔
+ایس لئی $x \in V_\alpha$۔
+
+منّ لو $\alpha$ حدّی ترتیبی عدد اے۔ \olref{Valphacum} وکھاؤن لئی،
+جے $\gamma \in \alpha$، تاں $\gamma \in \ordsucc{\gamma} \in \alpha$۔
+سو مفروضے نال $V_\gamma \in V_{\ordsucc{\gamma}}$، تے ایس لئی
+$V_\gamma \in \bigcup_{\beta \in \alpha} V_\beta = V_\alpha$۔
+\olref{Valphatrans} تے \olref{Valphapotent} وکھاؤن لئی بس ویکھو کہ
+متعدی (یا اپنے رکناں دے ذیلی سیٹاں تحت بند) سیٹاں دا اتحاد وی
+متعدی (بالترتیب اپنے رکناں دے ذیلی سیٹاں تحت بند) اے۔
+\end{proof}
+
+\begin{lem}\ollabel{Valphanotref}
+ہر ترتیبی عدد $\alpha$ لئی، $V_\alpha \notin V_\alpha$۔
+\end{lem}
+
+\begin{proof}
+لامتناہی درجیاں اُتے استقرا نال۔ ظاہر اے کہ $V_\emptyset \notin V_\emptyset$۔
+
+جے $V_{\ordsucc{\alpha}} \in V_{\ordsucc{\alpha}} = \Pow{V_\alpha}$،
+تاں $V_{\ordsucc{\alpha}} \subseteq V_\alpha$۔ تے چونکہ
+$V_\alpha \in V_{\ordsucc{\alpha}}$، \olref{Valphabasicprops} نال،
+ایس لئی $V_\alpha \in V_\alpha$۔ اُلٹے پاسے، جے $V_\alpha \notin V_\alpha$،
+تاں $V_{\ordsucc{\alpha}} \notin V_{\ordsucc{\alpha}}$۔
+
+جے $\alpha$ حدّی عدد اے تے $V_\alpha \in V_\alpha = \bigcup_{\beta \in \alpha}V_\beta$،
+تاں $V_\alpha \in V_\beta$ کسے $\beta \in \alpha$ لئی۔ پر فیر
+$V_\beta \in V_\alpha$ وی، ایس لئی $V_\beta \in V_\beta$،
+\olref{Valphabasicprops} دو واری ورت کے۔ اُلٹے پاسے، جے $V_\beta
+\notin V_\beta$ ہر $\beta \in \alpha$ لئی، تاں $V_\alpha \notin V_\alpha$۔
+\end{proof}
+
+\begin{cor}
+کسے وی ترتیبی عدداں $\alpha, \beta$ لئی، $\alpha \in \beta$ اُدوں
+تے صرف اُدوں اے جدوں $V_\alpha \in V_\beta$۔
+\end{cor}
+
+\begin{proof}
+\Olref{Valphabasicprops} اک پاسا دیندا اے۔ اُلٹے پاسے منّ لو
+$V_\alpha \in V_\beta$۔ تاں $\alpha \neq \beta$، \olref{Valphanotref}
+نال۔ تے $\beta \notin \alpha$، کیوں جے نہیں تاں $V_\beta \in V_\alpha$
+ہوندا، تے ایس لئی $V_\beta \in V_\beta$، \olref{Valphabasicprops}
+دو واری ورت کے، جیہڑا \olref{Valphanotref} دے اُلٹ اے۔
+سو $\alpha \in \beta$ تِن صورتاں دے اصول نال۔
+\end{proof}
+\noindent
+ایس سارے توں اسیں ہر $V_\alpha$ نوں درجہ بندی دا $\alpha$واں مرحلہ
+منّ سکدے آں۔ وجہ ایہ اے۔
+
+بے شک ساڈے $V_\alpha$ والے سیٹ \emph{مرحلہ وار} بندے سمجھ سکدے آں، کیوں جے
+ترتیبی عدداں دی ساڈی ورتوں مرحلیاں دی دہرائی نوں ظاہر کردی اے۔ نالے جے اک
+مرحلہ دوجے توں پہلاں بندا اے، یعنی $V_\beta \in V_\alpha$، یعنی $\beta \in \alpha$،
+تاں سیٹ بنن دی ساڈی کارروائی \emph{اکٹھی کردی جاندی} اے، کیوں جے
+$V_\beta \subseteq V_\alpha$۔ آخر اسیں اوہناں سیٹاں دے \emph{سارے} ممکن
+اکٹھ بناندے آں جیہڑے کسے پچھلے مرحلے اُتے موجود سن، کیوں جے کوئی وی
+جانشین مرحلہ $V_{\ordsucc{\alpha}}$ اپنے پچھلے مرحلے $V_\alpha$ دے ذیلی سیٹاں
+دا سیٹ اے۔
+
+مختصر گل ایہ اے کہ $\ZFminus$ نال اسیں سیٹاں دی اکٹھا کرن والی مرحلہ وار
+درجہ بندی دا اپنا خیال بیان کرن دا کم \emph{تقریباً} پورا کر چکے آں۔
+(بھانویں، بے شک، ہجے بدل رکھن دے اصول دا جواز دینا اے۔)
+
+\end{document}

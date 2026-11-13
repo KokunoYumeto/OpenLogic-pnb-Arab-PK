@@ -1,0 +1,59 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{axd}{مسلّمی \usetoken{P}{derivation}}}
+      {\olchapter{pl}{axd}{مسلّمی \usetoken{P}{derivation}}}
+
+\begin{editorial}
+  ہن تک ایہ پکا کرن دی کوشش نہیں کیتی گئی کہ ایس باب دا مواد اوہناں
+  وکھ وکھ ٹیگاں دے مطابق اے جیہڑے دسدے نیں کہ کیہڑے منطقی رابطے تے
+  مسوّر ابتدائی نیں تے کیہڑے تعریف شدہ: سارے رابطے تے مسوّر ابتدائی
+  منّے گئے نیں، صرف $\liff$ نوں تعریف شدہ منّیا گیا اے۔ جے FOL
+  ٹیگ سچا ہووے، تاں اسیں مسوّراں والا روپ تیار کردے آں، ورنہ
+  مسوّراں توں بنا روپ۔
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{axioms-rules-propositional}
+
+\iftag{FOL}{%
+  \olimport{axioms-rules-quantifiers}
+}{}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{deduction-theorem}
+
+\iftag{FOL}{%
+  \olimport{deduction-theorem-quantifiers}
+}{}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{
+  \olimport{identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

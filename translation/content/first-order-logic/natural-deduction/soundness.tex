@@ -1,0 +1,335 @@
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{sou}}
+      {\olfileid{pl}{ntd}{sou}}
+      
+\olsection{صحت مندی (Soundness)}
+
+\begin{explain}
+!!^a{derivation} نظام، جیویں فطری استنباط، \emph{صحت مند (sound)}
+اُدوں اے جے اوہ اوہ گلاں !!{derive} نہیں کر سکدا جیہڑیاں اصل وچ
+نتیجے دے طور تے نہیں نکلدیاں۔ ایس لئی صحت مندی، !!{derivation} نظاماں
+لئی ضمانت والی حفاظتی خاصیت اے۔ جیہڑی ثبوتی-نظریاتی خاصیت دا سوال ہووے،
+اوہدے مطابق اسیں مثال دے طور تے جاننا چاہواں گے کہ
+\begin{enumerate}
+\item ہر !!{derivable} !!{sentence} \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے؛
+\item جے کوئی !!a{sentence} کجھ ہور جملیاں توں !!{derivable} اے، تاں اوہ
+  اوہناں دا منطقی نتیجہ وی اے؛
+\item جے !!{sentence}s دا کوئی سیٹ متضاد اے، تاں اوہ پورا ہون جوگ نہیں۔
+\end{enumerate}
+ایہ !!a{derivation} نظام دیاں اہم خاصیتاں نیں۔ جے ایہناں وچوں کوئی وی
+قائم نہ ہووے، تاں !!{derivation} نظام ناقص ہووے گا---اوہ لوڑ توں ودھ
+!!{derive} کرے گا۔ ایس لئی !!{derivation} نظام دی صحت مندی ثابت کرنا
+نہایت اہم اے۔
+\end{explain}
+
+\begin{thm}[صحت مندی (Soundness)]
+\ollabel{thm:soundness}
+جے $!A$، !!{undischarged} مفروضیاں
+$\Gamma$ توں !!{derivable} اے، تاں $\Gamma \Entails !A$۔
+\end{thm}
+
+\begin{proof}
+$\delta$، $!A$ دی !!a{derivation} ہووے۔ اسیں~$\delta$ وچ
+استنباطاں دی گنتی اُتے استقرا کراں گے۔
+
+استقرا دی بنیاد لئی اسیں اوہ صورت ثابت کردے آں جدوں استنباطاں دی گنتی
+~$0$ اے۔ ایس صورت وچ $\delta$ صرف اک
+!!{sentence}~$!A$، یعنی اک مفروضے، اُتے مشتمل اے۔ ایہ مفروضہ
+!!{undischarged} اے، کیوں جے مفروضے صرف استنباط دے ذریعے
+!!{discharged} ہوندے نیں تے ایتھے کوئی استنباط نہیں۔ ایس لئی ہر
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+جیہڑا ثبوت دے سارے !!{undischarged} مفروضیاں نوں پورا کردا اے،
+~$!A$ نوں وی پورا کردا اے۔
+
+ہُن استقرائی قدم ویکھو۔ منّ لو $\delta$ وچ~$n$ استنباط نیں۔ سب توں
+ہِٹھلے استنباط دے اک یا ودھ مقدمے ذیلی !!{derivation}s نال
+!!{derive} ہوندے نیں، تے ہر اک وچ~$n$ توں گھٹ
+استنباط نیں۔ اسیں استقرائی مفروضہ مندے آں: سب توں ہِٹھلے استنباط دے
+مقدمے اوہناں ذیلی !!{derivation}s دے !!{undischarged} مفروضیاں
+توں منطقی طور تے نکلدے نیں جیہڑیاں انہاں مقدمیاں اُتے ختم ہوندیاں نیں۔
+اسیں وکھاؤنا اے کہ نتیجہ~$!A$ سارے ثبوت دے !!{undischarged} مفروضیاں
+توں منطقی طور تے نکلدا اے۔
+
+اسیں سب توں ہِٹھلے استنباط دی قسم مطابق صورتاں وکھ کردے آں۔ پہلاں
+اک مقدمے والے ممکنہ استنباط ویکھدے آں۔
+
+\begin{enumerate}
+\item منّ لو آخری استنباط \Intro{\lnot} اے: !!{derivation} دی صورت ایہ اے
+  \begin{prooftree}
+    \AxiomC{$\Gamma, \Discharge{!A}{n}$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$\lfalse$}
+    \DischargeRule{\Intro{\lnot}}{n}
+    \UnaryInfC{$\lnot !A$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $\lfalse$، !!{undischarged}
+  مفروضیاں $\Gamma \cup \{!A\}$ توں نکلدا اے جیہڑے~$\delta_1$
+  دے نیں۔ کوئی
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ویکھو۔ اسیں ثابت کرنا اے کہ جے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !A}$۔ تضاد لئی منّ لو کہ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، پر
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lnot !A}$، یعنی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ ایس دا مطلب ہووے گا کہ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma \cup \{!A\}}$۔ ایہ
+  ساڈے استقرائی مفروضے دے خلاف اے۔ ایس لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !A}$۔
+
+\item آخری استنباط \Elim{\land} اے: دو صورتاں نیں: $!A$ یا $!B$
+  نوں مقدمے $!A \land !B$ توں اخذ کیتا جا سکدا اے۔ پہلی صورت ویکھو۔
+  !!{derivation}~$\delta$ ایویں اے:
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A \land !B$}
+    \RightLabel{\Elim{\land}}
+    \UnaryInfC{$!A$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $!A \land !B$، !!{undischarged}
+  مفروضیاں~$\Gamma$ توں نکلدا اے جیہڑے~$\delta_1$ دے نیں۔ اک
+  % PNBNTD-010: PL branch needs a valuation, not a first-order structure.
+  \iftag{FOL}{!!a{structure}}{!!a{valuation}}~\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ویکھو۔
+  اسیں ثابت کرنا اے کہ جے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ منّ لو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$۔ استقرائی مفروضے
+  ($\Gamma \Entails !A \land !B$) توں اسیں جان دے آں کہ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$۔ تعریف مطابق،
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$ اُدوں تے صرف اُدوں
+  جدوں $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ تے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$۔ (جتھے $!B$،
+  $!A \land !B$ توں اخذ ہوندا اے، اوہ صورت وی ایویں حل ہوندی اے۔)
+  
+\item آخری استنباط \Intro{\lor} اے: دو صورتاں نیں: $!A
+  \lor !B$، مقدمے~$!A$ توں یا مقدمے~$!B$ توں اخذ ہو سکدا اے۔
+  پہلی صورت ویکھو۔ !!{derivation} دی صورت ایہ اے
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+    \RightLabel{\Intro{\lor}}
+    \UnaryInfC{$!A \lor !B$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $!A$، !!{undischarged}
+  مفروضیاں~$\Gamma$ توں نکلدا اے جیہڑے~$\delta_1$ دے نیں۔ کوئی
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ویکھو۔ اسیں ثابت کرنا اے کہ جے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$۔ منّ لو
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$؛ فیر
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$، کیوں جے
+  $\Gamma \Entails !A$ (استقرائی مفروضہ)۔ ایس لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$ وی ہووے گا۔
+  (جتھے $!A \lor !B$،~$!B$ توں اخذ ہوندا اے، اوہ صورت وی
+  ایویں حل ہوندی اے۔)
+  
+\item آخری استنباط \Intro{\lif} اے: $!A \lif !B$ اک ایس ذیلی ثبوت
+  توں اخذ ہوندا اے جیہدے وچ مفروضہ~$!A$ تے نتیجہ~$!B$ اے، یعنی
+  \begin{prooftree}
+    \AxiomC{$\Gamma, \Discharge{!A}{n}$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!B$}
+    \DischargeRule{\Intro{\lif}}{n}
+    \UnaryInfC{$!A \lif !B$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $!B$،~$\delta_1$ دے !!{undischarged}
+  مفروضیاں توں نکلدا اے، یعنی $\Gamma \cup \{!A\} \Entails
+  !B$۔ کوئی
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ویکھو۔~$\delta$ دے !!{undischarged} مفروضے صرف $\Gamma$ نیں،
+  کیوں جے آخری استنباط وچ $!A$ خارج ہو جاندا اے۔ ایس لئی اسیں ثابت
+  کرنا اے کہ $\Gamma \Entails !A \lif !B$۔ تضاد لئی منّ لو کہ کسے
+  \iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+  لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ پر
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$۔ فیر
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ تے
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$۔ پر مفروضے مطابق $!B$،
+  $\Gamma \cup \{!A\}$ دا منطقی نتیجہ اے، یعنی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، جو تضاد اے۔ ایس لئی
+  $\Gamma \Entails !A \lif !B$۔
+
+\item آخری استنباط \FalseInt اے: ایتھے $\delta$ ایویں ختم ہوندی اے
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$\lfalse$}
+    \RightLabel{\FalseInt}
+    \UnaryInfC{$!A$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $\Gamma \Entails \lfalse$۔ اسیں ثابت کرنا
+  اے کہ $\Gamma \Entails !A$۔ جے ایہ نہ ہووے، تاں کسے
+  ~$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ لئی
+    $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ تے
+    $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ ہووے گا۔ پر ہر حال وچ
+    $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lfalse}$، ایس لئی ایہ
+    $\Gamma \Entails/ \lfalse$ دا مطلب دیندا اے، جیہڑا استقرائی
+    مفروضے دے خلاف اے۔
+
+\item آخری استنباط \FalseCl اے: مشق۔
+
+\iftag{FOL}{
+\item آخری استنباط \Intro{\lforall} اے: فیر $\delta$ دی صورت ایہ اے
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A(a)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق مقدمہ $!A(a)$، !!{undischarged}
+  مفروضیاں $\Gamma$ دا منطقی نتیجہ اے۔ کوئی ساخت
+  $\Struct{M}$ ویکھو جیہدے لئی $\Sat{M}{\Gamma}$۔ اسیں ثابت
+  کرنا اے کہ $\Sat{M}{\lforall[x][!A(x)]}$۔ چونکہ
+  $\lforall[x][!A(x)]$ !!a{sentence} اے، ایس دا مطلب اے کہ
+  ہر متغیر-قدر بندی~$s$ لئی $\Sat{M}{!A(x)}[s]$ ثابت کیتا جاوے
+  (\olref[syn][ass]{prop:sat-quant})۔ چونکہ $\Gamma$ سارے دا سارا
+  جملیاں اُتے مشتمل اے، $\Sat{M}{!B}[s]$ ہر
+  $!B \in \Gamma$ لئی قائم اے، بحوالہ
+  \olref[syn][sat]{defn:satisfaction}۔ $\Struct{M'}$ اوہو جہی ساخت
+  ہووے جیہڑی $\Struct{M}$ توں صرف ایس گل وچ وکھری اے کہ
+  $\Assign{a}{M'} = s(x)$۔ چونکہ $a$،~$\Gamma$ وچ نہیں آؤندا،
+  \olref[syn][ext]{cor:extensionality-sent} مطابق
+  $\Sat{M'}{\Gamma}$۔ چونکہ $\Gamma \Entails
+  !A(a)$، ایس لئی $\Sat{M'}{!A(a)}$۔ چونکہ $!A(a)$ !!a{sentence}
+  اے، \olref[syn][ass]{prop:sentence-sat-true} مطابق
+  $\Sat{M'}{!A(a)}[s]$۔ \olref[syn][ext]{prop:ext-formulas} مطابق
+  $\Sat{M'}{!A(x)}[s]$ اُدوں تے صرف اُدوں جدوں
+  $\Sat{M'}{!A(a)}$ (چیتے رکھو کہ $!A(a)$، صرف
+  $\Subst{!A(x)}{a}{x}$ اے)۔ ایس لئی
+  $\Sat{M'}{!A(x)}[s]$۔ چونکہ $a$،~$!A(x)$ وچ نہیں آؤندا،
+  \olref[syn][ext]{prop:extensionality} مطابق
+  $\Sat{M}{!A(x)}[s]$۔ پر $s$ کوئی وی متغیر-قدر بندی سی،
+  ایس لئی $\Sat{M}{\lforall[x][!A(x)]}$۔
+  
+\item آخری استنباط \Intro{\lexists} اے: مشق۔
+
+\item آخری استنباط \Elim{\forall} اے: مشق۔
+}{}
+\end{enumerate}
+
+ہُن کئی مقدمیاں والے ممکنہ استنباط ویکھدے آں:
+\Elim{\lor}، \Intro{\land}، \iftag{FOL}{\Elim{\lif}، تے
+  \Elim{\lexists}}{تے \Elim{\lif}}۔
+\begin{enumerate}
+
+\item آخری استنباط \Intro{\land} اے۔ $!A \land !B$ مقدمیاں $!A$
+  تے $!B$ توں اخذ ہوندا اے، تے $\delta$ دی صورت ایہ اے
+  \begin{prooftree}
+    \AxiomC{$\Gamma_1$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+    \AxiomC{$\Gamma_2$}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!B$}
+    \RightLabel{\Intro{\land}}
+    \BinaryInfC{$!A \land !B$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $!A$، !!{undischarged}
+  مفروضیاں~$\Gamma_1$ توں نکلدا اے جیہڑے~$\delta_1$ دے نیں،
+  تے $!B$، !!{undischarged} مفروضیاں~$\Gamma_2$ توں نکلدا اے
+  جیہڑے~$\delta_2$ دے نیں۔
+  ~$\delta$ دے !!{undischarged} مفروضے $\Gamma_1 \cup
+  \Gamma_2$ نیں، ایس لئی اسیں ثابت کرنا اے کہ
+  $\Gamma_1 \cup \Gamma_2 \Entails
+  !A \land !B$۔ کوئی
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ویکھو جیہدے لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup \Gamma_2}$۔
+  چونکہ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1}$،
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ ہووے گا، کیوں جے
+  $\Gamma_1 \Entails !A$؛ تے چونکہ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_2}$،
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ ہووے گا، کیوں جے
+  $\Gamma_2 \Entails
+  !B$۔
+  دونیں ملا کے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$۔
+  
+\item آخری استنباط \Elim{\lor} اے: مشق۔
+
+\item آخری استنباط \Elim{\lif} اے۔ $!B$، مقدمیاں
+  $!A \lif !B$ تے~$!A$ توں اخذ ہوندا اے۔
+  !!{derivation}~$\delta$ ایویں اے:
+  \begin{prooftree}
+    \AxiomC{$\Gamma_1$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A \lif !B$}
+    \AxiomC{$\Gamma_2$}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!A$}
+    \RightLabel{\Elim{\lif}}
+    \BinaryInfC{$!B$}
+  \end{prooftree}
+  استقرائی مفروضے مطابق $!A \lif !B$، !!{undischarged}
+  مفروضیاں~$\Gamma_1$ توں نکلدا اے جیہڑے~$\delta_1$ دے نیں،
+  تے $!A$، !!{undischarged} مفروضیاں~$\Gamma_2$ توں نکلدا اے
+  جیہڑے~$\delta_2$ دے نیں۔ کوئی
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ویکھو۔ اسیں ثابت کرنا اے کہ جے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup
+    \Gamma_2}$، تاں $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$۔
+  منّ لو $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup \Gamma_2}$۔
+  چونکہ $\Gamma_1 \Entails !A \lif !B$،
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A
+    \lif !B}$۔ چونکہ $\Gamma_2 \Entails !A$، اسیں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ حاصل کردے آں۔ ایس دا
+  مطلب اے کہ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ (کیوں جے جے
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$ ہوندا، تاں
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ دے نال
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$ ہوندا،
+  جیہڑا~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$
+  دے خلاف اے)۔
+
+\item آخری استنباط \Elim{\lnot} اے: مشق۔
+  
+\tagitem{FOL}{آخری استنباط \Elim{\lexists} اے: مشق۔}{}
+\end{enumerate}
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][ntd][sou]{thm:soundness} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][ntd][sou]{thm:soundness} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$ \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے۔
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+جے $\Gamma$ پورا ہون جوگ اے، تاں ایہ بے تضاد اے۔
+\end{cor}
+
+\begin{proof}
+اسیں متقابلِ عکس ثابت کردے آں۔ منّ لو $\Gamma$ بے تضاد نہیں۔
+فیر $\Gamma \Proves \lfalse$، یعنی~$\lfalse$ دی !!a{derivation}
+موجود اے جیہدے !!{undischarged} مفروضے~$\Gamma$ وچ نیں۔
+\olref{thm:soundness} مطابق ہر
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+جیہڑا $\Gamma$ نوں پورا کردا اے، اوہنوں $\lfalse$ وی پورا کرنا
+پئے گا۔ چونکہ
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lfalse}$ ہر
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+لئی قائم اے،
+کوئی وی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}،
+$\Gamma$ نوں پورا نہیں کر سکدا؛ یعنی $\Gamma$ پورا ہون جوگ نہیں۔
+\end{proof}
+
+\end{document}

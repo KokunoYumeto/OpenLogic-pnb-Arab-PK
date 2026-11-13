@@ -1,0 +1,42 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{expo}
+\olsection{ترتیبی گھات}
+
+ہُن اسیں ترتیبی گھات ول آؤندے آں۔ افسوس، ترتیبی گھات دی بناوٹ راہیں کوئی \emph{سوکھی} تعریف نہیں۔
+
+بے شک بناوٹ راہیں صاف تعریفاں \emph{موجود} نیں۔ اک تعریف ایہ اے۔ $\text{finfun}(\alpha,\beta)$ اوہناں سارے فنکشناں $f
+\colon \alpha \to \beta$ دا سیٹ ہووے، جیہناں لئی $\Setabs{\gamma \in
+\alpha}{f(\gamma) \neq 0}$ دے رکناں دی گنتی کسے قدرتی عدد دے رکناں دی گنتی دے برابر اے۔ $\text{finfun}(\alpha,\beta)$ اُتے حُسنِ ترتیب ایویں تعریف کرو۔ $f
+\sqsubset g$ اُدوں تے صرف اُدوں جدوں $f \neq g$ تے $f(\gamma_0) < g(\gamma_0)$، جتھے
+$\gamma_0 = \text{max}\Setabs{\gamma \in \alpha}{f(\gamma) \neq
+g(\gamma)}$۔ فیر $\ordexpo{\alpha}{\beta}$ دی تعریف
+$\ordtype{\text{finfun}(\alpha, \beta), \sqsubset}$ وجوں دے سکدے آں۔ پوٹر ایہ صاف تعریف ورتدا اے تے نال ای سمجھاندا اے:
+\begin{quote}
+	ایہ ترتیب بس ایس خواہش کرکے چُنی اے کہ ترتیبی گھات دی ایہو جیہی تعریف ملے جیہڑی ڈھکویں بازگشتی شرط اُتے پوری اُترے\ldots، تے ایہدی صورت ذہن وچ بناؤنی ترتیب والے جوڑ یا ترتیب والی ضرب نالوں کِتے اوکھی اے۔
+	\citep[p.~199]{Potter2004}
+\end{quote}
+ایہ گل ٹھیک اے۔ اسیں جوڑ نوں «$\alpha$ دی اک نقل تے اوہدے پچھوں $\beta$ دی اک نقل» آکھ کے سمجھایا سی، تے ضرب نوں «$\beta$ جِنّی لمّی لڑی، $\alpha$ دیاں نقلاں دی» آکھ کے۔ پر $\text{finfun}(\alpha, \gamma)$ بارے ساڈے کول ایہو جیہی کوئی نِکّی جیہی گل نہیں۔ سو اسیں ترتیبی گھات دی تعریف سِدھی لامتناہی درجیاں والی بازگشت \emph{راہیں} دیواں گے، یعنی:
+
+\begin{defn}\ollabel{ordexporecursion}
+\begin{align*}
+	\ordexpo{\alpha}{0} &= 1\\
+	\ordexpo{\alpha}{\beta\ordplus 1} &=\ordexpo{\alpha}{\beta} \ordtimes \alpha\\
+	\ordexpo{\alpha}{\beta} &= \bigcup_{\delta < \beta}\ordexpo{\alpha}{\delta}& & \text{جدوں $\beta$ حدّی ترتیبی عدد اے}
+\end{align*}
+\end{defn}
+
+جے اسیں سیٹ نظریے دے ماہر \emph{وجوں} کم کردے ہُندے تاں شاید ترتیبی گھات دیاں کجھ خاصیتاں ہور ویکھنا چاہندے۔ پر ساڈے کول ہور بہت کجھ کہن نوں نہیں، سوائے ایس جانی پچھانی گل دے کہ ترتیبی گھات تبادلی نہیں۔ سو $\ordexpo{2}{\omega} =
+\bigcup_{\delta < \omega}\ordexpo{2}{\delta} = \omega$، جدکہ
+$\ordexpo{\omega}{2} = \omega \ordtimes \omega$۔ پر سانوں ایہ \emph{آس} وی نہیں رکھنی چاہیدی کہ گھات تبادلی ہووے گی، کیوں جے قدرتی عدداں وچ وی ایہ تبادلی نہیں۔ $\ordexpo{2}{3} = 8 < 9 = \ordexpo{3}{2}$۔
+
+\begin{prob}
+لامتناہی درجیاں اُتے استقرا ورت کے ثابت کرو کہ جے اسیں
+$\ordexpo{\alpha}{\beta} = \ordtype{\text{finfun}(\alpha, \beta),
+\sqsubset}$ تعریف کریے، تاں
+\olref[sth][ord-arithmetic][expo]{ordexporecursion} دیاں بازگشتی مساواتاں ملدیاں نیں۔
+\end{prob}
+
+\end{document}

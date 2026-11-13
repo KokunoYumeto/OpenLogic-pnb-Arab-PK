@@ -1,0 +1,443 @@
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: interpolation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{itp}
+
+\olsection{مائےہارا دا معاون قضیہ تے کریگ دا درمیانی فارمولے والا قضیہ}
+
+ولیم کریگ دا درمیانی فارمولے والا قضیہ کہندا اے کہ جے $!A
+\Entails !B$، تاں اک !!a{sentence}~$!C$ (\emph{درمیانی جملہ}) ایہو جیہا اے کہ $!A \Entails !C$ تے $!C \Entails !B$۔ اہم گل ایہ اے کہ درمیانی جملہ~$!C$ ایویں چُن سکدے آں کہ اوہدے سارے !!{constant}s تے !!{predicate}s جیہڑے~$!C$ وچ آؤندے نیں،~$!A$ تے~$!B$ دوہاں وچ آؤن۔ (اسیں منّنے آں کہ کوئی !!{function}s شامل نہیں۔) ایس پابندی توں بناں $!A$ تے $!B$ سوکھے ای درمیانی جملے بن سکدے نیں۔
+
+درمیانی فارمولے والا قضیہ کلاسیکی پہلے درجے دی منطق لئی سچ اے، تے ایہنوں لبھّن والیاں خاصیتاں وچوں «پہلے درجے دی منطق دی آخری اہم خاصیت» آکھیا گیا اے۔ نمونیاں دے نظریے تے خودکار استدلال وچ ایہدی اہم ورتوں اے۔ ایہدا مُڈھلا محرک تے ورتوں سائنس دے فلسفے وچ سی، کیوں جے ایہدے نال پرکھ سکدے آں کہ کِہڑیاں بنیادی اصطلاحاں نال کسے نظریے دے مسلّمے مقرر ہو سکدے نیں یا نہیں۔ ایس توں بیتھ دا تعریف پذیری والا قضیہ وی نکلدا اے۔ اوہ کہندا اے کہ جے کوئی نظریہ کسے تصور دی تعریف لُکویں طور اُتے کر سکدا اے، تاں اوہدی کھُلّھی تعریف وی کر سکدا اے۔
+
+ریاضیاتی منطق دے کئی نتیجیاں وانگ، درمیانی فارمولے والا قضیہ نمونیاں دے نظریے تے ثبوتی نظریے، دوہاں دے طریقیاں نال ثابت ہو سکدا اے۔ ثبوتی طریقیاں دا فائدہ ایہ اے کہ اوہ درمیانی فارمولے دی موجودگی وکھاؤن دے نال اک الگورتھم وی دیندے نیں جیہڑا !!a{proof} توں درمیانی فارمولا کڈھدا اے، ایس گل دے ثبوت توں کہ $!A \Entails !B$۔ مثلاً !!a{proof}،~\Log{G3c} وچ، $!A \Sequent !B$ دا۔
+
+منّ لو $\Lang L(!A)$ اوہناں !!{constant}s تے !!{predicate}s دا سیٹ اے جیہڑے~$!A$ وچ نیں، تے $\Lang L(\Gamma) = \bigcup \Setabs{\Lang L(!A)}{!A \in
+\Gamma}$۔ سارے حصے وچ منّنے آں کہ !!{formula}s وچ !!{function}s نہیں۔
+
+\begin{thm}[کریگ دا درمیانی فارمولے والا قضیہ]\ollabel{thm:interpolation}
+!!{language}~$!A$ دی، $\Lang L(!A)$، تے $!B$ دی زبان، $\Lang L(!B)$ منّ لو۔ جے $\Log{G3c} \Proves !A \Sequent !B$، تاں اک !!a{formula}~$!C$، !!{language}~$\Lang L(!C) \subseteq \Lang
+L(!A) \cap \Lang L(!B)$ وچ اے، ایویں کہ $\Log{G3c} \Proves !A \Sequent !C$ تے $\Log{G3c} \Proves !C \Sequent !B$۔
+\end{thm}
+
+اسیں درمیانی فارمولے والے قضیے دا عام روپ ثابت کردے آں تاں جو !!{proof}s دی بناوٹ ورت سکیے،~\Log{G3c} وچ۔ ایس لئی سوچو کہ سیکوئنٹاں دے مقدم تے تالیاں دو دو حصیاں وچ وکھ کیتیاں ہوئیاں نیں۔ اسیں $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+\maeh{\Delta_1}{\Delta_2}$ ایہ وکھاؤن لئی لکھدے آں کہ $\Gamma_1$ تے $\Delta_1$ پہلے حصے دے نیں تے $\Gamma_2$ تے $\Delta_2$ دوجے حصے دے۔ فیر درمیانی فارمولے والا قضیہ ہِٹھلے معاون قضیے توں جھٹ نکلدا اے۔
+
+\begin{lem}[مائےہارا دا معاون قضیہ]\ollabel{lem:maehara}
+جے $\Log{G3c}
+\Proves \maeh{\Gamma_1}{\Gamma_2} \Sequent \maeh{\Delta_1}{\Delta_2}$، تاں اک !!a{formula}~$!C$، !!{language}~$\Lang L(!C)
+\subseteq \Lang L(\Gamma_1,
+\Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)$ وچ اے، ایویں کہ $\Log{G3c}
+\Proves \Gamma_1 \Sequent \Delta_1, !C$ تے $\Log{G3c} \Proves !C,
+\Gamma_2 \Sequent \Delta_2$۔
+\end{lem}
+
+\begin{proof}
+  منّ لو $\pi \Proves \maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$۔ دعویٰ $n=\pheight{\pi}$ اُتے استقرا نال ثابت کردے آں۔
+
+جے $n=0$، تاں $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$ مسلّمہ اے تے کوئی جوہری !!{formula}~$!A$، $\Gamma_1, \Gamma_2$ تے $\Delta_1,
+  \Delta_2$ دوہاں وچ آؤندا اے۔ چار صورتاں نیں۔ ایہ ایس گل اُتے نربھر اے کہ $!A$ کھبّے پاسے پہلے حصے وچ اے یا دوجے وچ، تے سجّے پاسے پہلے حصے وچ اے یا دوجے وچ۔
+\begin{enumerate}
+\item $!A \in \Gamma_1$ تے $!A \in \Delta_1$۔ سانوں ایہو جیہا~$!C$ چاہیدا اے کہ $\Gamma_1 \Sequent \Delta_1, !C$ تے $!C, \Gamma_2
+    \Sequent \Delta_2$ دوویں !!{provable} ہون۔ پہلا پہلاں ای مسلّمہ اے،~$!C$ کوئی وی چُنیے، کیوں جے $!A$ کھبّے تے سجّے دوہاں پاسیاں اُتے اے۔ $!C, \Gamma_2
+    \Sequent \Delta_2$ دا !!{provable} ہونا پکا کرن لئی ساڈے کول اکّو چُون اے، $!C \ident \lfalse$ منّ لئیے۔
+\item $!A \in \Gamma_1$ تے $!A \in \Delta_2$۔ تاں $\Gamma_1
+    \Sequent \Delta_1, !A$ تے $!A, \Gamma_2 \Sequent \Delta_2$ دوویں مسلّمے نیں، سو $!C \ident !A$ چُن سکدے آں۔
+\item $!A \in \Gamma_2$ تے $!A \in \Delta_1$۔ تاں $!A, \Gamma_1
+    \Sequent \Delta_1$ تے $\Gamma_2 \Sequent \Delta_2, !A$ مسلّمے ہون گے، پر اوہناں وچ~$!A$ غلط پاسیاں اُتے اے۔ سو $!A$ درمیانی فارمولا نہیں۔ پر $\RightR{\lnot}$ تے $\LeftR{\lnot}$ ورت کے اسیں !!{prove} کر سکدے آں $\Gamma_1
+    \Sequent \Delta_1, \lnot!A$ تے $\lnot !A, \Gamma_2 \Sequent
+    \Delta_2$۔
+\item $!A \in \Gamma_2$ تے $!A \in \Delta_2$۔ مشق۔
+\end{enumerate}
+اوہ صورتاں مشقاں وجوں چھڈیاں نیں جیہناں وچ $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$ ایس لئی مسلّمہ اے کہ $\lfalse \in
+  \Gamma_1$ یا $\lfalse \in \Gamma_2$۔
+
+جے $n>0$، تاں $\pi$ منطقی استنباط اُتے مُکدا اے۔ اسیں ورتے گئے قاعدے تے مُکھ فارمولے دے حصے مطابق صورتاں وکھ کرنیاں نیں۔ ہر صورت وچ استقرا دا ایہ مفروضہ ورت سکدے آں کہ معاون قضیہ سارے !!{proof}s~$\pi_1$ لئی سچ اے جیہناں لئی $\pheight{\pi_1} < n$، بھاویں~$\pi_1$ دا آخری سیکوئنٹ دو حصیاں وچ کسے وی ڈھنگ نال ونڈیا ہووے۔ آؤ کجھ خاص صورتاں ویکھیے۔
+\begin{enumerate}
+\item $\pi$، $\RightR{\lnot}$ اُتے مُکدا اے، مُکھ فارمولا~$\lnot
+    !A$ اے۔ دو صورتاں نیں۔ $\lnot !A$ پہلے یا دوجے حصے وچ ہووے، ایس حساب نال $\pi$ ایہناں وچوں اک اُتے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{!A, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lnot !A}{\Delta_2}$
+    \DisplayProof
+    \]
+یا
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{!A, \Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, \lnot !A}$
+    \DisplayProof
+    \]
+دھیان دیو، جے مُکھ !!{formula}~$\lnot !A$ پہلے حصے وچ اے، تاں اسیں سرگردہ !!{formula}~$!A$ نوں وی مقدمے دے پہلے حصے وچ رکھیا اے۔ ایہ چُون اسیں کر سکدے آں۔ استقرا دا مفروضہ اوہدوں وی لگ جاندا جے اسیں سرگردہ فارمولا دوجے حصے وچ رکھدے، پر فیر درمیانی فارمولا نہیں لبھ سکدے (مشق۔ ایہ کر کے ویکھو)۔
+
+پہلاں پہلی صورت ویکھو، جتھے $\lnot !A$ پہلے حصے وچ اے۔ استقرا دے مفروضے نال~$\pi_1$ دے آخری سیکوئنٹ دا اک درمیانی فارمولا، یعنی !!a{formula}~$!C_1$، اے، جیہدے لئی دوویں
+\begin{align*}
+!A, \Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{تے} &
+!C_1, \Gamma_2 & \Sequent \Delta_2
+\intertext{ثابت ہو سکدے نیں۔ سانوں ایہو جیہا !!a{formula}~$!C$ چاہیدا اے کہ ہِٹھلے دوویں !!{provable} ہون:}
+\Gamma_1 & \Sequent \Delta_1, \lnot !A, !C &&\text{تے} &
+!C, \Gamma_2 & \Sequent \Delta_2
+\end{align*}
+صاف اے کہ $!C \ident !C_1$ لے سکدے آں۔ استقرا دا مفروضہ پہلاں ای دسدا اے کہ سجّا سیکوئنٹ !!{provable} اے، تے کھبّا سیکوئنٹ اوس سیکوئنٹ توں~$\RightR{\lnot}$ نال نکلدا اے جیہڑا استقرا دے مفروضے توں ملیا سی۔ استقرا دا مفروضہ ایہ وی دسدا اے کہ $\Lang L(!C_1) \subseteq \Lang L(!A, \Gamma_1,
+    \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)$۔ چونکہ $\Lang L(\lnot
+    !A) = \Lang L(!A)$ تے $\Lang L(!C) = \Lang L(!C_1)$، ایس لئی
+$\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1, \lnot !A) \cap \Lang
+    L(\Gamma_2, \Delta_2)$۔
+
+دوجی صورت ذرا وکھری اے، کیوں جے $\lnot !A$ دوجے حصے وچ اے۔ مقدمے وچ سرگردہ !!{formula} نوں وی دوجے حصے وچ رکھدے آں تے استقرا دا مفروضہ ایہناں اُتے لاؤنے آں:
+\begin{align*}
+\Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{تے} &
+!C_1, !A, \Gamma_2 & \Sequent \Delta_2
+\intertext{ثابت ہو سکدے نیں۔ جے دوجے اُتے \RightR{\lnot} قاعدہ لائیے، تاں ہِٹھلیاں دے !!{proof}s ملدے نیں:}
+\Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{تے} &
+!C_1, \Gamma_2 & \Sequent \Delta_2, \lnot !A
+\end{align*}
+جے $!C_1$ درمیانی فارمولا اے، تاں عین ایہو سیکوئنٹ سانوں !!{provable} چاہیدے نیں، سو فیر $!C \ident !C_1$ لئیے۔ پہلاں وانگ $\Lang
+    L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1) \cap \Lang L(\Gamma_2,
+    \Delta_2, \lnot !A)$۔
+\item $\pi$، $\RightR{\lif}$ اُتے مُکدا اے، مُکھ !!{formula}~$!A
+    \lif !B$ اے۔ فیر دو صورتاں نیں، ایس گل مطابق کہ $!A \lif
+    !B$ پہلے یا دوجے حصے وچ اے۔ !!{proof}~$\pi$ ایہناں وچوں اک اُتے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{!A, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !B}{\Delta_2}$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !A \lif !B}{\Delta_2}$
+    \DisplayProof
+    \]
+یا
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{!A, \Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !B}$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !A \lif !B}$
+    \DisplayProof
+    \]
+فیر اسیں سرگردہ !!{formula}s نوں مقدمے دے اوسے حصے وچ رکھیا اے جیہدے وچ نتیجے دا مُکھ !!{formula} اے۔ پہلی صورت وچ استقرا دا مفروضہ لاؤنے آں تے ایہناں دے !!{proof}s لیندے آں:
+\begin{align*}
+!A, \Gamma_1 & \Sequent \Delta_1, !B, !C_1 &&\text{تے} & !C_1, \Gamma_2 & \Sequent \Delta_2
+\intertext{کھبّا سیکوئنٹ \RightR{\lif} لئی ڈھکدا مقدمہ اے۔ سو ایہ ہِٹھلے !!{provable} سیکوئنٹ نیں:}
+\Gamma_1 & \Sequent \Delta_1, !A \lif !B, !C_1 &&\text{تے} & !C_1, \Gamma_2 & \Sequent \Delta_2
+\end{align*}
+ایس دا مطلب اے کہ $!C_1$،~$\pi$ دے آخری سیکوئنٹ دا وی درمیانی فارمولا اے، تے اسیں اک واری فیر $!C \ident !C_1$ لے سکدے آں۔
+
+دوجی صورت ایس طرح ای کردی اے۔
+\item $\pi$، $\LeftR{\lif}$ اُتے مُکدا اے، مُکھ !!{formula}~$!A
+    \lif !B$ اے۔ جے $!A \lif !B$ پہلے حصے وچ اے، تاں !!{proof}~$\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !A}{\Delta_2}$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\maeh{!B, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \BinaryInf$\maeh{!A \lif !B, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \DisplayProof
+    \]
+استقرا دا مفروضہ ہُن چار !!{provable} سیکوئنٹ دیندا اے، دو کھبّے مقدمے دے درمیانی فارمولے $!C_1$ لئی تے دو دوجے مقدمے دے درمیانی فارمولے $!C_2$ لئی:
+\begin{align*}
+\Gamma_1 & \Sequent \Delta_1, !A, !C_1 &&\text{(1)} &
+!C_1, \Gamma_2 & \Sequent \Delta_2 && \text{(2)}\\
+!B, \Gamma_1 & \Sequent \Delta_1, !C_2 &&\text{(3)} &
+!C_2, \Gamma_2 & \Sequent \Delta_2 && \text{(4)}
+\end{align*}
+سیکوئنٹ (1) تے (3)،~\LeftR{\lif} دے مقدمے بن سکدے نیں، جے کمزور کرن والا قاعدہ لا کے $!C_2$ نوں (1) دے سجّے تے $!C_1$ نوں (3) دے سجّے شامل کریئے:
+\[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !A, !C_1, !C_2$
+    \AxiomC{}
+    \Deduce$!B, \Gamma_1 \fCenter \Delta_1, !C_1, !C_2$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma_1 \fCenter \Delta_1, !C_1, !C_2$
+    \DisplayProof
+    \]
+$\RightR{\lor}$ لا کے ایہ سیکوئنٹ ملدا اے:
+\[
+!A \lif !B, \Gamma_1 \fCenter \Delta_1, !C_1 \lor !C_2
+\]
+ایس توں لگدا اے کہ $!C_1 \lor !C_2$ ایس صورت وچ ساڈا درمیانی فارمولا ہو سکدا اے۔ تے اسیں باقی سیکوئنٹ (2) تے~(4) توں دوجا لوڑ والا سیکوئنٹ !!{prove} کر وی سکدے آں:
+\[
+    \AxiomC{}
+    \Deduce$!C_1, \Gamma_2 \fCenter \Delta_2$
+    \AxiomC{}
+    \Deduce$!C_2, \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lor}}
+    \BinaryInf$!C_1 \lor !C_2, \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+ایہ پرکھنا باقی اے کہ $!C_1 \lor !C_2$ ٹھیک زبان وچ اے۔ استقرا دے مفروضے توں ملدا اے کہ
+\begin{align*}
+\Lang L(!C_1) & \subseteq
+\Lang L(\Gamma_1, \Delta_1, !A) \cap \Lang L(\Gamma_2, \Delta_2) &\text{تے}\\
+\Lang L(!C_2) & \subseteq
+\Lang L(!B, \Gamma_1, \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)
+\intertext{چونکہ}
+\Lang L(!A) & \subseteq \Lang L(!A \lif !B) &\text{تے}\\
+\Lang L(!B) & \subseteq \Lang L(!A \lif !B)
+\intertext{ایس لئی دوویں گلاں ملدیاں نیں}
+\Lang L(!C_1) & \subseteq
+\Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2) &\text{تے}\\
+\Lang L(!C_2) & \subseteq
+\Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2)
+\intertext{تے ایس توں، $\Lang L (!C_1 \lor !C_2) = {}$}
+\Lang L(!C_1) \cup \Lang L(!C_2) & \subseteq
+\Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2),
+\end{align*}
+جیویں چاہیدا سی۔
+
+جس صورت وچ $!A \lif !B$ دوجے حصے وچ اے، گل وکھری اے پر ڈھنگ ایہو جیہا اے۔ استقرا دا مفروضہ فیر چار !!{provable} سیکوئنٹ دیندا اے:
+\begin{align*}
+\Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{(1)} &
+!C_1, \Gamma_2 & \Sequent \Delta_2, !A && \text{(2)}\\
+\Gamma_1 & \Sequent \Delta_1, !C_2 &&\text{(3)} &
+!C_2, !B, \Gamma_2 & \Sequent \Delta_2 && \text{(4)}
+\end{align*}
+ہُن سیکوئنٹ (2) تے (4)، نال کمزور کرن نال شامل کجھ !!{formula}s،~\LeftR{\lif} دے مقدمے بن جاندے نیں:
+\[
+    \AxiomC{}
+    \Deduce$!C_1, !C_2, \Gamma_2 \fCenter \Delta_2, !A$
+    \AxiomC{}
+    \Deduce$!B, !C_1, !C_2, \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, !C_1, !C_2, \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+اسیں فیر ایہنوں ایس جیہے سیکوئنٹ وچ بدلنا چاہندے آں جیہدے وچ اکّو !!{formula}، $!C_1$ تے $!C_2$ توں بنیا ہووے۔ پر ایس واری اوہ مقدم وچ چاہیدا اے (کیوں جے ہُن اسیں دوجا حصہ ویکھ رہے آں)۔ $\LeftR{\land}$ لا کے ایہ ہو جاندا اے۔ سانوں $!C \ident
+    (!C_1 \land !C_2)$ درمیانی فارمولا لینا چاہیدا اے۔ چنگی گل ایہ اے کہ باقی سیکوئنٹ (1) تے (3) ورت کے دوجے حصے دا میل کھاندا سیکوئنٹ !!{prove} کر سکدے آں:
+\[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !C_1$
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !C_2$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma_1 \fCenter \Delta_1, !C_1 \land !C_2$
+    \DisplayProof
+    \]
+پہلاں وانگ، ساڈے کول $\Lang L(!C_1 \land !C_2) \subseteq \Lang
+    L(\Gamma_1, \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2, !A \lif
+    !B)$ اے۔
+
+\item $\pi$، $\RightR{\lforall}$ اُتے مُکدا اے، مُکھ !!{formula}~$\lforall[x][!A(x)]$ اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+    \maeh{\Delta_1, !A(c)}{\Delta_2}$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lforall[x][!A(x)]}{\Delta_2}$
+    \DisplayProof
+    \]
+یا
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !A(c)}$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, \lforall[x][!A(x)]}$
+    \DisplayProof
+    \]
+پہلی صورت وچ استقرا دا مفروضہ !!{proof}s دیندا اے، $\Gamma_1 \Sequent \Delta_1, !A(c), !C_1$ تے $!C_1, \Gamma_2
+    \Sequent \Delta_2$ دے۔ پہلے اُتے $\RightR{\lforall}$ لا کے $\Gamma_1 \Sequent \Delta_1, \lforall[x][!A(x)], !C_1$ لیندے آں۔ (خاص متغیر دی شرط پوری اے، کیوں جے اوہ پہلاں ای \RightR{\lforall} قاعدے وچ،~$\pi$ دے آخر اُتے، پوری سی۔) سو $!C_1$ درمیانی فارمولا ہووے گا جے ایہ شرط پوری اے کہ $\Lang
+    L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1, \lforall[x][!A(x)])
+    \cap \Lang L(\Gamma_2, \Delta_2)$۔ استقرا دے مفروضے نال ساڈے کول $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1,
+    \Delta_1, !A(c)) \cap \Lang L(\Gamma_2, \Delta_2)$ اے۔ سو سانوں~$c$ بارے سوچنا پئے گا۔ کی $c$،~$!C_1$ وچ آ سکدا اے؟ نہیں۔ جے $c$، $!C_1$ وچ آوے، تاں دوویں $c \in \Lang L(\Gamma_1, \Delta_1,
+    !A(c))$ (جیہڑا سچ اے) تے $c \in \Lang L(\Gamma_2,
+    \Delta_2)$ ہون گے۔ پر فیر $c$، $\RightR{\lforall}$ استنباط دے نتیجے وچ،~$\pi$ اندر، آوے گا تے خاص متغیر دی شرط ٹُٹ جائے گی۔
+
+دوجی صورت ایہو جیہی اے۔
+
+\item $\pi$، $\RightR{\lexists}$ اُتے مُکدا اے، مُکھ !!{formula}~$\lexists[x][!A(x)]$ اے۔ فیر دو صورتاں نیں۔ اسیں اوہ صورت ویکھدے آں جتھے $\lexists[x][!A(x)]$ پہلے حصے وچ اے تے دوجی مشق وجوں چھڈدے آں۔
+
+پہلی صورت وچ $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lexists[x][!A(x)], !A(t)}{\Delta_2}$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lexists[x][!A(x)]}{\Delta_2}$
+    \DisplayProof
+    \]
+استقرا دا مفروضہ !!{proof}s دیندا اے، $\Gamma_1 \Sequent
+    \Delta_1, \lexists[x][!A(x)], !A(t), !C_1$ تے $!C_1, \Gamma_2
+    \Sequent \Delta_2$ دے۔ پہلے اُتے $\RightR{\lexists}$ لا کے $\Gamma_1 \Sequent \Delta_1, \lexists[x][!A(x)], !C_1$ ملدا اے۔ سو $!C_1$ فیر درمیانی فارمولا ہووے گا جے ایہ شرط پوری اے کہ
+$\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)]) \cap \Lang L(\Gamma_2, \Delta_2)$۔ ایتھے استقرا دا مفروضہ ایہ دیندا اے کہ $\Lang L(!C_1)
+    \subseteq \Lang L(\Gamma_1, \Delta_1, \lexists[x][!A(x)], !A(t))
+    \cap \Lang L(\Gamma_2, \Delta_2)$۔ چیتے کرو کہ اسیں منّیا سی کہ کوئی !!{function}s نہیں۔ ایہدا مطلب اے کہ ٹرم~$t$ بس اک !!a{constant} ہو سکدا اے، یعنی $t \ident b$۔ جے $b \notin \Lang L(!C_1)$ یا $b \in \Lang L(\Gamma_1, \Delta_1, \lexists[x][!A(x)]) \cap
+    \Lang L(\Gamma_2, \Delta_2)$، تاں فکر والی کوئی گل نہیں۔ اسیں $!C_1$ نوں درمیانی فارمولا لے سکدے آں۔ پر جے $b \in \Lang
+    L(!C_1)$ تے $b \notin \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)]) \cap \Lang L(\Gamma_2, \Delta_2)$، تاں کیہ ہووے گا؟ پہلاں~$b$ دیاں ساریاں موجودگیاں،~$!C_1$ وچ، اک !!a{variable}~$y$ نال بدل کے، اسیں $!C_1 \ident \Subst{!C_1'}{b}{y}$ لکھ سکدے آں، جتھے $!C_1'$ وچ~$b$ نہیں۔ ہور، یا $b \notin
+    \Lang L(\Gamma_1, \Delta_1, \lexists[x][!A(x)])$ یا $b \notin
+    \Lang L(\Gamma_2, \Delta_2)$۔ بالترتیب $!C \ident
+    \lforall[y][!C_1'(y)]$ یا $!C \ident \lexists[y][!C_1'(y)]$ لے سکدے آں۔ پہلی صورت وچ ساڈے کول ایہ اے:
+\[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], !A(b), !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter \Delta_1, \lexists[x][!A(x)], !C_1'(b)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lforall[y][!C_1'(y)]$
+    \DisplayProof
+    \]
+تے
+\[
+    \AxiomC{}
+    \Deduce$!C_1'(b), \lforall[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+اُتلے سیکوئنٹاں دے !!{proof}s استقرا دے مفروضے توں ملدے نیں (دوجے وچ مقدم اندر $\lforall[y][!C_1'(y)]$ شامل کرن لئی کمزور کرن دی قبولیت لاؤنے آں)۔ \RightR{\lforall} دی خاص متغیر والی شرط پہلے !!{proof} وچ پوری اے کیوں جے $b \notin \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)])$، تے $!C_1'$ دی تعریف ایویں کیتی گئی سی کہ اوہدے وچ~$b$ نہ ہووے۔
+
+دوجی صورت وچ ساڈے کول ایہ اے (استقرا دے مفروضے تے~$\lexists[y][!C_1'(y)]$ نال کمزور کرن دی قبولیت توں):
+\[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], !A(b), \lexists[y][!C_1'(y)], !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lexists[y][!C_1'(y)], !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lexists[y][!C_1'(y)]$
+    \DisplayProof
+    \]
+تے
+\[
+    \AxiomC{}
+    \Deduce$!C_1'(b), \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lexists}}
+    \UnaryInf$\lexists[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+\LeftR{\lexists} دی خاص متغیر والی شرط دوجے !!{proof} وچ پوری اے، کیوں جے $b \notin \Lang L(\Gamma_2,
+    \Delta_2)$، تے $!C_1'$ دی تعریف ایویں کیتی گئی سی کہ اوہدے وچ~$b$ نہ ہووے۔
+\end{enumerate}
+باقی صورتاں ایہو جیہیاں نیں، اوہناں نوں مشقاں وجوں چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+منّ لو ساڈے کول منطقی جوڑ $\lnand$ اے، ایہناں قاعدیاں نال:
+\[
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$\Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\lnand}}
+\BinaryInf$!A \lnand !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\quad
+\Axiom$!A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnand}}
+\UnaryInf$\Gamma \fCenter \Delta, !A \lnand !B$
+\DisplayProof
+\]
+وکھاؤ کہ مائےہارا دا معاون قضیہ ہن وی سچ اے۔ \olref{lem:maehara} دے ثبوت دیاں اوہ صورتاں کرو جیہناں وچ $\pi$ ایہناں قاعدیاں وچوں کسے اُتے مُکدا اے۔
+\end{prob}
+
+مائےہارا دا معاون قضیہ قائم کر کے، اسیں ایہنوں کریگ دا درمیانی فارمولے والا قضیہ ثابت کرن لئی ورت سکدے آں۔
+
+\begin{proof}[\olref{thm:interpolation} دا ثبوت]
+منّ لو $!A \Sequent !B$ !!{provable} اے۔ \olref{lem:maehara} نوں $\maeh{!A}{\ } \Sequent \maeh{\ }{!B}$ اُتے لا کے درمیانی فارمولا~$!C$ لیندے آں۔ ساڈے کول $\Proves !A \Sequent !C$ تے $\Proves !C
+  \Sequent !B$ نیں۔
+\end{proof}
+
+منّ لو $\Gamma$ نظریہ (یعنی !!{sentence}s دا سیٹ) اے، اک !!a{language}~$\Lang L$ وچ، جیہدے وچ $n$-تھاویں والا {محمول}~$R$ اے۔ اسیں آکھدے آں کہ $\Gamma$،~$R$ دی \emph{لُکویں تعریف کردا اے}، اُدوں تے صرف اُدوں جدوں
+\begin{align*}
+\Gamma, \Gamma'
+& \Entails \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff
+R'(x_1, \dots, x_n))]],
+\intertext{جتھے $\Gamma'$ اوہ $\Gamma$ اے جیہدے وچ~$R$ دیاں ساریاں موجودگیاں~$R' \notin \Lang L$ نال بدلیاں گئیاں نیں۔ $\Gamma$،~$R$ دی \emph{کھُلّھی تعریف کردا اے} اُدوں تے صرف اُدوں جدوں اک ایہو جیہا~$!A(x_1, \dots, x_n)$ اے جیہدے وچ~$R$ نہیں، ایویں کہ}
+\Gamma &\Entails
+\lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff !A(x_1,
+\dots, x_n))]].
+\end{align*}
+صاف اے کہ جے $\Gamma$، $R$ دی کھُلّھی تعریف کردا اے، تاں~$R$ دی لُکویں تعریف کردا اے۔ اُلٹی گل صاف نہیں، پر فیر وی سچ اے:
+
+\begin{lem}[بیتھ دا تعریف پذیری والا قضیہ]
+جے $\Gamma$،~$R$ دی لُکویں تعریف کردا اے، تاں اوہدی کھُلّھی تعریف وی کردا اے۔
+\end{lem}
+
+\begin{proof}
+منّ لو $\Gamma$،~$R$ دی لُکویں تعریف کردا اے۔ $R'$، $\Gamma'$ اُتلے وانگ لو تے $\Lang L' = \Lang L(\Gamma') = \Lang L \setminus \{R\}
+  \cup \{R'\}$۔ مفروضے نال ساڈے کول
+\begin{align*}
+    \Gamma, \Gamma' &
+    \Sequent \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n)
+    \liff R'(x_1, \dots, x_n))]]
+\intertext{منّ لو $c_1$، \dots،~$c_n$ اوہ !!{constant}s نیں جیہڑے~$\Gamma$ وچ نہیں آؤندے۔ اُلٹ سکّن والے معاون قضیے نال ساڈے کول}
+    \Gamma, \Gamma', R(c_1,\dots,c_n) & \Sequent  R'(c_1, \dots, c_n)
+\intertext{مائےہارا دا معاون قضیہ ایس اُتے لاؤ}
+    \maeh{\Gamma, R(c_1,\dots,c_n)}{\Gamma'} & \Sequent
+      \maeh{\ }{R'(c_1, \dots, c_n)}
+\intertext{اک ایہو جیہا~$!A \ident !A(x_1, \dots, x_n)$ لبھّن لئی کہ}
+    \Gamma, R(c_1,\dots,c_n) & \Sequent !A(c_1, \dots, c_n) \\
+    !A(c_1, \dots, c_n), \Gamma' & \Sequent R'(c_1, \dots, c_n)
+\intertext{دے !!{proof}s موجود ہون۔ چونکہ $\Lang L(!A) = \Lang L_1 \cap
+  \Lang L_2 = \Lang L(\Gamma) \setminus \{R\}$، ایس لئی $!A$ وچ~$R$ نہیں۔ $R'$ نوں ہر تھاں~$R$ نال بدلو، دوجے سیکوئنٹ دے !!{proof} وچ، تاں !!a{proof} ملدا اے ایس دا}
+    !A(c_1, \dots, c_n), \Gamma & \Sequent R(c_1, \dots, c_n)
+\end{align*}
+\RightR{\lif} تے \RightR{\lforall} لاؤ تاں !!a{proof} ملدا اے ایس دا:
+\[
+    \Gamma \Sequent \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff !A(x_1, \dots, x_n))]].
+\]
+ایہ وکھاؤندا اے کہ $!A(x_1, \dots, x_n)$، $!R$ دی کھُلّھی تعریف کردا اے،~$\Gamma$ وچ۔
+\end{proof}
+
+تیجا نتیجہ جیہڑا درمیانی فارمولے والے قضیے دے برابر اے (تے اوہدے وانگ مائےہارا دے معاون قضیے نال ثابت ہو سکدا اے)، ایہ قضیہ اے۔ جے دو بے تضاد نظرییاں~$\Gamma_1$، $\Gamma_2$ وچ اک پورا نظریہ $\Gamma$ شامل اے، زبان~$\Lang L(\Gamma) \subseteq \Lang L(\Gamma_1)
+\cap \Lang L(\Gamma_2)$ وچ، تاں $\Gamma_1 \cup \Gamma_2$ بے تضاد اے۔
+
+چیتے کرو کہ نظریہ اُدوں پورا اے جدوں اوہدی زبان دے ہر !!{sentence}~$!A$ لئی یا $\Gamma \Proves !A$ یا $\Gamma \Proves \lnot !A$۔ چونکہ $\Gamma_1$ تے~$\Gamma_2$،~$\Gamma$ دے بے تضاد وادھے نیں، ایس لئی $\Gamma$ لازماً بے تضاد اے۔ ایس توں نکلدا اے کہ جے $!A$ اک !!a{sentence} اے، زبان $\Lang L(\Gamma_1) \cap \Lang
+L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails !A$ تے $\Gamma_2
+\Entails \lnot !A$۔ ایہ ویکھن لئی منّ لو ایہو جیہا~$!A$ اے۔ جے $\Gamma_1 \Entails !A$، تاں $\Gamma \Entails !A$۔ نہیں تاں،~$\Gamma$ دی تمامیت نال، $\Gamma \Entails \lnot !A$، تے چونکہ $\Gamma \subseteq \Gamma_1$، ایس لئی $\Gamma_1 \Entails \lnot !A$، سو $\Gamma_1$ متضاد ہو جاندا اے۔ ایس لئی $\Gamma \Entails !A$ تے چونکہ $\Gamma
+\subseteq \Gamma_2$، تاں $\Gamma_2 \Entails !A$۔ سو $\Gamma \Entails/
+\lnot !A$، نہیں تاں $\Gamma_2$ متضاد ہو جاندا۔
+
+ایہو جیہا !!a{sentence}~$!A$، سانجھی !!{language}~$\Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$ وچ، نہ ہونا جیہدے لئی $\Gamma_1
+\Entails !A$ تے $\Gamma_2 \Entails \lnot !A$، ثبوت لئی بس اینا ای چاہیدا اے۔ ہُن اسیں مائےہارا دے معاون قضیے نال ایہدا ثبوت ثبوتی نظریے دے طریقے نال دیندے آں۔
+
+\begin{thm}[رابنسن دا سانجھی بے تضادی والا قضیہ]
+منّ لو $\Gamma_1$، $\Gamma_2$ بے تضاد نظریے نیں تے~$!A$ ایہو جیہا کوئی نہیں، !!{language} $\Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$ وچ، جیہدے لئی $\Gamma_1 \Entails !A$ تے $\Gamma_2 \Entails \lnot !A$۔ تاں $\Gamma_1 \cup \Gamma_2$ بے تضاد اے۔
+\end{thm}
+
+\begin{proof}
+اُلٹا فرض کرو کہ $\Gamma_1 \cup \Gamma_2$ متضاد اے۔ تاں سیکوئنٹ $\Gamma_1, \Gamma_2 \Sequent \ $ دا !!a{proof} اے۔ مائےہارا دا معاون قضیہ $\maeh{\Gamma_1}{\Gamma_2}
+  \Sequent \maeh{\ }{\ }$ اُتے لاؤ، تاں !!a{sentence}~$!A$ ملدا اے، !!{language}~$\Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$ وچ، ایویں کہ $\Proves \Gamma_1 \Sequent !A$ تے $\Proves !A, \Gamma_2 \Sequent
+  \quad$۔ پچھلے توں $\Proves \Gamma_2 \Sequent \lnot !A$ ملدا اے۔ پر اسیں منّیا سی کہ ایہو جیہا کوئی !!{sentence} نہیں۔
+\end{proof}
+
+اُتّے اسیں بناں دَسے منّیا سی کہ نظریے $\Gamma$، $\Gamma_1$، $\Gamma_2$ محدود نیں۔ محدود گواہی دے قضیے نال ایہ نتیجے لامتناہی نظرییاں لئی وی سچ نیں۔
+
+\end{document}

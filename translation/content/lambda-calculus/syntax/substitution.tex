@@ -1,0 +1,182 @@
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{sub}
+\olsection{تھانواں بدلنا}
+
+\begin{explain}
+آزاد متغیر ماحول دے متغیراں ول حوالے نیں۔ ایس لئی آزاد متغیر
+دی تھاں کوئی خاص قدر ورتنی سمجھ آؤن والی گل اے۔ مثلاً اسیں
+$f$ نوں $\lambd[x][f x]$ وچ کسے خاص ٹرم نال بدل سکدے آں،
+جیویں عین اوہی قدر واپس دین والا فنکشن $\lambd[y][y]$۔
+ایس توں $\lambd[x][(\lambd[y][y]) x]$ ملدا اے۔ آزاد
+متغیراں دی تھاں لامبڈا ٹرم رکھن نوں تھانواں بدلنا آکھدے آں۔
+\end{explain}
+
+\begin{defn}[تھانواں بدلنا] \ollabel{defn:substitution}
+  ٹرم $N$ نوں متغیر $x$ دی تھاں ٹرم $M$ وچ رکھن والے \emph{بدل}، یعنی
+  $\Subst{M}{N}{x}$، دی استقرائی تعریف ایہ اے۔
+  \begin{enumerate}
+    \item $\Subst{x}{N}{x} = N$. \ollabel{defn:substitution-1}
+    \item $\Subst{y}{N}{x}  = y$ جے $x \neq y$۔ \ollabel{defn:substitution-2}
+    \item $\Subst{PQ}{N}{x}  = (\Subst{P}{N}{x}) (\Subst{Q}{N}{x})$.
+      \ollabel{def:substitution-3}
+    \item $\Subst{(\lambd[y][P])}{N}{x} = \lambd[y][\Subst{P}{N}{x}]$،
+      جے $x \neq y$ تے $y \notin \FV{N}$۔ ہور صورت وچ ایہ غیر معین اے۔
+      \ollabel{defn:substitution-4}
+  \end{enumerate}
+\end{defn}
+
+\begin{explain}
+\olref{defn:substitution}\olref{defn:substitution-4} وچ اسیں
+$x
+\neq y$ دی شرط لاندے آں، کیوں جے اسیں متغیر~$x$ دیاں
+ٹرم~$M$ وچلیاں \emph{پابند} آمدواں دی تھاں~$N$ نہیں رکھنا چاہندے۔
+مثلاً، جے اسیں بدل $\Subst{\lambd[x][x]}{y}{x}$ کڈھیے، تاں
+نتیجہ $\lambd[x][y]$ دی تھاں بس $\lambd[x][x]$ ہونا چاہیدا اے۔
+
+جدوں $N$ نوں~$x$ دی تھاں $\lambd[y][P]$ وچ رکھیے، تاں
+$y \notin \FV{N}$ دی شرط وی لاندے آں۔ مثلاً، اسیں $y$
+نوں $x$ دی تھاں $\lambd[y][x]$ وچ نہیں رکھ سکدے، یعنی
+$\Subst{\lambd[y][x]}{y}{x}$ نہیں کر سکدے، کیوں جے ایس
+توں $\lambd[y][y]$ ملے گا۔ ایہ ٹرم اوہ فنکشن ظاہر کردا اے
+جیہڑا دلیل قبول کردا اے تے اوہو دلیل سیدھی واپس دیندا اے۔
+پر ٹرم $\lambd[y][x]$ اوہ فنکشن ظاہر کردا اے جیہڑا ہمیشہ
+ٹرم~$x$ واپس دیندا اے، یا اوہ شے جیہدے ول $x$ دا حوالہ اے۔
+سو سانوں اصل وچ اوہ فنکشن چاہیدا اے جیہڑا دلیل قبول کر کے
+اوہنوں چھڈ دیندا اے تے ماحول دا متغیر~$y$ واپس دیندا اے۔
+ایہ صحیح طرح کرن لئی پہلاں پابند متغیر~$y$ دا ناں بدلنا پئے گا۔
+\end{explain}
+
+\begin{prob}
+  ہِٹھلے بدلاں دا نتیجہ کیہ اے؟
+  \begin{enumerate}
+  \item $\Subst{\lambd[y][x(\lambd[w][vwx])]}{(uv)}{x}$
+  \item $\Subst{\lambd[y][x(\lambd[x][x])]}{(\lambd[y][xy])}{x}$
+  \item $\Subst{y(\lambd[v][xv])}{(\lambd[y][vy])}{x}$
+  \end{enumerate}
+\end{prob}
+
+\begin{thm} \ollabel{thm:notinfv}
+  جے $x \notin \FV{M}$، تاں $\FV{\Subst{M}{N}{x}} = \FV{M}$،
+  بشرطیکہ مساوات دا کھبا پاسا معین ہووے۔
+\end{thm}
+
+\begin{proof}
+  $M$ دی بناوٹ اُتے استقرا نال۔
+  \begin{enumerate}
+  \item $M$ اک متغیر اے۔ مشق۔
+  \item $M$ دی شکل $(PQ)$ اے۔ مشق۔
+  \item $M$ دی شکل $\lambd[y][P]$ اے۔ کیوں جے
+    $\Subst{\lambd[y][P]}{N}{x}$ معین اے، ایس لئی ایہ
+    $\lambd[y][\Subst{P}{N}{x}]$ ہونا چاہیدا اے۔ فیر
+    $\Subst{P}{N}{x}$ وی معین ہونا چاہیدا اے۔ نالے $x \neq y$
+    تے $x \notin \FV{Q}$۔ فیر۔
+    \begin{multline*}
+      \FV{\Subst{\lambd[y][P]}{N}{x}} = \\
+    \begin{aligned}
+      & = \FV{\lambd[y][\Subst{P}{N}{x}]} &&
+      \text{\olref{defn:substitution-4} مطابق}\\
+      & = \FV{\Subst{P}{N}{x}} \setminus \{y\} &&
+      \text{\olref[fv]{def:fv}\olref[fv]{def:fv2} مطابق}\\
+      & = \FV{P} \setminus \{y\} && \text{استقرائی مفروضے مطابق} \\
+      & = \FV{\lambd[y][P]} && \text{\olref[fv]{def:fv}\olref[fv]{def:fv2} مطابق}
+    \end{aligned}
+    \end{multline*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:notinfv} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{thm} \ollabel{thm:infv}
+  جے $x \in \FV{M})$، تاں $\FV{\Subst{M}{N}{x}} = (\FV{M} \setminus
+  \{x\}) \cup \FV{N}$، بشرطیکہ مساوات دا کھبا پاسا معین ہووے۔
+\end{thm}
+
+\begin{proof}
+  $M$ دی بناوٹ اُتے استقرا نال۔
+  \begin{enumerate}
+  \item $M$ اک متغیر اے۔ مشق۔
+  \item $M$ دی شکل $PQ$ اے۔ کیوں جے $\Subst{(PQ)}{N}{y}$ معین
+    اے، ایس لئی ایہ $(\Subst{P}{N}{x})(\Subst{Q}{N}{x})$
+    ہونا چاہیدا اے، تے دوویں بدل معین نیں۔ نالے کیوں جے
+    $x \in \FV{PQ}$، ایس لئی $x \in \FV{P}$ یا $x \in \FV{Q}$
+    یا دوویں۔ باقی ثبوت مشق لئی چھڈدے آں۔
+  \item $M$ دی شکل $\lambd[y][P]$ اے۔ کیوں جے
+    $\Subst{\lambd[y][P]}{N}{x}$ معین اے، ایس لئی ایہ
+    $\lambd[y][\Subst{P}{N}{x}]$ ہونا چاہیدا اے، جتھے
+    $\Subst{P}{N}{x}$ معین اے، $x \neq y$ تے $y \notin \FV{N}$۔
+    نالے کیوں جے $y \in
+    \FV{\lambd[x][P]}$، ایس لئی $y \in \FV{P}$ وی اے۔ ہُن۔
+    \begin{multline*}
+      \FV{\Subst{(\lambd[y][P])}{N}{x}} = \\
+      \begin{aligned}
+      & = \FV{\lambd[y][\Subst{P}{N}{x}]} \\
+      & = \FV{\Subst{P}{N}{x}} \setminus \{y\} \\
+      & = ((\FV{P} \setminus \{y\}) \cup (\FV{N} \setminus \{x\})
+       && \text{استقرائی مفروضے مطابق} \\
+      & = (\FV{P} \setminus \{x, y\}) \cup \FV{N}
+       && x \notin \FV{N} \\
+      & = (\FV{\lambd[y][P]} \setminus \{x\}) \cup \FV{N}
+      \end{aligned}
+      \end{multline*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:infv} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{thm}\ollabel{thm:clr}
+  $x \notin \FV{\Subst{M}{N}{x}}$، جے سجا پاسا معین ہووے
+  تے $x \notin \FV{N}$۔
+\end{thm}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:clr} ثابت کرو۔
+\end{prob}
+
+\begin{thm}\ollabel{thm:inv}
+  جے $\Subst{M}{y}{x}$ معین اے تے $y \notin \FV{M}$،
+  تاں $\Subst{\Subst{M}{y}{x}}{x}{y} = M$۔
+\end{thm}
+
+\begin{proof}
+  $M$ دی بناوٹ اُتے استقرا نال۔
+  \begin{enumerate}
+  \item $M$ اک متغیر $z$ اے۔ مشق۔
+  \item $M$ دی شکل $(PQ)$ اے۔ فیر۔
+    \begin{align*}
+      \Subst{\Subst{(PQ)}{y}{x}}{x}{y}
+      &=\Subst{((\Subst{P}{y}{x})(\Subst{Q}{y}{x}))}{x}{y} \\
+      &= (\Subst{\Subst{P}{y}{x}}{x}{y})(\Subst{\Subst{Q}{y}{x}}{x}{y}) \\
+      &= (PQ) \text{ استقرائی مفروضے مطابق}
+    \end{align*}
+  \item $M$ دی شکل $\lambd[z][N]$ اے۔ کیوں جے
+    $\Subst{\lambd[z][N]}{y}{x}$ معین اے، ایس لئی سانوں پتا اے
+    کہ $z \neq y$۔ سو۔
+    \begin{align*}
+      \Subst{\Subst{(\lambd[z][N])}{y}{x}}{x}{y}\\
+      & = \Subst{(\lambd[z][\Subst{N}{y}{x}])}{x}{y} \\
+      & = \lambd[z][\Subst{\Subst{N}{y}{x}}{x}{y}] \\
+      &= \lambd[z][N] \text{ استقرائی مفروضے مطابق}
+    \end{align*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:inv} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

@@ -8,9 +8,9 @@
 
 \olfileid{fol}{seq}{qrl}
 
-\olsection{مسوّراں دے قاعدے}
+\olsection{مسوّراں دے قاعدے (Quantifier Rules)}
 
-\subsection{$\lforall$ دے قاعدے}
+\subsection{$\lforall$ دے قاعدے (universal-quantifier rules)}
 
 \begin{defish}
 \Axiom$ !A(t), \Gamma \fCenter \Delta$
@@ -24,14 +24,14 @@
 \DisplayProof
 \end{defish}
 
-\LeftR{\lforall} وچ، $t$ اک بند ٹرم اے (یعنی، جیہدے وچ متغیر نہ
+\LeftR{\lforall} وچ، $t$ اک بند ٹرم (closed term) اے (یعنی، جیہدے وچ متغیر نہ
 ہون)۔ \RightR{\lforall} وچ، $a$ اک !!a{constant} اے جیہڑا
-\RightR{\lforall} قاعدے دے ہِٹھلے سیکوئنٹ وچ کتے وی نہیں آنا چاہیدا۔
-اسیں $a$ نوں \RightR{\forall} استنباط دا \emph{ایگن متغیر} آکھدے
-آں۔\footnote{اسیں ``ایگن متغیر'' اصطلاح ورتدے آں، بھاویں اُپرلے قاعدے
-وچ $a$ اک !!a{constant} اے۔ ایس دے تاریخی سبب نیں۔}
+\RightR{\lforall} قاعدے دے ہِٹھلے سیکوئنٹ (lower sequent) وچ کتے وی نہیں آنا چاہیدا۔
+اسیں $a$ نوں \RightR{\forall} استنباط دا \emph{ایگن متغیر (eigenvariable)} آکھدے
+آں۔\footnote{اسیں ``ایگن متغیر (eigenvariable)'' اصطلاح ورتدے آں، بھاویں اُپرلے قاعدے
+وچ $a$ اک !!a{constant} (constant) اے۔ ایس دے تاریخی سبب (historical reasons) نیں۔}
 
-\subsection{$\lexists$ دے قاعدے}
+\subsection{$\lexists$ دے قاعدے (existential-quantifier rules)}
 
 \begin{defish}
 \Axiom$ !A(a), \Gamma \fCenter \Delta $
@@ -45,18 +45,18 @@
 \DisplayProof
 \end{defish}
 
-ایتھے فیر، $t$ اک بند ٹرم اے، تے $a$ اک !!a{constant} اے جیہڑا
-\LeftR{\lexists} قاعدے دے ہِٹھلے سیکوئنٹ وچ نہیں آؤندا۔ اسیں $a$ نوں
-\LeftR{\lexists} استنباط دا \emph{ایگن متغیر} آکھدے آں۔
+ایتھے فیر، $t$ اک بند ٹرم (closed term) اے، تے $a$ اک !!a{constant} (constant) اے جیہڑا
+\LeftR{\lexists} قاعدے دے ہِٹھلے سیکوئنٹ (lower sequent) وچ نہیں آؤندا۔ اسیں $a$ نوں
+\LeftR{\lexists} استنباط دا \emph{ایگن متغیر (eigenvariable)} آکھدے آں۔
 
 ایہ شرط کہ کوئی ایگن متغیر \RightR{\lforall} یا
 \LeftR{\lexists} استنباط دے ہِٹھلے سیکوئنٹ وچ نہ آوے، \emph{ایگن
-متغیر دی شرط} آکھوَندی اے۔
+متغیر دی شرط (eigenvariable condition)} آکھوَندی اے۔
 
 \begin{explain}
 یاد کرو اوہ رواج کہ جدوں $!A$ اک ایہو جہا !!a{formula} اے جیہدے وچ
-!!{variable}~$x$ آزاد اے، تاں اسیں ایہ گل~$!A(x)$ لکھ کے ظاہر کردے
-آں۔ ایسے سیاق وچ، $!A(t)$ فیر~$\Subst{!A}{t}{x}$ دا مختصر روپ اے۔ سو
+!!{variable}~$x$ آزاد (free variable) اے، تاں اسیں ایہ گل~$!A(x)$ لکھ کے ظاہر کردے
+آں۔ ایسے سیاق وچ، $!A(t)$ فیر~$\Subst{!A}{t}{x}$ دا مختصر روپ (shorthand) اے۔ سو
 اسیں \RightR{\lexists} دا قاعدہ ایویں وی لکھ سکدے آں:
 \begin{prooftree}
   \Axiom$\Gamma \fCenter \Delta, \Subst{!A}{t}{x}$
@@ -66,10 +66,10 @@
 غور کرو کہ $t$ پہلے ای~$!A$ وچ آ سکدا اے؛ مثال لئی، $!A$ دا روپ
 ~$\Atom{\Obj P}{t,x}$ ہو سکدا اے۔ ایس لئی،~$\Gamma \Sequent \Delta,
 \lexists[x][\Atom{\Obj P}{t,x}]$ دا استنباط~$\Gamma \Sequent \Delta,
-\Atom{\Obj P}{t,t}$ توں کرنا \RightR{\lexists} دی درست ورتوں اے---تسیں
-مقدمے وچ~$t$ دیاں اک یا ودھ، تے لازمی نہیں کہ ساریاں، آؤن دیاں تھاواں
-نوں پابند !!{variable}~$x$ نال ``بدل'' سکدے او۔ پر
-\RightR{\lforall} تے~\LeftR{\lexists} دیاں ایگن متغیر شرطاں دا تقاضا
+\Atom{\Obj P}{t,t}$ توں کرنا \RightR{\lexists} دی درست ورتوں (correct application) اے---تسیں
+مقدمے وچ~$t$ دیاں اک یا ودھ، تے لازمی نہیں کہ ساریاں (one or more, and not necessarily all)، آؤن دیاں تھاواں
+نوں پابند !!{variable}~$x$ (bound variable) نال ``بدل'' سکدے او۔ پر
+\RightR{\lforall} تے~\LeftR{\lexists} دیاں ایگن متغیر شرطاں (eigenvariable conditions) دا تقاضا
 اے کہ !!{constant}~$a$،~$!A$ وچ نہ آوے۔ ایس لئی، تسیں
 $\Gamma \Sequent \Delta, \lforall[x][\Atom{\Obj P}{a,x}]$ دا
 استنباط $\Gamma \Sequent \Delta, \Atom{\Obj P}{a,a}$ توں
@@ -77,11 +77,11 @@ $\RightR{\lforall}$ ورت کے درست طور تے نہیں کر سکدے۔
 \end{explain}
 
 \begin{explain}
-\RightR{\lexists} تے \LeftR{\lforall} وچ ٹرم~$t$ اُتے کوئی ہور پابندی
+\RightR{\lexists} تے \LeftR{\lforall} وچ ٹرم~$t$ اُتے کوئی ہور پابندی (no further restrictions)
 نہیں۔ دوجے پاسے، \LeftR{\lexists} تے \RightR{\lforall} دے قاعدیاں
 وچ، ایگن متغیر دی شرط دا تقاضا اے کہ !!{constant}~$a$ اُتّے والے
-سیکوئنٹ وچ~$!A(a)$ توں باہر کتے وی نہ آوے۔ ایہ نظام دی صحت مندی یقینی
-بناؤن لئی ضروری اے، یعنی ایہ صرف معتبر سیکوئنٹ !!{derive}s کرے۔ ایس
+سیکوئنٹ (upper sequent) وچ~$!A(a)$ توں باہر کتے وی نہ آوے (nowhere outside)۔ ایہ نظام دی صحت مندی (soundness) یقینی
+بناؤن لئی ضروری اے، یعنی ایہ صرف معتبر سیکوئنٹ (only valid sequents) !!{derive}s کرے۔ ایس
 شرط توں بغیر، ہِٹھ لکھے استنباط جائز ہُندے:
 \begin{prooftree}
   \Axiom$!A(a) \fCenter !A(a)$
@@ -97,7 +97,7 @@ $\RightR{\lforall}$ ورت کے درست طور تے نہیں کر سکدے۔
   \RightLabel{\LeftR{\lexists}}
   \UnaryInf$\lexists[x][!A(x)] \fCenter \lforall[x][!A(x)]$
 \end{prooftree}
-پر $\lexists[x][!A(x)] \Sequent \lforall[x][!A(x)]$ معتبر نہیں۔
+پر $\lexists[x][!A(x)] \Sequent \lforall[x][!A(x)]$ معتبر نہیں (not valid)۔
 \end{explain}
 
 \end{document}

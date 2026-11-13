@@ -1,0 +1,116 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: complete-consistent-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{ccs}
+
+\olsection{مکمل $\Sigma$-بے تضاد سیٹ}
+
+منّ لو $\Sigma$ امکانی !!{formula}s دا سیٹ اے۔ اینہاں نوں نارمل امکانی منطق دے مسلّمے یا اوہنوں متعین کرن والے اصول سمجھو۔ سیٹ $\Gamma$، $\Sigma$-بے تضاد اُدوں تے صرف اُدوں اے جدوں $\Gamma \Proves/[\Sigma] \lfalse$۔ یعنی کوئی !!{derivation} نہ ہووے~$!A_1 \lif (!A_2 \lif \cdots (!A_n \lif
+\lfalse)\dots)$ دا، $\Sigma$ توں، جتھے ہر $!A_i \in \Gamma$۔ اسیں اک «کینونیکل» نمونہ بناواں گے جیہدے وچ ہر جہان اک خاص طرح دا $\Sigma$-بے تضاد سیٹ اے۔ ایہ سیٹ $\Sigma$-بے تضاد اے تے ایس معنی وچ ودھ توں ودھ بے تضاد اے کہ ہر امکانی !!{formula} دی صداقتی قدر طے کردا اے۔ یعنی ہر $!A$ لئی یا تاں $!A
+\in \Gamma$ یا $\lnot !A \in \Gamma$۔
+
+\begin{defn}
+  سیٹ $\Gamma$ \emph{مکمل $\Sigma$-بے تضاد} اُدوں تے صرف اُدوں اے جدوں اوہ $\Sigma$-بے تضاد ہووے تے ہر~$!A$ لئی یا تاں
+  $!A \in \Gamma$ ہووے یا $\lnot !A \in \Gamma$۔
+\end{defn}
+
+مکمل $\Sigma$-بے تضاد سیٹاں $\Gamma$ دیاں کئی کم دیاں خاصیتاں نیں۔ اک ایہ کہ اوہ استنباط تحت بند نیں، یعنی جے $\Gamma
+\Proves[\Sigma] !A$، تاں $!A \in \Gamma$۔ خاص طور تے ایہدا مطلب اے کہ کسے !!a{formula}~$!A \in \Sigma$ دی ہر مثال وی $\in
+\Gamma$ اے۔ نالے $\Gamma$ دی رکنیت قضیاتی رابطیاں دیاں سچائی دیاں شرطاں ورگی اے۔ جدوں اسیں «کینونیکل نمونہ» متعین کراں گے، ایہ گل کم آوے گی۔
+
+\begin{prop}\ollabel{prop:ccs-properties}
+  منّ لو $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔ فیر
+  \begin{enumerate}
+  \item \ollabel{prop:ccs-closed}%
+    $\Gamma$،~$\Sigma$ وچ استنباط تحت بند اے۔
+  \item \ollabel{prop:ccs-sigma}%
+    $\Sigma \subseteq \Gamma$۔
+  \tagitem{prvFalse}{\ollabel{prop:ccs-lfalse}%
+    $\lfalse \notin \Gamma$}{}
+  \tagitem{prvTrue}{\ollabel{prop:ccs-ltrue}%
+    $\ltrue \in \Gamma$}{}
+  \item \ollabel{prop:ccs-lnot}%
+    $\lnot!A \in \Gamma$ اُدوں تے صرف اُدوں جدوں $!A \notin
+    \Gamma$۔
+  \tagitem{prvAnd}{\ollabel{prop:ccs-land}%
+    $!A \land !B \in \Gamma$ اُدوں تے صرف اُدوں جدوں $!A \in \Gamma$ تے $!B \in \Gamma$}{}
+  \tagitem{prvOr}{\ollabel{prop:ccs-lor}%
+    $!A \lor !B \in \Gamma$ اُدوں تے صرف اُدوں جدوں $!A \in \Gamma$ یا $!B \in \Gamma$}{}
+  \tagitem{prvIf}{\ollabel{prop:ccs-lif}%
+    $!A \lif !B \in \Gamma$ اُدوں تے صرف اُدوں جدوں $!A \notin \Gamma$ یا $!B \in \Gamma$}{}
+  \tagitem{prvIff}{\ollabel{prop:ccs-liff}%
+    $!A \liff !B \in \Gamma$ اُدوں تے صرف اُدوں جدوں یا تاں $!A \in \Gamma$ تے $!B \in
+    \Gamma$ دونیں ہون، یا $!A \notin \Gamma$ تے $!B \notin \Gamma$ دونیں ہون}{}
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item منّ لو $\Gamma \Proves[\Sigma] !A$ پر $!A \notin
+    \Gamma$۔ فیر کیوں جے $\Gamma$ مکمل $\Sigma$-بے تضاد اے، ایس لئی
+    $\lnot!A \in \Gamma$۔ ایس نال $\Gamma$ تضاد والا ہو جاندا، کیوں جے
+    $!A, \lnot !A \Proves[\Sigma] \lfalse$۔
+
+  \item جے $!A \in \Sigma$ تاں $\Gamma \Proves[\Sigma] !A$، تے $!A
+    \in \Gamma$ استنباط تحت بندش کارن، یعنی
+    معاملہ~\olref{prop:ccs-closed} مطابق۔
+
+  \tagitem{prvFalse}{جے $\lfalse \in \Gamma$ تاں $\Gamma
+    \Proves[\Sigma] \lfalse$، سو $\Gamma$،
+    $\Sigma$ دے لحاظ نال تضاد والا ہو جاندا۔}{}
+
+  \tagitem{prvTrue}{$\Gamma \Proves[\Sigma] \ltrue$، سو $\ltrue \in
+    \Gamma$ استنباط تحت بندش کارن، یعنی
+    معاملہ~\olref{prop:ccs-closed} مطابق۔}{}
+
+\item جے $\lnot!A \in \Gamma$، تاں بے تضادی کارن $!A \notin
+    \Gamma$؛ تے جے $!A \notin \Gamma$ تاں $!A \in \Gamma$، کیوں جے
+    $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔
+
+  \tagitem{prvAnd}{\iftag{probAnd}{مشق۔}{منّ لو $!A \land !B \in
+      \Gamma$۔ کیوں جے $(!A \land !B) \lif !A$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، ایس لئی $!A \in \Gamma$ استنباط تحت بندش کارن، یعنی معاملہ~\olref{prop:ccs-closed} مطابق۔ ایس طرح $!B \in \Gamma$ وی۔ دوجے پاسے منّ لو $!A \in \Gamma$ تے $!B \in
+      \Gamma$ دونیں۔ فیر استنباط تحت بندش توں $(!A \land !B) \in
+      \Gamma$ نکلدا اے، کیوں جے $!A \lif (!B \lif (!A \land !B))$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے۔}}{}
+
+  \tagitem{prvOr}{\iftag{probOr}{مشق۔}{منّ لو $!A \lor !B \in
+      \Gamma$، تے $!A \notin \Gamma$ تے $!B \notin \Gamma$۔ کیوں جے
+      $\Gamma$ مکمل $\Sigma$-بے تضاد اے، ایس لئی $\lnot!A \in \Gamma$
+      تے $\lnot !B \in \Gamma$۔ فیر $\lnot(!A \lor !B) \in \Gamma$
+      کیوں جے $\lnot !A \lif (\lnot !B \lif \lnot (!A \lor !B))$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے۔ ایس دا مطلب ہووے گا کہ $\Gamma$، $\Sigma$ دے لحاظ نال تضاد والا اے۔ ایہ تضاد اے۔}}{}
+
+  \tagitem{prvIf}{\iftag{probIf}{مشق۔}{منّ لو $!A \lif !B \in
+      \Gamma$ تے $!A \in \Gamma$؛ فیر $\Gamma \Proves[\Sigma] !B$، جیہدے توں $!B \in \Gamma$ نکلدا اے استنباط تحت بندش کارن۔ اُلٹے پاسے جے $!A
+      \lif !B \notin \Gamma$، تاں کیوں جے $\Gamma$ مکمل
+      $\Sigma$-بے تضاد اے، ایس لئی $\lnot (!A \lif !B) \in \Gamma$۔ کیوں جے
+      $\lnot(!A \lif !B) \lif !A$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، ایس لئی $!A \in
+      \Gamma$ استنباط تحت بندش کارن۔ کیوں جے $\lnot(!A \lif !B) \lif
+      \lnot !B$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، ایس لئی $\lnot !B \in
+      \Gamma$۔ فیر $!B \notin \Gamma$ کیوں جے $\Gamma$،
+      $\Sigma$-بے تضاد اے۔}}{}
+
+  \tagitem{prvIff}{\iftag{probIff}{مشق۔}{منّ لو $!A \liff !B \in
+      \Gamma$۔ جے $!A \in \Gamma$ تاں $!B \in \Gamma$، کیوں جے $(!A
+      \liff !B) \lif (!A \lif !B)$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے۔ ایس طرح جے $!B \in \Gamma$ تاں $!A \in \Gamma$۔
+      سو یا تاں $!A \in \Gamma$ تے $!B \in \Gamma$ دونیں، یا نہ
+      $!A \in \Gamma$ تے نہ $!B \in \Gamma$۔
+
+      اُلٹے پاسے منّ لو $!A \lif !B \notin \Gamma$۔ کیوں جے $\Gamma$
+      مکمل $\Sigma$-بے تضاد اے، ایس لئی $\lnot (!A \liff !B) \in
+      \Gamma$۔ کیوں جے $\lnot(!A \liff !B) \lif (!A \lif \lnot !B)$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، ایس لئی جے $!A \in \Gamma$ تاں $\lnot !B \in
+      \Gamma$، تے کیوں جے $\Gamma$، $\Sigma$-بے تضاد اے، ایس لئی $!B \notin
+      \Gamma$۔ ایس طرح جے $!B \in \Gamma$، تاں $!A \notin \Gamma$۔
+      سو نہ $!A \in \Gamma$ تے $!B \in \Gamma$ اکٹھے نیں، تے نہ $!A \notin
+      \Gamma$ تے $!B \notin \Gamma$ اکٹھے نیں۔}}{}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probAnd,probOr,probIf,probIff}
+  \olref[nml][com][ccs]{prop:ccs-properties} دا ثبوت پورا کرو۔
+\end{probtag}
+
+\end{document}

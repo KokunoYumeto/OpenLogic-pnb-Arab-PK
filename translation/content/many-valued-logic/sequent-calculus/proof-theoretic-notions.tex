@@ -1,0 +1,125 @@
+% Part: many-valued-logics
+% Chapter: sequent-calculus
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{prf}
+
+\olsection{ثبوتی نظریے دے تصور}
+
+\begin{explain}
+جیویں اسیں کئی اہم معنوی تصورات (منطقی اعتبار، منطقی نتیجہ تے پورا ہون جوگتا) دی تعریف دِتّی اے، ہُن اسیں اوہناں نال میل کھاندے \emph{ثبوتی نظریے دے تصوراں} دی تعریف دیندے آں۔ ایہ تعریف !!{sentence}s دے !!{structure}s وچ پورا اترن اُتے نہیں، کجھ سیکوئنٹاں دے !!{derivability} یا !!{nonderivability} اُتے ٹِکی اے۔ ایہ وڈی دریافت سی کہ ایہ تصور آپس وچ میل کھاندے نیں۔ اوہناں دا ایہ میل \emph{صحت مندی} تے \emph{تمامیت دے قضیے} دا مضمون اے۔
+\end{explain}
+
+\begin{defn}[قضیے]
+!!^a{sentence}~$!A$ اک \emph{قضیہ} اے جے~$\Log{LK}$ وچ سیکوئنٹ $\quad \Sequent !A$ دی !!a{derivation} ہووے۔ اسیں $\Proves
+!A$ لکھدے آں جے $!A$ قضیہ اے، تے $\Proves/ !A$ جے ایہ قضیہ نہیں۔
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+!!^a{sentence}~$!A$، !!{sentence}s دے سیٹ~$\Gamma$ توں \emph{!!{derivable}} اے، $\Gamma \Proves !A$، اُدوں تے صرف اُدوں جدوں اک محدود ذیلی سیٹ~$\Gamma_0 \subseteq \Gamma$ تے لڑی $\Gamma_0'$ ہووے جیہڑی~$\Gamma_0$ وچلے !!{sentence}s دی لڑی ہووے، ایویں کہ $\Log{LK}$، $\Gamma_0' \Sequent !A$ نوں !!{derive}s کرے۔ جے $!A$، $\Gamma$ توں !!{derivable} نہیں تاں اسیں $\Gamma \Proves/ !A$ لکھدے آں۔
+\end{defn}
+
+سکیڑن، کمزور کرن تے تبادلے دے قاعدیاں کرکے~$\Gamma_0'$ وچ !!{sentence}s دی ترتیب تے گنتی نال فرق نہیں پیندا۔ جے سیکوئنٹ $\Gamma_0' \Sequent !A$ !!{derivable} اے، تاں $\Gamma_0'' \Sequent !A$ وی اے، ہر اوہ $\Gamma_0''$ لئی جیہدے وچ اوہی !!{sentence}s نیں جیہڑے~$\Gamma_0'$ وچ نیں۔ مثلاً جے $\Gamma_0 = \{!B, !C\}$ ہووے، تاں $\Gamma_0' = \tuple{!B, !B, !C}$ تے $\Gamma_0'' =
+\tuple{!C, !C, !B}$ دوویں ایہو جیہیاں لڑیاں نیں جیہناں وچ بس اوہی !!{sentence}s نیں جیہڑے~$\Gamma_0$ وچ نیں۔ جے اِنہاں وچوں اک والا سیکوئنٹ !!{derivable} اے، تاں دوجا وی اے، مثال لئی:
+\begin{prooftree}
+  \AxiomC{}
+  \Deduce$!B, !B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Exchange}}
+  \UnaryInf$!C, !B \fCenter !A$
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!C, !C, !B \fCenter !A$
+\end{prooftree}
+ہُن توں اسیں آکھاں گے کہ جے $\Gamma_0$، !!{sentence}s دا محدود سیٹ اے، تاں $\Gamma_0 \Sequent !A$ کوئی وی ایہو جیہا سیکوئنٹ اے جیہدے مقدم وچ~$\Gamma_0$ دے !!{sentence}s دی لڑی ہووے۔ جتھے لوڑ ہووے، سکیڑن، تبادلے تے کمزور کرن دے قدم بناں دسے شامل سمجھاں گے۔
+
+\begin{defn}[بے تضادی]
+جملیاں دا سیٹ~$\Gamma$ اُدوں تے صرف اُدوں \emph{متضاد} اے جدوں اوہدا کوئی محدود ذیلی سیٹ~$\Gamma_0 \subseteq \Gamma$ ہووے ایویں کہ $\Log{LK}$ !!{derive}s کرے سیکوئنٹ $\Gamma_0 \Sequent \quad$۔ جے $\Gamma$ متضاد نہیں، یعنی جے ہر محدود $\Gamma_0 \subseteq \Gamma$ لئی $\Log{LK}$ !!{derive} نہیں کردا سیکوئنٹ $\Gamma_0 \Sequent \quad$، تاں اسیں اوہنوں \emph{بے تضاد} آکھدے آں۔
+\end{defn}
+
+\begin{prop}[انعکاس]
+\ollabel{prop:reflexivity}
+جے $!A \in \Gamma$، تاں $\Gamma \Proves !A$۔
+\end{prop}
+
+\begin{proof}
+مُڈھلا سیکوئنٹ $!A \Sequent !A$ !!{derivable} اے، تے $\{!A\}
+\subseteq \Gamma$۔
+\end{proof}
+
+\begin{prop}[وڈے سیٹ ول برقرار رہنا]
+\ollabel{prop:monotonicity}
+جے $\Gamma \subseteq \Delta$ تے $\Gamma \Proves !A$، تاں $\Delta
+\Proves !A$۔
+\end{prop}
+
+\begin{proof}
+منّ لو $\Gamma \Proves !A$، یعنی کوئی محدود $\Gamma_0
+\subseteq \Gamma$ اے جیہدے لئی $\Gamma_0 \Sequent !A$ !!{derivable} اے۔ چونکہ $\Gamma \subseteq \Delta$، ایس لئی $\Gamma_0$،~$\Delta$ دا وی محدود ذیلی سیٹ اے۔ سو $\Gamma_0
+\Sequent !A$ دا !!{derivation} ایہ وی وکھاؤندا اے کہ $\Delta \Proves !A$۔
+\end{proof}
+
+\begin{prop}[تعدی]
+\ollabel{prop:transitivity}
+جے $\Gamma \Proves !A$ تے $\{!A\} \cup \Delta \Proves
+!B$، تاں $\Gamma \cup \Delta \Proves !B$۔
+\end{prop}
+
+\begin{proof}
+جے $\Gamma \Proves !A$، تاں اک محدود $\Gamma_0 \subseteq \Gamma$ تے اک !!a{derivation}~$\pi_0$ اے جیہڑا $\Gamma_0 \Sequent !A$ دا اے۔ جے $\{!A\}
+\cup \Delta \Proves !B$، تاں کسے محدود ذیلی سیٹ $\Delta_0
+\subseteq \Delta$ لئی اک !!a{derivation}~$\pi_1$ اے جیہڑا $!A, \Delta_0
+\Sequent !B$ دا اے۔ ایہ !!{derivation} ویکھو:
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\pi_0$}
+  \Deduce$\Gamma_0 \fCenter !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!A, \Delta_0 \fCenter !B$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_0, \Delta_0 \fCenter !B$
+\end{prooftree}
+چونکہ $\Gamma_0 \cup \Delta_0 \subseteq \Gamma \cup \Delta$، ایس لئی ایہ وکھاؤندا اے کہ $\Gamma \cup \Delta \Proves !B$۔
+\end{proof}
+
+دھیان دیو، ایس دا خاص مطلب ایہ اے کہ جے $\Gamma \Proves !A$ تے $!A
+\Proves !B$، تاں $\Gamma \Proves !B$۔ ایس توں ایہ وی نکلدا اے کہ جے $!A_1,
+\dots, !A_n \Proves !B$ تے ہر واری $\Gamma \Proves !A_i$ ہووے، ہر~$i$ لئی، تاں $\Gamma \Proves !B$۔
+
+\begin{prop}
+\ollabel{prop:incons}
+$\Gamma$ اُدوں تے صرف اُدوں متضاد اے جدوں $\Gamma \Proves {!A}$ ہر جملے~$!A$ لئی۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+\olref[fol][seq][ptn]{prop:incons} ثابت کرو۔
+\end{prob}
+
+\begin{prop}[محدود گواہی]
+  \ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item جے $\Gamma \Proves !A$، تاں اک محدود ذیلی سیٹ $\Gamma_0
+    \subseteq \Gamma$ اے جیہدے لئی $\Gamma_0 \Proves !A$۔
+  \item جے~$\Gamma$ دا ہر محدود ذیلی سیٹ بے تضاد اے، تاں $\Gamma$ بے تضاد اے۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item جے $\Gamma \Proves !A$، تاں اک محدود ذیلی سیٹ $\Gamma_0 \subseteq \Gamma$ اے جیہدے سیکوئنٹ $\Gamma_0
+      \Sequent !A$ دا !!a{derivation} اے۔ ایس لئی $\Gamma_0
+      \Proves !A$۔
+    \item جے $\Gamma$ متضاد اے، تاں اک محدود ذیلی سیٹ~$\Gamma_0 \subseteq \Gamma$ اے جیہدے لئی $\Log{LK}$، $\Gamma_0 \Sequent \quad$ نوں !!{derive}s کرے۔ پر ایہدا مطلب اے کہ اک محدود ذیلی سیٹ~$\Gamma_0$، جیہڑا $\Gamma$ دا اے، متضاد اے۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

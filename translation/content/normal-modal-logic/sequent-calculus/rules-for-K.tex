@@ -1,0 +1,129 @@
+% Part: normal-modal-logic
+% Chapter: sequent-calculus
+% Section: rules-for-K
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{seq}{rul}
+
+\olsection{\Log{K} دے قاعدے}
+
+عام قضیاتی رابطیاں دے قاعدے اوہی نیں جیہڑے عام سیکوئنٹ حساب~$\Log{LK}$
+دے نیں۔ مسلّمے وی اوہی نیں۔ شکل $!A \Sequent !A$ والا ہر سیکوئنٹ
+اک مسلّمہ اے۔
+
+امکانی عامل\iftag{prvBox}{\iftag{prvDiamond}{~$\Box$
+تے}{~$\Box$}}{}\iftag{prvDiamond}{~$\Diamond$}{} لئی ایہ وادھو
+\iftag{notprvBox,notprvDiamond}{قاعدہ اے}{قاعدے نیں}:
+\[
+  \iftag{prvBox}{\iftag{prvDiamond}{% <> and [] primitive
+    \Axiom$\Gamma \fCenter \Delta, !A$
+    \RightLabel{$\Box$}
+    \UnaryInf$\Box\Gamma \fCenter \Diamond\Delta, \Box!A$
+    \DisplayProof  
+    \qquad
+    \Axiom$!A, \Gamma \fCenter \Delta$
+    \RightLabel{$\Diamond$}
+    \UnaryInf$\Diamond!A, \Box\Gamma \fCenter \Diamond\Delta$
+    \DisplayProof
+}{% only Box primitive
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{$\Box$}
+\UnaryInf$\Box\Gamma \fCenter \Box!A$
+\DisplayProof
+}}{% only <> primitive
+  \Axiom$!A \fCenter \Delta$
+  \RightLabel{$\Diamond$}
+  \UnaryInf$\Diamond!A \fCenter \Diamond\Delta$
+  \DisplayProof
+}
+\]
+ایتھے \iftag{prvBox}{$\Box\Gamma$ اوہناں !!{formula}s دی لڑی اے جیہڑے
+~$\Gamma$ توں ملدے نیں جدوں $\Box$، ہر !!{formula} دے اگے لایا جائے
+جیہڑا~$\Gamma$ وچ اے\iftag{prvDiamond}{ تے
+}{}}{}\iftag{prvDiamond}{$\Diamond\Delta$ اوہناں !!{formula}s دی لڑی اے
+جیہڑے~$\Delta$ توں ملدے نیں جدوں $\Diamond$، ہر !!{formula} دے اگے
+لایا جائے جیہڑا~$\Delta$ وچ اے}{}۔ \iftag{notprvDiamond}{قاعدے $\Box$
+دے مقدمے دے سجے پاسے ودھ توں ودھ اک !!{formula}~$!A$ ہونا چاہیدا اے۔ }{}%
+\iftag{notprvBox}{قاعدے $\Diamond$ دے مقدمے دے کھبے پاسے ودھ توں ودھ
+اک !!{formula}~$!A$ ہونا چاہیدا اے۔ }{}%
+\iftag{prvBox}{$\Gamma$\iftag{prvDiamond}{~تے~}{}}{}\iftag{prvDiamond}{$\Delta$}{}
+دا خالی ہونا ممکن اے۔ اوس صورت وچ نتیجے والے سیکوئنٹ دا متعلقہ حصہ
+\iftag{prvBox}{$\Box\Gamma$\iftag{prvDiamond}{~تے~}{}}{}\iftag{prvDiamond}{$\Diamond\Delta$}{}
+وی خالی اے۔
+
+ایہ شرط ضروری اے کہ
+\iftag{prvBox}{$\Box$ سجے پاسے\iftag{prvDiamond}{ تے
+}{}}{}\iftag{prvDiamond}{$\Diamond$ کھبے پاسے}{} صرف اکّو
+!!{formula}~$!A$ اُتے لایا جائے۔ جے اسیں
+\iftag{prvBox}{$\Box$ سجے پاسے دے کِنّے وی !!{formula}s اُتے لاؤن دی
+اجازت دیئیے\iftag{prvDiamond}{ یا }{}}{}%
+\iftag{prvDiamond}{$\Diamond$ کھبے پاسے دے کِنّے وی !!{formula}s اُتے
+لاؤن دی اجازت دیئیے}{}، تاں اسیں ایہ !!{derive} کر سکدے آں:
+\[
+    \iftag{prvBox}{
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\RightR{\lnot}}
+      \UnaryInf$\fCenter !A, \lnot !A$
+      \RightLabel{$\Box*$}
+      \UnaryInf$\fCenter \Box!A, \Box\lnot !A$
+      \doubleLine
+      \RightLabel{\RightR{\lor}}
+      \UnaryInf$\fCenter \Box!A \lor \Box \lnot !A$
+      \DisplayProof}{}
+    \iftag{notprvBox,notprvDiamond}{}{\qquad}
+    \iftag{prvDiamond}{
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\LeftR{\lnot}}
+      \UnaryInf$\lnot !A, !A \fCenter$
+      \RightLabel{$\Diamond*$}
+      \UnaryInf$\Diamond\lnot !A,\Diamond!A \fCenter $
+      \RightLabel{\RightR{\lnot}}
+      \UnaryInf$\Diamond!A \fCenter \lnot\Diamond\lnot !A$
+      \RightLabel{\RightR{\lif}}
+      \UnaryInf$ \fCenter \Diamond!A \lif \lnot\Diamond\lnot !A$
+      \DisplayProof}{}
+  \]
+پر \iftag{prvBox}{$\Box!A \lor \Box \lnot !A$\iftag{prvDiamond}{ تے
+$\Diamond!A \lif \lnot\Diamond\lnot !A$}{}}{$\Diamond!A \lif
+\lnot\Diamond\lnot !A$} دا منطقی اعتبار~$\Log{K}$ وچ نہیں۔
+
+جے اسیں مقدمے وچ~$!A$ توں علاوہ پاسے والے فارمولیاں دی اجازت
+دیئیے، تے \iftag{prvBox}{قاعدے $\Box$ نوں $\Box$ سجے پاسے صرف~$!A$
+اُتے لاؤن دی اجازت دیئیے\iftag{prvDiamond}{، یا }{}}{}%
+\iftag{prvDiamond}{قاعدے $\Diamond$ نوں $\Diamond$ کھبے پاسے صرف~$!A$
+اُتے لاؤن دی اجازت دیئیے}{} (پر پاسے والے فارمولیاں نوں جیویں دا تیویں
+رکھیے)، تاں اسیں ایہ !!{derive} کر سکدے آں:
+\[
+  \iftag{prvBox}{
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\fCenter !A, \lnot !A$
+    \RightLabel{\RightR{\Exchange}}
+    \UnaryInf$\fCenter \lnot !A, !A$
+    \RightLabel{$\Box*$}
+    \UnaryInf$\fCenter \lnot!A, \Box !A$
+    \doubleLine
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$\fCenter \lnot!A \lor \Box !A$
+    \DisplayProof}{}
+  \iftag{notprvBox,notprvDiamond}{}{\qquad}
+  \iftag{prvDiamond}{
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, !A \fCenter$
+    \RightLabel{$\Diamond*$}
+    \UnaryInf$\Diamond\lnot !A, !A \fCenter $
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$!A \fCenter \lnot\Diamond\lnot !A$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$ \fCenter !A \lif \lnot\Diamond\lnot !A$
+    \DisplayProof}{}
+\]
+پر \iftag{prvBox}{$\lnot!A \lor \Box !A$ (جیہڑا $!A
+\lif \Box!A$ دے ہم ارز اے)\iftag{prvDiamond}{ تے $!A \lif \lnot\Diamond\lnot !A$}{}}{$!A \lif \lnot\Diamond\lnot !A$}
+دا منطقی اعتبار~$\Log{K}$ وچ نہیں۔
+
+\end{document}

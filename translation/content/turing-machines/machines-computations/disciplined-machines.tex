@@ -1,0 +1,188 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: well-behaved-machines
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{mac}{dis}
+\olsection{پابند مشیناں}
+
+\begin{explain}
+\olref[hal]{sec} وچ
+اسی اوہ ٹیورنگ مشیناں
+ویکھیاں سن جنہاں دی
+اکّو مقرر رُکّن والی
+حالت~$h$ اے۔ جے ایہ
+مشیناں کدی رُکّن،
+تاں لازماً حالت~$h$
+وچ ہی رُکّن گیاں۔
+ایس طرح اکّو
+رُکّن والی حالت
+رکھن والیاں مشیناں
+عام ٹیورنگ مشیناں
+دے مقابلے وچ زیادہ
+پابند نیں۔ مشیناں
+دے عمل اُتے ہور
+پابندیاں وی لا سکدے
+آں۔ مثال دے طور
+اُتے اسی مشین نوں
+خانہ~$0$ اُتے پٹی
+دے سِرے دا نشان
+مٹاؤن توں، یا
+خانہ~$0$ توں
+کھبے پاسے جان دی
+کوشش توں، منع
+نہیں کیتا۔ (ساڈی
+تعریف مطابق ایس
+صورت وچ سر بس
+خانہ~$0$ اُتے
+ہی رہندا اے۔ کجھ ہور تعریفاں مطابق
+ایس صورت وچ مشین رُک جاندی اے۔) ایہ وی کدے
+کدے مفید ہوندا اے
+کہ جے مشین رُکے
+تاں خانہ~$1$
+اُتے ہی رُکے۔
+\end{explain}
+
+\begin{defn}\ollabel{defn:disciplined}
+ٹیورنگ مشین~$M$
+\emph{پابند} اے اُدوں
+تے صرف اُدوں جدوں:
+\begin{enumerate}
+    \item اوس دی اکّو
+    مقرر رُکّن والی
+    حالت~$h$ ہووے،
+    \item جے اوہ رُکے
+    تاں اوس دا سر خانہ~$1$
+    پڑھ رہیا ہووے،
+    \item اوہ $\TMendtape$
+    نشان خانہ~$0$
+    اُتے کدی نہ مٹاوے،
+    تے
+    \item اوہ خانہ~$0$
+    توں کھبے پاسے
+    جان دی کوشش کدی
+    نہ کرے۔
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+اسی پہلے بیان کر
+چکے آں کہ کسے وی
+ٹیورنگ مشین نوں
+اوہو عمل کرن والی اک
+مشین وچ بدلیا
+جا سکدا اے جیہدی
+مقرر رُکّن والی حالت
+ہووے۔ ایہ کم بس
+نئی حالت~$h$
+شامل کر کے، تے
+ہر اوہو جیہے جوڑے لئی
+$\delta(q, \sigma) = \tuple{h, \sigma, N}$
+حکم شامل کر کے
+ہوندا اے جتھے
+$\tuple{q,\sigma}$ اُتے
+اصل $\delta$~غیر
+تعریف شدہ ہووے۔
+ایہ سچ اے، اگرچہ
+ثابت کرنا لمبا کم
+اے، کہ ہر ٹیورنگ
+مشین~$M$ نوں اک
+پابند ٹیورنگ
+مشین~$M'$ وچ
+بدلیا جا سکدا اے
+جیڑی اوہناں ہی
+انپٹاں اُتے رُکے
+تے اوہی آؤٹ پٹ
+دیوے۔ مثال دے
+طور اُتے، جے مشین
+رُکّن لگے تے
+خانہ~$1$ اُتے
+نہ ہووے، تاں اسی
+ہور حکم شامل کر
+سکدے آں تاں جو
+سر کھبے پاسے
+چلدا رہے، جد تک
+پٹی دے سِرے دا
+نشان نہ لبھ لوے؛
+فیر سر اک خانہ سجّے ول سرکے
+تے مشین رُک جاوے۔ باقی شرطاں
+کِویں پوری کیتیاں
+جان، ایہ سوچݨ
+لئی اسی تہانوں
+چھڈدے آں۔
+\end{explain}
+
+\begin{ex}
+    \olref{fig:adder-disc}
+    وچ اسی
+    \olref[una]{ex:adder}
+    والی جمع دی مشین
+    نوں پابند مشین
+    وچ بدلدے آں۔
+    \begin{figure}\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below right of=B] {$q_2$};
+  \node[state]         (D) [below left of=C] {$q_3$};
+  \node[state]         (H) [left of=D] {$h$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+           edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (D)
+        (D) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (D)
+        edge node {\TMtrans{\TMendtape}{\TMendtape}{\TMright}} (H);
+\end{tikzpicture}
+\]\caption{پابند جمع والی مشین}
+\ollabel{fig:adder-disc}
+\end{figure}
+\end{ex}
+
+\begin{prop}\ollabel{prop:disciplined}
+ہر ٹیورنگ مشین~$M$
+لئی اک پابند ٹیورنگ
+مشین~$M'$ موجود اے
+جیڑی آؤٹ پٹ~$O$
+نال رُکدی اے جے
+$M$~آؤٹ پٹ~$O$
+نال رُکدی ہووے،
+تے نہیں رُکدی
+جے $M$~نہ رُکے۔
+خاص طور اُتے،
+جے فنکشن
+$f\colon\Nat^n \to \Nat$
+دا حساب کوئی
+ٹیورنگ مشین
+کردی اے، تاں
+اوہدا حساب اک
+پابند ٹیورنگ
+مشین وی کردی
+اے۔
+\end{prop}
+
+\begin{prob}\label{tur:mac:dis:prob:disc-succ}
+فنکشن $f(x) = x+1$
+دا حساب کرن والی
+پابند مشین دیو۔
+\end{prob}
+
+
+\begin{prob}\label{tur:mac:dis:prob:copier}
+ایسی پابند مشین
+لبھو جیڑی
+انپٹ $\TMstroke^n$
+نال شروع ہو کے
+آؤٹ پٹ
+$\TMstroke^n \concat \TMblank \concat \TMstroke^n$
+دیوے۔
+\end{prob}
+
+\end{document}

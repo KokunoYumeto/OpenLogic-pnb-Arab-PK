@@ -1,0 +1,74 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: compactness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{met}{com}
+
+\olsection{دوجے درجے دی منطق محدود گواہی دی خاصیت نہیں رکھدی}
+
+\begin{explain}
+جملیاں دے سیٹ~$\Gamma$ نوں \emph{محدود طور تے پورا ہون جوگا}
+آکھدے آں جے اوہدا ہر محدود ذیلی سیٹ پورا ہون جوگا ہووے۔ پہلے درجے دی منطق
+وچ جے !!{sentence}s دا سیٹ~$\Gamma$ محدود طور تے پورا ہون جوگا ہووے،
+تاں اوہ پورا ہون جوگا وی اے۔ ایس خاصیت نوں \emph{محدود گواہی}
+کہندے نیں۔ منطقی نتیجے دی بولی وچ ایہدا اک ہم ارز روپ وی اے: جے
+$\Gamma \Entails !A$، تاں $\Gamma_0 \Entails !A$ کسے
+محدود ذیلی سیٹ~$\Gamma_0 \subseteq \Gamma$ لئی وی۔ ایس روپ وچ
+ایہ تمامیت دے قضیے دا سیدھا نتیجہ اے: جے $\Gamma \Entails !A$،
+تاں تمامیت دے مطابق $\Gamma \Proves !A$۔ پر کوئی !!{derivation}،
+$\Gamma$ دے صرف محدود گنتی دے !!{sentence}s ای ورت سکدا اے۔
+
+دوجے درجے دی منطق وچ محدود گواہی دی خاصیت نہیں۔ دوجے درجے دے
+!!{sentence}s دے ایسے سیٹ نیں جیہڑے محدود طور تے پورے ہون جوگے
+نیں پر آپ پورے ہون جوگے نہیں۔ اوہناں توں کوئی~$!A$ منطقی طور
+اُتے نکلدا اے، پر اوہناں دے کسے محدود ذیلی سیٹ توں~$!A$
+منطقی طور اُتے نہیں نکلدا۔
+\end{explain}
+
+% PNB-CMP-074: frozen source repeats the prior undecidability theorem label.
+\begin{thm}
+\ollabel{thm:sol-not-compact}
+دوجے درجے دی منطق محدود گواہی دی خاصیت نہیں رکھدی۔
+\end{thm}
+
+\begin{proof}
+یاد کرو کہ
+\[
+\fn{Inf} \ident \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)]
+      \lif \eq[x][y])]] \land \lexists[y][\lforall[x][\eq/[y][u(x)]]])]
+\]
+!!a{structure} وچ اُدوں تے صرف اُدوں پورا اتردا اے جدوں اوہدا
+دائرہ لامتناہی ہووے۔ من لو $!A^{\ge n}$ ایسا جملہ اے جیہڑا
+آکھدا اے کہ دائرے وچ گھٹ توں گھٹ $n$ !!{element}s نیں، مثلاً
+\[
+!A^{\ge n} \ident \lexists[x_1][\dots\lexists[x_n][(\eq/[x_1][x_2]
+    \land \eq/[x_1][x_3] \land \dots \land \eq/[x_{n-1}][x_n])]].
+\]
+!!{sentence}s دا ایہ سیٹ ویکھو:
+\[
+\Gamma = \{\lnot \fn{Inf}, !A^{\ge 1}, !A^{\ge 2}, !A^{\ge 3}, \dots\}.
+\]
+ایہ محدود طور تے پورا ہون جوگا اے۔ کسے وی محدود ذیلی سیٹ~$\Gamma_0
+\subseteq \Gamma$ لئی کوئی مثبت $k$ چن لو جیہڑا اوس ذیلی سیٹ وچ
+آئے ہر کم توں کم آکار دے اشاریے توں گھٹ نہ ہووے۔ جے ذیلی سیٹ
+وچ ایہو جیہی کوئی شرط نہ ہووے تاں اک چن لو۔ فیر $!A^{\ge k} \in \Gamma$،
+پر کوئی
+% PNB-CMP-075: the finite subset, not Gamma, has no larger size requirement.
+$!A^{\ge n} \in \Gamma_0$ نہیں جیہدے لئی $n>k$ ہووے۔
+جے $\Domain{M}$ وچ $k$ !!{element}s ہون، تاں $\Sat{M}{\Gamma_0}$۔
+پر $\Gamma$ پورا ہون جوگا نہیں: جے $\Sat{M}{\lnot \fn{Inf}}$،
+تاں $\Domain{M}$ متناہی اے، منّ لو آکار~$k$۔ فیر
+$\Sat/{M}{!A^{\ge k+1}}$۔
+\end{proof}
+
+\begin{prob}
+ایسا سیٹ~$\Gamma$ تے !!a{sentence}~$!A$ دی مثال دو جیہدے لئی
+$\Gamma \Entails !A$، پر ہر محدود ذیلی سیٹ~$\Gamma_0 \subseteq
+\Gamma$ لئی $\Gamma_0 \Entails/ !A$ ہووے۔
+\end{prob}
+
+\end{document}

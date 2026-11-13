@@ -1,0 +1,112 @@
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: quantifier-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{qrl}
+
+\olsection{مسوّراں دے قاعدے}
+
+\subsection{$\lforall$ لئی قاعدے}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{\lforall[x][!A(x)]}}
+\RightLabel{\TRule{\True}{\forall}}
+\UnaryInfC{\sFmla{\True}{!A(t)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{\lforall[x][!A(x)]}}
+\RightLabel{\TRule{\False}{\lforall}}
+\UnaryInfC{\sFmla{\False}{!A(a)}}
+\DisplayProof
+\end{defish}
+
+\TRule{\True}{\lforall} وچ $t$ اک بند ٹرم اے (یعنی جیہدے وچ
+کوئی متغیر نہ ہووے)۔ \TRule{\False}{\lforall} وچ $a$~اک
+!!a{constant} اے جیہڑا \TRule{\False}{\lforall} قاعدے توں اُتّے
+والی شاخ وچ کتے وی نہیں آؤنا چاہیدا۔ اسیں $a$ نوں
+\TRule{\False}{\forall} استنباط دا \emph{ایگن متغیر} آکھدے
+آں۔\footnote{اسیں ``ایگن متغیر'' اصطلاح ورتدے آں، بھاویں اُتّے
+والے قاعدے وچ $a$ اک !!a{constant} اے۔ ایس دے تاریخی سبب نیں۔}
+
+\subsection{$\lexists$ لئی قاعدے}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{\lexists[x][!A(x)]}}
+\RightLabel{\TRule{\True}{\lexists}}
+\UnaryInfC{\sFmla{\True}{!A(a)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{\lexists[x][!A(x)]}}
+\RightLabel{\TRule{\False}{\lexists}}
+\UnaryInfC{\sFmla{\False}{!A(t)}}
+\DisplayProof
+\end{defish}
+
+ایتھے فیر، $t$ اک بند ٹرم اے، تے $a$ اک !!a{constant} اے جیہڑا
+\TRule{\True}{\lexists} قاعدے توں اُتّے والی شاخ وچ نہیں آؤندا۔
+اسیں $a$ نوں \TRule{\True}{\lexists} استنباط دا
+\emph{ایگن متغیر} آکھدے آں۔
+
+ایہ شرط کہ ایگن متغیر \TRule{\False}{\lforall} یا
+\TRule{\True}{\lexists} استنباط توں اُتّے والی شاخ وچ نہ آوے،
+\emph{ایگن متغیر دی شرط} آکھوَندی اے۔
+
+\begin{explain}
+ایہ رواج یاد کرو: جدوں $!A$ اک !!a{formula} اے جیہدے وچ
+!!{variable}~$x$ آزاد ہووے، اسیں ایہ گل~$!A(x)$ لکھ کے ظاہر کردے
+آں۔ اوسے سیاق وچ $!A(t)$،~$\Subst{!A}{t}{x}$ دا مختصر روپ اے۔
+سو اسیں \TRule{\False}{\lexists} دا قاعدہ ایویں وی لکھ سکدے آں:
+\begin{prooftree}
+  \AxiomC{\sFmla{\False}{\lexists[x][!A]}}
+  \RightLabel{\TRule{\False}{\lexists}}
+  \UnaryInfC{\sFmla{\False}{\Subst{!A}{t}{x}}}
+\end{prooftree}
+یاد رکھو کہ $t$ پہلے ای~$!A$ وچ آ سکدا اے؛ مثلاً $!A$ دا روپ
+~$\Atom{\Obj P}{t,x}$ ہو سکدا اے۔ ایس لئی
+$\sFmla{\False}{\Atom{\Obj P}{t,t}}$ دا
+~$ \sFmla{\False}{\lexists[x][\Atom{\Obj P}{t,x}]}$ توں
+استنباط~\TRule{\False}{\lexists} دی درست ورتوں اے۔ پر
+\TRule{\False}{\lforall} تے~\TRule{\True}{\lexists} دیاں
+ایگن متغیر شرطاں منگدیاں نیں کہ !!{constant}~$a$،~$!A$ وچ نہ
+آوے۔ ایس لئی
+$\sFmla{\False}{\Atom{\Obj P}{a,a}}$ دا
+$\sFmla{\False}{\lforall[x][\Atom{\Obj P}{a,x}]}$
+توں~$\TRule{\False}{\lforall}$ ورت کے درست استنباط نہیں کر سکدے۔
+\end{explain}
+
+\begin{explain}
+% PNBTAB-002: source's "no restrictions" is constrained by the earlier closed-term requirement; no further restriction on closed t.
+\TRule{\True}{\lforall} تے \TRule{\False}{\lexists} وچ بند
+ٹرم~$t$ اُتے ہور کوئی پابندی نہیں۔ دوجے پاسے،
+\TRule{\True}{\lexists} تے \TRule{\False}{\lforall} دے قاعدیاں
+وچ ایگن متغیر دی شرط منگدی اے کہ !!{constant}~$a$ متعلقہ استنباط
+توں اُتّے والی شاخ وچ کتے وی نہ آوے۔ ایہ نظام دی صحت مندی یقینی
+بناؤن لئی ضروری اے۔ ایس شرط توں بغیر ہِٹھلا
+$\lexists[x][\formula{A}(x)] \lif \lforall[x][\formula{A}(x)]$
+لئی بند !!{tableau} ہو جاندا:
+\begin{center}
+\begin{tableau}{}
+  [\sFmla{\False}{\lexists[x][\formula{A}(x)] \lif \lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}
+      [\sFmla{\False}{\lforall[x][\formula{A}(x)]},
+        just={\TRule{\False}{\lif}[1]}
+        [\sFmla{\True}{\formula{A}(a)},
+          just={\TRule{\True}{\lexists}[2]}
+          [\sFmla{\False}{\formula{A}(a)},
+            just={\TRule{\False}{\lforall}[3]}, close]
+        ]
+      ]
+    ]
+  ]
+\end{tableau}
+\end{center}
+پر $\lexists[x][\formula{A}(x)] \lif
+\lforall[x][\formula{A}(x)]$ معتبر نہیں۔
+\end{explain}
+
+\end{document}

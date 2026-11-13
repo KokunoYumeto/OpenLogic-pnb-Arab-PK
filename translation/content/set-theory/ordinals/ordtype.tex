@@ -1,0 +1,78 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{ordtype}
+\olsection{ترتیب دیاں قسماں دے طور اُتے ترتیبی عدد}
+
+بدل رکھن دے اصول نال، تے ہُن $\ZFminus$ وچ کم کردیاں، اسیں آخر
+اوہ نتیجہ ثابت کر سکدے آں جیہڑا ساڈا مقصد سی:
+
+\begin{thm}\ollabel{thmOrdinalRepresentation}
+ہر حُسنِ ترتیب والی ساخت اکّو اک ترتیبی عدد نال ہم ساخت اے۔
+\end{thm}
+
+\begin{proof}
+منّ لو $\tuple{A, <}$ حُسنِ ترتیب والی ساخت اے۔
+\olref[basic]{ordisoidentity} نال ایہ ودھ توں ودھ اک ترتیبی عدد نال
+ہم ساخت اے۔ سو تضاد کڈھن لئی منّ لو $\tuple{A, <}$ \emph{کسے وی}
+ترتیبی عدد نال ہم ساخت نہیں۔ اسیں پہلاں ’’$\tuple{A, <}$ نوں جِنّا ہو
+سکے چھوٹا کراں گے‘‘۔ تفصیل ایہ اے۔ جے کوئی حقیقی مُڈھلا ٹکڑا
+$\tuple{A_a, <_a}$ کسے وی ترتیبی عدد نال ہم ساخت نہیں، تاں ایس خاصیت
+والا سبھ توں چھوٹا $a \in A$ اے۔ فیر منّ لو $B = A_a$ تے
+$\mathord{\lessdot} = \mathord{<_a}$۔ نہیں تاں منّ لو $B = A$ تے
+$\mathord{\lessdot} = \mathord{<}$۔
+
+تعریف مطابق $B$ دا ہر حقیقی مُڈھلا ٹکڑا کسے ترتیبی عدد نال ہم ساخت اے،
+تے اُتلی دلیل نال ایہ عدد اکّو اک اے۔ سو بدل رکھن دے اصول نال ہِیٹھلا
+سیٹ موجود اے تے اک فنکشن اے:
+\[
+	f = \Setabs{\tuple{\beta, b}}{b \in B\text{ تے }\ordeq{\beta}{\tuple{B_b, \lessdot_b}}}
+\]
+تضاد پورا کرن لئی اسیں وکھاواں گے کہ $f$، $\alpha \to B$ دا اک
+ہم ساخت نقشہ اے، کسے ترتیبی عدد $\alpha$ لئی۔
+
+صاف اے کہ $\ran{f} = B$۔ تے \olref[iso]{lemordsegments} نال
+$f$ ترتیب قائم رکھدا اے، یعنی $\gamma \in \beta$ اُدوں تے صرف
+اُدوں جدوں $f(\gamma) \lessdot f(\beta)$۔ ایہ وکھاؤن لئی کہ $\dom{f}$
+ترتیبی عدد اے، \olref[basic]{corordtransitiveord} نال اینا وکھاؤنا
+کافی اے کہ $\dom{f}$ متعدی اے۔ سو $\beta \in \dom{f}$ مقرر کرو، یعنی
+$\ordeq{\beta}{\tuple{B_b, \lessdot_b}}$ کسے $b$ لئی۔ جے $\gamma \in \beta$،
+تاں $\gamma \in \dom{f}$، \olref[iso]{wellordinitialsegment} نال۔
+عام صورت وچ $\beta \subseteq \dom{f}$۔
+\end{proof}
+
+ایہ نتیجہ سانوں ہِیٹھلی تعریف دین دی اجازت دیندا اے، جیہڑی اسیں
+\olref[vn]{sec} توں دینی چاہندے ساں:
+
+\begin{defn}
+جے $\tuple{A, <}$ حُسنِ ترتیب والی ساخت اے، تاں اوہدی ترتیب دی قسم
+$\ordtype{A, <}$ اوہ اکّو اک ترتیبی عدد $\alpha$ اے جیہدے لئی
+$\ordeq{\tuple{A, < }}{\alpha}$۔
+\end{defn}
+
+نالے ایس تعریف توں دو چنگے اصول ملدے نیں:
+
+\begin{cor}\ollabel{ordtypesworklikeyouwant}
+جے $\tuple{A, <}$ تے $\tuple{B, \lessdot}$ حُسنِ ترتیب والیاں ساختاں نیں:
+\begin{align*}
+	\ordtype{A, <} = \ordtype{B, \lessdot}&\text{ اُدوں تے صرف اُدوں جدوں }\ordeq{\tuple{A, <}}{\tuple{B, \lessdot}}\\
+	\ordtype{A, <} \in \ordtype{B, \lessdot}&\text{ اُدوں تے صرف اُدوں جدوں }\ordeq{\tuple{A, <}}{\tuple{B_b, \lessdot_b}}\text{ کسے ایہو جیہے }b \in B
+\end{align*}
+\end{cor}
+
+\begin{proof}
+برابری \olref[basic]{ordisoidentity} نال قائم اے۔ دوجی گل ثابت کرن لئی
+منّ لو $\ordtype{A, <} = \alpha$ تے $\ordtype{B, \lessdot} = \beta$،
+تے منّ لو $f \colon \beta \to \tuple {B, \lessdot}$ ساڈا ہم ساخت
+نقشہ اے۔ فیر:
+\begin{align*}
+	\alpha \in \beta&\text{ اُدوں تے صرف اُدوں جدوں }\funrestrictionto{f}{\alpha} \colon \alpha \to B_{f(\alpha)}\text{ اک ہم ساخت نقشہ اے}\\
+	&\text{ اُدوں تے صرف اُدوں جدوں }\ordeq{\tuple{A, <}}{\tuple{B_{f(\alpha)}, \lessdot_{f(\alpha)}}}\\
+	&\text{ اُدوں تے صرف اُدوں جدوں }\ordeq{\tuple{A, <}}{\tuple{B_b, \lessdot_b}}\text{ کسے $b \in B$ لئی}
+\end{align*}
+\olref[iso]{ordisounique}، \olref[iso]{wellordinitialsegment} تے
+\olref[basic]{ordissetofsmallerord} نال۔
+\end{proof}
+
+\end{document}

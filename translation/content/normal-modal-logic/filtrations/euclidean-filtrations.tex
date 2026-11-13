@@ -1,0 +1,117 @@
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: euclidean-filtrations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{euc}
+
+\olsection{اقلیدسی نمونیاں دیاں فلٹریشناں}
+
+\olref[acc]{sec} دا طریقہ اوہناں نمونیاں لئی نہیں چلدا جیہڑے اقلیدسی، یا ہر جہان توں رسائی والے تے اقلیدسی، نیں۔ \olref{fig:ser-eucl} دے اُتلے نمونے نوں ویکھو، جیہڑا اقلیدسی تے ہر جہان توں رسائی والا دونیں اے۔ منّ لو
+$\Gamma = \{p, \Box p \}$۔ $\Gamma$ راہیں فلٹریشن لیندیاں
+$[w_1] = [w_3]$، کیوں جے $w_1$ تے $w_3$ ہی اوہ جہان نیں جیہڑے~$\Gamma$ اُتے اکّو فیصلے دیندے نیں۔ ہر فلٹریشن وچ $\mModel{M}$ توں ملے تیر وی ہون گے، جیویں \olref{fig:ser-eucl2} وچ وکھایا اے۔ اوہ نمونہ اقلیدسی نہیں۔ نالے اسیں اوس نمونے وچ تیر ودھا کے اینوں اقلیدسی نہیں بنا سکدے۔ سانوں
+$[w_2]$ تے $[w_4]$ دے وچ دو پاسیاں والے تیر پاؤنے پین گے، تے فیر $w_2$ تے~$w_5$ دے وچ وی۔ پر $\Box
+p$،~$w_2$ اُتے سچا ہونا چاہیدا اے، جدکہ $p$،~$w_5$ اُتے جھوٹھا اے۔
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1)
+          [label={left: \mFalse{p}},
+            label={below: $\mSat{{}}{\Box p}$}] {$w_1$}; 
+    \node[world] (w2)
+          [label={right: \mTrue{p}},
+            label = {below: $\mSat{{}}{\Box p}$},
+            right=of w1] {$w_2$}; 
+    \draw[->] (w1) to (w2);
+    \node[world] (w3)
+          [label={left: \mFalse{p}},
+            label={below: $\mSat{{}}{\Box p}$},
+            below=of w1] {$w_3$}; 
+    \node[world] (w4)
+          [label={right:\mTrue{p}},
+            label={below: $\mSat/{{}}{\Box p}$},
+            right=of w3] {$w_4$};
+    \draw[->] (w3) to (w4);
+    \draw[reflexive above] (w4) to (w4);     
+    \node[world] (w5)
+          [label={right: \mFalse{p}},
+            label=below:$\mSat/{{}}{\Box p}$,
+            right=of w4] {$w_5$}; 
+    \draw[->, bend left] (w4) to (w5);
+    \draw[->, bend left] (w5) to (w4);
+    \draw[reflexive above] (w5) to (w5);     
+  \end{tikzpicture}
+  \caption{ہر جہان توں رسائی والا تے اقلیدسی نمونہ۔}
+  \ollabel{fig:ser-eucl}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[modal,every text node part/.style={align=center}]
+    \node[world] (w1)
+          [label={left: \mFalse{p}},
+            label={right:$[w_1]=[w_3]$},
+            label={below: $\mSat{{}}{\Box p}$}] {$[w_1]$}; 
+    \node[world] (w2)
+         [label={right: \mTrue{p}},
+           label = {below: $\mSat{{}}{\Box p}$},
+           right=of w1, yshift=1.5cm] {$[w_2]$}; 
+    \draw[->] (w1) to (w2);
+    \node[world] (w4)
+         [label={right:\mTrue{p}},
+           label={below: $\mSat/{{}}{\Box p}$},
+           right=of w1,yshift=-1.5cm] {$[w_4]$};
+    \draw[->] (w1) to (w4);
+    \draw[reflexive above] (w4) to (w4);     
+    \node[world] (w5)
+         [label={right: \mFalse{p}},
+             label=below:$\mSat/{{}}{\Box p}$,
+             right=of w4] {$[w_5]$}; 
+    \draw[->, bend left] (w4) to (w5);
+    \draw[->, bend left] (w5) to (w4);
+    \draw[reflexive above] (w5) to (w5);     
+  \end{tikzpicture}
+  \caption{\olref{fig:ser-eucl} وچلے نمونے دی فلٹریشن۔}
+  \ollabel{fig:ser-eucl2}
+\end{figure}
+
+خاص طور تے اقلیدسی فلٹریشن لبھن لئی اوہناں من مرضی دے $\Gamma$ راہیں فلٹریشناں ویکھنیاں کافی نہیں جیہڑے ذیلی !!{formula}s تحت بند نیں۔ سانوں ایسے سیٹ $\Gamma$ ویکھنے پین گے جیہڑے \emph{امکانی عاملاں تحت بند} نیں (\olref[pre]{defn:modallyclosed} ویکھو)۔ جملیاں دے ایسے سیٹ لامتناہی ہوندے نیں، سو ایہ متعلقہ نظام لئی محدود نمونے دی خاصیت یا فیصلہ کرن دی اہلیت سدھی نہیں دیندے۔
+
+\begin{thm}\ollabel{thm:modal-closed-filt}
+  منّ لو $\Gamma$ امکانی عاملاں تحت بند اے، $\mModel{M}=\tuple{W,R,V}$ اے، تے
+  $\mModel{M^*} = \tuple{W^*,R^*,V^*}$، $\mModel{M}$ دی سبھ توں موٹی فلٹریشن اے۔
+  \begin{enumerate}
+  \item جے $\mModel{M}$ متقابل اے، تاں $\mModel{M^*}$ وی اے۔
+  \item جے $\mModel{M}$ متعدی اے، تاں $\mModel{M^*}$ وی اے۔
+  \item جے $\mModel{M}$ اقلیدسی اے، تاں $\mModel{M^*}$ وی اے۔
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}
+  \item جے $\mModel{M^*}$ سبھ توں موٹی فلٹریشن اے، تاں تعریف مطابق
+    $R^*[u][v]$ اُدوں تے صرف اُدوں قائم اے جدوں $C_1(u,v)$۔ تعدّی لئی منّ لو $C_1(u,v)$ تے $C_1(v,w)$۔ سانوں
+    $C_1(u,w)$ وکھاؤنا اے۔ \iftag{prvBox}{منّ لو $\mSat{M}{\Box !A}[u]$۔ فیر
+      $\mSat{M}{\Box\Box!A}[u]$، کیوں جے \Ax{4} سارے متعدی نمونیاں وچ معتبر اے۔ کیوں جے بندش کارن $\Box\Box!A \in \Gamma$، تے
+      $C_1(u,v)$ مطابق، $\mSat{M}{\Box!A}[v]$، تے $C_1(v,w)$ مطابق
+      $\mSat{M}{!A}[w]$ وی۔ }{}\iftag{prvDiamond}{منّ لو
+      $\mSat{M}{!A}[w]$۔ فیر $\mSat{M}{\Diamond !A}[v]$،
+      $C_1(v,w)$ مطابق، کیوں جے امکانی بندش کارن $\Diamond !A \in \Gamma$۔
+      $C_1(u,v)$ توں سانوں $\mSat{M}{\Diamond\Diamond !A}[u]$ ملدا اے، کیوں جے امکانی بندش کارن
+      $\Diamond\Diamond!A \in \Gamma$۔ کیوں جے
+      $\Ax{4}_\Diamond$ سارے متعدی نمونیاں وچ معتبر اے،
+      $\mSat{M}{\Diamond!A}[u]$۔}{}
+  \item مشق۔ ایہ گل ورتو کہ \Ax{5} تے $\Ax{5_\Diamond}$ دونیں سارے اقلیدسی نمونیاں وچ معتبر نیں۔
+  \item مشق۔ ایہ گل ورتو کہ \Ax{B} تے $\Ax{B_\Diamond}$ سارے متقابل نمونیاں وچ معتبر نیں۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[nml][fil][euc]{thm:modal-closed-filt} دا ثبوت پورا کرو۔
+\end{prob}
+
+\end{document}

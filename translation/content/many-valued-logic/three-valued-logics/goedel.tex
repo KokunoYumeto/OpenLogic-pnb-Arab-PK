@@ -1,0 +1,120 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: goedel
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{god}
+
+\olsection{گوڈل دیاں منطقاں}
+
+کرٹ گوڈل نے $n$ قدراں والیاں منطقاں دا اک سلسلہ پیش کیتا۔
+ایہناں وچوں ہر اک وچ اوہ سارے !!{formula}s شامل نیں جیہڑے
+وجدانیت پسند منطق وچ معتبر نیں، تے ہر اک آپ کلاسیکی منطق وچ
+شامل اے۔ ایہ پہلی دلچسپ منطق اے۔
+
+\begin{defn}\ollabel{defn:goedel}
+\emph{$3$ قدراں والی گوڈل دی منطق}~$\LogGod$ ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lfalse$، $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ اکّو مقرر قدر اے، یعنی $V^+ = \{\True\}$۔
+  \item $\lfalse$ لئی ساڈے کول $\tf{\lfalse} = \False$ اے۔
+  باقی رابطیاں دے صداقتی فنکشن ہِٹھلے جدولاں توں ملدے نیں۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}[\LogGod]$ & \\ 
+      \hline  
+      $\True$ & $\False$ \\ 
+      $\Undef$ & $\False$ \\
+      $\False$ & $\True$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\ 
+      $\False$ & $\False$ & $\False$ & $\False$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\True$ & $\True$ \\ 
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\True$ & $\True$ & $\False$  \\ 
+      $\False$ & $\True$ & $\True$ & $\True$ 
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+دھیان دیو کہ $\land$ تے~$\lor$ دے صداقتی جدول لوکاشیویچ
+تے کلینی دی مضبوط منطق والیاں وانگ نیں۔ پر $\lnot$ تے~$\lif$
+دے جدول ہر اک وچ وکھرے نیں۔ گوڈل دی منطق وچ
+$\tf{\lnot}(\Undef) = \False$۔ لوکاشیویچ تے کلینی دیاں منطقاں
+توں وکھری گل ایہ اے کہ $\tf{\lif}(\Undef, \False) = \False$۔
+کلینی دی منطق توں وکھری پر لوکاشیویچ دی منطق والی گل ایہ اے
+کہ $\tf{\lif}(\Undef,
+\Undef) = \True$۔
+
+جیویں اُتے وجدانیت پسند منطق نال جوڑ توں دِسدا اے، $\LogGod[3]$
+وجدانیت پسند منطق دے نیڑے اے۔ وجدانیت پسند منطق دیاں ساریاں سچائیاں
+~$\LogGod[3]$ وچ ہمیشہ صادق نیں۔ کئی کلاسیکی ہمیشہ صادق فارمولے
+جیہڑے وجدانیت پسند منطق وچ معتبر نہیں، ~$\LogGod[3]$ وچ وی
+ہمیشہ صادق نہیں۔ مثلاً ہِٹھلے فارمولے ہمیشہ صادق نہیں۔
+\begin{align*}
+  & p \lor \lnot p && (p \lif q) \lif (\lnot p \lor q) \\
+  & \lnot\lnot p \lif p && \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+  & ((p \lif q) \lif p) \lif p && \lnot(p \lif q) \lif (p \land \lnot q)
+\end{align*}
+پر $\LogGod[3]$ دا ہر ہمیشہ صادق فارمولا وجدانیت پسند منطق وچ
+معتبر نہیں، مثلاً $\lnot\lnot p \lor \lnot p$ یا $(p
+\lif q) \lor (q \lif p)$۔
+
+\begin{prob}
+  صداقتی جدول دے کے دکھاؤ کہ ہِٹھلے فارمولے~$\LogGod[3]$
+  وچ ہمیشہ صادق نیں۔
+  \begin{align*}
+    & \lnot\lnot p \lor \lnot p\\
+    & (p \lif q) \lor (q \lif p) \\
+    & \lnot(p \land q) \lif (\lnot p \lor \lnot q) \\
+    & (p \lif q) \lor (q \lif r) \lor (r \lif s)
+  \end{align*}
+\end{prob}
+
+\begin{prob}
+  صداقتی جدول دے کے دکھاؤ کہ ہِٹھلے فارمولے~$\LogGod[3]$
+  وچ ہمیشہ صادق نہیں۔
+  \begin{align*}
+    & (p \lif q) \lif (\lnot p \lor q) \\
+    & \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+    & ((p \lif q) \lif p) \lif p \\
+    & \lnot(p \lif q) \lif (p \land \lnot q)
+  \end{align*}
+\end{prob}
+
+\begin{prob}
+  ہِٹھلے تعلقاں وچوں کیہڑے گوڈل دی منطق وچ قائم نیں؟
+  ہر اک لئی صداقتی جدول دیو۔
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+\end{document}

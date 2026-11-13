@@ -1,0 +1,41 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{snd}
+
+\olsection{صحت مندی}
+
+!!^a{derivation} دا نظام صحت مند اکھواؤندا اے جے اوہدے وچ جو کجھ !!{derive} ہو سکدا اے، اوہ معتبر ہووے۔ امکانی نظاماں نوں ویکھدیاں، یعنی اوہناں !!{derivation}s نوں جیہناں وچ \Ax{K} دے نال کجھ !!{formula}s $!A_1$، \dots،~$!A_n$ دیاں مثالاں وی ورت سکدے آں، اسیں چاہندے آں کہ ہر !!{derivable} فارمولا ہر اوس نمونے وچ سچا ہووے جیہدے وچ $!A_1$، \dots، $!A_n$ سچے نیں۔
+
+\begin{thm}[صحت مندی دا قضیہ]\ollabel{thm:soundness}
+  جے $!A_1$، \dots، $!A_n$ وچوں ہر اک دی ہر مثال نمونیاں دیاں جماعتاں $\mClass{C}_1$، \dots، $\mClass{C}_n$ وچ بالترتیب معتبر اے، تاں $\Log{K}!A_1\dots !A_n
+  \Proves !B$ توں ایہ نکلدا اے کہ $!B$ نمونیاں دی جماعت $\mClass{C}_1 \cap \dots \cap \mClass{C}_n$ وچ معتبر اے۔
+\end{thm}
+
+\begin{proof}
+  ثبوتاں دی لمبائی اُتے استقرا نال۔ مختصر لکھت لئی منّ لو $\mClass{C} =
+  \mClass{C}_1 \cap \dots \cap \mClass{C}_n$۔
+  \begin{enumerate}
+  \item استقرا دی بنیاد۔ جے $!B$ دا ثبوت لمبائی~$1$ دا اے، تاں اوہ یا تاں ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، یا~\Ax{K} دی مثال اے،\iftag{prvDiamond}{ یا~\Dual{} دی مثال اے،}{} یا $!A_1$، \dots،~$!A_n$ وچوں کسے اک دی مثال اے۔ پہلی صورت وچ $!B$، $\mClass{C}$ وچ معتبر اے، کیوں جے ہمیشہ صادق فارمولیاں توں بدل نال بنیاں مثالاں نمونیاں دی \emph{ہر} جماعت وچ معتبر نیں، \olref[syn][tau]{prop:valid-taut} مطابق۔ دوجی صورت وچ ایویں ای
+    \olref[syn][sch]{prop:Kvalid}\iftag{prvDiamond}{ تے
+      \olref[syn][sch]{prop:Dual-valid}}{} مطابق۔ آخر تِیجی صورت وچ کیوں جے $!B$، $\mClass{C}_i$ وچ معتبر اے تے $\mClass{C} \subseteq
+    \mClass{C}_i$، ایس لئی $!B$، $\mClass{C}$ وچ وی معتبر اے،
+    \olref[syn][val]{prop:subset-class} مطابق۔
+  \item استقرائی قدم۔ منّ لو $!B$ دا ثبوت لمبائی $k>1$ دا اے۔ جے
+    $!B$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے یا $!A_1$،
+    \dots، $!A_n$ وچوں کسے اک دی مثال اے، تاں پچھلے قدم وانگ اگے ودھدے آں۔ سو منّ لو $!B$،
+    \MP{} نال پچھلے !!{formula}s $!C \lif !B$ تے
+    $!C$ توں ملدا اے۔ فیر $!C \lif !B$ تے $!C$ دے ثبوتاں دی لمبائی $<k$ اے، تے استقرائی مفروضے مطابق اوہ~$\mClass{C}$ وچ معتبر نیں۔
+    \olref[syn][sch]{prop:soundMP} مطابق $!B$، $\mClass{C}$ وچ وی معتبر اے۔ آخر منّ لو $!B$،
+    \Nec{} نال $!C$ توں ملدا اے (سو
+    $!B = \Box!C$)۔ استقرائی مفروضے مطابق $!C$،
+    $\mClass{C}$ وچ معتبر اے، تے \olref[syn][val]{prop:Nec-rule} مطابق~$!B$ وی۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

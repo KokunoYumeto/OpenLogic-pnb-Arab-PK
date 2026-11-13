@@ -1,0 +1,269 @@
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: provability
+
+% verification of properties of provability needed for maximally 
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{prv}}
+      {\olfileid{pl}{axd}{prv}}
+
+\olsection{\usetoken{S}{derivability} دیاں خاصیتاں}
+
+\begin{prop}[وڈے سیٹ ول برقرار رہنا] جے $\Gamma \subseteq \Delta$ تے $\Gamma \Proves !A$، تاں $\Delta \Proves !A$ وی اے۔ \end{prop}
+
+\begin{proof} ہر محدود $\Gamma_0 \subseteq \Gamma$،~$\Delta$ دا وی محدود ذیلی سیٹ اے۔ ایس لئی $\Gamma_0 \Proves !A$ دا !!a{derivation} ایہ وی وکھاؤندا اے کہ
+$\Delta \Proves !A$۔ \end{proof}
+
+\begin{prop}\ollabel{prop:provability} $\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں $\Gamma\cup \{\lnot!A \}$ متضاد اے۔ \end{prop}
+
+\begin{prop} \begin{enumerate}
+\item \ollabel{prop:provability-contr} جے $\Gamma \Proves !A$ تے $\Gamma
+\cup \{ !A\} \Proves \lfalse$، تاں $\Gamma$ متضاد اے۔
+
+\item \ollabel{prop:provability-lnot} جے $\Gamma \cup \{!A\}
+\Proves \lfalse$، تاں $\Gamma \Proves \lnot !A$۔
+
+\item \ollabel{prop:provability-exhaustive} جے $\Gamma \cup \{!A\}
+\Proves \lfalse$ تے $\Gamma \cup \{\lnot !A\} \Proves
+\lfalse$، تاں $\Gamma \Proves \lfalse$۔
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-left} جے $\Gamma \cup \{!A\}
+\Proves \lfalse$ تے $\Gamma \cup \{!B\} \Proves
+\lfalse$، تاں $\Gamma \cup \{!A \lor !B\} \Proves \lfalse$۔}{}
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-right} جے $\Gamma
+\Proves !A$ یا $\Gamma \Proves !B$، تاں $\Gamma
+\Proves !A \lor !B$۔}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-left} جے $\Gamma
+\Proves !A \land !B$، تاں $\Gamma \Proves !A$ تے
+$\Gamma \Proves !B$۔}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-right} جے $\Gamma
+\Proves !A$ تے $\Gamma \Proves !B$، تاں $\Gamma
+\Proves !A \land !B$۔}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-mp} جے $\Gamma \Proves
+!A$ تے $\Gamma \Proves !A \lif !B$، تاں $\Gamma
+\Proves !B$۔}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-lif} جے $\Gamma \Proves
+\lnot !A$ یا $\Gamma \Proves !B$، تاں $\Gamma \Proves
+!A \lif !B$۔}{} \end{enumerate} \end{prop}
+
+\begin{proof}
+\begin{enumerate}
+\item منّ لو $\Gamma_0 \cup \{!A\} \Proves \lfalse$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \cup \{!A\} \Proves \lfalse$ & فرض \\
+2. & $\Gamma_1 \Proves !A$ & فرض\\ 
+3. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & قطع \\ 
+\end{derivation}
+
+چونکہ $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_1 \subseteq \Gamma$،
+ایس لئی $\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$، سو $\Gamma \Proves \lfalse$۔
+
+\item اسیں منّنے آں کہ $\Gamma_0 \cup\{\lnot !A\} \Proves \lfalse$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \cup\{\lnot !A\} \Proves \lfalse$ & فرض \\ 
+2. & $\Gamma_0 \Proves \lnot !A \lif \lfalse$ & اخذ دا قضیہ\\
+3. & $\Gamma_0 \Proves (\lnot !A \lif \lfalse) \lif !A$ & Ax0\\ 
+4. & $\Gamma_0 \Proves !A$ & MP 2, 3 \\ 
+\end{derivation}
+
+\item اسیں منّنے آں کہ $\Gamma \cup \{ !A \} \Proves \lfalse$ تے
+$\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \cup\{!A\} \Proves \lfalse$ & فرض \\
+2. & $\Gamma_0 \Proves !A \lif \lfalse$ & اخذ دا قضیہ \\ 
+3. & $\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$ & فرض\\ 
+4. & $\Gamma_0 \Proves (!A \lif \lfalse) \lif \lnot !A$ & Ax0\\ 
+5. & $\Gamma_0 \Proves \lnot !A$ & MP 2, 4\\ 
+6. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & قطع 3, 5 \\
+\end{derivation}
+
+چونکہ $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_1 \subseteq \Gamma$،
+ایس لئی $\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$۔ سو $\Gamma \Proves \lfalse$۔
+
+% prop:provability-lor-left 
+\tagitem{defOr}{}{
+\iftag{probOr}{مشق۔}{مشق۔}}
+
+% prop:provability-lor-right 
+\tagitem{defOr}{}{ \iftag{probOr}{مشق۔}{
+اسیں منّنے آں کہ $\Gamma_0 \Proves !A$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves !A$ & فرض \\ 
+2. & $\Gamma_0 \Proves !A \lif (!A \lor !B)$ & Ax0\\ 
+3. & $\Gamma_0 \Proves !A \lor !B$ & MP 1, 2 \\
+\end{derivation}
+
+ایس لئی $\Gamma \Proves !A \lor !B$۔ جدوں $\Gamma \Proves
+!B$ ہووے، ثبوت ایہو جیہا اے۔}}
+
+% prop:provability-land-left 
+\tagitem{defAnd}{}{ \iftag{probAnd}{مشق}{
+منّ لو $\Gamma_0 \Proves !A \land !B$
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves !A \land !B$ & فرض \\ 
+2. & $\Gamma_0 \Proves (!A\land !B) \lif !A $ & Ax0\\ 
+3. & $\Gamma_0 \Proves !A \lor !B$ & MP 1, 2 \\
+\end{derivation}
+
+سو $\Gamma \Proves !A$۔ ایہو جیہا !!{derivation} شروع کر کے وکھا سکدے آں کہ
+$\Gamma \Proves !B$۔}}
+
+% prop:provability-land-right
+\tagitem{defAnd}{}{\iftag{probAnd}{مشق۔}{مشق۔}}
+
+% prop:provability-mp 
+\tagitem{defIf}{}{ \iftag{probIf}{مشق۔}{
+اسیں دوویں منّنے آں، $\Gamma_0 \Proves !A$ تے $\Gamma_0 \Proves !A \lif !B $۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves !A$ & فرض \\ 
+2. & $\Gamma_0 \Proves !A \lif !B $ & فرض\\ 
+3. & $\Gamma_0 \Proves !B$ & MP 1, 2\\
+\end{derivation}
+
+چونکہ $\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$، ایس دا مطلب اے کہ $\Gamma
+\Proves !B$۔}}
+
+% prop:provability-lif 
+\tagitem{defIf}{}{\iftag{probIf}{مشق۔}{
+پہلاں منّ لو $\Gamma \Proves \lnot !A$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves \lnot !A$ & فرض \\ 
+2. & $\Gamma_0 \Proves \lnot !A \lif (!A \lif !B) $ & Ax0\\ 
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1,
+2\\ \end{derivation}
+
+$\Gamma \Proves !B$ والا ثبوت وی ایہو جیہا اے:
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves !B$ & فرض \\ 
+2. & $\Gamma_0 \Proves !B \lif (!A \lif !B) $ & Ax0\\ 
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1, 2\\
+\end{derivation}}}
+
+\end{enumerate} 
+\end{proof}
+
+\begin{probtag}{probOr,probAnd,probIf} \olref[fol][axd][prv]{prop:provability} دا ثبوت پورا کرو۔
+\end{probtag}
+
+\begin{thm}[عام کرن دا قضیہ] \ollabel{thm:Generalization} جے $\Gamma \Proves
+!A$ تے $x$، $\Gamma$ دے کسے وی !!{formula} وچ آزاد نہیں، تاں
+$\Gamma \Proves \lforall[x][!A]$۔
+\end{thm}
+
+\begin{proof} $\mathsf{Thm}_\Gamma$ اُتے استقرا نال۔ جے $!A$ مسلّمہ اے، تاں $\lforall[x][!A]$ وی مسلّمہ اے۔ جے $!A\in \Gamma$، تاں $x$، $!A$ وچ آزاد نہیں۔ سو $!A \lif \lforall[x][!A]$ مسلّمہ اے (\textbf{Ax3}) تے MP نال $\Gamma
+\Proves \lforall[x][!A]$۔ ہُن منّ لو $!A$، MP نال نکلدا اے کیوں جے
+$\Gamma \Proves !B$ تے $\Gamma \Proves !B \lif !A$۔ استقرا دی فرضیت نال $\Gamma \Proves \lforall[x][!B]$ تے $\Gamma \Proves
+\lforall[x][( !B \lif !A)]$۔ پر \textbf{Ax2} نال ایہ وی اے کہ \[ \Gamma \Proves
+\lforall[x][( !B \lif !A)] \lif (\lforall[x][ !B] \lif \lforall[x][!A]), \]
+تے MP دو واری لا کے لوڑ مطابق $\Gamma \Proves \lforall[x][!A]$ ملدا اے۔ \end{proof}
+
+\begin{thm}\ollabel{thm:WeakGen} (\emph{ثابتاں اُتے کمزور عام کرن دا قضیہ})
+جے $\Gamma \Proves !A$ تے $c$ اک !!a{constant} اے جیہڑا $\Gamma$ وچ نہیں آؤندا، تاں اک متغیر $x$ اے جیہڑا $!A$ وچ نہیں آؤندا، ایویں کہ $\Gamma
+\Proves \lforall[x][\Subst{!A}{x}{c}]$، تے ثبوت وچ $c$ نہیں آؤندا۔
+\end{thm}
+
+\begin{proof} منّ لو $!A_1,\ldots,!A_n$، $!A$ دا $\Gamma$ توں ثبوت اے، سو $!A=!A_n$۔ کوئی متغیر $x$ چُنو جیہڑا $!A_1,\ldots,!A_n$ وچ نہیں آؤندا، تے نویں لڑی ویکھو: $\Subst{!A_1}{x}{c},\ldots,\Subst{!A_n}{x}{c}.$ ایہو جیہی لڑی $\Subst{!A}{x}{c}$ دا $\Gamma$ توں ثبوت اے۔ اصل وچ، ہر $i=1,\ldots,n$ لئی:
+\begin{itemize} \item جے $!A$ مسلّمہ اے، تاں $\Subst{!A_i}{x}{c}$ وی مسلّمہ اے۔
+\item جے $!A_i \in \Gamma$، تاں چونکہ $c$، $\Gamma$ وچ نہیں، ایس لئی $\Subst{!A_i}{x}{c} = !A_i \in \Gamma$۔
+\item جے $!A_i$، $!A_j$ تے $!A_j \lif !A_i$ توں ملدا اے، تاں $\Subst{!A_i}{x}{c}$، $\Subst{!A_j}{x}{c}$ تے $\Subst{(!A_j \lif !A_i)}{x}{c}
+= \Subst{!A_j}{x}{c} \lif \Subst{!A_i}{x}{c}$ توں MP نال نکلدا اے۔
+\end{itemize} صاف اے کہ !!{constant} $c$ ہُن نویں لڑی وچ نہیں آؤندا۔ ہُن $\Gamma'$ وچ $\Gamma$ دے اوہ !!{formula}s رکھو جیہڑے $\Subst{!A}{x}{c}$ دے !!{derivation} وچ آؤندے نیں۔ فیر $x$، $\Gamma'$ دے کسے !!{formula} وچ آزاد نہیں تے $\Gamma' \Proves \Subst{!A}{x}{c}$۔
+عام کرن دے قضیے (\olref{thm:Generalization}) نال $\Gamma'
+\Proves \lforall[x][\Subst{!A}{x}{c}]$۔ وڈے سیٹ ول برقرار رہن نال لوڑ مطابق $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$۔
+\end{proof}
+
+\begin{explain}
+ساڈا مقصد \olref{thm:WeakGen} دی شرط، کہ $x$، $!A$ وچ (بالکل) نہیں آؤندا، نوں ایہناں گھٹ سخت شرطاں نال بدلنا اے کہ $x$، $!A$ وچ آزاد نہیں تے $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} اے۔ صاف اے کہ بندھے !!{variable} نوں بدل کے ایہ ہو سکدا اے۔ سو پہلاں اسیں ایہو ثابت کرنا اے۔
+\end{explain}
+
+\begin{lem}
+\ollabel{lem:free-for}
+جے $x$، $c$ دی تھاں پاؤن لئی $!A$ وچ آزاد اے تے $y$، $!A$ وچ آزاد نہیں، تاں $x$، $y$ دی تھاں پاؤن لئی $\Subst{!A}{y}{c}$ وچ !!{free for} اے۔
+\end{lem}
+
+\begin{proof} جے $x$، $y$ دی تھاں پاؤن لئی $\Subst{!A}{y}{x}$ وچ !!{free for} نہیں، تاں $y$ دی کوئی آزاد موجودگی $\Subst{!A}{y}{c}$ وچ مسوّر $\lforall[x]$ دی حد وچ آؤندی اے۔ پر فرض مطابق $y$، $!A$ وچ آزاد نہیں، سو ایہ ساری موجودگیاں بدل $\Subst{}{y}{c}$ توں آؤندیاں نیں۔ ایس لئی $c$ دی کوئی موجودگی $\lforall[x]$ دی حد وچ آؤندی اے تے $x$، $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} نہیں۔
+\end{proof}
+
+\begin{lem}[بندھا متغیر بدلنا]
+\ollabel{lem:ChangeBdVar}
+جے $x$ تے $y$، $!A$ وچ آزاد نہیں تے دوویں $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} نیں، تاں $\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$ (تے ثبوت وچ $c$ نہیں آؤندا)۔
+\end{lem}
+
+\begin{proof}
+شرطاں توں $y$، $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} اے تے $x$، $!A$ وچ آزاد نہیں۔ سو پچھلے \olref{lem:free-for} نال $y$، $x$ دی تھاں پاؤن لئی $\Subst{!A}{x}{c}$ وچ !!{free for} اے۔ ایس توں نکلدا اے کہ
+$\lforall[x][\Subst{!A}{x}{c} \lif \Subst{!A}{x}{c} \Subst{}{y}{x}]$
+اک مسلّمہ اے (\textbf{Ax1})۔ چونکہ $x$، $!A$ وچ آزاد نہیں، سانوں
+$\Subst{!A}{x}{c} \Subst{}{y}{x} = \Subst{!A}{y}{c}$ ملدا اے، ایس لئی
+\[
+\Proves \lforall[x][\Subst{!A}{x}{c}] \lif \Subst{!A}{y}{c},
+\]
+تے اخذ دے قضیے نال $\lforall[x][\Subst{!A}{x}{c}] \Proves
+\Subst{!A}{y}{c}$۔ چونکہ $y$، $!A$ وچ آزاد نہیں، اوہ
+$\lforall[x][\Subst{!A}{x}{c}]$ وچ وی آزاد نہیں۔ سو عام کرن دے قضیے نال
+$\lforall[x][\Subst{!A}{x}{c}] \Proves \lforall[y][\Subst{!A}{y}{c}]$،
+تے اخذ دا قضیہ فیر لا کے $\Proves
+\lforall[x][\Subst{!A}{x}{c}] \lif \lforall[y][\Subst{!A}{y}{c}]$ ملدا اے۔
+$\Proves \lforall[y][\Subst{!A}{y}{c}] \lif \lforall[x]
+[\Subst{!A}{x}{c}]$ دا ثبوت عین اُلٹے پاسے ایویں ای اے، سو نتیجہ Taut نال نکلدا اے۔
+\end{proof}
+
+\begin{thm}[ثابتاں اُتے تکڑا عام کرن دا قضیہ]
+\ollabel{thm:StrongGen}
+جے $\Gamma \Proves !A$، !!{constant} $c$، $\Gamma$ وچ نہیں آؤندا، تے $x$، $!A$ وچ آزاد نہیں پر $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} اے، تاں $\Gamma \Proves \lforall[x][\Subst{!A}{x}{c}]$۔
+\end{thm}
+
+\begin{proof}
+چونکہ $\Gamma \Proves !A$ تے $c$، $\Gamma$ وچ نہیں، کمزور عام کرن دے قضیے نال اک !!a{variable} $y$ اے جیہڑا $!A$ وچ نہیں آؤندا تے
+$\Gamma \Proves \lforall[y][\Subst{!A}{y}{c}]$۔ چونکہ $y$، $!A$ وچ (بالکل) نہیں، ایہ $!A$ وچ آزاد نہیں تے $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} وی اے۔ جے نالے (فرض مطابق) $x$، $!A$ وچ آزاد نہیں تے $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} اے، تاں بندھا !!{variable} بدلّن دیاں شرطاں پوریاں نیں۔ سو
+$\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$، ایس توں $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$۔
+\end{proof}
+
+\begin{thm}
+\ollabel{thm:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{جے $\Gamma \Proves !A(t)$، تاں $\Gamma \Proves
+  \lexists[x][!A(x)]$۔}{}
+\tagitem{prvAll}{جے $\Gamma \Proves \lforall[x][!A(x)]$، تاں $\Gamma
+  \Proves !A(t)$۔}{}
+\end{tagenumerate}
+\end{thm}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+%%Need axioms for exists
+\tagitem{prvEx}{مشق۔}{}
+\tagitem{prvAll} {منّ لو $\Gamma_0 \Proves \lforall[x][!A(x)]$۔
+
+\begin{derivation} 
+1. & $\Gamma_0 \Proves \lforall[x][!A(x)]$ & فرض \\
+2. & $\Gamma_0 \Proves \lforall[x][!A(x)] \lif \Subst{!A}{t}{x}$ & Ax1 \\ 
+3. & $\Gamma_0 \Proves \Subst{!A}{t}{x}$ & MP 1, 2 \\ 
+\end{derivation}}{}
+
+\end{tagenumerate} 
+\end{proof}
+
+\end{document}

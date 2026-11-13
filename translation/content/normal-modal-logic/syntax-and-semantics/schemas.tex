@@ -1,0 +1,150 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: schemas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{sch}
+
+\olsection{سانچے تے منطقی اعتبار}
+
+\begin{defn}
+  \emph{سانچہ} !!{formula}s دا اوہ سیٹ اے جیہدے وچ کسے امکانی !!{formula}~$!C$ توں بدل نال بنیاں ساریاں مثالاں ہون تے صرف اوہو ہون، یعنی
+  \[
+  \Setabs{!B}{\lexists[!D_1], \dots, \lexists[!D_n] \left(!B =
+  \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \right) }.
+  \]
+  !!{formula}~$!C$ نوں سانچے دا \emph{خاص} !!{formula} آکھدے آں۔ !!{propositional
+  variable}s دے ناں بدلّن نوں چھڈ کے، ایہ اکّو اے۔ !!^a{formula}~$!A$ سانچے دی \emph{مثال} اے جے اوہ ایس سیٹ دا رکن اے۔
+\end{defn}
+
+سانچے نوں اوہ مابعد زبانی عبارت نال لکھنا سوکھا اے جیہڑی «$!A$»، «$!B$»،~\dots، نوں ایٹمی جزاں دی تھاں رکھ کے~$!C$ توں ملدی اے۔ مثال لئی ایہ لکھتاں سانچے ظاہر کردیاں نیں۔
+«$!A$»، «$!A \lif \Box!A$»، «$!A \lif (!B \lif !A)$»۔ اینہاں دے خاص !!{formula}s بالترتیب $p$، $p \lif \Box p$، $p \lif (q
+\lif p)$ نیں۔ سانچہ «$!A$» \emph{سارے} !!{formula}s دا سیٹ ظاہر کردا اے۔
+
+\begin{defn}
+  کوئی سانچہ نمونے وچ \emph{سچا} اُدوں تے صرف اُدوں اے جدوں اوہدیاں ساریاں مثالاں اوس نمونے وچ سچیاں ہون۔ سانچہ \emph{معتبر} اُدوں تے صرف اُدوں اے جدوں اوہ ہر نمونے وچ سچا ہووے۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:Kvalid}
+  ہِیٹھلا سانچہ \Ax{K} معتبر اے۔
+  \begin{equation*}
+  \Box(!A \lif !B) \lif (\Box !A \lif \Box !B). \tag{\Ax{K}}
+  \end{equation*}
+\end{prop}
+
+\begin{proof}
+  سانوں وکھاؤنا اے کہ سانچے دیاں ساریاں مثالاں ہر نمونے دے ہر جہان وچ سچیاں نیں۔ ایس لئی $\mModel{M} = \tuple{W,R,V}$ تے $w \in
+  W$ کوئی وی لے لو۔ کسے جہان وچ شرطیہ سچا وکھاؤن لئی اسیں منّ لیندے آں کہ مقدم سچا اے تے وکھاؤندے آں کہ تالی وی سچا اے۔ ایتھے منّ لو $\mSat{M}{\Box(!A \lif !B)}[w]$ تے
+  $\mSat{M}{\Box !A}[w]$۔ سانوں $\mSat{M}{\Box !B}[w]$ وکھاؤنا اے۔ کوئی وی ایسا $w'$ لے لو جیہدے لئی $Rww'$ ہووے۔ پہلے مفروضے مطابق
+  $\mSat{M}{!A \lif !B}[w']$ تے دوجے مفروضے مطابق
+  $\mSat{M}{!A}[w']$۔ ایس توں $\mSat{M}{!B}[w']$ نکلدا اے۔ کیوں جے $w'$ کوئی وی ایسا جہان سی، ایس لئی $\mSat{M}{\Box !B}[w]$۔
+\end{proof}
+
+\begin{prop}\ollabel{prop:Dual-valid}
+  ہِیٹھلا سانچہ \Dual{} معتبر اے۔
+  \begin{equation*}
+  \Diamond !A \liff \lnot\Box\lnot !A. \tag{\Dual}
+  \end{equation*}
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[nml][syn][sch]{prop:Dual-valid} ثابت کرو۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:soundMP}
+  جے $!A$ تے $!A \lif !B$ کسے نمونے دے کسے جہان وچ سچے نیں، تاں $!B$ وی اُتھے سچا اے۔ ایس لئی معتبر !!{formula}s دا سیٹ قاعدۂ اثباتِ مقدم تحت بند اے۔
+\end{prop}
+
+\begin{prop}\ollabel{prop:valid-instances}
+  !!^a{formula}~$!A$ اُدوں تے صرف اُدوں معتبر اے جدوں اوہدیاں بدل توں بنیاں ساریاں مثالاں معتبر ہون۔ دوجے لفظاں وچ سانچہ اُدوں تے صرف اُدوں معتبر اے جدوں اوہدا خاص !!{formula} معتبر ہووے۔
+\end{prop}
+
+\begin{proof}
+  «جے» والا رخ صاف اے، کیوں جے $!A$ اپنے آپ توں بدل نال بنن والی اک مثال اے۔
+
+  «صرف جے» والا رخ ثابت کرن لئی اسیں ہِیٹھلی گل وکھاؤندے آں۔ منّ لو
+  $\mModel{M} = \tuple{W, R, V}$ اک امکانی نمونہ اے تے $!B \ident
+  \SSubst{!A}{\subst{!D_1}{p_1},\dots,\subst{!D_n}{p_n}}$ بدل نال بنی اک مثال اے~$!A$ دی۔ $\mModel{M'} = \tuple{W, R,
+    V'}$ دی تعریف $V'(p_i) = \Setabs{w}{\mSat{M}{!D_i}[w]}$ نال کرو۔ فیر
+  $\mSat{M}{!B}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M'}{!A}[w]$، ہر~$w \in W$ لئی۔ (ایہدا ثبوت مشق لئی چھڈدے آں۔) ہُن منّ لو $!A$ معتبر اے پر بدل توں بنی کوئی مثال $!B$،~$!A$ دی، معتبر نہیں۔ فیر کسے
+  $\mModel{M} = \tuple{W, R, V}$ تے کسے $w \in W$ لئی
+  $\mSat/{M}{!B}[w]$۔ پر فیر دعوے مطابق $\mSat/{M'}{!A}[w]$، تے
+  $!A$ معتبر نہیں۔ ایہ تضاد اے۔
+\end{proof}
+
+\begin{prob}
+  «صرف جے» والے حصے دا دعویٰ ثابت کرو، جیہڑا \olref[nml][syn][sch]{prop:valid-instances} دے ثبوت وچ اے۔ (اشارہ: استقرا کرو~$!A$ اُتے۔)
+\end{prob}
+
+دھیان دیو کہ کسے نمونے وچ سانچے دے سچا ہون تے اوہدے خاص فارمولے دے سچا ہون دی دوہاں رخاں دی شرط نہیں چلدی۔ «صرف جے» والا رخ ضرور چلدا اے۔ جے $!A$ دی ہر مثال~$\mModel{M}$ وچ سچی اے، تاں
+$!A$~خود وی~$\mModel{M}$ وچ سچا اے۔ پر ہو سکدا اے کہ $!A$،
+~$\mModel{M}$ وچ سچا ہووے تے~$!A$ دی کوئی مثال کسے جہان وچ جھوٹھی ہووے، اوسے~$\mModel{M}$ وچ۔ اک سادی ردّی مثال لئی~$p$ نوں ایسے نمونے وچ ویکھو جیہدے وچ صرف اک جہان~$w$ اے تے $V(p) = \{w\}$، سو $p$ سچا اے~$w$ وچ۔ پر $\lfalse$،~$p$ دی مثال اے تے~$w$ وچ سچا نہیں۔
+
+\begin{prob}
+  وکھاؤ کہ ہِیٹھ لکھیاں !!{formula}s وچوں کوئی وی معتبر نہیں۔
+  \begin{enumerate}
+    \item[\Ax{D}:] \quad $\Box p \lif \Diamond p$؛
+    \item[\Ax{T}:] \quad $\Box p \lif p$؛
+    \item[\Ax{B}:] \quad $p \lif \Box\Diamond p$؛
+    \item[\Ax{4}:] \quad $\Box p \lif \Box \Box p$؛
+    \item[\Ax{5}:] \quad $\Diamond p \lif \Box \Diamond
+      p$۔
+  \end{enumerate}
+\end{prob}
+
+\begin{table}[t]
+    \centering
+    \begin{tabular}{| l || l |}
+      \hline
+      {\emph{معتبر سانچے}} & {\emph{غیر معتبر سانچے}} \\
+      \hline\hline
+      $\Box(!A \lif !B) \lif (\Diamond !A \lif \Diamond !B)$
+      & $\Box (!A \lor !B) \lif (\Box !A \lor \Box !B)$ \\
+      $\Diamond (!A \lif !B) \lif (\Box !A \lif \Diamond
+      !B)$
+      & $(\Diamond !A \land \Diamond !B) \lif \Diamond (!A
+      \land !B)$\\
+      $\Box (!A \land !B) \liff (\Box !A \land \Box !B)$
+      & $!A \lif \Box !A$ \\
+      $\Box !A \lif \Box (!B \lif !A)$
+      & $\Box \Diamond !A \lif !B$ \\
+      $\lnot \Diamond !A \lif \Box (!A \lif !B)$
+      & $\Box \Box !A \lif \Box !A$ \\
+      $\Diamond (!A \lor !B) \liff (\Diamond !A \lor
+      \Diamond !B)$
+      & $\Box \Diamond !A \lif \Diamond \Box !A$. \\
+      \hline
+    \end{tabular}
+    \caption{معتبر تے (یا؟) غیر معتبر سانچے۔}
+    \ollabel{tab:valid-invalidSchemas}
+\end{table}
+
+\begin{prob}%\ollabel{ex:in/validSchemas}
+  ثابت کرو کہ پہلے کالم دے سانچے، جیہڑے \olref[nml][syn][sch]{tab:valid-invalidSchemas} وچ نیں، معتبر نیں تے دوجے کالم دے سانچے معتبر نہیں۔
+\end{prob}
+
+\begin{prob}
+  فیصلہ کرو کہ ہِیٹھلے سانچے معتبر نیں یا غیر معتبر۔
+  \begin{enumerate}
+  \item $(\Diamond !A \lif \Box !B) \lif (\Box !A \lif \Box
+    !B)$؛
+  \item $\Diamond(!A \lif !B) \lor \Box(!B \lif !A)$۔
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+  ہِیٹھلے ہر سانچے لئی اک ایسا نمونہ $\mModel{M}$ لبھو جیہدے وچ !!{formula} دی ہر مثال $\mModel{M}$ وچ سچی ہووے۔
+  \begin{enumerate}
+  \item $p \lif \Diamond\Diamond p$؛
+  \item $\Diamond p \lif \Box p$۔
+  \end{enumerate}
+\end{prob}
+
+\end{document}

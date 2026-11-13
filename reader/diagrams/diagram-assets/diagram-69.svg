@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="93.70218" height="93.70215" viewBox="449.21201 405.64890 93.70218 93.70215">
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f807f" d="M0 0V79.70215H79.70215V0ZM79.70215 79.70215"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".19925" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f807f" d="M0 0H79.70215M0 19.92554H79.70215M0 39.85107H79.70215M0 59.77661H79.70215M0 79.69218H79.70215M0 0V79.70215M19.92554 0V79.70215M39.85107 0V79.70215M59.77661 0V79.70215M79.69218 0V79.70215M79.70215 79.70215"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a81c21" d="M0 9.96277H9.96277"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#a81c21" d="M69.73938 9.96277H79.70215"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4d6f39" d="M9.96277 29.8883V49.81384"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4d6f39" d="M29.8883 49.81384H49.81384"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#4d6f39" d="M69.73938 49.81384V29.8883"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M9.96277 29.8883H29.8883V9.96277H9.96277"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M9.96277 49.81384V69.73938H29.8883V49.81384"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M49.81384 49.81384V69.73938H69.73938V49.81384"/>
+<path transform="matrix(1,0,0,-1,456.212,492.35105)" stroke-width=".79701" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M69.73938 9.96277H49.81384V29.8883H69.73938"/>
+</svg>

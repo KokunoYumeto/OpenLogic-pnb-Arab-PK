@@ -1,0 +1,104 @@
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{sub}
+
+\olsection{اکّو ویلے بدل}
+
+!!a{formula}~$!A$ دی \emph{بدل توں بنی مثال} اوہ نتیجہ اے جیہڑا
+کسے !!a{propositional variable} دی~$!A$ وچ ہر آمد نوں
+کسے ہور !!{formula} نال بدل کے ملدا اے۔ اسیں منطقی اعتبار دی گل
+کردیاں وی تے !!{derivability} دی گل کردیاں وی اکثر
+!!{formula}s دیاں مثالاں دا حوالہ دیاں گے۔ ایس لئی ایس خیال
+دی ٹھیک تعریف کرنا فائدے مند اے۔
+
+\begin{defn}\ollabel{def:subst-inst}
+  جے $!A$ اک امکانی !!{formula} اے جیہدے سارے !!{propositional
+    variable}s، $p_1$، \dots، $p_n$ وچوں نیں، تے $!D_1$، \dots،
+  $!D_n$ وی امکانی !!{formula}s نیں، تاں
+  $\SSubst{!A}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$
+  اوہ نتیجہ اے جیہڑا ہر $!D_i$ نوں $p_i$ دی تھاں~$!A$ وچ
+  اکّو ویلے رکھن نال ملدا اے۔ باقاعدہ طور اُتے ایہ~$!A$ اُتے
+  استقرا والی تعریف اے۔
+  \begin{enumerate}
+    \tagitem{prvFalse}{\indcase{!A}{\lfalse}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ $\lfalse$ اے۔}}{}
+    \tagitem{prvTrue}{\indcase{!A}{\ltrue}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ $\ltrue$ اے۔}}{}
+    \item \indcase{!A}{q}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+        \subst{!D_n}{p_n}}$ دا نتیجہ $q$ اے، بشرطیکہ $q \not\ident p_i$
+      ہووے $i
+      = 1$، \dots،~$n$ لئی۔}
+    \item \indcase{!A}{p_i}{$\SSubst{\indfrm}{\subst{!D_1}{p_1},
+        \dots, \subst{!D_n}{p_n}}$ دا نتیجہ $!D_i$ اے۔}
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ دا نتیجہ
+        $\lnot \SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ اے۔}}{}
+    \tagitem{prvAnd}{\indcase{!A}{(!B \land
+        !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ ایہ اے۔
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \land
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \tagitem{prvOr}{\indcase{!A}{(!B \lor
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ ایہ اے۔
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \lor
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \tagitem{prvIf}{\indcase{!A}{(!B \lif
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ ایہ اے۔
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \lif
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \tagitem{prvIf}{\indcase{!A}{(!B \liff
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ دا نتیجہ ایہ اے۔
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \liff
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \item \indcase{!A}{\Box !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ دا نتیجہ
+        $\Box
+        \SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}.$}
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ دا نتیجہ
+        $\Diamond
+        \SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}.$}}{}
+  \end{enumerate}
+  !!{formula} $\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+    \subst{!D_n}{p_n}}$ نوں~$!A$ دی \emph{بدل توں بنی مثال}
+  آکھدے آں۔
+\end{defn}
+
+\begin{ex}
+  منّ لو $!A$، $p_1 \lif \Box(p_1 \land p_2)$ اے، $!D_1$،
+  $\Diamond(p_2 \lif p_3)$ اے، تے $!D_2$، $\lnot\Box p_1$ اے۔
+  فیر $\SSubst{!A}{\subst{!D_1}{p_1}, \subst{!D_2}{p_2}}$ دا
+  نتیجہ ایہ اے۔
+  \begin{align*}
+    \Diamond(p_2 \lif p_3) &
+    \lif \Box(\Diamond(p_2 \lif p_3) \land \lnot\Box p_1)
+    \intertext{جدکہ $\SSubst{!A}{\subst{!D_2}{p_1}, \subst{!D_1}{p_2}}$ دا نتیجہ ایہ اے۔}
+    \lnot\Box p_1 &
+    \lif \Box(\lnot\Box p_1 \land \Diamond(p_2 \lif p_3))
+    \intertext{دھیان دیو کہ اکّو ویلے بدل عام طور اُتے وار وار بدل ورگا نہیں۔
+      مثلاً اُپرلے $\SSubst{!A}{\subst{!D_1}{p_1}, \subst{!D_2}{p_2}}$ نوں
+      $\Subst{(\Subst{!A}{!D_1}{p_1})}{!D_2}{p_2}$ نال ملاؤ، جیہدا نتیجہ ایہ اے۔}
+    \Diamond(p_2 \lif p_3) & \Subst{\lif \Box(\Diamond(p_2 \lif p_3) \land p_2)}{\lnot\Box p_1}{p_2}, \text{ یعنی،}\\
+    \Diamond(\lnot\Box p_1 \lif p_3) &
+    \lif \Box(\Diamond(\lnot\Box p_1
+    \lif p_3) \land \lnot\Box p_1)\\
+    \intertext{تے $\Subst{(\Subst{!A}{!D_2}{p_2})}{!D_1}{p_1}$ نال ملاؤ۔}
+    p_1 & \lif \Subst{\Box(p_1 \land \lnot\Box p_1)}{\Diamond(p_2 \lif p_3)}{p_1}, \text{ یعنی،}\\
+    \Diamond(p_2 \lif p_3) &
+    \lif \Box(\Diamond(p_2
+    \lif p_3) \land \lnot\Box\Diamond(p_2 \lif p_3)).
+  \end{align*}
+\end{ex}
+
+\end{document}

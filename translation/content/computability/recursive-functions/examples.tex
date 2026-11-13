@@ -1,0 +1,222 @@
+% Part: computability
+% Chapter: recursive-functions
+% Section: examples
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cmp}{rec}{exa}
+\olsection{بنیادی بازگشتی فنکشناں دیاں مثالاں}
+
+
+ساڈے کول بنیادی بازگشتی فنکشناں دیاں
+کجھ مثالاں پہلے توں نیں: جمع تے ضرب
+دے فنکشن~$\Add$ تے $\Mult$۔
+شناختی فنکشن $\fn{id}(x) = x$ بنیادی
+بازگشتی اے، کیونکہ ایہ بس~$\Proj{1}{0}$
+اے۔ مستقل فنکشن $\fn{const}_n(x) = n$
+وی بنیادی بازگشتی نیں، کیونکہ اوہناں نوں
+$\Zero$ تے $\Succ$ توں لگاتار ترکیب
+راہیں متعین کیتا جا سکدا اے۔ ایہ اوہدوں
+کم آؤندا اے جدوں بنیادی بازگشتی تعریفاں
+وچ مستقل عدد ورتنے ہوون۔ مثال لئی، جے
+اسی فنکشن $f(x) = 2 \cdot x$
+متعین کرنا چاہیئے، تاں اوہنوں
+$\fn{const}_n(x)$ تے ضرب دی ترکیب توں
+$f(x) =
+\Mult(\fn{const}_2(x), \Proj{1}{0}(x))$
+دے روپ وچ حاصل کر سکدے آں۔
+اگوں اسی ایہ طریقہ ورتاں گے۔
+
+\begin{prop}
+  قوت چڑھاؤ دا فنکشن $\fn{exp}(x, y) = x^y$ بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  اسی $\fn{exp}$ نوں بنیادی بازگشت
+  راہیں ایویں متعین کر سکدے آں:
+  \begin{align*}
+    \fn{exp}(x, 0) & = 1\\
+    \fn{exp}(x, y+1) & = \Mult(x, \fn{exp}(x,y)).
+    \intertext{سختی نال آکھیے تاں ایہ بنیادی بازگشتی فنکشناں توں بازگشتی تعریف نہیں۔ باقاعدہ روپ ایہ اے:}
+    \fn{exp}(x, 0) & = f(x)\\
+    \fn{exp}(x, y+1) & = g(x, y, \fn{exp}(x,y)).
+    \intertext{جتھے}
+    f(x) & = \Succ(\Zero(x)) = 1\\
+    g(x, y, z) & = \Mult(\Proj{3}{0}(x, y, z), \Proj{3}{2}(x, y, z)) = x \cdot z
+  \end{align*}
+  تے ایس لئی $f$ تے $g$ بنیادی
+  بازگشتی فنکشناں توں ترکیب راہیں
+  متعین ہوندے نیں۔
+\end{proof}
+
+\begin{prop}
+  پیشرو فنکشن $\fn{pred}(y)$، جیہڑا
+  ایویں متعین اے،
+  \[
+  \fn{pred}(y) = \begin{cases}
+    0 & \text{جے $y=0$}\\
+    y-1 & \text{ورنہ}
+  \end{cases}
+  \]
+  بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  غور کرو:
+ \begin{align*}
+   \fn{pred}(0) & = 0 \text{ تے}\\
+   \fn{pred}(y+1) & = y.
+ \end{align*}
+ ایہ بنیادی بازگشتی تعریف دے لگ بھگ
+ اے۔ سختی نال آکھیے تاں ایہ بنیادی
+ بازگشت راہیں تعریف دے نمونے وچ پورا
+ نہیں آؤندا، کیونکہ اوہ نمونہ گھٹّو گھٹ
+ اک ہور دلیل~$x$ منگدا اے۔ ایہ گل وی
+ وکھری اے کہ $\fn{pred}(y)$ نوں
+ $\fn{pred}(y+1)$ دی تعریف وچ اصل وچ
+ ورتیا ہی نہیں جاندا۔ پر اسی پہلے
+ $\fn{pred}'(x, y)$ ایویں متعین کر
+ سکدے آں:
+ \begin{align*}
+   \fn{pred}'(x, 0) & = \Zero(x) = 0,\\
+   \fn{pred}'(x, y+1) & = \Proj{3}{1}(x, y, \fn{pred'}(x, y)) = y.
+ \end{align*}
+تے فیر اوہدے توں ترکیب راہیں
+$\fn{pred}$ متعین کر سکدے آں،
+مثلاً $\fn{pred}(x) = \fn{pred}'(\Zero(x), \Proj{1}{0}(x))$۔
+\end{proof}
+
+\begin{prop}
+  عاملی فنکشن $\fn{fac}(x) = \fact{x} = 1 \cdot 2 \cdot 3
+  \cdot \dots \cdot x$ بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  بنیادی بازگشتی تعریف دا سیدھا
+  روپ ایہ اے:
+  \begin{align*}
+    \fn{fac}(0) &= 1\\
+    \fn{fac}(y+1) & = \fn{fac}(y) \cdot (y+1).
+    \intertext{باقاعدہ طور اُتے سانوں پہلے اک دو-جگہ فنکشن $h$ متعین کرنا پیندا اے}
+    h(x, 0) & = \fn{const}_1(x)\\
+    h(x, y+1) & = g(x, y, h(x, y))
+    \intertext{جتھے $g(x, y, z) = \Mult(\Proj{3}{2}(x, y, z),
+      \Succ(\Proj{3}{1}(x, y, z)))$ تے فیر رکھو}
+    \fn{fac}(y) & = h(\Proj{1}{0}(y), \Proj{1}{0}(y)) = h(y,y).
+  \end{align*}
+  ہن توں اگے اسی تھوڑی آسانی
+  رکھاں گے تے ترکیب تے بنیادی
+  بازگشت دیاں باقاعدہ تعریفاں
+  ہر وار نہیں دیواں گے۔
+\end{proof}
+
+\begin{prop}
+  صفر اُتے رک جان والی تفریق، $x \tsub y$،
+  جیہڑی ایویں متعین اے،
+  \[
+  x \tsub y = \begin{cases}
+    0 & \text{جے $x < y$}\\
+    x-y & \text{ورنہ}
+  \end{cases}
+  \]
+  بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  ساڈے کول ایہ اے:
+  \begin{align*}
+    x \tsub 0 & = x\\
+    x \tsub (y+1) & = \fn{pred}(x \tsub y) 
+  \end{align*}
+\end{proof}
+
+\begin{prop}
+ $x$ تے $y$ وچلا فاصلہ، $\left|x-y\right|$، بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  ساڈے کول $\left| x-y \right| = (x \tsub y) + (y \tsub x)$
+  اے؛ ایس لئی فاصلے نوں $+$ تے $\tsub$
+  توں ترکیب راہیں متعین کیتا جا سکدا
+  اے، تے ایہ دوہاں بنیادی بازگشتی نیں۔
+\end{proof}
+
+\begin{prop}
+  $x$ تے $y$ وچوں وڈا عدد، $\fn{max}(x,y)$، بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  اسی $\fn{max}(x,y)$ نوں $+$ تے
+  $\tsub$ توں ترکیب راہیں ایویں
+  متعین کر سکدے آں:
+  \[
+  \fn{max}(x,y) \defis x + (y \tsub x).
+  \]
+  جے $x$ وڈا اے، یعنی $x \ge y$،
+  تاں $y \tsub x = 0$، ایس لئی $x
+  + (y \tsub x) = x + 0 = x$۔
+  جے $y$ وڈا اے، تاں $y \tsub x =
+  y - x$، تے ایس لئی $x + (y \tsub x) = x + (y - x) = y$۔
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:min-pr}
+  $x$ تے $y$ وچوں چھوٹا عدد، $\fn{min}(x,y)$، بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[cmp][rec][exa]{prop:min-pr} ثابت کرو۔
+\end{prob}
+
+\begin{prob}
+دکھاؤ کہ \[
+f(x, y) =
+2^{(2^{\iddots^{2^{x}}})}\raisebox{1ex}{\bigg\rbrace}
+\raisebox{1ex}{\text {$y$ وار $2$}}\] بنیادی بازگشتی اے۔
+\end{prob}
+
+\begin{prob}
+دکھاؤ کہ صحیح عددی تقسیم $d(x, y) = \lfloor x/y \rfloor$
+(یعنی تقسیم جتھے اعشاری نقطے توں اگے
+دا سارا حصہ نظرانداز کیتا جائے) بنیادی
+بازگشتی اے۔ جدوں $y = 0$ ہووے، اسی
+$d(x, y) = 0$ مقرر کردے آں۔
+بنیادی بازگشت تے ترکیب ورت کے~$d$
+دی اک صاف تعریف دیو۔
+\end{prob}
+
+\begin{prop}
+بنیادی بازگشتی فنکشناں دا سیٹ
+ہیٹھلے دو عملاں تحت بند اے:
+\begin{enumerate}
+\item محدود جمع: جے $f(\vec x, z)$ بنیادی بازگشتی اے،
+تاں ایہ فنکشن وی بنیادی بازگشتی اے:
+\[
+g(\vec x, y) \defis \sum_{z = 0}^y f(\vec x, z).
+\]
+\item محدود حاصلِ ضرب: جے $f(\vec x, z)$ بنیادی بازگشتی اے،
+تاں ایہ فنکشن وی بنیادی بازگشتی اے:
+\[
+h(\vec x, y) \defis \prod_{z = 0}^y f(\vec x, z).
+\]
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+مثال لئی، محدود جمع نوں ایہناں
+مساواتاں نال بازگشتی طور اُتے
+متعین کیتا جاندا اے:
+\begin{align*}
+  g(\vec x, 0) & = f(\vec x, 0)\\
+  g(\vec x, y+1) & = g(\vec x, y) + f(\vec x, y+1).
+\end{align*}
+\end{proof}
+
+
+\end{document}

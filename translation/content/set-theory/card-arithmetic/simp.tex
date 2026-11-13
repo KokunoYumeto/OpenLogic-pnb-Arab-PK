@@ -1,0 +1,110 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+\olfileid{sth}{card-arithmetic}{simp}
+
+\olsection{جوڑ تے ضرب سادے کرنے}
+
+پتا لگدا اے کہ لامتناہی درجیاں والے کارڈینل عدداں دا جوڑ تے ضرب \emph{بے حد} سوکھے نیں۔ ایہ ایس گل توں نکلدا اے کہ کارڈینل عدد (کجھ خاص) ترتیبی عدد نیں، ایس لئی اوہ حُسنِ ترتیب والے نیں، تے اوہناں نال اک خاص طرح دا کم ہو سکدا اے۔ پر ایہ وکھانا اینا سوکھا \emph{نہیں}۔ شروع کرن لئی سانوں اک چترائی والی تعریف چاہیدی اے۔
+
+\begin{defn}
+اسیں ترتیبی عدداں دیاں جوڑیاں اُتے \emph{معیاری ترتیب} $\canonord$ ایویں تعریف کردے آں۔ $\tuple{\alpha_1, \alpha_2} \canonord
+\tuple{\beta_1, \beta_2}$ اُدوں تے صرف اُدوں جدوں ہِیٹھلیاں وچوں اک گل ہووے:
+\begin{enumerate}
+	\item $\max(\alpha_1, \alpha_2) < \max(\beta_1, \beta_2)$، یا
+	\item $\max(\alpha_1, \alpha_2) = \max(\beta_1, \beta_2)$ تے
+	$\alpha_1 < \beta_1$، یا
+	\item $\max(\alpha_1, \alpha_2) = \max(\beta_1, \beta_2)$ تے
+	$\alpha_1 = \beta_1$ تے $\alpha_2 < \beta_2$
+\end{enumerate}
+\end{defn}
+
+\begin{lem}
+$\tuple{\alpha \times \alpha, \canonord}$ حُسنِ ترتیب والی ساخت اے، کسے وی ترتیبی عدد $\alpha$ لئی۔
+\end{lem}
+
+\begin{proof}
+صاف اے کہ $\canonord$، $\alpha \times \alpha$ اُتے جُڑیا ہویا اے۔ کیوں جے منّ لو کہ نہ $\tuple{\alpha_1, \alpha_2}$ تے نہ $\tuple{\beta_1,
+\beta_2}$، $\canonord$ مطابق دوجے توں چھوٹا اے۔ تاں $\max(\alpha_1,
+\alpha_2) = \max(\beta_1, \beta_2)$ تے $\alpha_1 = \beta_1$ تے
+$\alpha_2 = \beta_2$۔ سو $\tuple{\alpha_1, \alpha_2} =
+\tuple{\beta_1,  \beta_2}$۔
+
+حُسنِ ترتیب وکھاؤن لئی منّ لو $X \subseteq \alpha\times\alpha$ غیر خالی اے۔ کیوں جے $\alpha$ اک ترتیبی عدد اے، کوئی $\delta$، $\Setabs{\max(\gamma_1, \gamma_2)}{\tuple{\gamma_1,
+\gamma_2} \in X}$ دا سبھ توں چھوٹا رکن اے۔ ہُن
+$\Setabs{\tuple{\gamma_1,\gamma_2} \in X}{\max(\gamma_1, \gamma_2) =
+\delta}$ وچوں بس اوہ جوڑیاں رکھو جیہناں دا پہلا محدد سبھ توں چھوٹا اے۔ ایہناں وچوں جیہڑی جوڑی دا دوجا محدد سبھ توں چھوٹا اے، اوہ $\canonord$ مطابق $X$ دا سبھ توں چھوٹا رکن اے۔
+\end{proof}
+\noindent
+ہُن اک نِکّی جیہی، سوکھی گل ویکھو۔
+
+\begin{prop}\ollabel{simplecardproduct}
+جے $\cardeq{\alpha}{\beta}$، تاں $\cardeq{\alpha \times \alpha}{\beta
+\times \beta}$۔
+\end{prop}
+
+\begin{proof}
+بس $f \colon \alpha \to \beta$ توں نقشہ $\tuple{\gamma_1,
+\gamma_2} \mapsto \tuple{f(\gamma_1), f(\gamma_2)}$ بناؤ۔
+\end{proof}
+\noindent
+ہُن اسیں ایہ سارا کجھ اک ضروری معاون قضیہ ثابت کرن لئی ورتاں گے:
+\begin{lem}\ollabel{alphatimesalpha}
+$\cardeq{\alpha}{\alpha \times \alpha}$، کسے وی لامتناہی ترتیبی عدد $\alpha$ لئی۔
+\end{lem}
+
+\begin{proof}
+ٹکراؤ کڈھن لئی $\alpha$ نوں سبھ توں چھوٹا لامتناہی ترتیبی عدد منّ لو جیہدے لئی ایہ گل غلط اے۔ \olref[sfr][siz][zigzag]{natsquaredenumerable} وکھاندا اے کہ $\cardeq{\omega}{\omega\times\omega}$، سو $\omega \in \alpha$۔ نالے $\alpha$ اک کارڈینل عدد اے۔ ٹکراؤ کڈھن لئی منّ لو کہ ایہ نہیں۔ تاں $\card{\alpha} \in \alpha$، سو مفروضے مطابق $\cardeq{\card{\alpha}}{\card{\alpha} \times \card{\alpha}}$، تے تعریف مطابق $\cardeq{\card{\alpha}}{\alpha}$۔ سو $\cardeq{\alpha}{\alpha\times\alpha}$، \olref{simplecardproduct} مطابق۔
+
+ہُن ہر $\tuple{\gamma_1, \gamma_2} \in \alpha \times \alpha$ لئی ایہ ٹکڑا ویکھو:
+\begin{align*}
+	\text{Seg}(\gamma_1, \gamma_2) &= \Setabs{\tuple{\delta_1, \delta_2} \in \alpha \times \alpha}{\tuple{\delta_1, \delta_2} \canonord \tuple{\gamma_1, \gamma_2}}
+\end{align*}
+$\gamma = \max(\gamma_1, \gamma_2)$ رکھ کے دھیان دیو کہ $\tuple{\gamma_1, \gamma_2} \canonord \tuple{\gamma+1, \gamma + 1}$۔ سو جدوں $\gamma$ لامتناہی اے، ویکھو:
+\begin{align*}
+	\text{Seg}(\gamma_1, \gamma_2) &
+	\precsim ((\gamma \ordplus 1)\ordtimes (\gamma \ordplus 1))\\
+	&\approx (\gamma \ordtimes \gamma)
+	\text{، \olref[ord-arithmetic][using-addition]{ordinfinitycharacter} تے
+	\olref{simplecardproduct} مطابق}\\
+	&\approx \gamma \text{، استقرا دے مفروضے مطابق}\\
+	& \prec \alpha\text{، کیوں جے $\alpha$ اک کارڈینل عدد اے}
+\end{align*}
+سو $\ordtype{\alpha\times \alpha, \canonord} \leq \alpha$، تے ایس لئی $\cardle{\alpha \times \alpha}{\alpha}$۔ کیوں جے $\cardle{\alpha}{\alpha \times \alpha}$ وی، شروڈر–برنسٹین توں نتیجہ نکلدا اے۔
+\end{proof}
+
+آخر اسیں اوہ نتیجہ لئیے جیہڑا حساب سادہ کردا اے۔
+
+\begin{thm}\ollabel{cardplustimesmax}
+جے $\cardfont{a}, \cardfont{b}$ لامتناہی کارڈینل عدد نیں، تاں:
+\[
+	\cardfont{a}
+\cardtimes \cardfont{b} = \cardfont{a} \cardplus \cardfont{b} =
+\text{max}(\cardfont{a}, \cardfont{b}).
+\]
+\end{thm}
+
+\begin{proof}
+عمومیت گنوائے بناں منّ لو $\cardfont{a} = \max(\cardfont{a},
+\cardfont{b})$۔ فیر \olref{alphatimesalpha} نوں ورت کے،
+$\cardfont{a}\cardtimes\cardfont{a} = \cardfont{a} \leq \cardfont{a}
+\cardplus \cardfont{b} \leq \cardfont{a} \cardplus \cardfont{a} \leq
+\cardfont{a} \cardtimes \cardfont{a}$۔ \end{proof}\noindent ایویں ای جے $\cardfont{a}$ لامتناہی اے، تاں $\cardfont{a}$ جِنّی گنتی دے اوہناں سیٹاں دا اتحاد، جیہناں وچوں ہر اک دی وڈائی $\leq\cardfont{a}$ اے، آپ $\leq\cardfont{a}$ وڈائی دا اے۔
+
+\begin{prop}\ollabel{kappaunionkappasize}
+$\cardfont{a}$ اک لامتناہی کارڈینل عدد ہووے۔ ہر ترتیبی عدد $\beta
+\in \cardfont{a}$ لئی $X_\beta$ اک ایہو جیہا سیٹ ہووے جیہدے لئی $\card{X_\beta} \leq
+\cardfont{a}$۔ تاں $\card{\bigcup_{\beta \in \cardfont{a}} X_\beta}
+\leq \cardfont{a}$۔
+\end{prop}
+
+\begin{proof}
+ہر $\beta \in \cardfont{a}$ لئی اک !!a{injection} $f_\beta \colon
+X_\beta \to \cardfont{a}$ مقرر کرو۔\footnote{ایہ کیویں «مقرر» ہُندے نیں؟ \olref[sth][choice][countablechoice]{sec} ویکھو۔} اک !!a{injection} $g \colon
+\bigcup_{\beta \in \cardfont{a}} X_\beta \to \cardfont{a} \times
+\cardfont{a}$ دی تعریف $g(v) = \tuple{\beta, f_\beta(v)}$ نال دیو، جتھے $v \in
+X_\beta$ تے $v \notin X_\gamma$ کسے وی $\gamma \in \beta$ لئی۔ ہُن $\bigcup_{\beta \in \cardfont{a}} X_\beta \preceq \cardfont{a} \times
+\cardfont{a} \approx \cardfont{a}$، \olref{cardplustimesmax} مطابق۔
+\end{proof}
+
+\end{document}

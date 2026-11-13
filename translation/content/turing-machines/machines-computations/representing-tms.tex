@@ -1,0 +1,555 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: representing-tms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{mac}{rep}
+\olsection{ٹیورنگ مشیناں دی نمائندگی}
+
+\begin{explain}
+ٹیورنگ مشیناں نوں \emph{حالتی خاکیاں}
+(state diagrams) نال تصویری شکل وچ
+دکھایا جا سکدا اے۔ ایہناں خاکیاں
+وچ حالتاں دے خانے تیراں نال جڑے
+ہوندے نیں۔ جیویں توقع اے، ہر حالتی خانہ مشین دی
+اک حالت دکھاندا اے۔ ہر تیر اوہ
+حکم دکھاندا اے جیڑا اوس حالت توں
+چلایا جا سکدا اے؛ حکم دی تفصیل
+متعلقہ تیر دے اُتے یا تھلّے
+لکھی ہوندی اے۔ ہِٹھلی مشین ویکھو:
+ایس دیاں صرف دو اندرونیاں
+حالتاں $q_0$ تے $q_1$ نیں،
+تے اک حکم اے:
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]   (A)              {$q_0$};
+  \node[state]   (B) [right of=A] {$q_1$};
+
+  \path (A) edge  node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (B);
+\end{tikzpicture}
+\]
+یاد کرو کہ ٹیورنگ مشین کول
+پڑھن-لکھن والا سر تے اک پٹی ہوندی اے
+جیہدے اُتے انپٹ لکھیا ہوندا اے۔ ایس
+حکم نوں ایداں پڑھو:
+\emph{جے اک~$\TMblank$
+حالت $q_0$ وچ پڑھیا جاوے،
+تاں اک~$\TMstroke$ لکھو،
+سر نوں سجّے ول سرکاؤ، تے حالت
+$q_1$ وچ چلے جاؤ}۔
+ایہ اوہو گل اے کہ
+حالتی تبدیلی دا فنکشن
+$\tuple{q_0, \TMblank}$
+نوں $\tuple{q_1, \TMstroke,
+\TMright}$ ول بھیجدا اے۔
+\end{explain}
+
+\begin{ex}
+\emph{جفت مشین}: ہِٹھلی ٹیورنگ
+مشین اُدوں تے صرف اُدوں
+رُکدی اے جدوں پٹی اُتے
+$\TMstroke$ دی گنتی جفت
+ہووے (ایس مفروضے ہِٹھ کہ
+سارے $\TMstroke$ پہلے
+$\TMblank$ توں پہلاں آندے
+نیں)۔
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (A);
+\end{tikzpicture}
+\]
+
+ایہ حالتی خاکہ ہِٹھلے
+حالتی تبدیلی دے فنکشن
+دے مطابق اے:
+\begin{align*}
+\delta(q_0, \TMstroke) & = \tuple{q_1, \TMstroke, \TMright},\\
+\delta(q_1, \TMstroke) & = \tuple{q_0, \TMstroke, \TMright},\\
+\delta(q_1, \TMblank)  & = \tuple{q_1, \TMblank, \TMright}
+\end{align*}
+\end{ex}
+
+\begin{explain}
+اُتلی مشین صرف اُدوں
+رُکدی اے جدوں انپٹ وچ
+لکیراں دی گنتی جفت ہووے۔
+ہور صورت وچ مشین نظری طور اُتے
+ہمیشہ چلدی رہندی اے۔ کسے وی
+مشین تے انپٹ لئی مشین
+دیاں \emph{مکمل حالتاں}
+(configurations) دا سلسلہ
+ویکھ کے آؤٹ پٹ دا پتا
+لایا جا سکدا اے۔ مکمل
+حالت دی رسمی تعریف
+اسی اگے دیواں گے۔
+فی الحال ایہناں نوں چلن دے
+وکھو وکھرے ویلیاں اُتے مشین دی حالت
+دکھان والے خاکیاں دا
+سلسلہ سمجھ لو۔ ہر مکمل
+حالت پٹی دا متن، مشین
+دی حالت تے پڑھن-لکھن
+والے سر دی جگہ دکھاندی
+اے۔
+
+آؤ جفت مشین نوں چار
+$\TMstroke$ دا انپٹ دے
+کے اوس دیاں مکمل حالتاں
+دا سلسلہ ویکھئیے۔ ایس
+صورت وچ مشین دے رُکّن
+دی توقع اے۔ فیر اسی
+مشین نوں تِن $\TMstroke$
+دے انپٹ اُتے چلاواں گے۔
+اوس صورت وچ اوہ ہمیشہ چلدی
+رہے گی۔
+
+% PNB-CMP-026: source says “state one” although the initial index is zero.
+مشین حالت~$q_0$ وچ
+شروع ہوندی اے تے
+سب توں کھبے پاسے والا~$\TMstroke$
+پڑھدی اے۔ مشین دی
+ابتدائی مکمل حالت
+ایداں دکھا سکدے آں:
+\[
+\TMendtape \TMstroke_0 \TMstroke \TMstroke \TMstroke \TMblank \ldots
+\]
+اُتلی مکمل حالت
+سمجھنی سوکھی اے۔
+جیویں ویکھ سکدے آں،
+مشین صفر نمبر والی
+ابتدائی حالت وچ
+سب توں کھبے پاسے والا~$\TMstroke$
+پڑھدی اے۔ پہلی~$\TMstroke$
+دے تھلّے حالتی ناں
+دا ذیلی ہندسہ ایس
+گل نوں دکھاندا اے۔
+ایتھے لاگو ہون
+والا حکم
+$\delta(q_0, \TMstroke) = \tuple{q_1, \TMstroke, \TMright}$
+اے؛ ایس لئی مشین دا سر
+پٹی اُتے سجّے ول سرکدا اے تے مشین
+حالت~$q_1$ وچ
+چلی جاندی اے۔
+\[
+\TMendtape \TMstroke \TMstroke_1 \TMstroke \TMstroke \TMblank \ldots
+\]
+ہن مشین حالت~$q_1$
+وچ اک~$\TMstroke$
+پڑھ رہی اے؛ ایس
+لئی اسی حکم
+$\delta(q_1, \TMstroke) = \tuple{q_0,
+  \TMstroke, \TMright}$
+دی پیروی کرنی اے۔
+ایس توں ہِٹھلی
+مکمل حالت ملدی اے:
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke_0 \TMstroke \TMblank \ldots
+\]
+مشین اگے چلدی اے
+تاں اوہو قاعدے
+اوہو ترتیب وچ
+فیر لگدے نیں؛
+اگلیاں دو مکمل
+حالتاں ایہ نیں:
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMstroke_1 \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMstroke \TMblank_0 \ldots
+\]
+ہن مشین حالت~$q_0$
+وچ اک~$\TMblank$
+پڑھ رہی اے۔
+حالتی تبدیلی دے
+خاکے توں صاف اے
+کہ ایتھے کوئی
+حکم موجود نہیں؛
+ایس لئی مشین
+رُک گئی اے۔
+ایہدا مطلب اے
+کہ انپٹ قبول
+ہو گیا اے۔
+
+ہن فرض کرو اسی
+مشین نوں تِن
+$\TMstroke$ دا انپٹ
+دے کے شروع کریے۔
+پہلیاں کجھ مکمل
+حالتاں پچھلیاں
+ورگیاں نیں: اوہو
+حکم چلدے نیں،
+صرف پٹی دا انپٹ
+تھوڑا وکھرا اے:
+\[
+\TMendtape \TMstroke_0 \TMstroke \TMstroke \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke_1 \TMstroke \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke_0 \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMblank_1 \ldots
+\]
+ہن مشین سارے
+$\TMstroke$ لنگھ
+چکی اے تے
+اک~$\TMblank$
+حالت~$q_1$ وچ
+پڑھ رہی اے۔
+خاکے مطابق
+ایس لئی حکم
+$\delta(q_1, \TMblank) =\tuple{q_1,
+\TMblank, \TMright}$
+موجود اے۔ چونکہ
+پٹی سجّے پاسے
+ول بے انتہا
+$\TMblank$ نال
+بھری اے، مشین
+ایہو حکم
+\emph{ہمیشہ}
+چلاندی رہے گی،
+حالت~$q_1$ وچ رہندی اے،
+تے اوہدا سر ہور ہور سجّے ول سرکدا رہندا اے۔
+اوہ کدی
+نہیں رُکے گی
+تے انپٹ قبول
+نہیں کرے گی۔
+\end{explain}
+
+\begin{explain}
+ایہ یاد رکھنا ضروری
+اے کہ کجھ مشیناں رُکدیاں ای نہیں۔ جے
+رُکّن دا مطلب ایہ اے
+کہ مشین کول چلان لئی
+حکم مک جان، تاں ہر
+حالت وچ ہر نشان لئی
+باہر جان والا تیر
+رکھ کے اسی ایداں
+دی مشین بنا سکدے آں
+جیڑی کدی نہ رُکے۔
+جفت مشین نوں وی
+$\TMblank$ حالت~$q_0$
+وچ پڑھݨ
+لئی اک حکم پا کے
+ہمیشہ چلن والی
+بنا سکدے آں۔
+\end{explain}
+
+\begin{ex}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+
+  \path
+  (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+      edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (A)
+  (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+      edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (A);
+\end{tikzpicture}
+\]
+\end{ex}
+
+\begin{explain}
+ٹیورنگ مشیناں دی نمائندگی
+مشینی جدولاں (machine tables) نال وی ہو سکدی اے۔
+ایہناں وچ پٹی دے
+حرفاں دا مجموعہ
+$x$-محور اُتے
+تے مشین دیاں
+حالتاں دا سیٹ
+$y$-محور اُتے
+دکھایا جاندا اے۔
+جدول وچ ہر حالت دی قطار تے ہر نشان دے کالم
+دے ملاپ والے خانے وچ حکم دا باقی حصہ،
+یعنی نویں حالت،
+نواں نشان تے
+حرکت دی سمت،
+لکھی ہوندی اے۔
+مشینی جدول توں
+ایہ لبھنا سوکھا
+اے کہ مشین کس
+حالت تے کس نشان
+اُتے رُکدی اے۔
+جدول وچ جتھے
+خانہ خالی ہووے،
+اوتھے مشین رُک
+سکدی اے۔ حالتی
+خاکیاں تے حکم دی
+فہرست وچ رُکّن
+والیاں جگہاں فوراً
+ظاہر نہیں ہوندیاں؛
+جدول دے خالی
+خانے ویکھ کے
+اوہ جلدی لبھ
+جاندیاں نیں۔
+\end{explain}
+
+\begin{ex}
+جفت مشین دا جدول ایہ اے:
+\[
+\centering
+\begin{tabular}{lllll}
+\cline{2-4}
+\multicolumn{1}{l|}{}      & \multicolumn{1}{c|}{$\TMblank$}                
+& \multicolumn{1}{c|}{$\TMstroke$}     & \multicolumn{1}{c|}{$\TMendtape$}   &  \\ \cline{1-4}
+\multicolumn{1}{|l|}{$q_0$} & \multicolumn{1}{l|}{}                          
+& \multicolumn{1}{l|}{\TMtrans{\TMstroke}{q_1}{\TMright}} & 
+\multicolumn{1}{l|}{\phantom{\TMtrans{\TMstroke}{q_1}{\TMright}}} &  \\ \cline{1-4}
+\multicolumn{1}{|l|}{$q_1$} & \multicolumn{1}{l|}{\TMtrans{\TMblank}{q_1}{\TMright}} 
+& \multicolumn{1}{l|}{\TMtrans{\TMstroke}{q_0}{\TMright}} & 
+\multicolumn{1}{l|}{\phantom{\TMtrans{\TMstroke}{q_1}{\TMright}}} &  \\ \cline{1-4}
+\end{tabular}
+\]
+جیویں ویکھ سکدے آں،
+مشین اک~$\TMblank$
+حالت~$q_0$ وچ پڑھدے
+ویلے رُکدی اے۔
+\end{ex}
+
+\begin{explain}
+ہُن تک اسی صرف
+اوہ مشیناں ویکھیاں
+نیں جیہڑیاں انپٹ
+پڑھدیاں تے قبول
+کردیاں نیں۔ پر
+ٹیورنگ مشیناں
+پڑھ وی سکدیاں
+تے لکھ وی سکدیاں
+نیں۔ ایہدی اک مثال
+(ہور بہت مثالاں وی
+نیں) \emph{دوگنا کرن
+والی مشین} (doubler)
+اے۔ جے پٹی اُتے~$n$
+$\TMstroke$ دا
+اک ٹکڑا دے کے
+ایہ مشین شروع
+کریے، تاں ایہ
+$2n$ $\TMstroke$
+دا ٹکڑا آؤٹ پٹ
+دیندی اے۔
+\end{explain}
+
+\begin{ex}
+  \ollabel{ex:doubler} دوگنا
+  کرن والی مشین بناؤن
+  توں پہلاں مسئلہ
+  حل کرن دی اک
+  \emph{تدبیر} بنانی
+  ضروری اے۔ جیویں
+  اسی مشین نوں
+  ہُن تک بیان کیتا
+  اے، ایہ یاد نہیں
+  رکھ سکدی کہ
+  اوس نے کنے
+  $\TMstroke$ پڑھے
+  نیں؛ ایس لئی
+  پٹی اُتے موجود
+  سارے $\TMstroke$
+  دا حساب رکھن
+  دا کوئی طریقہ
+  لبھنا پئے گا۔
+  اک طریقہ ایہ
+  اے کہ آؤٹ پٹ
+  نوں انپٹ توں
+  اک~$\TMblank$ نال
+  وکھ کر دئیے۔
+  مشین فیر انپٹ
+  وچوں پہلا
+  $\TMstroke$ مٹا
+  دیوے، باقی انپٹ
+  لنگھے، اک
+  $\TMblank$ چھڈے
+  تے دو نویں
+  $\TMstroke$ لکھے۔
+  فیر مشین واپس
+  جا کے انپٹ وچ
+  دوجا $\TMstroke$
+  لبھے تے اوس
+  نوں وی دوگنا
+  کرے۔ انپٹ دے
+  ہر اک $\TMstroke$
+  لئی آؤٹ پٹ دے
+  دو $\TMstroke$
+  لکھے گی۔ چلن
+  نال نال انپٹ
+  مٹاندی جاوے تاں
+  ایہ یقین رہندا
+  اے کہ کوئی
+  $\TMstroke$ نہ
+  رہ جاوے تے نہ اوہنوں دو واری دوگنا
+  کیتا جاوے۔ جدوں
+  سارا انپٹ مٹ
+  جاوے گا، پٹی
+  اُتے $2n$
+  $\TMstroke$ رہ
+  جان گے۔ نتیجے
+  والی ٹیورنگ
+  مشین دا حالتی
+  خاکہ \olref{fig:doubler}
+  وچ دکھایا گیا اے۔
+  \begin{figure}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (1)              {$q_0$};
+  \node[state]         (2) [right of=1] {$q_1$};
+  \node[state]         (3) [right of=2] {$q_2$};
+  \node[state]         (4) [below of=3] {$q_3$};
+  \node[state]         (5) [left of=4]  {$q_4$};
+  \node[state]         (6) [left of=5]  {$q_5$};
+
+  \path (1) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMright}} (2)
+    (2) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (2)
+      edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (3)
+    (3) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (3)
+        edge node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (4)
+    (4) edge [loop below] node {\TMtrans{\TMblank}{\TMstroke}{\TMleft}} (4)
+        edge node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+    (5) edge [loop below]  node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (6)
+    (6) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (6)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (1);
+\end{tikzpicture}
+\]
+\caption{اک دوگنا کرن والی مشین}
+\ollabel{fig:doubler}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+کوئی وی انپٹ
+چنو تے
+\olref[tur][mac][rep]{ex:doubler}
+وچ دتی دوگنا
+کرن والی مشین
+دیاں مکمل حالتاں
+دا سلسلہ قدم بہ
+قدم ویکھو۔
+\end{prob}
+
+\begin{prob}
+حرفاں دے مجموعے
+$\{\TMendtape,\TMblank, A, B\}$
+والی ٹیورنگ مشین
+بناؤ جیڑی $A$
+تے $B$ دیاں اوہ
+لڑیاں قبول کرے،
+یعنی اوہناں اُتے
+رُک جائے، جِنہاں
+وچ $A$ دی گنتی
+$B$ دی گنتی دے
+برابر ہووے
+\emph{تے} سارے
+$A$، سارے $B$
+توں پہلاں آندے
+ہون۔ جِنہاں لڑیاں
+وچ $A$ دی گنتی
+$B$ دی گنتی
+دے برابر نہ ہووے
+یا سارے $A$،
+سارے~$B$ توں
+پہلاں نہ آندے
+ہون، اوہناں نوں
+رد کرے، یعنی
+اوہناں اُتے نہ
+رُکے۔ مثال لئی،
+مشین $AABB$
+تے $AAABBB$
+قبول کرے، پر $AAB$
+تے $AABBAABB$
+دونوں نوں رد کرے۔
+\end{prob}
+
+\begin{prob}
+حرفاں دے مجموعے
+$\{\TMendtape,\TMblank, A, B\}$
+والی ٹیورنگ مشین
+بناؤ جیڑی کوئی
+وی لڑی $\alpha$
+انپٹ لے؛ ایہ
+لڑی $A$ تے $B$
+دی بنی ہووے۔
+مشین اوس دی اک ہور نقل
+اوہدے نال جوڑ کے
+$\alpha\alpha$
+دی صورت وچ
+آؤٹ پٹ بناوے۔
+مثال لئی، انپٹ
+$ABBA$ توں
+آؤٹ پٹ
+$ABBAABBA$
+بننا چاہیدا اے۔
+\end{prob}
+
+\begin{prob}
+\emph{حرف وار ترتیب؟:}
+حرفاں دے مجموعے
+$\{\TMendtape,\TMblank, A, B\}$
+والی ٹیورنگ مشین
+بناؤ جیڑی
+$A$ تے $B$
+دا اک محدود
+سلسلہ انپٹ
+لے کے جانچے
+کہ سارے $A$
+سارے $B$
+دے کھبے پاسے
+نیں یا نہیں۔
+مشین انپٹ
+دی لڑی پٹی
+اُتے رہن دیوے؛
+جے لڑی «حرف
+وار ترتیب وچ»
+ہووے تاں رُکے،
+نہ ہووے تاں
+ہمیشہ چلدی
+رہے۔
+\end{prob}
+
+\begin{prob}
+\emph{حرف وار ترتیب
+دین والی مشین:}
+حرفاں دے مجموعے
+$\{\TMendtape,\TMblank, A, B\}$
+والی ٹیورنگ مشین
+بناؤ جیڑی
+$A$ تے $B$
+دا اک محدود
+سلسلہ انپٹ
+لے کے اوس
+دے حرف ایداں
+فیر ترتیب دے
+کہ سارے $A$
+سارے~$B$ دے
+کھبے پاسے
+ہون۔ مثال لئی،
+لڑی $BABAA$
+لڑی $AAABB$
+بن جائے، تے
+لڑی $ABBABB$
+لڑی $AABBBB$
+بن جائے۔
+\end{prob}
+
+\end{document}

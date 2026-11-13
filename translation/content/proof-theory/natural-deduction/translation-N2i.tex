@@ -1,0 +1,104 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: translation-N2i
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{tni}
+
+\olsection{\Log{N2} توں \Log{G2} وچ ثبوت بدلنے}
+
+\begin{prop}\ollabel{prop:N2-to-G2}
+جے $\Log{N2c}\ (\Log{N2i}) \Proves
+\Gamma \Sequent !A$، تاں $\Log{G2c}\ (\Log{N2i}) + \Cut \Proves \Gamma'
+\Sequent \Delta$، جتھے $\Gamma'$ اوہ !!{formula}s دا بہُ-سیٹ اے جیہڑا $\Gamma$ توں نشان ہٹا کے ملدا اے، تے $\Delta = \{!A\}$ جے $!A$،~$\lfalse$ نہیں، تے $\Delta = \emptyset$ جے ایہ اوہی اے۔
+\end{prop}
+
+\begin{proof}
+ثبوت فیر !!{proof}~$\delta$ دی اُچائی اُتے استقرا نال اے، جیہڑا $\Gamma \Sequent !A$ دا اے۔ جے $\delta$ مسلّمہ $x:!A \Sequent !A$ اے، تاں $\pi$ اوہدے نال میل کھاندا مسلّمہ $!A \Sequent !A$ اے، یا $\lfalse \Sequent \ $ جے $!A \ident \lfalse$۔
+
+جے $\delta$ کسے استنباطی قاعدے اُتے مُکدا اے، تاں صورتاں وکھ کردے آں:
+\begin{enumerate}
+\item جے $R$، \Intro{\lif} اے جیہدا مُکھ فارمولا $!B \lif !C$ اے، تے $x:!B$ مقدمے دے سیاق وچ موجود اے پر نتیجے دے سیاق وچ نہیں، تاں $\delta$ ایتھے مُکدا اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x:!B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+استقرا دا مفروضہ !!a{proof}~$\pi_1$ دیندا اے، $!B, \Gamma'
+  \Sequent !C$ دا (یا $!B, \Gamma'
+  \Sequent \ $ دا جے $!C \ident \lfalse$)۔ ایہدے توں~\RightR{\lif} لا کے $\pi$ لیندے آں (\RightR{\Weakening} لاؤن پچھوں، جے $!C \ident \lfalse$)۔
+\item جے $R$، \Intro{\lif} اے، پر $x:!B$ مقدمے دے سیاق وچ موجود نہیں، تاں $\delta$ ایتھے مُکدا اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+استقرا دا مفروضہ !!a{proof}~$\pi_1$ دیندا اے، $\Gamma'
+  \Sequent !C$ دا۔ ایہدے توں $\pi$ لیندے آں، \LeftR{\Weakening} نوں~$!B$ نال لا کے، تے فیر~\RightR{\lif} لا کے۔
+\item جے $R$، \Elim{\lif} اے، تاں $\delta$ ایتھے مُکدا اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma_1 \fCenter !B \lif !A$
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \Deduce$\Gamma_2 \fCenter !B$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$\Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+جتھے $\Gamma = \Gamma_1 \cup \Gamma_2$۔ استقرا دا مفروضہ !!{proof}s دیندا اے، $\pi_1$، $\Gamma_1' \Sequent !B \lif !A$ دا، تے $\pi_2$، $\Gamma_2' \Sequent !B$ دا۔ !!{proof}~$\pi$ ایویں لیندے آں:
+\[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter !B \lif !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma_2' \fCenter !B$
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!B \lif !A, \Gamma_2' \fCenter !A$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+بہُ-سیٹ $\Gamma_1' \cup \Gamma_2'$ شاید $\Gamma' =
+  (\Gamma_1 \cup \Gamma_2)'$ دے برابر نہ ہووے۔ مثلاً جے $\Gamma_1$ تے $\Gamma_2$ دوہاں وچ $x:!C$ اے، تاں $\Gamma_1' \cup \Gamma_2'$ وچ $!C$ دیاں دو نکلاں نیں، پر $(\Gamma_1 \cup \Gamma_2)'$ وچ اکّو نقل اے۔ ڈھکدے \LeftR{\Contraction} استنباط شامل کر کے ایہ ٹھیک کر سکدے آں۔
+
+جے $!A \ident \lfalse$ ہووے، تاں استقرا دا مفروضہ $\delta_2$ اُتے لا کے !!a{proof} ملدا اے $\Gamma_2' \Sequent \ $ دا۔ ایہدے توں !!{proof}~$\pi$ لیندے آں، ڈھکدے \LeftR{\Weakening} استنباط تے اک \RightR{\Weakening}،~$!A$ نال، شامل کر کے۔
+\item جے $R$، \FalseCl اے، تاں $\delta$ ایتھے مُکدا اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x: \lnot !A, \Gamma \fCenter \lfalse$
+  \RightLabel{\FalseCl}
+  \UnaryInf$\Gamma \fCenter !A$
+  \DisplayProof
+  \]
+استقرا دے مفروضے نال !!a{proof} $\pi_1$ اے $\lnot !A,
+  \Gamma' \Sequent \ $ دا۔ !!{proof}~$\pi$ ایہ لیندے آں:
+\[
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\RightR{\lnot}}
+  \UnaryInf$\fCenter !A, \lnot !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$x: \lnot !A, \Gamma' \fCenter $
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma' \fCenter !A$
+  \DisplayProof
+  \]
+\end{enumerate}
+دھیان دیو، بس \FalseCl{} دی تبدیلی نال !!a{proof}~$\pi$ ملدا اے جیہدے سجّے اک توں ودھ !!{formula} اے۔ یعنی~\Log{N2i} دے !!{proof} دی تبدیلی \Log{G2i}-!!{proof} اے۔
+\end{proof}
+
+\end{document}

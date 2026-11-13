@@ -1,0 +1,135 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: lindenbaum
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{lin}
+
+\olsection{لنڈن باؤم دا معاون قضیہ}
+
+وجدانیت پسند منطق دی تمامیت دا قضیہ $\Gamma \Proves/ !A$ منّ کے ثابت
+ہوندا اے۔ اسیں اک نمونہ بناندے آں جتھے $\mSat{M}{\Gamma}$ تے~$\mSat/{M}{!A}$۔
+
+کلاسیکی منطق وچ !!{derivability} دا تعلق بے تضادی دی دھارنا راہیں سمجھایا
+جا سکدا اے۔ کیوں جے !!a{formula}~$!A$، !!{formula}s دے کسے سیٹ توں !!{derivable}
+اُدوں تے صرف اُدوں اے جدوں~$!A$ دی نفی نوں اُس سیٹ نال رلا کے بنا سیٹ متضاد
+ہووے۔ وجدانیت پسند منطق وچ ایہ ممکن نہیں۔ ایس منطق وچ جے $\lnot!A$ متضاد
+اے، تاں صرف $\Proves \lnot\lnot !A$ ملدا اے۔ چونکہ $\lnot\lnot!A \lif !A$
+عام طور اُتے وجدانیت پسند منطق وچ نہیں چلدا، ایس لئی اسیں~$\Proves !A$ دا
+نتیجہ نہیں کڈھ سکدے۔
+
+سو نمونہ~$\mModel{M}$ بناندیاں اسیں !!{formula}~$!A$ دی !!{derivability} نہ ہون دی شرط
+سامھنے رکھنی اے۔ ایس لئی اسیں اک مکمل سیٹ $\Gamma^* \supseteq \Gamma$ نوں
+نمونہ $\mModel{M}$ بناؤن لئی نہیں ورت سکدے،
+کیوں جے ہر مکمل سیٹ $\Gamma^*$ وچ $\Gamma^* \Proves !A \lor \lnot !A$ ہوندا اے۔
+
+مکمل سیٹ~$\Gamma^*$ دی تھاں اسیں فارمولیاں دے اولی سیٹ دی دھارنا ورتاں گے۔
+
+\begin{defn}\ollabel{defn:prime}
+  !!{formula}s دا سیٹ~$\Gamma$ \emph{اولی} اُدوں تے صرف اُدوں اے جدوں
+  \begin{enumerate}
+  \item\ollabel{defn:prime1} $\Gamma$ بے تضاد اے، یعنی $\Gamma \Proves/ \lfalse$۔
+  \item\ollabel{defn:prime2} جے $\Gamma \Proves !A$، تاں $!A \in \Gamma$۔
+  \item\ollabel{defn:prime3} جے $!A \lor !B \in \Gamma$، تاں $!A \in
+    \Gamma$ یا $!B \in \Gamma$۔
+  \end{enumerate}
+\end{defn}
+
+\begin{lem}[لنڈن باؤم دا معاون قضیہ]
+  \ollabel{lem:lindenbaum} جے $\Gamma \Proves/ !A$، تاں اک
+  $\Gamma^* \supseteq \Gamma$ موجود اے جیہدے لئی $\Gamma^*$ اولی اے تے
+  $\Gamma^* \Proves/ !A$۔
+\end{lem}
+
+\begin{proof}
+  منّ لو $!B_1 \lor !C_1$، $!B_2 \lor !C_2$، \dots، صورت~$!B \lor !C$
+  والے سارے !!{formula}s دی گنتی وار فہرست اے۔ اسیں !!{formula}s دے سیٹاں
+  دی اک ودھدی لڑی~$\Gamma_n$ دی تعریف کراں گے، جیہدے وچ ہر $\Gamma_{n+1}$،
+  $\Gamma_n$ نال اک نواں !!{formula} رلا کے بنے گا۔ $\Gamma^*$ سارے~$\Gamma_n$
+  دا اتحاد ہووے گا۔ نویں !!{formula}s ایویں چنے جان گے کہ $\Gamma^*$ اولی ہووے
+  تے $\Gamma^* \Proves/ !A$ فیر وی قائم رہے۔ یعنی ہر قدم اُتے اسیں پہلی فصل
+  ~$!B_i \lor !C_i$ لبھنی اے جیہڑی ایہ شرطاں پوریاں کرے:
+  \begin{enumerate}
+  \item\ollabel{gamma-1} $\Gamma_n \Proves !B_i \lor !C_i$
+  \item\ollabel{gamma-2} $!B_i \notin \Gamma_n$ تے $!C_i \notin \Gamma_n$
+  \end{enumerate}
+  اسیں $\Gamma_n$ وچ $!B_i$ شامل کردے آں جے $\Gamma_n \cup \{!B_i\}
+  \Proves/ !A$، تے ہور صورت وچ $!C_i$۔ سانوں وکھانا پئے گا کہ ایہ طریقہ چلدا اے۔
+  ہُن لئی $i(n)$ نوں سبھ توں چھوٹا اوہ $i$ منّ لو جیہدے لئی
+  \olref{gamma-1} تے~\olref{gamma-2} پوریاں ہون۔
+
+  $\Gamma_0 = \Gamma$ رکھو تے
+  \[
+  \Gamma_{n+1} = \begin{cases}
+    \Gamma_n \cup \{!B_{i(n)}\} &
+    \text{جے $\Gamma_n \cup \{!B_{i(n)}\} \Proves/ !A$} \\
+    \Gamma_n \cup \{!C_{i(n)}\} & \text{ہور صورت وچ}
+    \end{cases}
+  \]
+  جے $i(n)$ تعریف شدہ نہ ہووے، یعنی جدوں وی $\Gamma_n \Proves !B \lor !C$،
+  اوہدوں یا $!B \in \Gamma_n$ یا $!C \in \Gamma_n$، تاں اسیں $\Gamma_{n+1}
+  = \Gamma_n$ رکھدے آں۔ ہُن منّ لو $\Gamma^* = \bigcup_{n=0}^\infty \Gamma_n$۔
+
+  پہلاں اسیں وکھاندے آں کہ ہر $n$ لئی $\Gamma_n \Proves/ !A$۔ ثبوت~$n$
+  اُتے استقرا نال اے۔ $n = 0$ لئی دعویٰ قضیے دے مفروضے توں قائم اے،
+  یعنی $\Gamma \Proves/ !A$۔ جے $n>0$، تاں اسیں وکھانا اے کہ جے
+  $\Gamma_n \Proves/ !A$، تاں $\Gamma_{n+1} \Proves/ !A$۔ جے $i(n)$ تعریف
+  شدہ نہیں، تاں $\Gamma_{n+1} = \Gamma_n$ تے ثابت کرن نوں کجھ نہیں۔
+  سو فرض کرو $i(n)$ تعریف شدہ اے۔ سوکھ لئی $i = i(n)$ رکھ لو۔
+
+  اسیں دعوے دا عکسِ نقیض ثابت کراں گے۔ فرض کرو $\Gamma_{n+1} \Proves !A$۔
+  بناوٹ مطابق، $\Gamma_{n+1} = \Gamma_n \cup \{!B_i\}$ جے
+  $\Gamma_n \cup \{!B_i\} \Proves/ !A$، تے ہور صورت وچ
+  $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\}$۔ صاف اے کہ پہلی صورت نہیں ہو سکدی،
+  کیوں جے فیر $\Gamma_{n+1} \Proves/ !A$ ہوندا۔ سو
+  $\Gamma_n \cup \{!B_i\} \Proves !A$ تے $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\}$۔
+  $i(n)$ دی تعریف مطابق، $\Gamma _n \Proves !B_i \lor !C_i$۔
+  ساڈے کول $\Gamma_n \cup \{!B_i\} \Proves !A$ اے تے
+  $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\} \Proves !A$ وی اے۔
+  سو $\Gamma_n \Proves !A$، جیہڑا اسیں وکھانا سی۔
+
+  جے $\Gamma^* \Proves !A$ ہوندا، تاں کوئی محدود ذیلی سیٹ $\Gamma'
+  \subseteq \Gamma^*$ ہوندا جیہدے لئی $\Gamma' \Proves !A$۔
+  ہر $!D \in \Gamma'$ لازماً $\Gamma_i$ وچ ہووے گا، کسے~$i$ لئی۔
+  ایہناں وچوں سبھ توں وڈا $n$ منّ لو۔ چونکہ $\Gamma_i \subseteq \Gamma_n$
+  جے $i \le n$، ایس لئی $\Gamma' \subseteq \Gamma_n$۔ پر فیر
+  $\Gamma_n \Proves !A$، جیہڑا اُتلے ثبوت دے اُلٹ اے کہ $\Gamma_n \Proves/ !A$۔
+
+  آخر وچ اسیں وکھاندے آں کہ $\Gamma^*$ اولی اے، یعنی
+  \olref{defn:prime1}، \olref{defn:prime2} تے~\olref{defn:prime3} شرطاں
+  پوری کردا اے، جیہڑیاں \olref{defn:prime} وچ نیں۔
+
+  پہلاں، $\Gamma^* \Proves/ !A$، ایس لئی $\Gamma^*$ بے تضاد اے۔
+  سو \olref{defn:prime1} پوری ہوندی اے۔
+
+  ہُن اسیں وکھاندے آں کہ جے $\Gamma^* \Proves !B \lor !C$، تاں یا
+  $!B \in \Gamma^*$ یا $!C \in \Gamma^*$۔ ایس نال \olref{defn:prime3}
+  ثابت ہوندی اے، کیوں جے جے $!B \lor !C \in \Gamma^*$، تاں
+  $\Gamma^* \Proves !B \lor !C$ وی۔ سو فرض کرو $\Gamma^* \Proves !B \lor !C$
+  پر $!B \notin \Gamma^*$ تے $!C \notin \Gamma^*$۔ چونکہ $\Gamma^* \Proves
+  !B \lor !C$، ایس لئی $\Gamma_n \Proves !B \lor !C$، کسے~$n$ لئی۔
+  $!B \lor !C$ ساریاں فلاں دی گنتی وار فہرست وچ اے، منّ لو $!B_j \lor !C_j$
+  دے طور اُتے۔ $!B_j \lor !C_j$، $i(n)$ دی تعریف دیاں شرطاں پوریاں کردا اے۔
+  یعنی $\Gamma_n \Proves !B_j \lor !C_j$، جدکہ $!B_j \notin \Gamma_n$
+  تے $!C_j \notin \Gamma_n$۔ ہر قدم اُتے ایہ شرطاں پوریاں کرن والے
+  $!B_i \lor !C_i$ وچوں گھٹ توں گھٹ اک گھٹ جاندا اے (کیوں جے ہر قدم اُتے اسیں
+  یا $!B_i$ یا $!C_i$ شامل کردے آں)، ایس لئی کسے قدم~$m$ اُتے $j = i(m)$ ہووے گا۔
+  پر فیر یا $!B \in \Gamma_{m+1}$ یا $!C \in \Gamma_{m+1}$، جیہڑا
+  ایس مفروضے دے اُلٹ اے کہ $!B \notin \Gamma^*$ تے $!C \notin \Gamma^*$۔
+
+  ہُن فرض کرو $\Gamma^* \Proves !B$۔ فیر $\Gamma^* \Proves !B \lor !B$۔
+  پر اسیں ہُنے ثابت کیتا اے کہ جے $\Gamma^* \Proves !B \lor !B$، تاں
+  $!B \in \Gamma^*$۔ سو $\Gamma^*$، شرط~\olref{defn:prime2}
+  پوری کردا اے، جیہڑی~\olref{defn:prime} وچ اے۔
+\end{proof}
+
+\begin{prob}
+وکھاؤ کہ جے $\Gamma \Proves/ \bot$، تاں $\Gamma$ کلاسیکی منطق وچ بے تضاد
+اے۔ یعنی اک ایہو جیہی قدر بندی موجود اے جیہڑی~$\Gamma$ دے سارے فارمولیاں
+نوں سچ کردی اے۔
+\end{prob}
+
+\end{document}

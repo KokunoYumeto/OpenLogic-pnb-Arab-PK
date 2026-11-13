@@ -1,0 +1,357 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: construction-of-model
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{mod}}
+      {\olfileid{pl}{com}{mod}}
+
+\olsection{اک نمونے دی تعمیر}
+
+\begin{explain}
+\iftag{FOL}{فی الحال ساڈی توجہ $\eq$ اُتے نہیں، یعنی اسیں
+  صرف ایہ وکھانا چاہندے آں کہ !!{sentence}s دا اک بے
+  تضاد سیٹ~$\Gamma$ جیہدے وچ~$\eq$ نہیں، پورا ہون
+  جوگ اے۔ پہلے اسیں~$\Gamma$ نوں اک بے تضاد،
+  !!{complete} تے سیر شدہ سیٹ~$\Gamma^*$ تک ودھاندے
+  آں۔ ایس صورت وچ نمونے~$\Struct{M(\Gamma^*)}$ دی
+  تعریف سادہ اے: اسیں~$\Lang{L'}$ دے بند ٹرماں دا
+  سیٹ میدان لَیندے آں۔ ہر !!{constant} دی تعبیر
+  اوہ آپ اے، تے عام طور اُتے ہر بند ٹرم~$t$ لئی
+  $\Value{t}{M(\Gamma^*)} = t$ یقینی بناندے آں۔
+  !!{predicate}s دی تعبیری توسیع ایس طرح مقرر
+  کردے آں کہ جوہری !!{sentence}،
+  $\Struct{M(\Gamma^*)}$ وچ اُدوں تے صرف اُدوں
+  سچا ہووے جدوں اوہ~$\Gamma^*$ وچ ہووے۔ ظاہر اے،
+  ایس نال~$\Gamma^*$ دے سارے جوہری
+  !!{sentence}s، $\Struct{M(\Gamma^*)}$ وچ سچے
+  ہون گے۔ باقی جملے وی سچے ہون گے جے شروع دا
+  $\Gamma^*$ بے تضاد، مکمل تے سیر شدہ اے۔}{ہُن
+  اسیں ایسی !!a{valuation} متعین کرن لئی تیار آں
+  جیہڑی سارے $!A \in \Gamma$ نوں سچا بناندی اے۔
+  ایس لئی پہلے لنڈنبام دا معاون قضیہ ورت کے
+  سانوں مکمل بے تضاد $\Gamma^* \supseteq
+  \Gamma$ ملدا اے۔ فیر~$\Gamma^*$ دے
+  !!{propositional variable}s توں
+  ~$\pAssign v(\Gamma^*)$ متعین کردے آں۔}
+\end{explain}
+
+\iftag{FOL}{%
+\begin{defn}[ٹرماں توں بنا نمونہ (term model)]
+\ollabel{defn:termmodel}
+فرض کرو $\Gamma^*$، زبان~$\Lang L$ دے
+!!{sentence}s دا !!a{complete}، بے تضاد تے سیر
+شدہ سیٹ اے۔ \emph{ٹرماں توں بنا
+  نمونہ}~$\Struct M(\Gamma^*)$،~$\Gamma^*$ لئی
+اگلی !!{structure} اے:
+\begin{enumerate}
+\item !!{domain}~$\Domain{M(\Gamma^*)}$،~$\Lang L$ دے
+  سارے بند ٹرماں دا سیٹ اے۔
+\item !!a{constant} $c$ دی تعبیر $c$ آپ اے:
+  $\Assign{c}{M(\Gamma^*)} = c$۔
+\item !!{function}~$f$ دی تعبیر اوہ فنکشن اے
+  جیہڑا بند ٹرماں $t_1$، \dots، $t_n$ نوں
+  اندراجاں دے طور اُتے لے کے بند ٹرم
+  $f(t_1, \dots, t_n)$ قدر دیندا اے:
+\[
+\Assign{f}{M(\Gamma^*)}(t_1, \dots, t_n) = f(t_1,\dots, t_n)
+\]
+\item جے $R$ اک $n$-جگہ !!{predicate} اے، تاں
+  \[
+  \tuple{t_1, \dots,
+  t_n} \in \Assign{R}{M(\Gamma^*)} \text{ اُدوں تے صرف اُدوں } \Atom{R}{t_1, \dots,
+    t_n} \in \Gamma^*.
+  \]
+\end{enumerate}
+\end{defn}
+}{%
+\begin{defn}
+\ollabel{defn:termmodel}
+فرض کرو $\Gamma^*$، !!{formula}s دا اک مکمل
+بے تضاد سیٹ اے۔ فیر اسیں ایہ مقرر کردے آں:
+\[
+\pAssign v(\Gamma^*)(p) = \begin{cases}
+  \True & \text{جے $p \in \Gamma^*$}\\
+  \False & \text{جے $p \notin \Gamma^*$}
+  \end{cases}
+\]
+\end{defn}
+}
+
+\iftag{FOL}{%
+ہُن اسیں بند ٹرماں لئی جانچاں گے کہ واقعی $\Value{t}{M(\Gamma^*)} = t$۔
+
+\begin{lem}
+\ollabel{lem:val-in-termmodel} فرض کرو $\Struct M(\Gamma^*)$،
+\olref{defn:termmodel} دا ٹرماں توں بنا نمونہ اے؛
+% PNB-COM-014: بغیر variable assignment دے value تے ایس induction دا دائرہ بند ٹرم اے۔
+تاں ہر بند ٹرم لئی $\Value{t}{M(\Gamma^*)} = t$۔
+\end{lem}
+\begin{proof}
+ثبوت $t$ اُتے استقرا نال اے۔ بنیاد وچ، جدوں $t$
+!!a{constant} اے، دعویٰ ٹرماں توں بنے نمونے
+دی تعریف توں سیدھا ملدا اے۔ استقرائی قدم لئی
+فرض کرو $t_1, \ldots, t_n$ بند ٹرم نیں
+جِنہاں لئی $\Value{t_i}{M(\Gamma^*)} = t_i$،
+تے $f$ اک $n$-مقامی !!{function} اے۔ تاں
+\begin{align*}
+\Value{f(t_1,\ldots,t_n)}{M(\Gamma^*)} &= \Assign{f}{M(\Gamma^*)}(\Value{t_1}
+ {M(\Gamma^*)},
+\ldots, \Value{t_n}{M(\Gamma^*)}) \\
+&= \Assign{f}{M(\Gamma^*)}(t_1, \dots, t_n) \\
+&= f(t_1,\dots, t_n),
+\end{align*}
+تے ایس لئی استقرا نال ایہ ہر بند ٹرم~$t$
+لئی درست اے۔
+\end{proof}
+}
+
+\iftag{FOL}{%
+\begin{explain}
+  \iftag{prvEx}{کوئی !!^a{structure}~$\Struct{M}$ اک وجودی
+    طور اُتے مسوّر !!{sentence}~$\lexists[x][!A(x)]$
+    سچا بنا سکدی اے، بھاویں اوہدی کوئی ایسی
+    مثال~$!A(t)$ نہ ہووے جیہنوں اوہ سچا بناندی اے۔}{}
+  \iftag{prvAll}{کوئی !!^a{structure}~$\Struct{M}$ ساریاں
+    مثالاں~$!A(t)$ سچیاں بنا سکدی اے اک کلی طور
+    اُتے مسوّر !!{sentence}~$\lforall[x][!A(x)]$ دیاں،
+    پر~$\lforall[x][!A(x)]$ نوں سچا نہ بنائے۔}{}
+  وجہ ایہ اے کہ عام طور اُتے~$\Domain{M}$ دا ہر
+  !!{element} کسے بند ٹرم دی قدر نہیں ہوندا
+  ($\Struct{M}$ پوری طرح بند ٹرماں نال ڈھکی نہ وی
+  ہو سکدی اے)۔ ایس لئی پورا ہون دا تعلق
+  متغیراں دی قدر بندیاں راہیں متعین کیتا جاندا اے۔
+  پر ساڈے ٹرماں توں بنے نمونے~$\Struct{M(\Gamma^*)}$
+  لئی ایہ لوڑ نہیں، کیونکہ اوہ ڈھکیا ہویا اے۔
+  اگلا نتیجہ ایہی وکھاندا اے۔
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:quant-termmodel}
+فرض کرو $\Struct M(\Gamma^*)$،
+\olref{defn:termmodel} دا ٹرماں توں بنا نمونہ اے۔
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\Sat{M(\Gamma^*)}{\lexists[x][!A(x)]}$
+  اُدوں تے صرف اُدوں جدوں
+  $\Sat{M(\Gamma^*)}{!A(t)}$ ہووے گھٹ توں گھٹ اک
+  بند ٹرم~$t$ لئی۔}{}
+\tagitem{prvAll}{$\Sat{M(\Gamma^*)}{\lforall[x][!A(x)]}$
+  اُدوں تے صرف اُدوں جدوں
+  $\Sat{M(\Gamma^*)}{!A(t)}$ ہووے ہر بند
+  ٹرم~$t$ لئی۔}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{%
+  \iftag{probEx}{مشق۔}{\olref[syn][ass]{prop:sat-quant}
+    مطابق $\Sat{M(\Gamma^*)}{\lexists[x][!A(x)]}$
+    اُدوں تے صرف اُدوں جدوں گھٹ توں گھٹ اک
+    متغیر-قدر بندی~$s$ لئی
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$۔
+    چونکہ $\Domain{M(\Gamma^*)}$،~$\Lang{L}$ دے
+    بند ٹرماں توں بنیا اے، ایس لئی ایہ اُدوں
+    تے صرف اُدوں ہووے گا جدوں کوئی بند ٹرم~$t$
+    ایسا ہووے کہ $s(x) = t$ تے
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$۔
+    \olref[fol][syn][ext]{prop:ext-formulas} مطابق
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$ اُدوں تے صرف
+    اُدوں جدوں $\Sat{M(\Gamma^*)}{!A(t)}[s]$،
+    جتھے $s(x) = t$۔ ہُن
+    \olref[fol][syn][ass]{prop:sentence-sat-true} مطابق
+    $\Sat{M(\Gamma^*)}{!A(t)}[s]$ اُدوں تے صرف
+    اُدوں جدوں $\Sat{M(\Gamma^*)}{!A(t)}$،
+    کیوں جے $!A(t)$ اک جملہ اے۔}}{}
+\tagitem{prvAll}{%
+  \iftag{probAll}{مشق۔}{\olref[syn][ass]{prop:sat-quant}
+    مطابق $\Sat{M(\Gamma^*)}{\lforall[x][!A(x)]}$
+    اُدوں تے صرف اُدوں جدوں ہر متغیر-قدر بندی
+    $s$ لئی $\Sat{M(\Gamma^*)}{!A(x)}[s]$۔
+    یاد کرو $\Domain{M(\Gamma^*)}$،
+    ~$\Lang{L}$ دے بند ٹرماں توں بنیا اے؛
+    ایس لئی ہر بند ٹرم~$t$ لئی $s(x) = t$
+    والی متغیر-قدر بندی ملدی اے، تے ہر متغیر-قدر
+    بندی لئی $s(x)$ کوئی بند ٹرم~$t$ اے۔
+    \olref[fol][syn][ext]{prop:ext-formulas} مطابق
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$ اُدوں تے
+    صرف اُدوں جدوں $\Sat{M(\Gamma^*)}{!A(t)}[s]$،
+    جتھے $s(x) = t$۔
+    \olref[fol][syn][ass]{prop:sentence-sat-true}
+    مطابق $\Sat{M(\Gamma^*)}{!A(t)}[s]$
+    اُدوں تے صرف اُدوں جدوں
+    $\Sat{M(\Gamma^*)}{!A(t)}$، کیوں جے
+    $!A(t)$ اک جملہ اے۔}}{}
+\end{tagenumerate}
+\end{proof}
+}{}
+
+\tagprob[FOL]{probEx,probAll}
+\begin{prob}
+\olref[fol][com][mod]{prop:quant-termmodel} دا ثبوت مکمل کرو۔
+\end{prob}
+\tagendprob
+
+\begin{lem}[صدق دا معاون قضیہ]
+\ollabel{lem:truth} \iftag{FOL}{فرض کرو $!A$ وچ~$\eq$ نہیں آوندا۔ تاں}{}
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$
+اُدوں تے صرف اُدوں جدوں $!A \in \Gamma^*$۔
+\end{lem}
+
+\begin{proof}
+اسیں دونیں رخ اکٹھے، $!A$ اُتے استقرا نال ثابت کردے آں۔
+\begin{enumerate}
+\tagitem{prvFalse}{\indcase{!A}{\lfalse}
+  {$\iftag{FOL}{\Sat/{M(\Gamma^*)}{\lfalse}}{\pSat/{v(\Gamma^*)}{\lfalse}}$
+    پورا ہون دی تعریف مطابق۔ دوجے پاسے
+    $\lfalse \notin
+    \Gamma^*$، کیونکہ $\Gamma^*$ بے تضاد اے۔}}{}
+
+\tagitem{prvTrue}{\indcase{!A}{\ltrue}
+  {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\ltrue}$
+    پورا ہون دی تعریف مطابق۔ دوجے پاسے
+    $\ltrue \in
+    \Gamma^*$، کیونکہ $\Gamma^*$ بے تضاد تے
+    !!{complete} اے، تے
+    $\Gamma^* \Proves \ltrue$۔}}{}
+
+\tagitem{FOL}{\indcase{!A}{R(t_1, \dots, t_n)}
+  {$\Sat{M(\Gamma^*)}{\Atom{R}{t_1, \dots, t_n}}$
+    اُدوں تے صرف اُدوں جدوں $\tuple{t_1,
+      \dots, t_n} \in \Assign{R}{M(\Gamma^*)}$
+    (پورا ہون دی تعریف مطابق)، تے ایہ
+    اُدوں تے صرف اُدوں جدوں
+    $R(t_1, \dots, t_n) \in \Gamma^*$
+    ($\Struct
+    M(\Gamma^*)$ دی تعمیر مطابق)۔}}{\indcase{!A}{p}
+  {$\pSat{v(\Gamma^*)}{p}$ اُدوں تے صرف
+    اُدوں جدوں $\pAssign v(\Gamma^*)(p) = \True$
+    (پورا ہون دی تعریف مطابق)، تے ایہ
+    اُدوں تے صرف اُدوں جدوں
+    $p \in \Gamma^*$ ($\pAssign v(\Gamma^*)$
+    دی تعمیر مطابق)۔}}
+
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$
+    اُدوں تے صرف اُدوں جدوں
+    $\iftag{FOL}{\Sat/{M(\Gamma^*)}{!B}}{\pSat/{v(\Gamma^*)}{!B}}$
+    (پورا ہون دی تعریف مطابق)۔ استقرا دے مفروضے
+    توں $\iftag{FOL}{\Sat/{M(\Gamma^*)}{!B}}{\pSat/{v(\Gamma^*)}{!B}}$
+    اُدوں تے صرف اُدوں جدوں
+    $!B \notin \Gamma^*$۔
+    چونکہ $\Gamma^*$ بے تضاد تے !!{complete}
+    اے، $!B
+    \notin \Gamma^*$ اُدوں تے صرف اُدوں جدوں
+    $\lnot !B \in \Gamma^*$۔}}{}
+
+\tagitem{prvAnd}{%
+\iftag{probAnd}{%
+  \indcase!{!A}{!B \land !C}{}}{%
+  \indcase{!A}{!B \land
+    !C}{$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$
+    اُدوں تے صرف اُدوں جدوں
+    $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!B}$
+    تے $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$
+    دونیں ہون (پورا ہون دی تعریف مطابق)؛
+    استقرا دے مفروضے مطابق ایہ اُدوں تے صرف
+    اُدوں جدوں $!B \in \Gamma^*$ تے
+    $!C \in
+    \Gamma^*$ دونیں ہون۔
+    \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-and}
+    مطابق ایہ اُدوں تے صرف اُدوں جدوں
+    $(!B \land !C) \in \Gamma^*$۔}}}{}
+
+\tagitem{prvOr}{%
+\iftag{probOr}{%
+  \indcase!{!A}{!B \lor !C}{}}{%
+  \indcase{!A}{!B \lor !C}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$
+    اُدوں تے صرف اُدوں جدوں
+    $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!B}$
+    یا $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$
+    ہووے (پورا ہون دی تعریف مطابق)؛
+    استقرا دے مفروضے مطابق ایہ اُدوں تے صرف
+    اُدوں جدوں $!B \in \Gamma^*$ یا
+    $!C \in
+    \Gamma^*$۔ ایہ اُدوں تے صرف اُدوں جدوں
+    $(!B
+    \lor !C) \in \Gamma^*$
+    (\olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-or}
+    مطابق)۔}}}{}
+
+\tagitem{prvIf}{%
+\iftag{probIf}{%
+  \indcase!{!A}{!B \lif !C}{}}{%
+  \indcase{!A}{!B \lif !C}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$
+    اُدوں تے صرف اُدوں جدوں
+    $\iftag{FOL}{\Sat/{M(\Gamma^*)}}{\pSat/{v(\Gamma^*)}}{!B}$
+    یا $\iftag{FOL}{\Sat{M (\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$
+    ہووے (پورا ہون دی تعریف مطابق)؛
+    استقرا دے مفروضے مطابق ایہ اُدوں تے صرف
+    اُدوں جدوں $!B \notin \Gamma^*$ یا
+    $!C \in
+    \Gamma^*$۔ ایہ اُدوں تے صرف اُدوں جدوں
+    $(!B
+    \lif !C) \in \Gamma^*$
+    (\olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-if}
+    مطابق)۔}}}{}
+
+\iftag{FOL}{%
+\tagitem{prvAll}{%
+  \iftag{probAll}{%
+    \indcase!{!A}{\lforall[x][!B(x)]}{}}{%
+    % PNB-COM-003: بند ٹرم دی قید ماڈل دی تعریف تے prop:quant-termmodel مطابق۔
+    \indcase{!A}{\lforall[x][!B(x)]}{$\Sat{M(\Gamma^*)}{\indfrm}$
+      اُدوں تے صرف اُدوں جدوں
+      $\Sat{M(\Gamma^*)}{!B(t)}$ ہر بند ٹرم~$t$ لئی
+      (\olref{prop:quant-termmodel})۔ استقرا دے
+      مفروضے مطابق ایہ اُدوں تے صرف اُدوں جدوں
+      $!B(t) \in \Gamma^*$ ہر بند ٹرم~$t$ لئی؛
+      \olref[hen]{prop:saturated-instances} مطابق
+      ایہ اگوں اُدوں تے صرف اُدوں جدوں
+      % PNB-COM-004: موجودہ صورت B(x) اے؛ منجمد A(x) نال تصادم۔
+      $\lforall[x][!B(x)] \in \Gamma^*$۔}}}{}
+
+\tagitem{prvEx}{%
+  \iftag{probEx}{%
+    \indcase!{!A}{\lexists[x][!B(x)]}{}}{%
+    % PNB-COM-003: وجودی صورت وچ وی بند ٹرم دی قید۔
+    \indcase{!A}{\lexists[x][!B(x)]}{$\Sat{M(\Gamma^*)}{\indfrm}$
+      اُدوں تے صرف اُدوں جدوں
+      $\Sat{M(\Gamma^*)}{!B(t)}$ گھٹ توں
+      گھٹ اک بند ٹرم~$t$ لئی
+      (\olref{prop:quant-termmodel})۔ استقرا دے
+      مفروضے مطابق ایہ اُدوں تے صرف اُدوں جدوں
+      $!B(t) \in \Gamma^*$ گھٹ توں گھٹ اک
+      بند ٹرم~$t$ لئی۔ ہُن
+      \olref[hen]{prop:saturated-instances} مطابق
+      ایہ اگوں اُدوں تے صرف اُدوں جدوں
+      $\lexists[x][!B(x)] \in \Gamma^*$۔}}}{}
+}{}
+\end{enumerate}
+\end{proof}
+
+
+\tagprob[FOL]{probOr,probAnd,probIf,probEx,probAll}
+
+\begin{prob}
+\olref[fol][com][mod]{lem:truth} دا ثبوت مکمل کرو۔
+\end{prob}
+
+\tagendprob
+
+\tagprob[notFOL]{probOr,probAnd,probIf}
+
+\begin{prob}
+\olref[pl][com][mod]{lem:truth} دا ثبوت مکمل کرو۔
+\end{prob}
+
+\tagendprob
+
+\end{document}

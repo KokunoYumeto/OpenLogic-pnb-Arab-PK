@@ -8,11 +8,11 @@
 
 \olfileid{pl}{syn}{pre}
 
-\olsection{مُڈھلیاں گلاں}
+\olsection{مُڈھلیاں گلاں (Preliminaries)}
 
-\begin{thm}[\emph{!!{formula}s اُتے استقرا دا اصول}]
+\begin{thm}[\emph{!!{formula}s اُتے استقرا دا اصول (Principle of induction on formulas)}]
   \ollabel{thm:induction}
-  جے کوئی خاصیت~$P$ سارے ایٹمی !!{formula}s لئی پوری ہُندی اے تے
+  جے کوئی خاصیت~$P$ سارے ایٹمی (atomic) !!{formula}s لئی پوری ہُندی اے تے
   اینج اے کہ
   \begin{enumerate}
     \tagitem{prvNot}{ایہ $\lnot !A$ لئی پوری ہُندی اے جدوں وی ایہ
@@ -30,76 +30,83 @@
 \end{thm}
 
 \begin{proof}
-  $S$ نوں اوہناں سارے !!{formula}s دی جماعت منّو جنہاں وچ
+  $S$ نوں اوہناں سارے !!{formula}s دی جماعت (class) منّو جنہاں وچ
   خاصیت~$P$ اے۔ صاف اے کہ $S \subseteq \Frm[L_0]$۔ $S$،
   \olref[fml]{defn:formulas} دیاں ساریاں شرطاں پوری کردا اے: ایہدے وچ
-  سارے ایٹمی !!{formula}s نیں تے ایہ !!{operator}s تحت بند اے۔
-  $\Frm[L_0]$ ایہو جہی سب توں چھوٹی جماعت اے، سو
+  سارے ایٹمی !!{formula}s نیں تے ایہ !!{operator}s تحت بند (closed
+  under the operators) اے۔ $\Frm[L_0]$ ایہو جہی سب توں چھوٹی
+  (smallest) جماعت اے، سو
   $\Frm[L_0] \subseteq S$۔ ایس لئی $\Frm[L_0] = S$، تے ہر فارمولے
   وچ خاصیت~$P$ اے۔
 \end{proof}
 
 \begin{prop}\ollabel{prop:balanced}
-   $\Frm[L_0]$ وچ ہر !!{formula} \emph{متوازن} اے، یعنی اوہدے وچ
-   کھبیاں قوساں اونّیاں ای نیں جِنّیاں سجیاں قوساں۔
+   $\Frm[L_0]$ وچ ہر !!{formula} \emph{متوازن (balanced)} اے، یعنی اوہدے وچ
+   کھبیاں قوساں (left parentheses) اونّیاں ای نیں جِنّیاں سجیاں
+   قوساں (right parentheses)۔
 \end{prop}
 
 \begin{prob}
-\olref[pl][syn][pre]{prop:balanced} ثابت کرو۔
+\olref[pl][syn][pre]{prop:balanced} ثابت (Prove) کرو۔
 \end{prob}
 
 \begin{prop} \ollabel{prop:noinit}
-کسی !!a{formula} دا پورے توں چھوٹا مُڈھلا ٹکڑا !!a{formula} نہیں ہُندا۔
+کسی !!a{formula} دا پورے توں چھوٹا مُڈھلا ٹکڑا (proper initial
+segment) !!a{formula} نہیں ہُندا۔
 \end{prop}
 
 \begin{prob}
-  \olref[pl][syn][pre]{prop:noinit} ثابت کرو۔
+  \olref[pl][syn][pre]{prop:noinit} ثابت (Prove) کرو۔
 \end{prob}
 
-\begin{prop}[اکّو طرح نال پڑھت]
+\begin{prop}[اکّو طرح نال پڑھت (Unique Readability)]
 ہر !!{formula}~$!A$، جیہڑا $ \Frm[L_0]$ وچ اے، اوہدا اگلیاں صورتاں
-وچوں کسے اک دے طور تے تجزیہ ٹھیک اکّو طریقے نال ہُندا اے:
+وچوں کسے اک دے طور تے تجزیہ (parsing) ٹھیک اکّو طریقے نال ہُندا اے:
 \begin{enumerate}
 \tagitem{prvFalse}{$\lfalse$۔}{}
 
-\tagitem{prvTrue}{$\ltrue$۔}{}
+\tagitem{prvTrue}{$\ltrue$ (truth)۔}{}
 
-\item $\Obj p_n$، کسے $\Obj p_n \in  \PVar$ لئی۔
+\item $\Obj p_n$، کسے قضیاتی متغیر (propositional variable)
+$\Obj p_n \in  \PVar$ لئی۔
 
-\tagitem{prvNot}{$\lnot !B$، کسے !!{formula}~$!B$ لئی۔}{}
+\tagitem{prvNot}{$\lnot !B$ (negation)، کسے !!{formula}~$!B$ لئی۔}{}
 
-\tagitem{prvAnd}{$(!B \land !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+\tagitem{prvAnd}{$(!B \land !C)$ (conjunction)، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
 
-\tagitem{prvOr}{$(!B \lor !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+\tagitem{prvOr}{$(!B \lor !C)$ (disjunction)، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
 
-\tagitem{prvIf}{$(!B \lif !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+\tagitem{prvIf}{$(!B \lif !C)$ (conditional)، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
 
-\tagitem{prvIff}{$(!B \liff !C)$، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
+\tagitem{prvIff}{$(!B \liff !C)$ (biconditional)، کسے !!{formula}s $!B$ تے~$!C$ لئی۔}{}
 \end{enumerate}
-ہور ایہ تجزیاتی پڑھت \emph{اکّو ای} ہُندی اے۔
+ہور ایہ تجزیاتی پڑھت (parsing) \emph{اکّو ای (unique)} ہُندی اے۔
 \end{prop}
 
 \begin{proof}
-$!A$ اُتے استقرا نال۔ مثال لئی، منّو کہ $!A$ دیاں دو وکھریاں پڑھتاں
+$!A$ اُتے استقرا (induction) نال۔ مثال لئی، منّو کہ $!A$ دیاں دو وکھریاں پڑھتاں
 $(!B \lif !C)$ تے $(!B' \lif !C')$ نیں۔ تاں $!B$ تے $!B'$ لازماً
-اکّو ہون گے (نہیں تاں اک دوجے دا پورے توں چھوٹا مُڈھلا ٹکڑا ہُندا)؛ سو
+اکّو ہون گے (نہیں تاں اک دوجے دا proper initial segment، یعنی پورے توں
+چھوٹا مُڈھلا ٹکڑا، ہُندا)؛ سو
 جے $!A$ دیاں دونیں پڑھتاں وکھریاں نیں تاں وجہ ایہو ہو سکدی اے کہ
-$!C$ تے $!C'$ علامتاں دی اکّو لڑی دیاں وکھریاں پڑھتاں نیں، جیہڑی گل
-استقرائی مفروضے موجب ناممکن اے۔
+$!C$ تے $!C'$ علامتاں دی اکّو لڑی (same sequence of symbols) دیاں
+وکھریاں پڑھتاں نیں، جیہڑی گل استقرائی مفروضے (inductive hypothesis)
+موجب ناممکن اے۔
 \end{proof}
 
-\begin{defn}[یکساں بدل]
+\begin{defn}[یکساں بدل (Uniform Substitution)]
 جے $!A$ تے $!B$، !!{formula}s نیں، تے $\Obj p_i$ اک !!{propositional
 variable} اے، تاں $\Subst{!A}{!B}{\Obj p_i}$ اوہ نتیجہ ظاہر کردا اے
-جیہڑا $\Obj p_i$ دی ہر واری آمد نوں $!B$ دی اک آمد نال $!A$ وچ بدل
-کے ملدا اے؛ ایسّے طرح $\Obj p_1$، \dots،~$\Obj p_n$ نوں اکّو ویلے
+جیہڑا $\Obj p_i$ دی ہر واری آمد (each occurrence) نوں $!B$ دی اک آمد
+نال $!A$ وچ بدل کے ملدا اے؛ ایسّے طرح $\Obj p_1$، \dots،~$\Obj p_n$
+نوں اکّو ویلے (simultaneous substitution)
 !!{formula}s $!B_1$، \dots،~$!B_n$ نال بدلنا
 $\SSubst{!A}{\subst{!B_1}{\Obj p_1},\dots,\subst{!B_n}{\Obj p_n}}$
 نال ظاہر کیتا جاندا اے۔
 \end{defn}
 
 \begin{prob} تھلے دتے پنجاں !!{formula}s وچوں ہر اک لئی طے کرو کہ کی
- اوہ !!{formula} بدل \( \Subst{!A}{!B}{\Obj p_i} \) دے روپ وچ لکھیا
+ اوہ !!{formula} بدل (substitution) \( \Subst{!A}{!B}{\Obj p_i} \) دے روپ وچ لکھیا
  جا سکدا اے، جتھے \( !A \) ایہ اے: (i) \( \Obj p_0 \)؛ (ii)
  \( ( \lnot \Obj p_0 \land \Obj p_1) \)؛ تے (iii)
  \( ( ( \lnot \Obj p_0 \lif \Obj p_1 ) \land \Obj p_2 ) \)۔ ہر
@@ -114,7 +121,8 @@ $\SSubst{!A}{\subst{!B_1}{\Obj p_1},\dots,\subst{!B_n}{\Obj p_n}}$
 \end{prob}
 
 \begin{prob}
-استقرا نال $\Subst{!A}{!B}{p}$ دی ریاضیاتی طور تے ٹھوس تعریف دیو۔
+استقرا (induction) نال $\Subst{!A}{!B}{p}$ دی ریاضیاتی طور تے ٹھوس
+(mathematically rigorous) تعریف دیو۔
 \end{prob}
 
 \end{document}

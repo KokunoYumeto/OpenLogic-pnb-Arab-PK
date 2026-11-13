@@ -1,0 +1,71 @@
+% part: intuitionistic-logic
+% chapter: semantics
+% section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sem}{sem}
+
+\olsection{معنیاتی دھارناواں}
+
+\begin{defn}
+  اسیں آکھدے آں کہ $!A$ \emph{نمونے $\mModel{M} = \tuple{W,R,V}$ وچ سچ اے}، یعنی $
+  \mSat{M}{!A}$، اُدوں تے صرف اُدوں جدوں $\mSat{M}{!A}[w]$ ہر $w \in W$ لئی ہووے۔
+  $!A$ \emph{معتبر اے}، یعنی $\Entails !A$، اُدوں تے صرف اُدوں جدوں ایہ سارے نمونیاں وچ سچ ہووے۔
+  اسیں آکھدے آں کہ !!{formula}s دے سیٹ~$\Gamma$ دا \emph{معنوی نتیجہ}~$!A$ اے، یعنی $\Gamma
+  \Entails !A$، اُدوں تے صرف اُدوں جدوں ہر نمونے~$\mModel{M}$ تے ہر ایہو جیہے~$w$
+  لئی، جتھے $\mSat{M}{\Gamma}[w]$ ہووے، $\mSat{M}{!A}[w]$ وی ہووے۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:sat-entails}
+  \begin{enumerate}
+  \item\ollabel{prop:sat-entails1} جے $\mSat{M}{\Gamma}[w]$ تے
+    $\Gamma \Entails !A$، تاں $\mSat{M}{!A}[w]$۔
+  \item\ollabel{prop:sat-entails2} جے $\mSat{M}{\Gamma}$ تے $\Gamma
+    \Entails !A$، تاں $\mSat{M}{!A}$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item فرض کرو $\mSat{M}{\Gamma}$۔ چونکہ $\Gamma \Entails !A$، اسیں
+    جاندے آں کہ جے $\mSat{M}{\Gamma}[w]$، تاں $\mSat{M}{!A}[w]$۔
+    چونکہ $\mSat{M}{\Gamma}[u]$ ہر $u \in W$ لئی اے، ایس لئی
+    $\mSat{M}{\Gamma}[w]$۔ سو $\mSat{M}{!A}[w]$۔
+  \item ایہ \olref{prop:sat-entails1} توں سدھا نکلدا اے۔
+  \end{enumerate}
+\end{proof}
+
+\begin{defn}\ollabel{defn:restrict}
+  فرض کرو $\mModel{M}$ اک تعلقی نمونہ اے تے $w \in W$۔ 
+  \emph{محدود نمونہ} $\mModel{M}_w=\tuple{W_w, R_w, V_w}$، جیہڑا
+  ~$\mModel{M}$ نوں~$w$ تک محدود کر کے ملدا اے، ایویں دتا جاندا اے:
+  \begin{align*}
+    W_w & = \Setabs{u \in W}{Rwu},\\
+    R_w  & = R \cap (W_w)^2, \text{ تے }\\
+    V_w(p) & = V(p) \cap W_w.
+  \end{align*}
+\end{defn}
+
+\begin{prop}\ollabel{prop:restrict}
+  $\mSat{M}{!A}[w]$ اُدوں تے صرف اُدوں اے جدوں $\mSat{M_w}{!A}$۔
+\end{prop}
+
+\begin{prob}
+  \olref[int][sem][sem]{prop:restrict} ثابت کرو۔
+\end{prob}
+
+\begin{prop}
+  فرض کرو ہر ایہو جیہے نمونے~$\mModel{M}$ لئی، جتھے $\mSat{M}{\Gamma}$،
+  اوتھے $\mSat{M}{!A}$ وی اے۔ فیر $\Gamma \Entails !A$۔
+\end{prop}
+
+\begin{proof}
+  فرض کرو $\mSat{M}{\Gamma}[w]$۔ \olref{prop:restrict} ہر~$!B \in \Gamma$ اُتے
+  لاؤن نال سانوں $\mSat{M_w}{\Gamma}$ ملدا اے۔ مفروضے نال $\mSat{M_w}{!A}$۔
+  \olref{prop:restrict} دوبارہ لا کے سانوں $\mSat{M}{!A}[w]$ ملدا اے۔
+\end{proof}
+
+\end{document}

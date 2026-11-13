@@ -1,0 +1,134 @@
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: deduction-theorem
+
+% verification of properties of provability needed for maximally 
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ded}}
+      {\olfileid{pl}{axd}{ded}}
+
+\olsection{استنباط دا قضیہ (Deduction Theorem)}
+
+جیویں اسیں ویکھیا اے، مسلّمی نظام وچ !!{derivation}s لکھنا اوکھا اے
+تے !!{derivation}s لبھنا وی مشکل ہو سکدا اے۔ !!{formula}s دیاں
+لمیاں فہرستاں عملاً لکھن دی تھاں عموماً کجھ سادے نتیجے ورت کے ایہہ
+دسنا سوکھا ہوندا اے کہ ایسے !!{derivation}s موجود نیں۔ اسیں پہلے
+ایہو جیہے تین نتیجے ثابت کر چکے آں:
+\olref[ptn]{prop:reflexivity} دسدا اے کہ اسیں ہمیشہ $\Gamma
+\Proves !A$ آکھ سکدے آں، جدوں ایہہ معلوم ہووے کہ $!A \in
+\Gamma$۔ \olref[ptn]{prop:monotonicity} دسدا اے کہ جے $\Gamma \Proves !A$
+تاں $\Gamma \cup \{!B\} \Proves !A$ وی اے۔ تے
+\olref[ptn]{prop:transitivity} توں نکلدا اے کہ جے $\Gamma \Proves !A$
+تے $!A \Proves !B$، تاں $\Gamma \Proves !B$۔ ہُن اک ہور سادا
+نتیجہ ویکھو: قاعدۂ اثباتِ مقدم دا اک ``میٹا'' روپ:
+
+\begin{prop}
+  \ollabel{prop:mp} جے $\Gamma \Proves !A$ تے $\Gamma \Proves !A \lif
+  !B$، تاں $\Gamma \Proves !B$۔
+\end{prop}
+
+\begin{proof}
+  ساڈے کول $\{!A, !A \lif !B\} \Proves !B$ اے:
+  \begin{derivation}
+    1. & $!A$ & مفروضہ\\
+    2. & $!A \lif !B$ & مفروضہ\\
+    3. & $!B$ & 1, 2, MP
+  \end{derivation}
+  \olref[ptn]{prop:transitivity} نال $\Gamma \Proves !B$ ملدا اے۔
+\end{proof}
+
+ایس سیاق وچ ساڈا سب توں اہم نتیجہ استنباط دا قضیہ اے:
+
+\begin{thm}[استنباط دا قضیہ]
+\ollabel{thm:deduction-thm} $\Gamma \cup \{!A\} \Proves !B$ اُدوں تے
+صرف اُدوں جدوں $\Gamma \Proves !A \lif !B$۔
+\end{thm}
+
+\begin{proof}
+``جے'' والا رخ فوراً مل جاندا اے۔ جے $\Gamma \Proves !A \lif !B$
+تاں \olref[ptn]{prop:monotonicity} دے مطابق $\Gamma \cup \{!A\} \Proves !A \lif !B$
+وی اے۔ \olref[ptn]{prop:reflexivity} توں $\Gamma \cup \{!A\} \Proves !A$
+وی اے۔ ایس لئی \olref{prop:mp} نال $\Gamma \cup
+\{!A\} \Proves !B$ ملدا اے۔
+
+``صرف اُدوں'' والے رخ لئی اسیں $!B$ دے $\Gamma \cup \{!A\}$
+توں !!{derivation} دی لمبائی اُتے استقرا کردے آں۔
+
+استقرا دی بنیاد وچ لمبائی~$1$ دے ہر !!{derivation} لئی دعویٰ
+ثابت کردے آں۔ $!B$ دا $\Gamma \cup \{!A\}$ توں لمبائی~$1$
+والا !!^a{derivation} اکّلے $!B$ اُتے مشتمل اے؛ جے ایہہ درست اے
+تاں $!B$ یا $\in \Gamma \cup \{!A\}$ اے یا مسلّمہ اے۔ جے
+$!B \in \Gamma$ اے یا مسلّمہ اے، تاں $\Gamma \Proves !B$۔
+نالے \olref[prp]{ax:lif1} توں $\Gamma
+\Proves !B \lif (!A \lif !B)$ وی اے؛ فیر \olref{prop:mp} توں
+$\Gamma \Proves !A \lif !B$ ملدا اے۔ جے $!B \in \{ !A\}$
+اے، تاں $\Gamma \Proves !A \lif !B$، کیوں جے ایس حالت وچ آخری
+!!{sentence}~$!A \lif !B$ اوہی $!A \lif !A$ اے، جیہڑا اسیں
+\olref[pro]{ex:identity} وچ !!{derive} کیتا اے۔
+
+استقرائی قدم وچ فرض کرو $!B$ دا $\Gamma \cup \{!A\}$ توں
+!!a{derivation} ایسے قدم~$!B$ اُتے ختم ہوندا اے جیہڑا قاعدۂ
+اثباتِ مقدم نال درست ٹھہردا اے۔ (جے آخری قدم ایس قاعدے نال درست
+نہیں ٹھہردا، تاں $!B \in \Gamma$ اے، $!B
+\ident !A$ اے، یا $!B$ مسلّمہ اے؛ تے استقرا دی بنیاد والی
+اوہی دلیل لاگو ہوندی اے۔) تاں !!{derivation} دے کجھ پچھلے قدم
+$!C \lif !B$ تے $!C$ نیں، کسے !!{formula}~$!C$ لئی؛ یعنی
+$\Gamma \cup \{!A\} \Proves !C \lif !B$ تے $\Gamma \cup \{!A\}
+\Proves !C$۔ ایہناں دے متعلقہ !!{derivation}s چھوٹے نیں، ایس لئی
+استقرائی مفروضہ اوہناں اُتے لاگو ہوندا اے۔ سو ساڈے کول دوویں نیں:
+\begin{align*}
+  & \Gamma \Proves !A \lif (!C \lif !B); \\
+  & \Gamma \Proves !A \lif !C.
+\end{align*}
+نالے \olref[prp]{ax:lif2} توں
+\[
+\Gamma \Proves (!A \lif (!C \lif !B)) \lif
+((!A\lif !C)  \lif (!A \lif !B)),
+\]
+تے \olref{prop:mp} دو واری لا کے مطلوبہ $\Gamma \Proves !A \lif !B$
+ملدا اے۔
+\end{proof}
+
+دھیان دیو کہ \olref[prp]{ax:lif1} تے \olref[prp]{ax:lif2}
+خاص ایس طرح چُنے گئے سن کہ استنباط دا قضیہ درست رہے۔
+
+!!{derivability} بارے ہٹھ لکھے کجھ کارآمد حقائق ثبوت لئی مشق
+وجوں چھڈدے آں۔
+
+\begin{prop}
+  \ollabel{prop:derivfacts}
+\begin{enumerate}
+% PNBAXD-003: پہلے نتیجے دے دو کھلے رہ گئے بریکٹ بند کیتے۔
+\item $\Proves (!A \lif !B) \lif ((!B \lif !C)
+  \lif (!A \lif !C))$؛ \ollabel{derivfacts:a}
+\item جے $\Gamma \cup \{ \lnot !A\}
+  \Proves \lnot !B$، تاں $\Gamma \cup \{ !B\} \Proves
+  !A$ (برعکس بالمخالف؛ Contraposition)؛ \ollabel{derivfacts:b}
+\item $\{ !A, \lnot!A\} \Proves
+    !B$ (تضاد توں ہر نتیجہ؛ Ex Falso Quodlibet, Explosion)؛ \ollabel{derivfacts:c}
+\item $\{ \lnot\lnot!A\} \Proves
+  !A$ (دوہری نفی دا خاتمہ؛ Double Negation Elimination)؛\ollabel{derivfacts:d}
+\item جے $\Gamma \Proves \lnot\lnot!A$، تاں $\Gamma \Proves
+  !A$؛\ollabel{derivfacts:e}
+\end{enumerate}
+\end{prop}
+
+\tagprob{FOL}
+\begin{prob}
+  \olref[fol][axd][ded]{prop:derivfacts} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+  \olref[pl][axd][ded]{prop:derivfacts} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\end{document}

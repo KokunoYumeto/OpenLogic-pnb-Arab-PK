@@ -1,0 +1,285 @@
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: alpha
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{alp}
+\olsection{$\alpha$-روپ بدلنا}
+
+$\lambd[x][x]$ تے $\lambd[y][y]$ دا آپس وچ کیہ تعلق اے؟
+دوویں عین اوہی قدر واپس دین والا فنکشن ظاہر کردے نیں۔ ظاہر اے کہ
+نحو دے لحاظ نال ایہ وکھرے ٹرم نیں۔ ایہناں وچ فرق بس پابند
+متغیر دے ناں دا اے۔ اک ٹرم دوجے وچ پابند متغیر دا ناں بدل کے
+ملدا اے۔ ایس نوں \emph{$\alpha$-روپ بدلنا} آکھدے آں۔
+
+\begin{defn}[پابند متغیر دا ناں بدلنا، $\aconvone$]
+  جے ٹرم $M$ وچ $\lambd[x][N]$ دی اک آمد اے، $y \notin
+  \FV{N}$ اے، تے $\Subst{N}{y}{x}$ معین اے، تاں ایس آمد دی تھاں
+  \begin{equation*}
+    \lambd[y][\Subst{N}{y}{x}]
+  \end{equation*}
+  رکھ کے $M'$ بناؤن نوں \emph{پابند متغیر دا ناں بدلنا} آکھدے
+  آں۔ اینوں $M \redone[\alpha] M'$ لکھدے آں۔
+\end{defn}
+
+\begin{defn}[تعلق دی موافقت]
+  ٹرماں اُتے تعلق $R$ نوں \emph{موافق} آکھدے آں جے ایہ
+  ہِٹھلیاں شرطاں پوریاں کردا اے۔
+  \begin{enumerate}
+  \item جے $R N N'$، تاں $R \lambd[x][N] \lambd[x][N']$
+  \item جے $R P P'$، تاں $R (PQ) (P'Q)$
+  \item جے $R Q Q'$، تاں $R (PQ) (PQ')$
+  \end{enumerate}
+\end{defn}
+
+سو تعریف نوں ہور طرح بیان کریے۔
+\begin{defn}[پابند متغیر دا ناں بدلنا، $\aconvone$]
+  \emph{پابند متغیر دا ناں بدلنا} ($\redone[\alpha]$) ٹرماں
+  اُتے سبھ توں چھوٹا موافق تعلق اے جیہڑا ہِٹھلی شرط پوری کردا اے۔
+  \begin{align*}
+    &\lambd[x][N] \redone[\alpha] \lambd[y][\Subst{N}{y}{x}] && \text{جے
+      $x \neq y$، $y \notin \FV{N}$} \\
+    & &&\text{تے $\Subst{N}{y}{x}$ معین اے}
+  \end{align*}
+\end{defn}
+
+ایتھے «سبھ توں چھوٹا» دا مطلب اے کہ تعلق وچ صرف اوہ جوڑے
+نیں جیہڑے موافقت تے ودھیک شرط پوری کرن لئی ضروری نیں۔ سو ایس
+تعلق دی تعریف ایویں وی ہو سکدی اے:
+
+\begin{defn}[پابند متغیر دا ناں بدلنا، $\aconvone$] \ollabel{defn:aconvone}
+  \emph{پابند متغیر دا ناں بدلنا} ($\aconvone$) استقرا نال
+  ایویں متعین ہوندا اے۔
+  \begin{enumerate}
+  \item جے $N \aconvone N'$، تاں $\lambd[x][N] \aconvone
+    \lambd[x][N']$۔ \ollabel{defn:aconvone1}
+  \item جے $P \aconvone P'$، تاں $(PQ) \aconvone (P'Q)$۔ \ollabel{defn:aconvone2}
+  \item جے $Q \aconvone Q'$، تاں $(PQ) \aconvone (PQ')$۔ \ollabel{defn:aconvone3}
+  \item جے $x \neq y$، $y \notin \FV{N}$ تے $\Subst{N}{y}{x}$ معین اے، تاں
+    $\lambd[x][N] \redone[\alpha] \lambd[y][\Subst{N}{y}{x}]$۔
+    \ollabel{defn:aconvone4}
+  \end{enumerate}
+\end{defn}
+
+دوویں تعریفاں ہم ارز نیں۔ ایہدا ثبوت اسیں مشق لئی چھڈدے آں۔
+اگّوں اسیں استقرائی تعریف ورتاں گے۔
+
+\begin{defn}[$\alpha$-روپ بدلنا، $\aconv$]
+  \emph{$\alpha$-روپ بدلنا} ($\aconv$) ٹرماں اُتے سبھ توں چھوٹا
+  انعکاسی تے تعدّی والا تعلق اے جیہدے اندر $\aconvone$ شامل اے۔
+\end{defn}
+
+اُتے وانگ، «سبھ توں چھوٹا» دا مطلب اے کہ تعلق وچ بس اوہی
+جوڑے نیں جیہڑے تعدّی تے $\aconvone$ کر کے ضروری نیں۔ ایس توں
+ہِٹھلی ہم ارز تعریف ملدی اے:
+
+\begin{defn}[$\alpha$-روپ بدلنا، $\aconv$] \ollabel{defn:aconv}
+  \emph{$\alpha$-روپ بدلنا} ($\aconv$) استقرا نال ایویں متعین ہوندا اے۔
+  \begin{enumerate}
+  \item جے $P \aconv Q$ تے $Q \aconv R$، تاں $P \aconv R$۔
+    \ollabel{defn:aconv1}
+  \item جے $P \aconvone Q$، تاں $P \aconv Q$۔ \ollabel{defn:aconv2}
+  \item $P \aconv P$۔ \ollabel{defn:aconv3}
+  \end{enumerate}
+\end{defn}
+
+\begin{ex}
+  $\lambd[x][f x]$ دا $\alpha$-روپ بدل کے $\lambd[y][f
+  y]$ ملدا اے، تے اُلٹا وی۔ سادہ لفظاں وچ، دوویں ایہو جیہے
+  فنکشن نیں جیہڑے اک دلیل لیندے نیں تے اوہ دلیل اُتے $f$ لاؤن دا
+  نتیجہ دیندے نیں۔ ایتھے حوالہ ماحول دے متغیر~$f$ دا اے۔
+
+  $\lambd[x][f x]$ دا $\alpha$-روپ بدل کے $\lambd[x][g
+    x]$ نہیں ملدا۔ سادہ لفظاں وچ، ایہ بالترتیب ماحول دے متغیراں
+  $f$ تے~$g$ ول اشارہ کردے نیں، ایس لئی ایہ وکھرے فنکشن نیں۔
+  جیہڑے ماحول وچ $f$ تے $g$ وکھرے ہون، اوتھے ایہناں دا ورتاؤ
+  وی وکھرا اے۔
+\end{ex}
+
+\begin{prob}
+  کی ہِٹھلے ٹرماں دے جوڑیاں وچ $\alpha$-روپ بدلیا جا سکدا اے؟
+  \begin{enumerate}
+  \item $\lambd[x][\lambd[y][x]]$ تے $\lambd[y][\lambd[x][y]]$
+  \item $\lambd[x][\lambd[y][x]]$ تے $\lambd[c][\lambd[b][a]]$
+  \item $\lambd[x][\lambd[y][x]]$ تے $\lambd[c][\lambd[b][a]]$
+  \end{enumerate}
+\end{prob}
+
+\begin{lem}\ollabel{lem:fv-one}
+  جے $P \aconvone Q$، تاں $\FV{P} = \FV{Q}$۔
+\end{lem}
+
+\begin{proof}
+  $P \aconvone Q$ دے !!{derivation} اُتے استقرا نال۔
+  \begin{enumerate}
+  \item جے آخری قاعدہ \olref{defn:aconvone4} اے، تاں $P$ دی
+    شکل $\lambd[x][N]$ تے $Q$ دی شکل
+    $\lambd[y][\Subst{N}{y}{x}]$ اے، جتھے $x \neq y$، $y \notin \FV{N}$
+    تے $\Subst{N}{y}{x}$ معین اے۔ اسیں $x \in \FV{N}$ دے
+    ہون یا نہ ہون مطابق صورتاں وکھ کردے آں۔
+    \begin{enumerate}
+    \item جے $x \in FV(N)$، تاں۔
+      \begin{align*}
+        \FV{\lambd[y][\Subst{N}{y}{x}]} &=
+        \FV{\Subst{N}{y}{x}} \setminus \{y\} \\
+        & = ((\FV{N} \setminus \{x\}) \cup \{y\}) \setminus \{y\}
+         && \text{ \olref[sub]{thm:infv} مطابق} \\
+        & = \FV{N} \setminus \{x\} \\
+        & = \FV{\lambd[x][N]}
+      \end{align*}
+    \item جے $x \notin FV(N)$، تاں۔
+      \begin{align*}
+        \FV{\lambd[y][\Subst{N}{y}{x}]}
+        & = FV{\Subst{N}{y}{x}} \setminus \{y\} \\
+        & = \FV{N} \setminus \{x\}
+         && \text{\olref[sub]{thm:notinfv} مطابق} \\
+        & = \FV{\lambd[x][N]}.
+      \end{align*}
+    \end{enumerate}
+  \item باقی تِن صورتاں مشق لئی چھڈدے آں۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:fv-one} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{lem}\ollabel{lem:inv}
+  جے $P \aconvone Q$، تاں $Q \aconvone P$۔
+\end{lem}
+
+\begin{proof}
+  $P \aconvone Q$ دے !!{derivation} اُتے استقرا۔
+  \begin{enumerate}
+  \item جے آخری قاعدہ \olref{defn:aconvone4} اے، تاں $P$ دی
+    شکل $\lambd[x][N]$ تے $Q$ دی شکل
+    $\lambd[y][\Subst{N}{y}{x}]$ اے، جتھے $x \neq y$، $y \notin \FV{N}$
+    تے $\Subst{N}{y}{x}$ معین اے۔ پہلاں، $y \notin
+    \FV{\Subst{N}{y}{x}}$، \olref[sub]{thm:clr} مطابق۔
+    \olref[sub]{thm:inv} توں ملدا اے کہ $\Subst{\Subst{N}{y}{x}}{x}{y}$
+    معین اے تے~$N$ دے برابر وی اے۔ فیر \olref{defn:aconvone4}
+    مطابق $\lambd[y][\Subst{N}{y}{x}]
+    \aconvone \lambd[x][\Subst{\Subst{N}{y}{x}}{x}{y}] =
+    \lambd[x][N]$۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:inv} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{thm}
+  $\alpha$-روپ بدلنا ٹرماں اُتے اک ہم ارزیتی تعلق اے، یعنی
+  ایہ انعکاسی، متقابل تے تعدّی والا اے۔
+\end{thm}
+
+\begin{proof}
+  \begin{enumerate}
+  \item ہر ٹرم $M$ لئی، $M$ نوں $M$ وچ \emph{صفر} پابند ناں بدل کے
+    بدلیا جا سکدا اے۔
+  \item جے $P$ دا $\alpha$-روپ پابند ناں بدلن دے اک سلسلے نال
+    $Q$ بنے، تاں $Q$ توں اسیں ایہناں بدلاں نوں
+    \olref{lem:inv} مطابق اُلٹی ترتیب وچ واپس کر کے~$P$ حاصل
+    کر سکدے آں۔
+  \item جے $P$ دا $\alpha$-روپ پابند ناں بدلن دے اک سلسلے نال
+    $Q$، تے $Q$ دا دوجے سلسلے نال $R$ بنے، تاں پہلا سلسلہ
+    تے فیر دوجا سلسلہ ورت کے $P$ نوں $R$ وچ بدل سکدے آں۔
+  \end{enumerate}
+\end{proof}
+
+اگّوں اسیں آکھاں گے کہ $M$ تے $N$ \emph{$\alpha$-ہم ارز}
+نیں، $M
+\aeq N$، جے تے صرف جے $M$ دا $\alpha$-روپ بدل کے $N$ ملے۔
+جیویں ہُن دکھایا اے، ایہ اُدوں تے صرف اُدوں ہوندا اے جدوں $N$
+دا $\alpha$-روپ بدل کے~$M$ ملے۔
+
+\begin{thm}\ollabel{thm:fv}
+  جے $M \aeq N$، تاں $\FV{M} = \FV{N}$۔
+\end{thm}
+
+\begin{proof}
+  \olref{lem:fv-one} توں سیدھا ملدا اے۔
+\end{proof}
+
+\begin{lem}\ollabel{lem:sub:R}
+  جے $R \aeq R'$ تے $\Subst{M}{R}{y}$ معین اے، تاں
+  $\Subst{M}{R'}{y}$ معین اے تے $\alpha$-ہم ارز اے
+  $\Subst{M}{R}{y}$ نال۔
+\end{lem}
+
+\begin{proof}
+  مشق۔
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:sub:R} ثابت کرو۔
+\end{prob}
+
+یاد کرو کہ \olref[sub]{sec} وچ کجھ صورتاں لئی بدل غیر معین اے۔
+پر ٹرماں دا $\alpha$-روپ بدل کے اسیں پابند متغیراں دے ناں
+ایویں بدل سکدے آں کہ بدل ہمیشہ معین ہووے۔ نتیجہ $\alpha$-ہم ارزی
+قائم رکھدا اے، جیویں ایہ قضیہ دسدا اے:
+
+\begin{thm}\ollabel{thm:sub}
+  ہر $M$، $R$ تے~$y$ لئی، کوئی $M'$ موجود اے جیہدے لئی $M \aeq M'$
+  تے $\Subst{M'}{R}{y}$ معین اے۔ نالے جے کوئی ہور جوڑا
+  $M'' \aeq M$ تے $R''$ اے جیہدے لئی $\Subst{M''}{R''}{y}$
+  معین اے تے $R'' \aeq R$، تاں $\Subst{M'}{R}{y} \aeq \Subst{M''}{R''}{y}$۔
+\end{thm}
+
+\begin{proof}
+  $M$ دی بناوٹ اُتے استقرا نال۔
+  \begin{enumerate}
+  \item $M$ اک متغیر~$z$ اے۔ مشق۔
+  \item فرض کرو $M$ دی شکل $\lambd[x][N]$ اے۔ ایہو جیہا متغیر
+    $z$ چُنو جیہڑا $x$ تے $y$ توں وکھرا ہووے تے جیہدے لئی
+    $z \notin \FV{N}$ تے $z
+    \notin \FV{R}$۔ استقرائی مفروضے مطابق کوئی $N'$ اے جیہدے
+    لئی $N' \aeq N$ تے $\Subst{N'}{z}{x}$ معین اے۔ فیر
+    $\lambd[x][N] \aeq \lambd[x][N']$ وی اے، جیویں
+    \olref{defn:aconvone}\olref{defn:aconvone1} توں ملدا اے۔
+    ہُن $\lambd[x][N']
+    \aeq \lambd[z][\Subst{N'}{z}{x}]$ اے،
+    \olref{defn:aconvone}\olref{defn:aconvone4} مطابق۔ ایہ
+    کر سکدے آں کیوں جے $z \ne x$، $z \notin FV(N')$ تے
+    $\Subst{N'}{z}{x}$ معین اے۔ آخر وچ
+    $\Subst{\lambd[z][\Subst{N'}{z}{x}]}{R}{y}$ معین اے،
+    کیوں جے $z \neq y$ تے $z \notin FV(R)$۔
+
+    نالے جے کوئی ہور $N''$ تے $R''$ اوہو شرطاں پوریاں کرن، تاں۔
+    \begin{multline*}
+      \Subst{(\lambd[z][\Subst{N''}{z}{x}])}{R''}{y} =\\
+    \begin{aligned}
+      &= \lambd[z][\Subst{\Subst{N''}{z}{x}}{R''}{y}] \\
+      &= \lambd[z][\Subst{\Subst{N''}{z}{x}}{R}{y}] && \text{
+        \olref{lem:sub:R} مطابق}\\
+      &=\lambd[z][\Subst{\Subst{N'}{z}{x}}{R}{y}]
+      && \text{استقرائی
+        مفروضے مطابق}\\
+      &=\Subst{(\lambd[z][\Subst{N'}{z}{x}])}{R}{y}
+    \end{aligned}
+    \end{multline*}
+    \item $M$ دی شکل $(PQ)$ اے۔ مشق۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{thm:sub} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{cor}\ollabel{cor:sub}
+  ہر $M$، $R$ تے~$y$ لئی $M'$ تے $R'$ دا اک جوڑا موجود اے
+  جیہدے لئی $M' \aeq M$، $R \aeq R'$ تے $\Subst{M'}{R'}{y}$
+  معین اے۔ نالے جے کوئی ہور جوڑا $M'' \aeq M$ تے $R''$ اے
+  جیہدے نال $\Subst{M'}{R'}{y}$ معین اے، تاں $\Subst{M'}{R'}{y} \aeq
+  \Subst{M''}{R''}{y}$۔
+\end{cor}
+
+\begin{proof}
+  \olref{thm:sub} توں سیدھا ملدا اے۔
+\end{proof}
+
+\end{document}

@@ -1,0 +1,86 @@
+% Part: first-order-logic
+% Chapter: models-theories
+% Section: size-of-structures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{mat}{siz}
+
+\olsection{\printtoken{P}{structure} دا سائز ظاہر کرنا}
+
+\begin{explain}
+ساختاں دیاں کجھ خاصیتاں اسیں زبان دیاں غیر منطقی علامتاں
+ورتے بغیر وی ظاہر کر سکدے آں۔ مثال لئی کجھ
+!!{sentence}s ایداں دے نیں جیہڑے کسے !!a{structure}
+وچ جے تے صرف جے سچے ہوندے نیں جدوں اس !!{structure}
+دے !!{domain} وچ !!{element}s دی گنتی کسے خاص
+مثبت عدد~$n$ توں گھٹ نہ ہووے، ودھ نہ ہووے، یا عین اوہنی ہووے۔
+% PNB-SEM-026: نقطیاں والے خاکے مثبت گنتی مطابق محدود جوڑاں دے مخفف نیں؛ اک لئی خالی جوڑ سچ اے۔
+ہیٹھاں نقطیاں والیاں عبارتیں مطلوب گنتی مطابق محدود جوڑاں
+تے متبادلاں دے مخفف نیں۔ اک عنصر لئی جوڑی وار وکھرے ہون
+دیاں شرطاں دی خالی جوڑ-فہرست نوں سچ سمجھیا جاندا اے۔
+\end{explain}
+
+\begin{prop}
+!!{sentence}
+\begin{multline*}
+  !A_{\ge n} \ident \lexists[x_1][\lexists[x_2][\dots\lexists[x_n][{}]]]\\
+  \begin{aligned}
+  (\eq/[x_1][x_2] \land {}
+  \eq/[x_1][x_3] \land \eq/[x_1][x_4] \land \dots \land \eq/[x_1][x_n] \land {}\\
+\eq/[x_2][x_3] \land \eq/[x_2][x_4] \land \dots \land {} \eq/[x_2][x_n] \land {} \\
+\vdots\\
+\eq/[x_{n-1}][x_n])
+\end{aligned}
+\end{multline*}
+!!a{structure}~$\Struct M$ وچ جے تے صرف جے سچا اے
+جدوں $\Domain M$ وچ گھٹ توں گھٹ $n$ !!{element}s
+ہون۔ ایس لئی $\Sat{M}{\lnot !A_{\ge n+1}}$ جے تے
+صرف جے جدوں $\Domain M$ وچ ودھ توں ودھ~$n$
+!!{element}s ہون۔
+
+\end{prop}
+
+\begin{prop}
+!!{sentence}
+\begin{multline*}
+!A_{= n} \ident \lexists[x_1][\lexists[x_2][\dots\lexists[x_n][{}]]] \\
+\begin{aligned}
+  (\eq/[x_1][x_2] \land {}
+  \eq/[x_1][x_3] \land \eq/[x_1][x_4] \land \dots \land \eq/[x_1][x_n] \land {}\\
+\eq/[x_2][x_3] \land \eq/[x_2][x_4] \land \dots \land {} \eq/[x_2][x_n] \land {} \\
+\vdots\\
+\eq/[x_{n-1}][x_n] \land {} \\
+\lforall[y][(\eq[y][x_1] \lor \dots \lor \eq[y][x_n]]))
+\end{aligned}
+\end{multline*}
+!!a{structure}~$\Struct M$ وچ جے تے صرف جے سچا اے
+جدوں $\Domain M$ وچ عین $n$ !!{element}s ہون۔
+\end{prop}
+
+\begin{prop}
+اک !!{structure} لامتناہی اے جے تے صرف جے اوہ
+\[
+\{!A_{\ge 1}, !A_{\ge 2}, !A_{\ge 3}, \dots \}.
+\]
+دا نمونہ اے۔
+\end{prop}
+
+ایداں دا کوئی اک خالص منطقی جملہ نہیں جیہڑا~$\Struct
+M$ وچ جے تے صرف جے سچا ہووے جدوں $\Domain M$
+لامتناہی ہووے۔ البتہ غیر منطقی !!{predicate}s ورتن
+والے ایداں دے !!{sentence}s دتے جا سکدے نیں جنہاں
+دے صرف لامتناہی نمونے ہون (بھاویں ہر لامتناہی
+!!{structure} انہاں دا نمونہ نہ ہووے)۔ محدود ساخت
+ہون دی خاصیت !!{sentence}s دے لامتناہی سیٹ نال وی ظاہر
+نہیں کیتی جا سکدی۔
+% PNB-SEM-027: ناقابلِ شمار ہون بارے ایہ دعویٰ ایتھے ورتی گننے جوگی زبان لئی اے۔
+ایتھے ورتی گننے جوگی زبان وچ !!{nonenumerable} ساخت ہون دی
+خاصیت وی جملیاں دے لامتناہی سیٹ نال ظاہر
+نہیں کیتی جا سکدی۔ ایہ حقیقتاں محدود گواہی دے
+قضیے تے لووینہائم--سکولم (L\"owenheim--Skolem)
+دے قضیاں توں نکلدیاں نیں۔
+
+\end{document}

@@ -1,0 +1,87 @@
+% Part: second-order-logic
+% Chapter: sol-and-sets
+% Section: comparing-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{set}{cmp}
+
+\olsection{سیٹاں دا موازنہ}
+
+\begin{prop}
+ایہ !!{formula} $\lforall[x][(X(x) \lif Y(x))]$ ذیلی سیٹ ہون دا
+تعلق متعین کردا اے، یعنی $\Sat{M}{\lforall[x][(X(x) \lif Y(x))]}[s]$
+اُدوں تے صرف اُدوں لاگو اے جدوں $s(X) \subseteq s(Y)$۔
+\end{prop}
+
+\begin{prop}
+ایہ !!{formula} $\lforall[x][(X(x) \liff Y(x))]$ سیٹاں اُتے
+برابری دا تعلق متعین کردا اے، یعنی
+$\Sat{M}{\lforall[x][(X(x) \liff Y(x))]}[s]$
+اُدوں تے صرف اُدوں لاگو اے جدوں $s(X) = s(Y)$۔
+\end{prop}
+
+\begin{prop}
+ایہ !!{formula} $\lexists[x][X(x)]$ خالی نہ ہون دی خاصیت متعین
+کردا اے، یعنی $\Sat{M}{\lexists[x][X(x)]}[s]$ اُدوں تے صرف اُدوں لاگو اے جدوں
+$s(X) \neq \emptyset$۔
+\end{prop}
+
+اک سیٹ~$X$، سیٹ~$Y$ نالوں سائز وچ وڈا نہیں، یعنی
+$\cardle{X}{Y}$، اُدوں تے صرف اُدوں جدوں اک !!a{injective} فنکشن
+$f\colon X \to Y$ موجود ہووے۔ چونکہ اسیں ایہ ظاہر کر سکدے آں کہ
+کوئی فنکشن اک بہ اک اے، تے ایہ وی کہ~$X$ دے رکناں اُتے اوہدیاں
+قدراں~$Y$ وچ نیں، ایس لئی اسیں دائرے دے ذیلی سیٹاں اُتے سائز وچ وڈا
+نہ ہون دا تعلق وی متعین کر سکدے آں۔
+
+\begin{prop}
+ایہ فارمولا
+\[
+\lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land \lforall[x][\lforall[y][((X(x) \land X(y) \land \eq[u(x)][u(y)]) \lif
+      \eq[x][y])]])]
+\]
+سائز وچ وڈا نہ ہون دا تعلق متعین کردا اے۔
+% PNB-CMP-076: صرف X دے دو رکناں لئی اک بہ اک شرط؛ منجمد اصل دا پوری دائرے اُتے injectivity والا غیر ضروری تقاضا درست کیتا۔
+\end{prop}
+
+دو سیٹاں دا سائز اکّو اے، یا اوہ ”ہم تعداد“ (equinumerous) نیں،
+یعنی $\cardeq{X}{Y}$، اُدوں تے صرف اُدوں جدوں اک !!a{bijective} فنکشن
+~$f\colon X \to Y$ موجود ہووے۔
+
+\begin{prop}
+ایہ فارمولا
+\begin{multline*}
+  \lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land {}\\
+    \lforall[x][\lforall[y][((X(x) \land X(y) \land \eq[u(x)][u(y)]) \lif \eq[x][y])]]
+  \land {} \\\lforall[y][(Y(y) \lif \lexists[x][(X(x)
+      \land \eq[y][u(x)])])])]
+\end{multline*}
+ہم تعداد ہون دا تعلق متعین کردا اے۔
+% PNB-CMP-077: X اُتے مقامی injectivity؛ منجمد اصل دی global شرط برابر سائز والے بعض لامتناہی سیٹ رد کردندی سی۔
+\end{prop}
+
+اسیں ایہناں !!{formula}s نوں ترتیب وار $X \subseteq Y$،
+$X = Y$، $X \neq \emptyset$، $\cardle{X}{Y}$، تے
+$\cardeq{X}{Y}$ نال مختصر لکھاں گے۔ (ایہ گل تھوڑی الجھن پیدا کر
+سکدی اے، کیوں جے سیٹاں~$X$ تے~$Y$ بارے غیر رسمی گل کردیاں اسیں
+ایہی علامتاں ورتدے آں؛ پر ایتھے ایہ علامتاں دوجے درجے دی منطق دے
+اوہناں !!{formula}s دے مخفف نیں جنہاں وچ اک-رُکنی تعلقی متغیر
+$X$ تے~$Y$ شامل نیں۔)
+
+\begin{prop}
+ایہ !!{sentence} $\lforall[X][\lforall[Y][((\cardle{X}{Y} \land
+    \cardle{Y}{X}) \lif \cardeq{X}{Y})]]$ معتبر اے۔
+\end{prop}
+
+\begin{proof}
+ایہ !!{sentence} کسے !!a{structure}~$\Struct{M}$ وچ پورا اتردا اے جے
+ہر ذیلی سیٹ $X \subseteq \Domain{M}$ تے $Y \subseteq \Domain{M}$ لئی،
+$\cardle{X}{Y}$ تے $\cardle{Y}{X}$ ہون توں $\cardeq{X}{Y}$ نکلے۔
+پر ایہ گل \emph{ہر} سیٹ~$X$ تے~$Y$ لئی درست اے---ایہی
+شروڈر-برنسٹین دا قضیہ اے۔
+\end{proof}
+
+
+\end{document}

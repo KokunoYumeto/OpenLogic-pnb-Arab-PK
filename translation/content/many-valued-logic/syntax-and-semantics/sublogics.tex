@@ -1,0 +1,97 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: sublogics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{sub}
+
+\olsection{کئی قدراں والیاں منطقاں بطور~$\LogCL$ دیاں ذیلی منطقاں}
+
+عام کئی قدراں والیاں منطقاں ایہو جیہے میٹرکساں نال متعین
+ہوندیاں نیں جنہاں وچ $\{\True, \False\}$ دیاں دلیلاں لئی
+صداقتی فنکشن دی قدر کلاسیکی صداقتی فنکشن دی قدر نال ملدی اے۔
+خاص کر کے، ایہناں منطقاں وچ جے $x \in \{\True, \False\}$،
+تاں $\tf{\lnot}[\Log L](x) =
+\tf{\lnot}[\LogCL](x)$۔ نالے جے $\star$، $\land$، $\lor$،
+$\lif$ وچوں کوئی اے تے $x, y \in \{\True, \False\}$،
+تاں $\tf{\star}[\Log L](x,y) =
+\tf{\star}[\LogCL](x,y)$۔ دوجے لفظاں وچ $\lnot$، $\land$،
+$\lor$، $\lif$ دے صداقتی فنکشن جدوں $\{\True,\False\}$ تک
+محدود ہون، تاں اوہ عین کلاسیکی صداقتی فنکشن نیں۔
+
+\begin{prop}\ollabel{prop:mvl-cl}
+  فرض کرو کئی قدراں والی منطق~$\Log L$ دی زبان وچ رابطے
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں، $\True, \False \in
+  V$، تے اوہدے صداقتی فنکشن ایہ شرطاں پوریاں کردے نیں۔
+  \begin{enumerate}
+    \item\ollabel{prop:not} $\tf{\lnot}[\Log L](x) = \tf{\lnot}[\LogCL](x)$ جے $x =
+    \True$ یا $x = \False$۔
+    \item\ollabel{prop:land} $\tf{\land}[\Log L](x,y) = \tf{\land}[\LogCL](x,y)$،
+    \item\ollabel{prop:lor} $\tf{\lor}[\Log L](x,y) = \tf{\lor}[\LogCL](x,y)$،
+    \item\ollabel{prop:lif} $\tf{\lif}[\Log L](x,y) = \tf{\lif}[\LogCL](x,y)$،
+    جے $x, y \in \{\True, \False\}$۔
+  \end{enumerate}
+  فیر کسے وی قدر بندی $\pAssign v$ لئی جیہڑی~$V$ وچ ہووے
+  تے جیہدے لئی $\pAssign
+  v(p) \in \{\True,\False\}$، ساڈے کول $\pValue v[\Log L](!A) = \pValue
+  v[\LogCL](!A)$ اے۔
+\end{prop}
+
+\begin{proof}
+  ~$!A$ اُتے استقرا نال۔
+  \begin{enumerate}
+  \item جے $!A \ident p$ ایٹمی اے، تاں ساڈے کول
+  $\pValue v[\Log L](!A) =
+  \pAssign v(p) = \pValue
+  v[\LogCL](!A)$ اے۔
+  \item جے $!A \ident \lnot B$، تاں ساڈے کول
+  \begin{align*}
+    \pValue v[\Log L](!A) & = \tf{\lnot}[\Log L](\pValue v[\Log L](!B)) & &\text{\olref[val]{defn:pValue} مطابق}\\
+    & = \tf{\lnot}[\Log L](\pValue v[\LogCL](!B)) && \text{استقرائی مفروضے مطابق}\\
+    & = \tf{\lnot}[\LogCL](\pValue v[\LogCL](!B))
+&&\text{مفروضے \olref{prop:not} مطابق،}\\
+&&&\text{کیوں جے $\pValue v[\LogCL](!B) \in \{\True, \False\}$،}\\
+& = \pValue v[\LogCL](!A) &&\text{\olref[val]{defn:pValue} مطابق}.
+\end{align*}
+\item جے $!A \ident (!B \land !C)$، تاں ساڈے کول
+\begin{align*}
+  \pValue v[\Log L](!A) & = \tf{\land}[\Log L](\pValue v[\Log L](!B), \pValue v[\Log L](!C)) & &\text{\olref[val]{defn:pValue} مطابق}\\
+  & = \tf{\land}[\Log L](\pValue v[\LogCL](!B), \pValue v[\LogCL](!C)) && \text{استقرائی مفروضے مطابق}\\
+  & = \tf{\land}[\LogCL](\pValue v[\LogCL](!B), \pValue v[\LogCL](!C))
+&&\text{مفروضے \olref{prop:land} مطابق،}\\
+&&&\text{کیوں جے $\pValue v[\LogCL](!B),\pValue v[\LogCL](!C) \in \{\True, \False\}$،}\\
+& = \pValue v[\LogCL](!A) &&\text{\olref[val]{defn:pValue} مطابق}.
+\end{align*}
+\end{enumerate}
+$!A \ident (!B \lor !C)$ تے $!A \ident (!B \lif !C)$ والیاں
+صورتاں ایسے طرح نیں۔
+\end{proof}
+
+\begin{cor}
+  جے کئی قدراں والی منطق \olref{prop:mvl-cl} دیاں شرطاں
+  پوریاں کرے، $\True \in V^+$ تے $\False \notin V^+$، تاں
+  ${\Entails[\Log L]} \subseteq {\Entails[\LogCL]}$۔ یعنی جے $\Gamma
+  \Entails[\Log L] !B$، تاں $\Gamma \Entails[\LogCL] !B$۔
+  خاص کر کے، $\Log L$ دا ہر ہمیشہ صادق فارمولا کلاسیکی منطق
+  وچ وی ہمیشہ صادق اے۔
+\end{cor}
+
+\begin{proof}
+  اسیں اُلٹ نقیض ثابت کردے آں۔ فرض کرو $\Gamma \Entails/[\LogCL] !B$۔
+  فیر کوئی !!{valuation}~$\pAssign v\colon \PVar \to
+  \{\True, \False\}$ ایہو جیہی اے کہ $\pValue v[\LogCL](!A) = \True$
+  ہر $!A \in \Gamma$ لئی، تے $\pValue v[\LogCL](!B) = \False$۔
+  کیوں جے $\True,
+  \False \in V$، ایس لئی !!{valuation}~$\pAssign v$،
+  ~$\Log L$ لئی وی !!a{valuation} اے۔ \olref{prop:mvl-cl}
+  مطابق $\pValue v[\Log L](!A) =
+  \True$ ہر $!A \in \Gamma$ لئی، تے $\pValue v[\Log L](!B) = \False$۔
+  کیوں جے $\True \in V^+$ تے $\False \notin V^+$، ایس دا
+  مطلب اے کہ $\pAssign v
+  \Entails[\Log L] \Gamma$ تے $\pAssign v \Entails/[\Log L] !B$،
+  یعنی $\Gamma \Entails/[\Log L] !B$۔
+\end{proof}
+\end{document}

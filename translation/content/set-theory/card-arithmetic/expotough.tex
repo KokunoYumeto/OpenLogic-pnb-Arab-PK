@@ -1,0 +1,87 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+\olfileid{sth}{card-arithmetic}{expotough}
+
+\olsection[کجھ سادگیاں]{کارڈینل گھات وچ کجھ سادگیاں}
+
+بھاویں $\canonord$ دی تعریف ذرا گنجل دار سی، اوہتوں کارڈینل جوڑ تے ضرب بارے کم دا نتیجہ \olref[simp]{cardplustimesmax} نکلدا اے۔ پر لامتناہی درجیاں والی گھات اینی سِدھی طرح سادی نہیں ہو سکدی۔ وجہ سمجھاؤن لئی اک نتیجے توں شروع کردے آں جیہڑا محدود صورت دی جانی پچھانی خاصیت نوں ودھاؤندا اے (بھاویں ثبوت کافی تجریدی اے)۔
+
+\begin{prop}\ollabel{simplecardexpo}
+$\cardexpo{\cardfont{a}}{\cardfont{b} \cardplus \cardfont{c}} =
+\cardexpo{\cardfont{a}}{\cardfont{b}} \cardtimes
+\cardexpo{\cardfont{a}}{\cardfont{c}}$ تے
+$\cardexpo{(\cardexpo{\cardfont{a}}{\cardfont{b}})}{\cardfont{c}} =
+\cardexpo{\cardfont{a}}{\cardfont{b} \cardtimes \cardfont{c}}$،
+کسے وی کارڈینل عدداں $\cardfont{a}, \cardfont{b}, \cardfont{c}$ لئی۔
+\end{prop}
+
+\begin{proof}
+پہلے دعوے لئی اک فنکشن $f \colon
+(\cardfont{b}\disjointsum\cardfont{c}) \to \cardfont{a}$ ویکھو۔ ہُن ایہنوں «دو حصیاں وچ ونڈو»۔ $f_\cardfont{b}(\beta) = f(\beta, 0)$ ہر $\beta \in \cardfont{b}$ لئی، تے $f_\cardfont{c}(\gamma) = f(\gamma, 1)$ ہر $\gamma \in \cardfont{c}$ لئی تعریف کرو۔ نقشہ $f \mapsto
+(f_{\cardfont{b}} \times f_\cardfont{c})$ اک !!a{bijection}
+$\funfromto{\cardfont{b} \disjointsum \cardfont{c}}{\cardfont{a}} \to
+(\funfromto{\cardfont{b}}{\cardfont{a}} \times
+\funfromto{\cardfont{c}}{\cardfont{a}})$ اے۔
+
+دوجے دعوے لئی اک فنکشن $f \colon \cardfont{c} \to
+(\funfromto{\cardfont{b}}{\cardfont{a}})$ ویکھو۔ سو ہر $\gamma \in
+\cardfont{c}$ لئی ساڈے کول کوئی فنکشن $f(\gamma) \colon \cardfont{b} \to
+\cardfont{a}$ اے۔ ہُن $f^*(\beta, \gamma) = (f(\gamma))(\beta)$ ہر
+$\tuple{\beta, \gamma} \in \cardfont{b} \times \cardfont{c}$ لئی تعریف کرو۔ نقشہ $f \mapsto f^*$ اک !!a{bijection}
+$\funfromto{\cardfont{c}}{(\funfromto{\cardfont{b}}{\cardfont{a}})}
+\to \funfromto{\cardfont{b} \cardtimes \cardfont{c}}{\cardfont{a}}$ اے۔
+\end{proof}
+
+ہُن اسیں ایہ \emph{چاہندے} آں کہ لامتناہی کارڈینل عدداں لئی
+$\cardexpo{\cardfont{a}}{\cardfont{b}}$ کڈھن دا سوکھا طریقہ ہووے۔ ایس پاسے اک چنگا قدم ایہ اے۔
+
+\begin{prop}\ollabel{cardexpo2reduct}
+جے $2 \leq \cardfont{a} \leq \cardfont{b}$ تے $\cardfont{b}$ لامتناہی اے، تاں $\cardexpo{\cardfont{a}}{\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}}$۔
+\end{prop}
+
+\begin{proof}
+\begin{align*}
+	\cardexpo{2}{\cardfont{b}} &\leq
+	\cardexpo{\cardfont{a}}{\cardfont{b}}\text{، کیوں جے $2 \leq \cardfont{a}$}\\
+	&\leq \cardexpo{(2^\cardfont{a})}{\cardfont{b}}
+	\text{، \olref[opps]{lem:SizePowerset2Exp} مطابق}\\
+	&= \cardexpo{2}{\cardfont{a} \cardtimes \cardfont{b}}
+	\text{، \olref{simplecardexpo} مطابق}\\
+	&= \cardexpo{2}{\cardfont{b}}
+	\text{، \olref[simp]{cardplustimesmax} مطابق}
+\end{align*}
+\end{proof}
+
+سانوں ایہ آس نہیں رکھنی چاہیدی کہ اسیں ایہنوں ہور سادہ کر سکدے آں، کیوں جے $\cardfont{b} < \cardexpo{2}{\cardfont{b}}$، \olref[card-arithmetic][opps]{lem:SizePowerset2Exp} مطابق۔ پر ایس توں سانوں پتا نہیں لگدا کہ $\cardexpo{\cardfont{a}}{\cardfont{b}}$ بارے کی آکھیے جدوں $\cardfont{b} <
+\cardfont{a}$۔ بے شک جے $\cardfont{b}$ \emph{محدود} اے، سانوں پتا اے کہ کی کرنا اے۔
+
+\begin{prop}
+جے $\cardfont{a}$ لامتناہی اے تے $n \in \omega$، تاں
+$\cardexpo{\cardfont{a}}{n} = \cardfont{a}$۔
+\end{prop}
+
+\begin{proof}
+$\cardexpo{\cardfont{a}}{n} = \cardfont{a} \cardtimes \cardfont{a}
+\cardtimes \ldots \cardtimes \cardfont{a} = \cardfont{a}$، \olref[simp]{cardplustimesmax} مطابق۔
+\end{proof}
+\noindent
+نالے کجھ ہور صورتاں وچ اسیں $\cardexpo{\cardfont{a}}{\cardfont{b}}$ دی وڈائی قابو وچ رکھ سکدے آں۔
+
+\begin{prop}
+جے $2 \leq \cardfont{b} < \cardfont{a} \leq
+\cardexpo{2}{\cardfont{b}}$ تے $\cardfont{b}$ لامتناہی اے، تاں
+$\cardexpo{\cardfont{a}}{\cardfont{b}} = \cardexpo{2}{\cardfont{b}}$۔
+\end{prop}
+
+\begin{proof}
+$\cardexpo{2}{\cardfont{b}}\leq \cardexpo{\cardfont{a}}{\cardfont{b}}
+\leq \cardexpo{(\cardexpo{2}{\cardfont{b}})}{\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}\cardtimes\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}}$، جیویں \olref{cardexpo2reduct} وچ دلیل دتی سی۔
+\end{proof}
+\noindent
+پر ایتھوں اگے گل کافی گنجل دار ہو جاندی اے۔
+
+\end{document}

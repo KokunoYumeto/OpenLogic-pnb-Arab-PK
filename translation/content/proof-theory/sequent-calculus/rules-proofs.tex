@@ -1,0 +1,124 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: rules-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{rp}
+
+\olsection{قاعدے تے \usetoken{P}{proof}}
+
+اسیں کجھ تعریفاں تے اصطلاحاں طے کرن توں شروع کردے آں۔
+
+مثال لئی \Log{G3c} دے اوہ دو قاعدے ویکھو جیہڑے !!{proving} دی کھُل دیندے نیں اوہناں سیکوئنٹاں لئی جیہناں وچ $!A \land !B$ اے، اوہناں سیکوئنٹاں توں جیہناں وچ $!A$ تے~$!B$ نیں:
+\[
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\]
+لکیر توں اُتلے سیکوئنٹاں نوں \emph{مقدمے} تے لکیر توں تھلّے والے سیکوئنٹ نوں \emph{نتیجہ} آکھدے آں۔ ہر قاعدے وچ !!{formula}s جیہڑے $ \Gamma$ تے $ \Delta$ وچ نیں، اوہناں نوں \emph{سیاق} یا \emph{پاسے دے !!{formula}s} آکھدے آں۔ نتیجے وچ اوہ !!{formula} جیہڑا سیاق دا حصہ نہیں، اوہ \emph{مُکھ} !!{formula} اے، تے مقدمیّاں دے اوہ !!{formula}s جیہڑے سیاق وچ نہیں، اوہ \emph{فعال} (یا \emph{معاون}) !!{formula}s نیں۔
+
+مسوّراں دے قاعدے ذرا ہور گنجل دار نیں۔ مثال لئی \Log{G1c} وچ $\lforall$ لئی قاعدے ایہ نیں:
+\[\Axiom$ !A(t), \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$ \Gamma \fCenter \Delta, !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+\DisplayProof
+\]
+\LeftR{\lforall} قاعدے وچ فعال !!{formula}~$!A(t)$ اے، جتھے $t$ بند ٹرم اے، یعنی متغیراں توں بناں ٹرم۔ ایہو جیہا استنباط ٹھیک اے، یعنی خاکہ وار قاعدے \LeftR{\lforall} نال میل کھاندا اے، جے کوئی !!{formula}~$!A$، کوئی متغیر~$x$، تے کوئی بند ٹرم~$t$ ایہو جیہے ہون کہ نتیجے دا مُکھ !!{formula}، $\lforall[x][!A]$ اے تے مقدمے دا فعال !!{formula}~$\Subst{!A}{t}{x}$ اے۔ \RightR{\lforall} قاعدہ وی ایویں کم کردا اے، فرق ایہ اے کہ کسے وی ٹرم~$t$ دی تھاں مقدمے دا فعال !!{formula}~$\Subst{!A}{a}{x}$ ہونا چاہیدا اے، جتھے $a$ اک !!a{constant} اے۔ ایس مستقل نوں \RightR{\lforall} استنباط دا \emph{خاص متغیر} آکھدے آں۔ استنباط صرف اوہدوں ٹھیک اے جدوں تھلّے والے سیکوئنٹ وچ~$a$ نہیں، یعنی جے $a$، $ \Gamma$، $ \Delta$ یا~$!A$ وچ نہیں آؤندا۔ ایس نوں \emph{خاص متغیر دی شرط} آکھدے آں۔
+
+\Log{G1c} تے \Log{G3c} ورگے سیکوئنٹ نظام ایہو جیہے خاکہ وار دَسّے قاعدیاں دے مجموعے توں بندے نیں، نال کجھ سیکوئنٹ (اوہ وی خاکہ وار دَسّے ہوئے) جیہڑے مسلّمے منّے جاندے نیں۔ ایہو جیہے نظام وچ !!^{proof}s سیکوئنٹاں دے محدود درخت نیں جیہڑے مسلّمیّاں توں استنباطی قاعدے ورت کے استقرائی طور اُتے بندے نیں۔ ہر پَتّا مسلّمہ اے، تے ہر ہور سیکوئنٹ اوہدے جھٹ اُتلے سیکوئنٹاں توں نظام دے کسے اک استنباطی قاعدے نال نکلدا اے۔
+
+\begin{defn}\ollabel{defn:proof}
+سیکوئنٹ نظام وچ \emph{!!^{proof}s} سیکوئنٹاں دے محدود درخت نیں جیہڑے استقرائی طور اُتے ایویں بندے نیں:
+\begin{enumerate}
+  \item\ollabel{defn:prf:axiom} ہر مسلّمہ !!a{proof} اے۔
+  \item\ollabel{defn:prf:one-prem} جے $\pi_1$ اک !!a{proof} اے جیہڑا سیکوئنٹ~$S_1$ اُتے مُکدا اے، تے $S$ اوہ سیکوئنٹ اے جیہڑا~$S_1$ توں اک مقدمے والے قاعدے~$R$ نال نکلدا اے، تاں
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \DeduceC{$S_1$}
+  \RightLabel{$R$}
+  \UnaryInfC{$S$}
+  \DisplayProof
+  \]
+  اک !!a{proof} اے۔
+  \item\ollabel{defn:prf:two-prem} جے $\pi_1$ تے $\pi_2$، !!{proof}s نیں جیہڑے سیکوئنٹاں~$S_1$ تے~$S_2$ اُتے مُکدے نیں، تے $S$ اوہ سیکوئنٹ اے جیہڑا~$S_1$ تے $S_2$ توں دو مقدمیّاں والے قاعدے~$R$ نال نکلدا اے، تاں
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \DeduceC{$S_1$}
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \DeduceC{$S_2$}
+  \RightLabel{$R$}
+  \BinaryInfC{$S$}
+  \DisplayProof
+  \]
+  اک !!a{proof} اے۔
+\end{enumerate}
+\end{defn}
+
+\Olref{defn:proof}، !!{proof}s نوں سیکوئنٹاں دے درختاں دے طور اُتے متعین کردی اے۔ اسیں ایہناں درختاں نوں «اُتّے ول» ودھدا سمجھدے آں۔ ایس درخت دیاں سبھ توں اُتلیاں (پَتّیاں والیاں) گنڈھاں مسلّمے نیں تے اوہناں نوں \emph{شروع دے سیکوئنٹ} آکھدے آں۔ سبھ توں تھلّے والے سیکوئنٹ نوں \emph{آخری سیکوئنٹ} آکھدے آں۔ جے $\pi$ اک !!a{proof} اے جیہدا آخری سیکوئنٹ~$S$ اے، تاں اسیں $\pi \Proves S$ وی لکھدے آں۔ جے سیکوئنٹ~$S$ دا !!a{proof} اے، تاں اسیں $\Proves S$ لکھدے آں، تے ہو سکدا اے جیہڑے نظام وچ ثبوت اے اوہ~$\Proves$ نشانی دے کھبّے پاسے دَسّ دیئیے، جیویں $\Log{G1c} \Proves !A, !B \Sequent !A \land
+!B$۔ !!a{proof} وچ ہر سیکوئنٹ، شروع دے سیکوئنٹاں توں چھُٹ، کسے قاعدے~$R$ نال ہوئے استنباط دا \emph{نتیجہ} اے۔ !!a{proof} وچ کسے سیکوئنٹ توں جھٹ اُتلے اک یا دو سیکوئنٹ (یعنی اوس گنڈھ دے ماپے) اوس استنباط دے \emph{مقدمے} نیں۔
+
+اوہ !!{proof}s جیہڑے !!a{proof} دی استقرائی بناوٹ وچ ورتے جاندے نیں، اوہدے \emph{ذیلی !!{proof}s} نیں۔ اوہ ذیلی !!{proof}s جیہڑے استنباط دے مقدمیّاں اُتے مُکدے نیں، اوس استنباط دے \emph{سدھے ذیلی !!{proof}s} نیں۔
+
+اکثر !!{proof}s دی گنجل نوں قدرتی عدد نال ماپنا پیندا اے۔ اسیں !!a{proof} وچ سیکوئنٹاں دی گنتی ای کر سکدے آں، پر اکثر ہور کم آؤن والی ماپ !!{height} اے، !!a{proof} دی۔ ایہ آخری سیکوئنٹ تے کسے شروع دے سیکوئنٹ دے وچکار سیکوئنٹاں دی سبھ توں وڈی گنتی اے۔ اسیں استقرائی تعریف وی دے سکدے آں۔
+
+\begin{defn}
+\emph{!!{height}}~$\pheight{\pi}$، !!a{proof}~$\pi$ دی، استقرائی طور اُتے ایویں متعین اے:
+\begin{enumerate}
+  \item جے $\pi$ صرف اک مسلّمہ اے، تاں $\pheight{\pi} = 0$۔
+  \item جے $\pi$ اک مقدمے والے استنباط اُتے مُکدا اے، جیہدا سدھا ذیلی !!{proof}~$\pi_1$ اے، تاں $\pheight{\pi} = \pheight{\pi_1} + 1$۔
+  \item جے $\pi$ دو مقدمیّاں والے استنباط اُتے مُکدا اے، جیہدے سدھے ذیلی !!{proof}s~$\pi_1$ تے~$\pi_2$ نیں، تاں $\pheight{\pi} =
+  \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1$۔
+\end{enumerate}
+جے سیکوئنٹ~$S$ دا !!a{proof} اے جیہدی اُچائی $\le n$ اے، تاں اسیں $\Proves[n] S$ لکھدے آں۔
+\end{defn}
+
+\begin{ex}
+\Log{G3c} وچ $!C, \Gamma \Sequent \Delta, !C$ دی شکل دا ہر سیکوئنٹ مسلّمہ اے، جتھے $!C$ جوہری ہونا چاہیدا اے۔ منّ لو $!D$ تے $!E$ جوہری جملے نیں۔ تاں $!D, !E \Sequent !D$ تے $!D, !E \Sequent !E$، مسلّمے $!C, \Gamma \Sequent \Delta, !C$ دیاں مثالاں نیں۔ مثال لئی جے اسیں $!C \ident !E$، $\Gamma = \{!D\}$ تے $\Delta = \emptyset$ لئیے $!C, \Gamma \Sequent \Delta, !C$ وچ، تاں عین سیکوئنٹ $!D, !E
+\Sequent !E$ ملدا اے۔ (چیتے رکھو کہ اسیں کثیر \emph{سیٹاں} نال کم کردے آں، سو $!D, !E \Sequent !E$ تے $!E, !D \Sequent !D$ اوہی سیکوئنٹ نیں۔)
+
+چونکہ $!D, !E \Sequent !D$،~\Log{G3c} دے مسلّمے دی اک مثال اے، ایس لئی ایہ (اپنے آپ) !!a{proof} منّیا جاندا اے~\Log{G3c} وچ، تے ایویں ای $!D, !E
+\Sequent !E$ وی، \olref{defn:proof}\olref{defn:prf:axiom} نال۔ آؤ ایہناں نوں $\pi_1$ تے~$\pi_2$ آکھیے۔ \olref{defn:prf:two-prem} نال اسیں ایہ دونے !!{proof}s لے کے اک نواں ($\pi_3$)، دو مقدمیّاں والے قاعدے~$\RightR{\land}$ نال، بنا سکدے آں:
+\[
+\Axiom$!D, !E \fCenter !D$
+\Axiom$!D, !E \fCenter !E$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !E  \fCenter !D \land !E $
+\DisplayProof
+\]
+$\pi_3$ توں اسیں اگّوں !!{proof}~$\pi_4$ لیندے آں
+\[
+\Axiom$!D, !E \fCenter !D$
+\Axiom$!D, !E \fCenter !E$
+\RightLabel{\RightR{\land}}
+\insertBetweenHyps{\hspace{5ex}}
+\BinaryInf$!D, !E  \fCenter !D \land !E $
+\LeftSubproofLabel{$\pi_3$}
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!D \land !E  \fCenter !D \land !E$
+\RightSubproofLabel{$\pi_4$}
+\DisplayProof
+\]
+اک مقدمے والا قاعدہ~$\LeftR{\land}$ ورت کے (\olref{defn:proof}\olref{defn:prf:one-prem} نال)۔ آخری استنباط دا سدھا ذیلی !!{proof}،~$\pi_4$ وچ،~$\pi_3$ اے۔ سدھے ذیلی !!{proof}s، $\RightR{\land}$ استنباط دے،، $\pi_1$ تے~$\pi_2$ نیں۔ ذیلی !!{proof}s، $ \pi_4$ دے، ایہ سارے نیں، $ \pi_1$، $ \pi_2$، $ \pi_3$، تے $ \pi_4$ آپ۔ ساڈے کول $\pheight{\pi_1} =
+\pheight{\pi_2} = 0$، $\pheight{\pi_3} = 1$ تے $\pheight{\pi_4} = 2$ اے۔ اسیں وکھایا اے کہ $ \Log{G3c} \Proves[4] !D \land !E  \fCenter !D
+\land !E$ کسے وی جوہری $!D$ تے~$!E$ لئی۔
+\end{ex}
+
+\end{document}

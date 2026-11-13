@@ -1,0 +1,79 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{rul}
+
+\olsection{قاعدے تے \usetoken{P}{derivation}}
+
+اگلی گل لئی منّ لو $\Gamma, \Delta, \Pi, \Lambda$،
+!!{sentence}s دے محدود سلسلے نیں۔
+
+\begin{defn}[سیکوئنٹ]
+\emph{$n$ پاسیاں والا سیکوئنٹ} ایس روپ دی عبارت اے۔
+\[
+\Gamma_1 \nSequent \dots \nSequent \Gamma_n
+\]
+ایتھے ہر $\Gamma_1$ !!{sentence}s دا محدود سلسلہ اے، جیہڑا خالی وی ہو سکدا اے۔
+ایہ جملے زبان~$\Lang L$ دے نیں۔
+\end{defn}
+
+\begin{defn}[ابتدائی سیکوئنٹ]
+\emph{$n$ پاسیاں والا ابتدائی سیکوئنٹ} اوہ $n$ پاسیاں والا
+سیکوئنٹ اے جیہدا روپ $!A \nSequent \dots \nSequent !A$ اے،
+زبان دے کسے وی !!{sentence} $!A$ لئی۔
+
+جے زبان وچ $0$-مقامی رابطہ~$\star$ اے، یعنی قضیاتی مستقل،
+تاں اسیں سیکوئنٹ $\dots \nSequent
+\star \nSequent \dots$ وی لیندے آں۔ ایس وچ $\star$ متعلقہ
+صداقتی قدر~$\tf{\star} \in V$ والی تھاں اُتے آؤندا اے تے
+باقی تھاواں خالیاں نیں۔
+\end{defn}
+
+$n$ قدراں والی منطق~$\Log{L}$ دے ہر رابطے لئی، ہر اوہ
+صداقتی قدر دا اک منطقی قاعدہ اے جیہڑی اوہ رابطہ~$\Log{L}$
+وچ لے سکدا اے۔ $n$ پاسیاں والے سیکوئنٹ حساب وچ~$\Log{L}$
+دے !!^{derivation}s سیکوئنٹاں دے درخت نیں۔ سبھ توں اُتّے
+ابتدائی سیکوئنٹ ہوندے نیں۔ جے کوئی سیکوئنٹ اک یا کئی ہوراں
+دے ہِٹھ اے، تاں اوہ~$\Log{L}$ دے رابطیاں دے کسے استنباطی
+قاعدے توں صحیح طرح نکلنا چاہیدا اے۔
+
+\begin{defn}[قضیے]
+!!^a{sentence}~$!A$، $n$ قدراں والی منطق~$\Log{L}$ دا
+\emph{قضیہ} اے جے !!a{derivation} اوہ $n$ پاسیاں والے
+سیکوئنٹ دا موجود ہووے جیہدے وچ $!A$ ہر اوہ تھاں اُتے آوے جیہڑی~$\Log{L}$ دی مقرر
+صداقتی قدر نال جُڑی اے۔ اسیں $\Proves[\Log{L}]
+!A$ لکھدے آں جے $!A$ قضیہ اے، تے جے ایہ قضیہ نہیں تاں $\Proves/[\Log{L}] !A$۔
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+!!^a{sentence}~$!A$، !!{sentence}s دے سیٹ~$\Gamma$ توں
+$n$ قدراں والی منطق~$\Log{L}$ وچ \emph{!!{derivable} اے}،
+یعنی $\Gamma
+\Proves[\Log{L}] !A$، اُدوں تے صرف اُدوں جدوں اک محدود
+ذیلی سیٹ~$\Gamma_0 \subseteq
+\Gamma$ تے اک سلسلہ $\Gamma_0'$ ہووے جیہڑا~$\Gamma_0$ دے
+!!{sentence}s توں بنے، تے ہِٹھلے سیکوئنٹ دا
+!!a{derivation} ہووے۔
+\[ \Lambda_1 \nSequent \dots \nSequent \Lambda_n \]
+ایتھے $\Lambda_i$، $!A$ اے جے تھاں $i$ مقرر صداقتی قدر نال
+جُڑی ہووے، تے ہور صورت وچ $\Gamma_0'$ اے۔ جے $!A$،
+$\Gamma$ توں !!{derivable} نہیں، تاں $\Gamma \Proves/ !A$
+لکھدے آں۔
+\end{defn}
+
+مثلاً $3$ قدراں والی لوکاشیویچ دی منطق دا $3$ پاسیاں والا
+سیکوئنٹ حساب اے۔ $3$ پاسیاں والے سیکوئنٹ $\Gamma \nSequent \Pi \nSequent
+\Delta$ وچ $\Gamma$،~$\False$ نال، $\Delta$،~$\True$ نال،
+تے $\Pi$،~$\Undef$ نال جُڑیا اے۔ مسلّمے $!A \nSequent !A \nSequent !A$
+نیں۔ کیوں جے بس $\True$ مقرر اے، ایس لئی
+$\Gamma \Proves[\LogLuk[3]] !A$ اُدوں تے صرف اُدوں اے جدوں
+سیکوئنٹ $\Gamma \nSequent \Gamma \nSequent !A$ دا !!a{derivation}
+ہووے۔ (جے $\Undef$ وی مقرر ہووے، تاں !!a{derivation} ہِٹھلے سیکوئنٹ دا چاہیدا ہووے گا۔
+$\Gamma \nSequent !A \nSequent !A$۔)
+
+\end{document}

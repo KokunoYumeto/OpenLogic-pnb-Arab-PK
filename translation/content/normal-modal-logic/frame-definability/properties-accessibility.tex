@@ -1,0 +1,143 @@
+% Part: normal-modal-logic
+% Chapter: frame-correspondence
+% Section: properties-accessibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{frd}{acc}
+
+\olsection{رسائی دے تعلقاں دیاں خاصیتاں}
+
+کئی امکانی !!{formula}s رسائی دے تعلق دیاں سادیاں، سگوں جانیاں پچھانیاں، خاصیتاں نوں ظاہر کردے نیں۔ اک رخ وچ ایہدا مطلب اے کہ دِتّی خاصیت والے ہر نمونے وچ اوہدے نال جڑیا !!{formula} (تے اوہدیاں بدل نال بنیاں ساریاں مثالاں) سچا ہوندا اے۔ اسیں رسائی دے تعلقاں دیاں پنج کلاسیکی قسماں تے اوہناں فارمولیاں توں شروع کردے آں جیہڑے اوہناں قسماں دے تعلق نال ضرور سچے ہوندے نیں۔
+
+\begin{thm}\ollabel{thm:soundschemas}
+  منّ لو $\mModel{M} = \tuple{W, R, V}$ اک نمونہ اے۔ جے $R$ وچ \olref{tab:five} دے کھبے پاسے والی خاصیت اے، تاں سجے پاسے والے !!{formula} دی ہر مثال~$\mModel{M}$ وچ سچی اے۔
+\end{thm}
+
+\begin{table}[t]
+    \begin{tabular}{| l || l |}
+      \hline
+      {\emph{جے $R$ \dots اے}} & {\emph{تاں \dots،~$\mModel{M}$ وچ سچا اے۔}} \\
+      \hline \hline
+      \emph{ہر جہان توں رسائی والا}: $\forall u \exists v Ruv$ & \hbox to.43\textwidth
+           {$\Box p \lif \Diamond p$ \hfill (\Ax{D})} \\
+      \hline
+      \emph{انعکاسی}: $\forall w Rww$  
+      & \hbox to.43\textwidth
+          {$\Box p \lif p$ \hfill (\Ax{T})} \\
+      \hline
+      \emph{متقابل}: &  \hbox to .43\textwidth
+           {$p \lif \Box\Diamond p$ \hfill (\Ax{B})} \\
+           $\forall u\forall v(Ruv \lif Rvu)$ & \\
+      \hline
+      \emph{متعدی}: & \hbox to.43\textwidth
+           {$\Box p \lif \Box \Box p$ \hfill (\Ax{4})} \\
+      $\forall u \forall v \forall w ((Ruv \land Rvw) \lif Ruw)$ & \\
+      \hline 
+      \emph{اقلیدسی}: & \hbox to .43\textwidth
+        {$\Diamond p \lif \Box\Diamond p$ \hfill (\Ax{5})} \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif Ruv)$ &\\
+      \hline
+    \end{tabular}
+    \caption{مطابقت دیاں پنج گلاں۔}
+    \ollabel{tab:five}
+  \end{table}
+
+\begin{proof}
+  \Ax{B} والا معاملہ ایہ اے۔ سانچہ کسے نمونے وچ سچا وکھاؤن لئی سانوں وکھاؤنا اے کہ اوہدیاں ساریاں مثالاں اوس نمونے دے سارے جہاناں وچ سچیاں نیں۔ منّ لو $!A \lif \Box\Diamond !A$، \Ax{B} دی دِتّی ہوئی مثال اے تے $w \in W$ کوئی وی جہان اے۔ منّ لو مقدم $!A$، $w$ وچ سچا اے، تاں جو وکھائیے کہ $\Box \Diamond
+  !A$، $w$ وچ سچا اے۔ سانوں وکھاؤنا اے کہ $\Diamond !A$ سارے اوہناں $w'$ وچ سچا اے جیہڑے $w$ توں رسائی وچ نیں۔ ہُن جے کسے $w'$ لئی $Rww'$ اے، تاں تقابل دی شرط توں $Rw'w$ وی اے (\olref{fig:Bsymm} ویکھو)۔ کیوں جے $\mSat{M}{!A}[w]$، ایس لئی
+  $\mSat{M}{\Diamond !A}[w']$۔ کیوں جے $w'$ کوئی وی ایسا جہان سی جیہدے لئی $Rww'$ اے، ایس لئی $\mSat{M}{\Box\Diamond!A}[w]$۔
+
+  باقی معاملے مشقاں لئی چھڈدے آں۔
+\end{proof}
+
+\begin{prob}
+  \olref[nml][frd][acc]{thm:soundschemas} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={below:$\mSat{{}}{\formula{A}}$\\
+          $\mSat{{}}{\Box\Diamond \formula{A}}$}] {$w$}; 
+      \node[world] (w2) [label=below:{$\mSat{{}}{\Diamond \formula{A}}$},
+        right=of w1] {$w'$}; 
+      \draw[->, bend left] (w1) to (w2); 
+      \draw[->, bend left] (w2) to (w1); 
+    \end{tikzpicture}
+  \end{center}
+\caption{تقابل اُتے مبنی دلیل۔}
+\ollabel{fig:Bsymm}
+\end{figure}
+
+دھیان دیو کہ \olref{thm:soundschemas} دے اُلٹے لزوم نہیں چلدے۔ ایہ گل سچی نہیں کہ جے کوئی نمونہ سانچے نوں پورا کردا اے، تاں اوس نمونے دے رسائی دے تعلق وچ سانچے نال جڑی خاصیت اے۔ \Ax{T} تے انعکاسی نمونیاں دے معاملے وچ اک نمونہ سوکھا لبھ جاندا اے جیہدے وچ \Ax{T} آپ جھوٹھا اے۔ منّ لو $W = \{w\}$ تے
+$V(p) = \emptyset$۔ فیر $R$ انعکاسی نہیں، پر $\mSat{M}{\Box
+  p}[w]$ تے $\mSat/{M}{p}[w]$۔ پر ایتھے \Ax{T} دی صرف اک مثال~$\mModel{M}$ وچ جھوٹھھی اے؛ ہور مثالاں، جیویں
+$\Box \lnot p \lif \lnot p$، سچیاں نیں۔ ایسی مثال لبھنی اوکھی اے جیہدے وچ~\Ax{T} دی \emph{بدل نال بنی ہر مثال}~$\mModel{M}$ وچ سچی ہووے تے $\mModel{M}$ انعکاسی نہ ہووے۔ پر ایسے نمونے وی نیں۔
+
+\begin{prop}\ollabel{prop:reflexive}
+  منّ لو $\mModel{M} = \tuple{W, R, V}$ ایسا نمونہ اے جیہدے لئی $W = \{u, v
+  \}$ اے، جتھے جہان $u$ تے $v$، $R$ نال جُڑے نیں، یعنی $Ruv$
+  تے $Rvu$ دونیں۔ منّ لو ہر $p$ لئی $u \in V(p) \Leftrightarrow v
+  \in V(p)$۔ فیر
+  \begin{enumerate}
+  \item ہر $!A$ لئی $\mSat{M}{!A}[u]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!A}[v]$ ($!A$ اُتے استقرا ورتو)۔
+  \item ~\Ax{T} دی ہر مثال $\mModel{M}$ وچ سچی اے۔
+  \end{enumerate}
+  کیوں جے $\mModel{M}$ انعکاسی نہیں (اصل وچ ایہ \emph{اپنے آپ نال تعلق توں خالی} اے)، ایس لئی \olref{thm:soundschemas} دا اُلٹا رخ \Ax{T} دے معاملے وچ نہیں چلدا (\olref{thm:soundschemas} وچ دسے ہور سانچیاں وچوں کجھ لئی ایہو جیہی دلیل دِتّی جا سکدی اے، پر ساریاں لئی نہیں)۔
+\end{prop}
+
+\begin{prob}
+  \olref[nml][frd][acc]{prop:reflexive} دے دعوے ثابت کرو۔
+\end{prob}
+
+ساڈی توجہ پنج کلاسیکی !!{formula}s \Ax{D}،
+\Ax{T}، \Ax{B}، \Ax{4}، تے \Ax{5} اُتے رہے گی، پر
+\olref{tab:anotherfive} وچ رسائی دے تعلقاں دیاں کجھ ہور خاصیتاں وی دسدے آں۔ رسائی دا تعلق~$R$ جزوی فنکشنی اے جے ہر جہان توں ودھ توں ودھ اک جہان رسائی وچ اے۔ جے ہر جہان توں ٹھیک اک جہان رسائی وچ اے، تاں اینوں فنکشنی آکھدے آں۔ (ایس طرح فنکشنی تعلق اوہی نیں جیہڑے ہر جہان توں رسائی والے وی نیں تے جزوی فنکشنی وی۔) «فنکشنی» ایس لئی آکھدے آں کہ رسائی دا تعلق اک (جزوی) فنکشن وانگ کم کردا اے۔ تعلق کمزور طور تے گنجان اے جے جدوں وی $Ruv$ ہووے، کوئی~$w$، $u$ تے~$v$ دے «وچکار» ہووے۔ ایس معنی وچ کمزور طور تے گنجان تعلق متعدی تعلق دا اُلٹ اے۔ متعدی تعلق وچ جدوں وی $v$ تک~$u$ توں~$w$ راہیں پہنچ سکدے آں، تاں $v$ تک $u$ توں سدھا وی پہنچ سکدے آں؛ کمزور طور تے گنجان تعلق وچ جدوں وی $v$ تک~$u$ توں سدھا پہنچ سکدے آں، تاں کسے~$w$ راہیں وی پہنچ سکدے آں۔ تعلق کمزور طور تے ہم رُخ اے جے جدوں وی جہان $u$ تے~$v$ تک کسے جہان~$w$ توں پہنچ سکدے آں، تاں اکّو جہان~$t$ تک $u$ تے~$v$ دوناں توں پہنچ سکدے آں۔ اینوں کدی «ہیرے والی خاصیت» یا «راہواں دا سنگم» وی آکھدے نیں۔
+
+\begin{table}[t]
+    \begin{tabular}{| p{.50\textwidth} || p{.43\textwidth} |}
+      \hline
+      {\emph{جے $R$ \dots اے}} & {\emph{تاں \dots،~$\mModel{M}$ وچ سچا اے۔}} \\
+      \hline \hline
+      \emph{جزوی فنکشنی}: & 
+      \multirow{2}{*}{$\Diamond p \lif \Box p$} \\
+      $ \forall w \forall u \forall v ((Rwu \land Rwv) \lif u =v )$ & \\
+      \hline
+      \multirow{2}{*}{\emph{فنکشنی}: $\forall w \exists v \forall u(Rwu \liff \eq[u][v]) $} 
+      & \multirow{2}{*}{$\Diamond p \liff \Box p$} \\
+      & \\
+      \hline
+      \emph{کمزور طور تے گنجان}: &  \multirow{2}{*}{$\Box \Box p \lif
+        \Box p$} \\
+      $\forall u\forall v(Ruv \lif \exists w(Ruw \land Rwv))$ & \\
+      \hline
+      \emph{کمزور طور تے جُڑیا}: &
+      \multirow{3}{*}{\hbox to.43\textwidth{$
+        \begin{array}{@{}l@{}}
+          \Box ((p \land \Box p) \lif q) \lor {} \\
+          \qquad \Box ((q \land \Box q) \lif p)
+        \end{array}$ \hfill (\Ax{L})}
+      } \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif {}$ &\\
+      \qquad $(Ruv \lor u=v \lor Rvu))$ & \\
+      \hline 
+      \emph{کمزور طور تے ہم رُخ}: & \multirow{3}{*}{\hbox to .43\textwidth
+        {$\Diamond\Box p \lif \Box\Diamond p$\hfill (\Ax{G})}} \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif {}$ & \\
+      \qquad $\exists t (Rut \land Rvt))$ & \\
+      \hline
+    \end{tabular}
+    \caption{مطابقت دیاں پنج ہور گلاں۔}
+    \ollabel{tab:anotherfive}
+  \end{table}
+
+\begin{prob}
+  منّ لو $\mModel{M} = \tuple{W, R, V}$ اک نمونہ اے۔ وکھاؤ کہ جے $R$،
+  \olref[nml][frd][acc]{tab:anotherfive} دے کھبے پاسے دِتّی خاصیت پوری کردا اے، تاں سجے پاسے اوہدے نال جڑے فارمولے دی ہر مثال~$\mModel{M}$ وچ سچی اے۔
+\end{prob}
+
+\end{document}

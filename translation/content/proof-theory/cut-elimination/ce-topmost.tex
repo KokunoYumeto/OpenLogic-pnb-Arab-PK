@@ -1,0 +1,483 @@
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: ce-topmost
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{top}
+
+\olsection{سبھ توں اُتلے قطع ہٹاؤنے}
+
+\begin{defn}
+!!a{proof}~$\pi$ ویکھو جیہڑا \CutCS{} قاعدے اُتے مُکدا اے،
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+تے جیہدے وچ ہور کوئی \CutCS{} استنباط نہیں۔~$\pi$ دی \emph{قطع اُچائی} $\cheight{\pi} = \pheight{\pi_1} + \pheight{\pi_2}$ اے۔~$\pi$ دا \emph{قطع درجہ} $\cutrank{\pi} = \depth{!A}$ اے۔
+\end{defn}
+
+\begin{lem}\ollabel{lem:cut-adm-G3c}
+\CutCS{} قاعدہ~\Log{G3c} وچ قبول جوگ اے۔ دوجے لفظاں وچ، جے $\pi$ اک !!a{proof} اے جیہڑا اکّو~\CutCS{} اُتے مُکدا اے تے ہور بس~$\Log{G3c}$ دے قاعدے ورتدا اے، تاں اوسے آخری سیکوئنٹ دا !!a{proof}~$\pi'$،~\Log{G3c} وچ، موجود اے۔
+\end{lem}
+
+\begin{proof}
+ثبوت قطع !!{height} تے درجے اُتے دوہری استقرا نال اے۔ !!{proof}~$\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+
+استقرا دی مُڈھلی صورت۔ $\cheight{\pi} = 0$ تے $\cutrank{\pi} = 0$۔ چونکہ $\cheight{\pi} = \pheight{\pi_1} + \pheight{\pi_2} = 0$، ایس لئی $\Gamma
+\Sequent \Delta, !A$ تے $!A, \Gamma \Sequent \Delta$ دوویں مسلّمے نیں۔ دو صورتاں نیں۔ (a) اوہناں وچوں اک وچ $!A$ مُکھ نہیں، یا (b) دوہاں وچ $!A$ مُکھ اے۔ تھلّے دوہاں صورتاں وچ وکھاواں گے کہ $\Gamma \Sequent \Delta$ لازماً مسلّمہ اے (تے ایس لئی استقرا دے مفروضے دی لوڑ نہیں)۔
+
+ہُن کئی ممکن صورتاں وکھ کراں گے۔ فرق ایہ اے کہ $\pi_1$ تے $\pi_2$ مسلّمے نیں یا کسے استنباط اُتے مُکدے نیں، تے $!A$ اوس استنباط وچ مُکھ اے یا نہیں۔ صورتاں A تے B استقرا دی مُڈھلی صورت نوں سمیٹدیاں نیں۔ استقرا دے قدم وچ منّنے آں کہ $\cheight{\pi} > 0$ یا $\cutrank{\pi} > 0$ (یا دوویں)۔ اسیں استقرا دا مفروضہ ورت سکدے آں۔ یعنی آخری~\CutCS{} ہر اوہ !!{proof} وچوں ہٹایا جا سکدا اے جیہڑا اکّو~\CutCS{} اُتے مُکدا اے جیہدا قطع درجہ $= \cutrank{\pi}$ اے تے قطع !!{height} $< \cheight{\pi}$، یا جیہدا قطع درجہ~$<
+\cutrank{\pi}$ اے۔ جتھے $\cheight{\pi} = 0$ (دوویں مقدمے مسلّمے نیں)، اوہ صورت A تے B وچ آؤندی اے۔ جتھے $\cheight{\pi} >
+0$، اوہ صورتاں C--D وچ آؤندیاں نیں۔
+
+\paragraph{صورت A۔}
+کوئی $!B$، $\Gamma$ تے~$\Delta$ دوہاں وچ آؤندا اے۔ تاں $\Gamma \Sequent \Delta$ یا مسلّمہ اے (جے $!B$ جوہری اے) یا اوہدا \Log{G3c} وچ !!a{proof}~$\pi'$ اے، \CutCS{} توں بناں، \olref[seq][ex]{prop:G3c-axioms} مطابق۔ ایہ استقرا دی مُڈھلی صورت دا (a) اے، کیوں جے جے $!A$، $\Gamma
+\Sequent \Delta, !A$ وچ مُکھ نہیں یا $!A, \Gamma \Sequent \Delta$ وچ مُکھ نہیں، تے ایہ مسلّمے نیں، تاں کوئی ہور جوہری~$!B$، $\Gamma$ تے~$\Delta$ دوہاں وچ ضرور آؤندا اے۔ ایہ استقرا دے قدم اُتے وی لگدا اے جے اک مقدمہ مسلّمہ اے جیہدے وچ $!A$ مُکھ نہیں (بھاویں دوجا مقدمہ کسے قاعدے دا نتیجہ ہووے)۔
+
+\paragraph{صورت B۔} دوویں مقدمے مسلّمے نیں، تے $!A$ مُکھ اے، سو جوہری اے۔ کھبّا مقدمہ، $\Gamma \Sequent
+\Delta, !A$، ویکھو۔ چونکہ $!A$ مُکھ اے، ایہ $\Gamma$ وچ ضرور آؤندا اے (نہیں تاں $\Gamma \Sequent \Delta, !A$ مسلّمہ نہ ہوندا)۔ ایویں ای $!A$، $\Delta$ وچ ضرور آؤندا اے، نہیں تاں $!A, \Gamma \Sequent \Delta$ مسلّمہ نہ ہوندا۔ سو $!A$ جوہری اے تے $\Gamma$ تے $\Delta$ دوہاں وچ آؤندا اے، یعنی $\Gamma \Sequent \Delta$ مسلّمہ اے۔ ایہ استقرا دی مُڈھلی صورت دا (b) اے۔
+
+\begin{center}
+صورتاں A تے B دا ہور بیان
+\end{center}
+
+\paragraph{صورت A۔} قطع دا اک مقدمہ ایس شکل دا مسلّمہ اے: $!C, \Gamma' \Sequent \Delta', !C$، جتھے $!C$ جوہری اے۔ جے $!C$ قطع !!{formula}~$!A$ نہیں، تاں $!C$، $\Gamma$ تے~$\Delta$ دوہاں وچ ضرور آؤندا اے۔ ایس صورت وچ $\Gamma \Sequent \Delta$ مسلّمہ اے تے اسیں ایہنوں~$\pi'$ لے سکدے آں۔ جے $!C \ident !A$ قطع !!{formula} اے، تاں یا (جے کھبّا مقدمہ مسلّمہ اے) $!A \in \Gamma$ تے $\Gamma = \Gamma', !A$، یا (جے سجّا مقدمہ مسلّمہ اے) $!A \in
+\Delta$ تے $\Delta = \Delta', !A$۔ پہلی صورت وچ $\pi_2$ اک !!a{proof} اے $!A, !A, \Gamma' \Sequent \Delta$ دا، تے \LeftR{\Contraction} دی قبولیت نال (\olref[seq][inv]{prop:G3c-cont-adm}) اک !!a{proof} ملدا اے $\Gamma \Sequent \Delta$ دا۔ دوجی صورت وچ $\pi_2$ اک !!a{proof} اے $\Gamma \Sequent \Delta', !A, !A$ دا، تے \RightR{\Contraction} دی قبولیت نال اک !!a{proof} ملدا اے $\Gamma \Sequent
+\Delta$ دا۔
+
+\paragraph{صورت B۔} مقدمیّاں وچوں اک ایس شکل دا مسلّمہ اے:~$\lfalse, \Gamma' \Sequent \Delta'$۔ جے کھبّا مقدمہ ایہو جیہا مسلّمہ اے، تاں $\lfalse \in \Gamma$ تے $\Gamma \Sequent \Delta$ وی مسلّمہ اے۔ جے سجّا مقدمہ ایہو جیہا مسلّمہ اے، تاں یا $\lfalse \in \Gamma$ (فیر $\Gamma \Sequent \Delta$ مسلّمہ اے)، یا $!A \ident \lfalse$۔ پچھلی صورت وچ $\pi_1$ اک !!a{proof} اے $\Gamma \Sequent \Delta, \lfalse$ دا۔ اسیں ایہنوں !!a{proof} بنا سکدے آں~$\Gamma \Sequent \Delta$ دا،~$\lfalse$ دی اک نقل ہر سیکوئنٹ دے تالی وچوں مٹا کے،~$\pi_1$ وچ۔ (مشق۔ ایہ~$\pheight{\pi_1}$ اُتے استقرا نال پرکھو۔)
+
+ہُن منّ لو صورت A تے صورت B دوہاں وچوں کوئی نہیں لگدی۔ باقی صورتاں وچ $\cheight{\pi} > 0$ اے، یعنی گھٹ توں گھٹ اک مقدمہ کسے استنباط دا نتیجہ اے۔
+
+\paragraph{صورتاں C تے D۔ قطعاں دی تھاں بدلنا۔}
+صورتاں C تے D وچ ویکھیاں جان والیاں ساریاں امکانی شکلاں دا اکّو ڈھنگ اے۔ پہلاں اک !!a{proof} لو جیہڑا~\CutCS{} اُتے مُکدا اے، جتھے اک مقدمہ قاعدے~$R$ نال ملدا اے جیہدے وچ قطع !!{formula}~$!A$ مُکھ نہیں (کوئی ہور !!{formula}~$!D$ مُکھ اے)۔ ایس !!{proof} وچ \CutCS{} قاعدے~$R$ پچھوں آؤندا اے، تے اوہدی خاکے والی شکل ایہ اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !D, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, \Gamma, \Pi \fCenter \Delta', \Lambda$
+\RightLabel{$R$}
+\UnaryInf$!A, \Gamma \fCenter \Delta', !D$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !D$
+\DisplayProof
+\]
+ایہ بس اوہ صورت سمیٹدا اے جتھے $R$ اک مقدمے والا سجّا قاعدہ اے، $A$،~$R$ دا مُکھ !!{formula} نہیں، تے اوہ !!{formula}~$!D$ جیہڑا مُکھ \emph{اے}،~\CutCS دے سجّے مقدمے دے تالی وچ آؤندا اے۔ جے $!D$ مقدم وچ آوے (یعنی $R$ کھبّا قاعدہ ہووے)، یا~\CutCS دے کھبّے مقدمے وچ آوے، تاں اوہدی شکل ظاہر اے وکھری ہووے گی۔ $\Pi$ تے~$\Lambda$ وچلے !!{formula}s قاعدے~$R$ دے سرگردہ !!{formula}s نوں ظاہر کردے نیں۔
+
+اسیں ایہ ترتیب اُلٹا کے اک !!a{proof} ویکھدے آں جتھے $R$،~\CutCS{} پچھوں آؤندا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma, \Pi \fCenter \Delta', !D, \Lambda, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, \Gamma, \Pi \fCenter \Delta', !D, \Lambda$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta', !D, \Lambda$
+\RightLabel{$R$}
+\UnaryInf$\Gamma, \fCenter \Delta', !D, !D$
+\DisplayProof
+\]
+اسیں !!{height} قائم رکھن والا کمزور کرن دا قاعدہ ورت کے $\pi_1'$ تے $\pi_3'$، بالترتیب $\pi_1$ تے $\pi_3$ توں لیندے آں۔
+
+چونکہ اسیں \CutCS{} تے~$R$ دی ترتیب بدلنے آں، ایس نوں «قطع نوں~$R$ توں اُتّے چُکنا» آکھدے نیں۔ ایس نال~\CutCS دے سجّے مقدمے اُتے مُکّن والے !!{proof} دی اُچائی گھٹدی اے، سو قطع !!{height} گھٹدی اے۔ یعنی نویں \CutCS{} اُتے مُکّن والے ذیلی !!{proof}s دی !!{height}، $\pi_1$ تے $\pi_3$ توں ودھ نہیں منّ سکدے۔ سو قطع !!{height} گھٹ گئی اے (اسیں سجّے پاسے اک استنباط ہٹایا اے)۔ ہُن استقرا دا مفروضہ لگدا اے تے دسدا اے کہ \CutCS{} استنباط ہٹایا جا سکدا اے۔ آخر~$!D$ دی ودھ نقل~$\RightR{\Contraction}$ دی قبولیت نال ہٹاؤنے آں۔
+
+\paragraph{صورت C۔}
+$\pi_1$ تے $\pi_2$ وچوں گھٹ توں گھٹ اک، اک مقدمے والے قاعدے~$R$ اُتے مُکدا اے جیہدے وچ $!A$ مُکھ نہیں۔ کُل 18 صورتاں نیں۔ ایہ ایس گل اُتے نربھر اے کہ $!A$،~\CutCS دے کھبّے مقدمے وچ مُکھ نہیں یا سجّے وچ، تے ایہ وی کہ قاعدہ~$R$، اک مقدمے والے نو قاعدیاں وچوں کیہڑا اے (\LeftR{\lnot}، \RightR{\lnot}، \RightR{\lor}، \LeftR{\land}، \RightR{\lif} تے مسوّراں دے چار قاعدے)۔ اسیں بس دو مثالاں ویکھدے آں جتھے $!A$،~$\pi_2$ دے آخری استنباط وچ مُکھ نہیں، تے اوہ~$\RightR{\lif}$ یا~\LeftR{\lexists} اُتے مُکدا اے۔ باقی صورتاں ایہو جیہیاں نیں تے مشقاں وجوں چھڈ دِتّیاں نیں۔
+
+منّ لو $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B \lif !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, !B, \Gamma \fCenter \Delta', !C$
+\RightLabel{$\RightR{\lif}$}
+\UnaryInf$!A, \Gamma \fCenter \Delta', !B \lif !C$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \lif !C$
+\DisplayProof
+\]
+جتھے $\Delta = \Delta', !B \lif !C$۔ !!{height} قائم رکھن والا کمزور کرن دا قاعدہ (\olref[seq][adm]{prop:weak-G3c-adm})، $\pi_1$ اُتے لا کے !!a{proof} $\pi_1'$ ملدا اے $!B, \Gamma \fCenter \Delta', !B \lif !C, !C,
+!A$ دا (کھبّے $!B$ نال تے سجّے $!C$ نال کمزور کردے آں)۔ ایویں ای \olref[seq][adm]{prop:weak-G3c-adm} نوں~$\pi_3$ اُتے لا کے !!a{proof}~$\pi_3'$ ملدا اے $!A, !B, \Gamma \fCenter
+\Delta', !B \lif !C, !C$ دا (سجّے $!B \lif !C$ نال کمزور کر کے)۔ استقرا دا مفروضہ ایس اُتے لگدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta', !B \lif !C, !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, !B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\DisplayProof
+\]
+قطع !!{formula}~$!A$ اے۔ ایس !!{proof} دا قطع درجہ اوہی اے تے قطع !!{height}،~$\pi$ توں گھٹ اے۔ ایس نال !!a{proof}~$\pi_4$، \Log{G3c} وچ \CutCS{} توں بناں،~$!B, \Gamma \fCenter \Delta', !B \lif
+!C, !C$ دا ملدا اے۔ $\RightR{\lif}$ لاؤ تے !!a{proof} ملے گا $\Gamma \fCenter
+\Delta', !B \lif !C, !B \lif !C$ دا:
+\[
+\AxiomC{}
+\RightLabel{$\pi_4$}
+\Deduce$!B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\RightLabel{$\RightR{\lif}$}
+\UnaryInf$\Gamma \fCenter \Delta', !B \lif !C, !B \lif !C$
+\DisplayProof
+\]
+!!a{proof}~$\pi'$، $\Gamma \Sequent \Delta$ دا، یعنی $\Gamma
+\fCenter \Delta', !B \lif !C$ دا، لین لئی \olref[seq][inv]{prop:G3c-cont-adm} (سکیڑن دی قبولیت) لاؤ۔
+
+ہُن منّ لو $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\lexists[x][!B(x)], \Gamma' \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{$\LeftR{\lexists}$}
+\UnaryInf$!A, \lexists[x][!B(x)], \Gamma' \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma' \fCenter \Delta$
+\DisplayProof
+\]
+استقرا دا مفروضہ فیر ایس اُتے لاؤ:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1[!B(c) \Sequent {}]$}
+\Deduce$\lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta, !A$
+\AxiomC{}
+\LeftLabel{$\pi_3[\lexists[x][!B(x)] \Sequent {}]$}
+\Deduce$!A, \lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$\lexists[x][!B(x)], \lexists[x][!B(x)], \Gamma' \fCenter \Delta$
+\DisplayProof
+\]
+دھیان دیو، خاص متغیر دی شرط پوری اے، کیوں جے~\LeftR{\lexists} دی خاص متغیر والی شرط~$\pi_2$ وچ ایہ پکا کردی اے کہ $c$، $\lexists[x][!B(x)]$، $\Gamma'$ یا~$\Delta$ وچ نہیں آؤندا۔ آخر \olref[seq][inv]{prop:G3c-cont-adm} لاؤ۔
+
+\paragraph{صورت D۔}
+$\pi_1$ تے $\pi_2$ وچوں گھٹ توں گھٹ اک، دو مقدمیّاں والے قاعدے~$R$ اُتے مُکدا اے جیہدے وچ $!A$ مُکھ نہیں۔ 6 صورتاں نیں۔ اسیں اوہ صورت ویکھدے آں جتھے $!A$،~$\pi_2$ دے آخری استنباط وچ مُکھ نہیں، تے اوہ~$\RightR{\land}$ اُتے مُکدا اے۔ باقی صورتاں ایہو جیہیاں نیں۔
+
+منّ لو $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B$
+\AxiomC{}
+\RightLabel{$\pi_4$}
+\Deduce$!A, \Gamma \fCenter \Delta', !C$
+\RightLabel{$\RightR{\land}$}
+\BinaryInf$!A, \Gamma \fCenter \Delta', !B \land !C$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+استقرا دا مفروضہ ایہناں !!{proof}s اُتے لگدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !B, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B \land !C, !B$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !B$
+\DisplayProof
+\]
+تے
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C, !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_4'$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B \land !C, !C$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !C$
+\DisplayProof
+\]
+ایتھے \Log{G3c} دے !!{proof}s $\pi_1'$ تے $\pi_1''$، !!{height} قائم رکھن والے کمزور کرن دے قاعدے (\olref[seq][adm]{prop:weak-G3c-adm}) نال~$\pi_1$ توں ملدے نیں (اک واری سجّے $!B$ نال تے اک واری $!C$ نال کمزور کر کے)۔ !!{proof}s $\pi_3'$ تے~$\pi_4'$، $\pi_3$ تے~$\pi_4$ توں وی !!{height} قائم رکھن والے کمزور کرن دے قاعدے نال، بالترتیب $\pi_3$ تے~$\pi_4$ توں، ملدے نیں (سجّے $!B \land !C$ نال کمزور کر کے)۔
+
+استقرا دا مفروضہ !!{proof}s~$\pi_5$ تے~$\pi_6$، \Log{G3c} وچ، دیندا اے، $\Gamma \fCenter \Delta', !B \land !C, !B$ تے $\Gamma
+\fCenter \Delta', !B \land !C, !C$ دے۔ ایہناں نوں جوڑ کے، !!a{proof} ملدا اے $\Gamma \Sequent \Delta', !B \land !C, !B \land !C$ دا، قاعدہ~$\RightR{\land}$ ورتدیاں:
+\[
+\AxiomC{}
+\RightLabel{$\pi_5$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !B$
+\AxiomC{}
+\RightLabel{$\pi_6$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta, !B \land !C, !B \land !C$
+\DisplayProof
+\]
+!!a{proof} لین لئی $\Gamma \Sequent \Delta$ دا، یعنی $\Gamma \fCenter
+\Delta', !B \land !C$ دا، \olref[seq][inv]{prop:G3c-cont-adm} (سکیڑن دی قبولیت) لاؤ۔
+
+\paragraph{صورت E۔ قطع گھٹاؤنے۔}
+آخری صورت اوہ اے جتھے $\pi_1$ تے $\pi_2$ دوویں ایہو جیہے استنباطاں اُتے مُکدے نیں جیہناں وچ $!A$ مُکھ اے۔ چھے صورتاں نیں،~$!A$ دے ہر ممکن !!{main operator} لئی اک۔
+
+ہر صورت وچ اسیں قطع !!{formula}~$!A$ والے اک \CutCS{} نوں~$!A$ دے ذیلی !!{formula}s اُتے اک یا ودھ قطعاں وچ بدلنے آں، یعنی اوہناں استنباطاں دے سرگردہ !!{formula}s اُتے جیہناں دا مُکھ !!{formula}~$!A$ اے۔ ایس لئی ایہناں صورتاں نوں اکثر قطع استنباط دی «تقلیل» یا «روپ بدلنا» آکھدے نیں۔
+
+\begin{enumerate}
+\item جے $!A \ident \lnot !B$، تاں $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\Gamma \fCenter \Delta, \lnot !B$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+استقرا دے مفروضے نال \CutCS{} ایتھوں ہٹایا جا سکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+
+\item
+جے $!A \ident (!B \lor !C)$، تاں $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B, !C$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lor !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!B \lor !C, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\CutCS اُتے مُکدا !!{proof} ویکھو:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B, !C$
+\AxiomC{}
+\RightLabel{$\pi_2'''$}
+\Deduce$!C, \Gamma \fCenter \Delta, !B$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta, !B$
+\DisplayProof
+\]
+جتھے $\pi_2'''$، $\pi_2''$ توں !!{height} قائم رکھن والے کمزور کرن دے قاعدے نال ملدا اے۔ ایہدا قطع درجہ $< \cutr{\pi}$ اے کیوں جے $\depth{!C} < \depth{!B \lor !C}$، سو استقرا دا مفروضہ \Log{G3c} وچ !!a{proof} دیندا اے، $\pi_1''$، $\Gamma \fCenter \Delta, !B$ دا۔ \CutCS اُتے مُکدا !!{proof}،
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+قطع درجہ $= \depth{!B} < \depth{!B \lor !C}$ رکھدا اے، سو استقرا دا مفروضہ فیر لگدا اے تے !!a{proof} $\pi'$ دیندا اے $\Gamma
+\fCenter \Delta$ دا۔
+
+\item $!A \ident (!B \land !C)$۔ مشق۔
+
+\item جے $!A \ident (!B \lif !C)$، تاں $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\CutCS اُتے مُکدا !!{proof}،
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+~$\pi$ توں گھٹ قطع درجہ رکھدا اے۔ استقرا دا مفروضہ !!a{proof}~$\pi_1''$ دیندا اے $!B, \Gamma \fCenter \Delta$ دا۔
+ہُن \CutCS اُتے مُکدا !!{proof} ویکھو:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+ایہدا قطع درجہ وی~$\pi$ دے قطع درجے توں گھٹ اے، سو استقرا دا مفروضہ \Log{G3c} دا !!{proof}~$\pi'$ دیندا اے $\Gamma \fCenter
+\Delta$ دا۔
+\item جے $!A \ident \lforall[x][!B(x)]$، تاں $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B(t), \lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+استقرا دے مفروضے نال \CutCS{} ایتھوں ہٹایا جا سکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$!B(t), \Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B(t), \lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B(t), \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+جتھے $\pi_1''$، $\pi_1$ توں ملدا اے (~$\pi_1'$ توں نہیں!) !!{height} قائم رکھن والے کمزور کرن دے قاعدے نال۔ (!!{proof} دا قطع درجہ اوہی اے پر قطع !!{height} گھٹ اے۔) ایس نال !!a{proof}~$\pi_2''$ ملدا اے $!B(t), \Gamma \fCenter \Delta$ دا۔
+
+!!{proof}~$\pi_1'$ دا آخری سیکوئنٹ $\Gamma \Sequent \Delta,
+!B(c)$ اے، جتھے $c$ اک~$\RightR{\lforall}$ استنباط دا خاص متغیر اے۔ سو $c$،~$!B(x)$، $\Gamma$ یا~$\Delta$ وچ نہیں آؤندا۔ اسیں منّنے آں کہ !!{proof}~$\pi$ باقاعدہ اے، سو $c$ بس اگلے~$\RightR{\lforall}$ استنباط دا خاص متغیر اے تے بس اوہدے اُتّے آؤندا اے، یعنی بس~$\pi_1'$ وچ آؤندا اے، تے~$\pi_1'$ وچ کسے استنباط دا خاص متغیر نہیں۔ چونکہ $c$،~$\pi_2$ وچ نہیں آؤندا، ایہ~$t$ وچ وی نہیں آ سکدا۔ \olref[seq][qua]{lem:subst-regular} مطابق !!{proof}~$\Subst{\pi_1'}{t}{c}$ اک !!a{proof} اے $\Gamma \Sequent \Delta,
+!B(t)$ دا۔ ہُن استقرا دا مفروضہ ایس !!{proof} اُتے لاؤ:
+\[
+\AxiomC{}
+\RightLabel{$\Subst{\pi_1'}{t}{c}$}
+\Deduce$\Gamma \fCenter \Delta, !B(t)$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!B(t), \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+(استقرا دا مفروضہ ایس لئی لگدا اے کہ قطع !!{formula}~$!B(t)$ اے، سو !!{proof} دا قطع درجہ~$\pi$ توں گھٹ اے۔)
+\item $!A \ident \lexists[x][!B(x)]$ والی صورت مشق وجوں چھڈدے آں۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c} دے ثبوت وچ صورت~D دی اوہ ذیلی صورت پرکھو جتھے $!A$،~$\pi_1$ دے آخری استنباط وچ مُکھ نہیں، تے اوہ~$\LeftR{\lif}$ اُتے مُکدا اے۔ (دھیان دیو، مشق دا اک حصہ ایہ صاف دَسنا اے کہ تسی کیہ ثابت کرنا اے، یعنی ایس صورت وچ $\pi$ دی کیہڑی شکل اے۔)
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c} دے ثبوت وچ صورت~D دی اوہ ذیلی صورت پرکھو جتھے $!A$،~$\pi_1$ دے آخری استنباط وچ مُکھ نہیں، تے اوہ~$\LeftR{\lforall}$ اُتے مُکدا اے۔
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c} دے ثبوت وچ صورت~E دی اوہ ذیلی صورت پرکھو جتھے $!A$، $\pi_1$ تے $\pi_2$ دوہاں دے آخری استنباطاں وچ مُکھ اے تے $!A \ident (!B \land !C)$۔
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c} دے ثبوت وچ صورت~E دی اوہ ذیلی صورت پرکھو جتھے $!A$، $\pi_1$ تے $\pi_2$ دوہاں دے آخری استنباطاں وچ مُکھ اے تے $!A \ident \lexists[x][!B(x)]$۔
+\end{prob}
+
+دھیان دیو، صورت~E وچ \CutCS{} اُتے مُکّن والے اوس !!{proof} دی قطع !!{height}، جیہدے اُتے اسیں استقرا دا مفروضہ لاؤنے آں، اصل ثبوت دی قطع !!{height} توں ودھ ہو سکدی اے۔ مثلاً $!A
+\ident (!B \lif !C)$ والی صورت وچ اسیں $\pi$ نوں !!a{proof} وچ بدلیا جیہدے وچ دو \CutCS{} استنباط نیں:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_1''$}
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+اُتلے \CutCS{} دا، $\pi_1'$ تے $\pi_2''$ دے وچکار، قطع درجہ تے قطع !!{height} دوویں~$\pi$ توں گھٹ نیں۔ پر !!{proof}~$\pi_1''$، جیہڑا استقرا دا مفروضہ لاؤن نال ملیا، دی قطع !!{height} ہُن~$\pi$ توں گھٹ نہیں۔ کیوں جے تھلّے والے \CutCS{} دا قطع !!{formula} $!B$ اے، اوہدا قطع \emph{درجہ}، فیر وی،~$\pi$ دے قطع درجے توں گھٹ اے۔
+
+\olref{lem:cut-adm-G3c} قائم کردا اے کہ اسیں اکّو سبھ توں اُتلا \CutCS{} استنباط !!a{proof} وچوں ہٹا سکدے آں۔ اسیں ایہ وی وکھا سکدے آں کہ کِنّے وی \CutCS{} استنباط !!a{proof} وچوں ہٹا سکدے آں، ایس معاون قضیے نوں وار واری سبھ توں اُتلے ذیلی !!{proof}s اُتے لا کے جیہڑے~\CutCS اُتے مُکدے نیں۔
+
+\begin{thm}\ollabel{thm:cut-elim-G3c-topmost}
+کوئی وی !!{proof} $\pi$، $\Log{G3c} + \CutCS$ وچ،~\Log{G3c} دے !!a{proof} وچ بدلیا جا سکدا اے۔
+\end{thm}
+
+\begin{proof}
+~$n$ اُتے استقرا نال، جیہڑی~$\pi$ وچ \CutCS{} استنباطاں دی گنتی اے۔ جے $n=0$، کجھ کرنا نہیں، $\pi$ پہلاں ای~\Log{G3c} دا !!a{proof} اے۔ نہیں تاں سبھ توں اُتلے \CutCS{} استنباط اُتے مُکدا ذیلی !!{proof}~$\pi'$ ویکھو۔ اوہدے وچ آخری استنباط وجوں اکّو \CutCS{} قاعدہ اے۔ \olref{lem:cut-adm-G3c} لا کے اوہنوں \CutCS{} توں بناں ثبوت~$\pi''$ وچ بدلو تے ذیلی !!{proof}~$\pi'$ دی تھاں~$\pi''$ رکھو۔ حاصل !!a{proof} اے جیہدے وچ $n-1$ \CutCS{} استنباط نیں، تے استقرا دا مفروضہ لگدا اے۔
+\end{proof}
+
+\end{document}

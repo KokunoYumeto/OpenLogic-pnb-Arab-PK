@@ -1,0 +1,294 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: invertibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{inv}
+
+\olsection{قاعدیاں نوں الٹا ورت سکنا}
+
+\begin{defn}
+قاعدہ~$R$،
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+کسے نظام وچ \emph{الٹا ورتن جوگا} اے جے جدوں وی $\Proves S$، تاں $\Proves[h_i] S_i$، $i = 1$، \dots،~$n$ لئی۔ ایہ اوس نظام وچ \emph{!!{height} قائم رکھ کے الٹا ورتن جوگا} (یا \emph{!!{hp}-الٹ جوگا}) اے جے جدوں وی $\Proves_n S$، تاں $\Proves[n] S_i$، $i =
+1$، \dots،~$n$ لئی۔
+\end{defn}
+
+\begin{lem}\ollabel{lem:G3c-invert}
+~\Log{G3c} وچ $\lnot$، $\land$، $\lor$ تے $\lif$ دے قاعدے !!{height} قائم رکھ کے الٹے ورتے جا سکدے نیں، یعنی:
+\begin{enumerate}
+  \item \RightR{\lnot}: جے $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, \lnot !A$، تاں $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta$۔
+  \item \LeftR{\lnot}: جے $\Log{G3c} \Proves[n] \Gamma, \lnot !A
+  \Sequent \Delta$، تاں $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  !A$۔
+  \item \RightR{\land}: جے $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \land !B$، تاں $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A$ تے $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !B$۔
+  \item \LeftR{\land}: جے $\Log{G3c} \Proves[n] \Gamma, !A \land !B
+  \Sequent \Delta$، تاں $\Log{G3c} \Proves[n] !A, !B, \Gamma \Sequent
+  \Delta$۔
+  \item \RightR{\lor}: جے $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \lor !B$، تاں $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A, !B$۔
+  \item \LeftR{\lor}: جے $\Log{G3c} \Proves[n] !A \lor !B, \Gamma \Sequent
+  \Delta$، تاں $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta$ تے $\Log{G3c} \Proves[n] !B, \Gamma \Sequent
+  \Delta$۔
+  \item \RightR{\lif}: جے $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \lif !B$، تاں $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta, !B$۔
+  \item \LeftR{\lif}: جے $\Log{G3c} \Proves[n] !A \lif !B, \Gamma
+  \Sequent \Delta$، تاں $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  !A$ تے $\Log{G3c} \Proves[n] !B, \Gamma \Sequent \Delta$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+سانوں وکھاؤنا پینا اے کہ کسے وی قاعدے~$R$ لئی، جیہڑا~\Log{G3c} دا اے، جے !!a{proof}~$\pi$ اے نتیجے~$S$ دا، جیہڑا~$R$ دا اے، تاں !!{proof}s~$\pi_i$ وی نیں مقدمیّاں $S_i$ دے، جیہڑے~$R$ دے نیں، تے $\pheight{\pi_i}
+\le \pheight{\pi}$۔ قاعدہ \LeftR{\land} ویکھو۔ منّ لو !!a{proof}~$\pi$ اے جیہدا آخری سیکوئنٹ $!A \land !B, \Gamma
+\Sequent \Delta$ دی شکل دا اے۔ سانوں وکھاؤنا پینا اے کہ !!a{proof} $\pi'$ اے $!A, !B, \Gamma \Sequent \Delta$ دا، تے $\pheight{\pi'} \le
+\pheight{\pi}$۔ اسیں ایہ $n = \pheight{\pi}$ اُتے استقرا نال کردے آں۔
+
+جے $n = 0$، تاں $\pi$ بس اک مسلّمہ اے، $!A \land !B, \Gamma
+\Sequent \Delta$۔ \Log{G3c} وچ مسلّمے $!C, \Gamma
+\Sequent \Delta, !C$ دی شکل دے نیں، جتھے $!C$ جوہری اے۔ دوجے لفظاں وچ $!C$، $!A \land !B$ نہیں ہو سکدا۔ جے $!A \land !B, \Gamma \Sequent \Delta$ مسلّمہ اے، تاں کوئی جوہری $!C$، !!a{element} ضرور اے $ \Gamma$ تے~$\Delta$ دوناں دا۔ پر فیر $!A, !B, \Gamma \Sequent \Delta$ وی مسلّمہ اے تے سانوں ساڈا !!{proof}~$\pi'$ مل گیا اے (جیہدی !!{height} وی~$0$ اے)۔
+
+جے $n>0$، تاں ایہ کسے استنباط اُتے مُکدا اے۔ سانوں دعویٰ~$n$ لئی ثابت کرنا پینا اے، پر اسیں منّ سکدے آں کہ ایہ ہر !!{proof} لئی ٹھیک اے جیہدی اُچائی~$<n$ اے، بھاویں سیاق وکھرا ہووے۔ دوجے لفظاں وچ، ہر $k<n$ تے ہر $ \Pi$ تے $ \Lambda$ لئی، جے $!A \land !B, \Pi \Sequent \Lambda$ دا !!a{proof} اے !!{height}~$k$ والا، تاں !!a{proof} اے !!{height}~$\le k$ والا، $!A, !B, \Pi \Sequent \Lambda$ دا۔
+
+دو صورتاں نیں۔ کھبّے پاسے $!A \land
+!B$ یا مُکھ اے یا نہیں۔ جے ایہ مُکھ اے، تاں آخری استنباط \LeftR{\land} اے تے سدھا ذیلی !!{proof}~$\pi_1$، $!A, !B, \Gamma \Sequent \Delta$ اُتے مُکدا اے۔ ایس صورت وچ نتیجہ ٹھیک اے، کیونکہ $\pheight{\pi_1} < \pheight{\pi}$۔
+
+جے $!A \land !B$ مُکھ نہیں، تاں کوئی ہور !!{formula} مُکھ اے تے $!A
+\land !B$ آخری استنباط دے سیاق دا حصہ اے۔ فیر استقرا دا مفروضہ آخری قاعدے~$R$ دے سدھے ذیلی !!{proof}s اُتے لگدا اے۔ ایہدے نال !!a{proof}~$\pi_1'$ یا دو !!{proof}s~$\pi_1'$ تے~$\pi_2'$ ملدے نیں، جیہناں دی !!{height}، سدھے ذیلی !!{proof}s~$\pi$ دے، دیاں اُچائیاں توں ودھ نہیں۔ $ \pi_1'$ تے $ \pi_2'$ دے آخری سیکوئنٹاں دے کھبّے سیاق وچ $!A, !B$ اے، $!A \land !B$ دی تھاں۔ قاعدہ~$R$ لا کے ثبوت~$\pi'$ لو۔ مثال لئی منّ لو $\pi$،~\LeftR{\lif} اُتے مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!A \land !B, \Gamma' \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A \land !B, \Gamma', !D \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A \land !B, \Gamma', !C \lif !D \fCenter \Delta$
+\DisplayProof
+\]
+ایتھے کھبّے پاسے $!C \lif !D$ مُکھ اے، تے کھبّا سیاق $!A \land !B, \Gamma'$ اے (یعنی $\Gamma = \Gamma', !C \lif !D$)۔ استقرا دے مفروضے نال !!{proof}s $ \pi_1'$ تے $ \pi_2'$، بالترتیب $!A \land !B, \Gamma' \Sequent \Delta, !C$ تے $!A \land !B, \Gamma',
+!D \Sequent \Delta$ دے، ملدے نیں۔ ایہ دوویں سیکوئنٹ فیر \LeftR{\lif} قاعدے دے مقدمے بن سکدے نیں،~$\pi'$ لین لئی:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!A, !B, \Gamma' \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!A, !B, \Gamma', !D \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A, !B, \Gamma', !C \lif !D \fCenter \Delta$
+\DisplayProof
+\]
+سانوں ایہ ملدا اے:
+\begin{align*}
+\pheight{\pi} & = \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1\\
+\pheight{\pi'} & = \max(\pheight{\pi_1'}, \pheight{\pi_2'}) + 1
+\intertext{by definition, and}
+\pheight{\pi_1'} & \le \pheight{\pi_1}\\
+\pheight{\pi_2'} & \le \pheight{\pi_2}
+\intertext{by inductive hypothesis. So,}
+\pheight{\pi'} & \le \pheight{\pi}.
+\end{align*}
+\end{proof}
+
+\begin{prob}
+\olref{lem:G3c-invert} دا ثبوت \RightR{\lif} لئی دیو۔
+\end{prob}
+
+\begin{lem}\ollabel{lem:invert-quant}
+قاعدے \RightR{\lforall} تے \LeftR{\lexists} ہِٹھلے مطلب وچ !!{height} قائم رکھ کے الٹے ورتے جا سکدے نیں:
+\begin{enumerate}
+  \item جے $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  \lforall[x][!A(x)]$، تاں $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A(c)$، تے
+  \item جے $\Log{G3c} \Proves[n] \lexists[x][!A(x)], \Gamma \Sequent
+  \Delta$، تاں $\Log{G3c} \Proves[n] !A(c), \Gamma \Sequent \Delta$،
+\end{enumerate}
+ہر $c$ لئی جیہڑا $ \Gamma$، $ \Delta$ تے $ \lforall[x][!A(x)]$ یا $ \lexists[x][!A(x)]$ وچ، بالترتیب، نہیں آؤندا۔
+\end{lem}
+
+\begin{proof}
+  اسیں (1) وکھاؤنے آں تے (2) مشق لئی چھڈّ دیندے آں۔ دلیل \olref{lem:G3c-invert} دے ثبوت ورگی اے۔ استقرائی قدم وچ فیر دو صورتاں نیں۔ جیہڑی صورت وچ $\lforall[x][!A(x)]$ مُکھ اے، اوہ فیر چھیتی ہو جاندی اے۔ آخری $ \RightR{\lforall}$ استنباط دا مقدمہ مطلوبہ شکل $ \Gamma
+  \Sequent \Delta, !A(a)$ دا اے، تے ایس اُتے مُکّن والے سدھے ذیلی !!{proof}~$\pi_1$ لئی $\pheight{\pi_1} < \pheight{\pi}$ اے۔ نالے خاص متغیر دی شرط توں سانوں پتا لگدا اے کہ $a$، $ \Gamma$، $ \Delta$ یا $ \lforall[x][!A(x)]$ وچ نہیں آؤندا۔ کیونکہ اسیں منّ سکدے آں کہ $\pi_1$ باقاعدہ اے، ایس لئی $ \Subst{\pi_1}{c}{a}$ اوہو !!a{proof} اے، اوہو !!{height} والا، $ \Gamma \Sequent \Delta, !A(c)$ دا، \olref[qua]{lem:subst-regular} نال۔
+
+  دوجی صورت وچ $\lforall[x][!A(x)]$ آخری استنباط وچ مُکھ نہیں، کوئی ہور فارمولا مُکھ اے۔ اسیں فیر اک صورت مثال دے طور اُتے ویکھدے آں۔ منّ لو آخری استنباط~\RightR{\land} اے۔ کوئی !!{formula} $\Delta$ وچ~$!B \land !C$ دی شکل دا اے تے مُکھ اے۔ !!{proof}~$\pi$ ایویں مُکدا اے:
+  \[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !B \land !C$
+\DisplayProof
+\]
+جتھے $\Delta = \Delta', !B \land !C$۔ منّ لو $c$ اک !!a{constant} اے جیہڑا $ \Delta$ وچ نہیں آؤندا۔ فیر صاف اے کہ ایہ $ \Delta', !B$ وچ وی نہیں آؤندا تے $ \Delta', !C$ وچ وی نہیں۔ سو استقرا دا مفروضہ $ \pi_1$ تے~$\pi_2$ اُتے لگدا اے۔ ساڈے کول !!{proof}s~$\pi_1'$ تے $ \pi_2'$ نیں، تے $\pheight{\pi_1'} \le \pheight{\pi_1}$ تے $\pheight{\pi_2'} \le
+\pheight{\pi_2}$۔ مطلوبہ !!{proof}~$\pi'$، $ \Gamma \Sequent
+\Delta, !A(c)$ دا، ایہ اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !A(c), !B$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta', !A(c), !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !A(c), !B \land !C$
+\DisplayProof
+\]
+جیہدے لئی $\pheight{\pi'} = \max(\pheight{\pi_1'}, \pheight{\pi_2'})+1 \le \pheight{\pi}$۔
+\end{proof}
+
+\Olref{lem:G3c-invert} قطع ہٹاؤن دے قضیے دے ثبوت وچ اہم کم کردا اے۔ ایہ ہِٹھلی گل وکھاؤن لئی وی ورتیا جا سکدا اے۔
+
+\begin{prop}\ollabel{prop:G3c-cont-adm}
+سکڑاؤ دے قاعدے \LeftR{\Contraction} تے \RightR{\Contraction}، جیہڑے~\Log{G1c} دے نیں،~\Log{G3c} وچ !!{height} قائم رکھ کے قبول کرن جوگ نیں۔
+\end{prop}
+
+\begin{proof}
+اسیں \RightR{\Contraction} تے \LeftR{\Contraction} لئی دلیل اکٹھی دیندے آں۔ منّ لو $\pi$، !!a{proof} اے $\Gamma \Sequent \Delta, !A, !A$ دا یا $!A, !A, \Gamma \Sequent
+\Delta$ دا،~\Log{G3c} وچ۔ سانوں وکھاؤنا پینا اے کہ اک \Log{G3c}-!!{proof}~$\pi'$ وی اے، بالترتیب $ \Gamma \Sequent \Delta, !A$ دا یا $!A,
+\Gamma \Sequent \Delta$ دا، تے $\pheight{\pi'} \le
+\pheight{\pi}$۔ اسیں ایہ $n = \pheight{\pi}$ اُتے استقرا نال کردے آں۔
+
+جے $n=0$، تاں $\pi$ بس مسلّمہ اے۔ پر جے $\Gamma \Sequent \Delta, !A,
+!A$،~\Log{G3c} دا مسلّمہ اے، تاں $\Gamma \Sequent \Delta, !A$ وی اے۔ یا کوئی جوہری~$!C$، !!a{element} اے $ \Gamma$ تے~$\Delta$ دوناں دا، یا $!A$ جوہری اے تے !!a{element} اے~$\Gamma$ دا۔ اوہی دلیل لگدی اے جے آخری سیکوئنٹ $!A, !A, \Gamma \Sequent
+\Delta$ اے۔
+
+جے $n>0$، تاں $\pi$ کسے قاعدے~$R$ اُتے مُکدا اے۔ جے $!A$ ایس آخری استنباط وچ مُکھ نہیں، تاں اسیں !!a{proof}~$\pi'$ اوہو جیہا لے سکدے آں جیویں \olref{lem:G3c-invert} دے ثبوت وچ۔ استقرا دا مفروضہ~$\pi$ دے سدھے ذیلی !!{proof}s اُتے لاؤ تے اوہی قاعدہ~$R$ حاصل ہوئے !!{proof} یا ثبوتاں اُتے لاؤ۔ استقرا دا مفروضہ ایہ اے کہ جے !!a{proof} اے !!{height}~$k<n$ والا، $ \Pi \Sequent \Lambda, !D,
+!D$ دا یا $!D, !D, \Pi \Sequent \Lambda$ دا، تاں !!a{proof} اے !!{height}~$\le k$ والا، بالترتیب $ \Pi \Sequent \Lambda, !D$ دا یا $!D, \Pi \Sequent
+\Lambda$ دا۔ (ویکھو کہ استقرا دا مفروضہ اوہدوں وی لگدا اے جے سیاق یا سکیڑیا جان والا !!{formula}، $ \Gamma$، $ \Delta$ یا~$!A$ توں وکھرے نیں!)
+
+مثال لئی منّ لو $R$، $\RightR{\land}$ اے تے $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B, !A, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta', !C, !A, !A$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A, !A$
+\DisplayProof
+\]
+جتھے $\Delta = \Delta', !B \land !C$۔ استقرا دے مفروضے نال !!{proof}s $ \pi_1'$ تے $ \pi_2'$، بالترتیب $ \Gamma \fCenter \Delta', !B, !A$ تے $ \Gamma \fCenter \Delta', !C, !A$ دے، ملدے نیں، تے $\pheight{\pi_1'} \le  \pheight{\pi_1}$ تے $\pheight{\pi_2'} \le
+\pheight{\pi_2}$۔ !!{proof}~$\pi'$ ایہ اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !B, !A$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta', !C, !A$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A$
+\DisplayProof
+\]
+
+جے $!A$ آخری استنباط وچ مُکھ اے، تاں اسیں اُلٹ لاؤن دا لیما (\olref{lem:G3c-invert})، سدھے ذیلی !!{proof}s~$\pi$ دے اُتے لاؤنے آں، فیر استقرا دا مفروضہ، تے فیر قاعدہ~$R$۔ مثال لئی منّ لو $\pi$، $ \Gamma \Sequent \Delta, !A, !A$ ثابت کردا اے، $!A
+\ident (!B \land !C)$ تے آخری استنباط وچ مُکھ اے۔ فیر $\pi$ ایویں دِسدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C, !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta, !B \land !C, !B \land !C$
+\DisplayProof
+\]
+\olref{lem:G3c-invert} نوں $ \pi_1$ اُتے لاؤ تاں !!a{proof}~$\pi_1'$ ملدا اے $ \Gamma \Sequent \Delta, !B, !B$ دا۔ (ایہ !!a{proof} وی دیندا اے $ \Gamma \Sequent \Delta, !C, !B$ دا، پر سانوں اوہدی لوڑ نہیں۔) ایویں ای \olref{lem:G3c-invert} نوں~$\pi_2$ اُتے لا کے اسیں !!a{proof}~$\pi_2'$ لیندے آں $ \Gamma \Sequent \Delta, !C, !C$ دا۔ کیونکہ \RightR{\land} نوں الٹا لاؤنا !!{height} قائم رکھدا اے، $\pheight{\pi_1'} \le  \pheight{\pi_1} < \pheight{\pi}$ تے $\pheight{\pi_2'} \le  \pheight{\pi_2} < \pheight{\pi}$۔ سو استقرا دا مفروضہ $ \pi_1'$ تے $ \pi_2'$ اُتے لگدا اے۔ !!{proof}s~$\pi_1''$ تے $ \pi_2''$، بالترتیب $ \Gamma \Sequent \Delta, !B$ تے $ \Gamma \Sequent \Delta, !C$ دے، نیں، تے $\pheight{\pi_1''}
+\le \pheight{\pi_1'} \le \pheight{\pi_1}$ تے $\pheight{\pi_2''} \le
+\pheight{\pi_2'} \le \pheight{\pi_2}$۔ فیر !!{proof}~$\pi'$ ایہ اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$\Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta, !B \land !C$
+\DisplayProof
+\]
+جیہدے لئی $\pheight{\pi'} \le \pheight{\pi}$۔
+
+جیہڑیاں صورتاں وچ !!{formula} مُکھ اے، اوہناں وچ مسوّراں دے قاعدیاں لئی خاص دھیان رکھنا پیندا اے۔
+
+منّ لو $!A \ident \lforall[x][!B(x)]$ سجّے پاسے مُکھ اے۔ فیر $\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, \lforall[x][!B(x)], !B(a)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)], \lforall[x][!B(x)]$
+\DisplayProof
+\]
+\olref{lem:invert-quant} نال !!a{proof}~$\pi_1'$ اے، !!{height} $ \le \pheight{\pi_1}$ والا، $ \Gamma \fCenter \Delta, !B(c),
+!B(a)$ دا، ہر~$c$ لئی جیہڑا $ \Gamma \fCenter \Delta,
+\lforall[x][!B(x)], !B(a)$ وچ نہیں آؤندا۔ اسیں منّ سکدے آں کہ $\pi_1'$ باقاعدہ اے، سو \olref[qua]{lem:subst-regular} نال !!{proof} $ \Subst{\pi_1'}{a}{c}$، !!a{proof} اے $ \Gamma \fCenter \Delta, !B(a),
+!B(a)$ دا، اوہ وی !!{height} $ \le \pheight{\pi_1}$ والا۔ ہُن استقرا دا مفروضہ لگدا اے تے سانوں !!a{proof}~$\pi_1''$ دیندا اے $ \Gamma
+\fCenter \Delta, !B(a)$ دا۔\RightR{\lforall} قاعدہ لا کے~$\pi'$ لو:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B(a)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\DisplayProof
+\]
+جیہدے لئی $\pheight{\pi'} \le \pheight{\pi}$۔
+
+ہُن منّ لو $!A \ident \lexists[x][!B(x)]$ تے سجّے پاسے مُکھ اے۔ فیر $\pi$ ایویں دِسدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, \lexists[x][!B(x)], \lexists[x][!B(x)], !B(t)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)], \lexists[x][!B(x)]$
+\DisplayProof
+\]
+استقرا دا مفروضہ~$\pi_1$ اُتے لگدا اے تے !!a{proof}s~$\pi_1'$ اے $ \Gamma \Sequent \Delta, \lexists[x][!B(x)],
+!B$ دا۔ (ویکھو کہ ایتھے اُلٹ لاؤن دے لیمے دی لوڑ نہیں!) فیر !!{proof}~$\pi'$ ایہ اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)]$
+\DisplayProof
+\]
+جیہدے لئی $\pheight{\pi'} \le \pheight{\pi}$۔
+\end{proof}
+
+\begin{prob}
+\olref{prop:G3c-cont-adm} دے ثبوت دا خاکہ \LeftR{\Contraction} لئی دیو۔ $!A \ident (!B \land !C)$ تے $!A \ident (!B
+\lif !C)$ والیاں صورتاں بیان کرو۔
+\end{prob}
+
+\begin{prob}
+\olref{prop:G3c-cont-adm} دے ثبوت دا خاکہ \LeftR{\Contraction} لئی باقی مسوّر والیاں صورتاں وچ دیو، یعنی جدوں $!A \ident
+\lforall[x][!B(x)]$ تے $!A \ident \lexists[x][!B(x)]$۔
+\end{prob}
+
+\end{document}

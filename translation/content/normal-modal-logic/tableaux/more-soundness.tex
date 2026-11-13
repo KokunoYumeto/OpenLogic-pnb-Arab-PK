@@ -1,0 +1,154 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: more-soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{msn}
+
+\olsection{وادھو قاعدیاں دی صحت مندی}
+
+قاعدہ نمونیاں دی کسے جماعت لئی صحت مند اے جے جدوں وی !!a{tableau} دی کوئی شاخ اوس جماعت دے کسے نمونے وچ پورا ہون جوگ ہووے، قاعدہ لاؤن نال ملدی شاخ وی اوس جماعت دے کسے نمونے وچ پورا ہون جوگ ہووے۔
+
+\begin{prop}
+  \ollabel{prop:soundness-T} 
+  \iftag{prvBox}{\Ax{T}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ تے }%
+  \iftag{prvDiamond}{\Ax{T}$\Diamond$}{}
+  انعکاسی نمونیاں لئی صحت مند \iftag{notprvBox,notprvDiamond}{اے}{نیں}۔
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{شاخ، قاعدہ T$\Box$ نوں $\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{\Box
+      !B}[f(\sigma)]$۔ $R$ انعکاسی اے، ایس لئی اسیں جاندے آں کہ $Rf(\sigma)f(\sigma)$۔ سو $\mSat{M}{!B}[f(\sigma)]$، یعنی $\mModel{M}, f$، $\sFmla{\True}{!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\tagitem{prvDiamond}{شاخ، قاعدہ T$\Diamond$ نوں $\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\False}{!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat/{M}{\Diamond
+      !B}[f(\sigma)]$۔ $R$ انعکاسی اے، ایس لئی اسیں جاندے آں کہ $Rf(\sigma)f(\sigma)$۔ سو $\mSat/{M}{!B}[f(\sigma)]$، یعنی $\mModel{M}, f$، $\sFmla{\False}{!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-T} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-D} 
+  \iftag{prvBox}{\Ax{D}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ تے }%
+  \iftag{prvDiamond}{\Ax{D}$\Diamond$}{}
+  ہر جہان توں رسائی والے نمونیاں لئی صحت مند \iftag{notprvBox,notprvDiamond}{اے}{نیں}۔
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{شاخ، قاعدہ D$\Box$ نوں $\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{\Diamond !B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{\Box !B}[f(\sigma)]$۔ $R$ ہر جہان توں رسائی والا اے، ایس لئی کوئی $w
+    \in W$ اے جیہدے لئی $Rf(\sigma)w$۔ تاں $\mSat{M}{!B}[w]$، تے ایس لئی $\mSat{M}{\Diamond !B}[f(\sigma)]$۔ سو $\mModel{M}, f$، $\sFmla{\True}{\Diamond!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\tagitem{prvDiamond}{شاخ، قاعدہ D$\Diamond$ نوں $\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\False}{\Box !B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat/{M}{\Diamond !B}[f(\sigma)]$۔ $R$ ہر جہان توں رسائی والا اے، ایس لئی کوئی $w
+    \in W$ اے جیہدے لئی $Rf(\sigma)w$۔ تاں $\mSat/{M}{!B}[w]$، تے ایس لئی $\mSat/{M}{\Box !B}[f(\sigma)]$۔ سو $\mModel{M}, f$، $\sFmla{\False}{\Box!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-D} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-B} 
+  \iftag{prvBox}{\Ax{B}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ تے }%
+  \iftag{prvDiamond}{\Ax{B}$\Diamond$}{}
+  متقابل نمونیاں لئی صحت مند \iftag{notprvBox,notprvDiamond}{اے}{نیں}۔
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{شاخ، قاعدہ B$\Box$ نوں $\sFmla{\True}{\Box !B}[\sigma.n] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{\Box
+      !B}[f(\sigma.n)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے، ایس لئی $Rf(\sigma)f(\sigma.n)$۔ $R$ متقابل اے، ایس لئی $Rf(\sigma.n)f(\sigma)$۔ $\mSat{M}{\Box !B}[f(\sigma.n)]$ ہون کر کے $\mSat{M}{!B}[f(\sigma)]$۔ سو $\mModel{M}, f$، $\sFmla{\True}{!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\tagitem{prvDiamond}{شاخ، قاعدہ B$\Diamond$ نوں $\sFmla{\False}{\Diamond !B}[\sigma.n] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\False}{!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat/{M}{\Diamond
+      !B}[f(\sigma.n)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے، ایس لئی $Rf(\sigma)f(\sigma.n)$۔ $R$ متقابل اے، ایس لئی $Rf(\sigma.n)f(\sigma)$۔ $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$ ہون کر کے $\mSat/{M}{!B}[f(\sigma)]$۔ سو $\mModel{M}, f$، $\sFmla{\False}{!B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-B} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-4} 
+  \iftag{prvBox}{\Ax{4}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ تے }%
+  \iftag{prvDiamond}{\Ax{4}$\Diamond$}{}
+  متعدی نمونیاں لئی صحت مند \iftag{notprvBox,notprvDiamond}{اے}{نیں}۔
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{شاخ، قاعدہ 4$\Box$ نوں $\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{\Box!B}[\sigma.n]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{\Box !B}[f(\sigma)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے تے $\sigma.n$ پہلاں توں ورتیا ہویا ہونا چاہیدا اے۔ ایس لئی $Rf(\sigma)f(\sigma.n)$۔ ہُن $w$ کوئی وی اجیہا جہان منّ لو جیہدے لئی $Rf(\sigma.n)w$۔ $R$ متعدی اے، ایس لئی $Rf(\sigma)w$۔ $\mSat{M}{\Box !B}[f(\sigma)]$ ہون کر کے $\mSat{M}{!B}[w]$۔ سو $\mSat{M}{\Box !B}[f(\sigma.n)]$، تے $\mModel{M}, f$، $\sFmla{\True}{\Box !B}[\sigma.n]$ نوں پورا کردے نیں۔}}{}
+\tagitem{prvDiamond}{شاخ، قاعدہ 4$\Diamond$ نوں $\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\False}{\Diamond!B}[\sigma.n]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat/{M}{\Diamond !B}[f(\sigma)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے تے $\sigma.n$ پہلاں توں ورتیا ہویا ہونا چاہیدا اے۔ ایس لئی $Rf(\sigma)f(\sigma.n)$۔ ہُن $w$ کوئی وی اجیہا جہان منّ لو جیہدے لئی $Rf(\sigma.n)w$۔ $R$ متعدی اے، ایس لئی $Rf(\sigma)w$۔ $\mSat/{M}{\Diamond !B}[f(\sigma)]$ ہون کر کے $\mSat/{M}{!B}[w]$۔ سو $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$، تے $\mModel{M}, f$، $\sFmla{\False}{\Diamond !B}[\sigma.n]$ نوں پورا کردے نیں۔}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-4} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-4r} 
+  \iftag{prvBox}{\Ax{4r}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ تے }%
+  \iftag{prvDiamond}{\Ax{4r}$\Diamond$}{}
+  اقلیدسی نمونیاں لئی صحت مند \iftag{notprvBox,notprvDiamond}{اے}{نیں}۔
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{شاخ، قاعدہ 4r$\Box$ نوں $\sFmla{\True}{\Box !B}[\sigma.n] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probBox}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{\Box!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat{M}{\Box
+      !B}[f(\sigma.n)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے، ایس لئی $Rf(\sigma)f(\sigma.n)$۔ ہُن $w$ کوئی وی اجیہا جہان منّ لو جیہدے لئی $Rf(\sigma)w$۔ $R$ اقلیدسی اے، ایس لئی $Rf(\sigma.n)w$۔ $\mSat{M}{\Box !B}[f(\sigma).n]$ ہون کر کے $\mSat{M}{!B}[w]$۔ سو $\mSat{M}{\Box !B}[f(\sigma)]$، تے $\mModel{M}, f$، $\sFmla{\True}{\Box !B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\tagitem{prvDiamond}{شاخ، قاعدہ 4r$\Diamond$ نوں $\sFmla{\False}{\Diamond !B}[\sigma.n] \in \Gamma$ اُتے لا کے ودھدی اے۔
+  \iftag{probDiamond}{مشق۔}{ایس نال شاخ اُتے نواں !!{signed
+      formula}~$\sFmla{\True}{\Box!B}[\sigma]$ ملدا اے۔ منّ لو $\mSat{M}{\Gamma}[f]$، خاص کر کے $\mSat/{M}{\Diamond
+      !B}[f(\sigma.n)]$۔ $f$ شاخ دے اگیتیاں دی~$\mModel{M}$ وچ تعبیر اے، ایس لئی $Rf(\sigma)f(\sigma.n)$۔ ہُن $w$ کوئی وی اجیہا جہان منّ لو جیہدے لئی $Rf(\sigma)w$۔ $R$ اقلیدسی اے، ایس لئی $Rf(\sigma.n)w$۔ $\mSat/{M}{\Diamond !B}[f(\sigma).n]$ ہون کر کے $\mSat/{M}{!B}[w]$۔ سو $\mSat/{M}{\Diamond !B}[f(\sigma)]$، تے $\mModel{M}, f$، $\sFmla{\False}{\Diamond !B}[\sigma]$ نوں پورا کردے نیں۔}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-4r} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:soundness-logics} !!{tableau} دے اوہ نظام جیہڑے
+\olref[mru]{tab:logics-rules} وچ دتے نیں، آپو اپنی نمونیاں دی جماعت لئی
+صحت مند نیں۔
+\end{cor}
+
+\end{document}

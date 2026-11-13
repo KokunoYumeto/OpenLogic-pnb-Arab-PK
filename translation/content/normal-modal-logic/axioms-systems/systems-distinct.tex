@@ -1,0 +1,134 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: systems-distinct
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{dis}
+
+\olsection{نظاماں دا وکھرا ہونا وکھاؤنا}
+
+\olref[prs]{sec} وچ اسیں ویکھیا سی کہ امکانی منطق دے دو نظاماں نوں اصل وچ اکّو نظام کیویں ثابت کریے۔ \olref[snd]{thm:soundness} نال اسیں ایہ وکھا سکدے آں کہ دو امکانی نظام $\Sigma$ تے $\Sigma'$ وکھرے نیں۔ ایس لئی اک ایسا !!a{formula}~$!A$ لبھدے آں جیہدے لئی $\Sigma' \Proves !A$، پر اوہ~$\Sigma$ دے کسے نمونے وچ جھوٹھا اے۔
+
+\begin{prop}
+  $\Log{KD} \subsetneq \Log{KT}$
+\end{prop}
+
+\begin{proof} ایہ اوس معنیاتی حقیقت دا نحوی جوڑی دار اے کہ ہر انعکاسی تعلق ہر جہان توں رسائی والا اے۔ $\Log{KD} \subseteq
+  \Log{KT}$ وکھاؤن لئی سانوں ویکھنا اے کہ $\Log{KD} \Proves !B$ توں
+  $\Log{KT} \Proves !B$ نکلدا اے۔ ایہ $\Log{KT} \Proves
+  \Log{D}$ توں ملدا اے، جیویں
+  \olref[prs]{prop:S5facts}\olref[prs]{prop:S5facts-KT-D} وچ وکھایا۔ ایہ وکھاؤن لئی کہ ایہ حقیقی شمولیت اے، صحت مندی مطابق
+  (\olref[snd]{thm:soundness})، \Log{KD} دا ایسا نمونہ دینا کافی اے جیہدے وچ \Ax{T}، یعنی $\Box p \lif p$، جھوٹھا اے (ایہ سوکھا کم مشق لئی چھڈدے آں)۔ کیوں جے فیر صحت مندی مطابق $\Log{KD}
+  \Proves/ \Box p \lif p$۔
+\end{proof}
+
+\begin{prop}
+  $\Log{KB} \neq \Log{K4}$. 
+\end{prop}
+
+\begin{proof}
+  اسیں اک ایسا متقابل نمونہ بناؤنے آں جیہدے وچ \Ax{4} دی کوئی مثال جھوٹھھی اے۔ ایہ مثال صاف طور تے !!{derivable} اے \Log{K4} وچ، پر \Log{KB} وچ نہیں، ایس لئی $\Log{K4} \nsubseteq \Log{KB}$ نکلے گا۔
+  متقابل نمونہ $\mModel{M}$ ویکھو جیہڑا \olref{fig:Bnot4} وچ اے۔ کیوں جے نمونہ متقابل اے، \Ax{K} تے~\Ax{B}،~$\mModel{M}$ وچ سچے نیں
+  (بالترتیب \olref[syn][sch]{prop:Kvalid} تے
+  \olref[frd][acc]{thm:soundschemas} مطابق)۔ پر
+  $\mSat/{M}{\Box p \lif \Box\Box p}[w_1]$۔
+\end{proof}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1) [label=above:\mFalse{p},
+    label={below:$\mSat{{}}{\Box p}$\\ $\mSat/{{}}{\Box\Box p}$}] {$w_1$}; 
+    \node[world] (w2) [label=above:\mTrue{p},
+      label=below:$\mSat/{{}}{\Box p}$, right=of w1]{$w_2$}; 
+    \draw[->, bend left] (w1) to (w2); 
+    \draw[->, bend left] (w2) to (w1); 
+  \end{tikzpicture}
+  \caption{اک متقابل نمونہ جیہڑا \Ax{4} دی اک مثال نوں جھوٹھا کردا اے۔}
+  \ollabel{fig:Bnot4}
+\end{figure}
+
+\begin{thm}\ollabel{thm:KTBnot45}
+  $\Log{KTB} \Proves/ \Log{4}$ تے $\Log{KTB} \Proves/ \Log{5}$۔
+\end{thm}
+
+\begin{proof}
+  \olref[frd][acc]{thm:soundschemas} توں اسیں جان دے آں کہ
+  \Ax{T} تے \Ax{B} دیاں ساریاں مثالاں ہر انعکاسی متقابل نمونے وچ سچیاں نیں (بالترتیب)۔ ایس لئی صحت مندی مطابق اک ایسا انعکاسی متقابل نمونہ لبھنا کافی اے جیہدے وچ کسے جہان اُتے~\Ax{4} دی کوئی مثال جھوٹھھی ہووے، تے~\Ax{5} لئی وی ایویں۔ اسیں دوناں دعویاں لئی اکّو نمونہ ورتدے آں۔
+  \olref{fig:KTBnot45} والا متقابل تے انعکاسی نمونہ ویکھو۔ فیر $\mSat/{M}{\Box p \to \Box \Box
+    p}[w_1]$، ایس لئی \Ax{4}، $w_1$ اُتے جھوٹھا اے۔ ایس طرح $\mSat/{M}{\Diamond
+    \lnot p \lif \Box \Diamond \lnot p}[w_2]$، سو~\Ax{5} دی $!A = \lnot p$ والی مثال~$w_2$ اُتے جھوٹھھی اے۔
+\end{proof}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1) [label={right:\mTrue{p}},
+      label={below: $\mSat{{}}{\Box p}$\\
+        $\mSat/{{}}{\Box\Box p}$\\
+        $\mSat/{{}}{\Diamond\lnot p}$}] {$w_1$};
+    \draw[reflexive above] (w1) to (w1);
+    \node[world] (w2) [label={right:\mTrue{p}}, label={below:
+        $\mSat{{}}{\Diamond\lnot p}$\\
+        $\mSat/{{}}{\Box\Diamond\lnot p}$}, right=of w1] {$w_2$} ;
+    \draw[reflexive above] (w2) to (w2);
+    \node[world] (w3) [label={right:\mFalse{p}},right=of w2] {$w_3$};
+    \draw[reflexive above] (w3) to (w3);
+    \draw[->, bend left] (w1) to (w2);  
+    \draw[->, bend left] (w2) to (w3);  
+    \draw[->, bend left] (w3) to (w2);  
+    \draw[->, bend left] (w2) to (w1);  
+  \end{tikzpicture}
+  \caption{\olref{thm:KTBnot45} لئی نمونہ۔}
+  \ollabel{fig:KTBnot45}
+\end{figure}
+
+\begin{thm}\ollabel{thm:KD5not4}
+  $\Log{KD5} \neq \Log{KT4} = \Log{S4}$.
+\end{thm}
+
+\begin{proof}
+  \olref[frd][acc]{thm:soundschemas} توں اسیں جان دے آں کہ
+  \Ax{D} تے~\Ax{5} دیاں ساریاں مثالاں ہر جہان توں رسائی والے سارے اقلیدسی نمونیاں وچ سچیاں نیں۔ ایس لئی ایسا ہر جہان توں رسائی والا اقلیدسی نمونہ لبھنا کافی اے جیہدے کسے جہان اُتے~\Ax{4} دی کوئی مثال جھوٹھھی ہووے۔
+  \olref{fig:KD5not4} والا نمونہ ویکھو تے دھیان دیو کہ $\mSat/{M}{\Box p
+  \lif \Box\Box p}[w_1]$۔
+\end{proof}
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w2) [label=north west:\mTrue{p}]{$w_2$} ;
+    \draw[reflexive left] (w2) to (w2);
+    \node[world] (w1) [label=right:\mFalse{p},
+      label=below:{$\mSat{{}}{\Box p}, \mSat/{{}}{\Box\Box p}$},
+      below right=of w2]{$w_1$};
+    \node[world] (w3) [label=north east:\mTrue{p}, above right=of w1]{$w_3$} ;
+    \draw[reflexive right] (w3) to (w3);
+    \node[world] (w4) [label=right:\mFalse{p},above right=of w2]{$w_4$};
+    \draw[reflexive above] (w4) to (w4);
+    \draw[->] (w1) to (w2);  
+    \draw[->] (w1) to (w3);  
+    \draw[->, bend left=15] (w2) to (w3);
+    \draw[->, bend left=15] (w3) to (w2);  
+    \draw[->, bend left=15] (w2) to (w4);
+    \draw[->, bend left=15] (w4) to (w2);  
+    \draw[->, bend left=15] (w3) to (w4);
+    \draw[->, bend left=15] (w4) to (w3);  
+  \end{tikzpicture}
+  \caption{\olref{thm:KD5not4} لئی نمونہ۔}
+  \ollabel{fig:KD5not4}
+\end{figure}
+
+\begin{prob}
+  \olref[nml][prf][dis]{thm:KD5not4} دا کوئی ہور ثبوت دیو جیہدے وچ $3$ جہاناں والا نمونہ ورتیا ہووے۔
+\end{prob}
+
+\begin{prob}
+  اکّو انعکاسی متعدی نمونہ دیو جیہڑا ایہ دونیں گلاں وکھاوے۔
+  $\Log{KT4} \Proves/ \Ax{B}$ تے $\Log{KT4} \Proves/ \Ax{5}$۔
+\end{prob}
+
+\end{document}

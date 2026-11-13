@@ -1,0 +1,47 @@
+% Part: computability
+% Chapter: computability-theory
+% Section: universal-part-function
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cmp}{thy}{uni}
+\olsection{ہمہ گیر جزوی قابلِ حساب فنکشن}
+
+\begin{thm}
+\ollabel{thm:univ-comp}
+اک ہمہ گیر جزوی قابلِ حساب فنکشن~$\fn{Un}(e,x)$ موجود اے۔
+ہور لفظاں وچ، اک فنکشن $\fn{Un}(e,x)$ موجود اے جیہدے لئی:
+\begin{enumerate}
+\item $\fn{Un}(e,x)$ جزوی قابلِ حساب اے۔
+\item جے $f(x)$ کوئی وی جزوی قابلِ حساب فنکشن اے، تاں
+اک قدرتی عدد $e$ موجود اے ایداں کہ $f(x) \simeq \fn{Un}(e,x)$
+ہر~$x$ لئی۔
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+$\fn{Un}(e,x) \simeq U(\umin{s}{T(e,x,s)})$ رکھو، جتھے $U$ تے
+$T$ کلینی دے نارمل روپ دے قضیے (\olref[nfm]{thm:normal-form})
+والے نیں۔
+\end{proof}
+
+\begin{explain}
+ایہ صرف ایس گل دا ٹھیک ٹھیک بیان اے کہ ساڈے کول جزوی
+قابلِ حساب فنکشناں دی اک موثر گنتی وار فہرست اے۔ خیال
+ایہ اے کہ جے اسی $f_e$ اوس فنکشن لئی لکھئیے جیہدی تعریف
+$f_e(x) = \fn{Un}(e,x)$ اے، تاں سلسلے $f_0$، $f_1$، $f_2$،
+\dots وچ سارے جزوی قابلِ حساب فنکشن شامل نیں، تے خاصیت
+ایہ اے کہ $f_e(x)$ نوں $e$ تے~$x$ دے لحاظ نال ``یکساں''
+طریقے اُتے حسابیا جا سکدا اے۔ سادگی لئی اسی دو آرگومنٹاں
+والا فنکشن ورت رہے آں جیہڑا اک آرگومنٹ والے فنکشناں لئی
+ہمہ گیر اے، پر عدداں دے سلسلیاں دی کوڈنگ نال ایہنوں
+ہور ودھ آرگومنٹاں تک آسانی نال عام کیتا جا سکدا اے۔
+% PNB-CMP-012: اصل final g نوں recursive کہندا؛ partial f توں صرف partial g لازم،total نہیں۔
+مثلاً، جے $f(x,y,z)$ اک $3$-آرگومنٹ والا جزوی بازگشتی
+فنکشن اے، تاں فنکشن $g(x) \simeq f((x)_0, (x)_1, (x)_2)$
+اک آرگومنٹ والا جزوی بازگشتی فنکشن اے۔
+\end{explain}
+
+\end{document}

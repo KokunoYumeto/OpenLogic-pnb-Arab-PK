@@ -1,0 +1,45 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{sid}
+
+\olsection{\usetoken{S}{identity} نال صحت مندی}
+
+\begin{prop}
+$\Log{LK}$، اکو ہون لئی ابتدائی سیکوئنٹاں تے قاعدیاں سمیت، صحت مند اے۔
+\end{prop}
+
+\begin{proof}
+${} \Sequent \eq[t][t]$ روپ دے ابتدائی سیکوئنٹ معتبر نیں، کیوں جے
+ہر !!{structure}~$\Struct M$ لئی $\Sat{M}{\eq[t][t]}$۔ (چیتے رہے کہ
+اسیں ٹرم $t$ نوں بند منّیا اے، یعنی ایس وچ کوئی متغیر نہیں، ایس لئی
+متغیراں دیاں قدر بندیاں غیر متعلق نیں۔)
+
+فرض کرو کہ کسے !!a{derivation} دا آخری استنباط $=$ اے۔ تاں مقدمہ
+$\eq[t_1][t_2], \Gamma \Sequent \Delta, !A(t_1)$ تے نتیجہ
+$\eq[t_1][t_2], \Gamma \Sequent \Delta, !A(t_2)$ اے۔
+!!a{structure}~$\Struct M$ لو۔ اسیں وکھانا اے کہ نتیجہ معتبر اے، یعنی جے
+$\Sat{M}{\eq[t_1][t_2]}$ تے $\Sat{M}{\Gamma}$، تاں یا
+$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی، یا $\Sat{M}{!A(t_2)}$۔
+
+استقرا دے مفروضے مطابق مقدمہ معتبر اے۔ ایس دا مطلب اے کہ جے
+$\Sat{M}{\eq[t_1][t_2]}$ تے $\Sat{M}{\Gamma}$، تاں یا (a) کسے $!C
+\in \Delta$ لئی $\Sat{M}{!C}$، یا (b) $\Sat{M}{!A(t_1)}$۔ (a) وچ
+گل ثابت ہو گئی۔ (b) نوں ویکھو۔ $s$ اک متغیر قدر بندی ہووے جیہدے لئی
+$s(x) = \Value{t_1}{M}$۔ \olref[syn][ass]{prop:sentence-sat-true} دے مطابق
+$\Sat{M}{!A(t_1)}[s]$۔ چونکہ $\varAssign{s}{s}{x}$، ایس لئی
+\olref[syn][ext]{prop:ext-formulas} دے مطابق $\Sat{M}{!A(x)}[s]$۔ چونکہ
+$\Sat{M}{\eq[t_1][t_2]}$، ایس لئی $\Value{t_1}{M} = \Value{t_2}{M}$،
+تے ایس کرکے $s(x) = \Value{t_2}{M}$۔
+\olref[syn][ext]{prop:ext-formulas} فیر لاون نال
+$\Sat{M}{!A(t_2)}[s]$ وی ملدا اے۔
+\olref[syn][ass]{prop:sentence-sat-true} دے مطابق
+$\Sat{M}{!A(t_2)}$۔
+\end{proof}
+
+\end{document}

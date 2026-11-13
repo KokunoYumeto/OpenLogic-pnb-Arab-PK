@@ -1,0 +1,162 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: first-order-languages
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{fol}
+
+\olsection{پہلے درجے دیاں زباناں}
+
+
+پہلے درجے دی منطق دیاں لکھتاں اک بنیادی علامتی ذخیرے توں بندیاں نیں،
+جیہدے وچ \emph{!!{variable}s}، \emph{!!{constant}s}،
+\emph{!!{predicate}s} تے کدی کدی \emph{!!{function}s} ہوندے نیں۔
+ایہناں نال منطقی رابطے، مسوّر تے قوساں تے وِرمیاں ورگیاں
+رموزی علامتاں ملا کے \emph{ٹرم} تے \emph{!!{formula}s}
+بنائے جاندے نیں۔
+
+\begin{explain}
+غیر رسمی طور تے !!{predicate}s خاصیتاں تے تعلقاں دے ناں نیں،
+!!{constant}s وکھ وکھ شےواں دے ناں نیں، تے !!{function}s
+نقشیاں دے ناں نیں۔ !!{identity}~$\eq$ نوں چھڈ کے ایہ
+\emph{غیر منطقی علامتاں} نیں تے مل کے اک زبان بناؤندیاں نیں۔
+پہلے درجے دی ہر زبان~$\Lang L$ اوہدیاں غیر منطقی
+علامتاں توں متعین ہوندی اے۔ سب توں عام صورت وچ
+$\Lang L$ وچ ہر قسم دیاں بے انت علامتاں ہوندیاں نیں۔
+\end{explain}
+
+عام صورت وچ اسیں پہلے درجے دی منطق وچ ایہ علامتاں ورتدے آں:
+
+\begin{enumerate}
+\item منطقی علامتاں
+\begin{enumerate}
+\item منطقی رابطے:
+  \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+  \iftag{prvAll}{\ycomma $\lforall$ (کُلّی مسوّر)}{}%
+  \iftag{prvEx}{\ycomma $\lexists$ (وجودی مسوّر)}{}.
+\tagitem{prvFalse}{!!{falsity} لئی قضیاتی مستقل~$\lfalse$۔}{}
+\tagitem{prvTrue}{!!{truth} لئی قضیاتی مستقل~$\ltrue$۔}{}
+\item دو-مقامی !!{identity}~$\eq$۔
+\item !!{variable}s دا اک !!{denumerable}s سیٹ: $\Obj v_0$, $\Obj v_1$, $\Obj
+  v_2$, \dots
+\end{enumerate}
+\item غیر منطقی علامتاں، جیہڑیاں پہلے درجے دی منطق دی
+\emph{معیاری زبان} بناؤندیاں نیں
+\begin{enumerate}
+\item $n$-مقامی !!{predicate}s دا ہر $n>0$ لئی اک !!{denumerable}s سیٹ: $\Obj
+  A^n_0$, $\Obj A^n_1$, $\Obj A^n_2$, \dots
+\item !!{constant}s دا اک !!{denumerable}s سیٹ: $\Obj c_0$, $\Obj c_1$, $\Obj
+  c_2$, \dots.
+\item $n$-مقامی !!{function}s دا ہر $n>0$ لئی اک !!{denumerable}s سیٹ:
+  $\Obj f^n_0$, $\Obj f^n_1$, $\Obj f^n_2$, \dots
+\end{enumerate}
+\item رموزِ اوقاف: (, )، تے وِرما۔
+\end{enumerate}
+
+ساڈیاں زیادہ تر تعریفاں تے نتیجے پہلے درجے دی منطق دی پوری
+معیاری زبان لئی بیان کیتے جان گے۔ پر ورتوں دے مطابق اسیں
+زبان نوں صرف کجھ !!{predicate}s، !!{constant}s تے
+!!{function}s تک محدود وی کر سکدے آں۔
+
+\begin{ex}
+حساب دی زبان~$\Lang L_A$ وچ اک دو-مقامی !!{predicate}~$<$،
+اک !!{constant}~$\Obj 0$، اک یک-مقامی !!{function}~$\prime$،
+تے دو دو-مقامی !!{function}s~$+$ تے~$\times$ ہوندے نیں۔
+\end{ex}
+
+\begin{ex}
+سیٹ نظریے دی زبان~$\Lang L_Z$ وچ صرف اک دو-مقامی
+!!{predicate}~$\in$ ہوندا اے۔
+\end{ex}
+
+\begin{ex}
+ترتیباں دی زبان~$\Lang L_\le$ وچ صرف اک دو-مقامی
+!!{predicate}~$\le$ ہوندا اے۔
+\end{ex}
+
+فیر وی ایہ رواجی علامتاں نیں: باقاعدہ طور تے ایہ صرف قائم مقام ناں نیں؛
+مثلاً $<$، $\in$ تے $\le$، $\Obj A^2_0$ دے قائم مقام ناں نیں؛
+$\Obj 0$، $\Obj c_0$ دا؛ $\prime$، $\Obj f^1_0$ دا؛
+$+$، $\Obj f^2_0$ دا؛ تے $\times$، $\Obj f^2_1$ دا۔
+
+\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}{%
+اُتے متعارف کرائے ابتدائی رابطیاں تے
+\iftag{notprvEx,notprvAll}{مسوّر}{مسوّراں} دے نال نال،
+اسیں ایہ \emph{تعریف شدہ} علامتاں وی ورتدے آں:
+\startycommalist
+  \iftag{defNot}{\ycomma $\lnot$ (نفی)}{}%
+  \iftag{defAnd}{\ycomma $\land$ (عطف)}{}%
+  \iftag{defOr}{\ycomma $\lor$ (فصل)}{}%
+  \iftag{defIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{defIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+  \iftag{defAll}{\ycomma $\lforall$ (کُلّی مسوّر)}{}%
+  \iftag{defEx}{\ycomma $\lexists$ (وجودی مسوّر)}{}%
+  \iftag{defFalse}{\ycomma !!{falsity}~$\lfalse$}{}%
+  \iftag{defTrue}{\ycomma !!{truth}~$\ltrue$}}{}.
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+\begin{explain}
+تعریف شدہ علامت باقاعدہ طور تے زبان دا حصہ نہیں ہوندی،
+بلکہ غیر رسمی مخفف دے طور تے متعارف ہوندی اے: ایہ
+اوہناں فارمولیاں نوں مختصر لکھن دی سہولت دیندی اے
+جیہڑے صرف ابتدائی علامتاں نال کافی لمّے ہو جاندے۔
+ایہ اک صاف فائدہ اے۔ پر اس توں وڈا فائدہ ایہ اے کہ ثبوت
+چھوٹے ہو جاندے نیں۔ جے کوئی علامت ابتدائی ہووے، تاں
+ثبوتاں وچ اوہدا وکھرا معاملہ کرنا پیندا اے۔ اس لئی
+ابتدائی علامتاں جِنیاں ودھ ہون، ساڈے ثبوت اُنّے لمّے ہوندے نیں۔
+\end{explain}
+\end{tagblock}
+
+% Alternate symbols
+
+\begin{intro}
+ممکن اے تہانوں اُتے ورتی اصطلاحات تے علامتاں توں
+وکھریاں اصطلاحات تے علامتاں دا پتا ہووے۔ منطق دیاں کتاباں
+(تے استاد) ”نفی“ لئی عام طور تے $\sim$، $\neg$ یا~!\
+تے ”عطف“ لئی $\wedge$، $\cdot$ یا $\&$ ورتدے نیں۔
+”شرطیہ“ یا ”استلزام“ لئی عام علامتاں $\rightarrow$،
+$\Rightarrow$ تے $\supset$ نیں۔
+\iftag{prvIff,defIff}{”دو طرفہ شرطیہ“، ”دو طرفہ استلزام“
+  یا ”(مادی) ہم ارزی“ لئی $\leftrightarrow$،
+  $\Leftrightarrow$ تے $\equiv$ علامتاں نیں۔}{}
+\iftag{prvFalse,defFalse}{$\lfalse$ دی علامت نوں ”کذب“،
+  ”فالسَم“، ”محال“ یا ”تھلّہ“ وی آکھیا جاندا اے۔}{}
+\iftag{prvTrue,defTrue}{$\ltrue$ دی علامت نوں ”صدق“،
+  ”وِیرَم“ یا ”چوٹی“ وی آکھیا جاندا اے۔}{}
+
+رواج اے کہ !!{constant}s (جیہناں نوں کدی ناں وی آکھدے نیں)
+لئی لاطینی حروفِ تہجی دے مُڈھ دے چھوٹے حرف (مثلاً $a$، $b$، $c$)
+تے !!{variable}s لئی آخر دے چھوٹے حرف (مثلاً $x$، $y$، $z$)
+ورتے جان۔ مسوّر !!{variable}s نال ملدے نیں، مثلاً $x$؛
+علامت نگاری دیاں وکھریاں صورتاں وچ کُلّی مسوّر لئی
+$\forall x$، $(\forall x)$، $(x)$، $\Pi x$، $\bigwedge_x$
+تے وجودی مسوّر لئی $\exists x$، $(\exists
+x)$، $(Ex)$، $\Sigma x$، $\bigvee_x$ شامل نیں۔
+\end{intro}
+
+\begin{explain}
+اسیں سارے قضیاتی عملگر تے دونیں مسوّر زبان دیاں ابتدائی
+علامتاں من سکدے آں۔ یا اسیں ابتدائی علامتاں دا چھوٹا
+ذخیرہ چُن کے باقی !!{operator}s نوں تعریف شدہ من سکدے آں۔
+بولیائی عملگراں دے ”صداقتی-فنکشنی طور تے مکمل“ سیٹاں وچ
+$\{ \lnot, \lor \}$، $\{ \lnot, \land \}$ تے $\{ \lnot,
+\lif\}$ شامل نیں—ایہناں وچوں ہر سیٹ نوں دوہاں وچوں کسی وی
+اک مسوّر نال ملا کے اظہار دے لحاظ نال مکمل پہلے درجے دی
+زبان بنائی جا سکدی اے۔
+
+تہانوں دو ہور !!{operator}s دا پتا ہو سکدا اے: شیفر دی لکیر~$|$
+(ہنری شیفر دے ناں اُتے)، تے پیئرس دا تیر~$\downarrow$،
+جیہنوں کوائن دا خنجر وی آکھدے نیں۔ جدوں انہاں نوں بالترتیب
+”نینڈ (nand)“ تے ”نور (nor)“ دے عام معنیاں وچ لیا جائے،
+تاں ایہ عملگر اکیلے اکیلے صداقتی-فنکشنی طور تے مکمل نیں۔
+\end{explain}
+
+\end{document}

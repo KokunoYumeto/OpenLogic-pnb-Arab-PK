@@ -1,0 +1,77 @@
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: matrices
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{mat}
+
+\olsection{منطقی میٹرکس}
+
+کئی قدراں والی منطق اوہدی زبان، صداقتی قدراں دے سیٹ~$V$،
+مقرر صداقتی قدراں دے ذیلی سیٹ تے اوہدے رابطیاں دے صداقتی
+فنکشوناں نال متعین ہوندی اے۔ ایہناں ساریاں شےواں نوں رلا کے
+اک \emph{میٹرکس} آکھدے آں۔
+
+\begin{defn}[منطقی میٹرکس]
+\ollabel{defn:matrix}
+منطق~$\Log L$ دا \emph{میٹرکس} ایہناں شےواں توں بندا اے۔
+\begin{enumerate}
+\item زبان~$\Lang L$ بناؤن والے رابطیاں دا سیٹ۔
+\item صداقتی قدراں دا سیٹ $V \neq \emptyset$۔
+\item مقرر صداقتی قدراں دا سیٹ $V^+ \subseteq V$۔
+\item ہر $n$-مقامی رابطے $\star$ لئی جیہڑا $\Lang L$ وچ اے، صداقتی
+فنکشن~$\tf{\star} : V^n \to V$۔ جے $n = 0$، تاں
+$\tf{\star}$ بس~$V$ دا اک رکن اے۔
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+کلاسیکی منطق~\LogCL{} دا میٹرکس ایہناں شےواں توں بندا اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lfalse$، $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \False\}$۔
+  \item $\True$ اکّو مقرر قدر اے، یعنی $V^+ = \{\True\}$۔
+  \item $\lfalse$ لئی ساڈے کول $\tf{\lfalse} = \False$ اے۔
+  باقی صداقتی فنکشن عام صداقتی جدولاں نال ملدے نیں۔
+  \olref{fig:tf-CL} ویکھو۔
+\end{enumerate}
+\begin{figure}
+  \begin{center}
+      \begin{tabular}{c|c}
+        $\tf{\lnot}$ & \\
+        \hline
+        $\True$ & $\False$ \\
+        $\False$ & $\True$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\land}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\False$ \\
+        $\False$ & $\False$ & $\False$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\lor}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\True$ \\
+        $\False$ & $\True$ & $\False$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\lif}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\False$ \\
+        $\False$ & $\True$ & $\True$
+      \end{tabular}
+    \end{center}
+    \caption{کلاسیکی منطق~$\LogCL$ دے صداقتی فنکشن۔}
+    \ollabel{fig:tf-CL}
+  \end{figure}
+  \end{ex}
+
+\end{document}

@@ -1,0 +1,137 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: isomorphism
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{bas}{iso}
+\olsection{ہم شکل ساختاں}
+
+پہلے درجے دیاں !!{structure}s دو طرحاں نال اک دوجے ورگیاں ہو
+سکدیاں نیں۔ اک طریقہ ایہ اے کہ اوہ اکّو !!{sentence}s نوں سچ
+بناندیاں ہون۔ ایہو جیہیاں !!{structure}s نوں اسیں \emph{جملہ وار
+ہم ارز} (elementarily equivalent) آکھدے آں۔ پر دو ساختاں بہت وکھ
+ہو کے وی اکّو !!{sentence}s سچ بنا سکدیاں نیں---مثال لئی اک
+!!{enumerable} ہو سکدی اے تے دوجی نہیں۔ ایس دی وجہ ایہ اے کہ
+!!a{structure} دیاں بہت ساریاں خاصیتاں پہلے درجے دیاں زباناں وچ
+بیان نہیں ہو سکدیاں: یا زبان کافی وسیع نہیں ہوندی، یا پہلے درجے
+دی منطق دیاں بنیادی حدّاں، جیویں L\"owenheim--Skolem قضیہ، راہ وچ
+ہوندیاں نیں۔ ایس لئی !!{structure}s دے اک دوجے ورگیاں ہون دا اک
+ہور، زیادہ سخت مفہوم ایہ اے کہ اوہ بنیادی طور اُتے اکّو جیہیاں ہون:
+انہاں نوں بناؤن والیاں چیزاں وکھ ہوون، پر ساختی خاصیتاں وکھ نہ
+ہون۔ ایس مفہوم نوں ٹھیک ٹھیک بیان کرن دا طریقہ \emph{ہم شکلی}
+(isomorphism) دا تصور اے۔
+
+\begin{defn}
+\ollabel{defn:elem-equiv}
+دو !!{structure}s $\Struct{M}$ تے $\Struct M'$، جیہڑیاں اکو
+!!{language}~$\Lang{L}$ دیاں ہون، دتیاں ہون۔ اسیں $\Struct{M}$ نوں
+$\Struct M'$ دے نال \emph{جملہ وار ہم ارز} آکھدے آں، جس نوں
+$\Struct{M} \equiv \Struct M'$ لکھدے آں، اُدوں تے صرف اُدوں جدوں
+ہر !!{sentence}~$!A$، جیہڑا~$\Lang{L}$ دا ہووے، اوہدے لئی $\Sat{M}{!A}$ اُدوں تے
+صرف اُدوں جدوں $\Sat{M'}{!A}$۔
+\end{defn}
+
+\begin{defn}
+\ollabel{defn:isomorphism} دو !!{structure}s $\Struct{M}$ تے
+$\Struct M'$، جیہڑیاں اکو !!{language}~$\Lang L$ دیاں ہون، دتیاں ہون۔ اسیں
+$\Struct{M}$ نوں~$\Struct M'$ دے نال \emph{ہم شکل} آکھدے آں، جس
+نوں $\Struct{M}
+\simeq \Struct M'$ لکھدے آں، اُدوں تے صرف اُدوں جدوں اک فنکشن
+$h \colon
+\Domain{M} \to \Domain{M'}$ ہووے جیہڑا ایہ شرطاں پوری کرے:
+\begin{enumerate}
+\item $h$ !!{injective} اے: جے $h(x) =
+  h(y)$ تاں $x = y$؛
+\item $h$ !!{surjective} اے: ہر $y \in \Domain{M'}$ لئی کوئی
+  $x \in \Domain{M}$ اے جیہدے لئی $h(x) = y$؛
+\item \ollabel{defn:iso-const}ہر !!{constant} $c$ لئی:
+  $h(\Assign{c}{M}) = \Assign{c}{M'}$؛
+\item \ollabel{defn:iso-pred}ہر $n$-تھانواں والے !!{predicate}~$P$ لئی:
+  \[
+  \tuple{a_1, \dots, a_n}\in \Assign{P}{M} \quad\text{اُدوں تے صرف اُدوں}\quad
+  \tuple{h(a_1), \dots, h(a_n)} \in \Assign{P}{M'};
+  \]
+\item \ollabel{defn:iso-func}ہر $n$-تھانواں والے !!{function} $f$ لئی:
+  \[
+  h(\Assign{f}{M}(a_1, \dots, a_n)) =
+  \Assign{f}{M'}(h(a_1), \dots, h(a_n)).
+  \]
+\end{enumerate}
+\end{defn}
+
+\begin{thm}
+\ollabel{thm:isom}
+جے $\Struct{M} \iso \Struct M'$ تاں $\Struct{M} \elemequiv
+\Struct{M'}$۔
+\end{thm}
+
+\begin{proof}
+فرض کرو $h$، $\Struct{M}$ توں $\Struct M'$ اُتے ہم شکلی اے۔ ہر
+متغیر قدر بندی~$s$ لئی، $h \circ s$، $h$ تے $s$ دا مرکب اے؛ یعنی
+$\Struct{M'}$ وچ اوہ متغیر قدر بندی جیہدے لئی $(h \circ s)(x) = h(s(x))$۔
+$t$ تے $!A$ اُتے استقرا نال ایہ زیادہ مضبوط دعوے ثابت ہو سکدے نیں:
+\begin{enumerate}
+  \item[a.] $h(\Value{t}{M}[s]) = \Value{t}{M'}[h\circ s]$۔
+  \item[b.] $\Sat{M}{!A}[s]$ اُدوں تے صرف اُدوں جدوں $\Sat{M'}{!A}[h \circ s]$۔
+\end{enumerate}
+پہلا دعویٰ~$t$ دی پیچیدگی اُتے استقرا نال ثابت ہوندا اے۔
+\begin{enumerate}
+\item جے $t \ident c$، تاں $\Value{c}{M}[s] = \Assign{c}{M}$ تے
+  $\Value{c}{M'}[h \circ s] = \Assign{c}{M'}$۔ ایس لئی
+  $h(\Value{t}{M}[s]) = h(\Assign{c}{M}) = \Assign{c}{M'}$ (
+  \olref{defn:isomorphism} دی \olref{defn:iso-const} مطابق) $=
+  \Value{t}{M'}[h \circ s]$۔
+\item جے $t \ident x$، تاں $\Value{x}{M}[s] = s(x)$ تے
+  $\Value{x}{M'}[h \circ s] = h(s(x))$۔ ایس لئی $h(\Value{x}{M}[s]) =
+  h(s(x)) = \Value{x}{M'}[h \circ s]$۔
+\item جے $t \ident f(t_1, \dots, t_n)$، تاں
+  \begin{align*}
+    \Value{t}{M}[s] & = \Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \quad\text{تے}\\
+  \Value{t}{M'}[h \circ s] & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ
+    s], \dots, \Value{t_n}{M'}[h \circ s]).
+  \end{align*}
+  استقرائی مفروضہ ایہ اے کہ ہر $i$ لئی، $h(\Value{t_i}{M}[s])
+  = \Value{t_i}{M'}[h\circ s]$۔ ایس لئی
+  \begin{align}
+    h(\Value{t}{M}[s])
+    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \notag\\
+    & = \Assign{f}{M'}(h(\Value{t_1}{M}[s]), \dots,
+    h(\Value{t_n}{M}[s])) \ollabel{iso-1}\\
+    & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ s], \dots,
+    \Value{t_n}{M'}[h \circ s]) \ollabel{iso-2}\\
+    & = \Value{t}{M'}[h\circ s] \notag
+  \end{align}
+  ایتھے \olref{iso-1}، \olref{defn:isomorphism} دی
+  \olref{defn:iso-func} توں تے \olref{iso-2} استقرائی مفروضے توں نکلدا اے۔
+\end{enumerate}
+حصہ (b) مشق دے طور اُتے چھڈیا گیا اے۔
+
+جے $!A$ اک جملہ اے، تاں متغیر قدر بندیاں~$s$ تے $h \circ s$
+غیر متعلقہ نیں، تے سانوں $\Sat{M}{!A}$ اُدوں تے صرف اُدوں جدوں
+$\Sat{M'}{!A}$ ملدا اے۔
+\end{proof}
+
+\begin{prob}
+\olref[mod][bas][iso]{thm:isom} دے حصہ (b) دا ثبوت پوری تفصیل نال
+کرو۔ خاص طور اُتے دسو کہ \olref[mod][bas][iso]{defn:isomorphism}
+وچ ہم شکلی دیاں پنج خاصیتاں وچوں ہر اک کتھے ورتی جاندی اے۔
+\end{prob}
+
+\begin{defn}
+ساخت $\Struct{M}$ دی \emph{خود ہم شکلی} (automorphism)،
+$\Struct{M}$ توں اوہدے اپنے اُتے اک ہم شکلی اے۔
+\end{defn}
+
+\begin{prob}
+دکھاؤ کہ ہر ساخت $\Struct{M}$ لئی، جے $X$، $\Struct{M}$ دا
+قابلِ تعریف ذیلی سیٹ ہووے، جیہدے تعریفی فارمولے وچ زبان توں باہر دے
+اضافی پیرامیٹر نہ ہون، تے $h$، $\Struct{M}$ دی خود ہم شکلی ہووے،
+تاں $X
+= \Setabs{h(x)}{x \in X}$ (یعنی $X$، $h$ دے تحت قائم رہندا اے)۔
+\end{prob}
+
+
+\end{document}

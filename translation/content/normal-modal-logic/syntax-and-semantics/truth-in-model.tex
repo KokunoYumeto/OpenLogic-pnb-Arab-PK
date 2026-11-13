@@ -1,0 +1,77 @@
+% Section: truth-in-model
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{tru}
+
+\olsection{نمونے وچ سچائی}
+
+کدی اسیں جاننا چاہندے آں کہ دتے نمونے دے ہر جہان وچ کہڑے !!{formula}s سچے نیں۔ ایس لئی اک علامتی لکھت طے کر لئیے۔
+
+\begin{defn}
+  !!^a{formula}~$!A$ اک \emph{نمونے وچ سچا اے}، جیہڑا نمونہ $M = \tuple{W, R,
+    V}$ اے، تے اینوں $\mSat{M}{!A}$ لکھدے آں، اُدوں تے صرف اُدوں جدوں $\mSat{M}{!A}[w]$
+  ہر $w \in W$ لئی ہووے۔
+\end{defn}
+
+\begin{prop}\ollabel{prop:truthfacts}
+  \begin{enumerate}
+  \item جے $\mSat{M}{!A}$ تاں $\mSat/{M}{\lnot !A}$، پر اُلٹ گل \emph{نہیں} چل دی۔
+  \item جے $\mSat{M}{!A \lif !B}$ تاں $\mSat{M}{!A}$ صرف اُدوں جدوں
+    $\mSat{M}{!B}$، پر اُلٹ گل \emph{نہیں} چل دی۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item جے $\mSat{M}{!A}$ تاں $!A$، $W$ دے سارے جہاناں وچ سچا اے۔ کیوں جے $W \neq \emptyset$، ایس لئی $\mSat{M}{\lnot!A}$ نہیں ہو سکدا؛ نئیں تاں $!A$ نوں کسے جہان وچ سچا تے جھوٹھا دونیں ہونا پئے گا۔
+
+    دوجے پاسے جے $\mSat/{M}{\lnot !A}$ تاں $!A$ کسے جہان $w \in W$ وچ سچا اے۔ ایس توں ایہ نہیں نکلدا کہ $\mSat{M}{!A}[w]$
+    \emph{ہر}~$w \in W$ لئی ہووے۔ مثال لئی
+    \olref[rel]{fig:simple} والے نمونے وچ $\mSat/{M}{\lnot p}$ تے $\mSat/{M}{p}$ وی۔
+  \item منّ لو $\mSat{M}{!A \lif !B}$ تے $\mSat{M}{!A}$۔ $\mSat{M}{!B}$ وکھاؤن لئی $w \in W$ کوئی وی جہان لے لو۔ فیر
+    $\mSat{M}{!A \lif !B}[w]$ تے $\mSat{M}{!A}[w]$، ایس لئی
+    $\mSat{M}{!B}[w]$۔ کیوں جے $w$ کوئی وی جہان سی، ایس لئی
+    $\mSat{M}{!B}$۔
+
+    ایہ وکھاؤن لئی کہ اُلٹ گل نہیں چل دی، سانوں اک ایسا نمونہ
+    $\mModel{M}$ لبھنا پئے گا جیہدے وچ $\mSat{M}{!A}$ صرف اُدوں جدوں $\mSat{M}{!B}$، پر
+    $\mSat/{M}{!A \lif !B}$۔ فیر
+    \olref[rel]{fig:simple} والا نمونہ ویکھو۔ $\mSat/{M}{p}$، ایس لئی خالی شرط کارن
+    $\mSat{M}{p}$ صرف اُدوں جدوں $\mSat{M}{q}$۔ پر $\mSat/{M}{p \lif
+      q}$، کیوں جے $p$ سچا تے $q$ جھوٹھا اے جہان~$w_1$ وچ۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  اوس زبان لئی ہِیٹھلا نمونہ $\mModel{M}$ ویکھو جیہدے وچ
+  $p_1$، $p_2$، $p_3$ ہی !!{propositional variable}s نیں:
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]left:\mTrue{p_1}\\\mFalse{p_2}\\\mFalse{p_3}}]
+            {$w_1$} ; 
+      \node[world] (w2) [label={[align=right]right:\mTrue{p_1}\\\mTrue{p_2}\\\mFalse{p_3}},
+        below right=of w1]  {$w_2$}; 
+      \node[world] (w3) [label={[align=right]right:\mTrue{p_1}\\\mTrue{p_2}\\\mTrue{p_3}},
+        above right=of w2] {$w_3$};
+      \draw[reflexive above] (w3) to (w3); 
+      \draw[->] (w1) to (w2);
+      \draw[->] (w2) to (w3);
+      \draw[->] (w1) to (w3); 
+    \end{tikzpicture}
+  \end{center}
+  کی ہِیٹھلے !!{formula}s تے سانچے نمونے $\mModel{M}$ وچ سچے نیں،
+  یعنی $\mModel{M}$ دے ہر جہان وچ سچے نیں؟ وجہ سمجھاؤ۔
+  \begin{enumerate}
+  \item $p\lif \Diamond p$ ($p$ ایٹمی اے)؛
+  \item $!A\lif \Diamond !A$ ($!A$ کوئی وی فارمولا اے)؛
+  \item $\Box p \lif p$ ($p$ ایٹمی اے)؛
+  \item $\lnot p \lif \Diamond \Box p$ ($p$ ایٹمی اے)؛
+  \item $\Diamond \Box !A$ ($!A$ کوئی وی فارمولا اے)؛
+  \item $\Box \Diamond p$ ($p$ ایٹمی اے)۔
+  \end{enumerate}
+\end{prob}
+
+\end{document}

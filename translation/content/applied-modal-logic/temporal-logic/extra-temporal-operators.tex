@@ -1,0 +1,48 @@
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: extra-operators
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{ext}
+
+\olsection{سمے دی منطق لئی ہور عامل}
+
+لنگھے تے آؤن والے سمے دے اک رکنی عاملاں توں علاوہ، سمے دیاں منطقاں
+وچ کدی کدی دو رکنی عامل $\Since $ تے~$\Until$ وی شامل ہوندے نیں،
+جیہڑے «جدوں توں» تے «جدوں تائیں» دے نشان نیں۔ ایس لئی سمے دی منطق
+دی زبان وچ $\Since $ تے~$\Until$ شامل کرنے پین گے، تے سمے دے
+!!{formula} دی تعریف وچ ایہ شق وی لاؤنی پئے گی:
+
+\begin{itemize}
+\item[] جے $!A$ تے $!B$، !!{formula}s نیں، تاں $(\Since  !A !B)$ تے
+  $(\Until !A !B)$ دونیں !!{formula}s نیں۔
+\end{itemize}
+
+فیر ایہناں عاملاں دیاں معنیات ایویں دتیاں جاندیاں نیں:
+
+\begin{defn}\ollabel{defn:since-until}
+  نمونے وچ \emph{!!a{formula}~$!A$ دا~$t$ اُتے سچ ہونا}،~$\mModel M$
+  لئی:
+  \begin{enumerate}
+  \item\ollabel{defn:sub:mmodels-since} \indcase{!A}{\Since  !B
+    !C}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[t']$ کسے ایسے $t' \in
+    T$ لئی ہووے جیہدے لئی $t' \prec t$، تے ہر ایسے $s$ لئی جیہدے لئی
+    $t' \prec s \prec t$، $\mSat{M}{!C}[s]$ ہووے}
+  \item\ollabel{defn:sub:mmodels-until} \indcase{!A}{\Until !B
+    !C}{$\mSat{M}{\indfrm}[t]$ اُدوں تے صرف اُدوں جدوں
+    $\mSat{M}{!B}[t']$ کسے ایسے $t' \in
+    T$ لئی ہووے جیہدے لئی $t \prec t'$، تے ہر ایسے $s$ لئی جیہدے لئی
+    $t \prec s \prec t'$، $\mSat{M}{!C}[s]$ ہووے}
+  \end{enumerate}
+\end{defn}
+
+$\Since  !B !C$ نوں سِدھی طرح ایویں پڑھ سکدے آں، «جدوں توں
+$!B$ سچ سی، اوہدوں توں~$!C$ سچ رہیا اے۔» تے $\Until !B !C$ نوں
+ایویں پڑھ سکدے آں، «جدوں تائیں $!B$ سچ نہیں ہو جاندا، اوہدوں تائیں
+~$!C$ سچ رہے گا۔»
+
+\end{document}

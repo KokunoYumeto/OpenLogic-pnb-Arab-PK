@@ -1,0 +1,98 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{prv}}
+      {\olfileid{pl}{axd}{prv}}
+
+\olsection{\usetoken{S}{derivability} تے بے تضادی}
+
+ہُن اسیں !!{derivability} دے تعلق دیاں کئی خاصیتاں ثابت کراں گے۔
+ایہ اپنے آپ وچ وی دلچسپ نیں، پر تمامیت دے قضیے دے ثبوت وچ
+ہر اک دا اپنا کردار ہووے گا۔
+
+\begin{prop}\ollabel{prop:provability-contr}
+  جے $\Gamma \Proves !A$ تے $\Gamma \cup \{!A\}$ متضاد اے،
+  تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  جے $\Gamma \cup \{!A\}$ متضاد اے، تاں $\Gamma \cup \{!A\}
+  \Proves \lfalse$۔ \olref[ptn]{prop:reflexivity} توں
+  $\Gamma \Proves !B$ ہر اس $!B \in \Gamma$ لئی۔ مفروضے مطابق
+  $\Gamma \Proves !A$ وی اے، ایس لئی $\Gamma \Proves !B$
+  ہر اس $!B \in \Gamma \cup
+  \{!A\}$ لئی۔ \olref[ptn]{prop:transitivity}
+  توں $\Gamma \Proves
+  \lfalse$، یعنی $\Gamma$ متضاد اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \cup \{\lnot !A\}$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+پہلاں فرض کرو $\Gamma \Proves !A$۔ تاں \olref[ptn]{prop:monotonicity}
+توں $\Gamma \cup \{\lnot !A\}
+\Proves !A$۔ \olref[ptn]{prop:reflexivity} توں $\Gamma \cup \{\lnot
+!A\} \Proves \lnot !A$۔ ساڈے کول \olref[prp]{ax:lnot2} توں
+$\Proves \lnot !A \lif (!A \lif \lfalse)$ وی اے۔ ایس لئی
+\olref[ded]{prop:mp} دو واری لا کے $\Gamma \cup \{\lnot
+!A\} \Proves \lfalse$ ملدا اے۔
+
+ہُن فرض کرو $\Gamma \cup \{\lnot !A\}$ متضاد اے، یعنی $\Gamma
+\cup \{\lnot !A\} \Proves \lfalse$۔ استنباط دے قضیے نال $\Gamma
+\Proves \lnot !A \lif \lfalse$۔ \olref[prp]{ax:lfalse2} توں $\Gamma
+\Proves (\lnot !A \lif
+\lfalse) \lif \lnot\lnot !A$، ایس لئی \olref[ded]{prop:mp} نال $\Gamma
+\Proves \lnot\lnot !A$۔ چونکہ $\Gamma \Proves
+\lnot\lnot !A \lif !A$ (\olref[prp]{ax:dne})، ایس لئی فیر
+\olref[ded]{prop:mp} نال $\Gamma
+\Proves !A$۔
+\end{proof}
+
+\begin{prob}
+ثابت کرو کہ $\Gamma \Proves \lnot !A$ اُدوں تے صرف اُدوں جدوں
+$\Gamma \cup \{!A\}$ متضاد اے۔
+\end{prob}
+
+\begin{prop}\ollabel{prop:explicit-inc}
+  جے $\Gamma \Proves !A$ تے $\lnot !A \in \Gamma$، تاں $\Gamma$
+  متضاد اے۔
+\end{prop}
+
+\begin{proof}
+  \olref[prp]{ax:lnot2} توں $\Gamma \Proves \lnot !A \lif (!A \lif \lfalse)$۔
+  \olref[ded]{prop:mp} دو واری لا کے $\Gamma \Proves \lfalse$۔
+\end{proof}
+
+
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  جے $\Gamma \cup \{!A\}$ تے $\Gamma \cup \{\lnot !A\}$
+  دوویں متضاد نیں، تاں $\Gamma$ متضاد اے۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+  \olref[fol][axd][prv]{prop:provability-exhaustive} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+  \olref[pl][axd][prv]{prop:provability-exhaustive} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+
+\end{document}

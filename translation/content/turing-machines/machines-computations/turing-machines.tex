@@ -1,0 +1,121 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: turing-machines
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{tur}{mac}{tur}
+\olsection{ٹیورنگ مشیناں}
+
+\begin{explain}
+ٹیورنگ مشین دی
+رسمی تعریف ویکھن
+نوں تجریدی لگدی اے،
+پر اصل وچ سادی اے:
+ایہ ٹیورنگ مشین
+دا عمل مقرر کرن
+لئی درکار ساری
+معلومات اک ریاضیاتی
+بناوٹ وچ اکٹھیاں
+کردی اے۔ ایہناں
+وچ (1) مشین دیاں
+ممکنہ حالتاں،
+(2) پٹی اُتے
+آ سکّن والے
+نشان، (3) مشین
+دی ابتدائی حالت
+تے (4) مشین دے
+حکماں دا مجموعہ
+شامل نیں۔
+\end{explain}
+
+\begin{defn}[ٹیورنگ مشین]
+اک \emph{ٹیورنگ مشین}
+$M$ چار رکناں
+دا اک ترتیب وار ٹپل
+$\langle Q, \Sigma, q_0,
+\delta\rangle$ اے،
+جیہدے وچ:
+\begin{enumerate}
+\item \emph{حالتاں} دا اک
+  محدود سیٹ~$Q$،
+\item اک محدود
+  \emph{حرفاں دا مجموعہ}
+  $\Sigma$، جیدے وچ
+  $\TMendtape$ تے
+  $\TMblank$ شامل نیں،
+\item اک \emph{ابتدائی
+  حالت}~$q_0 \in Q$،
+\item اک محدود
+  \emph{حکماں دا مجموعہ}~$\delta\colon Q \times \Sigma
+  \pto Q \times \Sigma \times \{\TMleft, \TMright, \TMstay\}$۔
+\end{enumerate}
+جزوی فنکشن~$\delta$
+نوں $M$ دا
+\emph{حالتی تبدیلی
+دا فنکشن} وی
+آکھدے نیں۔
+\end{defn}
+
+\begin{explain}
+اسی مندے آں کہ
+پٹی صرف اک پاسے
+ول لامتناہی اے۔
+ایس لئی اک خاص
+نشان~$\TMendtape$
+نوں پٹی دے کھبے
+سِرے دی نشانی
+بناؤنا فائدہ مند اے۔
+ایس نال ٹیورنگ
+مشین دے پروگرام
+نوں پتا لاؤن وچ
+سہولت رہندی اے
+کہ اوہ کدوں پٹی
+توں باہر نکلن
+دے خطرے وچ اے۔
+اسی ایہ شرط لا
+سکدے ساں کہ ایس
+نشان اُتے کدی
+نواں نشان نہ لکھیا
+جاوے، یعنی
+$\delta(q,\TMendtape) = \tuple{q', \TMendtape, x}$
+جے $\delta(q,\TMendtape)$
+تعریف شدہ ہووے۔
+کجھ درسی کتاباں
+ایہ شرط رکھدیاں
+نیں؛ اسی نہیں
+رکھدے۔ ٹیورنگ
+مشین بناؤندے
+ویلے تسی صرف
+ایہ خیال رکھ
+سکدے او کہ
+اوہ~$\TMendtape$
+نوں کدی نہ بدلے۔
+ہور ایہ وی
+اے کہ کجھ
+صورتاں وچ ایس
+نشان نوں بدلݨ
+دی اجازت دینا
+مفید لچک دیندا
+اے۔
+\end{explain}
+
+\begin{ex}
+\emph{جفت مشین:}
+جفت مشین رسمی
+طور اُتے چار رکناں
+دا ترتیب وار ٹپل
+$\tuple{Q, \Sigma, q_0, \delta}$
+اے، جتھے:
+\begin{align*}
+Q & = \{ q_0, q_1 \} \\
+\Sigma & = \{ \TMendtape, \TMblank, \TMstroke \}, \\
+\delta(q_0, \TMstroke) & = \tuple{q_1, \TMstroke, \TMright},\\
+\delta(q_1, \TMstroke) & = \tuple{q_0, \TMstroke, \TMright},\\
+\delta(q_1, \TMblank)  & = \tuple{q_1, \TMblank, \TMright}.
+\end{align*}
+\end{ex}
+
+\end{document}

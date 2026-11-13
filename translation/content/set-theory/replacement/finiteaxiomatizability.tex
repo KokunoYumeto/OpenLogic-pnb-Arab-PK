@@ -1,0 +1,71 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{replacement}{finiteaxiomatizability}
+\olsection{ضمیمہ: محدود گنتی دے مسلّمیاں نال بیان}
+اسیں بدل رکھن دے اصول توں کجھ نتیجے کڈھ کے ایہ باب مکاواں گے۔ پہلا نتیجہ \citet{Montague1961} دا اے۔ دھیان دیو کہ ایہ $\ZF$ دے \emph{اندر} دتا ثبوت نہیں، ایہ $\ZF$ \emph{بارے} ثبوت اے۔
+\begin{thm}\ollabel{zfnotfinitely}
+	$\ZF$ نوں محدود گنتی دے مسلّمیاں نال بیان نہیں کیتا جا سکدا۔ ہور عام طور اُتے، جے $\Th{T}$ محدود اے تے $\Th{T} \Proves \ZF$، تاں $\Th{T}$ وچ ٹکراؤ اے۔
+
+	(ایتھے بناں وکھرا آکھے اسیں اپنا کم پہلے درجے دے اوہناں جملیاں تک محدود کردے آں جیہناں دا اکّو اک غیر منطقی بنیادی نشان $\in$ اے۔ تے اسیں $\Th{T} \Proves \ZF$ ایہ دسّن لئی لکھدے آں کہ $\Th{T} \Proves \phi$ ہر $\phi \in \ZF$ لئی۔)
+\end{thm}
+\begin{proof}
+	کوئی محدود $\Th{T}$ مقرر کرو جیہدے لئی $\Th{T} \Proves \ZF$۔ سو $\Th{T}$ توں انعکاس، یعنی \olref[sth][replacement][ref]{reflectionschema}، ثابت ہُندا اے۔ کیوں جے $\Th{T}$ محدود اے، اسیں ایہنوں اکّو عطف $\theta$ وجوں فیر لکھ سکدے آں۔ ایس فارمولے دا انعکاس لئیے تاں $\Th{T} \Proves \exists \beta(\theta \liff \theta^{V_\beta})$۔ کیوں جے صاف اے کہ $\Th{T} \Proves \theta$، سانوں $\Th{T} \Proves \exists \beta\ \theta^{V_\beta}$ ملدا اے۔
+
+	ہُن $\psi(X)$ ایہدا مختصر روپ ہووے:
+	\[
+		\theta^X \land X\text{ متعدی اے} \land (\forall Y \in X)(Y\text{ متعدی اے}\lif \lnot \theta^{Y})
+	\]
+	موٹی گل ایہ اے کہ $X$، $\theta$ دا متعدی نمونہ اے تے ایس لحاظ نال $\in$ مطابق گھٹ توں گھٹ اے۔ ہُن چیتے کرو کہ $\Th{T} \Proves \exists \beta\ \theta^{V_\beta}$۔ درجیاں بارے $\ZF$ دے اندرلے، تے ایس لئی $\Th{T}$ دے اندرلے، بنیادی حقائق توں سانوں ملدا اے:
+	\begin{equation}
+		\Th{T} \Proves \exists M \psi(M). \tag{*}\label{Mpsi}
+	\end{equation}
+	$\psi(X)$ دے پہلے عطف والے جز نوں ورت کے، جدوں وی $\Th{T} \Proves \sigma$، سانوں $\Th{T} \Proves \forall X(\psi(X) \lif \sigma^X)$ ملدا اے۔ سو \eqref{Mpsi} مطابق:
+	\begin{align*}
+		\Th{T} &\Proves \forall X(\psi(X) \lif (\exists N \psi(N))^X)\\
+	\intertext{ایہ ورت کے، تے \eqref{Mpsi} فیر ورت کے:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \psi(N))^M)
+	\intertext{سو خاص طور اُتے:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \in M)((N\text{ متعدی اے})^N \land (\theta^N)^M))
+	\intertext{سو تعدی بارے بنیادی دلیل نال:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \in M)(N\text{ متعدی اے} \land \theta^N))
+	\end{align*}
+	سو $\Th{T}$ وچ ٹکراؤ اے۔\footnote{ایس «بنیادی دلیل» وچ متعدی سیٹاں لئی کجھ «مطلق ہون دے حقائق» ثابت کرنے پیندے نیں۔}
+\end{proof}
+
+ایہو جیہا اک ہور نتیجہ \citet[223]{Potter2004} نے دَسیا اے۔
+
+\begin{prop}\ollabel{finiteextensionofZ}
+	$\Th{T}$، $\Z$ وچ محدود گنتی دے نویں مسلّمے پا کے ملی توسیع ہووے۔ جے $\Th{T} \Proves \ZF$، تاں $\Th{T}$ وچ ٹکراؤ اے۔ (ایتھے اوہو حدّاں چُپ چاپ منّیاں نیں جیہڑیاں \olref{zfnotfinitely} لئی منّیاں سن۔)
+\end{prop}
+\begin{proof}
+	$\theta$ نوں $\Th{T}$ دے سارے مسلّمیاں دا عطف منّو، وکھ کرن دے خاکے دیاں (لامتناہی گنتی والیاں) صورتاں \emph{چھڈ کے}۔ \olref{zfnotfinitely} وانگ $\psi$ دی تعریف $\theta$ توں دے کے اسیں وکھا سکدے آں کہ $\Th{T} \Proves \exists M \psi(M)$۔
+
+	\olref{zfnotfinitely} وانگ اسیں ایہ خاکہ ثابت کر سکدے آں کہ جدوں وی $\Th{T} \Proves \sigma$، سانوں $\Th{T} \Proves \forall X(\psi(X) \lif \sigma^X)$ ملدا اے۔ فیر اسیں ثبوت این اویویں پورا کردے آں جیویں \olref{zfnotfinitely} وچ کیتا سی۔
+
+	پر خاکہ ثابت کرن لئی \olref{zfnotfinitely} نالوں ذرا ہور کم کرنا پیندا اے۔ آخر وکھ کرن دے خاکے دیاں صورتاں $\Th{T}$ وچ شامل نیں، پر $\theta$ دے عطف والے جز نہیں۔ پر اسیں ایہ اوکڑ ایہ ثابت کر کے ٹپ سکدے آں کہ $\Th{T} \Proves \forall X(X\text{ متعدی اے} \lif \sigma^X)$ وکھ کرن دی ہر صورت $\sigma$ لئی۔ ایہ کم اسیں پڑھن والے اُتے چھڈدے آں۔
+\end{proof}
+\begin{prob}
+	وکھ کرن دے خاکے دی ہر صورت $\sigma$ لئی وکھاؤ کہ $\Z \Proves \forall X(X\text{ متعدی اے} \lif \sigma^X)$۔ (اسیں ایہ خاکہ \olref[sth][replacement][finiteaxiomatizability]{finiteextensionofZ} وچ ورتیا سی۔)
+\end{prob}
+\begin{prob}
+	وکھاؤ کہ ہر $\phi \in \Z$ لئی $\ZF \Proves \phi^{V_{\omega+ \omega}}$۔
+\end{prob}
+\begin{prob}
+	\olref[sth][replacement][finiteaxiomatizability]{zfnotfinitely} تے \olref[sth][replacement][finiteaxiomatizability]{finiteextensionofZ} دے ثبوتاں وچ ورتے باقی خاکے والے نتیجیاں دی تصدیق کرو۔
+\end{prob}
+
+جیویں \olref[sth][replacement][absinf]{sec} وچ آکھیا سی، ایہ وکھاندا اے کہ بدل رکھن دا اصول \olref[ordinals][ordtype]{thmOrdinalRepresentation} توں ٹھیک ٹھیک ودھ طاقتور اے۔ یا ذرا ہور ٹھیک آکھیے، جے $\Z$ + «ہر حُسنِ ترتیب اکّو اک ترتیبی عدد نال ہم ساخت اے» بے ٹکراؤ اے، تاں ایہ بدل رکھن دے خاکے دی گھٹ توں گھٹ اک صورت ثابت نہیں کر سکدا۔
+
+	%	By assumption, $\psi^{V_\alpha}$ has the form: 
+	%	\[
+	%		(\forall A \in V_\alpha)(\exists S \in V_\alpha)(\forall x \in V_\alpha)(x \in S \liff (\phi^{V_\alpha}(x) \land x \in A))
+	%	\]
+	%	To establish this holds, fix $A \in V_\alpha$. Using Separation, obtain: 
+	%	\[
+	%		S = \Setabs{x \in A}{\phi^{V_\alpha}(x)}
+	%	\]
+	%	Now $S \in V_\alpha$, since $S \subseteq A \in V_\alpha$, and clearly $(\forall x \in V_\alpha)(x \in S \liff (\phi^{V_\alpha}(x) \land x \in A)$.
+
+\end{document}

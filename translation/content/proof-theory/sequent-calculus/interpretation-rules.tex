@@ -1,0 +1,76 @@
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: interpretation-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{irl}
+
+\olsection{قاعدیاں دا مطلب}
+
+سیکوئنٹ دا مطلب چیتے کرو۔ سیکوئنٹ $\Gamma \Sequent
+\Delta$، !!a{structure}~$\Struct{M}$ وچ سچا اے جے یا گھٹّو گھٹ اک $!A \in \Gamma$ جھوٹھا اے، یا گھٹّو گھٹ اک~$!A \in \Delta$ سچا اے۔ اسیں~\Log{G3c} دے منطقی قاعدیاں نوں اوہناں دے مُکھ !!{formula}s دیاں سچ ہون دیاں شرطاں دا رسمی بیان سمجھ سکدے آں۔ \RightR{\lif} نوں ویکھو۔ اوہدا مُکھ !!{formula} $!A \lif !B$ اے۔ ایہ سچا اے جے $!A$ جھوٹھا اے یا~$!B$ سچا اے۔ سو سیکوئنٹ $\ \Sequent !A \lif !B$ اوہدوں تے صرف اوہدوں سچا اے جدوں $!A \Sequent !B$ سچا اے۔ جے اسیں سیاق دے !!{formula}s $\Gamma$، $\Delta$ ایہناں سیکوئنٹاں دے کھبّے تے سجّے پاسیاں وچ شامل کریے، تاں عین \RightR{\lif} قاعدے دا نتیجہ تے مقدمہ ملدے نیں۔~\LeftR{\lif} دی صورت رلدی ملدی اے۔ $!A
+\lif !B$ جھوٹھا اے جے $!A$ سچا تے $!B$ جھوٹھا اے۔ سو $!A \lif !B
+\Sequent \ $ اوہدوں تے صرف اوہدوں سچا اے جدوں $\ \Sequent !A$ تے $!B \Sequent \ $ دونے سچے نیں۔ \LeftR{\lif} دا نتیجہ اوہدے مقدمیّاں دے عطف دے برابر اے۔ ایہ بناوٹ پکی کردی اے کہ~\Log{G3c} دے قاعدے صحت مند نیں (جے سارے مقدمے سچے نیں تاں نتیجہ سچا اے)۔ ایہ تمامیت وی پکی کردی اے۔
+
+اصل وچ کسے وی سچائی-فنکشن والے جوڑ دیاں سچ ہون دیاں شرطاں ایس طرح سیکوئنٹاں دے سیٹ دے روپ وچ بیان ہو سکدیاں نیں۔ ایہ ایس گل توں نکلدا اے کہ کلاسیکی منطق وچ ہر سچائی-فنکشن عطفی نارمل روپ والے !!a{formula} نال بیان ہو سکدا اے، یعنی جوہری تے نفی کیتے جوہری !!{formula}s دیاں فصلاں دے عطف نال۔ مثال لئی منّ لو $!A
+\oplus !B$ اوہدوں تے صرف اوہدوں سچا اے جدوں $!A$ تے $!B$ وچوں عین اک سچا اے، یعنی «صرف اک والا یا»۔ فیر $!A \oplus !B$ اوہدوں تے صرف اوہدوں سچا اے جدوں $(!A \lor !B) \land
+(\lnot !A \lor \lnot !B)$ سچا اے، تے ایہ جھوٹھا اے جے $(\lnot !A \lor !B)
+\land (!A \lor \lnot !B)$ سچا اے۔ سو اسیں $\oplus$ لئی سیکوئنٹ حساب دے ایہ قاعدے متعارف کرا سکدے آں:
+\begin{align*}
+&
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\Axiom$!A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\oplus}}
+\BinaryInf$\Gamma \fCenter \Delta, !A \oplus !B$
+\DisplayProof
+\\
+& \Axiom$!A, \Gamma \fCenter \Delta, !B$
+\Axiom$!B, \Gamma \fCenter \Delta, !A$
+\RightLabel{\RightR{\oplus}}
+\BinaryInf$!A \oplus !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\end{align*}
+تے ایہ قاعدے وی صحت مند تے کامل ہون گے۔ اوہناں دے نتیجے اوہدوں تے صرف اوہدوں سچے نیں جدوں سارے مقدمے سچے نیں۔
+
+\begin{prob}
+منّ لو $!A \downarrow !B$ اوہدوں تے صرف اوہدوں سچا اے جدوں نہ $!A$ سچا اے نہ~$!B$ («NOR»)۔ \Log{G3c} وچ ایہدے قاعدے کیہڑے ہون گے؟ (دو سیکوئنٹ لبھو جیہڑے اکّو ویلے اوہدوں تے صرف اوہدوں سچے ہون جدوں $!A \downarrow !B$ سچا اے۔ ایس نال \RightR{\downarrow} قاعدہ ملدا اے۔ فیر اک سیکوئنٹ لبھو جیہڑا اوہدوں تے صرف اوہدوں سچا ہووے جدوں $!A \downarrow !B$ جھوٹھا اے۔ ایس نال \LeftR{\downarrow} قاعدہ ملدا اے۔)
+\end{prob}
+
+\Log{G3c} وچ ہر جوڑ تے مسوّر دے عین دو قاعدے نیں، اک کھبّا قاعدہ تے اک سجّا۔ پر \Log{G1c} وچ دو \LeftR{\land} تے دو \RightR{\lor} قاعدے نیں۔ وجہ ایہ اے کہ گینٹسن دے اصل نظام~\Log{LK}، جیہدے اُتے \Log{G1c} بنیا اے، دی اک شکل~\Log{LJ} اہم غیر کلاسیکی منطق، یعنی وجدانی منطق، لئی سی۔ وجدانی منطق لئی صحت مند تے کامل نظام لین واسطے~\Log{LJ} وچ ہر سیکوئنٹ دا سجّا پاسا ودھ توں ودھ اک !!{formula} رکھ سکدا اے۔ ایس کرکے \RightR{\lor} قاعدہ~\Log{G3c} دا ورتیا نہیں جا سکدا، کیونکہ اوہدے مقدمے دے سجّے پاسے $!A$ تے~$!B$ دونے نیں۔ ایس لئی گینٹسن نے \RightR{\lor} قاعدیاں دا اک جوڑا \Log{LJ} لئی ورتیا تے اوہی~\Log{LK} لئی وی ورتیا۔ ایویں ای وجدانی شکل~\Log{G1i}، بس~\Log{G1c} اے جیہدے سارے سجّے پاسے ودھ توں ودھ اک !!{formula} رکھ سکدے نیں۔ (\Log{G3c} دی وی اک وجدانی شکل اے، پر اوہدے کجھ قاعدے~\Log{G3c} دے میل کھاندے قاعدیاں توں وکھرے نیں۔ مثال لئی اوہ وی \RightR{\lor} قاعدیاں دا جوڑا ورتدی اے۔)
+
+ایہ ویکھنا سوکھا اے کہ~\Log{G1c} دے ساختی قاعدے صحت مند نیں۔ مثال لئی جے $\Gamma \Sequent \Delta$ دے سجّے پاسے کوئی جھوٹھا !!{formula} یا کھبّے پاسے کوئی سچا !!{formula} اے، تاں $\Gamma \Sequent
+\Delta, !A$ وچ وی اوہی اے۔ $!A$ دے سچا یا جھوٹھا ہون نال کوئی فرق نہیں پیندا۔ سو جے~\RightR{\Weakening} دا مقدمہ سچا اے، تاں اوہدا نتیجہ وی سچا اے۔ ویکھو کہ ایتھے الٹی گل سچی نہیں۔ ہو سکدا اے نتیجہ ایس لئی سچا ہووے کہ $!A$ سچا اے، تے فیر مقدمے دے سچے ہون دی ضمانت نہیں۔
+
+ساڈے کول ساختی قاعدے کیوں نیں؟ مثال لئی سکڑاؤ (\RightR{\Contraction}، \LeftR{\Contraction}) دی لوڑ اے !!{prove} کرن لئی $\ \Sequent !A
+\lor \lnot !A$۔ جے تسی $!A \Sequent !A$ توں شروع کرو تاں پہلاں $\Sequent !A, \lnot !A$ ملدا اے~\RightR{\lnot} نال۔ فیر تسی \RightR{\lor} دیاں دونے شکلاں واری واری ورت سکدے او، اک واری $!A \lor \lnot
+!A$ لین لئی $\lnot !A$ توں، تے اک واری $!A \lor \lnot !A$ لین لئی~$!A$ توں۔ تہانوں $\ \Sequent !A \lor \lnot !A, !A \lor \lnot !A$ ملدا اے۔ سو $\Sequent !A \lor \lnot !A$ لین لئی~\Log{G1c} وچ تہانوں اکّو !!{formula} دیاں دو موجودگیاں !!a{proof} وچ «سکیڑن» جوگے ہونا پینا اے:
+\[
+\Axiom$!A \fCenter !A$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\fCenter !A, \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\fCenter !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\fCenter !A \lor \lnot !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$\fCenter !A \lor \lnot !A$
+\DisplayProof
+\]
+اصل وچ معتبر سیکوئنٹ وی نیں جیہڑے تسی !!{prove} نہیں کر سکدے~\Log{G1c} وچ، کمزور کرن یا سکڑاؤ توں بناں۔ مثال لئی !!a{proof} جیہڑا سیکوئنٹ $!A \Sequent !B \lif !A$ دا اے~\Log{G1c} وچ، اوہ \RightR{\lif} اُتے ضرور مُکدا اے (کیونکہ صرف $!B \lif !A$ مُکھ ہو سکدا اے)، تے ایس لئی $!B, !A \Sequent !A$ مقدمہ چاہیدا اے۔ ایہ لین لئی \LeftR{\Weakening} چاہیدا اے، مسلّمے $!A \Sequent !A$ توں:
+\[
+\Axiom$!A \fCenter !A$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!B, !A \fCenter !A$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!A \fCenter !B \lif !A$
+\DisplayProof
+\]
+
+\Log{G3c} وچ سکڑاؤ تے کمزور کرن دے قاعدیاں دی بالکل لوڑ نہیں۔ کمزور کرنا مسلّمیاں وچ ای شامل اے۔ دو مقدمیّاں والے قاعدیاں وچ سیاق $\Gamma$، $\Delta$ دیاں دو نقلاں نوں اک بنا کے سکڑاؤ زیادہ تر ٹالیا جا سکدا اے۔ \Log{G1c} تے \Log{G3c} دوناں وچ ایہو جیہے «سانجھے سیاق» والے قاعدے نیں۔ اک مقدمے والے قاعدیاں وچ سکڑاؤ صرف \RightR{\lor}، \LeftR{\land}، \RightR{\lexists} تے~\LeftR{\lforall} لئی چاہیدا اے۔~\Log{G3c} وچ ایہناں قاعدیاں دیاں شکلاں سکڑاؤ نوں بالکل بے لوڑ کر دیندیاں نیں۔ اک نظام \Log{G2c} اے (ویکھو \olref{tab:G2c})، جیہدے وچ دو مقدمیّاں والے قاعدیاں دے سیاق اک دوجے توں آزاد نیں۔ \Log{G2c} وچ سکڑاؤ ہور وی اہم اے،~\Log{G1c} نالوں۔
+
+\subfile{rules-G2c}
+
+\end{document}

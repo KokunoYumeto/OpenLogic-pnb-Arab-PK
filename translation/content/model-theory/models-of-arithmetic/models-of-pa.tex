@@ -1,0 +1,319 @@
+% Part: first-order-logic
+% Chapter: models-of-arithmetic
+% Section: models-of-pa
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{mar}{mpa}
+\section{$\Th{PA}$ دے نمونے}
+
+\begin{explain}
+~$\Th{TA}$ دا ہر غیر معیاری نمونہ~$\Th{PA}$ دا وی نمونہ اے۔
+اسیں جاندے آں کہ~$\Th{TA}$ دے، تے ایس لئی~$\Th{PA}$ دے،
+غیر معیاری نمونے موجود نیں۔ ایہ وی جان دے آں کہ ایہناں
+غیر معیاری نمونیاں وچ غیر معیاری عدد، یعنی دائرے دے
+اوہ !!{element}s ہوندے نیں جو سارے معیاری اعداد توں
+پرلے پاسے نیں۔ پر اوہ کس ترتیب وچ نیں؟ اوہ کنے نیں؟
+اسیں ویکھ چکے آں کہ کمزور نظریے~$\Th{Q}$ دے نمونے
+صرف اک غیر معیاری عدد وی رکھ سکدے نیں۔ پر ایہ سادیاں
+!!{structure}s، $\Th{PA}$ یا $\Th{TA}$ دے نمونے نہیں۔
+
+~$\Th{PA}$ یا $\Th{TA}$ دے نمونیاں دی ساخت سمجھن دی
+کُنجی ایہ ویکھنا اے کہ ایہناں نظرییاں وچ کیہڑے حقائق
+!!{derivable} نیں۔ مثال دے طور اُتے خود $\Th{PA}$،
+$\lforall[x][\eq/[x][x']]$ تے
+$\lforall[x][\lforall[y][\eq[(x+y)][(y+x)]]]$
+ثابت کردا اے؛ ایس لئی جن سادیاں ساختاں وچ ایہ
+!!{sentence}s غلط نیں، اوہ~$\Th{PA}$ دے نمونے نہیں ہو سکدیاں۔
+
+من لو~$\Struct{M}$،~$\Th{PA}$ دا نمونہ اے۔ تاں جے
+$\Th{PA} \Proves !A$، $\Sat{M}{!A}$۔ فیر
+$\nszero$ نوں $\Assign{\Obj{0}}{M}$ لئی،
+$\nssucc$ نوں $\Assign{\prime}{M}$ لئی،
+$\nsplus$ نوں $\Assign{+}{M}$ لئی،
+$\nstimes$ نوں $\Assign{\times}{M}$ لئی، تے
+$\nsless$ نوں $\Assign{<}{M}$ لئی ورتیے۔
+ہن ہر !!{sentence}~$!A$، $\nszero$، $\nssucc$،
+$\nsplus$، $\nstimes$ تے $\nsless$ بارے کوئی شرط بیان
+کردا اے، تے جے $\Sat{M}{!A}$ ہووے تاں اوہ شرط پوری
+ہونی چاہیدی اے۔ مثال دے طور اُتے، جے $\Sat{M}{!Q_1}$،
+یعنی
+$\Sat{M}{\lforall[x][\lforall[y][(\eq[x'][y'] \lif \eq[x][y])]]}$،
+تاں $\nssucc$ اک بہ اک (!!{injective}) ہونا چاہیدا اے۔
+\end{explain}
+
+\begin{prop}
+~$\Struct{M}$ وچ $\nsless$ اک سخت خطی ترتیب اے، یعنی ایہناں
+شرطاں نوں پورا کردی اے:
+\begin{enumerate}
+\item $x \nsless x$ کسے وی~$x \in \Domain{M}$ لئی نہیں۔
+\item جے $x \nsless y$ تے $y \nsless z$، تاں $x \nsless z$۔
+\item ہر $x \neq y$ لئی $x \nsless y$ یا $y \nsless x$۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+$\Th{PA}$ ایہ ثابت کردا اے:
+\begin{enumerate}
+\item $\lforall[x][\lnot x < x]$
+\item $\lforall[x][\lforall[y][\lforall[z][((x < y \land y < z) \lif x < z)]]]$
+\item $\lforall[x][\lforall[y][((x < y \lor y < x) \lor \eq[x][y]))]]$
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:M-discrete} $\nszero$،~$\Domain{M}$ دا
+$\nsless$-ترتیب وچ سب توں چھوٹا !!{element} اے۔
+ہر $x$ لئی $x \nsless x^\nssucc$، تے
+$x^\nssucc$ ایہ خاصیت رکھن والا $\nsless$ دے لحاظ نال
+سب توں چھوٹا !!{element} اے۔ ہر غیر صفر $x$ لئی اک منفرد
+$y$ اے جس لئی $y^\nssucc = x$۔
+(اسیں $y$ نوں $x$ دا~$\Struct{M}$ وچ پیشرو آکھدے آں
+تے اوہنوں~$^\nssucc x$ نال ظاہر کردے آں۔)
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+~$\Lang{L_A}$ وچ ایہو جئے !!{sentence}s لبھو جو
+~$\Th{PA}$ وچ !!{derivable} ہون (تے ایس لئی
+~$\Struct{N}$ وچ سچ ہون) تے
+\olref[mod][mar][mpa]{prop:M-discrete} وچ دتیاں
+$\nszero$، $\nssucc$ تے $\nsless$ دیاں خاصیتاں
+لازم کرن۔
+\end{prob}
+
+\begin{prop}
+~$\Struct{M}$ دے سارے معیاری !!{element}s،
+~$\nsless$ دے لحاظ نال، سارے غیر معیاری !!{element}s
+توں چھوٹے نیں۔
+\end{prop}
+
+\begin{proof}
+اسیں $n$ نوں $\Value{\num{n}}{M}$، یعنی~$\Struct{M}$
+دے معیاری !!{element}، لئی مختصر لکھاں گے۔
+خود $\Th{Q}$ ہر~$n \in \Nat$ لئی
+$\lforall[x][(x < \num{n}' \lif (\eq[x][\num{0}] \lor
+  \eq[x][\num{1}] \lor \dots \lor \eq[x][\num{n}]))]$
+ثابت کردا اے۔ کوئی !!{element}s، $\nsless \nszero$
+نہیں۔ سو جے $n$ معیاری تے $x$ غیر معیاری ہووے،
+تاں $x \nsless n$ نہیں ہو سکدا۔ تعریف مطابق غیر
+معیاری عنصر اوہ اے جو $\Value{\num{n}}{M}$ نہیں،
+کسے وی~$n \in \Nat$ لئی؛ ایس لئی $x \neq n$ وی۔
+کیوں جے $\nsless$ خطی ترتیب اے، تاں لازماً
+$n \nsless x$۔
+\end{proof}
+
+\begin{prop}
+ہر غیر معیاری !!{element}~$x$،~$\Domain{M}$ وچ، ایس ذیلی سیٹ
+دا عنصر اے:
+\[
+\dots ^{\nssucc\nssucc\nssucc}x \nsless ^{\nssucc\nssucc}x \nsless
+^{\nssucc}x \nsless x \nsless x^{\nssucc} \nsless x^{\nssucc\nssucc}
+\nsless x^{\nssucc\nssucc\nssucc} \nsless \dots
+\]
+ایس ذیلی سیٹ نوں اسیں $x$ دا \emph{بلاک} آکھدے آں تے
+$[x]$ لکھدے آں۔ ایس دا نہ کوئی سب توں چھوٹا تے نہ کوئی
+سب توں وڈا !!{element} اے۔ ایہ اوہناں
+$y \in \Domain{M}$ دا سیٹ اے جنہاں لئی کوئی معیاری~$n$
+ایہو جیا ہووے کہ $x \nsplus n = y$ یا
+$y \nsplus n = x$۔
+\end{prop}
+
+\begin{proof}
+ایہو جیا سیٹ~$[x]$ ہمیشہ موجود اے، کیوں جے
+ہر غیر معیاری !!{element}~$y$ دا،~$\Domain{M}$ وچ، اک منفرد
+جانشین~$y^\nssucc$ تے اک منفرد پیشرو~$^\nssucc y$
+ہوندا اے۔ اک دوجے دے لگاتار !!{element}s $y$،
+$y^\nssucc$ لئی $y \nsless y^\nssucc$، تے
+$y^\nssucc$، $\nsless$ دے لحاظ نال
+~$\Domain{M}$ دا اوہ سب توں چھوٹا !!{element} اے
+جس توں $y$، $\nsless$ دے لحاظ نال چھوٹا اے۔
+کیوں جے ہمیشہ $^\nssucc y \nsless y$ تے
+$y \nsless y^\nssucc$، ایس لئی $[x]$ دا نہ کوئی
+سب توں چھوٹا تے نہ کوئی سب توں وڈا !!{element} اے۔
+جے $y \in [x]$ تاں $x \in [y]$؛ کیوں جے فیر
+یا $y^{\nssucc\dots\nssucc} = x$ ہووے گا یا
+$x^{\nssucc\dots\nssucc} = y$۔ جے
+$y^{\nssucc\dots\nssucc} = x$ ہووے (جتھے
+$n$ واری $\nssucc$ لگیا اے)، تاں
+$y \nsplus n = x$، تے الٹ رخ وی؛ کیوں جے
+$\Th{PA} \Proves \lforall[x][\eq[x^{\prime\dots\prime}][(x +
+    \num{n})]]$ (جے $n$، $\prime$ دیاں وارییاں دی تعداد اے)۔
+\end{proof}
+
+\begin{prop}
+جے $[x] \neq [y]$ تے $x \nsless y$، تاں ہر
+$u \in [x]$ تے ہر $v \in [y]$ لئی $u \nsless v$۔
+\end{prop}
+
+\begin{proof}
+ایہ گل نوٹ کرو کہ
+$\Th{PA} \Proves \lforall[x][\lforall[y][(x < y \lif (x' < y
+    \lor x' = y))]]$۔ ایس لئی جے $u \nsless v$
+ہووے، تاں $u \nsplus n^\nssucc \nsless v$
+وی اے، ہر~$n$ لئی، جدوں $[u] \neq [v]$ ہووے۔
+
+ہر $u \in [x]$، $\nsless y$ اے: مفروضے مطابق
+$x \nsless y$۔ جے $u \nsless x$، تاں تعدیت نال
+$u \nsless y$۔ تے جے $x \nsless u$ پر
+$u \in [x]$، تاں
+$u = x\nsplus n^\nssucc$ کسے~$n$ لئی؛ ایس لئی ہُنھی ثابت کیتی
+گل نال $u \nsless y$۔
+
+ہن من لو کہ $v \in [y]$، $\nsless y$ اے؛ یعنی
+$v \nsplus m^\nssucc = y$ کسے معیاری~$m$ لئی۔
+ایس توں $v \nsless x$ ممکن نہیں، ورنہ
+$y = v \nsplus m^\nssucc \nsless x$ ہوندا۔
+صاف اے کہ $x \neq v$ وی، ورنہ
+$x \nsplus m^\nssucc = v \nsplus m^\nssucc = y$
+ہوندا تے $[x] = [y]$ ملدا۔ سو $x \nsless v$۔
+فیر $x \nsplus n^\nssucc \nsless v$ ہر~$n$ لئی
+وی اے۔ ایس لئی جے $x \nsless u$ تے
+$u \in [x]$، تاں $u \nsless v$۔ جے
+$u \nsless x$، تاں تعدیت نال $u \nsless v$۔
+
+آخر وچ، جے $y \nsless v$، تاں $u \nsless v$،
+کیوں جے جیویں اسیں دکھایا اے $u \nsless y$ تے
+$y \nsless v$۔
+\end{proof}
+
+\begin{cor}
+جے $[x] \neq [y]$، تاں $[x] \cap [y] = \emptyset$۔
+\end{cor}
+
+\begin{proof}
+من لو $z \in [x]$ تے $x \nsless y$۔ تاں
+$z \nsless u$ ہر $u \in [y]$ لئی۔ جے
+$z \in [y]$ وی ہووے، تاں $z \nsless z$ ملدا۔
+جے $y \nsless x$ ہووے تاں وی ایہو دلیل اے۔
+\end{proof}
+
+\begin{explain}
+ایس دا مطلب اے کہ بلاکاں نوں خود ایس طرح ترتیب دتی جا سکدی
+اے جو $\nsless$ دے مطابق ہووے: دو وکھرے بلاکاں لئی $[x] \nsless [y]$
+اوہدوں تے صرف اوہدوں جدوں $x \nsless y$؛ یا ایس دے
+برابر، جدوں $u \nsless v$ ہووے، کسے وی
+$u \in [x]$ تے $v \in [y]$ لئی۔
+صاف اے کہ معیاری بلاک $[0]$
+سب توں چھوٹا بلاک اے۔ اوہ کسے غیر معیاری بلاک نال
+نہیں ملدا، تے کوئی دو غیر معیاری بلاک وی آپس وچ
+نہیں ملدے۔ خاص طور اُتے جانشین یا پیشرو وار وار
+لا کے دوجے بلاک تک نہیں پہنچ سکدے۔
+\end{explain}
+
+\begin{prop}
+جے $x$ تے $y$ غیر معیاری ہون، تاں
+$x \nsless x \nsplus y$ تے $x
+\nsplus y \notin [x]$۔
+\end{prop}
+
+\begin{proof}
+جے $y$ غیر معیاری اے تاں $y \neq \nszero$۔
+$\Th{PA} \Proves
+\lforall[x][(y \neq \Obj{0} \lif x < (x+y))]$۔
+ہن من لو $x \nsplus y \in [x]$۔ کیوں جے
+$x \nsless x \nsplus y$، ایس لئی
+$x \nsplus n^\nssucc = x \nsplus y$ ہوندا۔
+پر $\Th{PA} \Proves
+\lforall[x][\lforall[y][\lforall[z][(\eq[(x+y)][(x+z)] \lif y = z)]]]$
+(جمع دی سانجھی دلیل کڈھن دا قانون)۔ ایس دا مطلب اے کہ
+$y = n^\nssucc$ کسے معیاری~$n$ لئی؛ پر $y$ نوں
+غیر معیاری منیا گیا سی۔
+\end{proof}
+
+\begin{prop}
+کوئی سب توں چھوٹا غیر معیاری بلاک نہیں۔
+\end{prop}
+
+\begin{proof}
+$\Th{PA} \Proves \lforall[x][\lexists[y][(\eq[(y+y)][x] \lor
+      \eq[(y+y)'][x])]]$؛ یعنی ہر $x$ نوں~$2$ نال
+ونڈیا جا سکدا اے (ممکن اے باقی~$1$ بچ جائے)۔
+جے $x$ غیر معیاری ہووے تاں $y$ وی غیر معیاری اے۔
+پچھلے ثابت کیتے بیان مطابق $y \nsless y \nsplus y$ تے
+$y \nsplus y \notin [y]$۔ تاں
+$y \nsless (y \nsplus y)^\nssucc$ تے
+$(y \nsplus y)^\nssucc \notin [y]$ وی۔
+پر $x = y \nsplus y$ یا
+$x = (y \nsplus y)^\nssucc$، سو
+$y \nsless x$ تے $y \notin [x]$۔
+\end{proof}
+
+\begin{prop}
+غیر معیاری نمونے وچ کوئی سب توں وڈا بلاک نہیں۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\begin{prob}
+دکھاؤ کہ~$\Th{PA}$ دے غیر معیاری نمونے وچ
+کوئی سب توں وڈا بلاک نہیں۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:blocks-dense}
+بلاکاں دی ترتیب گھنی اے۔ یعنی جے $x \nsless y$
+تے $[x] \neq [y]$، تاں اوہناں دوناں توں وکھرا
+کوئی بلاک $[z]$ اوہناں دے وچکار اے۔
+\end{prop}
+
+\begin{proof}
+من لو $x \nsless y$۔ پہلاں وانگ
+$x \nsplus y$ نوں دو نال ونڈیا جا سکدا اے
+(ممکن اے کجھ باقی بچ جائے): کوئی
+$z \in \Domain{M}$ ایہو جیا اے کہ یا
+$x \oplus y = z \oplus z$، یا
+$x \oplus y = (z \oplus
+z)^\nssucc$۔ عنصر $z$، $x$ تے~$y$ دا
+“درمیانی قدر” اے، تے $x \nsless z$ تے
+$z \nsless y$۔
+\end{proof}
+
+\begin{prob}
+\olref[mod][mar][mpa]{prop:blocks-dense} دا تفصیلی
+ثبوت لکھو۔ کیہڑا !!{sentence} $\Th{PA}$ نوں
+!!{derive} کرنا پئے گا تاں جو~$z$ دی موجودگی
+یقینی ہووے؟ $x \nsless z$ تے $z \nsless y$ کیوں،
+تے $[x] \neq [z]$ تے $[z] \neq [y]$ کیوں؟
+\end{prob}
+
+\begin{explain}
+قابلِ شمار غیر معیاری نمونے وچ، غیر معیاری بلاک ناطق اعداد وانگ ترتیب وچ
+نیں: اوہ !!a{denumerable}، سِراں توں خالی،
+گھنی خطی ترتیب بناؤندے نیں۔ ایہ دکھایا جا سکدا اے کہ
+ایہو جیہیاں کوئی دو !!{denumerable} ترتیباں
+ہم شکل ہوندیاں نیں۔ ایس توں نتیجہ نکلدا اے کہ
+سچے حساب دے کسے وی دو !!{enumerable} غیر معیاری
+نمونیاں $\Struct{M}_1$ تے $\Struct{M_2}$ دے،
+صرف $<$ تے $=$ والی زبان تک گھٹائے روپ ہم شکل
+ہوندے نیں۔ واقعی ہم شکلی $h$ نوں ایویں متعین
+کیتا جا سکدا اے: $\Struct{M_1}$ تے
+$\Struct{M_2}$ دے معیاری حصے، معیاری نمونے
+$\Struct{N}$ نال ہم شکل نیں، ایس لئی آپس وچ
+وی ہم شکل نیں۔ غیر معیاری حصے بناؤن والے بلاک
+خود ناطق اعداد وانگ مرتب نیں، تے ایس لئی
+ہم شکل نیں؛ بلاکاں دی ہم شکلی نوں ہر بلاک
+\emph{دے اندر} وی ہم شکلی تک ایویں ودھایا جا
+سکدا اے کہ ہر بلاک وچ من چاہے عنصراں نوں
+ملایا جائے، تے فیر $x$ دے~$\Struct{M_1}$ وچ
+جانشین دی تصویر، $x$ دی تصویر
+دا~$\Struct{M_2}$ وچ جانشین رکھیا جائے۔
+دھیان دیو کہ ایس توں ایہ \emph{نہیں} نکلدا کہ
+$\mathfrak{M}_1$ تے $\mathfrak{M}_2$ حساب
+دی پوری زبان وچ ہم شکل نیں (اصل وچ ہم شکلی
+ہمیشہ کسے !!a{language} دے لحاظ نال ہوندی اے)؛
+کیوں جے $\Domain{M_1}$ تے
+$\Domain{M_2}$ اُتے جمع تے ضرب متعین کرن
+دے ایسے طریقے وی نیں جو ہم شکل نہیں۔
+(ایہ واٹ دے اک مشہور قضیے توں وی نکلدا اے
+کہ مکمل نظریے دے قابل شمار نمونیاں دی تعداد~2
+نہیں ہو سکدی۔)
+\end{explain}
+\end{document}

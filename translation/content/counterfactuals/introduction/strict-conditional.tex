@@ -1,0 +1,105 @@
+% Part: counterfactuals
+% Chapter: introduction
+% Section: strict-conditional
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{int}{str}
+
+\olsection{سخت شرطیہ}
+
+لوئس نے \emph{سخت شرطیہ}~$\strictif$ پیش کیتا تے دلیل دتی کہ استلزام
+ایہدے نال میل کھاندا اے، مادی شرطیے نال نہیں۔ سچائی دی امکانی منطق وچ
+$!A \strictif !B$ نوں $\Box(!A \lif !B)$ دے طور اُتے تعریف کر سکدے آں۔
+سو سخت شرطیہ (کسے جہان اُتے) اُدوں تے صرف اُدوں سچ اے جدوں اوہدے نال
+ملدا مادی شرطیہ لازمی اے۔
+
+مادی شرطیے دے معمّیاں دے لحاظ نال سخت شرطیہ کیویں چلدا اے؟ جھوٹے مقدم
+والا سخت شرطیہ تے سچی تالی والا سخت شرطیہ، دونیں سچ وی ہو سکدے نیں
+تے جھوٹ وی۔ نالے $(!A \strictif !B) \lor (!B \strictif !A)$ معتبر نہیں۔
+سخت شرطیہ $!A \strictif !B$، $\lnot !A \lor !B$ دے برابر وی نہیں،
+سو ایہ صداقتی-فنکشنی نہیں۔
+
+ساڈے کول ایہ نیں:
+\begin{align}
+  !A \strictif !B & \Entails \lnot !A \lor !B
+  \text{ پر }\\
+  \lnot !A \lor !B & \Entails/ !A \strictif !B\\
+  !B & \Entails/ !A \strictif !B\\
+  \lnot !A & \Entails/ !A \strictif !B\\
+  \lnot(!A \lif !B) & \Entails/ !A \land \lnot !B
+  \text{ پر }\\
+  !A \land \lnot !B & \Entails \lnot(!A \strictif !B)
+  \intertext{فیر وی سخت شرطیے لئی اثباتِ مقدم دا قاعدہ چلدا اے:}
+  !A, !A \strictif !B & \Entails !B
+  \intertext{سخت شرطیاں دیاں تالیاں اکٹھیاں ہو سکدیاں نیں:}
+  !A \strictif !B,  !A \strictif !C & \Entails !A \strictif (!B \land !C)
+  \intertext{سخت شرطیے لئی مقدم نوں مضبوط کرن دا قاعدہ چلدا اے:}
+  !A \strictif !B & \Entails (!A \land !C) \strictif !B
+  \intertext{سخت شرطیہ متعدی وی اے:}
+  !A \strictif !B, !B \strictif !C & \Entails !A \strictif !C
+  \intertext{آخر وچ، سخت شرطیہ اپنے عکسِ نقیض دے ہم ارز اے:}
+  !A \strictif !B & \Entails \lnot !B \strictif \lnot !A\\
+  \lnot !B \strictif \lnot !A & \Entails !A \strictif !B
+\end{align}
+
+\begin{prob}
+  استلزام دے اوہناں تعلقاں لئی \Log{S5} وچ ردّی مثالاں دیو جیہڑے سخت
+  شرطیے لئی قائم نہیں ہوندے، یعنی ہِیٹھلیاں لئی:
+  \begin{enumerate}
+  \item $\lnot p \Entails/ \Box(p \lif q)$
+  \item $q \Entails/ \Box(p \lif q)$
+  \item $\lnot\Box(p \lif q) \Entails/ p \land \lnot q$
+  \item $\Entails/ \Box(p \lif q) \lor \Box(q \lif p)$
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+  ہِیٹھلیاں گلاں دے \Log{S5} وچ ثبوت دے کے وکھاؤ کہ معتبر استلزام دے
+  تعلق سخت شرطیے لئی قائم نیں:
+  \begin{enumerate}
+  \item  $\Box(!A \lif !B) \Entails \lnot !A \lor !B$
+  \item $!A \land \lnot !B \Entails \lnot\Box(!A \lif !B)$
+  \item $!A, \Box(!A \lif !B) \Entails !B$
+  \item $\Box(!A \lif !B), \Box(!A \lif !C) \Entails \Box(!A \lif (!B
+    \land !C))$
+  \item $\Box(!A \lif !B) \Entails \Box((!A \land !C) \lif !B)$
+  \item $\Box(!A \lif !B), \Box(!B \lif !C) \Entails \Box(!A
+    \lif !C)$
+  \item $\Box(!A \lif !B) \Entails \Box(\lnot !B \lif \lnot !A)$
+  \item $\Box(\lnot !B \lif \lnot !A) \Entails \Box(!A \lif !B)$
+  \end{enumerate}
+\end{prob}
+
+پر سخت شرطیے دے اپنے وی ’معمّے‘ نیں۔ جیویں جھوٹے مقدم یا سچی تالی
+والا مادی شرطیہ سچ ہوندا اے، اویویں \emph{لازمی طور اُتے} جھوٹے مقدم یا
+لازمی طور اُتے سچی تالی والا سخت شرطیہ سچ ہوندا اے۔ نالے ہر سچا سخت شرطیہ
+لازمی طور اُتے سچ اے، تے ہر جھوٹا سخت شرطیہ لازمی طور اُتے جھوٹ۔
+دوجے لفظاں وچ،
+\begin{align}
+  \Box \lnot !A & \Entails !A \strictif !B\\
+  \Box !B & \Entails !A \strictif !B\\
+  !A \strictif !B& \Entails \Box(!A \strictif !B)\\
+  \lnot(!A \strictif !B) & \Entails \Box\lnot(!A \strictif !B)
+\end{align}
+جے $\strictif$ دا مطلب ’لازم کردا اے‘ لئیے، تاں ایہ اوکڑاں نہیں۔
+آخر منطقی استلزام دے تعلق ریاضیاتی حقیقتاں نیں، ایس لئی اوہ اتفاقی نہیں ہو سکدے۔
+پر جے اسیں $\strictif$ نوں ’جے \dots تاں \dots‘ دا مطلب دین والا منطقی
+رابطہ بنائیے، تاں ایہناں نال اوکڑ پَندی اے، خاص کر کے آخری دوناں نال۔
+کیوں جے ’جے \dots تاں \dots‘ والے کجھ بیان اتفاقی طور اُتے سچ یا اتفاقی
+طور اُتے جھوٹ ہوندے نیں۔ اصل وچ عام طور اُتے اوہ نہ لازمی ہوندے نیں،
+نہ ناممکن۔
+
+\begin{prob}
+  ہِیٹھلیاں گلاں دے \Log{S5} وچ ثبوت دیو:
+  \begin{enumerate}
+    \item  $\Box \lnot !A \Entails !A \strictif !B$
+    \item $!A \strictif !B \Entails \Box(!A \strictif !B)$
+    \item $\lnot(!A \strictif !B)  \Entails \Box\lnot(!A \strictif !B)$
+  \end{enumerate}
+  ایس لئی $\strictif$ دی تعریف ورتو۔
+\end{prob}
+
+\end{document}

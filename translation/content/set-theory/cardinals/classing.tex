@@ -1,0 +1,129 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{cardinals}{classing}
+\olsection{محدود، \usetoken{S}{enumerable}، \usetoken{S}{nonenumerable}}
+
+کارڈینل عدداں دی جان پہچان پچھوں اوہناں دیاں وکھ وکھ قسماں دی تھوڑی گل کرنی چنگی اے، خاص کر کے محدود، !!{enumerable} تے !!{nonenumerable} کارڈینل عدداں دی۔
+
+ساڈے پہلے دو نتیجیاں توں نکلدا اے کہ محدود کارڈینل عدد این ٹھیک محدود ترتیبی عدد نیں۔ ایہناں نوں اسیں \olref[z][infinity-again]{defnomega} وچ اپنے \emph{قدرتی عدد} وجوں تعریف کیتا سی۔
+
+\begin{prop}\ollabel{finitecardisoequal}
+$n, m \in \omega$ ہون۔ تاں $n = m$ اُدوں تے صرف اُدوں جدوں $\cardeq{n}{m}$۔
+\end{prop}
+
+\begin{proof}
+\emph{کھبّے توں سجّے ول} صاف اے۔ \emph{سجّے توں کھبّے ول} ثابت کرن لئی منّ لو $\cardeq{n}{m}$، بھاویں $n \neq m$۔ تِن صورتاں دے اصول مطابق یا $n
+\in m$ یا $m \in n$۔ عمومیت گنوائے بناں منّ لو $n \in m$۔ تاں $n \subsetneq m$ تے اک !!a{bijection} $f \colon m \to n$ اے۔ سو $m$ ڈیڈیکنڈ لامتناہی اے، جیہڑی گل \olref[z][infinity-again]{naturalnumbersarentinfinite} نال ٹکراؤندی اے۔
+\end{proof}
+
+\begin{cor}\ollabel{naturalsarecardinals}
+جے $n \in \omega$، تاں $n$ اک کارڈینل عدد اے۔
+\end{cor}
+
+\begin{proof}
+سِدھا ای نکلدا اے۔
+\end{proof}
+\noindent
+ایہ وی نکلدا اے کہ کسے کارڈینل عدد نوں «محدود» یا «لامتناہی» آکھن دے کئی واجب معنی آپس وچ ملدے نیں۔
+\begin{thm}\ollabel{generalinfinitycharacter}کسے وی سیٹ $A$ لئی ہِیٹھلیاں گلاں برابر نیں:
+\begin{enumerate}
+	\item\ollabel{card:notinomega} $\card{A} \notin \omega$، یعنی
+	$A$ قدرتی عدد نہیں۔
+	\item\ollabel{card:omegaplus} $\omega \leq \card{A}$۔
+	\item\ollabel{card:infinite} $A$ ڈیڈیکنڈ لامتناہی اے۔
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\olref[ord-arithmetic][using-addition]{ordinfinitycharacter}،
+\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} تے
+\olref{naturalsarecardinals} توں۔
+\end{proof}
+
+ایس توں سانوں اوہناں کجھ خیالاں دی ہِیٹھلی \emph{تعریف} دین دا جواز ملدا اے، جیہڑے \olref[sfr][][]{part} وچ اسیں ذرا غیر رسمی طور اُتے ورتے سن۔
+
+\begin{defn}\ollabel{defnfinite}
+اسیں آکھدے آں کہ $A$ \emph{محدود} اے اُدوں تے صرف اُدوں جدوں $\card{A}$ قدرتی عدد اے، یعنی $\card{A} \in \omega$۔ ہور صورت وچ اسیں آکھدے آں کہ $A$ \emph{لامتناہی} اے۔
+\end{defn}
+\noindent
+پر دھیان دیو کہ ایہ تعریف $\ZFC$ دے پس منظر وچ دتی اے۔ آخر سانوں ایہ ضمانت دین لئی حُسنِ ترتیب دا مسلّمہ چاہیدا سی کہ ہر سیٹ دی کارڈینیلٹی اے۔ تے حُسنِ ترتیب دے مسلّمے توں بناں واقعی کوئی ایہو جیہا سیٹ ہو سکدا اے جیہڑا نہ محدود ہووے نہ ڈیڈیکنڈ لامتناہی۔ ایس طرح دے سوال ول اسیں \olref[choice][]{chap} وچ مُڑاں گے۔ ہن لئی اسیں حُسنِ ترتیب دا مسلّمہ ورتدے رہندے آں۔
+
+ہُن اسیں محدود کارڈینل عدداں توں لامتناہی کارڈینل عدداں ول آؤندے آں۔ دو بنیادی گلاں ایہ نیں۔
+
+\begin{cor}\ollabel{omegaisacardinal}
+$\omega$ سبھ توں چھوٹا لامتناہی کارڈینل عدد اے۔
+\end{cor}
+
+\begin{proof}
+$\omega$ کارڈینل عدد اے، کیوں جے $\omega$ ڈیڈیکنڈ لامتناہی اے تے جے $\cardeq{\omega}{n}$ کسے $n \in \omega$ لئی، تاں $n$ ڈیڈیکنڈ لامتناہی ہووے گا، جیہڑی گل \olref[z][infinity-again]{naturalnumbersarentinfinite} نال ٹکراؤندی اے۔ ہُن $\omega$ تعریف مطابق سبھ توں چھوٹا لامتناہی کارڈینل عدد اے۔
+\end{proof}
+
+\begin{cor}
+ہر لامتناہی کارڈینل عدد حدّی ترتیبی عدد اے۔
+\end{cor}
+
+\begin{proof}
+$\alpha$ اک لامتناہی جانشین ترتیبی عدد ہووے، سو $\alpha = \beta
+\ordplus 1$ کسے $\beta$ لئی۔ \olref{finitecardisoequal} مطابق $\beta$ وی لامتناہی اے، سو $\cardeq{\beta}{\beta \ordplus 1}$، \olref[ord-arithmetic][using-addition]{ordinfinitycharacter} مطابق۔ ہُن $\card{\beta} = \card{\beta\ordplus 1} = \card{\alpha}$، \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} مطابق، سو $\alpha \neq \card{\alpha}$۔
+\end{proof}
+
+پہلاں ای \olref[sfr][siz][enm-alt]{defn:enumerable} وچ اسیں دَسیا سی کہ اسیں !!{enumerable} تے !!{nonenumerable} لامتناہی سیٹاں وچ فرق کر سکدے آں۔ ایس تعریف توں سہج ای ہِیٹھلی گل نکلدی اے۔
+
+\begin{prop}
+$A$ !!{enumerable} اے اُدوں تے صرف اُدوں جدوں $\card{A} \leq \omega$، تے $A$ !!{nonenumerable} اے اُدوں تے صرف اُدوں جدوں $\omega < \card{A}$۔
+\end{prop}
+
+\begin{proof}
+تِن صورتاں دے اصول مطابق دوہاں دعویاں دا مطلب اکّو اے۔ سو ایہ ثابت کرنا کافی اے کہ $A$ !!{enumerable} اے اُدوں تے صرف اُدوں جدوں $\card{A} \leq \omega$۔ \emph{سجّے توں کھبّے ول}، جے $\card{A} \leq \omega$، تاں $\cardle{A}{\omega}$، \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} تے \olref{omegaisacardinal} مطابق۔ \emph{کھبّے توں سجّے ول}، منّ لو $A$ !!{enumerable} اے۔ تاں \olref[sfr][siz][enm-alt]{defn:enumerable} مطابق تِن صورتاں ممکن نیں:
+\begin{enumerate}
+	\item جے $A = \emptyset$، تاں $\card{A} = 0 \in \omega$، \olref{naturalsarecardinals} تے \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} مطابق۔
+	\item جے $\cardeq{n}{A}$، تاں $\card{A} = n \in \omega$، \olref{naturalsarecardinals} تے \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} مطابق۔
+	\item جے $\cardeq{\omega}{A}$، تاں $\card{A} = \omega$، \olref{omegaisacardinal} مطابق۔
+\end{enumerate}
+سو ساریاں صورتاں وچ $\card{A} \leq \omega$۔
+\end{proof}
+\noindent
+واقعی $\omega$ دی اک خاص تھاں اے۔ گنتی وار فہرست بنن جوگ ترتیبی عدد کئی نیں، پر:
+
+\begin{cor}
+$\omega$ اکّو اک !!{enumerable} لامتناہی کارڈینل عدد اے۔
+\end{cor}
+
+\begin{proof}
+$\cardfont{a}$ اک !!a{enumerable} لامتناہی کارڈینل عدد ہووے۔ کیوں جے $\cardfont{a}$ لامتناہی اے، $\omega \leq \cardfont{a}$۔ کیوں جے $\cardfont{a}$ اک !!a{enumerable} کارڈینل عدد اے، $\cardfont{a} =
+\card{\cardfont{a}} \leq \omega$۔ سو $\cardfont{a} = \omega$، تِن صورتاں دے اصول مطابق۔ \end{proof}
+
+بے شک کارڈینل عدد لامتناہی گنتی وچ نیں۔ سو اسیں پُچھ سکدے آں، \emph{کارڈینل عدد کِنّے نیں؟} ہِیٹھلے نتیجے وکھاندے نیں کہ شاید سانوں ایس سوال بارے فیر سوچنا چاہیدا اے۔
+
+\begin{prop}\ollabel{unioncardinalscardinal}
+جے $X$ دا ہر رکن اک کارڈینل عدد اے، تاں $\bigcup X$ اک کارڈینل عدد اے۔
+\end{prop}
+
+\begin{proof}
+ایہ جانچنا سوکھا اے کہ $\bigcup X$ اک ترتیبی عدد اے۔ $\alpha \in
+\bigcup X$ اک ترتیبی عدد ہووے۔ تاں $\alpha \in \cardfont{b} \in X$ کسے کارڈینل عدد $\cardfont{b}$ لئی۔ کیوں جے $\cardfont{b}$ اک کارڈینل عدد اے، $\cardless{\alpha}{\cardfont{b}}$۔ کیوں جے $\cardfont{b} \subseteq
+\bigcup X$، سانوں $\cardle{\cardfont{b}}{\bigcup X}$ ملدا اے، تے ایس لئی $\cardneq{\alpha}{\bigcup X}$۔ ایس گل نوں عام کریے تاں $\bigcup X$ اک کارڈینل عدد اے۔
+\end{proof}
+
+\begin{thm}\ollabel{lem:NoLargestCardinal}
+کوئی سبھ توں وڈا کارڈینل عدد نہیں۔
+\end{thm}
+
+\begin{proof}
+کسے وی کارڈینل عدد $\cardfont{a}$ لئی، کانتور دے قضیے (\olref[sfr][siz][car]{thm:cantor}) تے \olref[cardinals][cardsasords]{lem:CardinalsExist} توں لازم آؤندا اے کہ $\cardfont{a} < \card{\Pow{\cardfont{a}}}$۔
+\end{proof}
+
+\begin{thm}
+سارے کارڈینل عدداں دا سیٹ موجود نہیں۔
+\end{thm}
+
+\begin{proof}
+ٹکراؤ کڈھن لئی منّ لو $C = \Setabs{\cardfont{a}}{\cardfont{a} \text{
+اک کارڈینل عدد اے}}$۔ ہُن $\bigcup C$ اک کارڈینل عدد اے، \olref{unioncardinalscardinal} مطابق۔ سو \olref{lem:NoLargestCardinal} مطابق اک کارڈینل عدد $\cardfont{b} > \bigcup C$ اے۔ تعریف مطابق $\cardfont{b} \in C$، سو $\cardfont{b} \subseteq \bigcup{C}$، ایس لئی $\cardfont{b} \leq \bigcup C$۔ ایہ ٹکراؤ اے۔
+\end{proof}
+
+ایہدا رسل دے پیراڈوکس تے بورالی فورتی دے پیراڈوکس، دوہاں نال مقابلہ کرو۔
+
+\end{document}

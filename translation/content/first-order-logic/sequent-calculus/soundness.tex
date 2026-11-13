@@ -1,0 +1,392 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: soundness.tex
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{sou}}
+      {\olfileid{pl}{seq}{sou}}
+
+\olsection{صحت مندی (Soundness)}
+
+\begin{explain}
+!!^a{derivation} نظام، جیویں سیکوئنٹ حساب (sequent calculus)، 
+\emph{صحت مند (sound)} اے جے اوہ اوہ گلاں !!{derive} نہیں کر سکدا جیہڑیاں
+اصل وچ قائم نہیں۔ ایس لئی صحت مندی، !!{derivation} نظاماں دی اک طرح دی
+ضمانت شدہ حفاظتی خاصیت (guaranteed safety property) اے۔ جیہڑی
+ثبوتی-نظریاتی خاصیت دی گل ہو رہی ہووے، اوہدے مطابق اسیں مثال لئی ایہ جاننا
+چاہندے آں کہ
+\begin{enumerate}
+\item ہر !!{derivable}~$!A$، \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے؛
+\item جے !!a{sentence} کجھ ہور جملیاں توں !!{derivable} اے، تاں اوہ اوہناں دا
+  منطقی نتیجہ وی اے؛
+\item جے !!{sentence}s دا کوئی سیٹ متضاد اے، تاں اوہ پورا ہون جوگ نہیں۔
+\end{enumerate}
+ایہ !!a{derivation} نظام دیاں اہم خاصیتاں نیں۔ جے ایہناں وچوں کوئی وی
+قائم نہ ہووے، تاں !!{derivation} نظام ناقص اے---اوہ لوڑ توں ودھ
+!!{derive} کرے گا۔ ایس کرکے !!{derivation} نظام دی صحت مندی قائم کرنا
+انتہائی اہم اے۔
+
+چونکہ ایہ ساریاں ثبوتی-نظریاتی خاصیتاں سیکوئنٹ حساب وچ کجھ سیکوئنٹاں دی
+!!{derivability} راہیں تعریف کیتیاں گئیاں نیں، ایس لئی اُپرلے (1)--(3)
+ثابت کرن لئی !!{derivable} سیکوئنٹاں دیاں معنوی خاصیتاں بارے کجھ ثابت
+کرنا پیندا اے۔ اسیں پہلاں ایہ تعریف کراں گے کہ کسے سیکوئنٹ دے
+\emph{معتبر (valid)} ہون دا کی مطلب اے، تے فیر وکھاواں گے کہ ہر
+!!{derivable} سیکوئنٹ معتبر اے۔ فیر (1)--(3) ایس نتیجے توں ذیلی قضیاں
+دے طور تے نکل آون گے۔
+\end{explain}
+
+\begin{defn}
+\iftag{FOL}{!!^a{structure}~$\Struct
+  M$}{!!^a{valuation}~$\pAssign{v}$} سیکوئنٹ
+$\Gamma \Sequent \Delta$ نوں \emph{پورا کردا اے (satisfies)} اُدوں تے صرف اُدوں جدوں یا تاں
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ کسے $!A \in \Gamma$ لئی ہووے یا
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ کسے $!A \in \Delta$ لئی ہووے۔
+
+کوئی سیکوئنٹ \emph{معتبر (valid)} اے اُدوں تے صرف اُدوں جدوں ہر
+\iftag{FOL}{!!{structure}~$\Struct M$}{!!{valuation}~$\pAssign{v}$}
+اوہنوں پورا کردا ہووے۔
+\end{defn}
+
+\begin{thm}[صحت مندی (Soundness)]
+\ollabel{thm:sequent-soundness} جے $\Log{LK}$، $\Theta
+\Sequent \Xi$ نوں !!{derive}s کردا اے، تاں $\Theta \Sequent \Xi$ معتبر اے۔
+\end{thm}
+
+\begin{proof}
+$\pi$، $\Theta \Sequent \Xi$ دی !!a{derivation} ہووے۔ اسیں استنباطاں دی
+گنتی~$n$ اُتے استقرا کردے آں، جیہڑی~$\pi$ وچ اے۔
+
+جے استنباطاں دی گنتی~$0$ اے، تاں~$\pi$ صرف اک ابتدائی سیکوئنٹ اُتے مشتمل
+اے۔ ہر ابتدائی سیکوئنٹ $!A \Sequent !A$ ظاہر اے معتبر اے، کیوں جے ہر
+\iftag{FOL}{$\Struct M$}{$\pAssign{v}$} لئی یا تاں
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ یا
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
+
+جے استنباطاں دی گنتی~0 توں ودھ اے، تاں اسیں سب توں ہِٹھلے استنباط دی
+قسم مطابق صورتاں وکھ کردے آں۔ استقرائی مفروضے کرکے اسیں من سکدے آں کہ
+اوس استنباط دے مقدمے معتبر نیں، کیوں جے کسے وی مقدمے دی !!{derivation}
+وچ استنباطاں دی گنتی~$n$ توں گھٹ اے۔
+
+پہلاں اسیں صرف اک مقدمے والے ممکن استنباطاں اُتے غور کردے آں۔
+\begin{enumerate}
+\item آخرلا استنباط کمزور کرنا (weakening) اے۔ فیر $\Theta \Sequent \Xi$
+  یا تاں $!A, \Gamma \Sequent \Delta$ اے (جے آخرلا استنباط
+  \LeftR{\Weakening} اے) یا $\Gamma \Sequent \Delta, !A$ اے (جے اوہ
+  \RightR{\Weakening} اے)، تے !!{derivation} ایہناں وچوں کسے اک اُتے
+  ختم ہُندی اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\Weakening}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof\qquad\bottomAlignProof
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\RightR{\Weakening}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A$
+  \end{prooftree}
+  استقرائی مفروضے مطابق $\Gamma \Sequent \Delta$ معتبر اے، یعنی ہر
+  \iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+  لئی یا تاں کوئی $!C \in \Gamma$ اے جیہدے لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$، یا کوئی $!C \in
+  \Delta$ اے جیہدے لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔
+  
+  جے $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے $!C \in \Gamma$ لئی
+  ہووے، تاں $!C \in \Theta$ وی اے: کھبے کمزور کرنے دے قاعدے وچ $\Theta = !A, \Gamma$،
+  تے سجے کمزور کرنے دے قاعدے وچ نتیجے دا کھبا پاسا مقدمے دے کھبے پاسے
+  ورگا ای رہندا اے۔ دوناں صورتاں وچ مقدمے دے کھبے پاسے دا ہر فارمولا
+  نتیجے دے کھبے پاسے وچ رہندا اے۔ سو
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے $!C \in \Theta$ لئی اے۔
+  ایسے طرح، جے $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in
+  \Delta$ لئی اے، تاں $!C \in \Xi$ ہون کرکے
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Xi$ لئی اے۔ سو
+  $\Theta \Sequent \Xi$ معتبر اے۔
+\item آخرلا استنباط \LeftR{\lnot} اے۔ فیر آخرلے استنباط دا مقدمہ
+  $\Gamma \Sequent \Delta, !A$ تے نتیجہ $\lnot !A, \Gamma \Sequent
+  \Delta$ اے، یعنی !!{derivation} دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, \Gamma \fCenter \Delta$
+  \end{prooftree}
+  تے $\Theta = \lnot !A, \Gamma$، جدکہ $\Xi = \Delta$۔
+
+  استقرائی مفروضہ سانوں دَسدا اے کہ $\Gamma \Sequent \Delta, !A$
+  معتبر اے، یعنی ہر \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} لئی یا
+  (a) کسے $!C \in \Gamma$ لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$، یا (b) کسے $!C \in
+  \Delta$ لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$، یا (c)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ اسیں وکھانا چاہندے آں کہ
+  $\Theta \Sequent \Xi$ وی معتبر اے۔ من لو
+  \iftag{FOL}{$\Struct{M}$ اک !!a{structure} اے}{$\pAssign{v}$ اک
+    !!a{valuation} اے}۔ جے (a) قائم اے، تاں کوئی $!C \in \Gamma$ اے
+  جیہدے لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$، پر $!C \in
+  \Theta$ وی اے۔ جے (b) قائم اے، تاں کوئی $!C \in \Delta$ اے جیہدے
+  لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$، پر $!C \in \Xi$ وی اے۔
+  آخر وچ، جے $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$، تاں
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lnot !A}$۔ چونکہ $\lnot !A \in
+  \Theta$، ایس لئی کوئی $!C \in \Theta$ اے جیہدے لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ سو $\Theta
+  \Sequent \Xi$ معتبر اے۔
+\item آخرلا استنباط \RightR{\lnot} اے: مشق۔
+\item آخرلا استنباط \LeftR{\land} اے۔ ایس دے دو روپ نیں: $!A \land !B$
+  مقدمے دے کھبے پاسے موجود $!A$ یا $!B$ توں کڈھیا جا سکدا اے۔
+  پہلی صورت وچ~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+  \end{prooftree}
+  تے $\Theta = !A \land !B, \Gamma$، جدکہ $\Xi = \Delta$۔ من لو
+  \iftag{FOL}{!!a{structure}~$\Struct
+    M$}{!!a{valuation}~$\pAssign{v}$}۔ استقرائی مفروضے مطابق
+  $!A, \Gamma \Sequent \Delta$ معتبر اے، سو یا (a)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے $!C \in \Gamma$ لئی، یا
+  (c)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت (a) وچ
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \land !B}$، سو کوئی $!C \in
+  \Theta$ (یعنی $!A \land !B$) اے جیہدے لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت (b) وچ کوئی $!C
+  \in \Gamma$ اے جیہدے لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$، تے
+  $!C \in \Theta$ وی اے۔ صورت (c) وچ کوئی $!C \in \Delta$ اے جیہدے
+  لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$، تے $!C \in \Xi$ وی اے،
+  کیوں جے $\Xi = \Delta$۔ سو ہر صورت وچ
+  \iftag{FOL}{$\Struct M$}{$\pAssign{v}$}، $!A \land !B, \Gamma
+  \Sequent \Delta$ نوں پورا کردا اے۔
+  % PNBSEQ-005: frozen source concludes Gamma -> Delta, but this rule case proves the displayed conclusion A and B, Gamma -> Delta.
+  چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی،
+  $!A \land !B, \Gamma \Sequent \Delta$ معتبر اے۔ $!A \land !B$ نوں
+  $!B$ توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے،
+  سنبھالی جاندی اے۔
+\item آخرلا استنباط \RightR{\lor} اے۔ ایس دے دو روپ نیں: $!A \lor !B$
+  مقدمے دے سجے پاسے موجود $!A$ یا $!B$ توں کڈھیا جا سکدا اے۔
+  پہلی صورت وچ~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B$
+  \end{prooftree}
+  ہُن $\Theta = \Gamma$ تے $\Xi = \Delta, !A \lor !B$۔ من لو
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}۔
+  چونکہ $\Gamma \Sequent \Delta, !A$ معتبر اے، سو یا (a)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$، (b)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے $!C \in \Gamma$ لئی، یا
+  (c)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت (a) وچ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$۔ صورت (b) وچ کوئی
+  $!C \in \Gamma$ اے جیہدے لئی
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت (c) وچ کوئی $!C
+  \in \Delta$ اے جیہدے لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ سو
+  ہر صورت وچ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}،
+  $\Gamma \Sequent \Delta, !A \lor !B$، یعنی $\Theta \Sequent \Xi$،
+  نوں پورا کردا اے۔ چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  من مانا سی، $\Theta \Sequent \Xi$ معتبر اے۔ $!A \lor !B$ نوں $!B$
+  توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے، سنبھالی جاندی اے۔
+\item آخرلا استنباط \RightR{\lif} اے۔ فیر~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A, \Gamma \fCenter \Delta, !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A \lif !B$
+  \end{prooftree}
+  فیر، استقرائی مفروضہ دَسدا اے کہ مقدمہ معتبر اے؛ اسیں وکھانا چاہندے آں
+  کہ نتیجہ وی معتبر اے۔ من لو
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا اے۔ چونکہ $!A,
+  \Gamma \Sequent \Delta, !B$ معتبر اے، ہِٹھلیاں صورتاں وچوں گھٹّو گھٹ
+  اک قائم اے: (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، (c)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے~$~!C \in \Gamma$ لئی، یا
+  (d) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورتاں (a) تے (b) وچ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$، سو کوئی $!C \in
+  \Delta, !A \lif !B$ اے جیہدے لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ صورت (c) وچ کسے $!C \in
+  \Gamma$ لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت (d) وچ
+  کسے $!C \in \Delta$ لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ ہر
+  صورت وچ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma
+  \Sequent \Delta, !A \lif !B$ نوں پورا کردا اے۔ چونکہ
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی، $\Gamma
+  \Sequent \Delta, !A \lif !B$ معتبر اے۔ \iftag{FOL}{%
+\item آخرلا استنباط \LeftR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
+  تے کوئی بند ٹرم~$t$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A(t), \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x)], \Gamma \fCenter \Delta$
+  \end{prooftree}
+  اسیں وکھانا چاہندے آں کہ نتیجہ $\lforall[x][!A(x)], \Gamma
+  \Sequent \Delta$ معتبر اے۔ من لو !!a{structure}~$\Struct M$۔ چونکہ
+  مقدمہ $!A(t), \Gamma \Sequent \Delta$ معتبر اے، سو (a)
+  $\Sat/{M}{!A(t)}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$ لئی، یا
+  (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت (a) وچ
+  \olref[syn][sem]{prop:quant-terms} مطابق، جے
+  $\Sat{M}{\lforall[x][!A(x)]}$ تاں $\Sat{M}{!A(t)}$۔ چونکہ
+  $\Sat/{M}{!A(t)}$، ایس لئی $\Sat/{M}{\lforall[x][!A(x)]}$۔ صورتاں (b)
+  تے (c) وچ $\Struct{M}$، $\lforall[x][!A(x)], \Gamma
+  \Sequent \Delta$ نوں وی پورا کردا اے۔ چونکہ $\Struct M$ من مانا سی،
+  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$ معتبر اے۔
+\item آخرلا استنباط \RightR{\lexists} اے: مشق۔
+\item آخرلا استنباط \RightR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
+  تے کوئی !!a{constant}~$a$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A(a)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+  \end{prooftree}
+  جتھے ایگن متغیر دی شرط (eigenvariable condition) پوری ہُندی اے، یعنی
+  $a$، $!A(x)$، $\Gamma$ یا $\Delta$ وچ نہیں آؤندا۔ استقرائی مفروضے
+  مطابق آخرلے استنباط دا مقدمہ معتبر اے۔ سانوں وکھانا اے کہ نتیجہ وی معتبر
+  اے، یعنی ہر !!{structure}~$\Struct M$ لئی یا (a)
+  $\Sat{M}{\lforall[x][!A(x)]}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$
+  لئی، یا (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔
+
+  من لو $\Struct{M}$ اک من مانا !!{structure} اے۔ جے (b) یا (c) قائم اے
+  تاں کم ہو گیا، سو من لو دوناں وچوں کوئی وی قائم نہیں: ہر $!C \in
+  \Gamma$ لئی $\Sat{M}{!C}$، تے ہر $!C \in \Delta$ لئی
+  $\Sat/{M}{!C}$۔ سانوں وکھانا اے کہ (a) قائم اے، یعنی
+  $\Sat{M}{\lforall[x][!A(x)]}$۔
+  \olref[syn][ass]{prop:sat-quant} مطابق ایہ وکھانا کافی اے کہ
+  $\Sat{M}{!A(x)}[s]$ ہر متغیر تعیّن~$s$ لئی۔ سو $s$ نوں کوئی من مانا متغیر تعیّن
+  من لو۔ اوس ساخت~$\Struct{M'}$ اُتے غور کرو جیہڑی~$\Struct{M}$ ورگی اے،
+  پر $\Assign{a}{M'} = s(x)$۔
+  \olref[syn][ext]{cor:extensionality-sent} مطابق ہر $!C \in \Gamma$ لئی
+  $\Sat{M'}{!C}$، کیوں جے $a$،~$\Gamma$ وچ نہیں آؤندا، تے ہر $!C \in
+  \Delta$ لئی $\Sat/{M'}{!C}$۔ پر مقدمہ معتبر اے، سو
+  $\Sat{M'}{!A(a)}$۔ \olref[syn][ass]{prop:sentence-sat-true} مطابق
+  $\Sat{M'}{!A(a)}[s]$، کیوں جے $!A(a)$ اک جملہ اے۔ ہُن
+  $\varAssign{s}{s}{x}$ تے $s(x) = \Value{a}{M'}[s]$، کیوں جے اسیں
+  $\Struct{M'}$ دی تعریف ایویں ای کیتی اے۔ سو
+  \olref[syn][ext]{prop:ext-formulas} لاگو ہُندا اے تے سانوں
+  $\Sat{M'}{!A(x)}[s]$ ملدا اے۔ چونکہ $a$،~$!A(x)$ وچ نہیں آؤندا،
+  \olref[syn][ext]{prop:extensionality} مطابق $\Sat{M}{!A(x)}[s]$۔ چونکہ
+  $s$ من مانا سی، اسیں ہر متغیر تعیّن لئی $\Sat{M}{!A(x)}[s]$ ثابت کر
+  دِتّا اے۔
+\item آخرلا استنباط \LeftR{\lexists} اے: مشق۔
+}{}
+\end{enumerate}
+ہُن دو مقدمیاں والے ممکن استنباطاں اُتے غور کریے۔
+\begin{enumerate}
+\item آخرلا استنباط کٹ (cut) اے؛ فیر~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$!A, \Pi \fCenter \Lambda$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+  \end{prooftree}
+  من لو \iftag{FOL}{$\Struct{M}$ اک !!a{structure} اے}{$\pAssign{v}$ اک
+    !!a{valuation} اے}۔ استقرائی مفروضے مطابق مقدمے معتبر نیں، سو
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} دوناں مقدمیاں نوں پورا کردا اے۔
+  اسیں دو صورتاں وکھ کردے آں: (a)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ تے (b)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ صورت (a) وچ، کھبے مقدمے نوں پورا
+  کرن لئی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Gamma
+  \Sequent \Delta$ پورا کرنا پئے گا۔ پر فیر اوہ نتیجے نوں وی پورا کردا اے۔
+  صورت (b) وچ، سجے مقدمے نوں پورا کرن لئی
+  % PNBSEQ-006: frozen source prints Pi setminus Lambda; the right Cut premise requires the sequent Pi -> Lambda.
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Pi \Sequent \Lambda$
+  پورا کرنا پئے گا۔ فیر وی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  نتیجے نوں پورا کردا اے۔
+\item آخرلا استنباط \RightR{\land} اے۔ فیر~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !B$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma \fCenter \Delta, !A \land !B$
+  \end{prooftree}
+  من لو \iftag{FOL}{!!a{structure}~$\Struct
+    M$}{!!a{valuation}~$\pAssign{v}$}۔ جے
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma \Sequent
+  \Delta$ نوں پورا کردا اے، تاں کم ہو گیا۔ سو من لو اوہ نہیں کردا۔
+  % PNBSEQ-007: frozen prose uses proof-tree-only fCenter here; the valid premise is the sequent Gamma -> Delta, A.
+  چونکہ $\Gamma \Sequent \Delta, !A$ استقرائی مفروضے مطابق معتبر اے،
+  ایس لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ ایسے طرح، چونکہ $\Gamma
+  \Sequent \Delta, !B$ معتبر اے، ایس لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$۔ پر فیر
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$۔
+\item آخرلا استنباط \LeftR{\lor} اے: مشق۔
+\item آخرلا استنباط \LeftR{\lif} اے۔ فیر~$\pi$ دا آخر ایہ اے:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$!B, \Pi \fCenter \Lambda$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+  \end{prooftree}
+  فیر، من لو \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  تے فرض کرو کہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}،
+  $\Gamma, \Pi \Sequent \Delta, \Lambda$ نوں پورا نہیں کردا۔ سانوں
+  وکھانا اے کہ $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$۔ جے
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma, \Pi \Sequent
+  \Delta, \Lambda$ نوں پورا نہیں کردا، تاں اوہ نہ $\Gamma \Sequent
+  \Delta$ نوں تے نہ $\Pi \Sequent \Lambda$ نوں پورا کردا اے۔ چونکہ
+  $\Gamma \Sequent \Delta, !A$ معتبر اے، ایس لئی
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ چونکہ $!B, \Pi \Sequent
+  \Lambda$ معتبر اے، ایس لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$۔
+  پر فیر $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$، تے ایہی اسیں
+  وکھانا چاہندے ساں۔
+\end{enumerate}
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][seq][sou]{thm:sequent-soundness} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][seq][sou]{thm:sequent-soundness} دا ثبوت پورا کرو۔
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+جے $\Proves !A$، تاں $!A$، \iftag{FOL}{معتبر}{ہمیشہ صادق فارمولا} اے۔
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+\end{cor}
+
+\begin{proof}
+جے $\Gamma \Proves !A$، تاں کسے محدود ذیلی سیٹ $\Gamma_0 \subseteq
+\Gamma$ لئی $\Gamma_0 \Sequent !A$ دی !!a{derivation} اے۔
+\olref{thm:sequent-soundness} مطابق ہر
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+یا تاں کسے $!B \in \Gamma_0$ نوں کاذب بناؤندا اے یا $!A$ نوں صادق۔ سو
+جے $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$، تاں
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ وی۔
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+جے $\Gamma$ پورا ہون جوگ اے، تاں اوہ بے تضاد اے۔
+\end{cor}
+
+\begin{proof}
+اسیں مقابل نقیض ثابت کردے آں۔ فرض کرو کہ $\Gamma$ بے تضاد نہیں۔ فیر کوئی
+محدود $\Gamma_0 \subseteq \Gamma$ تے $\Gamma_0 \Sequent \quad$ دی
+!!a{derivation} اے۔ \olref{thm:sequent-soundness} مطابق
+$\Gamma_0 \Sequent \quad$ معتبر اے۔ دوجے لفظاں وچ، ہر
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+لئی کوئی $!C \in \Gamma_0$ اے جیہدے لئی
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$، تے چونکہ $\Gamma_0
+\subseteq \Gamma$، اوہ $!C$،~$\Gamma$ وچ وی اے۔ ایس لئی کوئی وی
+\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}،~$\Gamma$ نوں پورا نہیں کردا،
+تے $\Gamma$ پورا ہون جوگ نہیں۔
+\end{proof}
+
+\end{document}

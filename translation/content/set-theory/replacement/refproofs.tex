@@ -1,0 +1,140 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{replacement}{refproofs}
+\olsection{ضمیمہ: بدل رکھن دے اصول نال جڑے نتیجے}
+
+ایس حصے وچ اسیں $\ZF$ دے اندر انعکاس ثابت کراں گے۔ اسیں اوہ معنی وی ثابت کراں گے جیہدے وچ انعکاس بدل رکھن دے اصول دے برابر اے۔ تے ایس سارے کم دا اک دلچسپ نتیجہ ثابت کراں گے، جیہڑا انعکاس تے بدل رکھن دے اصول دی طاقت بارے اے۔ \emph{خبردار: ایہ ایس کتاب وچ ریاضی دا سبھ توں اوکھا حصہ اے۔}
+
+اسیں اک معاون قضیے توں شروع کراں گے، جیہدے وچ متغیراں یا شےواں دیاں لڑیواں نوں مختصر لکھن لئی \emph{اُتلی لکیر} ورتی اے۔ سو «$\overline{a}_k$» دا مختصر مطلب «$a_{k_1}$، \dots،
+$a_{k_n}$» اے، جتھے $n$ دا پتا سیاق توں لگدا اے۔
+
+\begin{lem}\ollabel{lemreflection}
+ہر $1 \leq i \leq k$ لئی $\phi_i(\overline{v}_i, x)$ اک فارمولا ہووے۔ فیر ہر $\alpha$ لئی کوئی $\beta > \alpha$ اے جیہدے لئی، کسے وی $\overline{a}_1,
+\ldots, \overline{a}_k \in V_\beta$ تے ہر $1 \leq i \leq k$ لئی:
+\[
+	\exists x\phi_i(\overline{a}_i, x) \rightarrow (\exists x \in V_\beta) \phi_i(\overline{a}_i, x)
+\]
+\end{lem}
+
+\begin{proof}
+اسیں اک ٹرم $\mu$ ایویں تعریف کردے آں۔ $\mu(\overline{a}_1, \ldots,
+\overline{a}_k)$ اوہ سبھ توں پہلا مرحلہ، $V$، اے جیہدے لئی $1 \leq i \leq k$ واسطے ہِیٹھلے سارے شرطیے سچ نیں۔
+\[
+\exists x\phi_i(\overline{a}_i, x) \rightarrow (\exists x \in V) \phi_i(\overline{a}_i, x))
+\]
+ایہ تصدیق کرنی سوکھی اے کہ $\mu(\overline{a}_1, \ldots, \overline{a}_k)$ سارے $\overline{a}_1, \ldots, \overline{a}_k$ لئی موجود اے۔ ہُن بدل رکھن دا اصول تے بازگشت دا ساڈا قضیہ ورت کے ایویں تعریف کرو۔
+\begin{align*}
+	S_0 & = V_{\alpha+1}\\
+	S_{n+1} & = S_n \cup \bigcup
+	\Setabs{\mu(\overline{a}_1, \ldots, \overline{a}_k)}
+	{\overline{a}_1, \ldots, \overline{a}_k \in S_n} \\
+	S &= \bigcup_{m < \omega} S_n.
+\end{align*}
+ہر $S_n$، تے ایس لئی $S$ آپ وی، $V_\alpha$ توں بعد دا اک مرحلہ اے۔ ہُن
+$\overline{a}_1$، \dots،~$\overline{a}_k \in S$ مقرر کرو۔ سو کوئی $n <
+\omega$ اے جیہدے لئی $\overline{a}_1$، \dots، $\overline{a}_k \in S_n$۔
+کوئی $1 \leq i \leq k$ مقرر کرو تے منّ لو $\exists x
+\phi_i(\overline{a}_i,x)$۔ سو بناوٹ مطابق $(\exists x \in \mu(\overline{a}_1,
+\ldots, \overline{a}_k))\phi_i(\overline{a}_i, x)$، ایس لئی
+$(\exists x \in S_{n+1})\phi_i(\overline{a}_i, x)$ تے اوہتوں
+$(\exists x \in S)\phi_i(\overline{a}_i, x)$۔ سو $S$ ساڈا $V_\beta$ اے۔
+\end{proof}
+\noindent
+ہُن اسیں \olref[sth][replacement][ref]{reflectionschema} بڑے سیدھے طریقے نال ثابت کر سکدے آں۔
+
+\begin{proof}[ثبوت]
+$\alpha$ مقرر کرو۔ عمومیت گنوائے بناں اسیں منّ سکدے آں کہ $\phi$ دے جوڑک بس $\exists$، $\lnot$ تے $\land$ نیں (کیوں جے ایہ اظہار لئی کافی نیں)۔ $\psi_1, \ldots, \psi_k$، $\phi$ دے سارے ذیلی فارمولاں نوں پیچیدگی دی ترتیب وچ گِنن، ایویں کہ $\psi_k = \phi$۔
+\olref{lemreflection} مطابق اک $\beta > \alpha$ اے جیہدے لئی کسے وی $\overline{a}_i \in V_\beta$ تے ہر $1 \leq i \leq k$ واسطے:
+\begin{align}\label{reflectionnicelybehaved}
+	\exists x\psi_i(\overline{a}_i, x) \rightarrow
+	(\exists x \in V_\beta) \psi_i(\overline{a}_i, x)\tag{*}
+\end{align}
+$\psi_i$ دی پیچیدگی اُتے استقرا نال اسیں وکھاواں گے کہ
+$\psi_i(\overline{a}_i) \leftrightarrow
+\psi_i^{V_\beta}(\overline{a}_i)$، ہر $\overline{a}_i \in
+V_\beta$ لئی۔ جے $\psi_i$ جوہری اے، تاں ایہ گل صاف اے۔ دوپاسے دا شرطیہ ایہ وی طے کردا اے کہ جدوں $\psi_i$ ایس خاصیت والے ذیلی فارمولاں دی نفی یا عطف اے، $\psi_i$ وچ وی ایہ خاصیت اے۔ سو بس مسوّرے والی صورت ویکھن جوگی اے۔
+$\overline{a}_i \in V_\beta$ مقرر کرو۔ فیر:
+\begin{align*}
+	(\exists x \psi_i(\overline{a}_i, x))^{V_\beta}
+	&\text{ اُدوں تے صرف اُدوں جدوں }
+	(\exists x \in V_\beta) \psi_i^{V_\beta}(\overline{a}_i, x)
+	&&\text{تعریف مطابق}\\
+	&\text{ اُدوں تے صرف اُدوں جدوں }
+	(\exists x \in V_\beta) \psi_i(\overline{a}_i,  x)
+	&&\text{مفروضے مطابق}\\
+	&\text{ اُدوں تے صرف اُدوں جدوں }
+	\exists x \psi_i(\overline{a}_i, x)
+	&&\text{\eqref{reflectionnicelybehaved} مطابق}
+\end{align*}
+ایس نال استقرا پورا ہویا۔ نتیجہ نکل آیا، کیوں جے $\psi_k = \phi$۔
+\end{proof}
+
+اسیں $\ZF$ وچ انعکاس ثابت کر دتا اے۔ ساڈا ثبوت بنیادی طور اُتے \citet{Montague1961} دے ثبوت دے پچھے چلدا اے۔ ہُن اسیں $\Z$ وچ ثابت کرنا چاہندے آں کہ انعکاس توں بدل رکھن دا اصول لازم آؤندا اے۔ ثبوت \citet{Levy1960} دے طریقے مطابق اے، پر اک سادہ کیتی صورت وچ۔
+
+کیوں جے اسیں $\Z$ وچ کم کردے آں، اسیں انعکاس نوں این اوہو روپ وچ پیش نہیں کر سکدے جیہڑا اُتے دتا اے۔ آخر اسیں انعکاس «$V_\alpha$» والی لکھت نال بیان کیتا سی، تے $\Z$ وچ ایہدی تعریف نہیں ہو سکدی (\olref[sth][spine][zf]{sec} ویکھو)۔ سو اسیں ایس دی تھاں بدل رکھن دے اصول دا بظاہر کمزور روپ ایویں پیش کراں گے۔
+
+\begin{defish}
+\emph{کمزور انعکاس۔} کسے وی فارمولے $\phi$ لئی اک متعدی سیٹ $S$ اے، ایویں کہ $0$، $1$ تے $\phi$ دے سارے پیرامیٹر $S$ دے !!{element}s نیں، تے $(\forall \overline{x} \in S)(\phi \liff
+\phi^S)$۔
+\end{defish}
+
+ایہ ورت کے بدل رکھن دا اصول ثابت کرن لئی پہلاں اسیں \citet[first
+part of Theorem 2]{Levy1960} دے طریقے تے چل کے وکھاواں گے کہ اسیں دو فارمولیاں دا اکّو ویلے «انعکاس» کر سکدے آں۔
+
+\begin{lem}[$\Z + \text{کمزور انعکاس}$ وچ۔]\ollabel{lem:reflect}
+کسے وی دو فارمولیاں $\psi, \chi$ لئی اک متعدی سیٹ $S$ اے، ایویں کہ $0$ تے $1$ (تے فارمولیاں دے سارے پیرامیٹر)
+$S$ دے !!{element}s نیں، تے $(\forall \overline{x} \in S)((\psi \liff \psi^S) \land (\chi
+\liff \chi^S))$۔
+\end{lem}
+
+\begin{proof}
+$\phi$ فارمولا $(z = 0 \land \psi) \lor (z = 1 \land \chi)$ ہووے۔
+
+ایتھے اسیں مختصر لکھت ورتدے آں۔ «$z = 0$» نوں کھولھ کے «$\forall t\, t \notin z$» لکھنا چاہیدا اے، تے «$z =1$» نوں «$\forall s(s \in z
+\liff \forall t\, t \notin s)$»۔ پر کیوں جے $0, 1 \in S$ تے $S$ متعدی اے، ایہ فارمولا $S$ لئی \emph{مطلق} نیں۔ یعنی اوہ اوسے شے اُتے لاگو ہون گے، بھاویں اسیں اوہناں دے مسوّر $S$ تک محدود کر دیئیے۔\footnote{ہور رسمی طور اُتے، $\xi$ ایہناں دوہاں وچوں کوئی وی فارمولا ہووے، تاں $\xi(z) \liff \xi^S(z)$۔}
+
+کمزور انعکاس نال کوئی ڈھکواں $S$ ملدا اے جیہدے لئی:
+\begin{align*}
+	(\forall z, \overline{x} \in S)(&\phi \liff \phi^S)\\
+	\text{یعنی }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi)) \liff {}\\
+	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
+	\text{یعنی }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi))\liff {}\\
+	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
+	\text{یعنی }(\forall \overline{x} \in S)(&(\psi \liff \psi^S) \land (\chi \liff \chi^S))
+\end{align*}
+دوجے دعوے توں تیجا لازم آؤندا اے کیوں جے «$z = 0$» تے «$z=1$» $S$ لئی مطلق نیں۔ چوتھا دعویٰ نکلدا اے کیوں جے $0 \neq 1$۔
+\end{proof}\noindent ہُن اسیں \citet[Theorem 6]{Levy1960} دے طریقے تے چل کے، اوہنوں سادہ کردیاں، بدل رکھن دا اصول حاصل کر سکدے آں۔
+
+\begin{thm}[$\Z$ + کمزور انعکاس وچ]\label{thm:replacement}
+کسے وی فارمولے $\phi(v,w)$ تے کسے وی $A$ لئی، جے $(\forall x \in A)\lexists![y][\phi(x,y)]$، تاں
+$\Setabs{y}{(\exists x \in A)\phi(x,y}$ موجود اے۔
+\end{thm}
+
+\begin{proof}
+$A$ ایہو جیہا مقرر کرو کہ $(\forall x \in A)\lexists![y][\phi(x,y)]$، تے فارمولے ایویں تعریف کرو۔
+\begin{align*}
+	\psi &\text{ ایہ اے } (\phi(x, z) \land A = A)\\
+	\chi &\text{ ایہ اے } \lexists[y][\phi(x, y)]
+\end{align*}
+\olref{lem:reflect} ورت کے، کیوں جے $A$، $\psi$ دا اک پیرامیٹر اے، اک متعدی~$S$ اے جیہدے لئی $0, 1, A \in S$ (ہور سارے پیرامیٹراں سمیت) تے:
+\[
+	(\forall x,z \in S)((\psi \liff \psi^S) \land (\chi \liff \chi^S))
+\]
+سو خاص طور اُتے:
+\begin{align*}
+	(\forall  x, z \in S)(&\phi(x, z) \liff \phi^S(x, z))\\
+	(\forall x \in S)(&\exists y\phi(x, y) \liff (\exists y \in S)\phi^S(x, y))
+\end{align*}
+ایہناں نوں جوڑ کے تے ایہ ویکھ کے کہ $A \subseteq S$ کیوں جے $A \in S$ تے $S$ متعدی اے:
+\begin{align*}
+	(\forall x \in A)(&\exists y\phi(x, y) \liff (\exists y \in S)\phi(x, y))
+\end{align*}
+ہُن $(\forall x \in A)(\lexists![y \in S])\phi(x, y)$، کیوں جے
+$(\forall x \in A)\lexists![y][\phi(x,y)]$۔ ہُن وکھ کرن دے اصول توں
+$\Setabs{y \in S}{(\exists x \in A) \phi(x, y)} = \Setabs{y}{(\exists x \in
+A)\phi(x, y)}$ ملدا اے۔
+\end{proof}
+
+\end{document}

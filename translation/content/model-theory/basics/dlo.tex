@@ -1,0 +1,101 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: partial-iso
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{bas}{dlo}
+\section{گھنیاں خطی ترتیباں}
+
+\begin{defn}
+  \emph{سِراں توں خالی گھنی خطی ترتیب}
+  (dense linear ordering without endpoints) اوہ !!a{structure}
+  $\Struct{M}$ اے جیہڑی اکّو دو-تھانواں والا
+  !!{predicate}~$<$ رکھن والی !!{language} دی اے تے تھلے دتے
+  جملے پورے کردی اے:
+  \begin{enumerate}
+  \item $\lforall[x][\lnot x < x]$؛
+  \item $\lforall[x][\lforall[y][\lforall[z][(x < y \lif (y < z \lif x
+    <z ))]]]$؛
+  \item $\lforall[x][\lforall[y][(x< y \lor \eq[x][y] \lor y < x)]]$؛
+  \item $\lforall[x][\lexists[y][x < y]]$؛
+  \item $\lforall[x][\lexists[y][y < x]]$؛
+  \item $\lforall[x][\lforall[y][(x < y \lif \lexists[z][(x < z \land
+        z < y))]]]$۔
+ \end{enumerate}
+\end{defn}
+
+\begin{thm}\ollabel{thm:cantorQ}
+  سِراں توں خالی ہر دو !!{enumerable} گھنیاں خطی ترتیباں
+  ہم شکل ہوندیاں نیں۔
+\end{thm}
+
+\begin{proof}
+  $\Struct{M_1}$ تے $\Struct{M_2}$ سِراں توں خالی
+  !!{enumerable} گھنیاں خطی ترتیباں ہون، جتھے
+  ${<_1} = \Assign{<}{M_1}$ تے ${<_2} =
+  \Assign{<}{M_2}$؛ انہاں دے وچکار ساریاں جزوی ہم شکلیاں دا
+  سیٹ $\PIso{I}$ ہووے۔ $\PIso{I}$ غیر خالی اے کیوں جے گھٹ توں گھٹ
+  $\emptyset \in \PIso{I}$۔ اسیں دکھاندے آں کہ $\PIso{I}$،
+  اگے-پیچھے خاصیت پوری کردا اے۔ تاں
+  $\Struct{M_1} \iso[p] \Struct{M_2}$، تے
+  \olref[pis]{thm:p-isom1} توں قضیہ نکلدا اے۔
+
+  $\PIso{I}$ دی اگے والی خاصیت دکھاؤن لئی $p \in
+  \PIso{I}$ لو۔ جے نقشہ خالی ہووے، تاں دوجی ساخت دے غیر خالی دائرے
+  وچوں کوئی وی عنصر چن کے دتے عنصر نال اوہدا جوڑا شامل کر لو۔ جے دتا
+  عنصر پہلے ای نقشے دے دائرے وچ اے، تاں نقشہ آپ ہی مطلوبہ توسیع اے۔
+  اگے غیر خالی نقشے تے دائرے توں باہر دتے عنصر دا حال اے؛ لسٹ وچ
+  نقشے دے دائرے دے سارے عناصر لو۔ $p(a_i) = b_i$، $i = 1$، \dots،~$n$ لئی
+  ہووے؛ دائرے دی لسٹ نوں ترتیب دے کے فرض کرو $a_1 <_1 a_2 <_1 \cdots <_1
+  a_n$۔ کوئی $a \in \Domain{M_1}$ دتا ہووے؛ $b \in \Domain{M_2}$
+  ایویں لبھو:
+  \begin{enumerate}
+  \item جے $a <_1 a_1$، تاں $b \in \Domain{M_2}$ ایسا لو
+    کہ $b <_2
+    b_1$؛
+  \item جے $a_n <_1 a$، تاں $b \in \Domain{M_2}$ ایسا لو
+    کہ $b_n <_2 b$؛
+ \item جے $a_i <_1 a <_1 a_{i+1}$ کسے $i$ لئی، تاں
+   $b \in
+   \Domain{M_2}$ ایسا لو کہ $b_i <_2 b <_2 b_{i+1}$۔
+  \end{enumerate}
+  مطلوبہ خاصیت والا $b$ ہمیشہ لبھ جاندا اے، کیوں جے
+  $\Struct{M_2}$ سِراں توں خالی گھنی خطی ترتیب اے۔
+  $q = p \cup \{ \langle a, b \rangle \}$ مقرر کرو؛ ایویں
+  $q \in \PIso{I}$، $p$ دا مطلوبہ ودھاؤ اے۔ ایس نال اگے
+  والی خاصیت ثابت ہوندی اے۔ پیچھے والی خاصیت دا ثبوت ایہو
+  جیہا اے۔ ایس لئی $\Struct{M_1} \iso[p]
+  \Struct{M_2}$؛ \olref[pis]{thm:p-isom1} نال
+  $\Struct{M_1} \iso
+  \Struct{M_2}$۔
+\end{proof}
+
+\begin{prob}
+  \olref[mod][bas][dlo]{thm:cantorQ} دا ثبوت ایہ جانچ کے پورا
+  کرو کہ $\PIso{I}$ پیچھے والی خاصیت پوری کردا اے۔
+\end{prob}
+
+\begin{rem}
+  $\Struct{S}$ کوئی وی سِراں توں خالی !!{enumerable} گھنی
+  خطی ترتیب ہووے۔ تاں (\olref{thm:cantorQ} مطابق)
+  $\Struct{S} \iso
+  \Struct{Q}$، جتھے $\Struct{Q} = (\Rat, <)$ اوہ
+  !!{enumerable} گھنی خطی ترتیب اے جیہدا دائرہ ناطق اعداد دا
+  سیٹ $\Rat$ اے۔ ہن \olref[thm]{remark:R} وچ آئی
+  !!{structure}~$\Struct{R} =
+  (\Real, <)$ نوں فیر ویکھو۔ اسیں ویکھیا سی کہ اک
+  !!a{enumerable} !!{structure}~$\Struct{S}$ اے جیہدے لئی
+  $\Struct{R}
+  \elemequiv \Struct{S}$۔ پر $\Struct{S}$ سِراں توں خالی
+  !!a{enumerable} گھنی خطی ترتیب اے، ایس لئی اوہ
+  !!{structure}~$\Struct{Q}$ دے نال ہم شکل (تے ایس سبب
+  جملہ وار ہم ارز) اے۔ جملہ وار ہم ارزی دی تعدی خاصیت توں
+  $\Struct{R} \elemequiv
+  \Struct{Q}$۔ (ایہ نتیجہ اسیں اوہو اگے-پیچھے استدلال نال
+  $\Struct{R} \iso[p] \Struct{Q}$ قائم کرکے براہِ راست وی
+  دکھا سکدے ساں۔)
+\end{rem}
+\end{document}

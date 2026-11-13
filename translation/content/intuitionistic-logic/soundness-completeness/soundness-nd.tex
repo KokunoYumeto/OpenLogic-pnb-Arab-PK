@@ -1,0 +1,142 @@
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: soundness-nd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{snd}
+
+\olsection{فطری استنباط دی صحت مندی}
+
+ہُن اسیں تعلقی معنیات دے لحاظ نال فطری استنباط دی صحت مندی ثابت کراں گے۔
+یعنی وکھاواں گے کہ جے !!a{formula} مفروضیاں دے اک سیٹ توں !!{derivable}
+اے، تاں مفروضیاں دے اوس سیٹ دا معنوی نتیجہ اوہ !!{formula} اے۔
+
+\begin{thm}[صحت مندی]
+  \ollabel{thm:soundness}
+  جے $\Gamma \Proves !A$، تاں $ \Gamma \Entails !A$۔
+\end{thm}
+
+\begin{proof}
+  اسیں ثابت کراں گے کہ جے $\Gamma \Proves !A$، تاں $\Gamma \Entails !A$۔
+  ثبوت~$!A$ دے~$\Gamma$ توں !!{derivation} اُتے استقرا نال اے۔
+
+  \begin{enumerate}
+  \item جے !!{derivation} صرف مفروضے~$!A$ دا اے، تاں ساڈے کول $!A \Proves !A$
+    اے تے اسیں وکھانا اے کہ $!A \Entails !A$۔ فرض کرو $\mSat{M}{!A}[w]$۔
+    فیر ظاہر اے کہ $\mSat{M}{!A}[w]$۔
+
+  \item !!{derivation} دا آخری قاعدہ $\Intro{\land}$ اے۔
+    \iftag{probAnd}{مشق۔}{~$!B$ دا !!{undischarged} مفروضیاں~$\Gamma$ توں
+      تے~$!C$ دا !!{undischarged} مفروضیاں~$\Delta$ توں مقدمے والے !!{derivation}s
+      وکھاندے نیں کہ $\Gamma \Proves !B$ تے $\Delta \Proves !C$۔
+      استقرائی مفروضے توں ساڈے کول $\Gamma \Entails !B$ تے $\Delta \Entails !C$ نیں۔
+      سانوں وکھانا اے کہ $\Gamma \cup \Delta \Entails !A \land !B$، کیوں جے
+      پورے !!{derivation} دے !!{undischarged} مفروضے $\Gamma$ تے $\Delta$ نوں
+      رلا کے ملدے نیں۔ سو فرض کرو $\mSat{M}{\Gamma \cup \Delta}[w]$۔
+      فیر $\mSat{M}{\Gamma}[w]$ وی اے۔ چونکہ $\Gamma \Entails !B$، ایس لئی
+      $\mSat{M}{!B}[w]$۔ ایس طرح $\mSat{M}{!C}[w]$۔ سو
+      $\mSat{M}{!B \land !C}[w]$۔}
+
+  \item !!{derivation} دا آخری قاعدہ $\Elim{\land}$ اے۔
+    \iftag{probAnd}{مشق۔}{مقدمے $!B \land !C$ دا !!{undischarged} مفروضیاں
+      $\Gamma$ توں !!{derivation} وکھاندا اے کہ $\Gamma \Proves !B \land !C$۔
+      استقرائی مفروضے توں $\Gamma \Entails !B \land !C$۔
+      اسیں وکھانا اے کہ $\Gamma \Entails !B$۔ سو فرض کرو $\mSat{M}{\Gamma}[w]$۔
+      چونکہ $\Gamma \Entails !B \land !C$، ایس لئی $\mSat{M}{!B \land !C}[w]$۔
+      فیر $\mSat{M}{!B}[w]$ وی اے۔ ایس طرح جے $\Elim\land$ دا نتیجہ~$!C$ اے،
+      تاں $\Gamma \Entails !C$۔}
+
+  \item !!{derivation} دا آخری قاعدہ $\Intro{\lor}$ اے۔
+    \iftag{probOr}{مشق۔}{فرض کرو مقدمہ $!B$ اے تے~$!B$ اُتے مُکّن والے !!{derivation} دے
+      !!{undischarged} مفروضے $\Gamma$ نیں۔
+      فیر $\Gamma \Proves !B$ تے استقرائی مفروضے نال $\Gamma \Entails !B$۔
+      اسیں وکھانا اے کہ $\Gamma \Entails !B \lor !C$۔ فرض کرو $\mSat{M}{\Gamma}[w]$۔
+      چونکہ $\Gamma \Entails !B$، ایس لئی $\mSat{M}{!B}[w]$۔
+      پر فیر $\mSat{M}{!B \lor !C}[w]$ وی اے۔ ایس طرح جے مقدمہ~$!C$ اے،
+      تاں $\Gamma \Entails !C$۔}
+
+  \item !!{derivation} دا آخری قاعدہ~$\Elim{\lor}$ اے۔
+    \iftag{probOr}{مشق۔}{مقدمیاں اُتے مُکّن والے !!{derivation}s ایہ نیں:
+      $!B \lor !C$ دا !!{undischarged} مفروضیاں~$\Gamma$ توں،
+      $!D$ دا !!{undischarged} مفروضیاں $\Delta_1 \cup \{!B\}$ توں،
+      تے $!D$ دا !!{undischarged} مفروضیاں~$\Delta_2 \cup \{!C\}$ توں۔
+      سو ساڈے کول $\Gamma \Proves !B \lor !C$، $\Delta_1 \cup \{!B\} \Proves !D$
+      تے $\Delta_2 \cup \{!C\} \Proves !D$ نیں۔ استقرائی مفروضے توں
+      $\Gamma \Entails !B \lor !C$، $\Delta_1 \cup \{!B\} \Entails !D$ تے
+      $\Delta_2 \cup \{!C\} \Entails !D$۔ سانوں ثابت کرنا اے کہ
+      $\Gamma \cup \Delta_1 \cup \Delta_2 \Entails !D$۔
+
+    فرض کرو $\mSat{M}{\Gamma \cup \Delta_1 \cup \Delta_2}[w]$۔ فیر
+    $\mSat{M}{\Gamma}[w]$ تے چونکہ $\Gamma \Entails !B \lor !C$، ایس لئی
+    $\mSat{M}{!B \lor !C}[w]$۔ $\mSat{M}{}$ دی تعریف مطابق، یا
+    $\mSat{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$۔ سو دو صورتاں ویکھدے آں۔
+    (ا)~$\mSat{M}{!B}$[w]۔ فیر $\mSat{M}{\Delta_1 \cup \{!B\}}[w]$۔
+    چونکہ $\Delta_1 \cup !B \Entails !D$، ایس لئی $\mSat{M}{!D}[w]$۔
+    (ب)~$\mSat{M}{!C}[w]$۔ فیر $\mSat{M}{\Delta_2 \cup \{!C\}}[w]$۔
+    چونکہ $\Delta_2 \cup !C \Entails !D$، ایس لئی $\mSat{M}{!D}[w]$۔
+    سو دوناں وچوں جیہڑی وی صورت ہووے، $\mSat{M}{!D}[w]$، جیہڑا اسیں وکھانا سی۔}
+
+  \item !!{derivation} دا آخری قاعدہ $\Intro{\lif}$ اے تے اوہدا نتیجہ~$!B\lif
+    !C$ اے۔ فیر مقدمہ~$!C$ اے تے مقدمے اُتے مُکّن والے !!{derivation} دے
+    !!{undischarged} مفروضے~$\Gamma \cup \{!B\}$ نیں۔ سو
+    $\Gamma \cup \{!B\} \Proves !C$ تے استقرائی مفروضے نال
+    $\Gamma \cup \{!B\} \Entails !C$۔ اسیں وکھانا اے کہ $\Gamma \Entails !B \lif !C$۔
+
+    فرض کرو $\mSat{M}{\Gamma}[w]$۔ اسیں وکھانا چاہندے آں کہ ہر اوہ $w'$ جیہڑی
+    $Rww'$ پوری کرے، اوہدے لئی جے $\mSat{M}{!B}[w']$، تاں $\mSat{M}{!C}[w']$۔
+    سو منّ لو $Rww'$ تے $\mSat{M}{!B}[w']$۔ \olref[sem][rel]{prop:true-monotonic}
+    مطابق، $\mSat{M}{\Gamma}[w']$۔ چونکہ $\Gamma \cup \{!B\} \Entails !C$،
+    ایس لئی $\mSat{M}{!C}[w']$، جیہڑا اسیں وکھانا سی۔
+
+  \item !!{derivation} دا آخری قاعدہ $\Elim{\lif}$ اے تے نتیجہ~$!C$ اے۔
+    مقدمے $!B \lif !C$ تے $!B$ نیں، جیہناں دے !!{derivation}s بالترتیب
+    !!{undischarged} مفروضیاں $\Gamma$، $\Delta$ توں نیں۔ سو
+    $\Gamma \Proves !B \lif !C$ تے $\Delta \Proves !B$۔ استقرائی مفروضے توں
+    $\Gamma \Entails !B \lif !C$ تے $\Delta \Entails !B$۔
+    اسیں وکھانا اے کہ $\Gamma \cup \Delta \Entails !C$۔
+
+    فرض کرو $\mSat{M}{\Gamma \cup \Delta}[w]$۔ چونکہ
+    $\mSat{M}{\Gamma}[w]$ تے $\Gamma \Entails !B \lif !C$، ایس لئی
+    $\mSat{M}{!B \lif !C}[w]$۔ تعریف مطابق ایہدا مطلب اے کہ ہر اوہ
+    $w'$ جیہڑی $Rww'$ پوری کرے، اوہدے لئی جے $\mSat{M}{!B}[w']$ تاں
+    $\mSat{M}{!C}[w']$۔ چونکہ $R$ انعکاسی اے، $w$ وی اوہناں $w'$
+    وچ اے جیہڑیاں $Rww'$ پورا کردیاں نیں۔ یعنی جے $\mSat{M}{!B}[w]$، تاں
+    $\mSat{M}{!C}[w]$۔ چونکہ $\mSat{M}{\Delta}[w]$ تے $\Delta
+    \Entails !B$، ایس لئی $\mSat{M}{!B}[w]$۔ سو $\mSat{M}{!C}[w]$،
+    جیہڑا اسیں وکھانا سی۔
+
+  \item !!{derivation} دا آخری قاعدہ $\FalseInt$ اے تے اوہدا نتیجہ~$!A$ اے۔
+    مقدمہ $\lfalse$ اے تے اوہدے !!{derivation} دے !!{undischarged} مفروضے~$\Gamma$
+    نیں۔ فیر $\Gamma \Proves \lfalse$۔ استقرائی مفروضے توں
+    $\Gamma \Entails \lfalse$۔ اسیں وکھانا اے کہ $\Gamma \Entails !A$۔
+
+    اسیں بالواسطہ ثبوت دیندے آں۔ جے $\Gamma \Entails/ !A$، تاں اک نمونہ~$\mModel{M}$
+    تے جہان~$w$ اے جتھے $\mSat{M}{\Gamma}[w]$ تے $\mSat/{M}{!A}[w]$۔
+    چونکہ $\Gamma \Entails \lfalse$، ایس لئی $\mSat{M}{\lfalse}[w]$۔
+    پر ایہ ناممکن اے، کیوں جے تعریف مطابق $\mSat/{M}{\lfalse}[w]$۔
+    سو $\Gamma \Entails !A$۔
+  \item !!{derivation} دا آخری قاعدہ $\Intro\lnot$ اے۔ مشق۔
+  \item !!{derivation} دا آخری قاعدہ $\Elim\lnot$ اے۔ مشق۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[int][sc][snd]{thm:soundness} دا ثبوت مکمل کرو۔ $\Intro\lnot$ تے
+  $\Elim\lnot$ دیاں صورتاں لئی $\mSat{M}{\lnot !A}[w]$ دی تعریف ورتو
+  جیہڑی \olref[int][sem][rel]{defn:true-at-w} وچ دتی اے۔ یعنی $\lnot !A$
+  نوں $!A \lif \lfalse$ نال تعریف شدہ نہ منّو۔
+\end{prob}
+
+\begin{prob}
+  وکھاؤ کہ ہیٹھلے !!{formula}s وجدانیت پسند منطق وچ !!{derivable} نہیں۔
+  \begin{enumerate}
+    \item $(!A \lif !B) \lor (!B \lif !A)$
+    \item $(\lnot\lnot !A \lif !A) \lif (!A \lor \lnot !A)$
+    \item $(!A \lif !B \lor !C) \lif \bigl((!A \lif !B)\lor(!A \lif !C)\bigr)$
+  \end{enumerate}
+\end{prob}
+
+\end{document}

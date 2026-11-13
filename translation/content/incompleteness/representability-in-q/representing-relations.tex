@@ -1,0 +1,61 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: representing-relations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{req}{rel}
+
+\olsection{تعلقاں دی نمائندگی}
+
+دسیے کہ کسے \emph{تعلق} دا قابلِ نمائندگی ہون دا کیہ مطلب اے۔
+
+\begin{defn}
+\ollabel{defn:representing-relations} قدرتی عدداں اُتے تعلق $R(x_0,\dots,x_k)$ نوں
+{\em $\Th{Q}$ وچ قابلِ نمائندگی} آکھدے آں جے کوئی فارمولا
+$!A_R(x_0,\dots,x_k)$ ایہو جیہا ہووے۔ جدوں وی $R(n_0,\dots,n_k)$
+سچ ہووے، $\Th{Q}$، $!A_R(\num{n_0},\dots,\num{n_k})$ ثابت
+کرے، تے جدوں وی $R(n_0,\dots,n_k)$ جھوٹ ہووے، $\Th{Q}$،
+$\lnot !A_R(\num{n_0}, \dots, \num{n_k})$ ثابت کرے۔
+\end{defn}
+
+\begin{thm}
+\ollabel{thm:representing-rels} کوئی تعلق $\Th{Q}$ وچ اُدوں تے صرف اُدوں قابلِ نمائندگی اے
+جدوں اوہ قابلِ حساب اے۔
+\end{thm}
+
+\begin{proof}
+پہلی سمت لئی فرض کرو $R(x_0,\dots,x_k)$ دی
+نمائندگی فارمولا $!A_R(x_0,\dots,x_k)$ کردا اے۔$R$ دا حساب کرن لئی دلیلاں $n_0$، \dots،~$n_k$ اُتے ایویں کرو۔
+$!A_R(\num{n_0}, \dots, \num{n_k})$ دے ثبوت تے
+$\lnot !A_R(\num{n_0}, \dots, \num{n_k})$ دے ثبوت لئی دو تلاشاں اکٹھیاں چلا کے باری باری اگے ودھاؤ۔
+ساڈے مفروضے نال اوہناں وچوں اک ثبوت ضرور لبھے گا۔ جے پہلا
+لبھے تاں «ہاں» دسو، نہیں تاں «نہیں» دسو۔
+
+دوجی سمت لئی فرض کرو $R(x_0, \dots, x_k)$ قابلِ حساب اے۔تعریف نال،
+ایس دا مطلب اے کہ امتیازی فنکشن $\Char{R}(x_0, \dots, x_k)$
+قابلِ حساب اے۔\olref[int]{thm:representable-iff-comp} نال،$\Char{R}$
+دی نمائندگی کوئی فارمولا کردا اے،مثلاً $!A_{\Char{R}}(x_0, \dots, x_k,
+y)$۔مان لو $!A_R(x_0, \dots, x_k)$ اوہ فارمولا اے جیہڑا $!A_{\Char{R}}(x_0,
+\dots, x_k, \num{1})$ اے۔ ہن کسے وی $n_0$، \dots،~$n_k$ لئی،جے $R(n_0,
+\dots, n_k)$ سچ اے،تاں $\Char{R}(n_0, \dots, n_k) = 1$،تے ایس
+صورت وچ $\Th{Q}$، $!A_{\Char{R}}(\num{n_0}, \dots, \num{n_k},
+\num{1})$ ثابت کردا اے،تے ایس لئی $\Th{Q}$، $!A_R(\num{n_0}, \dots,
+\num{n_k})$ ثابت کردا اے۔ جے $R(n_0, \dots, n_k)$ جھوٹ اے،تاں
+$\Char{R}(n_0, \dots, n_k) = 0$۔ایس دا مطلب اے کہ $\Th{Q}$،
+\[
+\lforall[y][(!A_{\Char{R}}(\num{n_0}, \dots, \num{n_k}, y) \lif y =
+  \num{0})].
+\]
+ثابت کردا اے۔کیوں جے $\Th{Q}$، $\eq/[\num{0}][\num{1}]$ ثابت کردا اے،ایس لئی $\Th{Q}$،
+$\lnot !A_{\Char{R}}(\num{n_0}, \dots, \num{n_k}, \num{1})$ ثابت کردا اے،تے ایس لئی
+اوہ $\lnot !A_R(\num{n_0}, \dots, \num{n_k})$ ثابت کردا اے۔
+\end{proof}
+
+\begin{prob}
+وکھاؤ کہ جے $R$،~$\Th{Q}$ وچ قابلِ نمائندگی اے، تاں~$\Char{R}$ وی قابلِ نمائندگی اے۔
+\end{prob}
+
+\end{document}

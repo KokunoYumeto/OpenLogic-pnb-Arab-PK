@@ -1,0 +1,96 @@
+% Part: propositional-logic
+% Chapter: propositional-logic 
+% Section: completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{prp}{com}
+
+\olsection{قضیاتی منطق دی تمامیت}
+
+\begin{defn}
+\ollabel{def:MaxCon}
+سیٹ $\Gamma$، جیہڑا !!{formula}s دا اے، \emph{ودھ توں ودھ بے تضاد} اے جے اوہ بے تضاد اے تے جے $\Delta$ ایہو جیہا بے تضاد سیٹ اے کہ $\Gamma
+\subseteq \Delta$، تاں $\Gamma = \Delta$۔
+\end{defn}
+
+\begin{lem}[سچائی دا لیما]
+  \ollabel{lem:truth}
+منّ لو $\Gamma$ ودھ توں ودھ بے تضاد اے۔ فیر:
+\begin{enumerate}
+\item \ollabel{lem:truth-1} $!A \in \Gamma$ اوہدوں تے صرف اوہدوں جدوں $\lnot !A
+  \notin \Gamma$۔
+\item \ollabel{lem:truth-2} $\Gamma \Proves !A$ اوہدوں تے صرف اوہدوں جدوں $!A \in \Gamma$۔
+\item \ollabel{lem:truth-3} $!A \lif !B \in \Gamma$ اوہدوں تے صرف اوہدوں جدوں یا $!A \notin \Gamma$ یا $!B \in \Gamma$۔
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+\begin{enumerate}
+\item منّ لو $!A \in \Gamma$۔ جے $\lnot !A \in \Gamma$ وی اے، تاں $\Gamma$ تضاد والا اے۔ تے جے نہ $!A$ تے نہ $\lnot!A$، $ \Gamma$ وچ اے، تاں \olref[axd]{prop:phi} نال $\Gamma\cup\{!A\}$ تے $ \Gamma \cup \{\lnot !A\}$ وچوں اک بے تضاد اے، یعنی $\Gamma$ ودھ توں ودھ نہیں۔ دوجی سمت دا ثبوت وی ایویں اے۔
+\item جے $!A \in \Gamma$، تاں صاف اے کہ $\Gamma \Proves !A$۔ دوجے پاسے، منّ لو $\Gamma \Proves !A$۔ جے $!A \notin \Gamma$، تاں \olref{lem:truth-1} نال $\lnot !A \in \Gamma$۔ سو $\Gamma \Proves
+  !A$ تے $\Gamma \Proves \lnot !A$، یعنی تضاد۔
+\item مشق۔
+\end{enumerate}
+\end{proof}
+
+\olref{lem:truth}\olref{lem:truth-2} دی کھبّے توں سجّے ول سمت وکھاؤندی اے کہ $\Gamma$ \emph{اخذ دے لحاظ نال بند} اے، یعنی جے $\Gamma \Proves !A$، تاں $!A
+\in \Gamma$ ہر~$!A$ لئی۔
+
+\begin{prob}
+  \olref{lem:truth} دا ثبوت پورا کرو۔
+\end{prob}
+
+\begin{thm}[تمامیت]
+\ollabel{thm:completeness}
+جے $\Gamma$ بے تضاد اے، تاں $\Gamma$ پورا ہون جوگا اے۔
+\end{thm}
+
+\begin{proof}
+منّ لو $!A_0$، $!A_1$،~\dots، زبان دے سارے !!{formula}s دی پوری فہرست اے۔ اسیں !!{formula}s دے سیٹاں دی ودھدی لڑی $\Gamma_0$، $\Gamma_1$،~\dots، بازگشتی طور اُتے ایویں متعین کردے آں:
+\begin{align*}
+\Gamma_0 & = \Gamma\\
+\Gamma_{n+1} &  =
+\begin{cases}
+  \Gamma_n \cup \{!A_n\} & \text{جے $\Gamma_n \cup \{!A_n\}$ بے تضاد اے،}\\
+  \Gamma_n \cup \{\lnot !A_n\} & \text{نئیں تاں}.
+\end{cases}
+\end{align*}
+فیر ایہ متعین کرو:
+\[
+\Gamma^* = \bigcup_{0\le n}\Gamma_n.
+\]
+ہُن ثبوت ہِٹھلیاں گلاں واری واری ثابت کر کے اگے ودھدا اے:
+\begin{enumerate}
+\item ہر $n$ لئی سیٹ $\Gamma_n$ بے تضاد اے ($n$ اُتے استقرا نال، \olref[axd]{prop:phi} ورت کے)۔
+\item $\Gamma^*$ بے تضاد اے۔
+\item $\Gamma^*$ ودھ توں ودھ اے۔
+\end{enumerate}
+فیر قدر بندی $v$ ایویں متعین کرو کہ $v(p_i) = \True$ اوہدوں تے صرف اوہدوں جدوں $p_i \in \Gamma^*$۔ فیر $!A$ اُتے استقرا نال وکھایا جاندا اے کہ $\Gamma^*$ وچ رکنیت، $v$ دے حساب نال سچائی دے برابر اے، ہور گنجل دار !!{sentence}s لئی وی۔ $ \overline{v}(!A) = \True$ اوہدوں تے صرف اوہدوں جدوں $!A \in \Gamma^*$۔ خاص کر، $v$، $\Gamma^*$ اُتے پورا اُتردا اے، تے کیونکہ $\Gamma \subseteq \Gamma^*$، $\Gamma$ وی پورا ہون جوگا اے، جیویں سانوں چاہیدا سی۔
+\end{proof}
+
+\begin{cor}
+جے $\Gamma \Entails !A$، تاں $\Gamma \Proves !A$۔
+\end{cor}
+
+\begin{proof}
+جے $\Gamma\Proves/ !A$، تاں $\Gamma \cup \{\lnot !A\}$ بے تضاد اے، \olref[axd]{prop:prov-incons} نال۔ سو تمامیت دے قضیے نال $\Gamma \cup
+\{\lnot !A\}$ پورا ہون جوگا اے، تے $\Gamma \Entails/ !A$۔
+\end{proof}
+
+\begin{prop}[ٹھوس پن دا قضیہ]
+\ollabel{prop:compactness}
+$\Gamma$ پورا ہون جوگا اے اوہدوں تے صرف اوہدوں جدوں ہر \emph{محدود} ذیلی سیٹ $\Gamma_0$، $ \Gamma$ دا، پورا ہون جوگا اے۔
+\end{prop}
+
+\begin{proof}
+$\Gamma$ پورا ہون جوگا نہیں اوہدوں تے صرف اوہدوں جدوں اوہ تضاد والا اے، اوہدوں تے صرف اوہدوں جدوں کوئی محدود ذیلی سیٹ $\Gamma_0$، $ \Gamma$ دا، تضاد والا اے، اوہدوں تے صرف اوہدوں جدوں کوئی محدود ذیلی سیٹ $\Gamma_0$، $ \Gamma$ دا، پورا ہون جوگا نہیں۔
+\end{proof}
+
+\begin{cor}
+$\Gamma \Entails !A$ اوہدوں تے صرف اوہدوں جدوں کسے محدود ذیلی سیٹ $\Gamma_0$، $ \Gamma$ دے لئی، $\Gamma_0 \Entails !A$۔
+\end{cor}
+
+\end{document}

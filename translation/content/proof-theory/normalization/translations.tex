@@ -1,0 +1,218 @@
+% Part: proof-theory
+% Chapter: normalization
+% Section: translations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{tr}
+
+\olsection{نارمل \Log{N2i}-\usetoken{P}{proof} تے \Log{G2i} وچکار ترجمہ}
+
+!!^{proof}s جیہڑے \Log{N2i} وچ نیں، \Log{G2i} وچ !!{proof}s دے طور اُتے ترجمہ کیتے جا سکدے نیں، تے الٹ پاسے وی۔ پہلاں، قطع توں بناں \Log{2i} !!{proof}s دا ترجمہ کرن نال نارمل \Log{N2i}-!!{proof}s ملدے نیں۔
+
+نتیجہ بیان کرن لئی سانوں کجھ اصطلاحاں چاہیدیاں نیں تاں جو~\Log{N2i} تے~\Log{G2i} وچ سیکوئنٹاں دے کھبّے پاسے آپس وچ سوکھے جوڑ سکیے۔ سیٹ~$\Gamma'$، جیہڑا لیبل والے !!{formula}s دا اے، بغیر لیبل والے !!{formula}s دے کثیر سیٹ~$\Gamma$ \emph{نال میل کھاندا اے} جے ہر !!{formula}~$!A$ لئی، اوہناں !!{element}s دی گنتی جیہڑے~$\Gamma'$ وچ $x : !A$ دی شکل دے نیں،~$!A$ دی~$\Gamma$ وچ نقلاں دی گنتی توں گھٹ یا برابر ہووے۔
+
+\begin{cor}
+جے $\Log{G2i} \Proves \Gamma \Sequent \Delta$، تاں نارمل \Log{N2c}-!!{proof}~$\delta$ موجود اے، جیہڑا $ \Gamma' \Sequent !C$ دا ثبوت اے۔ ایتھے سیٹ~$\Gamma'$ لیبل والے !!{formula}s دا اے تے کثیر سیٹ~$\Gamma$ نال میل کھاندا اے، یعنی ہر !!{formula}~$!A$ لئی، اوہناں !!{element}s دی گنتی جیہڑے~$\Gamma'$ وچ $x : !A$ دی شکل دے نیں،~$!A$ دی کثرت (یعنی~$!A$ دیاں نقلاں دی گنتی) توں گھٹ یا برابر اے،~$\Gamma$ وچ۔
+\end{cor}
+
+\begin{proof}
+\olref[nat][tgi]{prop:G2i-to-N2i} دا ثبوت ویکھ کے ایہ گل نکلدی اے۔ اسیں !!{introduction} قاعدے !!{proof}s دے آخر وچ شامل کردے آں تے !!{elimination} قاعدے صرف !!{proof}s دے اُتّے۔ ایس لئی کدے وی !!{introduction} قاعدہ !!a{elimination} قاعدے توں اُتّے شامل نہیں کردے۔
+\end{proof}
+
+پر \Cut{} قاعدے دا جیہڑا ترجمہ \olref[nat][tgi]{prop:G2i-to-N2i} وچ دِتّا اے، اوہ \Log{N2i}-!!{proof}~$\delta$ وچ قطع پیدا کر سکدا اے۔ جے \Log{G2i} دا !!{proof}~\Cut{} اُتے مُکدا اے، تے اوہدے سدھے ذیلی !!{proof}s $\pi_1$ تے $\pi_2$ بالترتیب $\Gamma_1
+\Sequent !A$ تے $!A, \Gamma_2 \Sequent \Delta_2$ دے نیں، تاں اسیں ترجمہ $\delta_1$، جیہڑا~$\pi_1$ دا اے، اوہناں مسلّمیاں $x:!A
+\Sequent !A$ نال جوڑ دیندے آں جیہڑے ترجمے~$\delta_2$، یعنی~$\pi_2$ دے ترجمے وچ آؤندے نیں۔ جے $\delta_1$، !!a{introduction} قاعدے اُتے مُکدا اے جیہدا مُکھ !!{formula}~$!A$ اے، تے مسلّمہ $x:!A \Sequent !A$ جیہڑا~$\delta_2$ وچ اے، !!a{elimination} قاعدے دا وڈّا مقدمہ اے، تاں ایہدے نال~$\delta$ وچ اک قطع بنے گا۔
+
+ایہ وی ممکن اے کہ !!{proof}s جیہڑے \Log{N2i} وچ نیں، اوہناں دا ترجمہ !!{proof}s دے طور اُتے~\Log{G2i} وچ ہووے۔ \olref[nat][tni]{prop:N2-to-G2} دے ثبوت وچ \Elim{\land}، \Elim{\lif}، \Elim{\lnot} تے \Elim{\lforall} دے ترجمے نال~\Cut{} استنباط، حاصل ہوئے \Log{G2i} !!{proof} وچ آ جاندے نیں۔ پر جے اسیں جیہڑے \Log{N2i}-!!{proof} توں شروع کردے آں … تاں ایہ ٹالیا جا سکدا اے۔
+
+سیکوئنٹاں دیاں موجودگیاں دی لڑی $S_1$، \dots،~$S_n$ نوں \Log{N2i}-!!{proof}~$\delta$ دی \emph{شاخ} آکھدے آں جے $S_1$ اک مسلّمہ اے تے جدوں وی $S_i$ کسے استنباط دا وڈّا مقدمہ اے، $S_{i+1}$ اوہدا نتیجہ اے۔ دوجے لفظاں وچ، شاخ~$\delta$ وچ مسلّمیاں توں تھلّے ول سیکوئنٹاں دے نال نال جاندی اے، پر !!{elimination} قاعدیاں دے چھوٹے مقدمیّاں اُتے رُک جاندی اے۔~$\delta$ دی \emph{مُکھ شاخ} اوہ شاخ اے جیہدے وچ $S_n$ آخری سیکوئنٹ اے۔ ہر !!{proof}~$\delta$ دی گھٹّو گھٹ اک مُکھ شاخ ضرور ہوندی اے، کیونکہ ہر قاعدے دا گھٹّو گھٹ اک وڈّا مقدمہ اے (صرف \Intro{\land} دے دو نیں)۔
+
+\begin{prop}\ollabel{prop:normal-N2i-to-G2i}
+جے $\delta$، نارمل $\Log{N2c}$ یا $\Log{N2i}$-!!{proof} اے~$\Gamma \Sequent !A$ دا، تاں اک (قطع توں بناں) $\Log{G2c}$-!!{proof} ($\Log{G2i}$-!!{proof})~$\pi$ موجود اے جیہڑا $\Gamma' \Sequent \Delta$ دا ثبوت اے۔ ایتھے $\Gamma'$ اوہ کثیر سیٹ اے جیہدے !!{formula}s، $ \Gamma$ دے لیبل ہٹا کے ملدے نیں، تے $\Delta = \{!A\}$ جے $!A$،~$\lfalse$ نہیں، تے $\Delta = \emptyset$ جے اے۔
+\end{prop}
+
+\begin{proof}
+ایس واری استقرا، !!{proof}~$\delta$ جیہڑا $ \Gamma \Sequent !A$ دا اے، اوہدے استنباطاں دی گنتی اُتے اے۔ جے~$\delta$ وچ کوئی استنباط نہیں، تاں اوہ مسلّمہ $x:!A \Sequent !A$ اے، تے $\pi$ اوہدے نال میل کھاندا مسلّمہ $!A \Sequent !A$ اے یا $ \lfalse \Sequent \ $ اے جے $!A
+\ident \lfalse$۔
+
+جے $\delta$ کسے استنباطی قاعدے اُتے مُکدا اے، تاں وکھ وکھ صورتاں ویکھدے آں:
+\begin{enumerate}
+  \item جے $R$، !!a{introduction} قاعدہ یا~\FalseInt اے، تاں ترجمہ عین اوہو جیہا چلدا اے جیہا \olref[nat][tni]{prop:N2-to-G2} دے ثبوت وچ، تے~\Cut دی لوڑ نہیں پیندی۔
+
+  جے آخری قاعدہ~$R$،~$\delta$ دا، !!a{elimination} قاعدہ اے، تاں ہِٹھ لکھیاں گلاں ویکھو:
+  \begin{enumerate}
+    \item~$\delta$ دی مُکھ شاخ کسے !!{introduction} قاعدے تھانیں نہیں لنگھدی، کیونکہ نئیں تاں مُکھ شاخ اُتے !!a{introduction} قاعدے یا~\FalseInt{} توں پچھوں !!a{elimination} قاعدہ آؤندا تے $\delta$ نارمل نہ ہوندا۔
+    \item چونکہ کوئی !!{introduction} قاعدہ~$\delta$ دیاں مُکھ شاخاں اُتے نہیں آؤندا، ایس لئی مُکھ شاخ بس اکّو اے۔ (صرف \Intro{\land} دے دو وڈّے مقدمے نیں، ایس لئی اک توں ودھ مُکھ شاخاں نوں کسے \Intro{\land} قاعدے دے مقدمیّاں تھانیں لنگھنا پیندا۔)
+    \item جے مُکھ شاخ وچ \Elim{\lor} یا \Elim{\lexists} دا وڈّا مقدمہ اے، تاں ایہو جیہا قاعدہ اکّو اے تے اوہ آخری اے، یعنی~$R$۔ (نئیں تاں مُکھ شاخ وچ \Elim{\lor} یا \Elim{\lexists} قاعدہ ہوندا جیہدا نتیجہ !!a{elimination} قاعدے دا وڈّا مقدمہ ہوندا، تے ثبوت نارمل نہ ہوندا، کیونکہ اسیں تھاں بدلّن والی تبدیلی لا سکدے ہوندے۔)
+    \item \Elim{\lor} تے \Elim{\lexists} توں چھُٹ کوئی !!{elimination} قاعدہ مفروضے خارج نہیں کردا، یعنی سیکوئنٹاں دا کھبّا سیاق نہیں بدلدا۔ \Elim{\lor} تے \Elim{\lexists} صرف چھوٹے مقدمے توں اُتّے مفروضے خارج کردے نیں، یعنی صرف اپنے چھوٹے مقدمیّاں دا کھبّا سیاق بدل دے نیں۔ دوجے لفظاں وچ، جے سیکوئنٹ $S_i$ جیہڑا~$\delta$ دی مُکھ شاخ اُتے اے، اوہدا سیاق~$\Gamma_1$ اے، تاں ~$S_{i+1}$، جیہڑا اوس استنباط دا نتیجہ اے جیہدا $S_i$ وڈّا مقدمہ اے، اوہدا سیاق $\Gamma_1' \supseteq \Gamma_1$ اے۔
+    \item ایس لئی جے $x: !C \Sequent !C$ مُکھ شاخ دا سبھ توں اُتّلا سیکوئنٹ~$S_1$ اے، تاں $x:!C \in \Gamma$۔
+  \end{enumerate}
+  ہُن اسیں~$!C$ دی شکل دے حساب نال وکھ وکھ صورتاں ویکھدے آں۔ چونکہ ہر $S_i$ مُکھ شاخ اُتے کسے !!a{elimination} قاعدے دا وڈّا مقدمہ اے، ایس لئی ایہ گل $x:!C \Sequent !C$ اُتے وی لگدی اے۔
+
+  \item $!C \ident !D \land !E$۔ تاں $\delta$ دی شکل ایہ اے:
+  \[
+  \Axiom$x:!D \land !E \fCenter !D \land !E$
+  \RightLabel{\Elim{\land}[1]}
+  \UnaryInf$x:!D \land !E \fCenter !D$
+  \Deduce$x:!D \land !E, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \]
+  مُکھ شاخ وچ $x:!D \land !E \Sequent !D$ آؤندا اے تے اوہدے وچ \Intro{\lif} یا \Intro{\lnot} دا کوئی وڈّا مقدمہ، یا \Elim{\lor} یا \Elim{\lexists} دا کوئی چھوٹا مقدمہ نہیں آؤندا۔ ایس لئی سیاق دے !!{formula}s، جیہڑے $x:!D
+  \land !E$ وچ نیں، مُکھ شاخ اُتے نہیں بدل دے۔ ایس لئی آخری سیکوئنٹ دے سیاق وچ~$x:!D \land !E$ ضرور اے۔
+  نالے اسیں !!{proof} $ \delta$ نوں !!{proof}~$\delta_1$ وچ بدل سکدے آں۔ ایس لئی جیہڑا ذیلی !!{proof}، \Elim{\land} اُتے مُکدا اے، اوہدی تھاں $x:!D \Sequent !D$ رکھو، تے $x:!D \land !E$ دی تھاں مُکھ شاخ دے ہر سیکوئنٹ دے سیاق وچ $x:!D$ رکھو، یعنی ایویں بدلو:
+  \[
+  \bottomAlignProof
+  \Axiom$x:!D \land !E \fCenter !D \land !E$
+  \RightLabel{\Elim{\land}[1]}
+  \UnaryInf$x:!D \land !E \fCenter !D$
+  \Deduce$x:!D \land !E, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \quad\text{ into }\quad
+  \bottomAlignProof
+  \Axiom$x:!D \fCenter !D$
+  \Deduce$x:!D, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \]
+  استقرا دا مفروضہ $\delta_1$ اُتے لگدا اے، کیونکہ $ \delta$ وچ استنباطاں دی گنتی $ \delta'$ وچ استنباطاں دی گنتی توں~$1$ ودھ اے۔
+
+  استقرا دے مفروضے نال، \Log{G2i}-!!{proof} $ \pi_1$ موجود اے $x:!D, \Gamma_1 \Sequent !A$ دا۔
+  !!{proof}~$\pi$، \LeftR{\land} لا کے ملدا اے:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter !A$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter !A$
+  \DisplayProof
+  \]
+  جے $!A \ident \lfalse$ تاں اسیں \RightR{\Weakening} شامل کردے آں، مثلاً:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter $
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter !A$
+  \DisplayProof
+  \]
+  \item جے $!C \ident !D \lor !E$، تاں ایہ \Elim{\lor} دا وڈّا مقدمہ ضرور اے، تے ایہ استنباط مُکھ شاخ دا آخری استنباط~$R$ ضرور اے۔ دوجے لفظاں وچ، $\delta$ دی شکل ایہ اے:
+  \[
+  \Axiom$x:!D \lor !E \fCenter !D \lor !E$
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$y:!D, \Gamma_1 \fCenter!A$
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \Deduce$z:!E, \Gamma_2 \fCenter !A$
+  \RightLabel{\Elim{\lor}}
+  \TrinaryInf$x:!D \lor !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  استقرا دا مفروضہ !!{proof}s $ \delta_1$ تے $ \delta_2$ اُتے لگدا اے۔ سانوں \Log{G2i}-!!{proof}s $ \pi_1$ تے $ \pi_2$، بالترتیب $!D, \Gamma_1' \Sequent !A$ تے $!E, \Gamma_2' \Sequent !A$ دے، ملدے نیں۔$\LeftR{\lor}$ لا کے~$\pi$ ملدا اے:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lor}}
+  \BinaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+  جے $ \Elim{\lor}$، $y: !D$ یا $z: !E$ نوں خارج نہ کرے (یعنی ایہ چھوٹے مقدمیّاں دے سیاق وچ نہ ہون)، یا جے~$!A$، $ \lfalse$ ہووے، تاں سانوں کجھ \LeftR{\Weakening} تے \RightR{\Weakening} شامل کرنے پین گے۔ مثال لئی:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter $
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!D, \Gamma_1' \fCenter $
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma_2' \fCenter $
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!E, \Gamma_2' \fCenter $
+  \RightLabel{\LeftR{\lor}}
+  \BinaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+
+  \item $!C \ident !D \lif !E$۔ تاں $\delta$ دی شکل ایہ اے:
+  \[
+  \Axiom$x:!D \lif !E \fCenter !D \lif !E$
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma_1 \fCenter!D$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$x:!D \lif !E, \Gamma_1 \fCenter !E$
+  \RightLabel{$\delta_2$}
+  \Deduce$x:!D \lif !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  ایتھے ویکھو کہ مُکھ شاخ، جیہدے وچ $x:!D \lif !E,
+  \Gamma_1 \Sequent !E$ آؤندا اے، اوہدے وچ \Intro{\lif} یا \Intro{\lnot} دا کوئی وڈّا مقدمہ، یا \Elim{\lor} یا \Elim{\lexists} دا کوئی چھوٹا مقدمہ نہیں آؤندا۔ ایس لئی سیاق دے !!{formula}s، جیہڑے $x:!D \lif !E, \Gamma_1$ وچ نیں، مُکھ شاخ اُتے نہیں بدل دے۔ ایس لئی آخری سیکوئنٹ دے سیاق وچ~$x:!D \lif !E, \Gamma_1$ ضرور اے۔ نالے اسیں !!{proof} دے ٹوٹے $ \delta_2$ نوں درست !!{proof}~$\delta_2'$ وچ بدل سکدے آں۔ ایس لئی ذیلی !!{proof} جیہڑا \Elim{\lif} اُتے مُکدا اے، اوہدی تھاں $x:!E \Sequent !E$ رکھو، تے $x:!D \lif !E,
+  \Gamma_1$ دی تھاں مُکھ شاخ دے ہر سیکوئنٹ دے سیاق وچ $x:!E$ رکھو، یعنی ایویں بدلو:
+  \[
+  \bottomAlignProof
+  \Axiom$x:!D \lif !E, \Gamma_1 \fCenter !E$
+  \RightLabel{$\delta_2$}
+  \Deduce$x:!D \lif !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \quad\text{ into }\quad
+  \bottomAlignProof
+  \Axiom$x:!E \fCenter !E$
+  \RightLabel{$\delta_2'$}
+  \Deduce$x:!E, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  استقرا دا مفروضہ $\delta_1$ تے $\delta_2'$ اُتے لگدا اے، کیونکہ $ \delta$ وچ استنباطاں دی گنتی، $ \delta_1$ تے~$\delta_2$ وچ استنباطاں دیاں گنتیاں دا جوڑ اے، نال~$1$ مُکھ شاخ دے شروع والے \Elim{\lif} استنباط لئی۔ (جے اوہو استنباط آخری استنباط~$R$ وی اے، $ \delta$ وچ، تاں $ \delta_1$ وچ $0$ استنباط نیں۔)
+
+  استقرا دے مفروضے نال \Log{G2i}-!!{proof}s $ \pi_1$، $ \Gamma_1 \Sequent !D$ دا، تے $ \pi_2$، $!E, \Gamma_1' \Sequent !A$ دا، موجود نیں۔
+  !!{proof}~$\pi$، \LeftR{\lif} لا کے ملدا اے:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter !D$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!D \lif !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+  جے $!D$ یا $!A \ident \lfalse$ ہووے، یا دونے، تاں اسیں اک یا دو \RightR{\Weakening} شامل کردے آں، مثلاً:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$\Gamma_1' \fCenter !D$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!D \lif !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+
+\end{enumerate}
+باقی صورتاں دا حل وی ایویں ای اے تے اوہ مشقاں لئی چھڈّیاں گئیاں نیں۔
+\end{proof}
+
+\begin{cor}
+ہر !!{formula} جیہڑا نارمل \Log{N1i} یا \Log{N2i}-!!{proof} وچ آؤندا اے، اوہ ذیلی !!{formula} اے، آخری !!{formula} یا آخری سیکوئنٹ دا۔
+\end{cor}
+
+\begin{proof}
+\olref{prop:normal-N2i-to-G2i} دے حساب نال ہر نارمل \Log{N2i}-!!{proof} دا ترجمہ \Log{G2i}-!!{proof} وچ ہو سکدا اے۔ ثبوت ویکھ کے پتا لگدا اے کہ ہر !!{formula} جیہڑا \Log{N2i}-!!{proof} وچ آؤندا اے، \Log{G2i}-!!{proof} وچ وی آؤندا اے۔ \Log{G2i} وچ \Cut{} دا قاعدہ نہ ہون کر کے ذیلی !!{formula} والی خاصیت اے۔
+\end{proof}
+
+\end{document}

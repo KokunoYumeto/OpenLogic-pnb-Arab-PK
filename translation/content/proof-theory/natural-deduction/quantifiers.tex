@@ -1,0 +1,129 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{qua}
+
+\olsection{باقاعدہ \usetoken{P}{proof} تے بدلی}
+
+مسوّراں دے قاعدیاں وچ کجھ اوکڑاں «خاص متغیر دیاں شرطاں» کرکے آؤندیاں نیں جیہڑیاں \Elim{\lexists} تے~\Intro{\lforall} قاعدیاں اُتے لگدیاں نیں۔ ایہناں وچوں بہتی اوکڑ دور کیتی جا سکدی اے جے پکا کریئے کہ ایہناں استنباطاں دا !!{constant}~$c$ مُڑ نہ ورتیا جاوے۔ آؤ ہِٹھلی تعریف دیئے۔
+
+\begin{defn}
+قدرتی اخذ دا !!{proof}~$\delta$ \emph{باقاعدہ} اے جے
+\begin{enumerate}
+\item کوئی خاص متغیر~$a$، اک توں ودھ \Elim{\lexists} یا~\Intro{\lforall} استنباط دا خاص متغیر نہیں ورتیا جاندا، تے
+\item جے $a$، \Elim{\lexists} یا~\Intro{\lforall} استنباط دا خاص متغیر اے، تاں ایہ بس اوس سدھے ذیلی !!{proof} وچ آؤندا اے جیہڑا، بالترتیب، چھوٹے مقدمے یا مقدمے تک پہنچدا اے۔
+\end{enumerate}
+\end{defn}
+
+\begin{lem}\ollabel{lem:subst-regular}
+جے $\delta$ باقاعدہ اے،~$!C$ اُتے مُکدا اے، $c$ اک !!a{constant} اے جیہڑا~$\delta$ وچ خاص متغیر نہیں ورتیا جاندا، تے $t$ اک ٹرم اے جیہدے وچ~$\delta$ دا کوئی خاص متغیر نہیں، تاں $\Subst{\delta}{t}{c}$، جیہڑا~$\delta$ وچ~$c$ دی ہر موجودگی نوں~$t$ نال بدل کے ملدا اے، اک باقاعدہ !!{proof} اے۔ آخری !!{formula}، $\Subst{\delta}{t}{c}$ دا، $\Subst{!C}{t}{c}$ اے۔ جے $!A^x$،~$\delta$ دا کھُلّا مفروضہ اے، تاں $\Subst{!A}{t}{c}^x$،~$\Subst{\delta}{t}{c}$ دا کھُلّا مفروضہ اے۔
+\end{lem}
+
+\begin{proof}
+$\pheight{\delta}$ اُتے استقرا نال۔ جے $\pheight{\delta} = 0$، تاں ایہ بس مفروضہ~$!A^x$ اے۔ فیر $\Subst{\delta}{t}{c}$،~$\Subst{!A}{t}{c}^x$ اے۔
+
+جے $\pheight{\delta} > 0$، تاں~$\delta$ دے آخری استنباط مطابق صورتاں وکھ کردے آں۔ قضیائی جوڑاں دے قاعدیاں والیاں صورتاں سوکھیاں نیں تے مشقاں وجوں چھڈیاں نیں۔ اسیں اوہ صورتاں ویکھدے آں جیہناں وچ $\delta$ مسوّر والے استنباط اُتے مُکدا اے۔
+\begin{enumerate}
+\item جے آخری استنباط $\Intro{\lforall}$ اے، تاں $\delta$ دی شکل ایہ اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\delta'$}
+    \DeduceC{$!A(a,c)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x,c)]$}
+    \DisplayProof
+    \]
+استقرا دے مفروضے نال $\Subst{\delta'}{t}{c}$، $!A(a,t)$ دا باقاعدہ !!{proof} اے۔ چونکہ $a$،~$\delta$ دا خاص متغیر اے، ایس لئی $a$،~$t$ وچ نہیں آؤندا۔ سو $\Subst{\delta}{t}{c}$ دا آخری استنباط،
+\[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta'}{t}{c}$}
+    \DeduceC{$!A(a,t)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x,t)]$}
+    \DisplayProof
+    \]
+درست اے۔ کیوں جے $t$ وچ~$a$ نہیں، نہ نتیجے وچ تے نہ کسے کھُلّے مفروضے وچ~$a$ اے۔
+\item جے آخری استنباط $\Elim{\lforall}$ اے، تاں $\delta$ دی شکل ایہ اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\delta'$}
+    \DeduceC{$\lforall[x][!A(x,c)]$}
+    \RightLabel{\Elim{\lforall}}
+    \UnaryInfC{$!A(s(c),c)$}
+    \DisplayProof
+    \]
+استقرا دے مفروضے نال $\Subst{\delta'}{t}{c}$، $\lforall[x][!A(x,t)]$ دا باقاعدہ !!{proof} اے۔ (نتیجے دے ٹرم~$s(c)$ وچ~$c$ ہو سکدا اے، پر ہونا ضروری نہیں۔) $\Subst{\delta}{t}{c}$ دا آخری استنباط،
+\[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta'}{t}{c}$}
+    \DeduceC{$\lforall[x][!A(x,t)]$}
+    \RightLabel{\Elim{\lforall}}
+    \UnaryInfC{$!A(s(t),t)$}
+    \DisplayProof
+    \]
+درست اے، تے $!A(s(t),t) \ident \Subst{!A(s(c),c)}{t}{c}$۔ \Intro{\lexists} والی صورت ایہو جیہی اے۔
+\item جے آخری استنباط $\Elim{\lexists}$ اے، تاں $\delta$ دی شکل ایہ اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\delta_1'$}
+    \DeduceC{$\lexists[x][!A(x,c)]$}
+    \AxiomC{$\Discharge{!A(a,c)}{x}$}
+    \RightLabel{$\delta_2'$}
+    \DeduceC{$!C$}
+    \DischargeRule{\Elim{\lexists}}{x}
+    \BinaryInfC{$!C$}
+    \DisplayProof
+    \]
+استقرا دے مفروضے نال $\Subst{\delta_1'}{t}{c}$ تے $\Subst{\delta_2'}{t}{c}$ باقاعدہ !!{proof}s نیں، پہلا $\lexists[x][!A(x,c)]$ دا تے دوجا $!C$ دا کھُلّے مفروضے~$!A(a,t)$ توں۔ چونکہ $a$،~$\delta$ دا خاص متغیر اے، ایس لئی $a$،~$t$ وچ نہیں آؤندا۔ سو $\Subst{\delta}{t}{c}$ دا آخری استنباط،
+\[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta'}{t}{c}$}
+    \DeduceC{$!A(a,t)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x,t)]$}
+    \DisplayProof
+    \]
+درست اے۔ $\Subst{!A(x,t)}{a}{x} \ident \Subst{!A(a,c)}{t}{c}$، تے نہ نتیجے~$!C$ وچ تے نہ کسے کھُلّے مفروضے وچ~$a$ اے۔
+\end{enumerate}
+\end{proof}
+
+\begin{prop}\ollabel{prop:regular}
+جے $\delta$، \Log{N1c} یا \Log{N1i} وچ اک !!a{proof} اے، تاں اوسے بناوٹ والا اک باقاعدہ !!{proof}~$\delta'$ اے (خاص کر اوہی !!{height}) جیہڑا $\delta$ توں بس خاص متغیر بدلّن نال وکھرا اے۔
+\end{prop}
+
+\begin{proof}
+بس ایس ثبوت لئی،~$\delta$ دے کسے خاص متغیر والے استنباط نوں \emph{صاف} آکھو جے اوہدا خاص متغیر کسے ہور استنباط دا خاص متغیر نہیں تے~$\delta$ وچ اوس استنباط دے سدھے ذیلی !!{proof} توں چھُٹ کِتے وی نہیں آؤندا۔ نہیں تاں اوہنوں \emph{میلا} آکھو۔ منّ لو $n$،~$\delta$ وچ میلے خاص متغیر والے استنباطاں دی گنتی اے۔ اسیں~$n$ اُتے استقرا نال وکھاؤنے آں کہ $\delta$ نوں لوڑ دے باقاعدہ !!{proof}~$\delta'$ وچ بدلیا جا سکدا اے۔ جے $n=0$، تاں~$\delta$ وچ سارے خاص متغیر والے استنباط صاف نیں، سو $\delta$ باقاعدہ اے تے ثابت کرن نوں کجھ نہیں۔ نہیں تاں سبھ توں اُتلا خاص متغیر والا استنباط چُنو، منّ لو \Intro{\lforall}۔ذیلی !!{proof}~$\delta_1$،~$\delta$ دا جیہڑا ایس اُتے مُکدا اے، ایس شکل دا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!A(c)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+    \DisplayProof
+    \]
+دھیان دیو، چونکہ $c$ خاص متغیر اے، ایہ~$\lforall[x][!A(x)]$ یا کسے کھُلّے مفروضے وچ نہیں آؤندا۔ ثبوت $\delta_2$ باقاعدہ اے، کیوں جے اوہدے وچ کوئی خاص متغیر والا استنباط نہیں۔ منّ لو $a$ اک !!a{constant} اے جیہڑا~$\delta$ وچ نہیں آؤندا۔ \olref{lem:subst-regular} نال $\Subst{\delta_2}{a}{c}$، $!A(a)$ دا باقاعدہ ثبوت اے۔ خاص متغیر دی شرط نال~$\delta_2$ دے کسے کھُلّے مفروضے وچ~$c$ نہیں، سو~$\Subst{\delta_2}{a}{c}$ دے کسے کھُلّے مفروضے وچ~$a$ نہیں۔ ایس لئی~$\Intro{\lforall}$ لا سکدے آں۔ جے $\delta_1$ نوں~$\delta$ وچ ثبوت $\delta_1'$ نال بدلیے،
+\[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta_2}{a}{c}$}
+    \DeduceC{$!A(a)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+    \DisplayProof
+    \]
+تاں اک میلا خاص متغیر والا استنباط اک صاف استنباط نال بدل دِتّا اے، تے اکّو فرق ایہ اے کہ خاص متغیر $c$ دی تھاں~$a$ آ گیا اے۔ حاصل ثبوت وچ $n-1$ میلے خاص متغیر والے استنباط نیں، تے نتیجہ استقرا دے مفروضے توں نکلدا اے۔
+\end{proof}
+
+\begin{prob}
+\olref{prop:regular} دے ثبوت دی اوہ صورت دسو جتھے سبھ توں اُتلا خاص متغیر والا استنباط~\Elim{\lexists} اے۔
+\end{prob}
+
+اسیں ہُنے ثابت کیتی گل نوں کھُلھ کے حوالے وجوں نہیں ورتاں گے، پر منّاں گے کہ زیرِ غور سارے !!{proof}s باقاعدہ نیں۔ جے نہیں، تاں خاص متغیر بدل کے اوہناں نوں ہمیشہ باقاعدہ بنا سکدے آں۔
+
+\Olref{lem:subst-regular} تے \olref{prop:regular}، \Log{N2c} تے~\Log{N2i} لئی وی سچ نیں۔ ثبوت مشقاں وجوں چھڈدے آں۔
+
+\end{document}

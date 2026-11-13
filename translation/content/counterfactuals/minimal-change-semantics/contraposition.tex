@@ -1,0 +1,62 @@
+% Part: counterfactuals
+% Chapter: minimal-change-semantics
+% Section: transitivity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{min}{cpo}
+
+\olsection{عکسِ نقیض}
+
+مادی تے سخت شرطیے اپنے عکسِ نقیض دے ہم ارز نیں۔ خلافِ واقعہ شرطیاں لئی
+ایہ گل سچ نہیں۔ کریٹزر دی اک مثال ویکھو:
+\begin{quote}
+  جے گوئٹے 1832 وچ نہ مویا ہوندا، تاں ہُن (فیر وی) مریا ہویا ہوندا۔
+
+  جے گوئٹے ہُن مریا ہویا نہ ہوندا، تاں اوہ 1832 وچ مویا ہوندا۔
+\end{quote}
+پہلا جملہ سچ اے، کیوں جے انسان سیکڑیاں ورھے نہیں جیندے۔ دوجا صاف جھوٹ اے۔
+جے گوئٹے ہُن مریا ہویا نہ ہوندا، تاں اوہ ہجے جیوندا ہوندا، تے ایس لئی
+1832 وچ نہیں مر سکیا ہوندا۔
+
+\begin{ex}\ollabel{ex:contraposition-counterex}
+  گولیاں والی معنیات وچ عکسِ نقیض غیر معتبر اے، یعنی ساڈے کول $p
+  \cif q \Entails/ \lnot q \cif \lnot p$ اے۔ $p$ دا مطلب ’گوئٹے
+  1832 وچ نہیں مویا‘ تے $q$ دا مطلب ’گوئٹے ہُن مریا ہویا اے‘ لو۔
+  ایہ گل نمونے $\mModel{M_1} = \tuple{W, O, V}$ وچ دکھا سکدے آں، جیہدے وچ
+  $W = \{w, w_1, w_2\}$، $O = \{\{w\}, \{w, w_1\}, \{w, w_1, w_2\}\}$،
+  $V(p) = \{w_1, w_2\}$ تے $V(q) = \{w, w_1\}$۔ سو $w$ اصل جہان اے
+  جتھے گوئٹے 1832 وچ مویا تے ہجے وی مریا ہویا اے۔ $w_1$ اوہ (نیڑلا)
+  جہان اے جتھے گوئٹے، منّ لو، 1833 وچ مویا تے ہجے وی مریا ہویا اے۔
+  تے $w_2$ اوہ (دُور دا) جہان اے جتھے گوئٹے ہجے وی جیوندا اے۔
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.6,layerwidth=1.5]\tiny
+  \spheresystem{3}
+  \begin{scope}
+    \clip \propositionplot{0}{.8}{50}{4.5} -- (4.5,-4.5) -- (-4.5,-4.5) -- (-4.5,4.5) -- (4.5,4.5);
+    \spherelayer{3}
+  \end{scope}
+  \propositionintersect{0}{2}{110}{5.5}
+  \proposition{0}{.8}{50}{4.5}
+  \path (0,0) node[world] {$w$};
+  \spherepos{0}{2}{node[world] {$w_1$}}
+  \spherepos{-50}{3}{node[world] {$w_2$}}
+  \spherepos{28}{3}{node {$q$}}
+  \spherepos{42}{3}{node {$\lnot q$}}
+  \spherepos{-55}{4}{node {$p$}}
+  \spherepos{-67}{4}{node {$\lnot p$}}
+\end{tikzpicture}
+\caption{عکسِ نقیض دی ردّی مثال}
+\ollabel{fig:contraposition}
+\end{center}
+\end{figure}
+$p$ نوں تھاں دین والا گولا $S = \{w, w_1\}$ موجود اے تے $p \lif q$
+اوہدے سارے جہاناں اُتے سچ اے، سو $\mSat{M}{p \cif q}[w]$۔ پر $\lnot q$
+نوں تھاں دین والا گولا $\{w, w_1, w_2\}$ وچ اک ایہو جیہا جہان اے،
+یعنی~$w_2$، جتھے $q$ جھوٹ تے $p$ سچ اے، سو $\mSat/{M}{\lnot q \lif \lnot p}[w_2]$۔
+\end{ex}
+
+\end{document}

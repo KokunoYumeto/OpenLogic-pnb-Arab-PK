@@ -1,0 +1,147 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ptn}}
+      {\olfileid{pl}{axd}{ptn}}
+
+\olsection{ثبوتی-نظریاتی تصورات (Proof-Theoretic Notions)}
+
+\begin{explain}
+جیویں اسیں کئی اہم معنوی تصورات
+(\iftag{FOL}{منطقی اعتبار}{ہمیشہ صادق ہونا}، منطقی نتیجہ، پورا ہون
+جوگتا) دی تعریف دتی اے، ہُن اسیں اوہناں دے مطابق
+\emph{ثبوتی-نظریاتی تصورات} دی تعریف دیندے آں۔ ایہناں دی تعریف
+!!{sentence}s دے !!{structure}s وچ پورا اترن ول رجوع کر کے نہیں،
+بلکہ کجھ فارمولیاں دے !!{derivability} یا !!{nonderivability} ول
+رجوع کر کے دتی جاندی اے۔ ایہناں دوہاں طرح دے تصورات دا اک دوجے
+نال میل کھانا اک اہم دریافت سی۔ ایس میل دا بیان \emph{صحت مندی}
+تے \emph{تمامیت دے قضیاں} وچ اے۔
+\end{explain}
+
+\begin{defn}[!!^{derivability}]
+!!^a{formula}~$!A$، $\Gamma$ توں \emph{!!{derivable}} اے، جیہنوں
+$\Gamma \Proves !A$ لکھدے آں، جے~$\Gamma$ توں !!a{derivation}
+موجود ہووے جیہڑا $!A$ اُتے ختم ہووے۔
+\end{defn}
+
+\begin{defn}[قضیے]
+!!^a{formula}~$!A$ اک \emph{قضیہ} اے جے خالی سیٹ توں $!A$ دا
+!!a{derivation} موجود ہووے۔ اسیں $\Proves !A$ لکھدے آں جے $!A$
+قضیہ اے، تے $\Proves/ !A$ لکھدے آں جے نہیں۔
+\end{defn}
+
+\begin{defn}[بے تضادی]
+!!{formula}s دا سیٹ~$\Gamma$ \emph{بے تضاد} اے اُدوں تے صرف اُدوں
+جدوں $\Gamma\Proves/ \lfalse$؛ نہیں تاں ایہ \emph{متضاد} اے۔
+\end{defn}
+
+\begin{prop}[انعکاسیت]
+\ollabel{prop:reflexivity}
+جے $!A \in \Gamma$، تاں $\Gamma \Proves !A$۔
+\end{prop}
+
+\begin{proof}
+  !!{formula}~$!A$ اپنے آپ وچ~$!A$ دا~$\Gamma$ توں
+  !!a{derivation} اے۔
+\end{proof}
+
+\begin{prop}[یک رُخیت]
+\ollabel{prop:monotonicity}
+جے $\Gamma \subseteq \Delta$ تے $\Gamma \Proves !A$، تاں $\Delta
+\Proves !A$۔
+\end{prop}
+
+\begin{proof}
+$!A$ دا~$\Gamma$ توں کوئی وی !!{derivation}، $!A$ دا~$\Delta$
+توں وی !!a{derivation} اے۔
+\end{proof}
+
+\begin{prop}[تعدیت]
+\ollabel{prop:transitivity}
+جے $\Gamma \Proves !A$ تے $\{!A\} \cup \Delta \Proves
+!B$، تاں $\Gamma \cup \Delta \Proves !B$۔
+\end{prop}
+
+\begin{proof}
+  فرض کرو $\{!A\} \cup \Delta \Proves !B$۔ تاں اک
+  !!a{derivation} $!B_1$، \dots، $!B_l = !B$،~$\{!A\} \cup
+  \Delta$ توں موجود اے۔ اوس !!{derivation} دے کجھ قدم ایسے
+  قاعدے دی وجہ توں درست ہون گے جیہڑا پہلے آ چکی سطر~$!B_i = !A$
+  دا حوالہ دیندا اے۔ مفروضے مطابق $!A$ دا~$\Gamma$ توں
+  !!a{derivation} موجود اے، یعنی !!a{derivation}~$!A_1$، \dots،
+  $!A_k = !A$، جیہدے ہر $!A_i$ یا تاں مسلّمہ اے، یا~$\Gamma$
+  دا !!a{element} اے، یا استنباط دے قاعدے نال درست اے۔ ہُن
+  ایہ سلسلہ ویکھو:
+  \[
+  !A_1, \dots, !A_k = !A, !B_1, \dots, !B_l = !B.
+  \]
+% PNBAXD-001: آخری وضاحت وچ B_i دے چھڈے ہوے فارمولا نشان نوں بحال کیتا۔
+% PNBAXD-002: تین ممکن جوازاں لئی ماخذ دے صرف قاعدہ آکھن نوں جواز کیتا۔
+  ایہ~$!B$ دا $\Gamma \cup \Delta$ توں درست !!{derivation} اے،
+  کیوں جے ہر $!B_i = !A$ ہُن اوہو جواز رکھدا اے جیہڑا~$!A_k = !A$
+  نوں درست ٹھہراندا اے۔
+\end{proof}
+
+دھیان دیو کہ ایس دا خاص مطلب ایہ اے: جے $\Gamma \Proves !A$ تے $!A
+\Proves !B$، تاں $\Gamma \Proves !B$۔ ایہ وی نکلدا اے کہ جے $!A_1,
+\dots, !A_n \Proves !B$ تے $\Gamma \Proves !A_i$ ہر~$i$ لئی، تاں
+$\Gamma \Proves !B$۔
+
+\begin{prop}
+\ollabel{prop:incons}
+$\Gamma$ اُدوں تے صرف اُدوں متضاد اے جدوں $\Gamma \Proves !A$ ہر~$!A$ لئی۔
+\end{prop}
+
+\begin{proof}
+مشق۔
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][axd][ptn]{prop:incons} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][axd][ptn]{prop:incons} ثابت کرو۔
+\end{prob}
+\tagendprob
+
+\begin{prop}[محدود گواہی (Compactness)]
+\ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item جے $\Gamma \Proves !A$، تاں اک محدود ذیلی سیٹ $\Gamma_0
+    \subseteq \Gamma$ ایہو جہا اے کہ $\Gamma_0 \Proves !A$۔
+  \item جے~$\Gamma$ دا ہر محدود ذیلی سیٹ بے تضاد اے، تاں
+    $\Gamma$ بے تضاد اے۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+% PNBAXD-012: پہلی درجے دے اخذ وچ مسوّری قاعدیاں تے اوہناں دی غیر حاضری شرط نوں وی شامل کیتا۔
+    \item جے $\Gamma \Proves !A$، تاں !!{formula}s دا اک محدود
+      سلسلہ $!A_1$، \dots،~$!A_n$ موجود اے جیہدے لئی
+      $!A \ident !A_n$ اے؛ ہر $!A_i$ یا تاں منطقی مسلّمہ اے، یا
+      ~$\Gamma$ دا !!a{element} اے، یا پچھلے !!{formula}s توں
+      قاعدۂ اثباتِ مقدم نال، یا پہلی درجے دی منطق وچ مسوّراں دے
+      مقررہ استنباطی قاعدے نال، نکلدا اے۔ $\Gamma_0$ اوہناں $!A_i$
+      دا سیٹ لو جیہڑے~$\Gamma$ وچ نیں۔ تاں اوہ !!{derivation}
+      ایسے طرح~$\Gamma_0$ توں وی !!a{derivation} اے: مسوّری قاعدے
+      دا خاص مستقل اصل مفروضیاں وچ غیر حاضر سی، ایس لئی چُنے ہوے
+      ذیلی سیٹ وچ وی غیر حاضر رہندا اے؛قاعدے دیاں باقی غیر حاضری
+      شرطاں وی نہیں بدلّدیاں۔ تے ایس لئی
+      $\Gamma_0 \Proves !A$۔
+    \item ایہہ (1) دا برعکس بالمخالف اے، اوس خاص حالت وچ جدوں $!A
+      \ident \lfalse$۔
+\end{enumerate}
+\end{proof}
+
+\end{document}

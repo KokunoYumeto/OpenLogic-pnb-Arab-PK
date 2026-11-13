@@ -1,0 +1,199 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: rules-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{rp}
+
+\olsection{قاعدے تے \usetoken{P}{proof}}
+
+اسیں پہلاں کجھ تعریفاں دیندے آں تے کجھ اصطلاحاں مقرر کردے آں۔
+
+\Log{N1c} تے~\Log{N1i} دے اوہ دو قاعدے ویکھو جیہناں وچ $!A
+\lif !B$ آؤندا اے۔
+\[
+\bottomAlignProof
+\AxiomC{$\Discharge{!A}{x}$}
+\shortDeduce
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\DisplayProof
+\qquad
+\bottomAlignProof
+\AxiomC{$!A \lif !B$}
+\AxiomC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+\Elim{\lif} قاعدہ کافی سوکھا اے۔ لکیر توں اُتلے !!{formula}s \emph{مقدمے} نیں۔ کھبّے والا !!{formula}، \emph{مُکھ} !!{formula}~$!A \lif !B$ اے۔ سارے !!{elimination} قاعدیاں دا اک ایہو جیہا مقدمہ اے، ہمیشہ سبھ توں کھبّے۔ ایہنوں استنباط دا \emph{وڈا} مقدمہ آکھدے آں۔ جے ہور مقدمے ہون، جیویں ایس صورت وچ، تاں اوہناں نوں \emph{چھوٹے} مقدمے آکھدے آں۔ !!{introduction} قاعدے دے مقدمے یا مقدمیّاں نوں وی وڈا مقدمہ یا وڈے مقدمے آکھدے آں۔ لکیر توں تھلّا !!{formula} \emph{نتیجہ} اے۔
+
+\Intro{\lif} قاعدے دا اکّو مقدمہ اے، تے ایتھے نتیجہ مُکھ فارمولا~$!A \lif !B$ اے۔ سارے !!{introduction} قاعدے ایہو جیہے نیں۔ نتیجہ مُکھ فارمولا اے، تے اوہدا مُکھ عامل اوہی اے جیہڑا «شامل» کیتا جاندا اے۔
+
+لکھت $\Discharge{!A}{x}$ دا مطلب ایہ اے۔ !!a{proof} وچ، \Intro{\lif} استنباط !!a{formula}~$!B$ نوں مقدمے وجوں لے کے لایا جاندا اے۔~$!B$ اُتے مُکدا ذیلی !!{proof} کجھ مُڈھلے !!{formula}s رکھدا اے۔ ایہناں نوں \emph{مفروضے} آکھدے آں۔ !!^a{proof}~$!B$ دا،~$!A$ دی شکل دے اک یا ودھ مفروضیاں توں، ایس گل دا !!a{proof} اے کہ $!A$ توں~$!B$ منطقی طور اُتے نکلدا اے۔ جدوں \Intro{\lif} قاعدہ لاؤنے آں تاں~$!A
+\lif !B$ نتیجہ ملدا اے، تے نتیجہ مفروضے~$!A$ اُتے ہور نہیں ٹِکدا۔ ایہ دَسن لئی~$!A$ دی شکل والے مفروضے اوس !!{proof} وچ، جیہدے وچ~\Intro{\lif} استنباط شامل اے، \emph{خارج} یا \emph{بند} کر دِتّے جاندے نیں۔ قاعدہ دسدا اے کہ کیہڑے مفروضے خارج ہو سکدے نیں۔ \Intro{\lif} دی صورت وچ، جیہدا نتیجہ $!A \lif !B$ اے، ایہ اوہ مفروضے نیں جیہڑے~$!A$ دی شکل دے نیں، یعنی شرطیے دے مقدم نال میل کھاندے نیں۔ کدے کدے ایہ دَسنا اہم اے کہ کیہڑا مفروضہ کیہڑے قاعدے اُتے خارج ہویا۔ ایس لئی اخراج دا نشان~$x$ ورتدے آں۔ اہم گل ایہ اے کہ مفروضے خارج کرن والے قاعدیاں لئی ایہ \emph{ضروری نہیں} کہ ڈھکدی شکل والے \emph{سارے} مفروضے خارج کرن، یا کوئی وی خارج کرن۔ مثلاً ہِٹھلا ثبوت ٹھیک اے، بھاویں پہلا \Intro{\lif} کوئی مفروضہ خارج نہیں کردا:
+\[
+\AxiomC{$\Discharge{!A}{y}$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !A$}
+\DischargeRule{\Intro{\lif}}{y}
+\UnaryInfC{$!A \lif (!B \lif !A)$}
+\DisplayProof
+\]
+جدوں قاعدہ کوئی مفروضہ خارج نہیں کردا، اسیں اخراج دا نشان نہیں لاؤندے (جیویں ایتھے کیتا)۔
+
+ایس !!{proof} وچ
+\[
+\AxiomC{$\Discharge{!A}{x}$}
+\AxiomC{$\Discharge{!A}{y}$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !A$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !A$}
+\DischargeRule{\Intro{\lif}}{y}
+\UnaryInfC{$!A \lif (!A \lif !A)$}
+\DisplayProof
+\]
+پہلا \Intro{\lif} استنباط کھبّا مفروضہ $!A^x$ خارج کردا اے، تے دوجا سجّا مفروضہ~$!A^y$۔ یعنی نشان~$x$ والے سارے مفروضے \Intro{\lif} نال خارج ہوندے نیں جیہدا نشان~$x$ اے، تے نشان~$y$ والے سارے مفروضے اوس نال جیہدا نشان~$y$ اے۔ ایہ کم کرن لئی ضروری اے کہ اکّو نشان والے سارے مفروضے اوہی !!{formula} ہون۔
+
+مسوّراں دے قاعدے ذرا گنجل دار نیں۔ مثلاً \Log{N1i} وچ $\lexists$ دے قاعدے ایہ نیں:
+\[
+\bottomAlignProof
+\AxiomC{$!A(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A(x)]$}
+\DisplayProof
+\qquad
+\bottomAlignProof
+\AxiomC{$\lexists[x][!A(x)]$} 
+\AxiomC{$\Discharge{!A(c)}{x}$}
+\shortDeduce
+\DeduceC{$!B$}
+\DischargeRule{\Elim{\lexists}}{x}
+\BinaryInfC{$!B$} \DisplayProof 
+\bottomAlignProof
+\]
+\Intro{\lexists} قاعدے وچ مقدمہ~$!A(t)$ اے، جتھے $t$ بند ٹرم اے، یعنی اوہدے وچ کوئی متغیر نہیں۔ ایہو جیہا استنباط ٹھیک اے، یعنی قاعدے دے خاکے \Intro{\lexists} نال میل کھاندا اے، جے کوئی !!{formula}~$!A$، کوئی متغیر~$x$، تے کوئی بند ٹرم~$t$ ایہو جیہے ہون کہ نتیجہ $\lexists[x][!A]$ ہووے تے مقدمہ~$\Subst{!A}{t}{x}$۔ \Elim{\lexists} سانوں~$!A(c)$ دی شکل والے مفروضے خارج کرن دی کھُل دیندا اے۔ یعنی ہر استنباط لئی کوئی !!{constant}~$c$ اے تے $\Subst{!A}{c}{x}$ دی شکل والے مفروضے خارج ہو سکدے نیں۔ اک استنباط دے سارے خارج کیتے مفروضیاں وچ اوہی~$c$ ورتیا جانا چاہیدا اے۔ ایس ثابت نوں \Elim{\lexists} استنباط دا \emph{خاص متغیر} آکھدے آں۔ استنباط اوہدوں ای ٹھیک اے جدوں $c$ نہ خارج کیتے~$!A(c)$ توں وکھرے کسے کھُلّے مفروضے وچ آوے، نہ~$!B$ وچ، تے نہ~$!A$ وچ۔ ایہنوں \emph{خاص متغیر دی شرط} آکھدے آں۔
+
+!!^{proof}s، \Log{N1c} تے~\Log{N1i} وچ، سیکوئنٹاں دے محدود درخت نیں جیہڑے مسلّمیاں توں استنباطی قاعدیاں نال استقرائی طور اُتے بندے نیں۔ ہر پتّا اک مفروضہ اے، جیہدے اُتے اخراج دا نشان ہو سکدا اے۔ باقی ہر !!{formula} اپنے عین اُتلے !!{formula}s توں نظام دے کسے استنباطی قاعدے نال نکلدا اے۔ جے کسے استنباط توں اُتلے درخت وچ مفروضے وجوں آئی !!{formula} دی موجودگی نوں اوہدے اُتلے کسے استنباط نے خارج نہیں کیتا، تاں اوہنوں (اوس استنباط اُتے) \emph{کھُلّا} آکھدے آں۔
+
+\begin{defn}\ollabel{defn:proof}
+\emph{!!^{proof}s}، \Log{N1c} تے~\Log{N1i} وچ، !!{formula}s دے محدود درخت نیں جیہڑے استقرا نال ایویں بندے نیں:
+\begin{enumerate}
+\item\ollabel{defn:prf:assumption} ہر !!{formula} جیہدے اُتے $x$ یا $y$ ورگا اخراج دا نشان اے، اپنے آپ وچ !!a{proof} اے۔ !!a{proof} وچ جیہڑا اکّو !!{formula} دا اے، !!{formula} کھُلّا مفروضہ منّیا جاندا اے۔
+\item\ollabel{defn:prf:one-prem} جے $R$ اک، دو یا تِن مقدمیّاں $!A_1$، $!A_2$، $!A_3$ والا قاعدہ اے جیہدا نتیجہ~$!A$ اے، تے $\delta_1$، $\delta_2$، $\delta_3$ اوہ !!{proof}s نیں جیہڑے بالترتیب $!A_1$، $!A_2$، $!A_3$ اُتے مُکدے نیں، تاں
+\[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \RightLabel{$R$}
+  \UnaryInfC{$!A$}
+  \DisplayProof
+\qquad
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \RightLabel{$R$}
+  \BinaryInfC{$!A$}
+  \DisplayProof
+\qquad
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \DeduceC{$!A_2$}
+  \RightLabel{$R$}
+  \TrinaryInfC{$!A$}
+  \DisplayProof
+  \]
+بالترتیب !!a{proof} اے، جے !!{proof}s دے مفروضیاں دے نشان آپس وچ میل کھاندے ہون (دو وکھرے !!{formula}s دا اکّو اخراج نشان نہ ہووے) تے استنباط~$R$ دی درست ورتوں ہون۔
+\item نویں !!{proof} وچ سبھ توں اُتلیاں !!{formula} دیاں موجودگیاں !!{proof} دے \emph{کھُلّے مفروضے} منّیاں جاندیاں نیں جے اوہ $\delta_1$، $\delta_2$ یا~$\delta_3$ دے کھُلّے مفروضے ہون، قاعدے نال خارج کیتیاں موجودگیاں توں چھُٹ۔ جے قاعدے دا نشان~$x$ (یا $x\, y$) اے، تاں \Intro{\lif} تے~\Intro{\lnot} لئی ایہ~$\delta_1$ وچ~$x$ نشان والے سارے کھُلّے مفروضے نیں۔ \Elim{\lexists} لئی ایہ~$x$ نشان والے سارے کھُلّے مفروضے نیں~$\delta_2$ وچ۔ \Elim{\lor} لئی ایہ~$x$ نشان والے سارے کھُلّے مفروضے نیں~$\delta_2$ وچ تے~$y$ نشان والے سارے کھُلّے مفروضے نیں~$\delta_3$ وچ۔
+\end{enumerate}
+\end{defn}
+
+!!{proof}s جیہڑے !!a{proof} دی استقرائی اُساری وچ ورتے جاندے نیں، اوہدے \emph{ذیلی !!{proof}s} آکھے جاندے نیں۔ کسے استنباط دے مقدمیّاں اُتے مُکّن والے ذیلی !!{proof}s نوں اوس استنباط دے \emph{سدھے ذیلی !!{proof}s} آکھدے آں۔ \Log{N2c} تے \Log{N2i} دے قاعدے \olref{tab:N1} وچ دِتّے نیں۔
+
+\subfile{rules-N1}
+
+\begin{defn}
+\emph{!!{height}}~$\pheight{\delta}$، !!a{proof}~$\delta$ دی، استقرا نال ایویں تعریف ہوندی اے۔
+\begin{enumerate}
+\item جے $\delta$ بس اک مفروضہ اے، تاں $\pheight{\delta} = 0$۔
+\item جے $\delta$ اک مقدمے والے استنباط اُتے مُکدا اے جیہدا سدھا ذیلی !!{proof}~$\delta_1$ اے، تاں $\pheight{\delta} = \pheight{\delta_1} + 1$۔
+\item جے $\delta$ دو مقدمیّاں والے استنباط اُتے مُکدا اے جیہدے سدھے ذیلی !!{proof}s~$\delta_1$ تے~$\delta_2$ نیں، تاں $\pheight{\delta} =
+  \max(\pheight{\delta_1}, \pheight{\delta_2}) + 1$۔
+\item جے $\delta$، \Elim{\lor} اُتے مُکدا اے جیہدے سدھے ذیلی !!{proof}s~$\delta_1$، $\delta_2$ تے~$\delta_3$ نیں، تاں $\pheight{\delta} =
+  \max(\pheight{\delta_1}, \pheight{\delta_2}, \pheight{\delta_3}) + 1$۔
+\end{enumerate}
+جے سیکوئنٹ~$S$ دا !!a{proof} اے جیہدی اُچائی $\le n$ اے، تاں اسیں $\Proves[n] S$ لکھدے آں۔
+\end{defn}
+
+\begin{ex}
+\Log{N1i} وچ ہر !!{formula} اپنے آپ توں، کھُلّے مفروضے وجوں، !!a{proof} منّیا جاندا اے۔ سو
+\[
+!A \land !B^x
+\]
+!!a{proof}~$\delta_1$ اے۔ اوہدی اُچائی~$0$ اے۔ $\delta_1$ توں دو !!{proof}s~$\delta_2$ تے~$\delta_3$ لے سکدے آں،~\Elim{\land} دے دو روپاں وچوں اک لا کے:
+\[
+\AxiomC{$!A \land !B^x$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\qquad
+\AxiomC{$!A \land !B^x$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\DisplayProof
+\]
+آخری استنباط دے سدھے ذیلی !!{proof}s،~$\delta_2$ تے~$\delta_3$ وچ، اوہی نیں: $!A \land !B$۔ دوہاں !!{proof}s وچ $!A\land !B$ دی موجودگی کھُلّے مفروضے وجوں اے۔ ساڈے کول $\pheight{\delta_1} = \pheight{\delta_2} = 1$ اے۔
+
+قاعدے \Intro{\land} نوں $!B$ تے $!A$ دی شکل دے دو مقدمے چاہیدے نیں تاں جو~$!B \land !A$ دی شکل دا نتیجہ ملے۔ سو ہِٹھلا !!a{proof}~$\delta_4$ اے:
+\[
+\AxiomC{$!A \land !B^x$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\LeftSubproofLabel{$\delta_2$}
+\AxiomC{$!A \land !B^x$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\RightSubproofLabel{$\delta_3$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !A$}
+\DisplayProof
+\]
+اوہدی اُچائی $\pheight{\delta_4} = \max(\pheight{\delta_2},
+\pheight{\delta_3})+1 = \max(1,1) + 1 = 2$ اے۔ اوہدے وچ $!A \land !B$ دیاں دو موجودگیاں مفروضے وجوں نیں، تے دوویں کھُلّیاں نیں۔
+
+آخر \Intro{\lif} لا کے $\delta_5$ لے سکدے آں:
+\[
+\AxiomC{$\Discharge{!A \land !B}{x}$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\LeftSubproofLabel{$\delta_2$}
+\AxiomC{$\Discharge{!A \land !B}{x}$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\RightSubproofLabel{$\delta_3$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !A$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$(!A \land !B) \lif (!B \land !A)$}
+\DisplayProof
+\]
+اوہدی اُچائی $\pheight{\delta_4} + 1 = 3$ اے۔ \Intro{\lif} استنباط $!A \land !B$ دی شکل والے مفروضیاں دیاں ساریاں موجودگیاں خارج کردا اے جیہناں اُتے~$x$ دا نشان اے، یعنی سدھے ذیلی ثبوت دے پہلاں کھُلّے دوویں مفروضے۔ چونکہ ایہو $\delta_5$ دے اکّو اک مفروضے نیں، اوہدا کوئی کھُلّا مفروضہ نہیں۔ ایس لئی ایہ !!a{proof} اے اپنے آخری !!{formula} \emph{دا}، جیہڑا $(!A \land !B) \lif (!B \land !A)$ اے۔
+\end{ex}
+
+\end{document}

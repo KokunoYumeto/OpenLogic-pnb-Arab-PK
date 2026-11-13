@@ -1,0 +1,300 @@
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: countermodels
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{cou}
+
+\olsection{\usetoken{P}{tableau} توں ردّی نمونے}
+
+\begin{explain}
+  تمامیت قضیے دا ثبوت وکھاؤندا اے کہ جے $\Entails !A$، تاں
+  $\Proves !A$۔ ایہ~$!A$ لئی ردّی نمونہ بناؤن دا طریقہ وی دیندا اے،
+  جے $\Entails/ A$۔~$\Log{K}$ دی صورت وچ ایہ طریقہ \emph{فیصلہ کرن
+    دا طریقہ} اے۔ منّ لو $\Entails/ !A$۔ تاں
+  \olref[cpl]{prop:complete-tableau} دے ثبوت توں مکمل !!{tableau}
+  بناؤن دا اک طریقہ ملدا اے۔ ایہ طریقہ ہمیشہ مک جاندا اے۔
+  ~$\Log{K}$ دے قضیاتی قاعدے صرف گھٹ پیچیدگی والے اگیتے والے
+  !!{formula}s جوڑدے نیں، یعنی ہر نشان والے فارمولے $\sFmla{S}{!A}[\sigma]$
+  لئی اک شاخ اُتے ہر قضیاتی قاعدہ اک واری لانا کافی اے۔ نویں اگیتے صرف
+  \iftag{prvBox}{$\TRule{\False}{\Box}$}{}\iftag{notprvBox,notprvDiamond}{}{
+    تے }\iftag{prvDiamond}{$\TRule{\True}{\Diamond}$}{}
+  \iftag{notprvBox,notprvDiamond}{قاعدے}{قاعدیاں} توں ملدے نیں۔
+  ایہ وی اک واری لانے کافی نیں (تے اکّو نواں اگیتا دیندے نیں)۔
+  \iftag{prvBox}{$\TRule{\True}{\Box}$}{}\iftag{notprvBox,notprvDiamond}{}{
+    تے }\iftag{prvDiamond}{$\TRule{\False}{\Diamond}$}{}
+  \iftag{notprvBox,notprvDiamond}{قاعدہ}{قاعدے} اک توں ودھ وار لانے پے
+  سکدے نیں، پر ہر اگیتے لئی اکّو واری۔ نویں اگیتے محدود گنتی وچ ای
+  بندے نیں۔ سو محدود پڑاواں پچھوں ایس بناوٹ توں یا بند شاخ ملدی اے
+  یا مکمل شاخ۔
+
+جدوں کھلی مکمل شاخ والا تابلو بن جائے، تاں
+  \olref[cpl]{thm:tableau-completeness} دا ثبوت سانوں اوہ عین نمونہ
+  دیندا اے جیہڑا اگیتے والے !!{formula}s دے اصل سیٹ نوں پورا کردا اے۔
+  سو جے $\Gamma \Entails !A$، تاں بند !!{tableau} موجود اے تے
+  $\Gamma \Proves !A$۔ تے جے بند !!{tableau} نوں ٹھیک طریقے نال لبھدیاں
+  اک «مکمل» !!{tableau} ملے، تاں سانوں $\Gamma \Entails/ !A$ دا پتا
+  لگے گا تے اسیں ردّی نمونہ وی بنا سکاں گے۔
+\end{explain}
+
+\iftag{prvBox}{
+\begin{ex}
+  سانوں پتا اے کہ $\Proves/ \Box(p \lor q) \lif (\Box p \lor \Box
+  q)$۔ تابلو بناؤن دا مڈھ ایویں اے:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]}, 
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1}, 
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2}, 
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  !!{tableau} ہجے پورا نہیں ہویا۔ اگلے پڑا وچ اسیں اوہ اکّو سطر ویکھدے
+  آں جیہدے اُتے صحیح دا نشان نہیں، یعنی اگیتے والا !!{formula}
+  $\sFmla{\True}{\Box(p \lor q)}[1]$ سطر~$2$ اُتے۔ بند تابلو بناؤن لئی
+  $\TRule{\True}{\Box}$ دا قاعدہ شاخ اُتے ورتے ہوئے ہر اگیتے لئی لانا
+  اے، یعنی $1.1$ تے $1.2$ دونہاں لئی:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]}, 
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1}, 
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2}, 
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                  [\pFmla{\True}{p \lor q}{1.1}, 
+                    just = {\TRule{\True}{\Box}[2]}
+                    [\pFmla{\True}{p \lor q}{1.2}, 
+                      just = {\TRule{\True}{\Box}[2]}
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  ہُن سطر 2، 8 تے 9 اُتے صحیح دے نشان نہیں۔ پر کوئی نواں اگیتا نہیں
+  جڑیا، ایس لئی اسیں $\TRule{\True}{\lor}$ سطر 8 تے 9 اُتے، ملن والیاں
+  ساریاں شاخاں وچ (جنا چر اوہ بند نہیں ہوندیاں)، لاؤندے آں:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1}, 
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2}, 
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                  [\pFmla{\True}{p \lor q}{1.1}, 
+                    just = {\TRule{\True}{\Box}[2]}, checked
+                    [\pFmla{\True}{p \lor q}{1.2}, 
+                      just = {\TRule{\True}{\Box}[2]}, checked
+                      [\pFmla{\True}{p}{1.1},
+                        just = {\TRule{\True}{\lor}[8]}, checked, close
+                      ]
+                      [\pFmla{\True}{q}{1.1},
+                        just = {\TRule{\True}{\lor}[8]}, checked
+                        [\pFmla{\True}{p}{1.2},
+                          just = {\TRule{\True}{\lor}[9]}, checked]
+                        [\pFmla{\True}{q}{1.2},
+                          just = {\TRule{\True}{\lor}[9]}, checked, close]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  اک کھلی شاخ بچدی اے، تے اوہ مکمل اے۔ اوس توں اسیں نمونہ متعین کردے آں۔
+  جہان $W = \{1, 1.1, 1.2\}$ نیں (کھلی شاخ اُتے آؤن والے ای اگیتے)،
+  رسائی دا تعلق $R = \{\tuple{1, 1.1}, \tuple{1, 1.2}\}$ اے، تے قدر بندی
+  $V(p) = \{1.2\}$ اے (کیوں جے سطر 11 اُتے $\sFmla{\True}{p}[1.2]$ اے)
+  تے $V(q) = \{1.1\}$ اے (کیوں جے سطر 10 اُتے $\sFmla{\True}{q}[1.1]$ اے)۔
+  نمونے دی تصویر \olref{fig:counter-Box} وچ اے، تے تسی پرکھ سکدے او کہ ایہ
+  $\Box(p \lor q) \lif (\Box p \lor \Box q)$ دا ردّی نمونہ اے۔
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}}]{$1$}; 
+      \node[world] (w2) [label={[align=right]right:\mFalse{p}\\ \mTrue{q}},
+        above left=of w1]{$1.1$}; 
+      \node[world] (w3) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}},
+        above right=of w1] {$1.2$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$\Box(p \lor q) \lif (\Box p \lor \Box
+    q)$ دا اک ردّی نمونہ۔}
+  \ollabel{fig:counter-Box}
+\end{figure}
+\end{ex}
+}
+{
+\begin{ex}
+  سانوں پتا اے کہ $\Proves/ (\Diamond p \land \Diamond q) \lif \Diamond(p
+  \land q)$۔ تابلو بناؤن دا مڈھ ایویں اے:
+  \begin{oltableau}
+    [\pFmla{\False}{(\Diamond p \land \Diamond q) \lif \Diamond(p \land q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond(p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1}, 
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2}, 
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  !!{tableau} ہجے پورا نہیں ہویا۔ اگلے پڑا وچ اسیں اوہ اکّو سطر ویکھدے
+  آں جیہدے اُتے صحیح دا نشان نہیں، یعنی اگیتے والا !!{formula}
+  $\sFmla{\True}{\Diamond(p \land q)}[1]$ سطر~$3$ اُتے۔ بند تابلو بناؤن لئی
+  $\TRule{\True}{\Diamond}$ دا قاعدہ شاخ اُتے ورتے ہوئے ہر اگیتے لئی لانا
+  اے، یعنی $1.1$ تے $1.2$ دونہاں لئی:
+  \begin{oltableau}
+    [\pFmla{\False}{\Diamond(p \land q) \lif (\Diamond p \land \Diamond q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond (p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1}, 
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2}, 
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                  [\pFmla{\False}{p \land q}{1.1}, 
+                    just = {\TRule{\False}{\Diamond}[3]}
+                    [\pFmla{\False}{p \land q}{1.2}, 
+                      just = {\TRule{\False}{\Diamond}[3]}
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  ہُن سطر 3، 8 تے 9 اُتے صحیح دے نشان نہیں۔ پر کوئی نواں اگیتا نہیں
+  جڑیا، ایس لئی اسیں $\TRule{\False}{\land}$ سطر 8 تے 9 اُتے، ملن والیاں
+  ساریاں شاخاں وچ (جنا چر اوہ بند نہیں ہوندیاں)، لاؤندے آں:
+  \begin{oltableau}
+    [\pFmla{\False}{(\Diamond p \land \Diamond q) \lif \Diamond(p \land q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond(p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1}, 
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2}, 
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                  [\pFmla{\False}{p \land q}{1.1}, 
+                    just = {\TRule{\False}{\Diamond}[3]}, checked
+                    [\pFmla{\False}{p \land q}{1.2}, 
+                      just = {\TRule{\False}{\Diamond}[3]}, checked
+                      [\pFmla{\False}{p}{1.1},
+                        just = {\TRule{\False}{\land}[8]}, checked, close
+                      ]
+                      [\pFmla{\False}{q}{1.1},
+                        just = {\TRule{\False}{\land}[8]}, checked
+                        [\pFmla{\False}{p}{1.2},
+                          just = {\TRule{\False}{\land}[9]}, checked]
+                        [\pFmla{\False}{q}{1.2},
+                          just = {\TRule{\False}{\land}[9]}, checked, close]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  اک کھلی شاخ بچدی اے، تے اوہ مکمل اے۔ اوس توں اسیں نمونہ متعین کردے آں۔
+  جہان $W = \{1, 1.1, 1.2\}$ نیں (کھلی شاخ اُتے آؤن والے ای اگیتے)،
+  رسائی دا تعلق $R = \{\tuple{1, 1.1}, \tuple{1, 1.2}\}$ اے، تے قدر بندی
+  $V(p) = \{1.1\}$ اے (کیوں جے سطر 6 اُتے $\sFmla{\True}{p}[1.1]$ اے)
+  تے $V(q) = \{1.2\}$ اے (کیوں جے سطر 7 اُتے $\sFmla{\True}{q}[1.1]$ اے)۔
+  نمونے دی تصویر \olref{fig:counter-Diamond} وچ اے، تے تسی پرکھ سکدے او کہ ایہ
+  $(\Diamond p \land \Diamond q) \lif \Diamond (p \land q)$ دا ردّی نمونہ اے۔
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}}]{$1$}; 
+      \node[world] (w2) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}},
+        above left=of w1]{$1.1$}; 
+      \node[world] (w3) [label={[align=right]right:\mFalse{p}\\ \mTrue{q}},
+        above right=of w1] {$1.2$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$(\Diamond p \land \Diamond q) \lif
+    \Diamond (p \land q)$ دا اک ردّی نمونہ۔}
+  \ollabel{fig:counter-Diamond}
+\end{figure}
+\end{ex}
+}
+
+\end{document}

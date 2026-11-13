@@ -1,0 +1,232 @@
+% Part: model-theory
+% Chapter: models-of-arithmetic
+% Section: standard-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mod}{mar}{stm}
+\olsection{حساب دے معیاری نمونے}
+
+حساب دی زبان~$\Lang{L_A}$ دا مقصد ظاہر اے کہ اعداد،
+خاص طور اُتے قدرتی اعداد، بارے گل کرنا اے۔ ایس لئی ”اوہ“
+معیاری نمونہ~$\Struct{N}$ خاص اے: ایہ اوہ نمونہ اے
+جیہدے بارے اسیں گل کرنا چاہندے آں۔ پر منطق وچ ساڈی
+دلچسپی اکثر ساختی خاصیتاں وچ ہوندی اے، تے ہر دو
+ہم شکل !!{structure}s ایہ خاصیتاں سانجھیاں رکھدیاں نیں۔
+ایس لئی اسیں تعریف ذرا کھلی رکھ سکدے آں تے ہر اوہ
+!!{structure} ”معیاری“ من سکدے آں جیہڑی~$\Struct{N}$
+نال ہم شکل ہووے۔
+
+\begin{defn}
+$\Lang{L_A}$ لئی !!{structure} \emph{معیاری} اے
+جے اوہ~$\Struct{N}$ نال ہم شکل ہووے۔
+\end{defn}
+
+\begin{prop}
+\ollabel{prop:standard-domain} جے !!a{structure}~$\Struct{M}$
+معیاری اے، تاں اوہدا دائرہ معیاری عددی عبارتاں دیاں
+قدراں دا سیٹ اے، یعنی
+\[
+\Domain{M} = \Setabs{\Value{\num{n}}{M}}{n \in \Nat}
+\]
+\end{prop}
+
+\begin{proof}
+واضح اے کہ ہر $\Value{\num{n}}{M} \in \Domain{M}$۔
+بس ایہ وکھانا اے کہ ہر $x \in \Domain{M}$
+$\Value{\num{n}}{M}$ دے برابر اے، کسے~$n$ لئی۔
+کیوں جے $\Struct{M}$ معیاری اے، ایہ~$\Struct{N}$
+نال ہم شکل اے۔ فرض کرو $g\colon \Nat \to \Domain{M}$
+اک ہم شکلی اے۔ فیر $g(n) = g(\Value{\num{n}}{N}) =
+\Value{\num{n}}{M}$۔ پر ہر $x \in \Domain{M}$
+لئی کوئی~$n \in \Nat$ اے جیہدے لئی $g(n) = x$،
+کیوں جے $g$ ہر ہدف قدر لیندا اے (!!{surjective})۔
+\end{proof}
+
+\begin{explain}
+جے ساخت~$\Struct{M}$، $\Lang{L_A}$ لئی، معیاری اے،
+تاں اوہدے !!{domain} دے سارے عنصراں نوں
+معیاری عددی عبارتاں $\num{0}$، $\num{1}$،
+$\num{2}$، \dots نال ناں دتا جا سکدا اے؛
+یعنی ٹرماں $\Obj{0}$، $\Obj{0}'$،
+$\Obj{0}''$، وغیرہ نال۔ بے شک ایس دا ایہ مطلب نہیں کہ
+$\Domain{M}$ دے !!{element}s خود اعداد \emph{نیں}؛
+صرف ایہ کہ اسیں اوہناں نوں اوہو طرح چن سکدے آں
+جیویں~$\Domain{N}$ وچ اعداد نوں چن سکدے آں۔
+\end{explain}
+
+\begin{prob}
+وکھاؤ کہ \olref[mod][mar][stm]{prop:standard-domain}
+دا الٹا دعویٰ غلط اے؛ یعنی ایسی !!a{structure}~$\Struct{M}$
+دی مثال دیو جیہدے لئی
+$\Domain{M} = \Setabs{\Value{\num{n}}{M}}{n \in \Nat}$
+ہووے، پر اوہ~$\Struct{N}$ نال ہم شکل نہ ہووے۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:thq-standard}
+جے $\Sat{M}{\Th{Q}}$ ہووے تے
+$\Domain{M} = \Setabs{\Value{\num{n}}{M}}{n
+  \in \Nat}$، تاں $\Struct{M}$ معیاری اے۔
+\end{prop}
+
+\begin{proof}
+اسیں وکھانا اے کہ $\Struct{M}$،
+~$\Struct{N}$ نال ہم شکل اے۔ فنکشن
+$g\colon \Nat \to \Domain{M}$ ویکھو جیہدی تعریف
+$g(n) = \Value{\num{n}}{M}$ اے۔ مفروضے مطابق
+$g$ ہر ہدف قدر لیندا اے (!!{surjective})۔ ایہ
+اک بہ اک (!!{injective}) وی اے:
+$\Th{Q} \Proves
+\eq/[\num{n}][\num{m}]$ جدوں $n \neq m$
+ہووے۔ ایس لئی، کیوں جے
+$\Sat{M}{\Th{Q}}$، تاں
+$\Sat{M}{\eq/[\num{n}][\num{m}]}$،
+جدوں $n \neq m$۔ ایس لئی جے $n \neq m$، تاں
+$\Value{\num{n}}{M} \neq
+\Value{\num{m}}{M}$، یعنی $g(n) \neq g(m)$۔
+
+ایہ وی ثابت کرنا اے کہ $g$ ہم شکلی اے۔
+\begin{enumerate}
+\item ساڈے کول $g(\Assign{\Obj{0}}{N}) = g(0)$ اے،
+  کیوں جے $\Assign{\Obj{0}}{N} = 0$۔ $g$ دی تعریف توں
+  $g(0) = \Value{\num{0}}{M}$۔ پر $\num{0}$
+  بس $\Obj{0}$ اے، تے جیہڑا ٹرم !!a{constant} ہووے
+  اوہدی قدر اوہ اے جیہڑی !!{structure} اوس
+  !!{constant} نوں دندی اے، یعنی
+  $\Value{\Obj{0}}{M} = \Assign{\Obj{0}}{M}$۔
+  ایس لئی مطلوبہ برابری
+  $g(\Assign{\Obj{0}}{N}) = \Assign{\Obj{0}}{M}$ مل گئی۔
+\item $g(\Assign{\prime}{N}(n)) = g(n+1)$،
+  کیوں جے $\prime$، $\Struct{N}$ وچ
+  ~$\Nat$ اُتے جانشین فنکشن اے۔ فیر
+  $g(n+1) = \Value{\num{n+1}}{M}$،
+  $g$ دی تعریف توں۔
+  پر $\num{n+1}$ اوہو ٹرم اے جو $\num{n}'$،
+  ایس لئی $\Value{\num{n+1}}{M} =
+  \Value{\num{n}'}{M}$۔ قدر والے فنکشن دی تعریف توں
+  ایہ $= \Assign{\prime}{M}(\Value{\num{n}}{M})$ اے۔
+  کیوں جے $\Value{\num{n}}{M} = g(n)$،
+  اسیں $g(\Assign{\prime}{N}(n)) =
+  \Assign{\prime}{M}(g(n))$ حاصل کردے آں۔
+\item $g(\Assign{+}{N}(n,m)) = g(n+m)$،
+  کیوں جے $+$، $\Struct{N}$ وچ
+  ~$\Nat$ اُتے جمع دا فنکشن اے۔ فیر
+  $g(n+m) = \Value{\num{n+m}}{M}$،
+  $g$ دی تعریف توں۔
+  پر $\Th{Q} \Proves
+  \num{n+m} = (\num{n} + \num{m})$،
+  ایس لئی $\Value{\num{n+m}}{M} =
+  \Value{\num{n}+\num{m}}{M}$۔ قدر والے فنکشن دی
+  تعریف توں ایہ $=
+  \Assign{+}{M}(\Value{\num{n}}{M},\Value{\num{m}}{M})$
+  اے۔ کیوں جے $\Value{\num{n}}{M} = g(n)$ تے
+  $\Value{\num{m}}{M} = g(m)$، اسیں
+  $g(\Assign{+}{N}(n, m)) = \Assign{+}{M}(g(n), g(m))$
+  حاصل کردے آں۔
+\item $g(\Assign{\times}{N}(n, m)) =
+  \Assign{\times}{M}(g(n), g(m))$: مشق۔
+\item $\tuple{n,m} \in \Assign{<}{N}$ اُدوں تے صرف اُدوں
+  جدوں $n < m$۔ جے $n < m$، تاں
+  $\Th{Q} \Proves \num{n} < \num{m}$،
+  تے $\Sat{M}{\num{n} <
+  \num{m}}$ وی۔ ایس لئی
+  $\tuple{\Value{\num{n}}{M}, \Value{\num{m}}{M}} \in
+  \Assign{<}{M}$، یعنی
+  $\tuple{g(n), g(m)} \in \Assign{<}{M}$۔
+  جے $n \not< m$، تاں
+  $\Th{Q} \Proves \lnot \num{n} < \num{m}$،
+  تے نتیجتاً $\Sat/{M}{\num{n} < \num{m}}$۔
+  ایس لئی، پہلے وانگ،
+  $\tuple{g(n), g(m)} \notin \Assign{<}{M}$۔
+  دوہاں حالاں نوں ملا کے
+  $\tuple{n,m} \in \Assign{<}{N}$
+  اُدوں تے صرف اُدوں جدوں
+  $\tuple{g(n), g(m)} \in
+  \Assign{<}{M}$۔
+\end{enumerate}
+\end{proof}
+
+\begin{explain}
+فنکشن~$g$، $\Nat$ توں کسے وی ہور
+!!{structure}~$\Struct{M}$ دے دائرے ول، $\Lang{L_A}$
+لئی، نقشہ متعین کرن
+دا سب توں سیدھا طریقہ اے، کیوں جے ہر ایسی
+$\Struct{M}$ وچ $\num{0}$، $\num{1}$،
+$\num{2}$ وغیرہ نال ناں ملن والے !!{element}s
+ہوندے نیں۔ ایس لئی حیرانی نہیں کہ جے $\Struct{M}$،
+$\num{n}$ دے بارے گھٹ توں گھٹ کجھ بنیادی بیان
+~$\Struct{N}$ وانگ سچے بناؤندی اے، تے $g$ اک بہ اک
+مطابقت وی اے، تاں $g$ ہم شکلی بن جاندا اے۔
+ایہناں مفروضیاں تحت، جے $\Domain{M}$ وچ $\num{n}$
+دے ناں والے عنصراں توں سوا کوئی !!{element}s نہیں،
+تاں ایہی واحد ہم شکلی اے۔
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:thq-unique-iso} جے $\Struct{M}$ معیاری اے،
+تاں \olref{prop:thq-standard} دے ثبوت والا $g$،
+$\Struct{N}$ توں~$\Struct{M}$ ول واحد ہم شکلی اے۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $h\colon \Nat \to \Domain{M}$،
+$\Struct{N}$ تے~$\Struct{M}$ وچ ہم شکلی اے۔
+اسیں $g = h$ نوں~$n$ اُتے استقرا نال وکھاؤندے آں۔
+جے $n = 0$، تاں
+$g(0) = \Assign{\Obj{0}}{M}$، $g$ دی تعریف توں۔
+پر کیوں جے $h$
+ہم شکلی اے، $h(0) =
+h(\Assign{\Obj{0}}{N}) =\Assign{\Obj{0}}{M}$،
+ایس لئی $g(0) = h(0)$۔
+
+ہُن $n+1$ دی حالت ویکھو۔ ساڈے کول
+\begin{align*}
+  g(n+1) & = \Value{\num{n+1}}{M} \text{ $g$ دی تعریف توں}\\
+  & = \Value{\num{n}'}{M} \text{ کیوں جے $\num{n+1}\ident \num{n}'$}\\
+  & = \Assign{\prime}{M}(\Value{\num{n}}{M})
+    \text{ $\Value{t'}{M}$ دی تعریف توں}\\
+  & = \Assign{\prime}{M}(g(n))  \text{ $g$ دی تعریف توں}\\
+  & = \Assign{\prime}{M}(h(n)) \text{ استقرائی مفروضے توں}\\
+  & = h(\Assign{\prime}{N}(n)) \text{ کیوں جے $h$ ہم شکلی اے}\\
+  & = h(n+1)
+\end{align*}
+\end{proof}
+
+\begin{explain}
+ہر !!{denumerable} سیٹ~$M$ لئی $\Nat$ تے $M$
+وچکار !!a{bijection} ہوندی اے، ایس لئی ہر ایسا سیٹ~$M$
+کسی معیاری نمونے~$\Struct{M}$ دا !!{domain}
+بن سکدا اے۔ بلکہ جدوں اک شے $z \in
+M$ تے اک مناسب فنکشن $s$، بالترتیب
+$\Assign{\Obj{0}}{M}$ تے
+$\Assign{\prime}{M}$ دے طور اُتے چن لو،
+تاں $+$، $\times$ تے $<$ دیاں تعبیراں
+پہلے ای مقرر ہو جاندیاں نیں۔ صرف اوہ فنکشن
+$s\colon M \to M \setminus \{z\}$،
+معیاری نمونے وچ~$\Assign{\prime}{M}$ لئی مناسب نیں
+جو اک بہ اک (!!{injective}) تے ہر ہدف قدر لین والے
+(!!{surjective}) دوویں ہون۔ $s$ دے حاصل قدراں دے سیٹ وچ~$z$
+نہیں آ سکدا؛ نہیں تاں
+$\lforall[x][\eq/[\Obj 0][x']]$ غلط ہوندا۔
+ایہ !!{sentence}، $\Struct{N}$ وچ سچ اے،
+تے ایس لئی $\Struct{M}$ وچ وی سچ ہونا چاہیدا اے۔
+فنکشن~$s$ دا اک بہ اک (!!{injective}) ہونا لازم اے،
+کیوں جے جانشین فنکشن~$\Assign{\prime}{N}$،
+$\Struct{N}$ وچ ایداں دا اے، تے
+~$\Assign{\prime}{N}$ دا اک بہ اک (!!{injective}) ہونا
+!!a{sentence} نال بیان کیتا جاندا اے جیہڑا
+~$\Struct{N}$ وچ سچ اے۔ اوہدا ہر ہدف قدر لین والا
+(!!{surjective}) ہونا وی لازم اے، نہیں تاں کوئی
+$x \in M \setminus \{z\}$،
+~$s$ دے حاصل قدراں دے سیٹ وچ نہ ہوندا؛ یعنی
+!!{sentence} $\lforall[x][(\eq[x][\Obj 0] \lor
+\lexists[y][\eq[y'][x]])]$،
+~$\Struct{M}$ وچ غلط ہوندا، حالانکہ
+~$\Struct{N}$ وچ سچ اے۔
+\end{explain}
+
+
+\end{document}

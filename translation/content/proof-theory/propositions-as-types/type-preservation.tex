@@ -1,0 +1,78 @@
+% part: intuitionistic-logic
+% chapter: propositions-as-types
+% section: type-preservation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{tpr}
+
+\olsection{نوع دی بقا}
+
+جیہڑیاں تقلیل تے تھاں بدلّن والیاں تبدیلیاں اسیں ویکھیاں نیں، اوہ سیدھیاں \Log{tN2i} تے \Log{tN3i} نظاماں لئی وی متعین کیتیاں جا سکدیاں نیں۔ \Log{tN3i} نظام $\lambd$-ٹرم~$N$ دی نوع، سیاق~$\Gamma$ دے لحاظ نال، اوہ !!{formula}~$!A$ قرار دیندا اے جیہدے لئی $ \Gamma \Sequent N
+: !A$ دا !!a{proof}، \Log{tN3i} وچ، موجود اے۔ $\beta$-تقلیل قاعدیاں، جیہڑے $\lambd$-ٹرماں دے نیں، تے !!{proof}s دیاں تقلیل تے تھاں بدلّن والیاں تبدیلیاں دے عین میل دا اک اہم نتیجہ اے۔ $\lambd$-ٹرم دی نوع، سیاق~$\Gamma$ دے لحاظ نال،، $\beta$-تبدیلی توں پچھوں وی اوہی رہندی اے۔ ایس خاصیت نوں \emph{نوع دی بقا} آکھدے آں۔
+
+\begin{prop}
+جے $N$ دی نوع~$!A$ اے $ \Gamma$ دے لحاظ نال، تے $N \redone N'$، تاں $N'$ دی نوع~$!A$ اے~$\Gamma$ دے لحاظ نال۔
+\end{prop}
+
+\begin{proof}
+  ~$N$ تے !!{proof}s~$\delta$ دی اُچائی اُتے استقرا نال، جیہڑے $ \Gamma
+  \Sequent N : !A$ دے نیں، اسیں ہِٹھلی گل سوکھے ای ثابت کر سکدے آں۔ جے $M$،~$N$ دا ذیلی ٹرم اے، تاں $\delta$ وچ اک ذیلی !!{proof}~$\delta_1$ اے جیہڑا $ \Gamma' \Sequent M : !B$ اُتے مُکدا اے۔ جے $M$ ریڈیکس اے، تاں~$\delta_1$ اُتے اک تبدیلی لگدی اے۔ تقلیل $\delta_1$ اُتے لا کے اسیں !!a{proof}~$\delta_1'$ لیندے آں $ \Gamma' \Sequent M'
+  : !B$ دا۔ \Log{tN3i} دیاں تبدیلیاں ویکھ کے پتا لگدا اے کہ $M'$،~$M$ دی تقلیل نال ملن والا ٹرم اے۔ $ \delta_1$ نوں~$\delta$ وچ $ \delta_1'$ نال بدلّن نال !!a{proof}~$\delta'$ ملدا اے $ \Gamma \Sequent N' : !A$ دا، جتھے $N'$،~$N$ توں ذیلی ٹرم~$M$ نوں~$M'$ نال بدل کے ملدا اے۔
+
+  مثال لئی~\Intro{\land} توں پچھوں \Elim{\land} لاؤن والی تقلیل دی تبدیلی ویکھو:
+  \[
+  \bottomAlignProof
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_1 : !B_1$
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_2 : !B_2$
+  \RightLabel{\Intro{\land}}
+  \BinaryInf$\Gamma \fCenter \pair{N_1}{N_2} : !B_1 \land !B_2$
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInf$\Gamma \fCenter \proj{i}{\pair{N_1}{N_2}} : !B_i$
+  \DisplayProof
+  \quad\redone\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_i : !B_i$
+  \DisplayProof
+  \]
+  اسیں ویکھدے آں کہ سجّے پاسے دے !!{proof} دا ثبوت ٹرم، یعنی $ \delta_1'$ دا، $N_i$ اے۔ ایہ عین اوہ نتیجہ اے جیہڑا $\beta$-تبدیلی، ثبوت ٹرم $ \proj{i}{\pair{N_1}{N_2}}$ اُتے لاؤن نال ملدا اے۔ ایہ کھبّے پاسے دے !!{proof}~($\delta_1$) دا ٹرم اے۔
+
+  یا \Intro{\lif} توں پچھوں \Elim{\lif} استنباط ویکھو، تے اوہدے اُتے لگی تقلیل والی تبدیلی:
+  \begin{multline*}
+  \bottomAlignProof
+  \AxiomC{$\delta_2$}
+  \Deduce$x: !B_1, \Gamma \fCenter N : !B_2$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter \lambd[\typeof{x}{!B_1}][N] : !B_1 \lif !B_2$
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \Deduce$\Gamma \fCenter M : !B_1$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$\Gamma \fCenter (\lambd[\typeof{x}{!B_1}][N] M) : !B_2$
+  \DisplayProof
+  \quad\redone\\
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \Deduce$\Gamma \fCenter M : !B_1$
+  \RightLabel{$\Subst{\delta_2}{\delta_3}{x:!B_1}$}
+  \Deduce$\Gamma \fCenter \Subst{N}{M}{x} : !B_2$
+  \DisplayProof
+  \end{multline*}
+  فیر وی سجّے پاسے دے !!{proof} دا ثبوت ٹرم عین اوہی اے جیہڑا $\beta$-تقلیل نال کھبّے پاسے دے !!{proof} دے ثبوت ٹرم توں ملدا اے۔ بے شک ایہ گل غور نال جانچنی پئے گی (~$\delta_2$ دی اُچائی اُتے استقرا نال) کہ جے اسیں $ \Gamma' \Sequent x:!B_1$ دی شکل والے سارے مسلّمے~$\delta_2$ وچ !!{proof}~$\delta_3$ نال بدلیے، جیہڑا $ \Gamma \Sequent M:!B_1$ دا اے، تاں ایہدے نال واقعی !!a{proof} $ \Subst{\delta_2}{\delta_3}{x:!B_1}$ ملدا اے $ \Gamma \Sequent
+  \Subst{N}{M}{x} : !B_2$ دا۔
+\end{proof}
+
+!!{proof}s تے $\lambd$-ٹرماں دے نیڑے میل دا اک ہور نتیجہ اے۔ جے $N$ اک $\lambd$-ٹرم اے، $!A$ نوع دا سیاق~$\Gamma$ دے لحاظ نال، تے اوہدے وچ ریڈیکس~$M$ اے (یعنی اوہ نارمل روپ وچ نہیں)، تاں \Log{tN3i} دا میل کھاندا ثبوت~$\delta$، جیہڑا $ \Gamma \Sequent N : !A$ دا اے، اوہدے وچ ذیلی !!{proof} اے (جیہڑا $ \Gamma'
+\Sequent M: !B$ اُتے مُکدا اے) جیہدے اُتے اک تبدیلی لگ سکدی اے۔ جے $N \redone
+N'$، $M$ نوں اوہدی تقلیل نال ملے ٹرم نال بدل کے، تاں تقلیل~$\delta$ اُتے لاؤن دا میل کھاندا حاصل !!a{proof} اے $ \Gamma \Sequent
+N' : !A$ دا۔ سو ہر $\lambd$-ٹرم جیہڑا نارمل روپ وچ نہیں، $\beta$-تقلیل نال ہور ٹرم بن جاندا اے۔ ایس خاصیت نوں \emph{اگلا قدم} آکھدے آں۔
+
+اگلا قدم تے نوع دی بقا رل کے پکا کردے نیں کہ $\beta$-تقلیل، جیہڑی $\lambd$-ٹرماں دی اے، کدے «اٹکدی» نہیں۔ جے ٹرم دی نوع ٹھیک طے اے تے اوہ نارمل روپ وچ نہیں، تاں اوہ گھٹ کے ہور ٹھیک نوع والا ٹرم بن جاندا اے (تے اوس ٹرم دی نوع اوہی اے)۔
+
+\end{document}

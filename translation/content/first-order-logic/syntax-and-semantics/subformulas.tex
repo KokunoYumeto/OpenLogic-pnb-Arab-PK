@@ -1,0 +1,122 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: subformulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{syn}{sbf}
+
+\olsection{\printtoken{P}{subformula}}
+
+\begin{explain}
+کسے دتے !!{formula} نوں ”بناؤن“ والے !!{formula}s
+دی گل کرنا اکثر فائدہ مند ہوندا اے۔ اسیں اوہناں نوں
+اوہدے \emph{!!{subformula}s} آکھدے آں۔ ہر
+!!{formula} اپنے آپ دا !!a{subformula} وی اے؛
+$!A$ دا اوہدے اپنے آپ $!A$ توں وکھرا ذیلی
+فارمولا \emph{پورے توں چھوٹا !!{subformula}} اے۔
+\end{explain}
+
+\begin{defn}[براہِ راست !!^{subformula}]
+جے $!A$، !!a{formula} اے، تاں $!A$ دے
+\emph{براہِ راست !!{subformula}s} اینج استقرائی
+طور تے تعریف کیتے جاندے نیں:
+\begin{enumerate}
+\item ایٹمی !!{formula}s دے کوئی براہِ راست !!{subformula}s نہیں۔
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ دا اکلوتا براہِ راست
+    !!{subformula}،~$!B$ اے۔}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{$\indfrm$ دے براہِ راست !!{subformula}s
+  $!B$ تے $!C$ نیں ($\ast$ دو-مقامی رابطیاں وچوں کوئی وی اک اے)۔}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ دا اکلوتا براہِ راست
+    !!{subformula}،~$!B$ اے۔}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ دا اکلوتا براہِ راست
+    !!{subformula}،~$!B$ اے۔}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[پورے توں چھوٹا !!^{subformula}]
+جے $!A$، !!a{formula} اے، تاں $!A$ دے
+\emph{پورے توں چھوٹے !!{subformula}s} اینج بازگشتی
+طور تے تعریف کیتے جاندے نیں:
+\begin{enumerate}
+\item ایٹمی !!{formula}s دے کوئی پورے توں چھوٹے !!{subformula}s نہیں۔
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ دے پورے توں چھوٹے
+    !!{subformula}s،~$!B$ تے~$!B$ دے سارے پورے توں
+    چھوٹے !!{subformula}s نیں۔}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{$\indfrm$ دے پورے توں چھوٹے !!{subformula}s
+  $!B$، $!C$، نالے $!B$ دے سارے پورے توں چھوٹے !!{subformula}s
+  تے~$!C$ دے سارے ایہو جہے ذیلی فارمولے نیں۔}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ دے پورے توں
+    چھوٹے !!{subformula}s،~$!B$ تے~$!B$ دے سارے پورے توں
+    چھوٹے !!{subformula}s نیں۔}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ دے پورے توں
+    چھوٹے !!{subformula}s،~$!B$ تے~$!B$ دے سارے پورے توں
+    چھوٹے !!{subformula}s نیں۔}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[!!^{subformula}]
+$!A$ دے !!{subformula}s وچ $!A$ خود تے اوہدے
+سارے پورے توں چھوٹے !!{subformula}s شامل نیں۔
+\end{defn}
+
+\begin{explain}
+دھیان دیو کہ اسیں براہِ راست !!{subformula}s تے پورے
+توں چھوٹے !!{subformula}s دی تعریف دو ذرا وکھرے
+طریقیاں نال کیتی اے۔ پہلی صورت وچ اسیں فارمولا~$!A$
+دے ہر ممکن روپ~$!A$ لئی اوہدے براہِ راست !!{subformula}s
+دی سیدھی تعریف دتی اے۔ ایہ صورتاں دے لحاظ نال
+صاف تعریف اے، تے صورتاں !!{formula}s دے سیٹ
+دی استقرائی تعریف دے مطابق نیں۔ دوجی صورت وچ
+اسیں سارے !!{formula}s دے سیٹ دی تعریف والا
+ڈھنگ فیر اپنایا اے، پر ہر صورت وچ چھوٹے
+!!{formula}s $!B$، $!C$ دے پورے توں چھوٹے
+!!{subformula}s وی انہاں !!{formula}s دے نال شامل
+کیتے نیں۔ ایس نال تعریف \emph{بازگشتی}
+بن جاندی اے۔ عام طور تے استقرائی طور تے تعریف
+کیتے سیٹ (ساڈے معاملے وچ، !!{formula}s) اُتے
+کسے فنکشن دی تعریف بازگشتی اے جے فنکشن دی
+تعریف دیاں صورتاں وچ خود اوہ فنکشن ورتیا جائے۔
+پر تعریف ٹھیک ہون لئی سانوں یقین کرنا پیندا اے
+کہ فنکشن دیاں قدراں صرف اوہناں دلیلاں لئی ورتیاں
+جان جیہڑیاں زیرِ تعریف دلیل توں ”پہلاں“ آؤندیاں نیں:
+ساڈے معاملے وچ، جدوں $(!B \ast !C)$ لئی
+”پورے توں چھوٹے !!{subformula}“ تعریف کردے آں،
+تاں صرف ”پہلاں“ والے !!{formula}s $!B$ تے $!C$
+دے پورے توں چھوٹے !!{subformula}s ورتدے آں۔
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:subfrm-trans}
+فرض کرو $!B$، $!A$ دا ذیلی فارمولا اے تے
+$!C$، $!B$ دا ذیلی فارمولا اے۔ تاں $!C$، $!A$
+دا ذیلی فارمولا اے۔ دوجے لفظاں وچ ذیلی فارمولا
+تعلق متعدی اے۔
+\end{prop}
+
+\begin{prob}
+\olref[fol][syn][sbf]{prop:subfrm-trans} ثابت کرو۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:count-subfrms}
+فرض کرو $!A$ اک فارمولا اے جیہدے وچ $n$ رابطے
+تے مسوّر نیں۔ تاں $!A$ دے زیادہ توں زیادہ $2n+1$
+ذیلی فارمولے نیں۔
+\end{prop}
+
+\begin{prob}
+\olref[fol][syn][sbf]{prop:count-subfrms} ثابت کرو۔
+\end{prob}
+
+\end{document}

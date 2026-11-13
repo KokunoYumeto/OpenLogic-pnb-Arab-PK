@@ -1,0 +1,221 @@
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: ce-largest
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{inv}
+
+\olsection{سبھ توں اُچّے درجے دے قطع ہٹاؤنے}
+
+\olref[seq][inv]{lem:G3c-invert} دے ثبوت نے وکھایا کہ جے \Log{G3c} کسے منطقی قاعدے دا نتیجہ !!{prove}s کرے (\RightR{\lexists} تے \LeftR{\lforall} توں چھُٹ)، تاں ایہ قاعدے دے ہر مقدمے نوں وی !!{prove}s کرے گا، ثبوت دی !!{height} ودھائے بغیر۔ اسیں ایہ وی وکھا سکدے آں کہ ایہ گل $\Log{G3c} +
+\CutCS$ لئی وی سچ اے۔
+
+پہلاں وانگ، \CutCS{} استنباط دا \emph{قطع درجہ} اوہدے قطع !!{formula} دی ڈونگھائی نوں آکھدے آں۔
+
+\begin{lem}\ollabel{lem:inv-G3c-cut}
+جے $\Log{G3c} + \CutCS$ !!{prove}s کرے کسے منطقی قاعدے~$R$ دا نتیجہ، جیہڑا \RightR{\lexists} یا \LeftR{\lforall} نہیں، اک !!a{proof}~$\pi$ نال، تاں ایہ ہر مقدمے نوں وی !!{prove}s کرے گا، !!{proof}~$\pi'$ نال (یا !!{proof}s~$\pi'$، $\pi''$ نال، ایس گل مطابق کہ قاعدے دا اک مقدمہ اے یا دو)۔ ہور ایہ کہ
+(a)~$\pheight{\pi'}\le\pheight{\pi}$ (تے
+$\pheight{\pi''}\le\pheight{\pi}$) تے (b)~\CutCS{} استنباطاں دی گنتی تے اوہناں دے درجے~$\pi'$ وچ (تے $\pi''$ وچ) اوہی نیں جیہڑے~$\pi$ وچ نیں۔
+\end{lem}
+
+\begin{proof}
+\cref{pt:seq:inv:lem:G3c-invert,pt:seq:inv:lem:invert-quant} دے ثبوت ویکھو۔ اوہ ثبوت~$\pheight{\pi}$ اُتے استقرا نال سی۔ مُڈھلی صورت وچ اسیں اک مسلّمہ دوجے مسلّمے نال بدلیا سی۔ سو شرطاں (a) تے~(b) سوکھیاں ای پوریاں نیں۔ جے~$\pi$ دا آخری قاعدہ~$R$ سی، تاں اوہدے سدھے ذیلی !!{proof}s ای اوہ !!{proof}s~$\pi_i$ نیں جیہڑے سانوں چاہیدے نیں، تے (a) تے~(b) دوویں پوریاں نیں۔ ہور ساریاں صورتاں وچ اسیں استقرا دا مفروضہ~$\pi$ دے سدھے ذیلی !!{proof}s اُتے لایا، یعنی اوہناں اُتے جیہڑے آخری استنباط~$R$ دے مقدمے یا مقدمیّاں تک پہنچدے نیں، تے فیر نتیجیاں اُتے اوہی قاعدہ $R$ لایا۔ (a) تے~(b) نویں ثبوت دے سدھے ذیلی !!{proof}s لئی سچ نیں، سو (a) تے~(b) پورے ثبوت لئی سچ نیں۔ ہُن اوہ صورت پرکھنی باقی اے جتھے آخری استنباط~\CutCS اے۔ فیر بس اک مثال لینے آں۔ منّ لو $\pi$، نتیجے $!B \land !C, \Gamma \Sequent
+\Delta$ دا !!a{proof} اے، جیہڑا \LeftR{\land} دا نتیجہ اے، تے~\CutCS اُتے مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \land !C, \Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, !B \land !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B \land !C, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+استقرا دا مفروضہ $\pi_1$ تے~$\pi_2$ اُتے لگدا اے (ایہ وی $\LeftR{\land}$ دے نتیجے دیاں مثالاں دے !!{proof}s نیں) تے بالترتیب !!{proof}s $\pi_1'$ تے~$\pi_2'$ دیندا اے، جیہڑے $!B, !C, \Gamma \fCenter
+\Delta, !A$ تے $!A, !B, !C, \Gamma \fCenter \Delta$ دے نیں۔ ایہناں نوں \CutCS{} نال جوڑ کے~$\pi'$ ملدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!A, !B, !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, !C, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+صاف اے کہ (a) تے~(b) پوریاں نیں۔
+\end{proof}
+
+دھیان دیو، جے \Cut{} ورتدے \CutCS دی تھاں، تاں ایہ کم نہیں سی کرنا۔ آخری !!{proof} دے نتیجے وچ $!B, !C, \Gamma$ دیاں دو نکلاں مقدم وچ تے $\Delta$ دیاں دو نکلاں تالی وچ ہوندیاں۔ سانوں سکیڑن دی قبولیت ورتنی پَینی سی، پر \olref[seq][inv]{prop:G3c-cont-adm} دا ثبوت اُلٹ سکّن والے معاون قضیے نوں ورتدا اے۔ ایس طرح دلیل چکر وچ پے جاندی۔
+
+\cref{pt:cut:inv:lem:inv-G3c-cut} نال اسیں قطع ہٹاؤن دا اک ہور ثبوت دے سکدے آں۔ ایس ثبوت وچ اسیں \CutCS{} استنباطاں دیاں سبھ توں اُتلیاں موجودگیاں وار واری نہیں ہٹاؤندے، بلکہ \CutCS{} استنباطاں دیاں اوہ موجودگیاں ہٹاؤندے آں جیہناں دا درجہ سبھ توں اُچّا اے۔ یعنی اسیں !!a{proof}~$\pi$، $\Log{G3c} + \CutCS$ وچ، توں شروع کر کے اوہدے وچ کسے وی تھاں توں اک قطع ہٹاؤنے آں (ممکن اے اوہدی تھاں گھٹ درجے دے قطع رکھ کے)۔ ایہ کم کردے رہندے آں جد تک کوئی قطع نہیں رہندا۔ بس ایہ شرط اے کہ جیہڑے قطع نوں اسیں ہٹاؤندے آں، اوہدے اُتّے اوسے یا ہور اُچّے درجے دا کوئی قطع نہ ہووے۔
+
+\begin{lem}\ollabel{lem:max-cut-red-G3c}
+جے $\pi$ اک !!a{proof} اے، $\Log{G3c}+\CutCS$ وچ، جیہڑا~\CutCS{} دے درجے~$n$ والے استنباط اُتے مُکدا اے تے ہور بس~$\Log{G3c}$ دے قاعدے تے \CutCS{} دے درجے $<n$ والے استنباط ورتدا اے، تاں اوسے آخری سیکوئنٹ دا اک ثبوت~$\pi'$، $\Log{G3c} + \CutCS$ وچ، اے جیہدے وچ ہر \CutCS{} استنباط دا درجہ~$<n$ اے۔
+\end{lem}
+
+\begin{proof}
+!!{proof}~$\pi$ ایویں مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+اسیں~$!A$ دی شکل مطابق صورتاں وکھ کردے آں۔
+
+منّ لو $!A$ جوہری اے۔ دھیان دیو کہ~$\pi_1$ تے $\pi_2$ وچ سارے \CutCS{} استنباطاں دا درجہ $<
+\depth{!A} = 0$ ہونا چاہیدا اے۔ ایس لئی~$\pi_1$ یا~$\pi_2$ وچ کوئی \CutCS{} استنباط نہیں ہو سکدا۔ اسیں وکھاؤنے آں کہ $\Gamma \Sequent \Delta$ دا قطع توں بناں ثبوت اے، $\pheight{\pi_2}$ اُتے استقرا نال۔ جے $\pheight{\pi_2} = 0$، تاں $!A,
+\Gamma \Sequent \Delta$ اک مسلّمہ اے۔ جے $!A$ مُکھ فارمولا نہیں، تاں کوئی جوہری $!C$،~$\Gamma$ تے $\Delta$ دوہاں دا !!a{element} اے، تے $\Gamma
+\Sequent \Delta$ آپ اک مسلّمہ اے۔ جے $!A$ مُکھ اے، تاں
+$\Delta = \Delta, !A$۔ ایس صورت وچ $\pi_1$، $\Gamma \Sequent
+\Delta', !A, !A$ اُتے مُکدا اے۔ \olref[seq][inv]{prop:G3c-cont-adm} (سکیڑن دی قبولیت) لا کے $\Gamma \Sequent
+\Delta', !A$ دا قطع توں بناں ثبوت ملدا اے۔ جے $\pheight{\pi_2} > 0$، تاں ایہ قاعدے~$R$ اُتے مُکدا اے۔ اوس قاعدے دا اک مقدمہ لو، جیہدی شکل $!A, \Gamma',
+\Pi \Sequent \Delta', \Lambda$ اے، جتھے $\Pi$ تے $\Lambda$،~$R$ دے سرگردہ !!{formula}s نیں۔ \olref[seq][adm]{prop:weak-G3c-adm} نوں~$\pi_1$ تے $\pi_2$ اُتے لاؤن نال !!{proof}s ملدے نیں $\Gamma, \Gamma',
+\Pi \Sequent \Delta, \Delta', \Lambda, !A$ تے $!A, \Gamma, \Gamma',
+\Pi \Sequent \Delta, \Delta', \Lambda$ دے، جیہناں اُتے استقرا دا مفروضہ لگدا اے۔ ایس نال !!a{proof} ملدا اے $\Gamma, \Gamma', \Pi
+\Sequent \Delta, \Delta', \Lambda$ دا،~$R$ دے ہر مقدمے لئی۔ $R$ لاؤن نال $\Gamma, \Gamma \Sequent \Delta, \Delta$ ملدا اے تے \olref[seq][inv]{prop:G3c-cont-adm} توں قطع توں بناں ثبوت ملدا اے $\Gamma \Sequent \Delta$ دا۔
+
+جے $!A$ جوہری نہیں، تاں~$!A$ دے !!{main
+operator} مطابق صورتاں وکھ کردے آں۔ ہر صورت وچ \olref{lem:inv-G3c-cut} لا کے کھبّے تے سجّے قاعدیاں دے اوہناں مقدمیّاں دے !!{proof}s لیندے آں جیہناں دا مُکھ فارمولا $!A$ اے۔ فیر \olref[top]{lem:cut-adm-G3c} دے ثبوت دی صورت~E وانگ اگے ودھدے آں۔
+\begin{enumerate}
+\item $!A \ident \lnot !B$۔ !!{proof}s $\pi_1$ تے $\pi_2$ بالترتیب $\Gamma \Sequent \Delta, \lnot !B$ تے $\lnot !B, \Gamma \Sequent
+\Delta$ اُتے مُکدے نیں۔ \olref{lem:inv-G3c-cut} نال !!{proof}s $\pi_1'$ تے $\pi_2'$، $!B, \Gamma \Sequent
+\Delta$ تے $\Gamma \Sequent \Delta, !B$ دے نیں۔ !!{proof}~$\pi'$ ایہ اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+\item $!A \ident (!B \lor !C)$۔ !!{proof}s $\pi_1$ تے $\pi_2$،
+$\Gamma \Sequent \Delta, !B \lor !C$ تے $!B \lor !C, \Gamma
+\Sequent \Delta$ اُتے مُکدے نیں۔ \olref{lem:inv-G3c-cut} نال (\RightR{\lor} دی اُلٹ، جیہڑی~$\pi_1$ اُتے لائی اے) !!a{proof} $\pi_1'$ اے $\Gamma \Sequent \Delta, !B, !C$ دا۔ \olref{lem:inv-G3c-cut} نال (\LeftR{\lor} دی اُلٹ، جیہڑی~$\pi_2$ اُتے لائی اے) !!a{proof} $\pi_2'$ اے $!B, \Gamma \Sequent \Delta$ دا، تے !!a{proof} $\pi_2''$ اے $!C, \Gamma \Sequent \Delta$ دا۔
+\olref[seq][adm]{prop:weak-G3c-adm} نوں $\pi_2''$ اُتے لاؤن نال !!a{proof}~$\pi_2'''$ وی ملدا اے $!C, \Gamma \Sequent \Delta, !B$ دا۔ !!{proof}~$\pi'$ ایہ اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$\Gamma \fCenter \Delta, !B, !C$
+  \AxiomC{}
+  \RightLabel{$\pi_2'''$}
+  \Deduce$!C, \Gamma \fCenter \Delta, !B$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+\item $!A \ident (!B \land !C)$۔ مشق۔
+\item $!A \ident (!B \lif !C)$۔ !!{proof}s $\pi_1$ تے $\pi_2$،
+$\Gamma \Sequent \Delta, !B \lif !C$ تے $!B \lif !C, \Gamma
+\Sequent \Delta$ اُتے مُکدے نیں۔ \olref{lem:inv-G3c-cut} نال (\RightR{\lif} دی اُلٹ، جیہڑی~$\pi_1$ اُتے لائی اے) !!a{proof} $\pi_1'$ اے $!B, \Gamma \Sequent \Delta, !C$ دا۔ \olref{lem:inv-G3c-cut} نال (\LeftR{\lif} دی اُلٹ، جیہڑی~$\pi_2$ اُتے لائی اے) !!a{proof} $\pi_2'$ اے $\Gamma \Sequent \Delta, !B$ دا تے !!a{proof} $\pi_2''$ اے $!C, \Gamma \Sequent \Delta$ دا۔
+\olref[seq][adm]{prop:weak-G3c-adm} نوں $\pi_2''$ اُتے لاؤن نال !!a{proof}~$\pi_2'''$ وی ملدا اے $!C, !B, \Gamma \Sequent \Delta$ دا۔ !!{proof}~$\pi'$ ایہ اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$!B, \Gamma \fCenter \Delta, !C$
+  \AxiomC{}
+  \RightLabel{$\pi_2'''$}
+  \Deduce$!C, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+\item $!A \ident \lforall[x][!B(x)]$۔ !!{proof}s $\pi_1$ تے
+$\pi_2$، $\Gamma \Sequent \Delta, \lforall[x][!B(x)]$ تے
+$\lforall[x][!B(x)], \Gamma \Sequent \Delta$ اُتے مُکدے نیں۔
+\olref{lem:inv-G3c-cut} نال !!a{proof}~$\pi_1'$ اے $\Gamma
+\Sequent \Delta, !B(c)$ دا۔
+
+ہُن !!{proof}~$\pi_2$ ویکھو۔ ایہ $\lforall[x][!B(x)],
+  \Gamma \Sequent \Delta$ اُتے مُکدا اے۔ آخری سیکوئنٹ~$\pi_2$ توں اُتّے ول جاندیاں، $\lforall[x][!B(x)]$ دی ہر اوہ موجودگی نشان لاؤ جیہڑی کسے سیکوئنٹ دے کھبّے اے تے جیہدے توں آخری سیکوئنٹ وچ $\lforall[x][!B(x)]$ دی موجودگی~$\pi_2$ وچ آؤندی اے۔ یعنی:
+(a)~$\lforall[x][!B(x)]$ نوں~$\pi_2$ دے آخری سیکوئنٹ وچ نشان لاؤ۔ (b)~جے
+$\lforall[x][!B(x)]$ کسے قاعدے دے نتیجے دے سیاق وچ آؤندا اے تے نشان لگیا اے، تاں قاعدے دے مقدمے یا مقدمیّاں وچ اوہدی سانجھی موجودگی نوں نشان لاؤ۔ (c)~جے $\lforall[x][!B(x)]$، \LeftR{\lforall} قاعدے دے نتیجے وچ مُکھ اے تے نشان لگیا اے، تاں مقدمے وچ $\lforall[x][!B(x)]$ تے $!B(t)$ دیاں میل کھاندیاں سرگردہ موجودگیاں نوں نشان لاؤ۔
+
+ہُن $\lforall[x][!B(x)]$ دیاں ایہ ساریاں نشان والیاں موجودگیاں ویکھو۔ ایہناں وچوں کوئی \LeftR{\lforall} توں ہور کسے قاعدے وچ سرگردہ نہیں (بس سرگردہ !!{formula}s اُتے نشان لگدا اے، \LeftR{\lforall} دے)۔ $\lforall[x][!B(x)]$ دیاں ساریاں نشان والیاں موجودگیاں $\pi_2$ وچوں مٹا دیو۔ جے ایہ درست !!{proof} اے، تاں $\lforall[x][!B(x)]$ دیاں نشان والیاں موجودگیاں کدے سرگردہ نہیں سن۔ اوہ ساریاں سدھیاں مسلّمیاں توں آئیاں سن۔ !!{proof}~$\Gamma \Sequent \Delta$ اُتے مُکدا اے تے اسیں $\pi$ دی تھاں ایہ رکھ سکدے آں۔ اسیں سبھ توں اُچّے درجے دا اک قطع ہٹا دِتّا اے۔
+
+نہیں تاں ساڈے کول درست ثبوت نہیں، کیوں جے اسیں اوہ !!{formula}s $\lforall[x][!B(x)]$ مٹائے نیں جیہڑے کجھ \LeftR{\lforall} استنباطاں وچ سرگردہ سن۔ اسیں ایہناں نوں ایس شکل دے «استنباطاں» وچ بدل دِتّا اے:
+\[
+  \AxiomC{}
+  \RightLabel{$\pi_t$}
+  \Deduce$!B(t), \Pi \fCenter \Lambda$
+  \RightLabel{\LeftR{\lforall}}
+  \UnaryInf$\Pi \fCenter \Lambda$
+  \DisplayProof
+  \]
+ہر سبھ توں اُتلے ایہو جیہے «استنباط» نوں ایہدے نال بدلو:
+\[
+  \AxiomC{}
+  \RightLabel{$\Subst{\pi_1'}{t}{c}[\Pi \Sequent \Lambda]$}
+  \Deduce$\Gamma, \Pi \fCenter \Delta, \Lambda, !B(t)$
+  \AxiomC{}
+  \RightLabel{$\pi_t[\Gamma \Sequent \Delta]$}
+  \Deduce$!B(t), \Gamma, \Pi \fCenter \Delta, \Lambda$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+  \DisplayProof
+  \]
+تے ایہدے تھلّے ہر سیکوئنٹ دے کھبّے $\Gamma$ تے سجّے $\Delta$ شامل کرو۔ ایہ کم دُہراؤ جدوں تک سارے \LeftR{\lforall} «استنباط»، جیہناں دے مقدمے وچ $!B(t)$ اُتے نشان اے، کسے~$!B(t)$ اُتے \CutCS{} استنباط نال بدل نہیں جاندے۔ حاصل !!{proof} دا آخری سیکوئنٹ (تے ہُن ایہ درست !!{proof} اے) ایس شکل دا اے:
+$\Gamma, \dots, \Gamma \Sequent \Delta, \dots, \Delta$۔ سکیڑن دی قبولیت لا کے ایہنوں~$\Gamma
+  \Sequent \Delta$ دا !!a{proof} بناؤ تے $\pi$ دی تھاں ایہ رکھو۔ اسیں $\lforall[x][!B(x)]$ اُتے اک قطع دی تھاں $!B(t)$ اُتے (ممکن اے کئی) قطع رکھے نیں، پر ایہ سارے گھٹ درجے دے نیں۔ جیہڑے قطع پہلاں $\pi_1$ یا $\pi_2$ وچ سن، اوہ رہندے نیں، پر اوہ وی سارے گھٹ درجے دے نیں۔
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+$!A \ident (!B \land !C)$ والی صورت \olref{lem:inv-G3c-cut} دے ثبوت وچ پرکھو۔ یعنی وکھاؤ کہ جے اک !!a{proof}~$\pi$ اے جیہڑا ایتھے مُکدا اے:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!B \land !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+تے $\pi_1$ تے $\pi_2$ وچ بس درجے $<\depth{!B
+\land !C}$ والے قطع نیں، تاں اک !!a{proof}~$\pi'$ اے $\Gamma \Sequent \Delta$ دا، جیہدے وچ بس درجے $<\depth{!B \land !C}$ والے قطع نیں۔
+\end{prob}
+
+% \begin{prob}
+% Verify the case where $!A \ident \lexists[x][!B(x)]$ in the proof of
+% \olref{lem:inv-G3c-cut}.
+% \end{prob}
+
+\olref[top]{lem:cut-adm-G3c} قائم کردا اے کہ اسیں \CutCS{} دا سبھ توں اُچّے درجے والا استنباط، !!a{proof} وچ، گھٹ درجے دے \CutCS{} استنباطاں نال بدل سکدے آں۔ ایس معاون قضیے نوں فیر ورت کے وکھا سکدے آں کہ کِنّے وی \CutCS{} استنباط !!a{proof} وچوں ہٹا سکدے آں۔ ایہنوں وار واری سبھ توں اُتلے ذیلی !!{proof}s اُتے لاؤ جیہڑے سبھ توں اُچّے درجے دے~\CutCS اُتے مُکدے نیں۔
+
+\begin{thm}\ollabel{thm:cut-elim-G3c-largest}
+کوئی وی !!{proof} $\pi$، $\Log{G3c} + \CutCS$ وچ،~\Log{G3c} دے ثبوت وچ بدلیا جا سکدا اے۔
+\end{thm}
+
+\begin{proof}
+پہلاں ثابت کردے آں کہ~$\pi$ وچ سبھ توں اُچّے درجے دے سارے قطع ہٹائے جا سکدے نیں۔ منّ لو $d$ سبھ توں اُچّا درجہ اے اوہناں قطعاں دا جیہڑے~$\pi$ وچ نیں، تے $n$ درجے~$d$ والے قطعاں دی گنتی اے۔ ثبوت~$n$ اُتے استقرا نال اے۔ جے $n=0$، تاں ثابت کرن نوں کجھ نہیں۔ جے $n>0$، تاں درجے~$d$ دا سبھ توں اُتلا قطع چُنو تے $\pi_1$ اوہ ذیلی !!{proof} ہووے جیہڑا ایس اُتے مُکدا اے۔ \olref{lem:max-cut-red-G3c} نال اک !!a{proof}~$\pi_1'$ اے اوسے آخری سیکوئنٹ دا، جیہدے سارے قطع درجے $<d$ دے نیں۔ $\pi_1$ نوں $\pi_1'$ نال~$\pi$ وچ بدلو۔ ایس نال اک !!a{proof} ملدا اے جیہدے وچ $n-1$ قطع درجے~$d$ دے نیں، تے استقرا دا مفروضہ لگدا اے۔
+
+ہُن نتیجہ~$d$ اُتے استقرا نال نکلدا اے۔ جے $d=0$، تاں سارے قطع جوہری نیں تے پچھلے نتیجے نال سارے ہٹائے جا سکدے نیں۔ جے $d>0$، تاں پچھلے نتیجے توں ثبوت ملدا اے جیہدے وچ درجے $d$ دے سارے قطع درجے~$<d$ دے قطعاں نال بدلے گئے نیں۔ چونکہ $d$،~$\pi$ وچ قطعاں دا سبھ توں اُچّا درجہ سی، ساڈے کول ہُن ایہو جیہا ثبوت اے جیہدے وچ قطعاں دا سبھ توں اُچّا درجہ $<d$ اے، تے استقرا دا مفروضہ لگدا اے۔
+\end{proof}
+
+\end{document}

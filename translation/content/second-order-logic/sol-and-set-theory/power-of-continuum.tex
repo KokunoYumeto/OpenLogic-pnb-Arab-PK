@@ -1,0 +1,175 @@
+% Part: second-order-logic
+% Chapter: sol-and-sets
+% Section: power-of-continuum
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{set}{pow}
+
+\olsection{استمرار دا کارڈینیل سائز}
+
+\begin{explain}
+دوجے درجے دی منطق وچ اسیں !!{domain} دے ذیلی سیٹاں اُتے مسوّریت کر
+سکدے آں، پر !!{domain} دے ذیلی سیٹاں دے سیٹاں اُتے نہیں۔ایہ کم
+براہ راست کرن لئی سانوں \emph{تیجے درجے} دی منطق چاہیدی ہووے گی۔
+مثال لئی، جے اسیں کانتور دا ایہ قضیہ لکھنا چاہیئے کہ کسے سیٹ دے
+قوتی سیٹ توں خود اوس سیٹ ول کوئی !!{injective} (اک بہ اک) فنکشن
+نہیں ہوندا،تاں اسیں شاید ایویں کوشش کریے: ”ہر سیٹ~$X$ تے ہر
+سیٹ~$P$ لئی،جے $P$،~$X$ دا قوتی سیٹ اے،تاں
+$\cardle{P}{X}$ نہیں“۔ایہ آکھن لئی کہ $P$،~$X$ دا قوتی سیٹ اے،
+سانوں ایہ رسمی بنانا پئے گا کہ $P$ دے !!{element}s عین~$X$ دے
+سارے ذیلی سیٹ نیں؛یعنی کجھ ایس طرح:
+$\lforall[Y][(P(Y) \liff Y \subseteq X)]$۔دقت $P(Y)$ وچ اے:
+ایہ دوجے درجے دی منطق دا !!a{formula} نہیں،کیونکہ $P$ ورگے
+اک-رُکنی تعلقی متغیر دی دلیل دی تھاں صرف ٹرم آ سکدے نیں۔
+
+پر جے دائرہ کافی وڈا ہووے،اسیں سیٹاں دے سیٹاں اُتے مسوّریت دی
+\emph{نقل} بنا سکدے آں۔خیال ایہ اے کہ دو رُکنی تعلق~$R$،
+!!{domain} دے !!{element}s نوں !!{domain} دے !!{element}s نال
+جوڑدا اے۔ایہو جیہا~$R$ ملے تاں کسے~$x$ نال $R$ دے ذریعے
+جڑے سارے !!{element}s اکٹھے کیتے جا سکدے نیں:
+$\Setabs{y \in \Domain{M}}{R(x,y)}$ اوہ سیٹ اے جیہنوں~$x$
+”کوڈ“ کردا اے۔الٹ پاسے،جے
+$Z \subseteq \Pow{\Domain{M}}$،~$\Domain{M}$ دے ذیلی سیٹاں دا
+کوئی مجموعہ ہووے،تے~$\Domain{M}$ وچ گھٹ توں گھٹ~$Z$ دے سیٹاں
+جِنّے !!{element}s ہون،تاں اک تعلق~$R \subseteq \Domain{M}^2$
+وی ملدا اے جس نال ہر $Y \in Z$ نوں کوئی~$x$ کوڈ کردا اے۔
+ایتھے کوڈ بناؤن والا تعلق~$R$ اے۔
+\end{explain}
+
+\begin{defn}
+جے $R \subseteq \Domain{M}^2$،تاں
+\emph{$x$،$R$ دے لحاظ نال~$\Setabs{y
+  \in \Domain{M}}{R(x, y)}$ نوں کوڈ کردا اے}۔
+\end{defn}
+
+جے کوئی !!a{element}~$x \in \Domain{M}$،
+$R$ دے لحاظ نال سیٹ $Z \subseteq \Domain{M}$ نوں کوڈ کردا اے،
+تاں سیٹ $Y \subseteq \Domain{M}$ سیٹاں دے اک سیٹ نوں کوڈ کردا اے:
+یعنی اوہ سارے سیٹ جیہڑے~$Y$ دے !!{element}s کوڈ کردے نیں۔ ایس طرح کوئی
+سیٹ~$Y$،$R$ دے لحاظ نال~$\Pow{X}$ نوں کوڈ کر سکدا اے۔ایہ
+عین اوس ویلے ہوندا اے جدوں ہر $Z \subseteq X$ نوں کوئی $x
+\in Y$،$R$ دے لحاظ نال~$Z$ نوں کوڈ کرے،تے ہر $x \in Y$،
+$R$ دے لحاظ نال کسے $Z \subseteq X$ نوں کوڈ کرے۔
+
+\begin{prop}
+ایہ !!{formula}
+  \[
+  \fn{Codes}(x, R, Z) \ident \lforall[y][(Z(y) \liff
+    R(x, y))]
+  \]
+ظاہر کردا اے کہ $s(x)$،$s(R)$ دے لحاظ نال~$s(Z)$ نوں کوڈ
+کردا اے۔ایہ !!{formula}
+\begin{multline*}
+  \fn{Pow}(Y, R, X) \ident \\
+  \lforall[Z][(Z \subseteq X \lif \lexists[x][(Y(x) \land
+    \fn{Codes}(x, R, Z))])] \land {} \\ \lforall[x][(Y(x) \lif
+  \lforall[Z][(\fn{Codes}(x, R, Z) \lif Z \subseteq X)]]
+\end{multline*}
+ظاہر کردا اے کہ $s(Y)$،$s(R)$ دے لحاظ نال~$s(X)$ دا قوتی
+سیٹ کوڈ کردا اے۔ یعنی $s(Y)$ دے رکن $s(R)$ دے لحاظ نال عین
+$s(X)$ دے ذیلی سیٹاں نوں کوڈ کردے نیں۔
+\end{prop}
+
+\begin{explain}
+ایس ترکیب نال اسیں ذیلی سیٹاں دی تھاں اوہناں دے کوڈاں اُتے
+مسوّر لا کے قوتی سیٹ بارے بیان لکھ سکدے آں۔ مثال لئی، کانتور دا
+قضیہ ہُن ایویں لکھیا جا سکدا اے کہ~$X$
+دا قوتی سیٹ کوڈ کرن والے کسے وی تعلق دے کوڈاں دے سیٹ توں
+خود~$X$ ول کوئی !!{injective} (اک بہ اک) فنکشن نہیں۔
+\end{explain}
+
+\begin{prop}
+ایہ جملہ
+\begin{multline*}
+  \lforall[X][\lforall[Y][\lforall[R][(\fn{Pow}(Y, R, X) \lif \\
+      \lnot \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)] \lif
+            \eq[x][y])]] \land {}\\
+        \lforall[x][(Y(x) \lif X(u(x)))])])]]]
+\end{multline*}
+منطقی طور اُتے معتبر اے۔
+\end{prop}
+
+\begin{explain}
+!!a{denumerable} سیٹ دا قوتی سیٹ !!{nonenumerable} اے۔ ایس لئی اوہدی
+کارڈینیلٹی ہر !!{denumerable} سیٹ دے سائز،یعنی~$\aleph_0$،
+توں وڈی اے۔$\Pow{\Nat}$ دے سائز نوں ایتھے ”استمرار دا سائز“
+آکھیا گیا اے،کیونکہ ایہ حقیقی عددی خط،~$\Real$،دے نقطیاں
+جِنّا اے۔جے !!{domain}،کسی !!a{denumerable} سیٹ دا قوتی سیٹ
+کوڈ کرن لئی کافی وڈا ہووے،تاں اسیں ایہ آکھ کے ظاہر کر سکدے آں
+کہ اک سیٹ استمرار دے سائز دا اے: اوہ سیٹ~$Y$ دے ہم تعداد اے
+جیہڑا سیٹ~$X$،جیہدا سائز~$\aleph_0$ اے،دے قوتی سیٹ نوں
+کوڈ کردا اے تے ہر ذیلی سیٹ لئی عین اک وکھرے کوڈ دی شرط پوری کردا اے۔ (جے دائرہ اِنّا وڈا نہ
+ہووے،یعنی اس وچ~$\Real$
+نال ہم تعداد کوئی ذیلی سیٹ نہ ہووے،تاں~$\Pow{X}$ نوں کوڈ کرن
+والا تعلق وی نہیں ہو سکدا۔)
+% PNB-CMP-083: اصل any coding Y آکھدا؛duplicate codes نال |Y| وڈا ہو سکدا،B14 دی uniqueness شرط لازم۔
+\end{explain}
+
+\begin{prop}
+جے $\cardle{\Real}{\Domain{M}}$،تاں ایہ !!{formula}
+\begin{multline*}
+\fn{Cont}(Y) \ident 
+\lexists[X][\lexists[R][((\fn{Aleph}_0(X) \land
+      \fn{Pow}(Y, R, X)) \land \\ 
+      \lforall[x][\lforall[y][((Y(x) \land {} 
+      Y(y) \land \lforall[z][R(x,z) \liff R(y,z)]) \lif \eq[x][y])]])]]
+\end{multline*}
+ظاہر کردا اے کہ $\cardeq{s(Y)}{\Real}$۔
+\end{prop}
+
+\begin{proof}
+  $\fn{Pow}(Y, R, X)$ ظاہر کردا اے کہ~$s(Y)$،$s(R)$ دے
+  لحاظ نال~$s(X)$ دا قوتی سیٹ کوڈ کردا اے؛$\fn{Aleph}_0(X)$
+  آکھدا اے کہ ایہ اصل سیٹ گنتی وار لامتناہی اے۔ ایس لئی~$s(Y)$ دا
+  سائز کم از کم استمرار دے سائز جِنّا اے،اگرچہ وڈا وی ہو سکدا اے
+  (جے~$s(Y)$ دے کئی رکن~$X$ دا اکّو ذیلی سیٹ کوڈ کرن)۔ آخری
+  عطفی جزو ایہ گنجائش ختم کردا اے۔ اوہ منگدا اے کہ
+  $s(Y)$ دے رکناں تے~$s(X)$ دے ذیلی سیٹاں وچ نسبت~$s(R)$
+  دے ذریعے !!{injective} (اک بہ اک) ہووے۔
+% PNB-CMP-081: اصل proof وچ s(Z) بےتعریف؛ایتھے مقرر base s(X) اے۔
+\end{proof}
+
+\begin{prop}
+$\cardeq{\Domain{M}}{\Real}$ اُدوں تے صرف اُدوں جدوں
+\begin{multline*}
+  \Sat{M}{\lexists[Y][(\fn{Cont}(Y) \land {} \\
+      \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)] \lif
+            \eq[x][y])]] \land {} \\
+        \lforall[y][(Y(y) \liff \lexists[x][\eq[y][u(x)]])])])]}
+        \end{multline*}
+  ۔
+% PNB-CMP-082: Cont(Y) exact continuum codes،تے u:D→Y bijection؛اصل Y⊆range(u) زائد بڑے D نوں وی قبول کردا سی۔
+  \end{prop}
+
+\begin{explain}
+استمرار دا مفروضہ ایہ بیان اے کہ استمرار دا سائز پہلی
+!!{nonenumerable} کارڈینیلٹی اے؛یعنی~$\Pow{\Nat}$ دا
+سائز~$\aleph_1$ اے۔
+\end{explain}
+
+\begin{prop}
+استمرار دا مفروضہ سچ اے اُدوں تے صرف اُدوں جدوں
+\[\fn{CH} \ident
+\lforall[X][(\fn{Aleph}_1(X) \liff \fn{Cont}(X))]\]
+ہر ساخت وچ درست ہووے۔
+\end{prop}
+
+ایہ ہم ارزی درست نہیں کہ استمرار دا مفروضہ جھوٹا ہووے اُدوں تے
+صرف اُدوں جدوں $\lnot \fn{CH}$ معتبر ہووے۔ !!a{enumerable} دائرے
+وچ نہ~$\aleph_1$ سائز دا کوئی ذیلی سیٹ ہوندا اے تے نہ استمرار
+دے سائز دا؛اس لئی ہر !!a{enumerable} دائرے وچ~$\fn{CH}$
+ہمیشہ سچ اے۔ پر اسیں اک ہور جملہ دے سکدے آں جیہڑا ہر ساخت وچ
+عین اوس ویلے درست ہووے جدوں استمرار دا مفروضہ جھوٹا ہووے:
+
+\begin{prop}
+استمرار دا مفروضہ جھوٹا اے اُدوں تے صرف اُدوں جدوں
+\[\fn{NCH} \ident
+\lforall[X][(\fn{Cont}(X) \lif \lexists[Y][(Y \subseteq X \land \lnot
+    \fn{Count}(Y) \land \lnot \cardeq{X}{Y})])]\]
+ہر ساخت وچ درست ہووے۔
+\end{prop}
+
+\end{document}

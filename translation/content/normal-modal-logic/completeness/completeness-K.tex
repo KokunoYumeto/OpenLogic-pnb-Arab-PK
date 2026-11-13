@@ -1,0 +1,53 @@
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: completeness-K
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{cmk}
+
+\olsection{\Log{K} دا تعیّن تے تمامیت}
+
+ہُن اسیں کینونیکل نمونہ ورت کے تمامیت ثابت کر سکدے آں۔ تمامیت ایس حقیقت توں ملدی اے کہ~$\Sigma$ دے کینونیکل نمونے وچ سچے !!{formula}s عین اوہی نیں جیہڑے $\Sigma$ توں !!{derivable} نیں۔ ایس خاصیت والے نمونے~$\Sigma$ نوں \emph{متعین کردے نیں}۔
+
+\begin{defn}
+  نمونہ $\mModel{M}$ نارمل امکانی منطق~$\Sigma$ نوں \emph{متعین کردا اے} ٹھیک اُدوں جدوں $\mSat{M}{!A}$ اُدوں تے صرف اُدوں ہووے جدوں $\Sigma
+  \Proves !A$، سارے !!{formula}s~$!A$ لئی۔
+\end{defn}
+
+\begin{thm}[تعیّن]\ollabel{thm:determination}
+   $\mSat{M^\Sigma}{!A}$ اُدوں تے صرف اُدوں جدوں $\Sigma \Proves !A$۔
+\end{thm}
+
+\begin{proof}
+  جے $\mSat{M^\Sigma}{!A}$، تاں ہر مکمل
+  $\Sigma$-بے تضاد $\Delta$ لئی
+  $\mSat{M^\Sigma}{!A}[\Delta]$۔ ایس لئی سچائی دے معاون قضیے مطابق $!A \in
+  \Delta$ ہر مکمل $\Sigma$-بے تضاد $\Delta$ لئی۔ ایس توں
+  \olref[lin]{cor:provability-characterization} مطابق ($\Gamma =
+  \emptyset$ رکھ کے)، $\Sigma \Proves !A$۔
+
+  اُلٹے پاسے جے $\Sigma \Proves !A$، تاں
+  \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-closed} مطابق ہر مکمل $\Sigma$-بے تضاد $\Delta$ وچ~$!A$ شامل اے۔ ایس لئی سچائی دے معاون قضیے مطابق
+  $\mSat{M^\Sigma}{!A}[\Delta]$ ہر~$\Delta \in
+  W^\Sigma$ لئی، یعنی $\mSat{M^\Sigma}{!A}$۔
+\end{proof}
+
+کیوں جے \Log{K} دا کینونیکل نمونہ~\Log{K} نوں متعین کردا اے، ایس لئی~\Log{K} دی تمامیت سدھی اک نتیجے وجوں ملدی اے۔
+
+\begin{cor}\ollabel{cor:Kcomplete}
+  بنیادی امکانی منطق \Log{K} سارے نمونیاں دی جماعت دے لحاظ نال مکمل اے، یعنی جے $\Entails !A$، تاں $\Log{K}
+  \Proves !A$۔
+\end{cor}
+
+\begin{proof}
+  اُلٹی نفی راہیں، جے $\Log{K} \Proves/ !A$، تاں تعیّن دے قضیے مطابق
+  $\mSat/{M^{\Log{K}}}{!A}$، سو $!A$ معتبر نہیں۔
+\end{proof}
+
+عام صورت وچ کسے نظام $\Sigma$ دی نمونیاں دی جماعت دے لحاظ نال تمامیت لئی، جیویں \Log{KTB4} دی سارے انعکاسی، متقابل تے متعدی نمونیاں دی جماعت دے لحاظ نال، صرف تعیّن کافی نہیں۔ سانوں ایہ وی وکھاؤنا اے کہ نظام
+$\Sigma$ دا کینونیکل نمونہ اوس جماعت دا رکن اے۔ ایہ گل کینونیکل نمونے دی بناوٹ توں سدھی نہیں نکلدی، تے ایہ ہمیشہ سچی وی نہیں!
+
+\end{document}

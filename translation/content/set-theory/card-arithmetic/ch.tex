@@ -1,0 +1,91 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{ch}
+
+\olsection{استمرار دا مفروضہ}
+
+پچھلا نتیجہ (ٹھیک ای) اشارہ کردا اے کہ کارڈینل گھات خاصی \emph{سوکھی} ہووے گی جے ضمانت ہووے کہ لامتناہی کارڈینل عدد $2$ دیاں گھاتاں نال، یعنی (\olref[opps]{lem:SizePowerset2Exp} مطابق) ذیلی سیٹاں دے سیٹ لین نال، «سِدھے طریقے نال چلن»۔ پر اسیں ایہ منّ نہیں سکدے کہ لامتناہی کارڈینل عدد ذیلی سیٹاں دے سیٹاں نال \emph{واقعی} سِدھے طریقے نال چلدے نیں۔
+
+ایہ گل کھولھنی شروع کرن لئی اسیں کجھ سوہنی لکھت پیش کردے آں۔
+
+\begin{defn}
+$\cardsucc{\cardfont{a}}$ سبھ توں چھوٹا کارڈینل عدد ہووے جیہڑا $\cardfont{a}$ توں سختی نال وڈا اے۔ اسیں دو لامتناہی لڑیواں ایویں تعریف کردے آں:
+\begin{align*}
+	\aleph_{0} &\defis \omega &
+	\beth_{0} &\defis \omega\\
+	\aleph_{\alpha \ordplus 1} &\defis \cardsucc{(\aleph_{\alpha})} &
+	\beth_{\alpha+1} &\defis \cardexpo{2}{\beth_{\alpha}}\\
+	\aleph_{\alpha} &\defis \bigcup_{\beta< \alpha} \aleph_{\beta} &
+	\beth_{\alpha} &\defis \bigcup_{\beta < \alpha}\beth_{\beta} & \text{جدوں $\alpha$ حدّی ترتیبی عدد اے}.
+	\end{align*}
+\end{defn}
+
+$\cardsucc{\cardfont{a}}$ دی تعریف ٹھیک اے، کیوں جے \olref[cardinals][classing]{lem:NoLargestCardinal} دسدا اے کہ ہر کارڈینل عدد $\cardfont{a}$ لئی کوئی کارڈینل عدد $\cardfont{a}$ توں وڈا اے، تے لامتناہی درجیاں اُتے استقرا ضمانت دیندا اے کہ $\cardfont{a}$ توں وڈا \emph{سبھ توں چھوٹا} کارڈینل عدد موجود اے۔ $\cardfont{a}$ دی باقی تعریف لامتناہی درجیاں والی بازگشت نال ملدی اے۔
+
+کانتور نے «$\aleph$» والی لکھت پیش کیتی۔ ایہ \emph{الف} اے، عبرانی ورن مالا دا پہلا اکھر، تے «لامتناہی» لئی عبرانی لفظ دا وی پہلا اکھر۔ پئرس نے «$\beth$» والی لکھت پیش کیتی۔ ایہ \emph{بیت} اے، عبرانی ورن مالا دا دوجا اکھر۔\footnote{پئرس نے ایہ لکھت دسمبر 1900 وچ کانتور نوں لکھے اک خط وچ ورتی سی۔ افسوس، اوہنے اوتھے اک غلط دلیل وی دتی کہ $\beth_\alpha$ موجود نہیں جدوں $\alpha \geq
+\omega$۔} ہُن ایہ لکھتاں سانوں لامتناہی کارڈینل عدد دیندیاں نیں۔
+
+\begin{prop}
+$\aleph_\alpha$ تے $\beth_\alpha$، ہر ترتیبی عدد $\alpha$ لئی کارڈینل عدد نیں۔
+\end{prop}
+
+\begin{proof}
+دوویں نتیجے لامتناہی درجیاں اُتے سادے استقرا نال نکلدے نیں۔ $\aleph_0 =
+\beth_0 = \omega$ کارڈینل عدد اے، \olref[cardinals][classing]{omegaisacardinal} مطابق۔ جے منّ لئیے کہ $\aleph_\alpha$ تے $\beth_\alpha$ دوویں کارڈینل عدد نیں، تاں $\aleph_{\alpha+1}$ تے $\beth_{\alpha+1}$ تعریف وچ صاف کارڈینل عدد نیں۔ تے کارڈینل عدداں دے سیٹ دا اتحاد اک کارڈینل عدد اے، \olref[cardinals][classing]{unioncardinalscardinal} مطابق۔
+\end{proof}
+\noindent
+نالے ہر لامتناہی کارڈینل عدد اک $\aleph$ اے۔
+
+\begin{prop}
+جے $\cardfont{a}$ اک لامتناہی کارڈینل عدد اے، تاں $\cardfont{a} =
+\aleph_\gamma$ کسے اکّو اک $\gamma$ لئی۔
+\end{prop}
+
+\begin{proof}
+کارڈینل عدداں اُتے لامتناہی درجیاں والے استقرا نال۔ استقرا لئی منّ لو کہ جے $\cardfont{b} < \cardfont{a}$ تاں $\cardfont{b} =
+\aleph_{\gamma_\cardfont{b}}$۔ جے $\cardfont{a} =
+\cardsucc{\cardfont{b}}$ کسے $\cardfont{b}$ لئی، تاں $\cardfont{a} =
+\cardsucc{(\aleph_{\gamma_\cardfont{b}})}=
+\aleph_{\gamma_\cardfont{b}+1}$۔ جے $\cardfont{a}$ کسے وی کارڈینل عدد دا جانشین نہیں، تاں کیوں جے کارڈینل عدد ترتیبی عدد نیں،
+$\cardfont{a} = \bigcup_{\cardfont{b} < \cardfont{a}} \cardfont{b} =
+\bigcup_{\cardfont{b} < \cardfont{a}}{\aleph_{\gamma_\cardfont{b}}}$،
+سو $\cardfont{a} = \aleph_\gamma$ جتھے $\gamma =
+\bigcup_{\cardfont{b} < \cardfont{a}}\gamma_\cardfont{b}$۔
+\end{proof}
+
+ہر لامتناہی کارڈینل عدد اک $\aleph$ اے، سو سوال اُٹھدا اے کہ کی ہر لامتناہی کارڈینل عدد اک~$\beth$ اے؟ جے ایہ گل \emph{ہووے} تاں لامتناہی کارڈینل عدد ذیلی سیٹاں دے سیٹ لین والے عمل نال «سِدھے طریقے نال چلن»۔ سچ مُچ، سانوں ہِیٹھلی گل مل جائے گی۔
+
+\begin{defish}
+\emph{استمرار دا عام مفروضہ} (GCH)۔ $\aleph_\alpha  = \beth_\alpha$ سارے $\alpha$ لئی۔
+\end{defish}
+
+نالے جے GCH سچ ہووے تاں اسیں کارڈینل گھات نوں کافی سادہ کر سکدے آں۔ خاص طور اُتے، اسیں وکھا سکدے آں کہ جدوں $\cardfont{b} < \cardfont{a}$، تاں $\cardexpo{\cardfont{a}}{\cardfont{b}}$ دی قدر ایہناں حداں اندر اے، $\cardfont{a}\leq \cardexpo{\cardfont{a}}{\cardfont{b}} \leq
+\cardsucc{\cardfont{a}}$۔ فیر اسیں اوہ عین شرطاں وی دَس سکدے آں جیہڑیاں طے کردیاں نیں کہ دوہاں وچوں کیہڑی صورت اے (یعنی $\cardfont{a} = \cardexpo{\cardfont{a}}{\cardfont{b}}$ یا $\cardexpo{\cardfont{a}}{\cardfont{b}} =
+\cardsucc{\cardfont{a}}$)۔\footnote{شرط دا فیصلہ \emph{ہم حدی} کردی اے۔}
+
+پر GCH اک \emph{مفروضہ} اے، \emph{قضیہ} نہیں۔ \citet{Godel1938} نے ثابت کیتا کہ جے $\ZFC$ بے ٹکراؤ اے تاں $\ZFC + \text{GCH}$ وی بے ٹکراؤ اے۔ پر بعد وچ پتا لگیا کہ اسیں $\lnot$GCH نوں وی $\ZFC$ وچ پا سکدے آں۔ اصل وچ GCH دی سبھ توں سوکھی، پر غیر معمولی \emph{صورت} ویکھو، یعنی:
+
+\begin{defish}
+\emph{استمرار دا مفروضہ} (CH)۔ $\aleph_1 = \beth_1$۔
+\end{defish}
+
+\citet{Cohen1963} نے ثابت کیتا کہ جے $\ZFC$ بے ٹکراؤ اے تاں $\ZFC
++ \lnot\text{CH}$ وی بے ٹکراؤ اے۔ سو استمرار دا مفروضہ $\ZFC$ توں آزاد اے۔
+
+ایہنوں استمرار دا مفروضہ ایس لئی آکھدے نیں کہ «استمرار» حقیقی عددی لکیر $\Real$ دا اک ہور ناں اے۔ \olref[opps]{continuumis2aleph0} دسدا اے کہ $\card{\Real} =
+\beth_1$۔ سو استمرار دا مفروضہ آکھدا اے کہ قدرتی عدداں دی کارڈینیلٹی $\aleph_0 = \beth_0$ تے استمرار دی کارڈینیلٹی $\beth_1$ دے وچکار کوئی کارڈینل عدد نہیں۔
+
+(G)CH دی $\ZFC$ توں \emph{آزادی} نوں ویکھدیاں، اوہناں دے \emph{سچ} ہون بارے کی آکھیے؟ کہن نوں \emph{بہت} کجھ اے۔ اصل وچ سیٹ نظریے دے حال دے بوہتے نتیجہ خیز کم دا رخ ایہناں مسئلیاں دی پڑتال ول رہیا اے۔ پر دو چھوٹیاں گلاں اُتے ضرور زور دینا چاہیدا اے۔
+
+پہلی، ایہناں رسمی آزادی دے نتیجیاں توں \emph{سِدھا ای} ایہ نہیں نکلدا کہ GCH یا CH دی سچ قدر \emph{غیر معین} اے۔ آخر ہو سکدا اے سانوں بس ہور مسلّمے پاؤن دی لوڑ ہووے جیہڑے سانوں سہج لگن تے سوال دا فیصلہ اک پاسے یا دوجے پاسے کر دین۔ گوڈل نے آپ آکھیا سی کہ ایہ ٹھیک جواب اے۔
+
+دوجی، CH دی $\ZFC$ توں آزادی ضرور \emph{دھیان کھچن والی} اے، پر (لفظی معنی وچ) ایہ \emph{ناقابلِ یقین} ضرور نہیں۔ سِدھی گل ایہ اے کہ $\ZFC$ سانوں اینا کجھ دسدا اے، پر کارڈینل عدداں توں اوہناں دے جانشیناں تک جان لئی شاید ذیلی سیٹاں دے سیٹ لین نالوں کوئی ہور باریک طریقہ چاہیدا اے۔
+ %The operation of taking powersets moves us from one stage of the
+ %hierarchy to its successor stage (from $V_{\alpha}$ to
+ %$V_{\alpha+1}$). 
+
+ایہ دو گلاں آکھ کے، جے تسی ہور جاننا چاہندے او تاں ہُن تہانوں اوہناں وکھ وکھ فلسفیاں تے ریاضی داناں ول جانا پئے گا جیہڑے ایس بحث وچ حصہ لیندے نیں۔\footnote{شروع کرن لئی تسی \citet[\S15.6]{Potter2004} پڑھنا چاہو گے۔}
+
+\end{document}

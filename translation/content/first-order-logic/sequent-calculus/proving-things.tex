@@ -1,0 +1,339 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{pro}}
+      {\olfileid{pl}{seq}{pro}}
+
+\olsection{\usetoken{P}{derivation} دیاں مثالاں (Examples of derivation)}
+
+\begin{ex}
+اک $\Log{LK}$-!!{derivation} سیکوئنٹ $!A \land !B \Sequent !A$ لئی دیو (Give an LK derivation)۔
+
+اسیں مطلوب آخرلا سیکوئنٹ (desired end-sequent) !!{derivation} دے سب توں ہِٹھاں لکھ کے شروع کردے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+اگلا کم ایہ لبھنا اے کہ ایس روپ دے ہِٹھلے سیکوئنٹ (lower sequent) والی استنباط
+(inference) کیہڑی ہو سکدی اے۔ ایہ کوئی ساختی قاعدہ (structural rule) ہو سکدا اے،
+پر شروع وچ منطقی قاعدہ (logical rule) لبھنا چنگا رہندا اے۔ ہِٹھلے سیکوئنٹ وچ
+اکّو منطقی رابط (logical connective)، یعنی $\land$، آندا اے، سو اسیں $\land$ دا
+قاعدہ لبھ رہے آں۔ نالے $\land$ دی علامت مقدم (antecedent) وچ اے، ایس لئی اسیں
+\LeftR{\land} قاعدہ ویکھدے آں۔
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+\LeftR{\land} استنباط دے اوپری سیکوئنٹ (upper sequent) لئی دو چوناں نیں: اوپری
+سیکوئنٹ $!A \Sequent !A$ ہو سکدا اے، یا $!B \Sequent !A$۔ صاف اے کہ $!A
+\Sequent !A$ اک ابتدائی سیکوئنٹ (initial sequent) اے—جیہڑا ساڈے لئی چنگا اے—جد کہ
+$!B \Sequent !A$ عام طور تے اخذ ہون جوگ نہیں (not derivable in general)۔ سو اسیں اوپری سیکوئنٹ بھر دیندے آں:
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+ہُن ساڈے کول اک درست $\Log{LK}$-!!{derivation} اے جیہڑی سیکوئنٹ $!A
+\land !B \Sequent !A$ دی اے۔
+\end{ex}
+
+\begin{ex}
+اک $\Log{LK}$-!!{derivation} سیکوئنٹ $\lnot !A \lor !B
+\Sequent !A \lif !B$ لئی دیو (Give an LK derivation)۔
+
+مطلوب آخرلا سیکوئنٹ (desired end-sequent) !!{derivation} دے سب توں ہِٹھاں لکھ کے شروع کرو۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A \lor !B \fCenter !A \lif !B$
+\end{prooftree}
+اوہ منطقی قاعدہ لبھن لئی جیہڑا سانوں ایہ آخرلا سیکوئنٹ دے سکدا اے، اسیں آخرلے
+سیکوئنٹ دے منطقی رابطیاں (logical connectives)، یعنی $\lnot$، $\lor$ تے $\lif$،
+نوں ویکھدے آں۔ ایس ویلے ساڈا سروکار صرف $\lor$ تے $\lif$ نال اے، کیوں جے
+اوہ آخرلے سیکوئنٹ دیاں !!{sentence}s دے !!{main operator}s نیں؛ $\lnot$ کسے ہور
+رابط دے دائرے (scope) اندر اے، سو اوہدے نال اسیں بعد وچ نمٹاں گے۔ ایس لئی آخری
+استنباط دے منطقی قاعدے لئی ساڈے کول \LeftR{\lor} تے \RightR{\lif} دیاں چوناں
+نیں۔ اصل وچ کوئی وی چُن سکدے آں، پر آؤ \RightR{\lif} قاعدہ چُنیے—جے ہور کوئی
+سبب نہ وی ہووے، تاں ایہ سانوں ہُنّے دو شاخاں وچ ونڈن (splitting into two branches)
+نوں ملتوی کرن دیندا اے۔ جیہڑی \RightR{\lif} استنباط ایہ ہِٹھلا سیکوئنٹ دے سکدی
+اے، اوہدے روپ مطابق ایہ اینج ہونی چاہیدی اے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}} \UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+
+جے اسیں $\lnot !A \lor !B$ نوں مقدم دے باہرلے سرے ول لے جائیے، تاں
+\LeftR{\lor} قاعدہ لا سکدے آں۔ خاکے (schema) مطابق ایہ دو اوپری سیکوئنٹاں وچ
+اینج ونڈیا جانا چاہیدا اے:
+% PNBSEQ-001 ماخذ دی درستی: ہِٹھ دِتیاں چار تھاواں اُتے فارمولے صرف مقدم دے اندر بدلدے نیں، ایس لئی Right Exchange دی تھاں Left Exchange اے؛ نتیجے والے پاسے دیاں دو Right Exchange ورتوں جوں دیاں توں نیں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\AxiomC{}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$ \lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+چیتا رکھو کہ اسیں اُتّے ول اپنا رستہ بناندے ہوے (wind our way up) ابتدائی
+سیکوئنٹاں تک پہنچن دی کوشش کر رہے آں؛ لگدا اے اسیں کافی نیڑے آں!{} سجی شاخ
+(right branch) ابتدائی سیکوئنٹ توں صرف اک Weakening تے اک Exchange دور اے، تے
+فیر اوہ پوری ہو جاندی اے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+
+ہُن کھبی شاخ (left branch) ول ویکھو۔ کسے وی !!{sentence} وچ اکّو منطقی رابط،
+یعنی مقدم والیاں !!{sentence}s وچ $\lnot$ دی علامت، اے؛ سو اسیں \LeftR{\lnot}
+قاعدے دی اک ورتوں (instance) لبھ رہے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ !A \fCenter !B, !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+جیویں اسیں سجی شاخ پوری کیتی سی، اویویں ایس کھبی شاخ نوں وی پورا کرن لئی صرف اک
+Weakening تے اک Exchange دی لوڑ اے۔
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ !A \fCenter !A, !B$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A \fCenter !B, !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+\end{ex}
+
+\begin{ex}
+اک $\Log{LK}$-!!{derivation} سیکوئنٹ $\lnot !A \lor \lnot !B
+\Sequent \lnot (!A \land !B)$ لئی دیو (Give an LK derivation)۔
+
+اُتّے والے طریقے ورت کے اسیں مطلوب آخرلا سیکوئنٹ (desired end-sequent) سب توں
+ہِٹھاں لکھ کے شروع کردے آں۔
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B) $
+\end{prooftree}
+آخرلے سیکوئنٹ دیاں !!{sentence}s دے دستیاب مرکزی رابط (available main
+connectives) $\lor$ تے $\lnot$ نیں۔ ایتھے \LeftR{\lor} یا \RightR{\lnot}،
+دونواں وچوں کوئی وی قاعدہ لگ سکدا اے، پر اسیں \RightR{\lnot} نال شروع کردے آں،
+کیوں جے ایہ اک پل لئی دو شاخاں وچ ونڈن توں بچاندا اے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+% PNBSEQ-002 ماخذ دی درستی: ہِٹھلے دونیں متبادل سیکوئنٹاں وچ B دی نفی ماخذ توں رہ گئی سی؛ مثال دے آخرلے سیکوئنٹ تے اگلے سارے ثبوتی درخت not-B ورتدے نیں۔
+ہُن ساڈے کول \LeftR{\land} یا \LeftR{\lor} قاعدہ ویکھن دی چون اے۔ آؤ ویکھئیے
+کہ \LeftR{\land} لاؤن نال کی ہُندا اے: اسیں سیکوئنٹ $!A,
+\lnot !A \lor \lnot !B \Sequent \quad$ یا سیکوئنٹ $!B, \lnot !A
+\lor \lnot !B \Sequent \quad$، دونواں وچوں کسے نال شروع کر سکدے آں۔ کیوں جے
+!!{derivation}، $!A$ تے $!B$ دے لحاظ نال متناظر (symmetric) اے، سو پہلا چُن لئیے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+!!{derivation} نوں اگے بھردے ہوے سانوں پتا لگدا اے کہ اک مسئلہ آ پیندا اے:
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !A, !A \fCenter$
+\AxiomC{}
+\RightLabel{?}
+\UnaryInf$!A \fCenter !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !B, !A \fCenter$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+سجی شاخ دے اُتلے سیکوئنٹ نوں ہور گھٹایا (reduced) نہیں جا سکدا، تے ساختی
+استنباطاں راہیں وی اوہنوں ابتدائی سیکوئنٹ نہیں بنایا جا سکدا۔ سو ایہ چُنن والا
+ثبوتی رستہ (proof path) درست نہیں۔ صاف اے کہ اُتّے \LeftR{\land} قاعدہ لانا
+غلتی سی۔ پچھلی حالت ول مُڑ کے (backtracking) اوہدی تھاں \LeftR{\lor} قاعدہ
+لاواں، تاں سانوں ایہ ملدا اے:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \land !B \fCenter $
+
+\AxiomC{}
+\UnaryInf$\lnot !B, !A \land !B \fCenter $
+
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \land !B \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+ہر شاخ نوں پہلاں وانگ پورا کر کے سانوں ایہ ملدا اے:
+\begin{prooftree}
+\Axiom$ !A \fCenter!A$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B \fCenter !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \land !B \fCenter $
+
+\Axiom$ !B \fCenter !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B \fCenter !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B, !A \land !B \fCenter $
+
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \land !B \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+(ایہناں قدماں وچ اسیں $\land$ دے قاعدے $\lnot$ دے قاعدیاں توں ہِٹھاں وی لا
+سکدے ساں، تے فیر وی اک درست !!{derivation} ملدی۔)
+\end{ex}
+
+\begin{ex}
+ہُن تک اسیں Contraction دا قاعدہ نہیں ورتیا، پر کدے کدے اوہدی لوڑ پیندی اے۔
+ایہ اوہو جیہی اک مثال اے۔ من لو اسیں $\quad \Sequent !A \lor \lnot !A$ ثابت
+کرنا چاہنے آں۔ $\RightR{\lor}$ نوں پچھلے پاسے ول (backwards) لاؤن نال سانوں
+ہِٹھ دِتیاں دوناں !!{derivation}s وچوں اک ملے گی:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \fCenter !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\DisplayProof\qquad\bottomAlignProof
+\AxiomC{}
+\UnaryInf$!A \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \fCenter \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+ظاہر اے کہ ایہناں وچوں کوئی وی ابتدائی سیکوئنٹ اُتے ختم نہیں ہُندی۔ ترکیب ایہ
+سمجھنا اے کہ Contraction دا قاعدہ سانوں !!a{sentence} دیاں دو نقلاں نوں اک وچ
+سکیڑن (combine two copies into one) دیندا اے—تے جدوں اسیں ثبوت لبھ رہے آں، یعنی
+ہِٹھوں اُتّے ول (bottom to top) جا رہے آں، تاں مقدمے وچ $!A \lor \lnot !A$ دی
+اک نقل سنبھال کے رکھ سکدے آں، مثلاً:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+ہُن اسیں $\RightR{\lor}$ دوسری واری لا سکدے آں تے~$\lnot !A$ وی حاصل کر
+لیندے آں، جیہڑا اک مکمل !!{derivation} تک لے جاندا اے۔
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\fCenter !A, \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\fCenter !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+\end{ex}
+
+\begin{prob}
+ہِٹھلے سیکوئنٹاں دیاں !!{derivation}s دیو (Give derivations):
+\begin{enumerate}
+\item $!A \land (!B \land !C) \Sequent (!A \land !B) \land !C$.
+\item $!A \lor (!B \lor !C) \Sequent (!A \lor !B) \lor !C$.
+\item $!A \lif (!B \lif !C) \Sequent !B \lif (!A \lif !C)$.
+\item $!A \Sequent \lnot\lnot !A$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھلے سیکوئنٹاں دیاں !!{derivation}s دیو (Give derivations):
+\begin{enumerate}
+\item $(!A \lor !B) \lif !C \Sequent !A \lif !C$.
+\item $(!A \lif !C) \land (!B \lif !C) \Sequent (!A \lor !B) \lif !C$.
+\item $\Sequent \lnot(!A \land \lnot !A)$.
+\item $!B \lif !A \Sequent \lnot !A \lif \lnot !B$.
+\item $\Sequent (!A \lif \lnot !A) \lif \lnot !A$.
+\item $\Sequent \lnot(!A \lif !B) \lif \lnot !B$.
+\item $!A \lif !C \Sequent \lnot (!A \land \lnot !C)$.
+\item $!A \land \lnot !C \Sequent \lnot (!A \lif !C)$.
+\item $!A \lor !B, \lnot !B \Sequent !A$.
+\item $\lnot !A \lor \lnot !B \Sequent \lnot(!A \land !B)$.
+\item $\Sequent (\lnot !A \land \lnot !B) \lif\lnot(!A \lor !B)$.
+\item $\Sequent \lnot(!A \lor !B) \lif (\lnot !A \land \lnot !B)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+ہِٹھلے سیکوئنٹاں دیاں !!{derivation}s دیو (Give derivations):
+\begin{enumerate}
+\item $\lnot(!A \lif !B) \Sequent !A$.
+\item $\lnot(!A \land !B) \Sequent \lnot !A \lor \lnot !B$.
+\item $!A \lif !B \Sequent \lnot !A \lor !B$.
+\item $\Sequent \lnot \lnot !A \lif !A$.
+\item $!A \lif !B, \lnot !A \lif !B \Sequent !B$.
+\item $(!A \land !B) \lif !C \Sequent (!A \lif !C) \lor (!B \lif !C)$.
+\item $(!A \lif !B) \lif !A \Sequent !A$.
+\item $\Sequent (!A \lif !B) \lor (!B \lif !C)$.
+\end{enumerate}
+(ایہناں ساریاں لئی $\RightR{\Contraction}$ قاعدے دی لوڑ اے (These all require the rule)۔)
+\end{prob}
+\end{document}

@@ -1,0 +1,124 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: lindenbaums-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{lin}}
+      {\olfileid{pl}{com}{lin}}
+
+\olsection{لنڈنبام دا معاون قضیہ (Lindenbaum's lemma)}
+
+\begin{explain}
+ہُن اسیں اک معاون قضیہ ثابت کراں گے جیہڑا وکھاندا اے کہ
+!!{sentence}s دا ہر بے تضاد سیٹ، جملیاں دے اک ایسے
+سیٹ وچ شامل ہوندا اے جیہڑا صرف بے تضاد ہی نہیں بلکہ
+!!{complete} وی اے۔ ثبوت وچ اسیں ہر واری اک
+!!{sentence} شامل کردے آں تے ہر قدم اُتے سیٹ دی
+بے تضادی برقرار رکھدے آں۔ ایہ اس طرح کردے آں کہ
+ہر $!A$ لئی کسے نہ کسے مرحلے اُتے یا $!A$ یا
+$\lnot !A$ شامل ہو جائے۔ ایس تعمیر دے سارے
+مرحلیاں دا اتحاد فیر یا $!A$ یا اوہدی نفی~$\lnot !A$
+رکھدا اے، ایس لئی مکمل اے۔ اوہ بے تضاد وی اے،
+کیوں جے ہر مرحلے اُتے اسیں تضاد پیدا نہ ہون دی
+ضمانت کردے آں۔
+\end{explain}
+
+\begin{lem}[لنڈنبام دا معاون قضیہ (Lindenbaum's lemma)]
+\ollabel{lem:lindenbaum} ہر بے تضاد سیٹ~$\Gamma$
+نوں زبان~$\Lang{L}$ وچ اک !!a{complete} تے بے تضاد
+سیٹ~$\Gamma^*$ تک ودھایا جا سکدا اے۔
+\end{lem}
+
+\begin{proof}
+فرض کرو $\Gamma$ بے تضاد اے۔ $!A_0$، $!A_1$،
+\dots{} نوں~$\Lang L$ دے سارے !!{sentence}s دی اک
+ترتیب منو۔ $\Gamma_0 = \Gamma$ مقرر کرو، تے
+\[
+\Gamma_{n+1} =
+\begin{cases}
+\Gamma_n \cup \{ !A_n \} & \textrm{جے $\Gamma_n \cup \{!A_n\}$ بے
+  تضاد ہووے؛} \\
+\Gamma_n \cup \{ \lnot !A_n \} & \textrm{ورنہ۔}
+\end{cases}
+\]
+$\Gamma^* = \bigcup_{n \geq 0} \Gamma_n$ مقرر کرو۔
+
+ہر $\Gamma_n$ بے تضاد اے: $\Gamma_0$ تعریف مطابق
+بے تضاد اے۔ جے $\Gamma_{n+1} = \Gamma_n \cup \{!A_n\}$،
+تاں ایس دی وجہ ایہ اے کہ ایہ ودھایا سیٹ بے تضاد اے۔
+جے اوہ بے تضاد نہیں، تاں
+$\Gamma_{n+1} = \Gamma_n \cup \{\lnot !A_n\}$۔
+سانوں جانچنا اے کہ $\Gamma_n \cup \{\lnot !A_n\}$
+بے تضاد اے۔ فرض کرو ایہ بے تضاد نہیں۔ تاں
+$\Gamma_n \cup \{!A_n\}$ تے
+$\Gamma_n \cup \{\lnot !A_n\}$ \emph{دونیں}
+متضاد نیں۔ ایس دا مطلب اے کہ
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:prv:prop:provability-exhaustive},
+    prfSC/{fol:seq:prv:prop:provability-exhaustive},
+    prfND/{fol:ntd:prv:prop:provability-exhaustive},
+    prfTab/{fol:tab:prv:prop:provability-exhaustive}}}{%
+  \tagrefs{prfAX/{pl:axd:prv:prop:provability-exhaustive},
+    prfSC/{pl:seq:prv:prop:provability-exhaustive},
+    prfND/{pl:ntd:prv:prop:provability-exhaustive},
+    prfTab/{pl:tab:prv:prop:provability-exhaustive}}}
+مطابق $\Gamma_n$ متضاد ہووے گا، جیہڑا استقرا دے
+مفروضے دے خلاف اے۔
+
+ہر~$n$ تے ہر $i < n$ لئی $\Gamma_i \subseteq \Gamma_n$۔
+ایہ $n$ اُتے سادہ استقرا توں ملدا اے۔ $n=0$ لئی
+کوئی $i < 0$ نہیں، ایس لئی دعویٰ آپے درست اے۔
+استقرائی قدم لئی فرض کرو ایہ~$n$ لئی درست اے۔
+اسیں وکھاواں گے کہ جے $i < n+1$، تاں
+$\Gamma_i \subseteq \Gamma_{n+1}$۔
+تعمیر مطابق $\Gamma_{n+1} = \Gamma_n \cup \{!A_n\}$
+یا $=
+\Gamma_n \cup \{\lnot !A_n\}$۔
+سو $\Gamma_n \subseteq \Gamma_{n+1}$۔
+جے $i < n+1$، تاں استقرا دے مفروضے مطابق
+$\Gamma_i \subseteq \Gamma_n$ (جے $i < n$)،
+یا صاف گل $\Gamma_n
+\subseteq \Gamma_n$ (جے $i = n$) مطابق۔
+$\Gamma_i \subseteq
+\Gamma_{n+1}$ ایس توں~$\subseteq$ دی تعدیت نال ملدا اے۔
+
+ایس توں $\Gamma^*$ دی بے تضادی وی نکلدی اے۔
+وجہ ایہ اے: فرض کرو $\Gamma' \subseteq \Gamma^*$
+اک محدود سیٹ اے۔
+% PNB-COM-017: خالی محدود ذیلی سیٹ لئی largest stage موجود نہیں؛بے تضاد اصل مرحلے دا ذیلی سیٹ ہون کافی اے۔
+جے ایہ سیٹ خالی اے، تاں اوہ اصل بے تضاد مرحلے دا ذیلی سیٹ اے، سو بے تضاد اے۔ ورنہ ہر $!B \in \Gamma'$ کسے
+مرحلے~$\Gamma_i$ وچ وی اے، جیہدا اشاریہ~$i$ اے۔
+انہاں اشارییاں وچوں
+$n$ سب توں وڈا لو۔ چونکہ
+$\Gamma_i \subseteq \Gamma_n$ جے $i \le n$ ہووے،
+ایس لئی ہر
+$!B \in \Gamma'$ وی $\in \Gamma_n$ اے،
+یعنی $\Gamma' \subseteq \Gamma_n$، تے
+$\Gamma_n$~بے تضاد اے۔ ایس طرح ہر محدود ذیلی
+سیٹ $\Gamma' \subseteq
+\Gamma^*$ بے تضاد اے۔
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:ptn:prop:proves-compact},
+    prfSC/{fol:seq:ptn:prop:proves-compact},
+    prfND/{fol:ntd:ptn:prop:proves-compact},
+    prfTab/{fol:tab:ptn:prop:proves-compact}}}{%
+  \tagrefs{prfAX/{pl:axd:ptn:prop:proves-compact},
+    prfSC/{pl:seq:ptn:prop:proves-compact},
+    prfND/{pl:ntd:ptn:prop:proves-compact},
+    prfTab/{pl:tab:ptn:prop:proves-compact}}}
+مطابق $\Gamma^*$ بے تضاد اے۔
+
+$\Frm[L]$ دا ہر !!{sentence} اوہدی فہرست وچ
+آوندا اے جیہڑی~$\Gamma^*$ نوں متعین کرن لئی
+ورتی گئی۔ جے $!A_n \notin \Gamma^*$، تاں
+ایس دی وجہ ایہ اے کہ $\Gamma_n \cup \{!A_n\}$
+متضاد سی۔ پر فیر $\lnot !A_n
+\in \Gamma^*$، ایس لئی $\Gamma^*$
+!!{complete} اے۔
+\end{proof}
+
+\end{document}

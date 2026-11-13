@@ -1,0 +1,159 @@
+% The Urdu Babel locale supplies Arabic-script shaping and paragraph direction.
+% Names, prose, and the edition's language metadata are Punjabi Shahmukhi.
+\setlocalecaption{urdu}{contents}{فہرست}
+\setlocalecaption{urdu}{chapter}{باب}
+\setlocalecaption{urdu}{part}{حصہ}
+\setlocalecaption{urdu}{figure}{شکل}
+\setlocalecaption{urdu}{table}{جدول}
+\setlocalecaption{urdu}{proof}{ثبوت}
+\setlocalecaption{urdu}{history}{تاریخی نوٹ}
+\setlocalecaption{urdu}{reading}{ہور پڑھائی}
+\setlocalecaption{urdu}{appendix}{ضمیمہ}
+\setlocalecaption{urdu}{appendices}{ضمیمے}
+\setlocalecaption{urdu}{theorem}{قضیہ}
+\setlocalecaption{urdu}{example}{مثال}
+\setlocalecaption{urdu}{definition}{تعریف}
+\setlocalecaption{urdu}{lemma}{لما}
+\setlocalecaption{urdu}{proposition}{نتیجہ}
+\setlocalecaption{urdu}{corollary}{لازمی نتیجہ}
+\setlocalecaption{urdu}{problem}{مشق}
+\setlocalecaption{urdu}{problems}{مشقاں}
+\setlocalecaption{urdu}{remark}{تبصرہ}
+\setlocalecaption{urdu}{axiom}{مسلّمہ}
+\setlocalecaption{urdu}{note}{نوٹ}
+\setlocalecaption{urdu}{case}{صورت}
+\setlocalecaption{urdu}{convention}{رواج}
+\setlocalecaption{urdu}{OLP}{اوپن لاجک پروجیکٹ}
+\setlocalecaption{urdu}{OLT}{اوپن لاجک متن}
+\setlocalecaption{urdu}{OLTlink}{https://github.com/OpenLogicProject/OpenLogic}
+\setlocalecaption{urdu}{license}{کریئیٹو کامنز انتساب ۴٫۰ بین الاقوامی لائسنس}
+
+\newcommand*{\pnbcrefname}[3]{\crefname{#1}{#2}{#3}\Crefname{#1}{#2}{#3}}
+\addto\extrasurdu{%
+  \pnbcrefname{part}{حصہ}{حصے}%
+  \pnbcrefname{chapter}{باب}{باب}%
+  \pnbcrefname{section}{حصہ}{حصے}%
+  \pnbcrefname{subsection}{ذیلی حصہ}{ذیلی حصے}%
+  \pnbcrefname{page}{صفحہ}{صفحے}%
+  \pnbcrefname{thm}{قضیہ}{قضیے}%
+  \pnbcrefname{ex}{مثال}{مثالاں}%
+  \pnbcrefname{defn}{تعریف}{تعریفاں}%
+  \pnbcrefname{lem}{لما}{لمے}%
+  \pnbcrefname{prop}{نتیجہ}{نتیجے}%
+  \pnbcrefname{cor}{لازمی نتیجہ}{لازمی نتیجے}%
+  \pnbcrefname{prob}{مشق}{مشقاں}%
+  \pnbcrefname{probd}{مشق}{مشقاں}%
+  \pnbcrefname{rem}{تبصرہ}{تبصرے}%
+  \pnbcrefname{axiom}{مسلّمہ}{مسلّمے}%
+  \pnbcrefname{note}{نوٹ}{نوٹ}%
+  \pnbcrefname{case}{صورت}{صورتاں}%
+  \pnbcrefname{conv}{رواج}{رواج}%
+  \pnbcrefname{figure}{شکل}{شکلاں}%
+  \pnbcrefname{table}{جدول}{جدولاں}%
+  \pnbcrefname{equation}{مساوات}{مساواتاں}%
+  \def\crefpairconjunction{ تے }%
+  \def\crefmiddleconjunction{، }%
+  \def\creflastconjunction{ تے }%
+}
+\DeclareRobustCommand{\pnbLatin}[1]{\foreignlanguage{english}{#1}}
+\DeclareTextFontCommand{\pnbemphasis}{\upshape\bfseries}
+\let\emph\pnbemphasis
+\RenewDocumentCommand{\indcase}{s t{!} m m +m}{%
+  \DeclareDocumentMacro\indfrm{#3}%
+  \DeclareDocumentMacro\indfrmp{#3}%
+  \DeclareDocumentMacro\indcomplex{#4}%
+  \IfBooleanTF{#1}{$#3$ جوہری اے۔ }{$#3 \ident #4$۔ }%
+  \IfBooleanTF{#2}{مشق۔}{#5}%
+}
+\pdfstringdefDisableCommands{%
+  \def\pnbLatin#1{#1}%
+  \def\foreignlanguage#1#2{#2}%
+  \def\Th#1{#1}\def\Log#1{#1}%
+}
+
+% Keep dvipdfmx content delimiters in left-to-right order inside each picture.
+\makeatletter
+\let\PNBpgfBeginPicture\pgfsys@beginpicture
+\let\PNBpgfEndPicture\pgfsys@endpicture
+\def\pgfsys@beginpicture{\beginL\PNBpgfBeginPicture}
+\def\pgfsys@endpicture{\PNBpgfEndPicture\endL}
+\NewDocumentEnvironment{pnbDiagramLine}{+b}
+  {\par\noindent\beginL\makebox[\linewidth][c]{\ignorespaces#1\unskip}\endL\par}
+  {}
+\AtBeginDocument{%
+  \@ifundefined{ifpnbDiagramReader}{%
+    \@ifundefined{tikz@initial@text}{}{%
+      \def\tikz@initial@text{\foreignlanguage{urdu}{شروع}}%
+    }%
+  }{}%
+}
+
+% Keep propositional references to shared material on the corresponding
+% first-order label. The actual label and reference type come from cleveref.
+\newcommand*{\pnbEnableSharedLabels}{%
+  \let\pnbOriginalLabel\label
+  \renewcommand*{\label}[1]{%
+    \pnbOriginalLabel{##1}%
+    \begingroup
+    \edef\pnbCurrentLabel{##1}%
+    \expandafter\pnbSharedLabel\pnbCurrentLabel::\@nil
+    \endgroup
+  }%
+}
+\def\pnbSharedLabel#1:#2:#3\@nil{%
+  \ifstrequal{#1}{fol}{%
+    \ifstrempty{#2}{}{%
+      \ifinlist{#2}{\pnbSharedChapters}{%
+        \expandafter\pnbWriteSharedLabel\pnbCurrentLabel\@nil
+      }{}%
+    }%
+  }{}%
+}
+\def\pnbWriteSharedLabel#1:#2\@nil{\pnbOriginalLabel{pl:#2}}
+\newcommand*{\pnbSharedChapters}{}
+\forcsvlist{\listadd\pnbSharedChapters}{prf,seq,ntd,tab,axd,com}
+\makeatother
+
+% Localized text tokens used by the chapter bodies.
+\settexttoken{proof}{ثبوت}{ثبوت}[ثبوت][ثبوت]
+\definetoken{a}{proof}{}
+\definetoken{A}{proof}{}
+\settexttoken{height}{اُچائی}{اُچائیاں}[اُچائی][اُچائیاں]
+\definetoken{a}{height}{}
+\definetoken{A}{height}{}
+\settexttoken{prove}{ثابت}{ثابت}[ثابت][ثابت]
+\definetoken{a}{prove}{}
+\definetoken{A}{prove}{}
+\settexttoken{proving}{ثابت کرن}{ثابت کرن}[ثابت کرن][ثابت کرن]
+\definetoken{a}{proving}{}
+\definetoken{A}{proving}{}
+\settexttoken{provable}{ثابت ہو سکّن جوگ}{ثابت ہو سکّن جوگ}[ثابت ہو سکّن جوگ][ثابت ہو سکّن جوگ]
+\definetoken{a}{provable}{}
+\definetoken{A}{provable}{}
+\settexttoken{introduction}{شامل کرن دا}{شامل کرن دے}[شامل کرن دا][شامل کرن دے]
+\definetoken{a}{introduction}{}
+\definetoken{A}{introduction}{}
+\settexttoken{elimination}{ہٹاؤن دا}{ہٹاؤن دے}[ہٹاؤن دا][ہٹاؤن دے]
+\definetoken{a}{elimination}{}
+\definetoken{A}{elimination}{}
+\settexttoken{relational model}{تعلقاں والا نمونہ}{تعلقاں والے نمونے}[تعلقاں والا نمونہ][تعلقاں والے نمونے]
+\definetoken{a}{relational model}{}
+\definetoken{A}{relational model}{}
+\settexttoken{depth}{ڈونگھائی}{ڈونگھائیاں}[ڈونگھائی][ڈونگھائیاں]
+\definetoken{a}{depth}{}
+\definetoken{A}{depth}{}
+\settexttoken{sentences}{جملے}{جملے}[جملے][جملے]
+\definetoken{a}{sentences}{}
+\definetoken{A}{sentences}{}
+\settexttoken{colorC}{لال}{لال}[لال][لال]
+\definetoken{a}{colorC}{}
+\definetoken{A}{colorC}{}
+\settexttoken{colorD}{نیلا}{نیلا}[نیلا][نیلا]
+\definetoken{a}{colorD}{}
+\definetoken{A}{colorD}{}
+\settexttoken{colorE}{ہرا}{ہرا}[ہرا][ہرا]
+\definetoken{a}{colorE}{}
+\definetoken{A}{colorE}{}
+\settexttoken{hp}{hp}{hp}[hp][hp]
+\definetoken{a}{hp}{}
+\definetoken{A}{hp}{}

@@ -1,0 +1,156 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: size-of-domain
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{syn}{siz}
+
+\olsection{لامتناہی تے \usetoken{S}{enumerable}
+  \usetoken{P}{domain} دا بیان}
+
+سیٹ~$M$ (ڈیڈیکائنڈ معنیاں وچ) لامتناہی اُدوں تے صرف اُدوں اے جدوں
+اک !!a{injective} (اک بہ اک) فنکشن~$f\colon M
+\to M$ موجود ہووے جیہڑا !!{surjective} (ہر ہدف قدر لین والا) نہ ہووے؛ یعنی $\ran{f} \neq M$
+ہووے۔ پہلے درجے دی منطق وچ اسیں اک اک-رکنی !!{function}~$f$ نوں
+ویکھ سکدے آں تے آکھ سکدے آں کہ فنکشن~$\Assign{f}{M}$، جیہڑا
+!!a{structure}~$\Struct{M}$ وچ اوس نوں دتا گیا اے، !!{injective}
+اے تے $\ran{f} \neq
+\Domain{M}$ اے:
+\[
+\lforall[x][\lforall[y][(\eq[f(x)][f(y)] \to \eq[x][y])]] \land
+\lexists[y][\lforall[x][\eq/[y][f(x)]]].
+\]
+جے $\Struct{M}$ وچ ایہ !!{sentence} پورا اتردا اے، تاں
+$\Assign{f}{M}:
+\Domain{M} \to \Domain{M}$، !!{injective} اے؛ ایس لئی
+$\Domain{M}$ لازماً لامتناہی اے۔ اُلٹے پاسے، جے $\Domain{M}$
+لامتناہی اے تے ایس طرح دا فنکشن موجود اے، تاں اسیں
+$\Assign{f}{M}$ نوں اوہ فنکشن دے سکدے آں۔ فیر $\Struct{M}$
+وچ ایہ !!{sentence} پورا اترے گا۔ پر ایس طریقے لئی ضروری اے کہ ساڈی
+زبان وچ اوس مقصد لئی ورتی غیر منطقی علامت~$f$ موجود ہووے۔
+دوجے درجے دی منطق وچ اسیں سِدھا آکھ سکدے آں کہ ایہو جیہا فنکشن
+\emph{موجود اے}۔ ہُن~$f$ علامت دی لوڑ نہیں رہندی، تے سانوں خالص
+دوجے درجے دی منطق دا !!{sentence} ملدا اے:
+\[
+\fn{Inf} \ident \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)]
+      \lif \eq[x][y])]] \land \lexists[y][\lforall[x][\eq/[y][u(x)]]])].
+\]
+$\Sat{M}{\fn{Inf}}$ اُدوں تے صرف اُدوں جدوں $\Domain{M}$
+لامتناہی اے۔ ہُن اسیں $\fn{Fin} \ident \lnot \fn{Inf}$ تعریف
+کر سکدے آں؛ $\Sat{M}{\fn{Fin}}$ اُدوں تے صرف اُدوں جدوں
+$\Domain{M}$ متناہی اے۔ خالص پہلے درجے دی منطق دا کوئی اک
+!!{sentence}، !!{domain} دے لامتناہی ہون نوں بیان نہیں کر سکدا،
+بھاویں ایہو جیہے جملیاں دا اک لامتناہی سیٹ ایہہ گل بیان کر سکدا اے۔
+خالص پہلے درجے دی منطق دے !!{sentence}s دا کوئی وی سیٹ ایہو
+جیہا نہیں جیہڑا کسے !!a{structure} وچ اُدوں تے صرف اُدوں پورا اترے
+جدوں اوہدا دائرہ متناہی ہووے۔
+
+\begin{prop}
+$\Sat{M}{\fn{Inf}}$ اُدوں تے صرف اُدوں جدوں $\Domain{M}$ لامتناہی اے۔
+\end{prop}
+
+\begin{proof}
+$\Sat{M}{\fn{Inf}}$ اُدوں تے صرف اُدوں جدوں
+  $\Sat{M}{\lforall[x][\lforall[y][(\eq[u(x)][u(y)] \lif \eq[x][y])]]
+    \land \lexists[y][\lforall[x][\eq/[y][u(x)]]]}[s]$ کسے~$s$
+  لئی درست ہووے۔ جے ایہہ درست اے، تاں $s(u)$ اک !!a{injective}
+  فنکشن اے، تے کوئی $y \in \Domain{M}$،~$s(u)$ دی حاصل قدراں
+  وچ نہیں آؤندا۔ اُلٹ پاسے، جے اک !!a{injective}
+  $f\colon \Domain{M} \to \Domain{M}$ ایہو جیہا اے جیہدے لئی
+  $\ran{f}
+  \neq \Domain{M}$، تاں $s(u) = f$ رکھ کے ایہو جہی متغیر
+  قدر بندی مل جاندی اے۔
+\end{proof}
+
+سیٹ $M$، !!{enumerable}
+اُدوں اے جدوں اوہدے !!{element}s دی اک گنتی وار فہرست
+\[
+m_0, m_1, m_2, \dots
+\]
+موجود ہووے (دہراؤ توں بغیر، پر ممکن اے متناہی ہووے)۔ ایہو جہی
+فہرست اُدوں تے صرف اُدوں موجود اے جدوں کوئی !!a{element}
+$z \in M$ تے اک فنکشن $f\colon M \to M$ ایہو جیہے ہون کہ
+$z$، $f(z)$، $f(f(z))$، \dots،~$M$ دے سارے !!{element}s
+ہون۔ جے فہرست موجود اے تاں $z = m_0$ تے
+$f(m_k) = m_{k+1}$ (یا $f(m_k) = m_k$ جے $m_k$ فہرست دا آخری
+!!{element} اے) مطلوبہ !!{element} تے فنکشن دندے نیں۔
+اُلٹ پاسے، جے ایہو جیہے $z$ تے $f$ موجود نیں، تاں
+$z$، $f(z)$، $f(f(z))$، \dots،~$M$ دی گنتی وار فہرست اے؛
+ایس لئی $M$، !!{enumerable} اے۔ دوجے درجے دی منطق وچ اسیں
+$z$ تے~$f$ دے وجود نوں بیان کر سکدے آں، تے ایہو جیہا
+!!{sentence} بنا سکدے آں جیہڑا کسے !!a{structure} وچ اُدوں
+تے صرف اُدوں درست ہووے جدوں اوہ !!{structure}، !!{enumerable} ہووے:
+\[
+\fn{Count} \ident
+\lexists[z][\lexists[u][\lforall[X][((X(z) \land
+      \lforall[x][(X(x) \lif X(u(x)))]) \lif \lforall[x][X(x)])]]]
+\]
+
+\begin{prop}
+$\Sat{M}{\fn{Count}}$ اُدوں تے صرف اُدوں جدوں $\Domain{M}$،
+!!{enumerable} اے۔
+\end{prop}
+
+\begin{proof}
+فرض کرو $\Domain{M}$، !!{enumerable} اے، تے $m_0$، $m_1$،
+\dots، اوہدی گنتی وار فہرست اے۔ دہراؤ ہٹا کے اسی یقین
+کر سکدے آں کہ کوئی $m_k$ دو واری
+نہ آوے۔ $f(m_k) = m_{k+1}$ رکھو۔ ہُن
+$s(z) = m_0$ تے $s(u) = f$ رکھو۔ اسیں وکھاؤندے آں کہ
+\[
+\Sat{M}{\lforall[X][((X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)])]}[s]
+\]
+فرض کرو $M \subseteq \Domain{M}$ کوئی وی ذیلی سیٹ اے۔ ایہ وی فرض کرو کہ
+$\Sat{M}{(X(z) \land \lforall[x][(X(x) \lif
+X(u(x)))])}[\Subst{s}{M}{X}]$۔ تاں $\Subst{s}{M}{X}(z) \in M$
+تے جدوں وی $x \in M$ ہووے، $(\Subst{s}{M}{X}(u))(x) \in M$
+وی ہووے گا۔ دوجے لفظاں وچ، کیوں جے
+$\varAssign{\Subst{s}{M}{X}}{s}{X}$ اے، $m_0 \in M$ اے
+تے جے $x \in M$ تاں $f(x) \in M$؛ ایس لئی
+$m_0 \in M$، $m_1 = f(m_0) \in M$،
+$m_2 = f(f(m_0)) \in M$، وغیرہ۔ لہٰذا $M = \Domain{M}$،
+تے ایس لئی
+$\Sat{M}{\lforall[x][X(x)]}[\Subst{s}{M}{X}]$۔ کیوں جے
+$M \subseteq
+\Domain{M}$ کوئی وی ذیلی سیٹ سی، سو:
+$\Sat{M}{\fn{Count}}$۔
+
+ہُن فرض کرو کہ $\Sat{M}{\fn{Count}}$، یعنی
+\[
+\Sat{M}{\lforall[X][((X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)])]}[s]
+\]
+کسے~$s$ لئی۔ $m = s(z)$ تے $f = s(u)$ رکھو، تے
+$M = \{m,
+f(m), f(f(m)), \dots\}$ نوں ویکھو۔ ایس طرح تعریف
+کیتا~$M$ صاف طور تے !!{enumerable} اے۔ فیر مفروضے دے مطابق
+\[
+\Sat{M}{(X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)]}[\Subst{s}{M}{X}]
+\]
+پورا اتردا اے۔ نال ای $\Sat{M}{X(z)}[\Subst{s}{M}{X}]$ وی
+پورا اتردا اے، کیوں جے $M \ni m =
+\Subst{s}{M}{X}(z)$ اے؛ تے
+$\Sat{M}{\lforall[x][(X(x) \lif
+X(u(x)))]}[\Subst{s}{M}{X}]$ وی پورا اتردا اے، کیوں جے
+جدوں وی $x \in M$ ہووے، $f(x) \in
+M$ وی ہوندا اے۔ سو کیوں جے شرط تے پورا شرطیہ دوویں پورے اتردے نیں، اوس دا
+نتیجہ وی پورا اترنا لازمی اے:
+$\Sat{M}{\lforall[x][X(x)]}[\Subst{s}{M}{X}]$۔ پر ایس
+دا مطلب $M = \Domain{M}$ اے، تے ایس لئی $\Domain{M}$،
+!!{enumerable} اے، کیوں جے تعریف مطابق $M$ اے۔
+\end{proof}
+
+\begin{prob}
+!!{sentence} $\fn{Inf} \land \fn{Count}$ عین اوہناں دائریاں وچ
+درست اے جیہڑے !!{denumerable} نیں۔ $\fn{Count}$ دی تعریف
+ایویں بدلو کہ اک وکھرا !!{sentence} بنے جیہڑا دائرے دے
+!!{denumerable} ہون نوں سِدھا بیان کرے، تے ثابت کرو کہ اوہ
+ایویں ہی کردا اے۔
+\end{prob}
+
+\end{document}

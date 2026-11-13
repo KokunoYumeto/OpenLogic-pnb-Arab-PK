@@ -1,0 +1,198 @@
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: kleene
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{skl}
+
+\olsection{کلینی دیاں منطقاں}
+
+سٹیفن کلینی نے تِن قدراں والیاں دو منطقاں پیش کیتیاں۔ اوہناں
+دا خیال اوس منطق توں آیا جیہدے وچ صداقتی قدراں نوں حسابی
+طریقیاں دے نتیجے سمجھدے آں۔ کوئی طریقہ $\True$ یا $\False$
+دے سکدا اے، پر ایہ وی ہو سکدا اے کہ اوہ مُکے ای نہ۔ اوہ
+صورت وچ متعلقہ صداقتی قدر غیر معین ہوندی اے، جیہنوں~$\Undef$
+نال لکھدے آں۔
+
+قضیے~$!A$ دی نفی کڈھن لئی پہلاں~$!A$ دی قدر کڈھو، تے
+فیر نتیجے دی اُلٹ قدر واپس دیو۔ جے $!A$ دا حساب نہیں مُکدا،
+تاں سارا طریقہ وی نہیں مُکدا۔ سو $\Undef$ دی نفی $\Undef$ اے۔
+
+عطف $!A \land !B$ دا حساب کرن دے دو طریقے نیں۔ اک ایہ اے
+کہ پہلاں~$!A$ دا حساب کرو، فیر $!B$ دا۔ عطف دا نتیجہ $\True$
+ہووے گا جے دوہاں دا نتیجہ~$\True$ ہووے۔ ہور صورت وچ $\False$
+ہووے گا۔ جے دوہاں وچوں کوئی حساب نہ رُکے، تاں سارا طریقہ وی
+نہیں رُکدا۔ سو ایس صورت وچ جے اک جزو غیر معین ہووے، تاں عطف
+وی غیر معین اے۔ فصل بارے وی اوہی گل اے۔
+
+پر جے اسیں $!A$ تے $!B$ دیاں قدراں متوازی کڈھ سکیے، تاں
+ہور سوکھ اے۔ جے دو طریقیاں وچوں اک رُک کے $\False$ واپس
+دے دے، تاں اسیں رک سکدے آں، کیوں جے جواب لازماً جھوٹ اے۔
+سو ایس صورت وچ اک جزو جھوٹ ہووے تاں عطف جھوٹ اے، بھاویں
+دوجا جزو غیر معین ہووے۔ ایسے طرح فصل دا حساب متوازی کریے،
+تاں جدوں دوہاں جزواں وچوں اک دا طریقہ سچ واپس دے دے، اسیں
+رک سکدے آں۔ فیر فصل لازماً سچ اے۔ سو ایس صورت وچ مرکب
+قضیے دا نتیجہ پتا لگ سکدا اے، بھاویں اوہدے جزواں وچوں اک
+غیر معین ہووے۔ ایس سمجھ مطابق $\Undef$ نوں «غیر معین» دی
+تھاں «نامعلوم» پڑھ سکدے آں۔
+
+ایہ دو سمجھاں توں کلینی دی مضبوط تے کمزور منطق بندی اے۔
+شرطیہ نوں $\lnot !A \lor !B$ دے ہم ارز متعین کردے آں۔
+
+\begin{defn}
+\emph{کلینی دی مضبوط منطق}~$\LogKs$ ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ اکّو مقرر قدر اے، یعنی $V^+ = \{\True\}$۔
+  \item صداقتی فنکشن ہِٹھلے جدولاں توں ملدے نیں۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}$ & \\ 
+      \hline  
+      $\True$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\ 
+      $\False$ & $\False$ & $\False$ & $\False$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\True$ & $\True$ \\ 
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$  \\ 
+      $\False$ & $\True$ & $\True$ & $\True$ 
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+\emph{کلینی دی کمزور منطق}~$\LogKw$ ایس میٹرکس نال متعین اے۔
+\begin{enumerate}
+  \item معیاری قضیاتی زبان $\Lang L_0$ جیہدے وچ
+  $\lnot$، $\land$، $\lor$، $\lif$ نیں۔
+  \item صداقتی قدراں دا سیٹ $V = \{\True, \Undef, \False\}$۔
+  \item $\True$ اکّو مقرر قدر اے، یعنی $V^+ = \{\True\}$۔
+  \item صداقتی فنکشن ہِٹھلے جدولاں توں ملدے نیں۔
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}$ & \\ 
+      \hline  
+      $\True$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$\\ 
+      $\False$ & $\False$ & $\Undef$ & $\False$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\True$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\ 
+      \hline 
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\ 
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$  \\ 
+      $\False$ & $\True$ & $\Undef$ & $\True$ 
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+  $\LogKs$ تے $\LogKw$ وچ کوئی ہمیشہ صادق فارمولا نہیں۔
+\end{prop}
+
+\begin{proof}
+  جے $\pAssign v(p) = \Undef$ سارے !!{propositional variable}s~$p$
+  لئی، تاں ہر فارمولا~$!A$ دی صداقتی قدر~$\pValue v(!A) =
+  \Undef$ ہووے گی، کیوں جے دوہاں منطقاں وچ
+  \[
+    \tf{\lnot}(\Undef) = \tf{\lor}(\Undef, \Undef) = \tf{\land}(\Undef,
+  \Undef) = \tf{\lif}(\Undef, \Undef) = \Undef
+  \]
+  اے۔ کیوں جے $\Undef \notin V^+$، چاہے منطق $\LogKs$ ہووے یا
+  $\LogKw$، ایس لئی ایس !!{valuation} اُتے $!A$ دی قدر مقرر نہیں۔
+\end{proof}
+
+بھاویں کلینی دیاں کمزور تے مضبوط دوہاں منطقاں وچ کوئی
+ہمیشہ صادق فارمولا نہیں، اوہناں دے منطقی نتیجے دے تعلق
+معمولی نہیں۔
+
+\begin{prob}
+  ہِٹھلے تعلقاں وچوں کیہڑے (الف) کلینی دی مضبوط منطق وچ تے
+  (ب) اوہدی کمزور منطق وچ قائم نیں؟ ہر اک لئی صداقتی جدول دیو۔
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+دمتری بوچوار نے $\Undef$ نوں «بے معنی» سمجھیا۔ اوہنے جھوٹے
+دے تناقض ورگے تناقض حل کرن دی کوشش وچ مقرر کیتا کہ تناقض
+والے جملیاں دی قدر~$\Undef$ ہووے۔ اوہنے اک منطق پیش کیتی جیہڑی
+بنیادی طور اُتے کلینی دی کمزور منطق اے، جیہدے وچ کجھ ہور
+رابطے شامل نیں۔ اوہناں وچوں دو «باہرلی نفی» تے «غیر معین اے»
+والا عامل نیں۔
+\begin{center}
+  \begin{tabular}{c|c} 
+    $\tf{\sim}$ & \\ 
+    \hline  
+    $\True$ & $\False$ \\ 
+    $\Undef$ & $\True$ \\
+    $\False$ & $\True$ 
+  \end{tabular}
+\quad
+  \begin{tabular}{c|c} 
+    $\tf{+}$ & \\ 
+    \hline  
+    $\True$ & $\False$ \\ 
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$ 
+  \end{tabular}
+\end{center}
+
+\begin{prob}
+  کی تُسیں بوچوار دی منطق وچ $\sim$ نوں $\lnot$ تے~$+$ نال
+  متعین کر سکدے او؟ یعنی !!a{formula} لبھو جیہدے وچ بس
+  !!{propositional
+  variable}~$p$ ہووے تے $\sim$ نہ آوے، تے جیہدی صداقتی قدر
+  ہمیشہ~$\mathord{\sim}p$ دی قدر دے برابر ہووے۔ اپنی گل صحیح
+  ثابت کرن لئی صداقتی جدول دیو۔
+\end{prob}
+
+\end{document}

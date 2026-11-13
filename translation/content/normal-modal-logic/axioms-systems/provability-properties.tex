@@ -1,0 +1,48 @@
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: provability-properties
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{prp}
+
+\olsection{\usetoken{S}{derivability} دیاں خاصیتاں}
+
+\begin{prop}\ollabel{prop:derivabilityfacts}
+  منّ لو $\Sigma$ امکانی نظام اے تے $\Gamma$ امکانی
+  !!{formula}s دا سیٹ اے۔ ہِیٹھ لکھیاں خاصیتاں لاگو نیں۔
+  \begin{enumerate}
+  \item\ollabel{prop:derivabilityfacts-monotonicity} \emph{یک رُخیت}۔ جے
+    $\Gamma \Proves[\Sigma] !A$ تے $\Gamma \subseteq \Delta$، تاں
+    $\Delta \Proves[\Sigma] !A$؛
+  \item\ollabel{prop:derivabilityfacts-reflexivity}
+    \emph{انعکاس}۔ جے $!A \in \Gamma$، تاں $\Gamma
+    \Proves[\Sigma] !A$؛
+  \item\ollabel{prop:derivabilityfacts-cut} \emph{کٹ}۔ جے $\Gamma
+    \Proves[\Sigma] !A$ تے $\Delta \cup \{!A\} \Proves[\Sigma] !B$،
+    تاں $\Gamma \cup \Delta \Proves[\Sigma] !B$؛
+  \item\ollabel{prop:derivabilityfacts-deduction} \emph{استنباط دا قضیہ}۔ $\Gamma \cup \{!B\}
+    \Proves[\Sigma] !A$ اُدوں تے صرف اُدوں جدوں $\Gamma \Proves[\Sigma] !B \lif
+      !A$؛
+  \item \ollabel{prop:derivabilityfacts-ruleT}% \emph{قاعدہ ٹی}۔ جے
+    $\Gamma \Proves[\Sigma] !A_1$ تے \dots تے $\Gamma
+    \Proves[\Sigma] !A_n$ تے $!A_1 \to (!A_2 \lif \cdots (!A_n \lif
+    !B)\cdots)$ ہمیشہ صادق فارمولے توں بدل نال بنی مثال اے، تاں $\Gamma
+    \Proves[\Sigma] !B$۔
+  \end{enumerate}
+\end{prop}
+
+ثبوت اک سوکھی مشق اے۔ \olref{prop:derivabilityfacts-ruleT} والا حصہ، جیہڑا \olref{prop:derivabilityfacts} وچ اے، ایہ دیندا اے کہ مثلاً جے $\Gamma \Proves[\Sigma] !A \lor !B$
+تے $\Gamma \Proves[\Sigma] \lnot !A$، تاں $\Gamma \Proves[\Sigma]
+!B$۔ نالے اگے اسیں $\Gamma, !A \Proves[\Sigma] !B$
+لکھاں گے $\Gamma \cup \{ !A\} \Proves[\Sigma] !B$ دی تھاں۔
+
+\begin{defn}
+  سیٹ $\Gamma$ \emph{استنباط تحت بند} اے نظام
+  $\Sigma$ دے لحاظ نال اُدوں تے صرف اُدوں جدوں $\Gamma \Proves[\Sigma] !A$ توں
+  $!A \in \Gamma$ نکلدا اے۔
+\end{defn}
+
+\end{document}

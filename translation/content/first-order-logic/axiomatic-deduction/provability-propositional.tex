@@ -1,0 +1,86 @@
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: provability-propositional
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ppr}}
+      {\olfileid{pl}{axd}{ppr}}
+
+\olsection{\usetoken{S}{derivability} تے قضیاتی رابطے}
+
+\begin{explain}
+  اسیں ثابت کراں گے کہ مسلّمی اخذ دا !!{derivability} تعلق~$\Proves$
+  قضیاتی رابطیاں نال متعلق کجھ بنیادی حقیقتاں ثابت کرن لئی کافی مضبوط اے؛
+  مثلاً $!A \land !B
+  \Proves !A$ تے $!A, !A \lif !B \Proves !B$ (قاعدۂ اثباتِ مقدم)۔
+  ایہ حقیقتاں تمامیت دے قضیے دے ثبوت لئی ضروری نیں۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:provability-land}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-land-left} $!A \land !B \Proves
+    !A$ تے $!A \land !B \Proves !B$، دوویں۔
+  \item \ollabel{prop:provability-land-right} $!A, !B \Proves !A \land !B$۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    % PNBAXD-006: دوجے اخذ دا حوالہ ax:land2 اے؛ منجمد ماخذ وچ ax:land1 دُہرایا گیا اے۔
+    \item \olref[prp]{ax:land1} تے \olref[prp]{ax:land2} توں
+      قاعدۂ اثباتِ مقدم نال۔
+  \item \olref[prp]{ax:land3} توں قاعدۂ اثباتِ مقدم دو واری لا کے۔
+  \end{enumerate}
+\end{proof}
+
+
+\begin{prop}\ollabel{prop:provability-lor}
+  \begin{enumerate}
+  \item $!A \lor !B, \lnot !A, \lnot !B$ متضاد اے۔
+  \item $!A \Proves !A \lor !B$ تے $!B \Proves !A \lor !B$، دوویں۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  % PNBAXD-007: ایتھے درکار مسلّمہ ax:lnot2 اے؛ منجمد ماخذ وچ ax:lnot1 دا حوالہ اے۔
+  \item \olref[prp]{ax:lnot2} توں $\Proves \lnot !A \lif (!A
+    \lif \lfalse)$ تے $\Proves \lnot !B \lif (!B \lif \lfalse)$
+    ملدے نیں۔ ایس لئی استنباط دے قضیے نال ساڈے کول
+    $\{\lnot !A\} \Proves !A \lif
+    \lfalse$ تے $\{\lnot !B\} \Proves !B \lif \lfalse$ نیں۔
+    \olref[prp]{ax:lor3} توں $\{\lnot !A, \lnot !B\} \Proves (!A
+    \lor !B) \lif \lfalse$ ملدا اے۔ استنباط دے قضیے نال
+    $\{!A \lor !B, \lnot !A, \lnot !B\} \Proves \lfalse$۔
+  \item \olref[prp]{ax:lor1} تے \olref[prp]{ax:lor2} توں
+    قاعدۂ اثباتِ مقدم نال۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}\ollabel{prop:provability-lif}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-lif-left}  $!A, !A \lif !B \Proves !B$۔
+  \item \ollabel{prop:provability-lif-right}
+    $\lnot !A \Proves !A \lif !B$ تے $!B \Proves !A \lif !B$، دوویں۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item اسیں !!{derive} کر سکدے آں:
+    \begin{derivation}
+      1. & $!A$ & \Hyp\\
+      2. & $!A \lif !B$ & \Hyp\\
+      3. & $!B$ & 1, 2, \MP
+    \end{derivation}
+    
+  \item پہلا نتیجہ \olref[prp]{ax:lnot2} توں، تے دوجا
+    \olref[prp]{ax:lif1} تے استنباط دے قضیے توں، بالترتیب۔
+  \end{enumerate}
+\end{proof}
+
+\end{document}

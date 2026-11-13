@@ -1,0 +1,173 @@
+% Part: incompleteness
+% Chapter: incompleteness-provability
+% Section: lob-thm
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{inp}{lob}
+
+\olsection{لوب دا قضیہ}
+
+نظریے~$\Th{T}$ دا گوڈل جملہ $\lnot
+\OProv[\Th{T}](y)$ دا مقرر نقطہ اے،یعنی ایسا !!a{sentence}~$!G$
+جیہڑا
+\[
+\Th{T} \Proves \lnot \OProv[\Th{T}](\gn{!G}) \liff !G.
+\]
+پورا کردا اے۔ جے نظریہ بے تضاد ہووے تاں ایہہ !!{derivable}
+نہیں: جے $\Th{T} \Proves !G$ ہووے،تاں (a) !!{derivability}
+شرط~(1) توں $\Th{T} \Proves \OProv[\Th{T}](\gn{!G})$،
+تے (b) $\Th{T}
+\Proves !G$ نال $\Th{T} \Proves \lnot \OProv[\Th{T}](\gn{!G})
+\liff !G$ مل کے $\Th{T} \Proves \lnot
+\OProv[\Th{T}](\gn{!G})$ دیندے نیں؛فیر $\Th{T}$
+متضاد ہووے گا۔ ہن قدرتی سوال ایہہ اے کہ
+$\OProv[\Th{T}](y)$ دے مقرر نقطے دی کی حیثیت اے،یعنی
+ایسا !!a{sentence}~$!H$ جیہڑا
+\[
+\Th{T} \Proves \OProv[\Th{T}](\gn{!H}) \liff !H.
+\]
+پورا کردا اے۔ جے ایہہ !!{derivable} ہووے،تاں شرط~(1)
+توں $\Th{T} \Proves \OProv[\Th{T}](\gn{!H})$؛پر اُتلے
+ہم ارزی والے بیان اُتے قیاسِ استثنائی لائیے تاں وی ایہو نتیجہ
+ملدا اے۔ ایس لئی گوڈل جملے والی دلیل وانگ اتھوں
+$\Th{T}$ دا تضاد نہیں نکلدا،کم از کم اوسے دلیل نال تاں نہیں۔
+البتہ ایس توں ایہہ وی ثابت نہیں ہوندا کہ $\Th{T}$
+\emph{واقعی} $!H$ نوں !!{derive} کردا اے۔
+
+اس سوال وچ پیش رفت لئی اس نوں کجھ عمومی روپ وچ ویکھدے آں۔
+مقرر نقطے دی ہم ارزی دا کھبے توں سجے ول رخ،
+$\OProv[\Th{T}](\gn{!H}) \lif !H$،اک عمومی خاکے
+$\OProv[\Th{T}](\gn{!A}) \lif !A$ دی مثال اے جیہنوں
+\emph{انعکاس دا اصول} کہندے نیں۔ ایہہ ناں ایس لئی اے کہ،
+اک معنی وچ،ایہہ $\Th{T}$ دے اپنے !!{derive} کیتے ہوئیاں
+جملیاں بارے غور نوں ظاہر کردا اے؛بنیادی گل ایہہ اے:
+«جے $\Th{T}$، $!A$ نوں !!{derive} کر سکدا اے،تاں
+$!A$ سچ اے»،ہر~$!A$ لئی۔ ایہ گل صرف اوہناں نظریاں لئی سچ اے جنہاں دے
+ثابت کیتے سارے جملے سچے ہون۔ ایس توں اندازہ ہوندا اے کہ نظریے عام طور اُتے اس
+اصول دی ہر مثال نوں !!{derive} نہیں کرن گے۔ تاں کِہڑیاں
+مثالاں کوئی کافی قوی نظریہ،جیہڑا !!{derivability} شرطاں وی
+پوری کردا ہووے،!!{derive} کر سکدا اے؟ یقیناً اوہ ساریاں
+جنہاں وچ $!A$ خود !!{derivable} اے۔ اگلا نتیجہ دسدَا
+اے کہ صرف ایہو مثالاں نیں۔
+
+\begin{thm}\ollabel{thm:lob}
+منّو $\Th{T}$، $\Th{Q}$ دی توسیع کرن والا کوئی
+!!a{axiomatizable} نظریہ اے،تے
+$\OProv[\Th{T}](y)$ اک ایسا فارمولا اے جیہڑا
+\olref[2in]{sec} دیاں P1--P3 شرطاں پوری کردا اے۔ جے
+$\Th{T}$، $\OProv[\Th{T}](\gn{!A}) \lif !A$ نوں
+!!{derive}s کردا اے،تاں واقعی $\Th{T}$، $!A$ نوں
+!!{derive}s کردا اے۔
+\end{thm}
+
+دوجے لفظاں وچ،جے $\Th{T} \Proves/ !A$،تاں
+$\Th{T} \Proves/
+\OProv[\Th{T}](\gn{!A}) \lif !A$۔ ایس نتیجے نوں
+لوب دا قضیہ کہندے نیں۔
+
+\begin{explain}
+لوب دے قضیے دے ثبوت دا خیال سانتا کلاز دے موجود ہون دی
+اک چترائی بھری دلیل توں ملدا اے۔ (جے ایہہ نتیجہ پسند نہ
+آوے،تاں اپنی پسند دا کوئی ہور نتیجہ رکھ لو۔) دلیل ایہہ اے:
+\begin{enumerate}
+\item $X$ اوہ جملہ ہووے: «جے $X$ سچ اے،تاں سانتا کلاز
+  موجود اے»۔
+\item منّو $X$ سچ اے۔
+\item فیر اس جملے دی کہی گل درست اے؛یعنی جے $X$ سچ اے
+  تاں سانتا کلاز موجود اے۔
+\item چونکہ اسیں $X$ نوں سچ منّیا اے،(2) تے~(3) توں
+  قیاسِ استثنائی نال ایہہ نتیجہ کڈھ سکدے آں کہ سانتا کلاز
+  موجود اے۔
+\item اسیں فرض~(2)،«$X$ سچ اے»،توں (4)،«سانتا کلاز
+  موجود اے»،اخذ کر لیا۔ شرطیہ ثبوت نال دکھایا: «جے $X$
+  سچ اے،تاں سانتا کلاز موجود اے»۔
+\item پر ایہہ تاں عین جملہ~$X$ اے۔ ایس لئی اسیں دکھا
+  دتا کہ $X$ سچ اے۔
+\item فیر اُتلی (2)--(4) والی دلیل نال سانتا کلاز موجود اے۔
+\end{enumerate}
+ایس خیال نوں رسمی بنا کے «سچ اے» دی تھاں «!!{derivable}
+اے» تے «سانتا کلاز موجود اے» دی تھاں~$!A$ رکھیے،تاں
+لوب دے قضیے دا ثبوت ملدا اے۔ چال ایہہ اے کہ مقرر نقطے دا
+لمہ !!{formula}~$\OProv[\Th{T}](y) \lif !A$ اُتے
+لائیے۔ ایس دا مقرر نقطہ پچھلے خاکے دے جملے~$X$ دے
+مطابق اے۔
+\end{explain}
+
+\begin{proof}[\olref{thm:lob} دا ثبوت]
+منّو $!A$ ایسا !!a{sentence} اے جیہڑے لئی $\Th{T}$،
+$\OProv[\Th{T}](\gn{!A}) \lif !A$ نوں !!{derive}s
+کردا اے۔ $!B(y)$ !!{formula}~$\OProv[\Th{T}](y)
+\lif !A$ ہووے؛مقرر نقطے دے لمے نال ایسا !!a{sentence}~$!D$
+لبھو جیہڑے لئی $\Th{T}$، $!D \liff !B(\gn{!D})$ نوں
+!!{derive}s کردا اے۔ فیر ہِٹھلا ہر بیان
+$\Th{T}$ وچ !!{derivable} اے:
+\begin{align}
+  & !D \liff (\OProv[\Th{T}](\gn{!D}) \lif !A) \ollabel{L-1}\\
+  & \qquad \text{$!D$، $!B(y)$ دا مقرر نقطہ اے}\notag \\
+  & !D \lif (\OProv[\Th{T}](\gn{!D}) \lif !A) \ollabel{L-2}\\
+  & \qquad\text{\olref{L-1} توں}\notag\\
+  & \OProv[\Th{T}](\gn{!D \lif (\OProv[\Th{T}](\gn{!D}) \lif !A)}) \ollabel{L-3}\\
+  & \qquad \text{\olref{L-2} توں شرط P1 نال}\notag \\
+  & \OProv[\Th{T}](\gn{!D}) \lif \OProv[\Th{T}](\gn{\OProv[\Th{T}](\gn{!D}) \lif !A})
+  \ollabel{L-4}\\
+  &\qquad \text{\olref{L-3} توں شرط P2 نال}\notag \\
+  & \OProv[\Th{T}](\gn{!D}) \lif (\OProv[\Th{T}](\gn{\OProv[\Th{T}](\gn{!D})}) \lif \OProv[\Th{T}](\gn{!A})) \ollabel{L-5}\\
+  &\qquad \text{\olref{L-4} توں دوبارہ P2 نال} \notag\\
+& \OProv[\Th{T}](\gn{!D}) \lif \OProv[\Th{T}](\gn{\OProv[\Th{T}](\gn{!D})}) \ollabel{L-6}\\
+  & \qquad\text{!!{derivability} شرط P3 نال} \notag\\
+  & \OProv[\Th{T}](\gn{!D}) \lif \OProv[\Th{T}](\gn{!A}) \ollabel{L-7} \\
+  &\qquad\text{\olref{L-5} تے \olref{L-6} توں}\notag\\
+  & \OProv[\Th{T}](\gn{!A}) \lif !A \ollabel{L-8}\\
+  &\qquad\text{قضیے دے مفروضے توں} \notag\\
+  & \OProv[\Th{T}](\gn{!D}) \lif !A \ollabel{L-9}\\
+  &\qquad\text{\olref{L-7} تے \olref{L-8} توں}\notag\\
+  & (\OProv[\Th{T}](\gn{!D}) \lif !A) \lif !D \ollabel{L-10}\\
+  & \qquad \text{\olref{L-1} توں}\notag \\
+  & !D \ollabel{L-11}\\
+  & \qquad\text{\olref{L-9} تے \olref{L-10} توں}\notag \\
+  & \OProv[\Th{T}](\gn{!D}) \ollabel{L-12}\\
+  & \qquad\text{\olref{L-11} توں شرط~P1 نال}\notag \\
+  & !A \qquad\qquad\text{\olref{L-8} تے \olref{L-12} توں}\notag
+\end{align}
+\end{proof}
+
+لوب دے قضیے توں نامکملیت دے دوجے قضیے دا اک مختصر ثبوت
+وی ملدا اے،اوہناں نظریاں لئی جنہاں دا !!a{derivability}
+محمول P1--P3 شرطاں پوری کردا ہووے: جے $\Th{T} \Proves
+\OProv[\Th{T}](\gn{\lfalse}) \lif \lfalse$،تاں
+$\Th{T} \Proves \lfalse$۔ جے $\Th{T}$ بے تضاد اے،
+تاں $\Th{T} \Proves/ \lfalse$۔ ایس لئی
+$\Th{T}
+\Proves/ \OProv[\Th{T}](\gn{\lfalse}) \lif \lfalse$،
+یعنی $\Th{T} \Proves/
+\OCon[\Th{T}]$۔ اسی قضیے نال ایہہ وی دکھا سکدے آں کہ
+$!H$،جیہڑا $\OProv[\Th{T}](x)$ دا مقرر نقطہ اے،
+!!{derivable} اے۔ کیونکہ
+\begin{align*}
+  \Th{T} & \Proves \OProv[\Th{T}](\gn{!H}) \liff !H\\
+  \intertext{خاص طور اُتے}
+    \Th{T} & \Proves \OProv[\Th{T}](\gn{!H}) \lif !H
+\end{align*}
+تے ایس لئی لوب دے قضیے نال $\Th{T} \Proves !H$۔
+
+% Going in the other direction, for homework I
+% may ask you to work through a short proof of L\"ob's theorem, using
+% the second incompleteness theorem instead of the fixed-point lemma.
+
+\begin{prob}
+منّو $\Th{T}$ اک قابلِ حساب طریقے نال مسلّمہ بند نظریہ
+اے،تے $\OProv[\Th{T}]$، $\Th{T}$ دا
+!!a{derivability} محمول اے۔ ہِٹھلے چار بیان ویکھو:
+\begin{enumerate}
+\item جے $T \Proves !A$،تاں $T \Proves \OProv[\Th{T}](\gn{!A})$۔
+\item $T \Proves !A \lif \OProv[\Th{T}](\gn{!A})$۔
+\item جے $T \Proves \OProv[\Th{T}](\gn{!A})$،تاں $T \Proves !A$۔
+\item $T \Proves \OProv[\Th{T}](\gn{!A}) \lif !A$
+\end{enumerate}
+ہر اک بیان کنہاں شرطاں وچ درست اے؟
+\end{prob}
+
+\end{document}

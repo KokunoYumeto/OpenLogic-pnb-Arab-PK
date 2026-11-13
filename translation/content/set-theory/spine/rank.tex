@@ -1,0 +1,131 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{rank}
+\olsection{درجہ}
+
+ہُن جدوں اسیں مرحلیاں نوں $V_\alpha$ والے سیٹ تعریف کر چکے آں تے سانوں
+پتا اے کہ ہر سیٹ کسے مرحلے دا ذیلی سیٹ اے، اسیں سیٹ دا \emph{درجہ}
+تعریف کر سکدے آں۔ سمجھ مطابق $A$ دا درجہ اوہ پہلا ویلا اے جدوں $A$
+بندا اے۔ ہور ٹھیک لفظاں وچ:
+
+\begin{defn}\ollabel{defnsetrank}
+ہر سیٹ $A$ لئی، $\setrank{A}$ اوہ سبھ توں چھوٹا ترتیبی عدد $\alpha$ اے
+جیہدے لئی $A \subseteq V_\alpha$۔
+\end{defn}
+\begin{prop}\ollabel{ranksexist}
+	$\setrank{A}$ کسے وی $A$ لئی موجود اے۔
+\end{prop}
+\begin{proof}
+	ایہ مشق چھڈّی اے۔
+\end{proof}
+\begin{prob}
+	\olref[sth][spine][rank]{ranksexist} ثابت کرو۔
+\end{prob}
+\noindent
+درجیاں دا حُسنِ ترتیب سانوں کجھ اہم نتیجے ثابت کرن دیوے گا:
+\begin{prop}\ollabel{valphalowerrank}
+کسے وی ترتیبی عدد $\alpha$ لئی، $V_\alpha = \Setabs{x}{\setrank{x} \in \alpha}$۔
+\end{prop}
+
+\begin{proof}
+جے $\setrank{x} \in \alpha$، تاں $x \subseteq V_{\setrank{x}} \in V_\alpha$،
+سو $x \in V_\alpha$، کیوں جے $V_\alpha$ اپنے رکناں دے ذیلی سیٹاں تحت
+بند اے (\olref[Valphabasic]{Valphabasicprops} کئی واری ورت کے)۔
+اُلٹے پاسے، جے $x \in V_\alpha$، تاں $x \subseteq V_\alpha$، سو
+$\setrank{x} \leq \alpha$۔ ہُن سادہ لامتناہی استقرا وکھاندا اے کہ
+$x \notin V_\alpha$۔
+\end{proof}
+\begin{prob}
+	\olref[sth][spine][rank]{valphalowerrank} وچ دسیا سادہ لامتناہی استقرا پورا کرو۔
+\end{prob}
+
+\begin{prop}\ollabel{rankmemberslower}
+جے $B \in A$، تاں $\setrank{B} \in \setrank{A}$۔
+\end{prop}
+
+\begin{proof}
+$A \subseteq V_{\setrank{A}} = \Setabs{x}{\setrank{x} \in \setrank{A}}$،
+\olref{valphalowerrank} نال۔
+\end{proof}
+\noindent
+ایس گل نوں ورت کے اسیں اک نتیجہ ثابت کر سکدے آں جیہڑا سانوں استقرا دی اک
+صورت نال \emph{سارے سیٹاں} بارے گلاں ثابت کرن دیوے گا:
+
+\begin{thm}[$\in$ اُتے استقرا دا خاکہ]
+ہر فارمولے $\phi$ لئی:
+\[
+	\forall A((\forall x \in A)\phi(x) \lif \phi(A)) \lif \forall A \phi(A).
+\]
+\end{thm}
+
+\begin{proof}
+اسیں عکسِ نقیض ثابت کراں گے۔ سو منّ لو $\lnot \forall A \phi(A)$۔
+لامتناہی درجیاں اُتے استقرا (\olref[ordinals][basic]{ordinductionschema})
+نال کوئی سبھ توں گھٹ ممکن درجے والا غیر-$\phi$ اے، یعنی کوئی $A$
+جیہدے لئی $\lnot \phi(A)$ تے $\forall x(\setrank{x} \in \setrank{A} \lif \phi(x))$۔
+ہُن جے $x \in A$، تاں $\setrank{x} \in \setrank{A}$،
+\olref{rankmemberslower} نال، ایس لئی $\phi(x)$۔ یعنی
+$(\forall x \in A)\phi(x) \land \lnot \phi(A)$۔
+\end{proof}\noindent ایس طاقتور نتیجے دی غیر رسمی سمجھ ایویں اے۔
+$\phi$ نوں \emph{وراثتی} آکھو اُدوں تے صرف اُدوں جدوں کسے سیٹ دا ہر
+!!{element}، $\phi$ ہووے تاں سیٹ آپ وی $\phi$ ہووے۔
+فیر $\in$ اُتے استقرا تہانوں ایہ دسدا اے۔ جے $\phi$ وراثتی اے،
+تاں ہر سیٹ $\phi$ اے۔
+
+درجیاں دی گل (ہُن لئی) مکاؤن واسطے اسیں کجھ دعوے ثابت کراں گے
+جیہناں ول پہلے کئی واری اشارہ کیتا اے۔
+
+\begin{prop}\ollabel{ranksupstrict}
+$\setrank{A} = \supstrict_{x \in A}\setrank{x}$۔
+\end{prop}
+
+\begin{proof}
+منّ لو $\alpha = \supstrict_{x \in A}\setrank{x}$۔
+\olref{rankmemberslower} نال $\alpha \leq \setrank{A}$۔ پر جے $x \in A$،
+تاں $\setrank{x} \in \alpha$، تے ایس لئی $x \in V_\alpha$،
+\olref{valphalowerrank} نال۔ سو $A \subseteq V_\alpha$، یعنی
+$\setrank{A} \leq \alpha$۔ ایس لئی $\setrank{A} = \alpha$۔
+\end{proof}
+
+\begin{cor}\ollabel{ordsetrankalpha}
+کسے وی ترتیبی عدد $\alpha$ لئی، $\setrank{\alpha} = \alpha$۔
+\end{cor}
+
+\begin{proof}
+لامتناہی درجیاں اُتے استقرا لئی منّ لو کہ $\setrank{\beta} = \beta$ سارے
+$\beta \in \alpha$ لئی۔ ہُن $\setrank{\alpha} = \supstrict_{\beta \in
+\alpha}\setrank{\beta} = \supstrict_{\beta \in \alpha}\beta = \alpha$،
+\olref{ranksupstrict} نال۔
+%	First note that $\setrank{\alpha} \neq \beta$ for any $\beta \in
+%	\alpha$. For otherwise we would have $\beta = \setrank{\beta} \in
+%	\setrank{\alpha} = \beta$ by \olref{rankmemberslower}, i.e.,
+%	$\beta \in \beta$, a contradiction. 
+%
+%	Now note that $\alpha \subseteq V_\alpha$. For $\alpha =
+%	\Setabs{\beta}{\beta \in \alpha}$ by
+%	\olref[sfr][ordinals][basic]{ordissetofsmallerord}. And if
+%	$\beta \in \alpha$ then $\beta \subseteq V_{\setrank{\beta}} =
+%	V_\beta \in V_\alpha$, hence $\beta \in V_\alpha$, by
+%	\olref[sfr][spine][Valphabasic]{Valphabasicprops} twice. 
+\end{proof}
+
+آخر وچ، \olref[foundation]{sec} دے آخر وچ جیہڑا نتیجہ دین دی گل
+کیتی سی، اوہدا اک سدھا ثبوت ایہ اے، یعنی $\ZFminus$ شرطیہ
+$\emph{باقاعدگی} \Rightarrow \emph{بنیاد}$ ثابت کردا اے۔ (دھیان دیو کہ
+’’درجے‘‘ دا خیال تے \olref{rankmemberslower} ایس ثبوت وچ ورت سکدے آں،
+کیوں جے، جیویں ایس حصے دے شروع وچ دسیا سی، اوہ
+$\ZFminus + \text{باقاعدگی}$ ورت کے پیش ہو سکدے نیں۔)
+
+\begin{prop}[$\ZFminus + \text{باقاعدگی}$ وچ کم کردیاں]\ollabel{zfminusregularityfoundation}
+بنیاد دا مسلّمہ قائم اے۔
+\end{prop}
+
+\begin{proof}
+$A \neq \emptyset$ مقرر کرو، تے $B \in A$ جیہدا درجہ سبھ توں گھٹ ممکن اے۔
+جے $c \in B$، تاں $\setrank{c} \in \setrank{B}$،
+\olref{rankmemberslower} نال، ایس لئی $c \notin A$، $B$ دی چُون کر کے۔
+\end{proof}
+
+\end{document}

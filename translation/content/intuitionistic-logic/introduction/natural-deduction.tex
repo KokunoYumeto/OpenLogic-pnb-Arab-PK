@@ -1,0 +1,258 @@
+% part: intuitionistic-logic
+% chapter: introduction
+% section: natural-deduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{int}{ntd}
+
+\olsection{فطری استنباط}
+
+$\FalseCl$ قاعدیاں توں بغیر فطری استنباط وجدانیت پسند منطق دا اک
+معیاری !!{derivation} نظام اے۔ ایتھے اسیں قاعدے فیر دیندے آں تے بی
+ایچ کے تعبیر نال اوہناں دی وجھ دسّنے آں۔ ہر صورت وچ اسیں قاعدے نوں
+ایویں سمجھ سکدے آں کہ جے مقدمیاں دیاں تعمیراں نیں، تاں نتیجے دی
+تعمیر وی اے۔
+
+فطری استنباط دیاں !!{derivation}s وچ ہجے قائم مفروضے ہوندے نیں۔
+سو ایسے !!a{derivation} نوں، مثلاً $!A$ دی !!{undischarged}
+مفروضیاں~$\Gamma$ توں، اک فنکشن سمجھنا چاہیدا اے جیہڑا سارے
+$!B \in \Gamma$ دیاں تعمیراں نوں~$!A$ دی تعمیر وچ بدلدا اے۔
+جے !!a{derivation}~$!A$ دی کسے وی !!{undischarged} مفروضے توں بغیر
+اے، تاں بی ایچ کے تعبیر دے معنی وچ~$!A$ دی تعمیر اے۔ گل سمجھاؤن
+لئی جدوں لوڑ نہیں ہووے گی، اسیں~$\Gamma$ چھڈ دیاں گے۔
+
+مفروضہ~$!A$ اپنے آپ وچ !!a{derivation} اے،~$!A$ دی
+!!{undischarged} مفروضے~$!A$ توں۔ ایہ بی ایچ کے تعبیر نال میل
+کھاندا اے۔ تعمیراں اُتے شناختی فنکشن~$!A$ دی ہر تعمیر نوں~$!A$
+دی تعمیر وچ بدلدا اے۔
+
+\subsection{عطف}
+
+\begin{defish}
+\AxiomC{$!A$}
+\AxiomC{$!B$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !B$}
+\DisplayProof
+\hfill
+\begin{tabular}{l}
+\AxiomC{$!A \land !B$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DisplayProof
+\\[3ex]
+\AxiomC{$!A \land !B$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!B$}
+\DisplayProof
+\end{tabular}
+\end{defish}
+
+منّ لو ساڈے کول تعمیراں $N_1$، $N_2$ نیں، واری واری $!A_1$ تے
+$!A_2$ دیاں۔ تاں ساڈے کول $!A_1 \land !A_2$ دی تعمیر وی اے،
+یعنی جوڑی $\tuple{N_1, N_2}$۔
+
+بی ایچ کے تعبیر مطابق $!A_1 \land !A_1$ دی تعمیر اک جوڑی
+$\tuple{N_1, N_2}$ اے۔ سو منّ لو ساڈے کول ایہو جیہی جوڑی اے۔
+تاں ساڈے کول عطف دے ہر جز دی تعمیر وی اے۔ $N_1$،~$!A_1$
+دی تعمیر اے تے $N_2$، $!A_2$ دی تعمیر اے۔
+
+\subsection{شرطیہ}
+
+\begin{defish}
+  \AxiomC{$\Discharge{!A}{u}$}
+  \DeduceC{$!B$}
+  \DischargeRule{$\Intro{\lif}$}{u}
+  \UnaryInfC{$!A \lif !B$}
+  \DisplayProof
+\hfill
+  \AxiomC{$!A \lif !B$}
+  \AxiomC{$!A$}
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInfC{$!B$}
+  \DisplayProof
+\end{defish}
+
+جے ساڈے کول !!a{derivation}~$!B$ دی !!{undischarged}
+مفروضے~$!A$ توں اے، تاں ایسا فنکشن~$f$ موجود اے جیہڑا
+~$!A$ دیاں تعمیراں نوں~$!B$ دیاں تعمیراں وچ بدلدا اے۔ اوہی فنکشن
+$!A \lif !B$ دی تعمیر اے۔ سو جے $\Intro\lif$ دے مقدمے دی
+تعمیر~$!A$ دی تعمیر اُتے منحصر اے، تاں نتیجے $!A
+\lif !B$ دی تعمیر اے۔
+
+دوجے پاسے منّ لو تعمیر~$N$، $!A$ دی، تے تعمیر $f$،
+$!A \lif !B$ دی، موجود نیں۔ $!A \lif !B$ دی تعمیر ایسا فنکشن
+اے جیہڑا $!A$ دیاں تعمیراں نوں~$!B$ دیاں تعمیراں وچ بدلدا اے۔
+سو $f(N)$،~$!B$ دی تعمیر اے، یعنی $\Elim\lif$ دے نتیجے دی تعمیر اے۔
+
+\subsection{فصل}
+
+\begin{defish}
+\begin{tabular}{l}
+\AxiomC{$!A$}
+\RightLabel{\Intro{\lor}}
+\UnaryInfC{$!A \lor !B$}
+\DisplayProof
+\\[3ex]
+\AxiomC{$!B$}
+\RightLabel{\Intro{\lor}}
+\UnaryInfC{$!A \lor !B$}
+\DisplayProof
+\end{tabular}
+\hfill
+\AxiomC{$!A \lor !B$}
+\AxiomC{$\Discharge{!A}{n}$}
+\DeduceC{$!C$}
+\AxiomC{$\Discharge{!B}{n}$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lor}}{n}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\end{defish}
+
+جے ساڈے کول تعمیر~$N_i$،~$!A_i$ دی، اے، تاں اینوں
+تعمیر~$\tuple{i, N_i}$،~$!A_1 \lor !A_2$ دی، وچ بدل سکدے آں۔
+دوجے پاسے منّ لو ساڈے کول~$!A_1 \lor !A_2$ دی تعمیر اے، یعنی
+اک جوڑی $\tuple{i, N_i}$ جتھے $N_i$،~$!A_i$ دی تعمیر اے۔
+نال فنکشن $f_1$، $f_2$ وی نیں جیہڑے واری واری $!A_1$، $!A_2$
+دیاں تعمیراں نوں~$!C$ دیاں تعمیراں وچ بدلدے نیں۔ تاں $f_i(N_i)$،
+~$!C$ دی تعمیر اے، یعنی~$\Elim\lor$ دے نتیجے دی۔
+
+\subsection{محال}
+
+\begin{defish}
+  \AxiomC{$\lfalse$}
+  \RightLabel{\FalseInt}
+  \UnaryInfC{$!A$}
+  \DisplayProof
+\end{defish}
+
+جے ساڈے کول !!a{derivation}~$\lfalse$ دی !!{undischarged}
+مفروضیاں~$!B_1$، \dots، $!B_n$ توں اے، تاں اک فنکشن~$f(M_1,
+\dots, M_n)$ اے جیہڑا $!B_1$، \dots، $!B_n$ دیاں تعمیراں نوں
+~$\lfalse$ دی تعمیر وچ بدلدا اے۔ $\lfalse$ دی کوئی تعمیر نہیں،
+ایس لئی ساریاں $!B_1$، \dots، $!B_n$ دیاں تعمیراں وی اکٹھیاں
+نہیں ہو سکدیاں۔ سو $f$ دی ایہ خاصیت وی اے کہ \emph{جے} $M_1$، \dots،
+$M_n$ واری واری $!B_1$، \dots، $!B_n$ دیاں تعمیراں نیں،
+\emph{تاں} $f(M_1, \dots, M_n)$،~$!A$ دی تعمیر اے۔
+
+\subsection{$\lnot$ دے قاعدے}
+
+$\lnot !A$ نوں $!A \lif \lfalse$ دے طور اُتے متعین کیتا گیا اے،
+سو عین لحاظ نال~$\lnot$ لئی قاعدیاں دی لوڑ نہیں۔ جے لوڑ ہوندی،
+تاں اوہ ایویں ہوندے:
+
+\begin{defish}
+\AxiomC{$\Discharge{!A}{n}$}
+\noLine
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{n}
+\UnaryInfC{$\lnot !A$}
+\DisplayProof
+\hfill
+\AxiomC{$\lnot !A$}
+\AxiomC{$!A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DisplayProof
+\end{defish}
+
+\subsection{\usetoken{P}{derivation} دیاں مثالاں}
+
+\begin{enumerate}
+\item $\Proves !A \lif (\lnot !A \lif \lfalse)$, یعنی $\Proves !A
+  \lif ((!A \lif \lfalse) \lif \lfalse)$
+  \begin{prooftree}
+    \AxiomC{$\Discharge{!A}{2}$}
+    \AxiomC{$\Discharge{!A \lif \lfalse}{1}$}
+    \RightLabel{\Elim\lif}
+    \BinaryInfC{$\lfalse$}
+    \DischargeRule{\Intro\lif}{1}
+    \UnaryInfC{$(!A \lif \lfalse)\lif \lfalse$}
+    \DischargeRule{\Intro\lif}{2}
+    \UnaryInfC{$!A \lif (!A \lif \lfalse) \lif \lfalse$}
+  \end{prooftree}
+
+\item $\Proves ((!A \land !B) \lif !C) \lif (!A \lif (!B \lif !C))$
+  \begin{prooftree}
+    \AxiomC{$\Discharge{(!A \land !B) \lif !C}{3}$}
+    \AxiomC{$\Discharge{!A}{2}$}
+    \AxiomC{$\Discharge{!B}{1}$}
+    \RightLabel{\Intro\land}
+    \BinaryInfC{$!A \land !B$}
+    \RightLabel{\Elim\lif}
+    \BinaryInfC{$!C$}
+    \DischargeRule{\Intro\lif}{1}
+    \UnaryInfC{$!B \lif !C$}
+    \DischargeRule{\Intro\lif}{2}
+    \UnaryInfC{$!A \lif (!B \lif !C)$}
+    \DischargeRule{\Intro\lif}{3}
+    \UnaryInfC{$((!A \land !B) \lif !C) \lif (!A \lif (!B \lif !C))$}
+  \end{prooftree}
+
+\item $\Proves \lnot(!A \land \lnot !A)$, یعنی $\Proves (!A \land (!A
+  \lif \lfalse))\lif \lfalse$
+  \begin{prooftree}
+    \AxiomC{$\Discharge{!A \land (!A \lif \lfalse)}{1}$}
+    \RightLabel{\Elim\land}
+    \UnaryInfC{$!A \lif \lfalse$}
+    \AxiomC{$\Discharge{!A \land (!A \lif \lfalse)}{1}$}
+    \RightLabel{\Elim\land}
+    \UnaryInfC{$!A$}
+    \RightLabel{\Elim\lif}
+    \BinaryInfC{$\lfalse$}
+    \DischargeRule{\Intro\lif}{1}
+    \UnaryInfC{$(!A \land (!A \lif \lfalse))\lif \lfalse$}
+  \end{prooftree}
+
+\item $\Proves \lnot\lnot(!A \lor \lnot !A)$, یعنی $\Proves ((!A \lor
+  (!A \lif \lfalse))\lif \lfalse)\lif \lfalse$
+  \begin{prooftree}\hskip-3em
+    \AxiomC{$\Discharge{(!A \lor (!A \lif \lfalse))\lif \lfalse}{2}$}
+    \AxiomC{$\Discharge{(!A \lor (!A \lif \lfalse))\lif \lfalse}{2}$}
+    \AxiomC{$\Discharge{!A}{1}$}
+    \RightLabel{\Intro\lor}
+    \UnaryInfC{$!A \lor (!A \lif \lfalse)$}
+    \RightLabel{\Elim\lif}
+    \BinaryInfC{$\lfalse$}
+    \DischargeRule{\Intro\lif}{1}
+    \UnaryInfC{$!A \lif \lfalse$}
+    \RightLabel{\Intro\lor}
+    \UnaryInfC{$!A \lor (!A \lif \lfalse)$}
+    \RightLabel{\Elim\lif}
+    \insertBetweenHyps{\hskip -4em}
+    \BinaryInfC{$\lfalse$}
+    \DischargeRule{\Intro\lif}{2}
+    \UnaryInfC{$((!A \lor (!A \lif \lfalse))\lif \lfalse)\lif \lfalse$}
+  \end{prooftree}
+\end{enumerate}
+
+\begin{prop}
+  جے وجدانیت پسند منطق دے فطری استنباط وچ $\Gamma \Proves !A$،
+  تاں کلاسیکی منطق وچ $\Gamma \Proves !A$۔ خاص کر کے جے
+  $!A$ وجدانیت پسند قضیہ اے، تاں کلاسیکی قضیہ وی اے۔
+\end{prop}
+
+\begin{proof}
+  فطری استنباط دا ہر قاعدہ کلاسیکی فطری استنباط دا وی قاعدہ اے۔
+  سو وجدانیت پسند منطق دی ہر !!{derivation} کلاسیکی منطق وچ وی
+  !!a{derivation} اے۔
+\end{proof}
+
+\begin{prob}
+  وجدانیت پسند منطق وچ ہِیٹھلے !!{formula}s دیاں !!{derivation}s دیو:
+  \begin{enumerate}
+    \item $(\lnot !A \lor !B) \lif (!A \lif !B)$
+    \item $\lnot\lnot\lnot !A \lif \lnot !A$
+    \item $\lnot\lnot (!A \land !B) \liff (\lnot\lnot !A\land \lnot \lnot !B)$
+    \item $\lnot (!A \lor !B) \liff (\lnot !A \land \lnot !B)$
+    \item $(\lnot !A \lor \lnot !B) \lif \lnot (!A \land !B)$
+    \item $\lnot\lnot ( !A \land !B) \lif  (\lnot\lnot !A \lor
+    \lnot\lnot !B)$
+  \end{enumerate}
+\end{prob}
+
+\end{document}

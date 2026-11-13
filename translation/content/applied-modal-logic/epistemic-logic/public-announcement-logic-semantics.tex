@@ -1,0 +1,120 @@
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: public-announcement-logic-semantics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{psm}
+
+\olsection{عام اعلان دی منطق دیاں معنیات}
+
+عام اعلان دیاں منطقاں لئی تعلقی نمونے اوہی نیں جیہڑے علم دیاں
+منطقاں لئی سن۔ عام اعلان دے عامل دیاں معنیات نویاں نیں۔
+
+\begin{defn}\ollabel{defn:mmodels}
+  \emph{!!a{formula}~$!A$ دا~$w$ اُتے سچ ہونا}، نمونے~$\mModel M = \tuple{W, R, V}$
+  وچ، نشانیاں وچ $\mSat{M}{!A}[w]$، استقرا نال ایویں متعین ہوندا اے:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{کدی نہیں کہ $\mSat{M}{\lfalse}[w]$}۔}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{ہمیشہ $\mSat{M}{\ltrue}[w]$}۔}{}
+  \item $\mSat{M}{p}[w]$ اُدوں تے صرف اُدوں جدوں $w \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے
+    صرف اُدوں جدوں $\mSat/{M}{!B}[w]$}۔}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$}
+    (یا دونیں)۔}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا $\mSat{M}{!C}[w]$}۔}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں
+    تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے $\mSat{M}{!C}[w]$
+    دونیں ہون، یا نہ $\mSat{M}{!B}[w]$ ہووے تے نہ $\mSat{M}{!C}[w]$}۔}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Knows_a !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[w']$ ہر اوہ $w' \in W$ لئی ہووے جیہدے لئی $R_a ww'$}
+  \item\ollabel{defn:sub:mmodels-pal}
+    \indcase{!A}{[!B] !C}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں
+    جدوں $\mSat{M}{!B}[w]$ توں $\mSat{M \mid !B}{!C}[w]$ نکلے}
+
+ایتھے $\mModel M \mid !B = \tuple{W', R', V'}$ دی تعریف ایویں اے:
+  \begin{enumerate}
+    \item $W' = \Setabs{ u \in W}{\mSat{M}{!B}[u]}$۔ سو
+      $\mModel M \mid !B$ دے جہان اوہو نیں جیہڑے~$\mModel M$ وچ نیں
+      تے جیہناں اُتے $!B$ لاگو اے۔
+    \item $R'_a = R_a \cap (W' \times W')$۔ ہر فاعل دا رسائی دا تعلق
+      اوہناں جہاناں تک محدود اے جیہڑے~$W'$ وچ رہ گئے نیں۔
+    \item $V'(p) = \Setabs{ u \in W'}{u \in V(p) }$۔ ایس طرح جہاناں
+      اُتے قضیاتی قدراں اوہو رہندیاں نیں۔ ایہ اوس خیال نوں وکھاؤندا
+      اے کہ جانکاری والے واقعے قضیاتی متغیراں دی صداقتی قدر نہیں بدلدے۔
+  \end{enumerate}
+
+  \end{enumerate} 
+\end{defn}
+
+سو عام اعلان دیاں منطقاں دی خاص گل ایہ اے کہ کدی کدی !!a{formula}
+دی سچائی~$\mModel M$ وچ پرکھن لئی،~$\mModel M$ توں وکھرے نمونے دا
+حوالہ لینا پیندا اے۔
+
+ایہ وی ویکھو کہ ساڈیاں معنیات وچ اعلان دا عامل $\Box$~والا عامل
+اے۔ سو جے کسے جہان اُتے !!a{formula}~$!A$ دا سچا اعلان نہیں ہو سکدا،
+تاں $[!A]B$ اوتھے خالی شرط کر کے لاگو اے، جیویں سارے $\Box$
+!!{formula}s آخری نقطیاں اُتے لاگو ہوندے نیں۔
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={below left:$p, \lnot q$}]{$w_1$}; 
+      \node[world] (w2) [left=of w1, label={left:$\lnot p, \lnot q$}]{$w_2$}; 
+      \node[world] (w3) [above=of w1, label={right:$p, q$}] {$w_3$};
+      \draw[<->] (w1) to [swap] node {$b$} (w2);
+      \draw[->,loop below] (w1) to node {$a, b$} (w1);
+      \draw[<->] (w1) to [swap] node {$a$} (w3);
+      \draw[->,loop above] (w2) to node {$a, b$} (w2) ;
+      \draw[->,loop above] (w3) to node {$a, b$} (w3) ;
+      
+      \node[world](v1)[right of=w1, xshift=1.25in, label={right:$p, \lnot q$}]{$w'_1$};
+      \node[world](v3)[above of=v1,label={right:$p,q$}]{$w'_3$};
+      \draw[<->] (v1) to node {$a$} (v3);
+      \draw[->,loop below] (v1) to node {$a,b$} (v1);
+      \draw[->,loop above] (v3) to node {$a,b$} (v3) ;
+      
+      \node(m)[below=of w1]{$\mModel M$};
+      \node(m')[below=of v1]{$\mModel M \mid p$}; 
+
+      \draw[-,dotted] (w1) to node {\footnotesize $p$ دا اعلان}(v1) ;
+     
+    \end{tikzpicture}
+  \end{center}
+  \caption{$p$ دے عام اعلان توں پہلاں تے پچھوں۔}
+  \ollabel{fig:announcement-example}
+\end{figure}
+
+!!a{formula} دے عام اعلان نوں اسیں نمونہ چھوٹا کرن وانگ ویکھ سکدے
+آں۔ نمونہ اوہناں جہاناں تک محدود ہو جاندا اے جیہناں اُتے !!{formula}
+سچ سی۔ \olref{fig:announcement-example} وچ~$p$ دے عام اعلان دا اثر
+وکھایا اے۔ اوس نمونے دی خاص گل ایہ اے کہ فاعل~$b$ اعلان نال سکھدا
+اے کہ~$p$ سچ اے، پر فاعل~$a$ لئی ایہ نویں گل نہیں (کیوں جے $a$
+نوں پہلاں ای پتا سی کہ~$p$ سچ اے)۔
+
+رسمی لکھت وچ $\mSat{M}{\lnot \Knows_b p}[w_1]$ اے، پر $\mSat{M
+\mid p}{\Knows_b p}[w'_1]$ وی اے۔ ایس توں $\mSat{M}{[p] \Knows_b
+p}[w_1]$ نکلدا اے۔ اعلان دے نتیجے بارے اسیں ہور تگڑیاں گلاں وی آکھ
+سکدے آں۔ اصل وچ $\mSat{M}{[p]\CKnows_{\{a,b\}} p}[w_1]$ اے۔
+دوجے لفظاں وچ $p$ دا اعلان ہوون پچھوں ایہ \emph{سانجھا علم} بن جاندا اے۔
+
+پر سوال ایہ اے کہ عام حالت وچ وی ایہ گل لاگو اے؟ کی~$!A$ دا سچا
+اعلان \emph{ہر واری} $!A$ نوں سانجھا علم بنا دیندا اے؟ شاید ایہ سن
+کے اچرج ہووے کہ جواب ناں اے۔ اصل وچ ایسے !!{formula}s دا سچا اعلان
+ہو سکدا اے جیہڑے اعلان ہو جان پچھوں سچ نہیں رہندے۔ مثلاً
+$p \land \lnot \Knows_b p$ دا اعلان~$w_1$ اُتے کرن دا اثر ویکھو،
+\olref{fig:announcement-example} وچ۔ اصل وچ $\mModel M \mid p$ تے
+$\mModel M \mid (p \land \lnot \Knows_b p)$ اکّو نمونہ نیں۔
+پر اسیں ویکھ چکے آں کہ $\mSat{M \mid p}{\Knows_b
+p}[w'_1]$۔ سو $\mSat{M \mid (p \land \lnot \Knows_b p)}{\lnot
+(p \land \lnot \Knows_b p)}[w'_1]$۔ ایس لئی ایہ اجیہا !!a{formula}
+اے جیہڑا اعلان ہوون پچھوں جھوٹ ہو جاندا اے۔
+
+\end{document}

@@ -1,0 +1,150 @@
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: translation-G2i
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{tgi}
+
+\olsection{\Log{G2i} توں \Log{N2i} وچ ثبوت بدلنے}
+
+\Log{G2i} دے سیکوئنٹاں دے مقدم بہُ-سیٹ~$\Gamma$ نیں، !!{formula}s دے، جدکہ \Log{N2i} دے سیکوئنٹاں دے مقدم نشان لگے فارمولیاں دے سیٹ~$\Gamma'$ نیں جیہناں وچ ہر نشان بس اک واری آؤندا اے۔ آؤ آکھیے کہ سیٹ~$\Gamma'$، نشان لگے !!{formula}s دا، بہُ-سیٹ~$\Gamma$ نال \emph{میل کھاندا اے} جے ہر !!{formula}~$!A$ لئی،~$\Gamma'$ دے !!{element}s جیہڑے $x : !A$ دی شکل دے نیں، اوہناں دی گنتی~$!A$ دی تکرار گنتی توں گھٹ یا برابر اے (یعنی~$!A$ دیاں نکلاں دی گنتی توں،~$\Gamma$ وچ)۔
+
+\begin{prop}\ollabel{prop:G2i-to-N2i}
+جے $\Log{G2i} + \Cut \Proves \Gamma \Sequent \Delta$، تاں $\Log{N2i}
+\Proves \Gamma' \Sequent !C$، جتھے $!C \ident \lfalse$ جے $\Delta$ خالی اے تے $\Delta = \{!A\}$ باقی صورت وچ، تے $\Gamma'$،~$\Gamma$ نال میل کھاندا اے۔
+\end{prop}
+
+\begin{proof}
+اسیں وکھاؤنے آں کہ جے $\pi$ اک !!a{proof} اے $\Gamma \Sequent \Delta$ دا، \Log{G2ci} وچ، تاں~$\Gamma'$ موجود اے جیہڑا~$\Gamma$ نال میل کھاندا اے تے !!a{proof}~$\delta$،~$\Gamma' \Sequent !C$ دا،،~\Log{N2i} وچ، موجود اے۔ ایہ $n = \pheight{\pi}$ اُتے استقرا نال کردے آں۔
+
+جے $n = 0$، تاں $\pi$ مسلّمہ اے۔ جے ایہ مسلّمہ $\lfalse \Sequent
+  \quad$ اے، تاں $\delta$ مسلّمہ $x:\lfalse \Sequent \lfalse$ اے، یعنی $\Gamma' = \{x:\lfalse\}$ تے $!C \ident \lfalse$۔ جے $\pi$، $!A \Sequent !A$ دی شکل دا مسلّمہ اے، تاں $\delta$، $x: !A \Sequent !A$ اے۔
+
+جے $n>0$، تاں $\pi$ قاعدے~$R$ اُتے مُکدا اے۔ استقرا دا مفروضہ پکا کردا اے کہ اوس قاعدے دے مقدمیّاں نال میل کھاندے سیکوئنٹاں دے !!{proof}s،~\Log{N2c} وچ، نیں۔ اسیں منّ سکدے آں کہ اوہناں ثبوتاں وچ سارے اخراج دے نشان وکھرے نیں، تے جے نشان $x$ کِتے خارج ہووے، تاں بس اوہنوں خارج کرن والے استنباط توں اُتّے آؤندا اے (لوڑ پئے تاں نشان بدل کے)۔ فیر وکھاؤنے آں کہ ایہ !!{proof}s کِویں جوڑ سکدے آں تاں جو ڈھکدے $\Gamma' \Sequent !C$ دے ثبوت ملن۔~$R$ مطابق صورتاں وکھ کردے آں۔
+
+\begin{enumerate}
+\item جے $R$، \RightR{\Weakening} اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma \fCenter$
+    \RightLabel{\RightR{\Weakening}}
+    \UnaryInf$\Gamma \fCenter !A$
+    \DisplayProof
+    \]
+$\pi_1$ اُتے استقرا دا مفروضہ لا کے !!a{proof} ملدا اے~$\Gamma' \Sequent \lfalse$ دا۔ $\FalseInt$ لا کے !!a{proof} لیندے آں $\Gamma' \Sequent !A$ دا۔
+\item جے $R$، \LeftR{\Weakening} اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\RightR{\Weakening}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+$\pi_1$ اُتے استقرا دا مفروضہ لا کے !!a{proof} ملدا اے~$\Gamma' \Sequent !C$ دا، جیہنوں $\delta$ لیندے آں۔ دھیان دیو، جے $\Gamma'$، $\Gamma$ نال میل کھاندا اے، تاں $!A,
+    \Gamma$ نال وی، کیوں جے $x : !A$ دی گنتی $\Gamma'$ وچ،~$!A$ دیاں نکلاں دی گنتی $\Gamma$ وچ توں ودھ نہیں، سو $!A$ دیاں نکلاں دی گنتی $\Gamma \cup \{!A\}$ وچ توں وی ودھ نہیں۔
+\item جے $R$، \LeftR{\Contraction} اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, !A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\Contraction}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+$\pi_1$ اُتے استقرا دا مفروضہ لا کے !!a{proof} ملدا اے~$\Pi, \Gamma' \Sequent !C$ دا، جتھے $\Pi \subseteq \{x : !A,
+    y:!A\}$۔ جے $\Pi = \{x : !A, y:!A\}$، تاں سارے نشان لگے !!{formula}s $y:!A$،~$\pi_1$ وچ، $x:!A$ نال بدلو۔ چونکہ $x$،~$\pi_1$ دے آخری سیکوئنٹ دے سیاق وچ آؤندا اے، اسیں منّ سکدے آں کہ~$\pi_1$ وچ کوئی استنباط!!a{formula}،~$x:!B$ دی شکل دا، خارج نہیں کردا، یعنی کوئی $x:!B$،~$\pi_1$ دے کسے سیکوئنٹ دے کھبّے پاسے، سرگردہ نہیں۔ ایس لئی حاصل ہن وی !!a{proof} اے~\Log{N2i} وچ۔
+\item جے $R$، $\RightR{\lif}$ اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, \Gamma \fCenter !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\Gamma \fCenter !A \lif !B$
+    \DisplayProof
+    \]
+استقرا دے مفروضے نال !!a{proof}~$\delta_1$ اے، $x:
+    !A, \Gamma' \Sequent !B$ یا $\Gamma' \Sequent !B$ دا، جتھے $\Gamma'$،~$\Gamma$ نال میل کھاندا اے۔ $\delta_1$ نوں $\delta$ تے \Intro{\lif} دی اک ورتوں ملا کے لے سکدے آں۔
+\item جے $R$، \LeftR{\lif} اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$!B, \Gamma_2 \fCenter \Delta$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma_1, \Gamma_2 \fCenter \Delta$
+    \DisplayProof
+    \]
+استقرا دا مفروضہ !!{proof}s دیندا اے، $\delta_1$، $\Gamma_1'
+    \Sequent !A$ دا، تے $\delta_2$، $x: !B, \Gamma_2' \Sequent !C$ یا $\Gamma_2' \Sequent !C$ دا۔ جے $\delta_2$ پچھلی شکل دا اے، تاں $\delta_2$ نوں~$\delta$ لے سکدے آں۔ نہیں تاں~$\pi_1$ وچ سارے فارمولیاں تے اخراج دے نشان بدل کے پکا کر سکدے آں کہ کوئی نشان $\delta_1$ تے~$\delta_2$ دوہاں وچ نہ آوے۔ فیر $\Gamma_1' \cup
+    \Gamma_2'$، $\Gamma_1 \cup \Gamma_2$ نال میل کھاندا اے۔ چونکہ $x:!B$،~$\delta_2$ دے آخری سیکوئنٹ وچ آؤندا اے، $x:!B$،~$x$ اخراج نشان والے کسے استنباط وچ،~$\delta_2$ اندر، سرگردہ نہیں ہو سکدا۔ ہر مسلّمہ $x:!B \Sequent !B$،~$\delta_2$ وچ، ایس !!{proof}~$\delta_3$ نال بدلو:
+\[
+    \Axiom$x: !A \lif !B \fCenter !A \lif !B$
+    \AxiomC{}
+    \RightLabel{$\delta_1$}
+    \Deduce$\Gamma_1' \fCenter !A$
+    \RightLabel{\Elim{\lif}}
+    \BinaryInf$x: !A \lif !B \fCenter !B$
+    \DisplayProof
+    \]
+تے $x:!B$ دی ہر موجودگی،~$\delta_2$ وچ، $x:!A \lif !B$ نال بدلو۔ حاصل $\Subst{\delta_2}{\delta_3}{x:!B}$، !!a{proof} اے $x:!A \lif !B, \Gamma_1', \Gamma_2' \Sequent !C$ دا۔
+\item جے $R$، \RightR{\land} اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\Gamma_2 \fCenter !B$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma_1, \Gamma_2 \fCenter !A \land !B$
+    \DisplayProof
+    \]
+استقرا دا مفروضہ ثبوت $\delta_1$ دیندا اے $\Gamma_1'
+    \Sequent !A$ دا تے $\delta_2$ دیندا اے $\Gamma_2' \Sequent !A$ دا۔~$\pi_2$ وچ سارے فارمولیاں تے اخراج دے نشان بدل کے پکا کر سکدے آں کہ کوئی نشان $\delta_1$ تے $\delta_2$ دوہاں وچ نہ آوے۔ فیر $\Gamma_1' \cup \Gamma_2'$، $\Gamma_1 \cup
+    \Gamma_2$ نال میل کھاندا اے۔ !!a{proof}~$\delta$ لیندے آں، $\Intro{\land}$ نوں $\delta_1$ تے~$\delta_2$ دے آخری سیکوئنٹاں اُتے لا کے۔
+\item جے $R$، $\LeftR{\land}$ اے، تاں مثلاً $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+استقرا دے مفروضے نال !!a{proof}~$\delta_1$ اے، $x:
+    !A, \Gamma' \Sequent !C$ یا $\Gamma' \Sequent !C$ دا، جتھے $\Gamma'$،~$\Gamma$ نال میل کھاندا اے۔ پچھلی صورت وچ $\delta_1$ نوں $\delta$ لے سکدے آں۔ پہلی صورت وچ ویکھو، چونکہ $x:!A$ آخری سیکوئنٹ وچ آؤندا اے، $x:!A$،~$x$ اخراج نشان والے کسے استنباط وچ،~$\delta_1$ اندر، سرگردہ نہیں۔ ہر مسلّمہ $x:!A
+    \Sequent !A$ نوں ایس !!{proof}~$\delta_2$ نال بدلو:
+\[
+    \Axiom$x: !A \land !B \fCenter !A \land !B$
+    \RightLabel{\Elim{\land}}
+    \UnaryInf$x: !A \land !B \fCenter !A$
+    \DisplayProof
+    \]
+تے $x:!A$ دی ہر موجودگی $x:!A \land !B$ نال بدلو، یعنی $\Subst{\delta_1}{\delta_2}{x:!A}$ ویکھو۔ ایہ !!a{proof} اے $x:!A
+    \land !B, \Gamma' \Sequent !C$ دا۔
+\item جے $R$، \Cut اے، تاں $\pi$ ایتھے مُکدا اے:
+\[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$!A, \Gamma_2 \fCenter \Delta$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma_1, \Gamma_2 \fCenter \Delta$
+    \DisplayProof
+    \]
+استقرا دا مفروضہ ثبوت $\delta_1$ دیندا اے $\Gamma_1'
+    \Sequent !A$ دا تے $\delta_2$ دیندا اے $x:!A, \Gamma_2' \Sequent !C$ یا $\Gamma_2' \Sequent !C$ دا۔ پچھلی صورت وچ $\delta$ نوں~$\delta_2$ لو۔ نہیں تاں ہر مسلّمہ $x:!A \Sequent !A$، $\delta_2$ وچ، $\delta_1$ نال بدلو تاں جو~$\delta$ ملے، یعنی !!{proof}~$\Subst{\delta_2}{\delta_1}{x:!A}$، $\Gamma_1',
+    \Gamma_2' \Sequent !C$ دا۔
+\end{enumerate}
+\end{proof}
+
+\end{document}

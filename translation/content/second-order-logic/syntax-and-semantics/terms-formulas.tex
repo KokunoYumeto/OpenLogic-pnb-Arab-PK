@@ -1,0 +1,100 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: terms-formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sol}{syn}{frm}
+
+\olsection{ٹرم تے \printtoken{P}{formula}}
+
+پہلے درجے دی منطق وانگ، دوجے درجے دی منطق دیاں لکھتاں
+بنیادی علامتاں دی اک فہرست توں بنائیاں جاندیاں نیں۔ ایس وچ
+\emph{!!{variable}s}، \emph{!!{constant}s}،
+\emph{!!{predicate}s} تے کدے کدے
+\emph{!!{function}s} شامل نیں۔ انہاں نوں منطقی رابطیاں،
+مسوّراں، تے قوساں تے کومیاں ورگیاں لکھت دیاں نشانیاں
+نال ملا کے \emph{ٹرم} تے \emph{!!{formula}s}
+بنائے جاندے نیں۔ فرق ایہہ اے کہ دوجے درجے دی منطق وچ
+شے دے متغیراں توں علاوہ تعلقاں تے فنکشوناں دے
+متغیر وی ہوندے نیں، تے انہاں اُتے مسوّریت دی
+اجازت وی ہوندی اے۔ سو دوجے درجے دی منطق دیاں منطقی
+علامتاں پہلے درجے دی منطق والیاں نیں، نال ایہہ وی:
+
+\begin{enumerate}
+\item ہر رُکن-گنتی~$n$ لئی دوجے درجے دے تعلقی !!{variable}s دا
+  اک !!{denumerable}s سیٹ:
+  $\Obj V_0^n$, $\Obj V_1^n$, $\Obj V_2^n$, \dots
+\item دوجے درجے دے فنکشنی !!{variable}s دا اک
+  !!{denumerable}s سیٹ:
+  $\Obj u_0^n$, $\Obj u_1^n$, $\Obj u_2^n$, \dots
+\end{enumerate}
+
+جیویں اسیں $x$, $y$, $z$ نوں پہلے درجے دے
+متغیراں $\Obj v_i$ لئی ماورا متغیراں دے طور تے ورتدے آں،
+اُویں $X$, $Y$, $Z$ وغیرہ نوں $\Obj V_i^n$ لئی
+تے $u$, $v$ وغیرہ نوں~$\Obj u_i^n$ لئی ماورا متغیراں
+دے طور تے ورتاں گے۔
+
+\begin{explain}
+دوجے درجے دی زبان دیاں غیر منطقی علامتاں اوہو
+طریقے نال متعین کیتیاں جاندیاں نیں جیویں پہلے درجے
+دی زبان دیاں: اوہدے !!{constant}s، !!{function}s
+تے !!{predicate}s دی فہرست دے کے۔
+
+پہلے درجے دی منطق وچ !!{identity}~$\eq$ نوں عموماً
+شامل کیتا جاندا اے۔ پہلے درجے دی منطق وچ
+زبان~$\Lang{L}$ دیاں غیر منطقی علامتاں کسے وی
+دلچسپ گل نوں بیان کرن لئی بہت ضروری نیں۔ بے شک
+کجھ !!{sentence}s غیر منطقی علامتاں توں بناں وی
+ہوندے نیں، پر صرف~$\eq$ نال کوئی دلچسپ گل کہنا
+اوکھا اے۔ دوجے درجے دی منطق وچ، تعلقی تے فنکشنی متغیر بے حد نیں۔ ایس لئی اسیں
+وکھریاں غیر منطقی علامتاں توں بناں وی اوہ کجھ آکھ سکدے آں
+جیہڑا پہلے درجے دی کسے زبان وچ آکھ سکدے آں۔
+\end{explain}
+
+\begin{defn}[دوجے درجے دے ٹرم]
+زبان~$\Lang L$ دے \emph{دوجے درجے دے ٹرماں} دا سیٹ،
+$\TrmSOL[L]$، \olref[fol][syn][frm]{defn:terms}
+دی تعریف وچ ایہہ شق شامل کر کے متعین ہوندا اے:
+\begin{enumerate}
+\item جے $u$ اک $n$-رکنی فنکشنی متغیر اے تے $t_1$, \dots, $t_n$
+  ٹرم نیں، تاں $\Atom{u}{t_1, \ldots, t_n}$ اک ٹرم اے۔
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+سو دوجے درجے دا ٹرم پہلے درجے دے ٹرم ورگا اے۔
+فرق ایہ اے کہ جتھے پہلے درجے دے ٹرم
+وچ !!a{function}~$\Obj{f^n_i}$ آؤندا اے، اُتھے
+دوجے درجے دے ٹرم وچ اُس دی تھاں فنکشنی
+متغیر~$\Obj{u^n_i}$ آ سکدا اے۔
+\end{explain}
+
+\begin{defn}[دوجے درجے دے \usetoken{s}{formula}]
+\emph{دوجے درجے دے !!{formula}s} دا سیٹ~$\FrmSOL[L]$،
+زبان~$\Lang L$ لئی،
+\olref[fol][syn][frm]{defn:formulas} دی تعریف وچ
+ایہہ شقّاں شامل کر کے متعین ہوندا اے:
+\begin{enumerate}
+\item جے $X$ اک $n$-رکنی محمولی متغیر اے تے $t_1$, \dots,
+  $t_n$، زبان~$\Lang L$ دے دوجے درجے دے ٹرم نیں، تاں
+  $\Atom{X}{t_1,\ldots, t_n}$ اک ایٹمی !!{formula} اے۔
+
+\tagitem{prvAll}{جے $!A$، !!a{formula} اے تے $u$ اک فنکشنی متغیر اے،
+  تاں $\lforall[u][!A]$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvAll}{جے $!A$، !!a{formula} اے تے $X$ اک محمولی متغیر اے،
+  تاں $\lforall[X][!A]$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvEx}{جے $!A$، !!a{formula} اے تے $u$ اک فنکشنی متغیر اے،
+  تاں $\lexists[u][!A]$ وی !!a{formula} اے۔}{}
+
+\tagitem{prvEx}{جے $!A$، !!a{formula} اے تے $X$ اک محمولی متغیر اے،
+  تاں $\lexists[X][!A]$ وی !!a{formula} اے۔}{}
+\end{enumerate}
+\end{defn}
+
+\end{document}

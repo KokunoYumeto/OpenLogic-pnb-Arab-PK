@@ -1,0 +1,38 @@
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{prq}
+
+\olsection{مسوّراں نال \usetoken{P}{derivation}}
+
+\begin{ex}
+آؤ $(\lforall[x][!A(x)] \land
+\lforall[y][!B(y)]) \lif \lforall[x][(!A(x) \land !B(x))]$ دا
+!!a{derivation} پیش کریے۔
+
+پہلاں، غور کرو کہ
+% PNBAXD-011: make the omitted composition and second conditional axiom explicit; all displayed formulas and citations remain unchanged.
+\begin{align*}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[x][!A(x)]\\
+  \intertext{ایہ \olref[prp]{ax:land1} دی مثال اے، تے}
+  \lforall[x][!A(x)] & \lif !A(a) \\
+  \intertext{\olref[qua]{ax:q1} دی مثال اے۔ ایس لئی \olref[pro]{prop:chain} توں سانوں پتا لگدا اے کہ}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif !A(a) \\
+  \intertext{!!{derivable} اے۔ ایسے طرح، چونکہ}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[y][!B(y)] \qquad\text{تے}\\
+    \lforall[y][!B(y)] & \lif !B(a)\\
+    \intertext{ترتیب نال \olref[prp]{ax:land2} تے \olref[qua]{ax:q1} دیاں مثالاں نیں،}
+    (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif !B(a)\\
+    \intertext{\olref[pro]{prop:chain} نال اخذ ہو سکدا اے۔ پہلے جزو لئی حاصل شرطیہ نتیجے نوں \olref[prp]{ax:land3} دی مناسب مثال نال ایس زنجیری نتیجے راہیں ملاؤ۔ فیر شرطیہ رابطے دے دوجے مسلّمے تے دوجے جزو لئی حاصل شرطیہ نتیجے نال~\MP دی دو وار ورتوں توں اسیں ویکھدے آں کہ}
+    (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif (!A(a) \land !B(a))\\
+    \intertext{اخذ ہو سکدا اے۔ ہُن \QR{} ورت کے اسیں ایہ حاصل کر سکدے آں:}
+(\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[x][(!A(x) \land !B(x))].
+\end{align*}
+\end{ex}
+
+\end{document}

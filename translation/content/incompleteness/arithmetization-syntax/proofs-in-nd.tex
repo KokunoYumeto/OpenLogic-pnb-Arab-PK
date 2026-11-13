@@ -1,0 +1,509 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: proofs-in-nd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{art}{pnd}
+\olsection{فطری استنباط وچ \usetoken{P}{derivation}}
+
+\begin{explain}
+!!{derivation}s نوں عددی روپ دین لئی سانوں !!{derivation}s نوں
+عدداں نال ظاہر کرنا پینا اے۔ کیوں جے !!{derivation}s،
+!!{formula}s دے درخت نیں تے ہر استنباط نال اک یا دو لیبل وی
+ہوندے نیں، ایس لئی بازگشتی طریقہ سِدھا اے۔
+اسیں !!{derivation} نوں اک ٹپل نال ظاہر کردے آں۔
+اوس ٹپل دے جز آخری استنباط دے مقدمیاں تک پہنچن والیاں
+براہِ راست ذیلی !!{derivation}s دی گنتی، اوہناں ذیلی !!{derivation}s دے عددی روپ، تے آخرلا !!{formula}،
+آخری استنباط دا مفروضہ خارج کرن والا لیبل، تے آخری
+استنباط دی قسم دسن والا اک عدد نیں۔
+\end{explain}
+
+\begin{defn}
+  جے $\delta$ فطری استنباط وچ !!a{derivation} اے،
+  تاں $\Gn{\delta}$ دی استقرائی تعریف ایویں کردے آں:
+  \begin{enumerate}
+  \item
+    جے $\delta$ صرف مفروضے~$!A$ اُتے مشتمل اے،
+    تاں $\Gn{\delta}$، $\tuple{0, \Gn{!A}, n}$ اے۔
+    جے ایہ !!{undischarged} مفروضہ اے تاں عدد~$n$،
+    $0$ اے؛ ورنہ اوس دا عددی لیبل اے۔
+  \item
+    جے $\delta$ دا آخرلا استنباط صفر، اک، دو یا
+    تن مقدمیاں والا اے، تاں $\Gn{\delta}$ بالترتیب
+    ایہ اے:
+    \begin{align*}
+      & \tuple{0, \Gn{!A}, n, k}, \\
+      & \tuple{1, \Gn{\delta_1}, \Gn{!A}, n, k}, \\
+      & \tuple{2, \Gn{\delta_1}, \Gn{\delta_2}, \Gn{!A}, n, k}, \text{ یا}\\
+      & \tuple{3, \Gn{\delta_1}, \Gn{\delta_2}, \Gn{\delta_3}, \Gn{!A}, n,
+        k},
+    \end{align*}
+    ایتھے $\delta_1$، $\delta_2$ تے $\delta_3$،
+    $\delta$ دے آخری استنباط دے مقدمے یا مقدمیاں
+    اُتے ختم ہون والے ذیلی !!{derivation}s نیں۔
+    $!A$، $\delta$ وچ آخری استنباط دا نتیجہ اے؛
+    $n$ اوس استنباط دا مفروضہ خارج کرن والا لیبل
+    اے (جے استنباط کوئی مفروضہ خارج نہیں کردا
+    تاں $0$)؛ تے آخری استنباط وچ ورتے قاعدے مطابق $k$ دی قدر ہِٹھلے جدول توں ملدی اے۔
+
+    \begin{tabular}{lccccccc}
+      \text{قاعدہ:} & \Intro{\land} & \Elim{\land} & \Intro{\lor} & \Elim{\lor} \\
+      $k$: & 1 & 2 & 3 & 4  \\[1.5ex]
+      \text{قاعدہ:} &  \Intro{\lif} & \Elim{\lif} & \Intro{\lnot} & \Elim{\lnot} \\
+      $k$: & 5 & 6 & 7 & 8 \\[1.5ex]
+      \text{قاعدہ:}  &  \FalseInt & \FalseCl & \Intro{\lforall} & \Elim{\lforall} \\
+      $k$: & 9 & 10 & 11 & 12 \\[1.5ex]
+      \text{قاعدہ:} & \Intro{\lexists} & \Elim{\lexists} & \Intro{\eq} & \Elim{\eq} \\
+      $k$: & 13 & 14 & 15 & 16
+    \end{tabular}
+  \end{enumerate}
+\end{defn}
+
+\begin{ex}
+  ایہ سوکھا جیہا !!{derivation} ویکھو:
+  \begin{prooftree}
+    \AxiomC{$\Discharge{!A \land !B}{1}$}
+    \RightLabel{\Elim{\land}}
+    \UnaryInfC{$!A$}
+    \DischargeRule{\Intro{\lif}}{1}
+    \UnaryInfC{$(!A \land !B) \lif !A$}
+  \end{prooftree}
+  مفروضے دا گوڈل نمبر
+  $d_0 = \tuple{0, \Gn{!A \land !B}, 1}$ ہوئے گا۔
+  $\Elim{\land}$ دے نتیجے اُتے ختم ہون والے
+  !!{derivation} دا گوڈل نمبر
+  $d_1 = \tuple{1, d_0, \Gn{!A}, 0, 2}$
+  ہوئے گا ($1$ ایس لئی کہ $\Elim{\land}$ دا اک مقدمہ
+  اے؛ نتیجے~$!A$ دا گوڈل نمبر؛ $0$ ایس لئی کہ
+  کوئی مفروضہ خارج نہیں ہوندا؛ تے $2$،
+  $\Elim{\land}$ نوں کوڈ کرن والا عدد اے)۔
+  فیر پورے !!{derivation} دا گوڈل نمبر
+  $\tuple{1, d_1, \Gn{((!A \land !B) \lif
+      !A)}, 1, 5}$ اے؛ یعنی
+  \[
+  \tuple{1, \tuple{1, \tuple{0, \Gn{(!A \land !B)}, 1}, \Gn{!A}, 0, 2},
+    \Gn{((!A \land !B) \lif !A)}, 1, 5}.
+  \]
+\end{ex}
+
+\begin{explain}
+!!{derivation}s دی عددی روپ طے کر کے
+سانوں ایہ وی دکھانا پینا اے کہ اسیں انہاں
+!!{derivation}s دے گوڈل نمبراں اُتے بنیادی
+بازگشتی ڈھنگ نال عمل کر سکدے آں، تے اوہناں دیاں ضروری خاصیتاں تے تعلقاں نوں وی ایس طریقے نال بیان کر سکدے آں۔ کجھ عمل سادے نیں: مثال لئی،
+!!a{derivation} دے گوڈل نمبر~$d$ توں
+$\fn{EndFmla}(d) = (d)_{(d)_0+1}$
+اوس دے آخرلے !!{formula} دا گوڈل نمبر
+دیندا اے؛
+$\fn{DischargeLabel}(d) = (d)_{(d)_0 + 2}$
+مفروضہ خارج کرن والا لیبل دیندا اے؛ تے
+$\fn{LastRule}(d) = (d)_{(d)_0 + 3}$
+آخری استنباط دی قسم دسن والا عدد دیندا اے۔
+کجھ ہور عمل کافی اوکھے نیں۔ اسیں گھٹ توں
+گھٹ انہاں دا طریقہ خاکہ وار دساں گے۔
+مقصد ایہ دکھانا اے کہ
+«$\delta$،~$!A$ دا
+!!a{derivation} $\Gamma$ توں اے» والا تعلق،
+$\delta$ تے~$!A$ دے گوڈل نمبراں
+دا بنیادی بازگشتی تعلق اے۔
+\end{explain}
+
+\begin{prop}
+  ہِٹھلے تعلق بنیادی بازگشتی نیں:
+  \begin{enumerate}
+  \item $!A$، $\delta$ وچ لیبل~$n$ والا
+    مفروضے وجوں آؤندا اے۔
+  \item $\delta$ وچ لیبل~$n$ والے سارے
+    مفروضے $!A$ دے روپ وچ نیں
+    (یعنی اسیں مفروضہ~$!A$ نوں
+    لیبل~$n$ ورت کے $\delta$ وچ
+    !!{discharge} کر سکدے آں)۔
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  سانوں دکھانا اے کہ !!{formula}s دے گوڈل
+  نمبراں تے !!{derivation}s دے گوڈل نمبراں
+  دے وچکار متعلقہ تعلق بنیادی بازگشتی نیں۔
+  \begin{enumerate}
+  \item اسیں دکھانا چاہندے آں کہ
+    $\fn{Assum}(x, d, n)$ بنیادی بازگشتی اے۔
+    ایہ اوس ویلے سچ ہوندا اے جدوں $x$،
+    گوڈل نمبر~$d$ والے !!{derivation}
+    دے لیبل~$n$ والے کسے مفروضے دا گوڈل
+    نمبر ہووے۔ ایہ اوس ویلے اے جدوں
+    گوڈل نمبر~$\tuple{0, x, n}$ والا
+    !!{derivation}، $d$ دا ذیلی
+    !!{derivation} ہووے۔ دھیان دیو کہ
+    !!{derivation}s دی ساڈی کوڈکاری،
+    \olref[cmp][rec][tre]{sec} وچ دتی
+    درختاں دی کوڈکاری دی اک خاص صورت اے۔
+    ایس لئی بنیادی بازگشتی فنکشن
+    $\fn{SubtreeSeq}(d)$، $d$ دے سارے
+    ذیلی !!{derivation}s دے گوڈل نمبراں
+    دا سلسلہ دیندا اے (جیہدی لمبائی ودھ توں ودھ $d$ اے)۔
+    سو اسیں ایہ تعریف کر سکدے آں:
+    \[
+    \fn{Assum}(x, d, n) \defiff \bexists{i<d}{(\fn{SubtreeSeq}(d))_i =
+      \tuple{0, x, n}}.
+    \]
+  \item اسیں دکھانا چاہندے آں کہ
+    $\fn{Discharge}(x, d, n)$ بنیادی
+    بازگشتی اے۔ ایہ اوس ویلے سچ ہوندا
+    اے جدوں لیبل~$n$ والے،
+    گوڈل نمبر~$d$ دے
+    !!{derivation} وچلے سارے
+    مفروضے، گوڈل نمبر~$x$
+    والے !!{formula} ہی ہون۔
+    ایہ تعلق عین اوس ویلے سچ اے جدوں
+    $\bforall{y<d}{(\fn{Assum}(y, d, n) \lif y
+      = x)}$ ہووے۔
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:followsby}
+  خاصیت $\fn{Correct}(d)$ اُدوں تے صرف اُدوں قائم اے جدوں
+!!{derivation}~$\delta$ دا آخری استنباط درست ہووے، جتھے اوس اخذ
+دا گوڈل نمبر~$d$ اے۔ ایہ خاصیت بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  ایتھے سانوں استنباط دے ہر قاعدے~$R$
+  لئی ایہ دکھانا پینا اے کہ تعلق
+  $\fn{FollowsBy}_R(d)$ بنیادی بازگشتی
+  اے۔ $\fn{FollowsBy}_R(d)$ عین اوس
+  ویلے سچ ہوندا اے جدوں $d$ کسے
+  !!{derivation}~$\delta$ دا گوڈل نمبر
+  ہووے، تے $\delta$ دا آخرلا
+  !!{formula}، قاعدہ~$R$ ٹھیک طرح لاؤن نال $\delta$ دے براہِ راست ذیلی
+!!{derivation}s دے نتیجیاں توں نکلدا ہووے۔
+
+  اک سوکھی مثال \Intro{\land} دا قاعدہ اے۔ جے $\delta$ اک درست
+$\Intro{\land}$ استنباط اُتے ختم ہووے، تاں اوہ ایویں دِسے گا:
+  \begin{prooftree}
+    \AxiomC{}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+
+    \AxiomC{}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!B$}
+
+    \RightLabel{\Intro\land}
+    \BinaryInfC{$!A \land !B$}
+  \end{prooftree}
+  فیر گوڈل نمبر~$d$، جیہڑا~$\delta$ نوں دِتا گیا اے،
+  $\tuple{2, d_1, d_2,
+    \Gn{(!A \land !B)}, 0, k}$ اے؛ جتھے
+  $\fn{EndFmla}(d_1) = \Gn{!A}$،
+  $\fn{EndFmla}(d_2) = \Gn{!B}$،
+  $n=0$ تے $k=1$ نیں۔ سو اسیں
+  $\fn{FollowsBy}_{\Intro\land}(d)$
+  نوں ایس طرح تعریف کر سکدے آں:
+  \begin{multline*}
+    (d)_0 = 2 \land \fn{DischargeLabel}(d) = 0 \land \fn{LastRule}(d) = 1 \land {}\\
+    \fn{EndFmla}(d) = {}\\
+    \Gn{(} \concat \fn{EndFmla}((d)_1) \concat \Gn{\land}
+    \concat \fn{EndFmla}((d)_2) \concat \Gn{)}.
+  \end{multline*}
+
+  اک ہور سادہ مثال $\Intro\eq$ دا قاعدہ
+  اے۔ ایس دے کوئی مقدمے نہیں، ایس لئی
+  $(d)_0 = 0$ اے، مفروضیاں وانگ۔
+  ایس دا مفروضہ خارج کرن والا لیبل وی
+  نہیں؛ یعنی $n=0$۔ پر $!A$ ضرور
+  $\eq[t][t]$ دے روپ وچ ہووے،
+  جتھے~$t$ بند ٹرم اے۔
+  ایتھے اک بنیادی بازگشتی تعریف ایہ اے:
+  \begin{multline*}
+    (d)_0 = 0 \land \fn{DischargeLabel}(d) = 0 \land {}\\
+    \bexists{t<d}{(\fn{ClTerm}(t) \land
+      \fn{EndFmla}(d) = {}\\
+      \Gn{{\eq}(} \concat t \concat \Gn{,} \concat t \concat \Gn{)})}.
+  \end{multline*}
+
+  ذرا اوکھی مثال وچ
+  $\fn{FollowsBy}_{\Intro{\lif}}(d)$
+  عین اوس ویلے سچ ہوندا اے جدوں
+  $\delta$ دا آخرلا !!{formula}،
+  $(!A \lif !B)$ دے روپ وچ ہووے،
+  $\delta_1$ دا آخرلا !!{formula}
+  $!B$ ہووے، تے $\delta$ وچ
+  لیبل~$n$ والا ہر مفروضہ
+  $!A$ دے روپ وچ ہووے۔
+  اسیں ایس نوں بنیادی بازگشتی
+  طریقے نال ایویں بیان کر
+  سکدے آں:
+  \begin{multline*}
+    (d)_0 = 1 \land {}\\
+    \bexists{a<d}{(\fn{Discharge}(a, (d)_1, \fn{DischargeLabel}(d)) \land {}}\\
+      \fn{EndFmla}(d) = (\Gn{(} \concat a \concat \Gn{\lif}
+      \concat \fn{EndFmla}((d)_1) \concat \Gn{)}))
+  \end{multline*}
+  ($a$ نوں~$!A$ دا گوڈل نمبر سمجھو)۔
+
+  اک ہور مثال لئی \Intro{\lexists}
+  نوں ویکھو۔ ایتھے $\delta$
+  دا آخری استنباط عین اوس
+  ویلے درست اے جدوں کوئی
+  !!a{formula}~$!A$، بند ٹرم~$t$
+  تے !!a{variable}~$x$ ایہوجیہے
+  ہون کہ $\Subst{!A}{t}{x}$،
+  !!{derivation}~$\delta_1$ دا
+  آخرلا !!{formula} ہووے تے
+  $\lexists[x][!A]$ آخری
+  استنباط دا نتیجہ ہووے۔
+  سو $\fn{FollowsBy}_{\Intro{\lexists}}(d)$
+  عین اوس ویلے سچ ہوندا اے جدوں
+  \begin{multline*}
+    (d)_0 = 1 \land \fn{DischargeLabel}(d) = 0 \land {} \\
+    \bexists{a < d}{\bexists{x<d}{\bexists{t<d}{
+          (\fn{ClTerm}(t) \land \fn{Var}(x)  \land {}}}}\\
+    \fn{Subst}(a,t,x) = \fn{EndFmla}((d)_1) \land
+    \fn{EndFmla}(d) = (\Gn{\lexists} \concat x \concat a)).
+  \end{multline*}
+
+  فیر اسیں $\fn{Correct}(d)$ دی تعریف ایویں کردے آں:
+  \begin{multline*}
+    \fn{Sent}(\fn{EndFmla}(d)) \land {}\\
+    (\fn{LastRule}(d) = 1 \land
+    \fn{FollowsBy}_{\Intro\land}(d)) \lor \dots \lor {}\\
+    (\fn{LastRule}(d) = 16 \land \fn{FollowsBy}_{\Elim\eq}(d)) \lor {}\\
+    \bexists{n<d}{\bexists{x<d}{(d = \tuple{0, x, n})}}.
+  \end{multline*}
+  پہلی سطر یقینی بناندی اے کہ~$d$
+  دا آخرلا !!{formula} واقعی
+  جملہ اے۔ آخری سطر اوس صورت
+  لئی اے جدوں $d$ بس اک
+  مفروضہ ہووے۔
+\end{proof}
+
+\begin{prob}
+  ہِٹھلیاں خاصیتاں
+  \olref[inc][art][pnd]{prop:followsby}
+  دی طرز اُتے تعریف کرو:
+  \begin{enumerate}
+  \item $\fn{FollowsBy}_{\Elim{\lif}}(d)$،
+  \item $\fn{FollowsBy}_{\Elim{\eq}}(d)$،
+  \item $\fn{FollowsBy}_{\Elim{\lor}}(d)$،
+  \item $\fn{FollowsBy}_{\Intro{\lforall}}(d)$۔
+  \end{enumerate}
+  آخری صورت لئی ایہ وی وکھاؤ کہ گوڈل
+  نمبر~$d$ والے !!{derivation}
+  دا آخری استنباط ایگن متغیر
+  والی شرط پوری کردا اے یا
+  نہیں، ایہ بنیادی بازگشتی
+  ڈھنگ نال پرکھیا جا سکدا اے۔
+  یعنی ایگن متغیر~$a$،
+  جیہڑا $\Intro{\lforall}$
+  استنباط دا اے،
+  نہ~$d$ دے آخرلے
+  !!{formula} وچ آوے،
+  نہ~$d$ دے کسے
+  خارج نہ کیتے مفروضے
+  وچ۔ ایس لئی تسیں
+  \olref[inc][art][pnd]{prop:openassum}
+  والا بنیادی بازگشتی
+  محمول $\fn{OpenAssum}$
+  ورت سکدے او۔
+\end{prob}
+
+\begin{prop}
+  \ollabel{prop:deriv}
+  تعلق $\fn{Deriv}(d)$،
+  جیہڑا اوس ویلے سچ
+  ہوندا اے جدوں $d$
+  کسے درست
+  !!{derivation}~$\delta$
+  دا گوڈل نمبر ہووے،
+  بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  !!^a{derivation}~$\delta$
+  اوس ویلے درست اے جدوں
+  اوہدا ہر استنباط کسے
+  قاعدے دا درست اطلاق
+  ہووے؛ یعنی اوہدے ذیلی
+  !!{derivation}s وچوں
+  ہر اک درست استنباط
+  اُتے ختم ہووے۔ ایس
+  لئی $\fn{Deriv}(d)$
+  عین اوس ویلے سچ
+  اے جدوں
+  \[
+  \bforall{i<\len{\fn{SubtreeSeq}(d)}}{\fn{Correct}((\fn{SubtreeSeq}(d))_i)}
+  \]
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:openassum}
+  تعلق $\fn{OpenAssum}(z, d)$ بنیادی بازگشتی اے۔ ایہ قائم اے جے
+$z$ کسے !!a{undischarged} مفروضے~$!A$ دا گوڈل نمبر ہووے جیہڑا
+!!{derivation}~$\delta$ وچ اے، تے اوس اخذ دا گوڈل نمبر~$d$ ہووے۔
+\end{prop}
+
+\begin{proof}
+  کسے مفروضے دی اک
+  آمد اوس ویلے
+  !!{discharged} ہوندی
+  اے جدوں اوہ
+  لیبل~$n$ نال
+  $\delta$ دے کسے
+  ذیلی !!{derivation}
+  وچ آوے تے اوہ
+  ذیلی اخذ اوسے لیبل~$n$ نال
+  مفروضہ خارج کرن
+  والے قاعدے اُتے
+  ختم ہووے۔ سو
+  $!A$، $\delta$
+  دا !!a{undischarged}
+  مفروضہ اوس ویلے
+  اے جدوں اوہدیاں
+  آمدواں وچوں گھٹ
+  توں گھٹ اک
+  $\delta$ وچ
+  !!{discharged} نہ ہوئی
+  ہووے۔ ایتھے ایہ گل یاد رکھو کہ
+  $\delta$ وچ
+  $!A$ دیاں
+  !!{discharged} تے
+  !!{undischarged}
+  دونوں قسم دیاں
+  آمدواں ہو سکدیاں
+  نیں۔
+
+  اک سلسلہ
+  $\delta_0$، \dots،
+  $\delta_k$ لو،
+  جتھے $\delta_0 =
+  \delta$، $\delta_k$
+  مفروضہ
+  $\Discharge{!A}{n}$
+  ہووے (کسے~$n$ لئی)، تے
+  $\delta_{i+1}$،
+  $\delta_i$ دا
+  براہِ راست ذیلی
+  !!{derivation}
+  ہووے۔ جے ایسا سلسلہ ملے جیہدے وچ کوئی
+  وی~$\delta_i$
+  لیبل~$n$ نال
+  مفروضہ خارج
+  کرن والے
+  استنباط اُتے
+  ختم نہ ہووے،
+  تاں $!A$،
+  $\delta$ دا
+  !!a{undischarged}
+  مفروضہ اے۔
+
+  بنیادی بازگشتی فنکشن
+  $\fn{SubtreeSeq}(d)$
+  سانوں $\delta$ دے
+  سارے ذیلی
+  !!{derivation}s دے
+  گوڈل نمبراں دا
+  سلسلہ دیندا اے۔
+  $\delta$ دے ذیلی
+  !!{derivation}s دے
+  گوڈل نمبراں دا
+  ہر سلسلہ اوس دا
+  ذیلی سلسلہ اے۔
+  ذیلی سلسلہ ہون
+  دا تعلق بنیادی
+  بازگشتی اے:
+  $\fn{Subseq}(s, s')$
+  عین اوس ویلے
+  سچ اے جدوں
+  $\bforall{i<\len{s}}{\lexists[j<\len{s'}][(s)_i = (s')_j]}$۔
+  براہِ راست ذیلی
+  !!{derivation}
+  ہون دا تعلق وی
+  ایہوجیہا اے:
+  $\fn{Subderiv}(d, d')$
+  عین اوس ویلے
+  سچ اے جدوں
+  $\bexists{j<(d')_0}{d = (d')_j}$
+  ہووے۔ سو $\fn{OpenAssum}(z, d)$ دی تعریف ایویں کر سکدے آں:
+  \begin{multline*}
+    \bexists{s<\fn{SubtreeSeq}(d)}{(\fn{Subseq}(s, \fn{SubtreeSeq}(d))
+      \land (s)_0 = d \land {}} \\
+    \bexists{n<d}{((s)_{\len{s} \tsub 1} = \tuple{0, z, n} \land {}}\\
+      \bforall{i<(\len{s} \tsub 1)}{(\fn{Subderiv}((s)_{i+1}, (s)_i) \land {}}\\
+      \fn{DischargeLabel}((s)_i) \neq n))).
+  \end{multline*}
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:prf-prim-rec}
+  فرض کرو $\Gamma$،
+  !!{sentence}s دا
+  بنیادی بازگشتی
+  سیٹ اے۔ تاں
+  تعلق
+  $\Prf[\Gamma](x, y)$،
+  جیہڑا ایہ بیان
+  کردا اے کہ
+  «$x$، کسے
+  !!a{derivation}~$\delta$
+  دا کوڈ اے،
+  جیہڑا $!A$ نوں $\Gamma$ وچلے !!{undischarged} مفروضیاں توں کڈھدا اے، تے
+  $y$،~$!A$
+  دا گوڈل نمبر
+  اے»، بنیادی
+  بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+  فرض کرو
+  «$y \in \Gamma$»
+  بنیادی بازگشتی محمول~$R_\Gamma(y)$ نال دِتّا گیا اے۔
+  سانوں دکھانا اے
+  کہ تعلق
+  $\Prf[\Gamma](x, y)$
+  بنیادی بازگشتی
+  اے۔ ایہ عین
+  اوس ویلے سچ
+  ہوندا اے جدوں
+  $y$ کسے
+  جملے~$!A$ دا
+  گوڈل نمبر ہووے،
+  تے $x$ کسے
+  فطری استنباطی
+  !!{derivation}
+  دا کوڈ ہووے
+  جیہدا آخرلا
+  !!{formula}~$!A$
+  اے، تے جیہدے
+  سارے !!{undischarged}
+  مفروضے
+  $\Gamma$ وچ
+  ہون۔
+
+  \olref{prop:deriv}
+  دے مطابق
+  خاصیت
+  $\fn{Deriv}(x)$،
+  جیہڑی عین اوس
+  ویلے سچ اے
+  جدوں $x$
+  فطری استنباط
+  وچ کسے درست
+  !!{derivation}~$\delta$
+  دا گوڈل نمبر
+  ہووے، بنیادی
+  بازگشتی اے۔
+  ایس لئی اسیں
+  $\Prf[\Gamma](x, y)$ دی تعریف ایویں کر سکدے آں:
+  \begin{align*}
+    \Prf[\Gamma](x, y) \defiff {}
+    & \fn{Deriv}(x) \land \fn{EndFmla}(x) = y \land {} \\
+    & \bforall{z < x}{(\fn{OpenAssum}(z, x) \lif R_\Gamma(z))}.
+  \end{align*}
+\end{proof}
+
+\end{document}

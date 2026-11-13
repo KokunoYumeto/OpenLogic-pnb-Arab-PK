@@ -1,0 +1,470 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: proofs-in-lk
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{inc}{art}{plk}
+\olsection{$\Log{LK}$ وچ \usetoken{P}{derivation}}
+
+\begin{explain}
+!!{derivation}s نوں عددی روپ دین لئی سانوں !!{derivation}s نوں
+عدداں نال ظاہر کرنا پینا اے۔ !!{derivation}s سیکوئنٹاں دے درخت نیں
+تے ہر استنباط دا اک لیبل وی اے۔ ایس لئی بازگشتی طریقہ سِدھا اے۔
+اسیں ہر !!{derivation} نوں اک ٹپل نال ظاہر کردے آں، جیہدے جز
+آخرلا سیکوئنٹ، استنباط دا لیبل تے آخری استنباط دے مقدمیاں تک
+پہنچن والے ذیلی !!{derivation}s دے عددی روپ نیں۔
+\end{explain}
+
+\begin{defn}
+جے $\Gamma$، !!{sentence}s دا متناہی سلسلہ اے، $\Gamma =
+\tuple{!A_1, \dots, !A_n}$، تاں
+$\Gn{\Gamma} = \tuple{\Gn{!A_1},
+  \dots, \Gn{!A_n}}$ اے۔
+
+جے $\Gamma \Sequent \Delta$
+اک سیکوئنٹ اے، تاں
+$\Gamma \Sequent \Delta$ دا
+گوڈل نمبر ایہ اے:
+\[
+\Gn{\Gamma \Sequent \Delta} = \tuple{\Gn{\Gamma}, \Gn{\Delta}}
+\]
+
+جے $\pi$، $\Log{LK}$ وچ
+!!a{derivation} اے، تاں
+$\Gn{\pi}$ دی تعریف ایویں کردے آں:
+\begin{enumerate}
+\item جے $\pi$ صرف ابتدائی
+  سیکوئنٹ $\Gamma \Sequent \Delta$
+  اُتے مشتمل ہووے، تاں
+  $\Gn{\pi}$ ایہ اے:
+  \[
+    \tuple{0, \Gn{\Gamma \Sequent \Delta}}.
+  \]
+\item جے $\pi$ دا آخرلا استنباط
+  اک یا دو مقدمیاں والا ہووے،
+  اوہدا نتیجہ
+  $\Gamma \Sequent \Delta$
+  ہووے، تے $\pi_1$ تے
+  $\pi_2$ اوہ براہِ راست ذیلی ثبوت ہون جیہڑے آخری استنباط دے
+  مقدمیاں اُتے ختم ہوندے نیں، تاں $\Gn{\pi}$ دی قدر بالترتیب ایہ اے:
+  \begin{align*}
+    & \tuple{1, \Gn{\pi_1}, \Gn{\Gamma \Sequent \Delta}, k} \text{ یا}\\
+    & \tuple{2, \Gn{\pi_1}, \Gn{\pi_2}, \Gn{\Gamma \Sequent \Delta}, k},
+  \end{align*}
+  ایتھے $k$ دی قدر، آخری استنباط وچ ورتے قاعدے مطابق،
+  ہِٹھلے جدول توں ملدی اے:
+
+  \begin{tabular}{lccccccc}
+    \text{قاعدہ:} & \LeftR{\Weakening} & \RightR{\Weakening} &
+    \LeftR{\Contraction} & \RightR{\Contraction} &
+    \LeftR{\Exchange} & \RightR{\Exchange} \\
+    $k$: & 1 & 2 & 3 & 4 & 5 & 6 \\[2ex]
+    \text{قاعدہ:} & \LeftR{\lnot} & \RightR{\lnot} &
+    \LeftR{\land} & \RightR{\land} &
+    \LeftR{\lor} & \RightR{\lor} \\
+    $k$: & 7 & 8 & 9 & 10 & 11 & 12 \\[2ex]
+    \text{قاعدہ:} & \LeftR{\lif} & \RightR{\lif} &
+    \LeftR{\lforall} & \RightR{\lforall} &
+    \LeftR{\lexists} & \RightR{\lexists} \\
+    $k$: & 13 & 14 & 15 & 16 & 17 & 18 \\[2ex]
+    \text{قاعدہ:} & \Cut & = \\
+    $k$: & 19 & 20
+  \end{tabular}
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+ایہ سوکھا جیہا !!{derivation} ویکھو:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B \fCenter !A$
+  \RightLabel{\RightR{\lif}}
+  \UnaryInf$\fCenter (!A \land !B) \lif !A$
+\end{prooftree}
+ابتدائی سیکوئنٹ دا گوڈل نمبر
+$p_0 = \tuple{0,
+  \Gn{!A \Sequent !A}}$
+ہوئے گا۔ $\LeftR{\land}$ دے
+نتیجے اُتے ختم ہون والے
+!!{derivation} دا گوڈل نمبر
+$p_1 =
+    \tuple{1, p_0, \Gn{!A \land !B \Sequent !A}, 9}$
+ہووے گا ($1$ ایس لئی کہ
+$\LeftR{\land}$ دا اک مقدمہ اے؛
+نتیجے~$!A \land !B \Sequent !A$
+دا گوڈل نمبر؛ تے $9$،
+$\LeftR{\land}$ نوں کوڈ کرن
+والا نمبر اے)۔ فیر پورے
+!!{derivation} دا گوڈل نمبر
+$\tuple{1, p_1, \Gn{\Sequent (!A \land !B) \lif !A)}, 14}$
+اے؛ یعنی
+\[
+\tuple{1, \tuple{1, \tuple{0, \Gn{!A \Sequent !A)}}, \Gn{!A \land !B \Sequent !A}, 9},
+  \Gn{\Sequent (!A \land !B) \lif !A}, 14}.
+\]
+\end{ex}
+
+\begin{explain}
+!!{derivation}s دی عددی روپ طے کر کے سانوں ایہ وی دکھانا
+پینا اے کہ اسیں ایہناں
+!!{derivation}s اُتے بنیادی بازگشتی
+ڈھنگ نال عمل کر سکدے آں تے انہاں
+دیاں ضروری خاصیتاں تے تعلقاں
+نوں وی ایس طرح بیان کر سکدے آں۔
+کجھ عمل سادے نیں: مثال لئی
+!!a{derivation} دے گوڈل
+نمبر~$p$ توں
+$\fn{EndSeq}(p) = (p)_{(p)_0+1}$
+اوس دے آخرلے سیکوئنٹ دا
+گوڈل نمبر دیندا اے تے
+$\fn{LastRule}(p) = (p)_{(p)_0+2}$
+اوس دے آخری قاعدے دا
+کوڈ دیندا اے۔ خاصیت
+$\fn{Sequent}(s)$، جیہدی
+تعریف ایہ اے،
+\[
+  \len{s} = 2 \land \bforall{i<\len{(s)_0} + \len{(s)_1}}{\fn{Sent}(((s)_0 \concat (s)_1)_i)}
+\]
+$s$ لئی عین اوس ویلے
+سچ اے جدوں $s$،
+!!{sentence}s توں بنے
+سیکوئنٹ دا گوڈل نمبر
+ہووے۔ کجھ ہور عمل کِتے ودھ اوکھے نیں۔ ایتھے اسیں گھٹ توں گھٹ اوہناں دا خاکہ دساں گے۔
+مقصد ایہ دکھانا اے کہ
+«$\pi$، $!A$ دا
+!!a{derivation} $\Gamma$
+توں اے» والا تعلق، $\pi$ تے
+$!A$ دے گوڈل نمبراں
+دا بنیادی بازگشتی تعلق اے۔
+\end{explain}
+
+\begin{prop}\ollabel{prop:followsby}
+خاصیت $\fn{Correct}(p)$ اُدوں تے صرف اُدوں قائم اے جدوں
+!!{derivation}~$\pi$ دا آخری استنباط درست ہووے، جتھے اوس اخذ دا
+گوڈل نمبر~$p$ اے۔ ایہ خاصیت بنیادی بازگشتی اے۔
+\end{prop}
+
+\begin{proof}
+$\Gamma \Sequent \Delta$
+ابتدائی سیکوئنٹ اے جے یا تاں
+کوئی !!a{sentence}~$!A$
+ایہوجیہا ہووے کہ
+$\Gamma \Sequent \Delta$،
+$!A \Sequent !A$ ہووے؛
+یا کوئی ٹرم~$t$ ایہوجیہا
+ہووے کہ
+$\Gamma \Sequent \Delta$،
+$\emptyset \Sequent \eq[t][t]$
+ہووے۔ گوڈل نمبراں دے لحاظ نال
+$\fn{InitSeq}(s)$ عین
+اوس ویلے سچ اے جدوں
+\begin{align*}
+\bexists{x < s}{} (\fn{Sent}(x) & \land
+s = \tuple{\tuple{x},\tuple{x}})
+\lor {}\\
+\bexists{t<s}{} (\fn{Term}(t) & \land
+s = \tuple{0, \tuple{\Gn{{\eq}(} \concat t \concat \Gn{,} \concat t \concat \Gn{)}}}).
+\end{align*}
+
+سانوں ایہ وی دکھانا
+پینا اے کہ استنباط دے
+ہر قاعدے~$R$ لئی
+تعلق $\fn{FollowsBy}_R(p)$
+بنیادی بازگشتی اے۔
+ایتھے
+$\fn{FollowsBy}_R(p)$
+عین اوس ویلے سچ اے
+جدوں $p$، کسے
+!!{derivation}~$\pi$
+دا گوڈل نمبر ہووے،
+تے~$\pi$ دا آخرلا
+سیکوئنٹ، قاعدہ~$R$ ٹھیک طرح لاؤن نال~$\pi$ دے براہِ راست ذیلی
+!!{derivation}s دے نتیجیاں توں نکلدا ہووے۔
+
+اک سوکھی مثال \RightR{\land} دا قاعدہ اے۔ جے $\pi$ اک درست
+$\RightR{\land}$ استنباط اُتے ختم ہووے، تاں اوہ ایویں دِسے گا:
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma \fCenter \Delta, !A$
+
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\Gamma \fCenter \Delta, !B$
+
+  \RightLabel{\RightR\land}
+  \BinaryInf$\Gamma \fCenter \Delta, !A \land !B$
+\end{prooftree}
+ایس لئی
+!!{derivation} $\pi$
+وچ آخری استنباط
+$\RightR{\land}$ دا
+درست اطلاق اُدوں تے صرف اُدوں اے جدوں
+!!{sentence}s دے
+سلسلے $\Gamma$
+تے $\Delta$، نالے
+دو !!{sentence}s
+$!A$ تے~$!B$
+ایہوجیہے ہون کہ
+$\pi_1$ دا آخرلا
+سیکوئنٹ
+$\Gamma \Sequent \Delta, !A$
+ہووے، $\pi_2$ دا
+آخرلا سیکوئنٹ
+$\Gamma \Sequent \Delta, !B$
+ہووے، تے $\pi$
+دا آخرلا سیکوئنٹ
+$\Gamma \Sequent \Delta, !A \land !B$
+ہووے۔ ہن بس ایس نوں
+گوڈل نمبراں وچ
+بیان کرنا اے۔ جے
+$s = \Gn{\Gamma \Sequent \Delta}$
+ہووے، تاں
+$(s)_0 = \Gn{\Gamma}$
+تے $(s)_1 = \Gn{\Delta}$
+ہوندے نیں۔ ایس لئی
+$\fn{FollowsBy}_{\RightR{\land}}(p)$
+عین اوس ویلے سچ اے
+جدوں
+\begin{align*}
+& \bexists{g < p}{\bexists{d < p}{\bexists{a < p}{\bexists{b < p}{\quad}}}} \\
+& \qquad \fn{EndSequent}(p) =
+  \tuple{g, d \concat
+    \tuple{\Gn{(} \concat a \concat \Gn{\land} \concat b \concat \Gn{)}}} \land {} \\
+& \qquad \fn{EndSequent}((p)_1) = \tuple{g, d \concat \tuple{a}} \land {}\\
+& \qquad \fn{EndSequent}((p)_2) = \tuple{g, d \concat \tuple{b}} \land {}\\
+& \qquad (p)_0 = 2 \land \fn{LastRule}(p) = 10.
+\end{align*}
+ہر سطر دی گل بالترتیب ایہ اے کہ
+«سلسلہ~($\Gamma$)،
+جیہدا گوڈل نمبر~$g$ اے،
+سلسلہ~($\Delta$)،
+جیہدا گوڈل نمبر~$d$ اے،
+!!a{formula}~($!A$)،
+جیہدا گوڈل نمبر~$a$ اے،
+تے !!a{formula}~($!B$)،
+جیہدا گوڈل نمبر~$b$ اے،
+موجود نیں»، تے
+نال ایہ کہ
+«$\pi$ دا آخرلا
+سیکوئنٹ
+$\Gamma \Sequent \Delta, !A
+\land !B$ اے»،
+«$\pi_1$ دا آخرلا
+سیکوئنٹ
+$\Gamma \Sequent \Delta,
+!A$ اے»،
+«$\pi_2$ دا آخرلا
+سیکوئنٹ
+$\Gamma \Sequent \Delta, !B$
+اے»، تے
+«$\pi$ دیاں دو
+براہِ راست ذیلی
+اخذاں نیں تے آخری
+استنباطی قاعدہ
+$\RightR\land$
+اے (جیہدا نمبر~$10$
+اے)»۔
+
+$\pi$ وچ آخری استنباط
+$\RightR\lexists$
+دا درست اطلاق اُدوں تے صرف اُدوں اے جدوں
+سلسلے $\Gamma$
+تے $\Delta$، اک
+!!a{formula}~$!A$،
+اک متغیر~$x$،
+تے اک ٹرم~$t$
+ایہوجیہے ہون کہ
+$\pi$ دا آخرلا
+سیکوئنٹ
+$\Gamma \Sequent \Delta, \lexists[x][!A]$
+تے $\pi_1$ دا
+آخرلا سیکوئنٹ
+$\Gamma \Sequent \Delta,
+\Subst{!A}{t}{x}$
+ہووے۔ ایس لئی گوڈل
+نمبراں دے لحاظ نال
+$\fn{FollowsBy}_{\RightR\lexists}(p)$
+عین اوس ویلے سچ اے
+جدوں
+\begin{align*}
+  & \bexists{g<p}{\bexists{d<p}{\bexists{a<p}{\bexists{x<p}{\bexists{t<p}{\quad}}}}}\\
+  & \qquad \fn{EndSequent}(p) =
+  \tuple{
+    g,
+    d \concat \tuple{\Gn{\lexists} \concat x \concat a}
+  } \land {}\\
+  & \qquad \fn{EndSequent}((p)_1) =
+  \tuple{
+    g,
+    d \concat \tuple{\fn{Subst}(a, t, x)}
+  } \land {}\\
+  & \qquad (p)_0 = 1 \land \fn{LastRule}(p) = 18.
+\end{align*}
+فیر اسیں $\fn{Correct}(p)$ دی تعریف ایویں کردے آں:
+\begin{multline*}
+  \fn{Sequent}(\fn{EndSequent}(p)) \land {}\\
+  [(\fn{LastRule}(p) = 1 \land
+  \fn{FollowsBy}_{\LeftR\Weakening}(p)) \lor \dots \lor {}\\
+  (\fn{LastRule}(p) = 20 \land \fn{FollowsBy}_{\eq}(p)) \lor {}\\
+  (p)_0 = 0 \land \fn{InitialSeq}(\fn{EndSequent}(p))]
+\end{multline*}
+پہلی سطر یقینی بناندی
+اے کہ~$d$ دا آخرلا
+سیکوئنٹ واقعی
+!!{sentence}s دا
+سیکوئنٹ اے۔ آخری
+سطر اوس صورت لئی اے
+جدوں $p$ بس اک
+ابتدائی سیکوئنٹ ہووے۔
+\end{proof}
+
+\begin{prob}
+ہِٹھلیاں خاصیتاں
+\olref[inc][art][plk]{prop:followsby}
+دی طرز اُتے تعریف کرو:
+\begin{enumerate}
+\item $\fn{FollowsBy}_{\Cut}(p)$،
+\item $\fn{FollowsBy}_{\LeftR\lif}(p)$،
+\item $\fn{FollowsBy}_{\eq}(p)$،
+\item $\fn{FollowsBy}_{\RightR{\lforall}}(p)$۔
+\end{enumerate}
+آخری صورت لئی ایہ وی وکھاؤ کہ
+گوڈل نمبر~$p$
+والے !!{derivation}
+دا آخری استنباط
+ایگن متغیر والی
+شرط پوری کردا
+اے یا نہیں، ایہ
+بنیادی بازگشتی
+ڈھنگ نال پرکھیا
+جا سکدا اے۔ یعنی
+ایگن متغیر~$a$،
+جیہڑا $\RightR{\lforall}$
+استنباط دا اے،
+آخرلے سیکوئنٹ
+وچ نہ آوے۔
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:deriv}
+تعلق $\fn{Deriv}(p)$ بنیادی بازگشتی اے۔ ایہ قائم اے جے $p$
+کسے درست !!{derivation}~$\pi$ دا گوڈل نمبر ہووے۔
+\end{prop}
+
+\begin{proof}
+!!^a{derivation}~$\pi$
+اوس ویلے درست اے
+جدوں اوہدا ہر استنباط کسے قاعدے
+دا درست اطلاق
+ہووے؛ یعنی اوہدے ذیلی !!{derivation}s
+وچوں ہر اک
+درست استنباط اُتے
+ختم ہووے۔ ایس لئی
+$\fn{Deriv}(d)$
+عین اوس ویلے سچ
+اے جدوں
+\[
+\bforall{i<\len{\fn{SubtreeSeq}(p)}}{\fn{Correct}((\fn{SubtreeSeq}(p))_i}.
+\]
+\end{proof}
+
+\begin{prop}
+فرض کرو $\Gamma$،
+!!{sentence}s دا
+بنیادی بازگشتی
+سیٹ اے۔ تاں تعلق
+$\Prf[\Gamma](x, y)$،
+جیہڑا ایہ بیان
+کردا اے کہ
+«$x$،
+!!a{derivation}~$\pi$
+دا کوڈ اے جیہدا
+آخرلا سیکوئنٹ
+$\Gamma_0 \Sequent !A$
+اے، جتھے متناہی $\Gamma_0 \subseteq \Gamma$
+ہووے، تے
+$y$،~$!A$ دا
+گوڈل نمبر اے»،
+بنیادی بازگشتی
+اے۔
+\end{prop}
+
+\begin{proof}
+فرض کرو
+«$y \in \Gamma$»
+بنیادی بازگشتی
+محمول~$R_\Gamma(y)$
+نال دتا گیا اے۔
+سانوں ایہ دکھانا
+اے کہ
+$\Prf[\Gamma](x, y)$،
+جیہڑا عین اوس
+ویلے سچ اے جدوں
+$y$ کسے
+جملے~$!A$ دا
+گوڈل نمبر ہووے
+تے $x$، $\Log{LK}$ وچلے کسے !!{derivation} دا کوڈ ہووے جیہدا
+آخرلا سیکوئنٹ
+$\Gamma_0 \Sequent !A$
+ہووے،
+بنیادی بازگشتی
+اے۔
+
+پچھلے قضیے مطابق خاصیت
+$\fn{Deriv}(x)$،
+جیہڑی عین اوس
+ویلے سچ اے جدوں
+$x$ کسے درست
+!!{derivation}~$\pi$
+دا کوڈ ہووے
+جیہڑا $\Log{LK}$
+وچ اے،
+بنیادی بازگشتی
+اے۔ جے $x$
+ایہوجیہا کوڈ
+اے، تاں
+$\fn{EndSequent}(x)$،
+~$\pi$ دے
+آخرلے سیکوئنٹ
+دا کوڈ اے، تے
+ایس لئی
+$(\fn{EndSequent}(x))_0$
+آخرلے سیکوئنٹ
+دے کھبے پاسے
+دا کوڈ، تے
+$(\fn{EndSequent}(x))_1$
+سجے پاسے دا
+کوڈ اے۔ ایس
+لئی اسیں
+«$\pi$ دے
+آخرلے سیکوئنٹ
+دا سجا پاسا
+صرف~$!A$ اے»
+نوں
+$\len{(\fn{EndSequent}(x))_1} = 1 \land ((\fn{EndSequent}(x))_1)_0 =
+x$
+نال بیان کر
+سکدے آں۔
+$\pi$ دے
+آخرلے سیکوئنٹ
+دا کھبا پاسا آپے متناہی اے۔ سانوں صرف ایہ بیان کرنا اے کہ
+اوہدا ہر جملہ~$\Gamma$ وچ اے۔ ایس لئی
+$\Prf[\Gamma](x, y)$
+نوں ایس طرح
+تعریف کر سکدے
+آں:
+\begin{align*}
+\Prf[\Gamma](x, y) \defiff {}&
+\fn{Deriv}(x) \land {} \\
+& \bforall{i <
+  \len{(\fn{EndSequent}(x))_0}}{R_\Gamma(((\fn{EndSequent}(x))_0)_i)} \land {}\\
+& \len{(\fn{EndSequent}(x))_1} = 1 \land ((\fn{EndSequent}(x))_1)_0 = y.
+\end{align*}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,58 @@
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: provability-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{qpr}
+\olsection{\usetoken{S}{derivability} تے مسوّر (Derivability and the Quantifiers)}
+
+\begin{explain}
+  تمامیت دے قضیے دا تقاضا ایہ وی اے کہ سیکوئنٹ حساب دے قاعدے~$\Proves$
+  بارے اوہ حقائق دیندے ہون جیہڑے ایس حصے وچ قائم کیتے گئے نیں۔
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:strong-generalization} جے $c$ اک ایہو جہا مستقل (constant) اے جیہڑا
+$\Gamma$ یا $!A(x)$ وچ نہیں آؤندا تے $\Gamma \Proves !A(c)$، تاں $\Gamma
+\Proves \lforall[x][!A(x)]$۔
+\end{thm}
+
+\begin{proof}
+$\pi_0$، $\Log{LK}$ وچ $\Gamma_0 \Sequent !A(c)$ دی اک !!{derivation} ہووے، جتھے
+$\Gamma_0 \subseteq \Gamma$ اک محدود ذیلی سیٹ اے۔ اک $\RightR{\lforall}$ استنباط جوڑ کے سانوں
+$\Gamma_0 \Sequent \lforall[x][!A(x)]$ دی !!a{derivation} ملدی اے، کیوں جے $c$،
+$\Gamma$ یا $!A(x)$ وچ نہیں آؤندا تے ایس لئی ایگن متغیر دی شرط
+(eigenvariable condition) پوری ہُندی اے۔
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{سیکوئنٹ $!A(t) \Sequent \lexists[x][!A(x)]$
+  !!{derivable} اے:
+  \begin{prooftree}
+    \Axiom$!A(t) \fCenter !A(t)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$!A(t) \fCenter \lexists[x][!A(x)]$
+    \end{prooftree}}{}
+\tagitem{prvAll}{سیکوئنٹ $\lforall[x][!A(x)] \Sequent !A(t)$
+  !!{derivable} اے:
+  \begin{prooftree}
+    \Axiom$!A(t) \fCenter !A(t)$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x)] \fCenter !A(t)$
+    \end{prooftree}}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

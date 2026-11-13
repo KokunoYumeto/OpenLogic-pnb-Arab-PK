@@ -1,0 +1,32 @@
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: basic-pr-lambda
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{bas}
+\olsection{مُڈھلے بنیادی بازگشتی فنکشن \usetoken{S}{lambda definable} نیں}
+
+\begin{lem}
+فنکشن $\Zero$، $\Succ$ تے $\Proj{n}{i}$، !!{lambda definable} نیں۔
+\end{lem}
+
+\begin{proof}
+$\Zero$ تاں بس
+$\lambd[x][\lambd[y][y]]$ اے۔
+
+جانشین فنکشن~$\Succ$ دی تعریف $\fn{Succ}(u) = \lambd[x][\lambd[y][x(uxy)]]$ اے۔
+سوچو ایہ کیوں کم کردا اے۔ ہر چرچ عدد $\num{n}$ نوں وار وار عمل کرن
+والا ٹرم سمجھو۔ کسے وی فنکشن~$f$ لئی $\fn{Succ}(\num{n},f)$
+اوہ فنکشن اے جیہڑا انپٹ~$y$ لئی $f$ دا $n$ واری اطلاق کردا اے،
+شروعات~$y$ توں کر کے۔ فیر اک واری ہور لاگو کردا اے۔
+
+دِتّیاں دلیلاں وچوں اک دلیل چُنن والے فنکشوناں لئی کوئی ہور گل نہیں۔
+$\fn{Proj}^n_i(x_0, \dots,
+x_{n-1}) = x_i$۔ دوجے لفظاں وچ ساڈے لکھت دے رواج مطابق $\fn{Proj}^n_i$
+لامبڈا ٹرم $\lambd[x_0][\dots \lambd[x_{n-1}][x_i]]$ اے۔
+\end{proof}
+
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{opps}
+\olsection{جانشین تے حدّی ترتیبی عدد}
+
+اگلے کجھ باباں وچ اسیں ترتیبی عدد بہت ورتاں گے۔ ایس لئی کجھ سادے تصور
+متعارف کرانے کم آؤن گے۔
+
+\begin{defn}
+کسے وی ترتیبی عدد $\alpha$ دا \emph{جانشین}
+$\ordsucc{\alpha} =\alpha \cup \{\alpha\}$ اے۔
+اسیں $\alpha$ نوں \emph{جانشین} ترتیبی عدد آکھدے آں جے
+$\ordsucc{\beta} = \alpha$ کسے ترتیبی عدد~$\beta$ لئی۔
+اسیں $\alpha$ نوں \emph{حدّی} ترتیبی عدد اُدوں تے صرف اُدوں آکھدے آں
+جدوں $\alpha$ نہ خالی ہووے، نہ جانشین ترتیبی عدد۔
+\end{defn}
+\noindent
+ہِیٹھلا نتیجہ وکھاندا اے کہ \emph{جانشین} دا ایہو ٹھیک تصور اے:
+
+\begin{prop}
+کسے وی ترتیبی عدد $\alpha$ لئی:
+\begin{enumerate}
+	\item $\alpha \in \ordsucc{\alpha}$۔
+	\item $\ordsucc{\alpha}$ ترتیبی عدد اے۔
+	\item کوئی ترتیبی عدد $\beta$ نہیں جیہدے لئی
+	$\alpha \in \beta \in \ordsucc{\alpha}$۔
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+ظاہر اے کہ $\alpha \in \alpha \cup \{\alpha\} = \ordsucc{\alpha}$۔
+ایسے طرح $\ordsucc{\alpha}$ ترتیبی عدداں دا متعدی سیٹ اے، تے ایس لئی
+\olref[basic]{corordtransitiveord} نال ترتیبی عدد اے۔
+تے $\alpha \in \beta \in \ordsucc{\alpha}$ ہونا ناممکن اے، کیوں جے
+فیر یا $\beta \in \alpha$ یا $\beta = \alpha$، جیہڑا
+\olref[basic]{ordordered} دے اُلٹ اے۔
+\end{proof}
+\noindent
+ایس نال لامتناہی درجیاں اُتے استقرا نال ثبوت دا اک ہور طریقہ وی ملدا اے:
+
+\begin{thm}[لامتناہی درجیاں اُتے سادہ استقرا]\ollabel{simpletransrecursion}
+منّ لو $\phi(x)$ اک فارمولا اے جیہدے لئی:
+\begin{enumerate}
+	\item $\phi(\emptyset)$، تے
+	\item کسے وی ترتیبی عدد $\alpha$ لئی، جے $\phi(\alpha)$، تاں
+	$\phi(\ordsucc{\alpha})$، تے
+	\item جے $\alpha$ حدّی ترتیبی عدد اے تے
+	$(\forall \beta \in \alpha)\phi(\beta)$، تاں $\phi(\alpha)$۔
+\end{enumerate}
+فیر $\forall \alpha \phi(\alpha)$۔
+\end{thm}
+
+\begin{proof}
+اسیں عکسِ نقیض ثابت کردے آں۔ سو منّ لو کوئی ترتیبی عدد اے جیہدے لئی
+$\lnot\phi$۔ منّ لو $\gamma$ اوہ سبھ توں چھوٹا ترتیبی عدد اے۔
+فیر یا $\gamma = \emptyset$، یا $\gamma = \ordsucc{\alpha}$ کسے ایہو
+جیہے $\alpha$ لئی جیہدے لئی $\phi(\alpha)$، یا $\gamma$ حدّی ترتیبی عدد
+اے تے $(\forall \beta \in \gamma)\phi(\beta)$۔
+\end{proof}
+\noindent
+اک آخری نشان اگے کم آوے گا:
+
+\begin{defn}\ollabel{defsupstrict}
+جے $X$ ترتیبی عدداں دا سیٹ اے، تاں
+$\supstrict(X) = \bigcup_{\alpha \in X} \ordsucc{\alpha}$۔
+\end{defn}
+\noindent
+ایتھے ’’lsub‘‘ دا مطلب ’’سبھ توں چھوٹی سخت اُپَرلی حد‘‘ اے۔\footnote{کجھ
+کتاباں ایس لئی ’’$\text{sup}(X)$‘‘ ورتدیاں نیں۔ پر ہور کتاباں
+’’$\text{sup}(X)$‘‘ سبھ توں چھوٹی \emph{غیر سخت} اُپَرلی حد لئی
+ورتدیاں نیں، یعنی بس $\bigcup X$۔ جے $X$ دا سبھ توں وڈا عنصر $\alpha$
+ہووے، تاں ایہ تصور وکھرے ہو جاندے نیں۔ سبھ توں چھوٹی \emph{سخت} اُپَرلی
+حد $\ordsucc{\alpha}$ اے، جدکہ سبھ توں چھوٹی \emph{غیر سخت} اُپَرلی حد
+بس $\alpha$ اے۔} ہِیٹھلا نتیجہ ایس گل نوں سمجھاندا اے:
+
+\begin{prop}
+جے $X$ ترتیبی عدداں دا سیٹ اے، تاں $\supstrict(X)$ اوہ سبھ توں چھوٹا
+ترتیبی عدد اے جیہڑا $X$ دے ہر ترتیبی عدد توں وڈا اے۔
+\end{prop}
+
+\begin{proof}
+منّ لو $Y = \Setabs{\ordsucc{\alpha}}{\alpha \in X}$، سو
+$\supstrict(X) = \bigcup Y$۔ چونکہ ترتیبی عدد متعدی نیں تے ترتیبی عدد
+دا ہر رکن ترتیبی عدد اے، $\supstrict(X)$ ترتیبی عدداں دا متعدی سیٹ اے۔
+سو \olref[basic]{corordtransitiveord} نال ایہ ترتیبی عدد اے۔
+
+جے $\alpha \in X$، تاں $\ordsucc{\alpha} \in Y$، سو
+$\ordsucc{\alpha} \subseteq \bigcup Y = \supstrict(X)$، تے ایس لئی
+$\alpha \in \supstrict(X)$۔ سو $\supstrict(X)$، $X$ دے ہر ترتیبی عدد
+توں سختی نال وڈا اے۔
+
+اُلٹے پاسے، جے $\alpha \in \supstrict(X)$، تاں
+$\alpha \in \ordsucc{\beta} \in Y$ کسے $\beta \in X$ لئی، سو
+$\alpha \leq \beta \in X$۔ سو $\supstrict(X)$، $X$ دی \emph{سبھ توں
+چھوٹی} سخت اُپَرلی حد اے۔
+\end{proof}
+
+\end{document}
