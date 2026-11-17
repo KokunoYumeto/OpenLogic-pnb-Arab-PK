@@ -19,9 +19,9 @@ $\Succ$، $\Proj{n}{i}$ توں ترکیب، بنیادی بازگشت تے با�
 
 \begin{lem}
   \ollabel{lem:min} جے $f(x_1, \dots, x_k, y)$ باقاعدہ اے تے
-  !!{lambda definable} اے، تاں ہِٹھلی تعریف والا~$g$
+  !!{lambda definable} اے، تاں ہِٹھلی تعریف والا~$h$
   \[
-  g(x_1, \dots, x_k) = \umin{y}{f(x_1,\dots,x_k, y) = 0}
+  h(x_1, \dots, x_k) = \umin{y}{f(x_1,\dots,x_k, y) = 0}
   \]
   وی !!{lambda definable} اے۔
 \end{lem}
@@ -33,7 +33,7 @@ $\Succ$، $\Proj{n}{i}$ توں ترکیب، بنیادی بازگشت تے با�
   کمبینیٹر ورتدے آں۔
   \begin{align*}
     \fn{Search} & \ident \lambd[g][\lambd[f\,\vec{x}\,y][
-        \fn{IsZero} (f\, \vec{x}\, y)\, y\, (g\, \vec{x} (\fn{Succ}\, y)]]\\
+        \fn{IsZero} (f\, \vec{x}\, y)\, y\, (g\, f\, \vec{x} (\fn{Succ}\, y)]]]\\
     H & \ident \lambd[\vec x][(Y \, \fn{Search}) F\, \vec{x}\, \num{0}],
   \end{align*}
   جتھے $Y$ کوئی وی مقرر نقطے دا کمبینیٹر اے۔ سادے لفظاں وچ،

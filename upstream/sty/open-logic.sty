@@ -34,6 +34,12 @@
 \RequirePackage{tikzscale}
 \usetikzlibrary{arrows,automata,intersections,positioning}
 
+\RequirePackage{adjustbox}
+\newenvironment{maxwidth}
+  {\begin{center}\begin{adjustbox}{max width=\textwidth}}
+  {\end{adjustbox}\end{center}}
+
+
 \RequirePackage{bussproofs}
 
 % change definition of prooftree environment to align proofs at bottom
@@ -45,7 +51,6 @@
 
 \newenvironment{oltableau}{\center\tableau{}} %wff format={anchor = base west}}}
                {\endtableau\endcenter}
-
 
 \RequirePackage{wrapfig}
 \RequirePackage{catchfile}
@@ -82,8 +87,13 @@
 % references
 % cleveref must be loaded after hyperref
 
+% The cross-reference package can use a language different from Babel.
+% A localization may define \olreferencelanguage before loading this package.
 \ifdefined\ollanguage
-  \RequirePackage[capitalize,nameinlink,english,\ollanguage]{cleveref}
+  \providecommand*{\olreferencelanguage}{\ollanguage}
+\fi
+\ifdefined\olreferencelanguage
+  \RequirePackage[capitalize,nameinlink,english,\olreferencelanguage]{cleveref}
 \else
   \RequirePackage[capitalize,nameinlink]{cleveref} 
 \fi

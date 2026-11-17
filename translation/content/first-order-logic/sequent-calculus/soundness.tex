@@ -158,11 +158,11 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$، تے $!C \in \Xi$ وی اے،
   کیوں جے $\Xi = \Delta$۔ سو ہر صورت وچ
   \iftag{FOL}{$\Struct M$}{$\pAssign{v}$}، $!A \land !B, \Gamma
-  \Sequent \Delta$ نوں پورا کردا اے۔
+  \Sequent \Delta$، یعنی $\Theta \Sequent \Xi$، نوں پورا کردا اے۔
   % PNBSEQ-005: frozen source concludes Gamma -> Delta, but this rule case proves the displayed conclusion A and B, Gamma -> Delta.
   چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی،
   $!A \land !B, \Gamma \Sequent \Delta$ معتبر اے۔ $!A \land !B$ نوں
-  $!B$ توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے،
+  $!B$ توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں~$!B$ نال بدل کے،
   سنبھالی جاندی اے۔
 \item آخرلا استنباط \RightR{\lor} اے۔ ایس دے دو روپ نیں: $!A \lor !B$
   مقدمے دے سجے پاسے موجود $!A$ یا $!B$ توں کڈھیا جا سکدا اے۔
@@ -187,7 +187,7 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   $\Gamma \Sequent \Delta, !A \lor !B$، یعنی $\Theta \Sequent \Xi$،
   نوں پورا کردا اے۔ چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
   من مانا سی، $\Theta \Sequent \Xi$ معتبر اے۔ $!A \lor !B$ نوں $!B$
-  توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے، سنبھالی جاندی اے۔
+  توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں~$!B$ نال بدل کے، سنبھالی جاندی اے۔
 \item آخرلا استنباط \RightR{\lif} اے۔ فیر~$\pi$ دا آخر ایہ اے:
   \begin{prooftree}
     \AxiomC{}
@@ -199,19 +199,18 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   کہ نتیجہ وی معتبر اے۔ من لو
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا اے۔ چونکہ $!A,
   \Gamma \Sequent \Delta, !B$ معتبر اے، ہِٹھلیاں صورتاں وچوں گھٹّو گھٹ
-  اک قائم اے: (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، (c)
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے~$~!C \in \Gamma$ لئی، یا
-  (d) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورتاں (a) تے (b) وچ
+  اک قائم اے: (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، (c)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے~$~!C \in \Gamma$ لئی، یا
+  (d)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورتاں (a) تے~(b) وچ
   $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$، سو کوئی $!C \in
   \Delta, !A \lif !B$ اے جیہدے لئی
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ صورت (c) وچ کسے $!C \in
-  \Gamma$ لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت (d) وچ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ صورت~(c) وچ کسے $!C \in
+  \Gamma$ لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت~(d) وچ
   کسے $!C \in \Delta$ لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ ہر
   صورت وچ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma
-  \Sequent \Delta, !A \lif !B$ نوں پورا کردا اے۔ چونکہ
-  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی، $\Gamma
-  \Sequent \Delta, !A \lif !B$ معتبر اے۔ \iftag{FOL}{%
+  \Sequent \Delta, !A \lif !B$، یعنی $\Theta \Sequent
+  \Xi$، نوں پورا کردا اے۔ چونکہ
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی، $\Theta
+  \Sequent \Xi$ معتبر اے۔ \iftag{FOL}{%
 \item آخرلا استنباط \LeftR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
   تے کوئی بند ٹرم~$t$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
   \begin{prooftree}
@@ -222,15 +221,16 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   \end{prooftree}
   اسیں وکھانا چاہندے آں کہ نتیجہ $\lforall[x][!A(x)], \Gamma
   \Sequent \Delta$ معتبر اے۔ من لو !!a{structure}~$\Struct M$۔ چونکہ
-  مقدمہ $!A(t), \Gamma \Sequent \Delta$ معتبر اے، سو (a)
-  $\Sat/{M}{!A(t)}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$ لئی، یا
-  (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت (a) وچ
+  مقدمہ $!A(t), \Gamma \Sequent \Delta$ معتبر اے، سو
+  (a)~$\Sat/{M}{!A(t)}$، (b)~$\Sat/{M}{!C}$ کسے $!C \in \Gamma$ لئی، یا
+  (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت~(a) وچ
   \olref[syn][sem]{prop:quant-terms} مطابق، جے
   $\Sat{M}{\lforall[x][!A(x)]}$ تاں $\Sat{M}{!A(t)}$۔ چونکہ
   $\Sat/{M}{!A(t)}$، ایس لئی $\Sat/{M}{\lforall[x][!A(x)]}$۔ صورتاں (b)
-  تے (c) وچ $\Struct{M}$، $\lforall[x][!A(x)], \Gamma
+  تے~(c) وچ $\Struct{M}$، $\lforall[x][!A(x)], \Gamma
   \Sequent \Delta$ نوں وی پورا کردا اے۔ چونکہ $\Struct M$ من مانا سی،
-  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$ معتبر اے۔
+  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$، یعنی $\Theta \Sequent
+  \Xi$، معتبر اے۔
 \item آخرلا استنباط \RightR{\lexists} اے: مشق۔
 \item آخرلا استنباط \RightR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
   تے کوئی !!a{constant}~$a$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
@@ -243,14 +243,14 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   جتھے ایگن متغیر دی شرط (eigenvariable condition) پوری ہُندی اے، یعنی
   $a$، $!A(x)$، $\Gamma$ یا $\Delta$ وچ نہیں آؤندا۔ استقرائی مفروضے
   مطابق آخرلے استنباط دا مقدمہ معتبر اے۔ سانوں وکھانا اے کہ نتیجہ وی معتبر
-  اے، یعنی ہر !!{structure}~$\Struct M$ لئی یا (a)
-  $\Sat{M}{\lforall[x][!A(x)]}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$
+  اے، یعنی ہر !!{structure}~$\Struct M$ لئی یا
+  (a)~$\Sat{M}{\lforall[x][!A(x)]}$، (b)~$\Sat/{M}{!C}$ کسے $!C \in \Gamma$
   لئی، یا (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔
 
-  من لو $\Struct{M}$ اک من مانا !!{structure} اے۔ جے (b) یا (c) قائم اے
+  من لو $\Struct{M}$ اک من مانا !!{structure} اے۔ جے (b) یا~(c) قائم اے
   تاں کم ہو گیا، سو من لو دوناں وچوں کوئی وی قائم نہیں: ہر $!C \in
   \Gamma$ لئی $\Sat{M}{!C}$، تے ہر $!C \in \Delta$ لئی
-  $\Sat/{M}{!C}$۔ سانوں وکھانا اے کہ (a) قائم اے، یعنی
+  $\Sat/{M}{!C}$۔ سانوں وکھانا اے کہ (a)~قائم اے، یعنی
   $\Sat{M}{\lforall[x][!A(x)]}$۔
   \olref[syn][ass]{prop:sat-quant} مطابق ایہ وکھانا کافی اے کہ
   $\Sat{M}{!A(x)}[s]$ ہر متغیر تعیّن~$s$ لئی۔ سو $s$ نوں کوئی من مانا متغیر تعیّن
@@ -285,12 +285,11 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   من لو \iftag{FOL}{$\Struct{M}$ اک !!a{structure} اے}{$\pAssign{v}$ اک
     !!a{valuation} اے}۔ استقرائی مفروضے مطابق مقدمے معتبر نیں، سو
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} دوناں مقدمیاں نوں پورا کردا اے۔
-  اسیں دو صورتاں وکھ کردے آں: (a)
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ تے (b)
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ صورت (a) وچ، کھبے مقدمے نوں پورا
+  اسیں دو صورتاں وکھ کردے آں: (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$
+  تے (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ صورت~(a) وچ، کھبے مقدمے نوں پورا
   کرن لئی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Gamma
   \Sequent \Delta$ پورا کرنا پئے گا۔ پر فیر اوہ نتیجے نوں وی پورا کردا اے۔
-  صورت (b) وچ، سجے مقدمے نوں پورا کرن لئی
+  صورت~(b) وچ، سجے مقدمے نوں پورا کرن لئی
   % PNBSEQ-006: frozen source prints Pi setminus Lambda; the right Cut premise requires the sequent Pi -> Lambda.
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Pi \Sequent \Lambda$
   پورا کرنا پئے گا۔ فیر وی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}

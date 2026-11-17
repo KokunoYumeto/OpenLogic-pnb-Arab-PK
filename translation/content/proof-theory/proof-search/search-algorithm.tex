@@ -23,7 +23,7 @@
 
 منّ لو کہ الگورتھم نے پڑاؤ~$n$ اُتے انڈیکس والے سیکوئنٹاں دا درخت بنایا اے، نال !!{constant}s دے جُڑے سیٹ۔ پڑاؤ~$n+1$ اُتے اسیں ہر سبھ توں اُتلے سیکوئنٹ لئی ہِٹھ لکھیا کردے آں۔
 
-جے !!a{formula}~$!A$ سیکوئنٹ دے کھبّے تے سجّے دونے پاسے آؤندا اے، یا کھبّے پاسے~$\lfalse$ اے، تاں اسیں کجھ نہیں کردے۔ ایہو جیہے سیکوئنٹاں دے !!{proof}s~\Log{G3c} وچ نیں، تے ایس خاص سبھ توں اُتلے سیکوئنٹ لئی ہور کم نہیں رہندا۔
+جے اک ایٹمی !!{formula}~$!A$ سیکوئنٹ دے کھبّے تے سجّے دونے پاسے آؤندا اے، یا کھبّے پاسے~$\lfalse$ اے، تاں اسیں کجھ نہیں کردے۔ ایہو جیہے سیکوئنٹاں دے !!{proof}s~\Log{G3c} وچ نیں، تے ایس خاص سبھ توں اُتلے سیکوئنٹ لئی ہور کم نہیں رہندا۔
 
 جے سیکوئنٹ وچ کوئی غیر جوہری !!{formula} نہیں، تاں الگورتھم وچّے ای روک دیو۔ $\Gamma \Sequent \Delta$ دا کوئی ثبوت نہیں۔
 
@@ -35,7 +35,7 @@
 \begin{enumerate}
   \item $!A \ident !B \land !C$ تے کھبّے پاسے آؤندا اے۔ $(!B \land !C)^i, \Pi \Sequent \Lambda$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$!B^k, !C^{k+1}, \Pi \fCenter \Lambda$
+  \Axiom$!B^{k+1}, !C^{k+2}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\land}}
   \UnaryInf$(!B \land !C)^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -43,8 +43,8 @@
   نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ~$C$ اے۔
   \item $!A \ident !B \land !C$ تے سجّے پاسے آؤندا اے۔ $\Pi \Sequent \Lambda, (!B \land !C)^i$ توں اُتّے دو نویں سبھ توں اُتلے سیکوئنٹ شامل کرو:
   \[
-  \Axiom$\Pi \fCenter \Lambda, !B^k$
-  \Axiom$\Pi \fCenter \Lambda, !C^k$
+  \Axiom$\Pi \fCenter \Lambda, !B^{k+1}$
+  \Axiom$\Pi \fCenter \Lambda, !C^{k+1}$
   \RightLabel{\RightR{\land}}
   \BinaryInf$\Pi \fCenter \Lambda, (!B \land !C)^i$
   \DisplayProof
@@ -55,7 +55,7 @@
 
   \item $!A \ident \lexists[x][!B(x)]$ تے کھبّے پاسے آؤندا اے۔ $\lexists[x][!B(x)]^i, \Pi \Sequent \Lambda$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$!B(c)^k, \Pi \fCenter \Lambda$
+  \Axiom$!B(c)^{k+1}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\lexists}}
   \UnaryInf$\lexists[x][!B(x)]^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -63,16 +63,16 @@
   جتھے $c$ پہلا !!{constant} اے جیہڑا~$C$ وچ نہیں۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C \cup \{c\}$ اے۔
   \item $!A \ident \lexists[x][!B(x)]$ تے سجّے پاسے آؤندا اے۔ $\Pi \Sequent \Lambda, \lexists[x][!B(x)]$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^k, !B(t)^{k+1}$
-  \RightLabel{\LeftR{\lexists}}
+  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^{k+1}, !B(t)^{k+2}$
+  \RightLabel{\RightR{\lexists}}
   \UnaryInf$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^i$
   \DisplayProof
   \]
-  جتھے $t$ پہلا اوہ ٹرم اے جیہدے وچ صرف اوہ !!{constant}s ہون جیہڑے~$C$ وچ نیں، تے جیہڑا ایس سیکوئنٹ توں تھلّے سجّے پاسے $ \lexists[x][!B(x)]$ دی تقلیل لئی پہلاں نہ ورتیا ہووے (یا $\Obj c_0$، جے ایہو جیہے سارے ٹرم ورتے جا چکے نیں)۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C$ اے۔
+  جتھے $t$ پہلا اوہ ٹرم اے جیہدے وچ صرف اوہ !!{constant}s ہون جیہڑے~$C$ وچ نیں، تے جیہڑا ایس سیکوئنٹ توں تھلّے سجّے پاسے $ \lexists[x][!B(x)]$ دی تقلیل لئی پہلاں نہ ورتیا ہووے (یا~$C$ وچلا پہلا !!{constant}، جے ایہو جیہے سارے ٹرم ورتے جا چکے نیں)۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C$ اے۔
   \item $!A \ident \lforall[x][!B(x)]$ والیاں صورتاں ایہناں ورگیاں نیں تے مشقاں لئی چھڈّیاں گئیاں نیں۔
 \end{enumerate}
 
-جے پڑاؤ $n+1$ اُتے اسیں کسے وی سبھ توں اُتلے سیکوئنٹ نال کوئی نواں سیکوئنٹ نہیں جوڑیا، تاں الگورتھم کامیابی نال ختم ہو جاندا اے۔ ایس صورت وچ اسیں !!a{proof} لبھ لیا اے~$\Gamma \Sequent \Delta$ دا، جیہڑا پڑاؤ $n+1$ دے درخت توں سارے انڈیکس ہٹا کے ملدا اے۔ سبھ توں اُتلے سارے سیکوئنٹ یا $!A, \Pi \Sequent \Lambda, !A$ دی شکل دے نیں یا $\lfalse, \Pi
+جے پڑاؤ $n+1$ اُتے اسیں کسے وی سبھ توں اُتلے سیکوئنٹ نال کوئی نواں سیکوئنٹ نہیں جوڑیا، تاں الگورتھم کامیابی نال ختم ہو جاندا اے۔ ایس صورت وچ اسیں !!a{proof} لبھ لیا اے~$\Gamma \Sequent \Delta$ دا، جیہڑا پڑاؤ $n+1$ دے درخت توں سارے انڈیکس ہٹا کے ملدا اے۔ سبھ توں اُتلے سارے سیکوئنٹ یا $!A, \Pi \Sequent \Lambda, !A$ دی شکل دے نیں، جتھے $!A$ ایٹمی اے، یا $\lfalse, \Pi
 \Sequent \Lambda$ دی۔ سارے استنباط~\Log{G3c} دے درست استنباط نیں۔ قضیاتی استنباطاں لئی ایہ صاف اے۔ ویکھو کہ ہر قدم اُتے سیٹ~$C$، یعنی سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ، اوہ سارے !!{constant}s رکھدا اے جیہڑے سیکوئنٹ وچ آؤندے نیں۔ ایس لئی \LeftR{\lexists} تے \RightR{\lforall} نال تقلیل وچ خاص متغیر دی شرط پوری ہوندی اے۔ خاص متغیر~$c$ اک !!a{constant} سی جیہڑا نتیجے نوں دِتّے سیٹ~$C$ وچ نہیں سی، سو $c$ نتیجے وچ وی نہیں آؤندا سی۔ سانوں ایہ ملدا اے:
 
 \begin{prop}

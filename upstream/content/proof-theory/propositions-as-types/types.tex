@@ -39,8 +39,8 @@ $x:!A$ \emph{only} for free variables of~$N$. This, e.g., $\Gamma =
   \item If $N$ has type $!A$, then
     $\inj[!B]{i}{!M}$ has type $!A \lor !B$ if $i=1$ and type $!B \lor
     !A$ if $i=2$.
-  \item If $M$ has type $!A \lor !B$, and $N_1$ has type $!C$ relative
-  to $x:!A, \Gamma$ and $N_2$ has type~$!C$ relative to $y:!B,
+  \item If $M$ has type $!A \lor !B$, $N_1$ has type $!C$ relative
+  to $x_1:!A, \Gamma$, and $N_2$ has type~$!C$ relative to $x_2:!B,
   \Gamma$, then $\dcase{M}{x_1}{N_1}{x_2}{N_2}$ has type~$!C$.
   \item If $N$ has type~$\lfalse$, then
     $\abort{!A}{N}$ has type~$!A$.
@@ -49,7 +49,8 @@ $x:!A$ \emph{only} for free variables of~$N$. This, e.g., $\Gamma =
 
 \begin{prop}
 Every proof term~$N$ has exactly one type relative to a
-context~$\Gamma$ for~$N$.
+context~$\Gamma$ for~$N$, if it has a type at all (i.e., is a correct
+proof term).
 \end{prop}
 
 \begin{proof}

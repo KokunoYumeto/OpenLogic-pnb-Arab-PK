@@ -240,7 +240,7 @@
 \AxiomC{}
 \RightLabel{$\pi_1$}
 \Deduce$\Gamma \fCenter \Delta, \lforall[x][!B(x)], !B(a)$
-\RightLabel{\RightR{\lexists}}
+\RightLabel{\RightR{\lforall}}
 \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)], \lforall[x][!B(x)]$
 \DisplayProof
 \]
@@ -269,11 +269,11 @@
 \DisplayProof
 \]
 استقرا دا مفروضہ~$\pi_1$ اُتے لگدا اے تے !!a{proof}s~$\pi_1'$ اے $ \Gamma \Sequent \Delta, \lexists[x][!B(x)],
-!B$ دا۔ (ویکھو کہ ایتھے اُلٹ لاؤن دے لیمے دی لوڑ نہیں!) فیر !!{proof}~$\pi'$ ایہ اے:
+!B(t)$ دا۔ (ویکھو کہ ایتھے اُلٹ لاؤن دے لیمے دی لوڑ نہیں!) فیر !!{proof}~$\pi'$ ایہ اے:
 \[
 \AxiomC{}
 \RightLabel{$\pi_1'$}
-\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B$
+\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B(t)$
 \RightLabel{\RightR{\lexists}}
 \UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)]$
 \DisplayProof

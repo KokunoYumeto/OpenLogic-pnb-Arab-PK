@@ -38,10 +38,17 @@ $!C, \Gamma \Sequent !C$ & $\lfalse, \Gamma \Sequent \Delta$
 \BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
 \DisplayProof
 &
-\Axiom$\Gamma \fCenter !A, !B$
+\begin{tabular}[t]{@{}r@{}}
+\Axiom$\Gamma \fCenter \Delta, !A$
 \RightLabel{\RightR{\lor}}
-\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
 \DisplayProof
+\\[3ex]
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof\\[3ex]
+\end{tabular}
 \\[4ex]
 \Axiom$!A \lif !B, \Gamma \fCenter !A$
 \Axiom$!B, \Gamma \fCenter \Delta$
@@ -81,7 +88,7 @@ not occur in the conclusion sequent. $\Gamma$ is a multisets of
 !!{formula}. In axioms, the !!{formula}~$!C$ must be atomic.
 \Log{G1m} is \Log{G1i} without axioms $\lfalse, \Gamma \Sequent
 \Delta$.}
-\ollabel{tab:G3c}
+\ollabel{tab:G3i}
 \end{table}
 
 \end{document}

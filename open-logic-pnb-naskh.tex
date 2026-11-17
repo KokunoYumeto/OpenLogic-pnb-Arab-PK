@@ -23,7 +23,10 @@
   pdfkeywords={OpenAI Codex — GPT-5.6 Sol (Ultra), OpenAI Codex — GPT-6 Sol (Ultra), OpenAI Codex — GPT-6.1 Sol (Ultra)}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.4em}
-\emergencystretch=3em
+\emergencystretch=8em
+\tolerance=4000
+\hbadness=10000
+\setlength{\tabcolsep}{3.5pt}
 \let\cleardoublepage\clearpage
 \pagestyle{plain}
 
@@ -5871,7 +5874,7 @@ $\Closureofunder{f}{B}$، B نال پیدا کیتی سب توں چھوٹی بن
 
 \begin{prop}\ollabel{sbhelper}
 درمیانے سیٹ والے معاون نتیجے \pnbLatin{(sandwich helper)} مطابق، جے
-$A \subseteq B \subseteq C$ تے $A \approx C$، تاں $\cardeq{\cardeq{A}{B}}{C}$۔
+$A \subseteq B \subseteq C$ تے $\cardeq{A}{C}$، تاں $\cardeq{A}{B}$ تے~$\cardeq{}{C}$۔
 \end{prop}
 
 \begin{proof}
@@ -5886,8 +5889,8 @@ $F = \Closureofunder{f}{C \setminus B}$ لو۔ ہُن فنکشن $g$، جیہد�
 	\end{cases}
 \]
 اسی ثابت کراں گے کہ $g$، نقشہ بندی $C \to B$ دے طور تے
-!!a{bijection} اے۔ ایس توں $\comp{f^{-1}}{g} \colon A \to B$ دا
-!!a{bijection} ہونا نکلے گا تے ثبوت مکمل ہو جاوے گا۔
+!!a{bijection} اے (یعنی $\cardeq{B}{C}$)۔ ایس توں $\comp{f^{-1}}{g} \colon A \to B$ دا
+!!a{bijection} ہونا نکلے گا تے ثبوت مکمل ہو جاوے گا ($\cardeq{A}{B}$)۔
 
 پہلا دعویٰ ایہ اے کہ جے $x \in F$ پر $y\notin F$، تاں $g(x) \neq
 g(y)$۔ برہانِ خلف (reductio) لئی الٹ منو، سو $y = g(y) = g(x) =
@@ -11807,7 +11810,7 @@ M$ وچ جے تے صرف جے سچا ہووے جدوں $\Domain M$
 ہون دی خاصیت !!{sentence}s دے لامتناہی سیٹ نال وی ظاہر
 نہیں کیتی جا سکدی۔
 % PNB-SEM-027: ناقابلِ شمار ہون بارے ایہ دعویٰ ایتھے ورتی گننے جوگی زبان لئی اے۔
-ایتھے ورتی گننے جوگی زبان وچ !!{nonenumerable} ساخت ہون دی
+ایتھے ورتی گننے جوگی زبان وچ !!a{nonenumerable} ساخت ہون دی
 خاصیت وی جملیاں دے لامتناہی سیٹ نال ظاہر
 نہیں کیتی جا سکدی۔ ایہ حقیقتاں محدود گواہی دے
 قضیے تے لووینہائم--سکولم (L\"owenheim--Skolem)
@@ -13861,11 +13864,11 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$، تے $!C \in \Xi$ وی اے،
   کیوں جے $\Xi = \Delta$۔ سو ہر صورت وچ
   \iftag{FOL}{$\Struct M$}{$\pAssign{v}$}، $!A \land !B, \Gamma
-  \Sequent \Delta$ نوں پورا کردا اے۔
+  \Sequent \Delta$، یعنی $\Theta \Sequent \Xi$، نوں پورا کردا اے۔
   % PNBSEQ-005: frozen source concludes Gamma -> Delta, but this rule case proves the displayed conclusion A and B, Gamma -> Delta.
   چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی،
   $!A \land !B, \Gamma \Sequent \Delta$ معتبر اے۔ $!A \land !B$ نوں
-  $!B$ توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے،
+  $!B$ توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں~$!B$ نال بدل کے،
   سنبھالی جاندی اے۔
 \item آخرلا استنباط \RightR{\lor} اے۔ ایس دے دو روپ نیں: $!A \lor !B$
   مقدمے دے سجے پاسے موجود $!A$ یا $!B$ توں کڈھیا جا سکدا اے۔
@@ -13890,7 +13893,7 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   $\Gamma \Sequent \Delta, !A \lor !B$، یعنی $\Theta \Sequent \Xi$،
   نوں پورا کردا اے۔ چونکہ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
   من مانا سی، $\Theta \Sequent \Xi$ معتبر اے۔ $!A \lor !B$ نوں $!B$
-  توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں $!B$ نال بدل کے، سنبھالی جاندی اے۔
+  توں کڈھن والی صورت وی ایسے طرح، $!A$ نوں~$!B$ نال بدل کے، سنبھالی جاندی اے۔
 \item آخرلا استنباط \RightR{\lif} اے۔ فیر~$\pi$ دا آخر ایہ اے:
   \begin{prooftree}
     \AxiomC{}
@@ -13902,19 +13905,18 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   کہ نتیجہ وی معتبر اے۔ من لو
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا اے۔ چونکہ $!A,
   \Gamma \Sequent \Delta, !B$ معتبر اے، ہِٹھلیاں صورتاں وچوں گھٹّو گھٹ
-  اک قائم اے: (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، (c)
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے~$~!C \in \Gamma$ لئی، یا
-  (d) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورتاں (a) تے (b) وچ
+  اک قائم اے: (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$، (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$، (c)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ کسے~$~!C \in \Gamma$ لئی، یا
+  (d)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ کسے $!C \in \Delta$ لئی۔ صورتاں (a) تے~(b) وچ
   $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$، سو کوئی $!C \in
   \Delta, !A \lif !B$ اے جیہدے لئی
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ صورت (c) وچ کسے $!C \in
-  \Gamma$ لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت (d) وچ
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ صورت~(c) وچ کسے $!C \in
+  \Gamma$ لئی $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$۔ صورت~(d) وچ
   کسے $!C \in \Delta$ لئی $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$۔ ہر
   صورت وچ \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}، $\Gamma
-  \Sequent \Delta, !A \lif !B$ نوں پورا کردا اے۔ چونکہ
-  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی، $\Gamma
-  \Sequent \Delta, !A \lif !B$ معتبر اے۔ \iftag{FOL}{%
+  \Sequent \Delta, !A \lif !B$، یعنی $\Theta \Sequent
+  \Xi$، نوں پورا کردا اے۔ چونکہ
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} من مانا سی، $\Theta
+  \Sequent \Xi$ معتبر اے۔ \iftag{FOL}{%
 \item آخرلا استنباط \LeftR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
   تے کوئی بند ٹرم~$t$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
   \begin{prooftree}
@@ -13925,15 +13927,16 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   \end{prooftree}
   اسیں وکھانا چاہندے آں کہ نتیجہ $\lforall[x][!A(x)], \Gamma
   \Sequent \Delta$ معتبر اے۔ من لو !!a{structure}~$\Struct M$۔ چونکہ
-  مقدمہ $!A(t), \Gamma \Sequent \Delta$ معتبر اے، سو (a)
-  $\Sat/{M}{!A(t)}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$ لئی، یا
-  (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت (a) وچ
+  مقدمہ $!A(t), \Gamma \Sequent \Delta$ معتبر اے، سو
+  (a)~$\Sat/{M}{!A(t)}$، (b)~$\Sat/{M}{!C}$ کسے $!C \in \Gamma$ لئی، یا
+  (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔ صورت~(a) وچ
   \olref[syn][sem]{prop:quant-terms} مطابق، جے
   $\Sat{M}{\lforall[x][!A(x)]}$ تاں $\Sat{M}{!A(t)}$۔ چونکہ
   $\Sat/{M}{!A(t)}$، ایس لئی $\Sat/{M}{\lforall[x][!A(x)]}$۔ صورتاں (b)
-  تے (c) وچ $\Struct{M}$، $\lforall[x][!A(x)], \Gamma
+  تے~(c) وچ $\Struct{M}$، $\lforall[x][!A(x)], \Gamma
   \Sequent \Delta$ نوں وی پورا کردا اے۔ چونکہ $\Struct M$ من مانا سی،
-  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$ معتبر اے۔
+  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$، یعنی $\Theta \Sequent
+  \Xi$، معتبر اے۔
 \item آخرلا استنباط \RightR{\lexists} اے: مشق۔
 \item آخرلا استنباط \RightR{\lforall} اے۔ فیر کوئی !!a{formula}~$!A(x)$
   تے کوئی !!a{constant}~$a$ ایہو جہا اے کہ~$\pi$ دا آخر ایہ اے:
@@ -13946,14 +13949,14 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   جتھے ایگن متغیر دی شرط \pnbLatin{(eigenvariable condition)} پوری ہُندی اے، یعنی
   $a$، $!A(x)$، $\Gamma$ یا $\Delta$ وچ نہیں آؤندا۔ استقرائی مفروضے
   مطابق آخرلے استنباط دا مقدمہ معتبر اے۔ سانوں وکھانا اے کہ نتیجہ وی معتبر
-  اے، یعنی ہر !!{structure}~$\Struct M$ لئی یا (a)
-  $\Sat{M}{\lforall[x][!A(x)]}$، (b) $\Sat/{M}{!C}$ کسے $!C \in \Gamma$
+  اے، یعنی ہر !!{structure}~$\Struct M$ لئی یا
+  (a)~$\Sat{M}{\lforall[x][!A(x)]}$، (b)~$\Sat/{M}{!C}$ کسے $!C \in \Gamma$
   لئی، یا (c)~$\Sat{M}{!C}$ کسے $!C \in \Delta$ لئی۔
 
-  من لو $\Struct{M}$ اک من مانا !!{structure} اے۔ جے (b) یا (c) قائم اے
+  من لو $\Struct{M}$ اک من مانا !!{structure} اے۔ جے (b) یا~(c) قائم اے
   تاں کم ہو گیا، سو من لو دوناں وچوں کوئی وی قائم نہیں: ہر $!C \in
   \Gamma$ لئی $\Sat{M}{!C}$، تے ہر $!C \in \Delta$ لئی
-  $\Sat/{M}{!C}$۔ سانوں وکھانا اے کہ (a) قائم اے، یعنی
+  $\Sat/{M}{!C}$۔ سانوں وکھانا اے کہ (a)~قائم اے، یعنی
   $\Sat{M}{\lforall[x][!A(x)]}$۔
   \olref[syn][ass]{prop:sat-quant} مطابق ایہ وکھانا کافی اے کہ
   $\Sat{M}{!A(x)}[s]$ ہر متغیر تعیّن~$s$ لئی۔ سو $s$ نوں کوئی من مانا متغیر تعیّن
@@ -13988,12 +13991,11 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔
   من لو \iftag{FOL}{$\Struct{M}$ اک !!a{structure} اے}{$\pAssign{v}$ اک
     !!a{valuation} اے}۔ استقرائی مفروضے مطابق مقدمے معتبر نیں، سو
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} دوناں مقدمیاں نوں پورا کردا اے۔
-  اسیں دو صورتاں وکھ کردے آں: (a)
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ تے (b)
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ صورت (a) وچ، کھبے مقدمے نوں پورا
+  اسیں دو صورتاں وکھ کردے آں: (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$
+  تے (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$۔ صورت~(a) وچ، کھبے مقدمے نوں پورا
   کرن لئی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Gamma
   \Sequent \Delta$ پورا کرنا پئے گا۔ پر فیر اوہ نتیجے نوں وی پورا کردا اے۔
-  صورت (b) وچ، سجے مقدمے نوں پورا کرن لئی
+  صورت~(b) وچ، سجے مقدمے نوں پورا کرن لئی
   % PNBSEQ-006: frozen source prints Pi setminus Lambda; the right Cut premise requires the sequent Pi -> Lambda.
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} نوں $\Pi \Sequent \Lambda$
   پورا کرنا پئے گا۔ فیر وی \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
@@ -19698,7 +19700,7 @@ $\Gamma \Proves !B$ تے $\Gamma \Proves !B \lif !A$۔ استقرا دی فرض�
 
 \begin{proof}
 شرطاں توں $y$، $c$ دی تھاں پاؤن لئی $!A$ وچ !!{free for} اے تے $x$، $!A$ وچ آزاد نہیں۔ سو پچھلے \olref{lem:free-for} نال $y$، $x$ دی تھاں پاؤن لئی $\Subst{!A}{x}{c}$ وچ !!{free for} اے۔ ایس توں نکلدا اے کہ
-$\lforall[x][\Subst{!A}{x}{c} \lif \Subst{!A}{x}{c} \Subst{}{y}{x}]$
+$\lforall[x][\Subst{!A}{x}{c}] \lif \Subst{!A}{x}{c} \Subst{}{y}{x}$
 اک مسلّمہ اے (\textbf{Ax1})۔ چونکہ $x$، $!A$ وچ آزاد نہیں، سانوں
 $\Subst{!A}{x}{c} \Subst{}{y}{x} = \Subst{!A}{y}{c}$ ملدا اے، ایس لئی
 \[
@@ -24572,7 +24574,7 @@ $t$ تے $!A$ اُتے استقرا نال ایہ زیادہ مضبوط دعوے
   = \Value{t_i}{M'}[h\circ s]$۔ ایس لئی
   \begin{align}
     h(\Value{t}{M}[s])
-    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \notag\\
+    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]))\notag\\
     & = \Assign{f}{M'}(h(\Value{t_1}{M}[s]), \dots,
     h(\Value{t_n}{M}[s])) \ollabel{iso-1}\\
     & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ s], \dots,
@@ -28291,7 +28293,7 @@ h'(\Proj{1}{0}(y),\Proj{1}{0}(y))$
 \expandafter\def\csname ol@sectioncs\endcsname{section}
 
 \olfileid{cmp}{rec}{not}
-\olsection{بنیادی بازگشت دیاں علامتی لکھتاں}
+\olsection{بنیادی بازگشتی علامتی لکھتاں}
 
 بنیادی بازگشتی فنکشناں دی ٹھیک استقرائی تعریف
 دا اک فائدہ ایہ اے کہ اسی اوہناں نوں
@@ -42933,7 +42935,7 @@ $\Th{Q}$ دی کوئی مکمل، بے تضاد، !!{axiomatizable} توسیع �
 
 \begin{proof}
 اسیں پہلاں ایہ ثابت کر چکے آں کہ $\Th{Q}$ دی کوئی بے تضاد
-توسیع قابلِ فیصلہ نہیں۔ پر جے $\Th{T}$ مکمل تے !!{axiomatized}
+توسیع قابلِ فیصلہ نہیں۔ پر جے $\Th{T}$ مکمل تے !!{axiomatizable}
 اے، تاں اوہ قابلِ فیصلہ اے۔
 \end{proof}
 
@@ -45151,7 +45153,7 @@ $\Gamma \Proves !A$ ہووے۔ ایس توں خاص طور تے ایہ نکلد�
 نوں شامل کرے تاں~$\Assign{\prime}{M}(x)$ نوں وی شامل کرے
 (یعنی اوہ «جانشین لین اُتے بند» ہووے)، تاں اوہ پورے !!{domain} نوں
 شامل کردا اے (یعنی $X =
-\Domain{M})$۔
+\Domain{M}$)۔
 
 استقرا دا مسلّمہ ایہ یقینی بناؤندا اے کہ ہر اوہ !!{structure} جیہدے وچ
 ایہ مسلّمہ پورا اتردا اے، اوہدے~$\Domain{M}$ وچ صرف اوہی !!{element}s نیں
@@ -45500,16 +45502,17 @@ $s(X) \neq \emptyset$۔
 اک سیٹ~$X$، سیٹ~$Y$ نالوں سائز وچ وڈا نہیں، یعنی
 $\cardle{X}{Y}$، اُدوں تے صرف اُدوں جدوں اک !!a{injective} فنکشن
 $f\colon X \to Y$ موجود ہووے۔ چونکہ اسیں ایہ ظاہر کر سکدے آں کہ
-کوئی فنکشن اک بہ اک اے، تے ایہ وی کہ~$X$ دے رکناں اُتے اوہدیاں
-قدراں~$Y$ وچ نیں، ایس لئی اسیں دائرے دے ذیلی سیٹاں اُتے سائز وچ وڈا
+($X$ دے رکناں اُتے) کوئی فنکشن~$Y$ وچ قدراں رکھدا اے تے اک بہ اک
+اے، ایس لئی اسیں دائرے دے ذیلی سیٹاں اُتے سائز وچ وڈا
 نہ ہون دا تعلق وی متعین کر سکدے آں۔
 
 \begin{prop}
 ایہ فارمولا
-\[
-\lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land \lforall[x][\lforall[y][((X(x) \land X(y) \land \eq[u(x)][u(y)]) \lif
+\begin{multline*}
+\lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land {}\\
+\lforall[x][\lforall[y][((X(x) \land X(y) \land \eq[u(x)][u(y)]) \lif
       \eq[x][y])]])]
-\]
+\end{multline*}
 سائز وچ وڈا نہ ہون دا تعلق متعین کردا اے۔
 % PNB-CMP-076: صرف X دے دو رکناں لئی اک بہ اک شرط؛ منجمد اصل دا پوری دائرے اُتے injectivity والا غیر ضروری تقاضا درست کیتا۔
 \end{prop}
@@ -48493,7 +48496,7 @@ F \, \num{n_0} \, \num{n_1} \dots \num{n_{k-1}} \red \num{f(n_0, n_1, \dots,
 \begin{prob}
 ضرب ہِٹھلے ٹرم نال !!{lambda defined} ہو سکدی اے۔
 \[
-  \fn{Mult}' \ident \lambd[ab][a (\fn{Add}\, a) \num{0}].
+  \fn{Mult}' \ident \lambd[ab][a (\fn{Add}\, b) \num{0}].
 \]
 دسو ایہ کیوں کم کردا اے۔
 \end{prob}
@@ -48592,7 +48595,7 @@ $\tuple{\num{n-1}, \num n}$ اے۔ فیر $\fn{Pred}$ نتیجے دا پہلا
 ہمیشہ~$N$ تک۔
 
 \begin{defn}
-اسیں تعلق $R \subseteq \Nat^n$ نوں !!{lambda definable}
+اسیں تعلق $R \subseteq \Nat^k$ نوں !!{lambda definable}
 آکھدے آں جے کوئی ٹرم~$R$ ایہو جیہا ہووے کہ
 \begin{align*}
   R\, \num{n_1} \dots \num{n_k} & \bred \fn{true}
@@ -48676,10 +48679,10 @@ $\Zero$، $\Succ$ تے $\Proj{n}{i}$ توں ترکیب تے بنیادی باز�
 \end{proof}
 
 \begin{lem}
-  \ollabel{lem:comp} فرض کرو $k$ دلیلاں والا فنکشن $f$ تے
-  $n$ دلیلاں والے فنکشن $g_0, \dots, g_{k-1}$، ٹرماں
-  $F$، $G_0$، \dots، $G_k$ نال !!{lambda definable} نیں تے
-  $h$ اوہناں دی ترکیب نال متعین اے۔ فیر $H$، !!{lambda definable} اے۔
+  \ollabel{lem:comp} فرض کرو $k$ دلیلاں والا فنکشن~$f$ تے
+  $n$ دلیلاں والے فنکشن $g_0$، \dots،~$g_{k-1}$ ٹرماں
+  $F$، $G_0$، \dots، $G_{k-1}$ نال !!{lambda definable} نیں تے
+  $h$ اوہناں دی ترکیب نال متعین اے۔ فیر $h$، !!{lambda definable} اے۔
 \end{lem}
 
 \begin{proof}
@@ -48712,9 +48715,9 @@ $\Zero$، $\Succ$ تے $\Proj{n}{i}$ توں ترکیب تے بنیادی باز�
   یاد کرو کہ $h$ دی تعریف ایویں اے۔
   \begin{align*}
     h(x_1, \dots, x_n, 0) &= f(x_1, \dots, x_n)\\
-    h(x_1, \dots, x_n, y+1) & = h(x_1, \dots, x_n, y, h(x_1, \dots, x_n, y)).
+    h(x_1, \dots, x_n, y+1) & = g(x_1, \dots, x_n, y, h(x_1, \dots, x_n, y)).
   \end{align*}
-  سادے لفظاں وچ بنیادی بازگشتی تعریف فنکشن $h$ دا اطلاق
+  سادے لفظاں وچ بنیادی بازگشتی تعریف فنکشن $g$ دا اطلاق
   $y$ واری دہراؤندی اے تے اینوں $f(x_1,
   \dots, x_n)$ اُتے لاؤندی اے۔ ایہ چرچ عدداں دی تعریف ورگا
   اے، جیہڑے آپ وی دہراؤ کرن والے ٹرماں وجوں متعین نیں۔
@@ -48816,7 +48819,7 @@ $n$ گُنا $n-1$ دا عامل۔ صاف اے کہ ٹرم $\fn{Fac}$ نوں
 وی آؤندا اے۔ اپنے آپ دا حوالہ دین والیاں ایہو جیہیاں بازگشتی
 تعریفاں لامبڈا کیلکولس دا حصہ نہیں۔ مثلاً ٹرم دی ایس تعریف وچ
 \[
-\fn{Mult} \ident \lambd[ab][a (\fn{Add}\, a) 0]
+\fn{Mult} \ident \lambd[ab][a (\fn{Add}\, b) 0]
 \]
 سجے پاسے صرف پہلاں توں متعین ٹرم آؤندے نیں، جیویں $\fn{Add}$۔
 $\fn{Add}$ نوں اوہدی تعریف والا ٹرم رکھ کے ہمیشہ ہٹا سکدے آں۔
@@ -48824,7 +48827,7 @@ $\fn{Add}$ نوں اوہدی تعریف والا ٹرم رکھ کے ہمیشہ �
 وچ وی متعین ٹرم ہون، جیویں $\fn{Add}'$ وچ نیں، تاں ایس عمل نوں
 جاری رکھ کے آخر اک خالص لامبڈا ٹرم تک پہنچ سکدے آں۔
 
-پر اُپر دِتّی $\fn{Fac}$ ورگی بازگشتی تعریف لئی ایہ گل
+پر، اُپر دِتّی $\fn{Fac}$ ورگی بازگشتی تعریف لئی ایہ گل
 سچ نہیں۔ جے سجے پاسے $\fn{Fac}$ دی آمد دی تھاں $\fn{Fac}$
 دی اپنی تعریف رکھیے، تاں سانوں ایہ ملدا اے۔
 \begin{align*}
@@ -48956,8 +48959,8 @@ $Y$ کمبینیٹر، جیہڑا \olref{defn:Turing-Y} وچ دِتّا اے، �
 Y_C \ident \lambd[g][(\lambd[x][g(xx)])(\lambd[x][g(xx)])].
 \]
 چرچ دا کمبینیٹر ٹیورنگ دے کمبینیٹر نالوں ذرا کمزور اے۔
-ایہدے لئی $Yg
-\equal[\beta] g(Yg)$ اے، پر $Yg \bred g(Yg)$ نہیں۔ منّ لو $V$
+ایہدے لئی $Y_C g
+\equal[\beta] g(Y_C g)$ اے، پر $Y_C g \bred g(Y_C g)$ نہیں۔ منّ لو $V$
 ٹرم $\lambd[x][g(xx)]$ اے، تاں جو $Y_C \ident \lambd[g][VV]$۔
 فیر
 \begin{align*}
@@ -48966,9 +48969,8 @@ Y_C \ident \lambd[g][(\lambd[x][g(xx)])(\lambd[x][g(xx)])].
   Y_C g & \ident (\lambd[g][VV])g \red VV \red g(VV), \text{ پر ایہ وی}\\
   g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
 \end{align*}
-دوجے لفظاں وچ، $Y_Cg$ تے $g(Y_Cg)$ دوہاں دی تقلیل اکّو ٹرم
-$g(VV)$ تک ہوندی اے۔ سو $Y_Cg
-\equal[\beta] g(Y_Cg)$۔ کئی ورتوں لئی ایہ کافی ہوندا اے۔
+دوجے لفظاں وچ، $Y_C g$ تے $g(Y_C g)$ دوہاں دی تقلیل اکّو ٹرم
+$g(VV)$ تک ہوندی اے۔ سو $Y_C g \equal[\beta] g(Y_C g)$۔ کئی ورتوں لئی ایہ کافی ہوندا اے۔
 \endgroup
 % /OLP-0379
 % OLP-0380 content/lambda-calculus/lambda-definability/minimization.tex
@@ -48988,9 +48990,9 @@ $\Succ$، $\Proj{n}{i}$ توں ترکیب، بنیادی بازگشت تے با�
 
 \begin{lem}
   \ollabel{lem:min} جے $f(x_1, \dots, x_k, y)$ باقاعدہ اے تے
-  !!{lambda definable} اے، تاں ہِٹھلی تعریف والا~$g$
+  !!{lambda definable} اے، تاں ہِٹھلی تعریف والا~$h$
   \[
-  g(x_1, \dots, x_k) = \umin{y}{f(x_1,\dots,x_k, y) = 0}
+  h(x_1, \dots, x_k) = \umin{y}{f(x_1,\dots,x_k, y) = 0}
   \]
   وی !!{lambda definable} اے۔
 \end{lem}
@@ -49002,7 +49004,7 @@ $\Succ$، $\Proj{n}{i}$ توں ترکیب، بنیادی بازگشت تے با�
   کمبینیٹر ورتدے آں۔
   \begin{align*}
     \fn{Search} & \ident \lambd[g][\lambd[f\,\vec{x}\,y][
-        \fn{IsZero} (f\, \vec{x}\, y)\, y\, (g\, \vec{x} (\fn{Succ}\, y)]]\\
+        \fn{IsZero} (f\, \vec{x}\, y)\, y\, (g\, f\, \vec{x} (\fn{Succ}\, y)]]]\\
     H & \ident \lambd[\vec x][(Y \, \fn{Search}) F\, \vec{x}\, \num{0}],
   \end{align*}
   جتھے $Y$ کوئی وی مقرر نقطے دا کمبینیٹر اے۔ سادے لفظاں وچ،
@@ -54041,7 +54043,7 @@ $\Proves/[\Sigma] \lnot !A$۔ ایہ گھٹ توں گھٹ شرط اے، کیوں
     معاملہ~\olref{prop:ccs-closed} مطابق۔}{}
 
 \item جے $\lnot!A \in \Gamma$، تاں بے تضادی کارن $!A \notin
-    \Gamma$؛ تے جے $!A \notin \Gamma$ تاں $!A \in \Gamma$، کیوں جے
+    \Gamma$؛ تے جے $!A \notin \Gamma$ تاں $\lnot !A \in \Gamma$، کیوں جے
     $\Gamma$ مکمل $\Sigma$-بے تضاد اے۔
 
   \tagitem{prvAnd}{\iftag{probAnd}{مشق۔}{منّ لو $!A \land !B \in
@@ -54811,7 +54813,7 @@ $\Sigma$ دا کینونیکل نمونہ اوس جماعت دا رکن اے۔ �
 
 پر اسیں کیویں وکھائیے کہ کسے منطق وچ محدود نمونے دی خاصیت اے؟ اک طریقہ ایہ ہو سکدا اے کہ~$!A$ دے لامتناہی (ردّی) نمونے نوں محدود نمونے وچ بدلّن دا طریقہ لبھیے۔ جے ایہ ہو سکدا اے، تاں جدوں وی کوئی نمونہ اے جیہدے وچ $!A$ سچا نہیں، تاں ایس توں بنیا محدود نمونہ وی $!A$ نوں سچا نہیں کردا۔ ایہ محدود نمونہ سارے محدود نمونیاں دی ساڈی فہرست وچ آوے گا، تے ہر غیر معتبر فارمولے لئی سانوں آخر پتا لگے گا کہ اوہ معتبر نہیں۔ جے فارمولا معتبر اے، تاں ساڈا طریقہ مُکے گا نہیں۔ جے اسیں نال ایہ وی وکھا دیئے کہ ساڈے طریقے توں ملن والے محدود نمونے دا کوئی ودھ توں ودھ سائز اے، تے ایہ سائز صرف !!{formula}~$!A$ اُتے نربھر اے، تاں ردّی نمونے دی تلاش وچ ساڈے کول محدود نمونیاں دی جانچ دی اک حد ہووے گی۔ جے اوس حد تک کوئی ردّی نمونہ نہیں لبھیا، تاں کوئی ہے ای نہیں۔ فیر ساڈا طریقہ «کی $!A$ معتبر اے؟» دا فیصلہ ہر !!{formula}~$!A$ لئی کرے گا۔
 
-لامتناہی ساختاں نوں محدود ساختاں وچ بدلّن لئی اک طریقہ اکثر کم کردا اے۔ ساخت دے اوہناں !!{element}s نوں «اکّو» منّ لئیے جیہڑے متعلقہ پاسیاں توں اکّو طرح کم کردے نیں۔ جے~$\mModel{M}$ وچ لامتناہی گنتی دے جہان متعلقہ پاسیاں توں اکّو طرح کم کردے نیں، تاں ہو سکدا اے اسیں \emph{سارے} جہان ایہو جیہے جہاناں دے محدود گنتی والے (ممکن اے لامتناہی) «طبقیاں» وچ اکٹھے کر لئیے۔ دوجے لفظاں وچ جہاناں دے سیٹ نوں ٹھیک طرح ونڈیے، یعنی ہر حصے وچ لامتناہی گنتی دے جہان ہون پر حصے صرف محدود گنتی دے ہون۔ فیر نواں نمونہ~$\mModel{M^*}$ متعین کردے آں جیہدے جہان اوہ حصے نیں۔ پرانے نمونے دے محدود گنتی والے حصیاں توں نویں نمونے دے محدود گنتی والے جہان ملدے نیں، یعنی اک محدود نمونہ۔ جہان~$w$ جیہڑے حصے وچ اے، اوہنوں $[w]$ آکھ لئیے۔ اسیں چاہواں گے کہ $\mSat{M}{!A}[w]$ اُدوں تے صرف اُدوں جدوں
+لامتناہی ساختاں نوں محدود ساختاں وچ بدلّن لئی اک طریقہ اکثر کم کردا اے۔ ساخت دے اوہناں !!{element}s نوں «اکّو» منّ لئیے جیہڑے متعلقہ پاسیاں توں اکّو طرح کم کردے نیں۔ جے~$\mModel{M}$ وچ لامتناہی گنتی دے جہان متعلقہ پاسیاں توں اکّو طرح کم کردے نیں، تاں ہو سکدا اے اسیں \emph{سارے} جہان ایہو جیہے جہاناں دے محدود گنتی والے (ممکن اے لامتناہی) «طبقیاں» وچ اکٹھے کر لئیے۔ دوجے لفظاں وچ اسیں جہاناں دے سیٹ نوں ٹھیک طرح ونڈن دی کوشش کر سکدے آں، یعنی ہر حصے وچ لامتناہی گنتی دے جہان ہون پر حصے صرف محدود گنتی دے ہون۔ فیر نواں نمونہ~$\mModel{M^*}$ متعین کردے آں جیہدے جہان اوہ حصے نیں۔ پرانے نمونے دے محدود گنتی والے حصیاں توں نویں نمونے دے محدود گنتی والے جہان ملدے نیں، یعنی اک محدود نمونہ۔ جہان~$w$ جیہڑے حصے وچ اے، اوہنوں~$[w]$ آکھ لئیے۔ اسیں چاہواں گے کہ $\mSat{M}{!A}[w]$ اُدوں تے صرف اُدوں جدوں
 $\mSat{M^*}{!A}[{[w]}]$، کیوں جے اسیں چاہندے آں کہ جے پرانا نمونہ~$!A$ دا ردّی نمونہ سی، تاں نواں وی ہووے۔ ایس لئی ونڈ تے~$\mModel{M^*}$ دے رسائی دے تعلق دوناں نوں ٹھیک طرح متعین کرنا پئے گا۔
 
 ایہ طریقہ ویکھن لئی پہلاں خیال کرو کہ ساڈے کول رسائی دا کوئی تعلق نہیں۔ $\mSat{M}{\Box !B}[w]$ اُدوں تے صرف اُدوں جدوں کسے $v \in W$ لئی
@@ -54939,38 +54941,43 @@ V(p)$ لئی۔
       اکّو !!{formula}s،~$\Gamma$ وچوں، سچے کردے نیں۔ مفروضے مطابق $p
       \in \Gamma$ تے $\mSat{M}{p}[v]$، ایس لئی $\mSat{M}{\indfrm}[w]$۔}
 
-    \tagitem{prvNot}{\iftag{probNot}{مشق۔}{\indcase{!A}{\lnot
-          !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$۔
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}
+         {\iftag{probNot}{مشق۔}
+         {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$۔
           استقرائی مفروضے مطابق $\mSat/{M}{!B}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat/{M^*}{!B}[{[w]}]$۔ آخر $\mSat/{M^*}{!B}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{\indfrm}[{[w]}]$۔}}}{}
 
-    \tagitem{prvAnd}{\iftag{probAnd}{مشق۔}{\indcase{!A}{(!B \land
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے
+    \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}
+          {\iftag{probAnd}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ تے
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvOr}{\iftag{probOr}{مشق۔}{\indcase{!A}{(!B \lor
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا
+    \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}
+          {\iftag{probOr}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ یا
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvIf}{\iftag{probIf}{مشق۔}{\indcase{!A}{(!B \lif
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا
+    \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}
+          {\iftag{probIf}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat/{M^*}{!B}[{[w]}]$ یا
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvIff}{\iftag{probIff}{مشق۔}{\indcase{!A}{(!B \liff
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے
+    \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}
+          {\iftag{probIff}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے
           $\mSat{M}{!C}[w]$ دونیں، یا $\mSat/{M}{!B}[w]$ تے
           $\mSat/{M}{!C}[w]$ دونیں۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
@@ -54979,8 +54986,9 @@ V(p)$ لئی۔
           $\mSat{M^*}{!C}[{[w]}]$ دونیں، یا $\mSat/{M^*}{!B}[{[w]}]$ تے
           $\mSat/{M^*}{!C}[{[w]}]$ دونیں۔}}}{}
 
-    \tagitem{prvBox}{\iftag{probBox}{مشق۔}{\indcase{!A}{\Box
-          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔
+    \tagitem{prvBox}{\indcase{!A}{\Box !B}
+          {\iftag{probBox}{مشق۔}
+          {منّ لو $\mSat{M}{\indfrm}[w]$۔
           $\mSat{M^*}{\indfrm}[{[w]}]$ وکھاؤن لئی ایسا $v$ لے لو جیہدے لئی
           $R^*[w][v]$۔
           \olref{defn:filtration}\olref{defn:filtration-R2} توں
@@ -54994,8 +55002,9 @@ V(p)$ لئی۔
           $R^*[w][v]$ ملدا اے، سو $\mSat{M^*}{!B}[{[v]}]$، تے استقرائی مفروضے توں $\mSat{M}{!B}[v]$۔ کیوں جے $v$ کوئی وی ایسا جہان ہو سکدا سی،
           ایس لئی $\mSat{M}{\indfrm}[w]$۔}}}{}
 
-    \tagitem{prvDiamond}{\iftag{probDiamond}{مشق۔}{\indcase{!A}{\Diamond
-          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔ فیر کسے $v \in W$ لئی
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}
+          {\iftag{probDiamond}{مشق۔}
+          {منّ لو $\mSat{M}{\indfrm}[w]$۔ فیر کسے $v \in W$ لئی
           $Rwv$ تے $\mSat{M}{!B}[v]$۔ استقرائی مفروضے مطابق
           $\mSat{M^*}{!B}[{[v]}]$، تے
           \olref{defn:filtration}\olref{defn:filtration-R1} مطابق
@@ -55144,7 +55153,7 @@ V(p)$ لئی۔
   \end{figure}
 
   ہُن منّ لو $\Gamma$ ذیلی !!{formula}s دا سیٹ، جیہڑا~$\Box p \lif p$ دا اے،
-  یعنی $\{p, \Box p, \Box p \lif p\}$۔ $p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے، $\Box p$ سارے طاق عدداں اُتے تے صرف اوہناں اُتے سچا اے، سو $\Box p \lif p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے۔ دوجے لفظاں وچ ہر طاق عدد $\Box p$ نوں سچا پر $p$ تے $\Box
+  یعنی $\{p, \Box p, \Box p \lif p\}$۔ $p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے، $\Box p$ سارے طاق عدداں اُتے تے صرف اوہناں اُتے سچا اے، سو $\Box p \lif p$ سارے جفت عدداں اُتے تے صرف اوہناں اُتے سچا اے۔ دوجے لفظاں وچ ہر طاق عدد $\Box p$ نوں سچا پر $p$ تے~$\Box
   p \lif p$ نوں جھوٹھا کردا اے۔ ہر جفت عدد $p$ تے $\Box p \lif p$ نوں سچا پر $\Box p$ نوں جھوٹھا کردا اے۔ سو $W^* = \{ [1], [2] \}$، جتھے $[1] =
   \{1, 3, 5, \dots\}$ تے $[2] = \{2, 4, 6, \dots\}$۔ کیوں جے $2 \in
   V(p)$، ایس لئی $[2] \in V^*(p)$۔ کیوں جے $1 \notin V(p)$، ایس لئی $[1] \notin
@@ -55472,6 +55481,7 @@ p$،~$w_2$ اُتے سچا ہونا چاہیدا اے، جدکہ $p$،~$w_5$ ا�
             label = {below: $\mSat{{}}{\Box p}$},
             right=of w1] {$w_2$}; 
     \draw[->] (w1) to (w2);
+    \draw[reflexive above] (w2) to (w2);  
     \node[world] (w3)
           [label={left: \mFalse{p}},
             label={below: $\mSat{{}}{\Box p}$},
@@ -55538,6 +55548,7 @@ p$،~$w_2$ اُتے سچا ہونا چاہیدا اے، جدکہ $p$،~$w_5$ ا�
 
 \begin{proof}
 \begin{enumerate}
+  \item مشق۔ ایہ گل ورتو کہ \Ax{B} تے $\Ax{B_\Diamond}$ سارے متقابل نمونیاں وچ معتبر نیں۔
   \item جے $\mModel{M^*}$ سبھ توں موٹی فلٹریشن اے، تاں تعریف مطابق
     $R^*[u][v]$ اُدوں تے صرف اُدوں قائم اے جدوں $C_1(u,v)$۔ تعدّی لئی منّ لو $C_1(u,v)$ تے $C_1(v,w)$۔ سانوں
     $C_1(u,w)$ وکھاؤنا اے۔ \iftag{prvBox}{منّ لو $\mSat{M}{\Box !A}[u]$۔ فیر
@@ -55551,7 +55562,6 @@ p$،~$w_2$ اُتے سچا ہونا چاہیدا اے، جدکہ $p$،~$w_5$ ا�
       $\Ax{4}_\Diamond$ سارے متعدی نمونیاں وچ معتبر اے،
       $\mSat{M}{\Diamond!A}[u]$۔}{}
   \item مشق۔ ایہ گل ورتو کہ \Ax{5} تے $\Ax{5_\Diamond}$ دونیں سارے اقلیدسی نمونیاں وچ معتبر نیں۔
-  \item مشق۔ ایہ گل ورتو کہ \Ax{B} تے $\Ax{B_\Diamond}$ سارے متقابل نمونیاں وچ معتبر نیں۔
 \end{enumerate}
 \end{proof}
 
@@ -56000,7 +56010,7 @@ $\sFmla{S}{!A}[\sigma]$ اُتے قاعدہ لاؤن نال نویں !!{formula}
   دا اک بند !!{tableau} اے، تاں $!B_1, \dots, !B_n \Entails !A$۔
   اُلٹے نکار والا بیان ثابت کرنا سوکھا اے۔ جے کسے $\mModel{M}$ تے
   جہان~$w$ لئی، $\mSat{M}{!B_i}[w]$ سارے $i=1$, \dots,~$n$ لئی ہووے
-  پر $\mSat{M}{!A}[w]$ ہووے، تاں کوئی !!{tableau} بند نہیں ہو سکدا۔
+  پر $\mSat/{M}{!A}[w]$ ہووے، تاں کوئی !!{tableau} بند نہیں ہو سکدا۔
   اجیہا ردّی نمونہ وکھاؤندا اے کہ !!{tableau} دے شروع والے مفروضے پورے
   ہون جوگ نیں۔ ثبوت دا طریقہ ایہ اے کہ جدوں !!a{tableau} دی کسے شاخ
   اُتے سارے اگیتے والے !!{formula}s پورے ہون جوگ ہون، تاں قاعدہ لاؤن نال
@@ -59178,7 +59188,7 @@ $\lnot(!A \lor \lnot !A)$ دی تعمیر اے۔
 جتھے یا $s = 1$ اے تے $M$، $!A$ دی تعمیر اے، یا $s = 2$ اے تے
 $M$، $\lnot !A$ دی تعمیر اے۔ منّ لو $h_1$ اوہ فنکشن اے جیہڑا تعمیر~$M_1$،
 $!A$ دی، نوں $!A \lor \lnot !A$ دی تعمیر وچ بدلدا اے۔ ایہ $M_1$ نوں
-$\tuple{1, M_2}$ دیندا اے۔ تے منّ لو $h_2$ اوہ فنکشن اے جیہڑا
+$\tuple{1, M_1}$ دیندا اے۔ تے منّ لو $h_2$ اوہ فنکشن اے جیہڑا
 تعمیر~$M_2$، $\lnot !A$ دی، نوں $!A \lor \lnot !A$ دی تعمیر وچ
 بدلدا اے۔ ایہ $M_2$ نوں $\tuple{2, M_2}$ دیندا اے۔
 
@@ -60716,7 +60726,7 @@ $\lnot !A$ نوں $!A \lif \lfalse$ دے طور اُتے دیندی اے)۔
   \]
   دا بند !!{tableau} اے، تاں $!B_1, \dots, !B_n \Entails !A$۔ عکسِ نقیض
   ثابت کرنا سوکھا اے۔ جے کسے $\mModel{M}$ تے جہان~$w$ لئی
-  $\mSat{M}{!B_i}[w]$ ہر $i=1$، \dots،~$n$ لئی اے، پر $\mSat{M}{!A}[w]$،
+  $\mSat{M}{!B_i}[w]$ ہر $i=1$، \dots،~$n$ لئی اے، پر $\mSat/{M}{!A}[w]$،
   تاں کوئی !!{tableau} بند نہیں ہو سکدا۔ ایہو جیہا ردّی نمونہ وکھاندا اے
   کہ !!{tableau} دے شروع دے مفروضے اکٹھے پورے ہو سکدے نیں۔ ثبوت دا طریقہ
   ایہ اے کہ جدوں وی !!a{tableau} دی ٹہنی اُتے سارے اگیتے والے
@@ -61579,16 +61589,17 @@ $\RightR{\lforall}$ دی خاص متغیر والی شرط ساڈے~$c$ چُنن
 \land (!A \lor \lnot !B)$ سچا اے۔ سو اسیں $\oplus$ لئی سیکوئنٹ حساب دے ایہ قاعدے متعارف کرا سکدے آں:
 \begin{align*}
 &
+\Axiom$!A, \Gamma \fCenter \Delta, !B$
+\Axiom$!B, \Gamma \fCenter \Delta, !A$
+\RightLabel{\LeftR{\oplus}}
+\BinaryInf$!A \oplus !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\\
+&
 \Axiom$\Gamma \fCenter \Delta, !A, !B$
 \Axiom$!A, !B, \Gamma \fCenter \Delta$
 \RightLabel{\RightR{\oplus}}
 \BinaryInf$\Gamma \fCenter \Delta, !A \oplus !B$
-\DisplayProof
-\\
-& \Axiom$!A, \Gamma \fCenter \Delta, !B$
-\Axiom$!B, \Gamma \fCenter \Delta, !A$
-\RightLabel{\RightR{\oplus}}
-\BinaryInf$!A \oplus !B, \Gamma \fCenter \Delta$
 \DisplayProof
 \end{align*}
 تے ایہ قاعدے وی صحت مند تے کامل ہون گے۔ اوہناں دے نتیجے اوہدوں تے صرف اوہدوں سچے نیں جدوں سارے مقدمے سچے نیں۔
@@ -62259,7 +62270,7 @@ h_n)$۔
 \AxiomC{}
 \RightLabel{$\pi_1$}
 \Deduce$\Gamma \fCenter \Delta, \lforall[x][!B(x)], !B(a)$
-\RightLabel{\RightR{\lexists}}
+\RightLabel{\RightR{\lforall}}
 \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)], \lforall[x][!B(x)]$
 \DisplayProof
 \]
@@ -62288,11 +62299,11 @@ h_n)$۔
 \DisplayProof
 \]
 استقرا دا مفروضہ~$\pi_1$ اُتے لگدا اے تے !!a{proof}s~$\pi_1'$ اے $ \Gamma \Sequent \Delta, \lexists[x][!B(x)],
-!B$ دا۔ (ویکھو کہ ایتھے اُلٹ لاؤن دے لیمے دی لوڑ نہیں!) فیر !!{proof}~$\pi'$ ایہ اے:
+!B(t)$ دا۔ (ویکھو کہ ایتھے اُلٹ لاؤن دے لیمے دی لوڑ نہیں!) فیر !!{proof}~$\pi'$ ایہ اے:
 \[
 \AxiomC{}
 \RightLabel{$\pi_1'$}
-\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B$
+\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B(t)$
 \RightLabel{\RightR{\lexists}}
 \UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)]$
 \DisplayProof
@@ -62488,7 +62499,7 @@ $!A \Sequent !A$ & $\lfalse \Sequent \quad$
 \caption{وجدانی منطق لئی \Log{G1i} دے قاعدے۔
 $\RightR{\forall}$ تے $\LeftR{\exists}$ وچ !!{constant}~$a$ نتیجے والے سیکوئنٹ وچ نہیں آؤنا چاہیدا۔ $\Gamma$، !!{formula}s دا کثیر سیٹ اے، تے $\Delta$ خالی ہو سکدا اے یا اکّو !!{formula} رکھ سکدا اے۔ \RightR{\Contraction} قاعدہ کوئی نہیں۔ \Log{G1m}، \Log{G1i} اے~\RightR{\Weakening} توں بناں تے مسلّمیاں $\lfalse,
 \Gamma \Sequent \Delta$ توں بناں۔}
-\label{pt:seq:alt:tab:G1i}
+\ollabel{tab:G1i}
 \end{table}
 \endgroup
 % /OLP-0705
@@ -62529,10 +62540,17 @@ $!C, \Gamma \Sequent !C$ & $\lfalse, \Gamma \Sequent \Delta$
 \BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
 \DisplayProof
 &
-\Axiom$\Gamma \fCenter !A, !B$
+\begin{tabular}[t]{@{}r@{}}
+\Axiom$\Gamma \fCenter \Delta, !A$
 \RightLabel{\RightR{\lor}}
-\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
 \DisplayProof
+\\[3ex]
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof\\[3ex]
+\end{tabular}
 \\[4ex]
 \Axiom$!A \lif !B, \Gamma \fCenter !A$
 \Axiom$!B, \Gamma \fCenter \Delta$
@@ -62568,7 +62586,7 @@ $!C, \Gamma \Sequent !C$ & $\lfalse, \Gamma \Sequent \Delta$
 \caption{وجدانی منطق لئی \Log{G3i} دے قاعدے۔
 $\RightR{\forall}$ تے $\LeftR{\exists}$ وچ !!{constant}~$a$ نتیجے والے سیکوئنٹ وچ نہیں آؤنا چاہیدا۔ $\Gamma$، !!{formula}s دا کثیر سیٹ اے، تے $\Delta$ خالی ہو سکدا اے یا اکّو !!{formula} رکھ سکدا اے۔ مسلّمیاں وچ !!{formula}~$!C$ جوہری ہونا چاہیدا اے۔ \Log{G1m}، \Log{G1i} اے مسلّمیاں $\lfalse, \Gamma \Sequent
 \Delta$ توں بناں۔}
-\label{pt:seq:alt:tab:G3i}
+\ollabel{tab:G3i}
 \end{table}
 \endgroup
 % /OLP-0708
@@ -64250,7 +64268,7 @@ L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails
 
 منّ لو کہ الگورتھم نے پڑاؤ~$n$ اُتے انڈیکس والے سیکوئنٹاں دا درخت بنایا اے، نال !!{constant}s دے جُڑے سیٹ۔ پڑاؤ~$n+1$ اُتے اسیں ہر سبھ توں اُتلے سیکوئنٹ لئی ہِٹھ لکھیا کردے آں۔
 
-جے !!a{formula}~$!A$ سیکوئنٹ دے کھبّے تے سجّے دونے پاسے آؤندا اے، یا کھبّے پاسے~$\lfalse$ اے، تاں اسیں کجھ نہیں کردے۔ ایہو جیہے سیکوئنٹاں دے !!{proof}s~\Log{G3c} وچ نیں، تے ایس خاص سبھ توں اُتلے سیکوئنٹ لئی ہور کم نہیں رہندا۔
+جے اک ایٹمی !!{formula}~$!A$ سیکوئنٹ دے کھبّے تے سجّے دونے پاسے آؤندا اے، یا کھبّے پاسے~$\lfalse$ اے، تاں اسیں کجھ نہیں کردے۔ ایہو جیہے سیکوئنٹاں دے !!{proof}s~\Log{G3c} وچ نیں، تے ایس خاص سبھ توں اُتلے سیکوئنٹ لئی ہور کم نہیں رہندا۔
 
 جے سیکوئنٹ وچ کوئی غیر جوہری !!{formula} نہیں، تاں الگورتھم وچّے ای روک دیو۔ $\Gamma \Sequent \Delta$ دا کوئی ثبوت نہیں۔
 
@@ -64262,7 +64280,7 @@ L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails
 \begin{enumerate}
   \item $!A \ident !B \land !C$ تے کھبّے پاسے آؤندا اے۔ $(!B \land !C)^i, \Pi \Sequent \Lambda$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$!B^k, !C^{k+1}, \Pi \fCenter \Lambda$
+  \Axiom$!B^{k+1}, !C^{k+2}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\land}}
   \UnaryInf$(!B \land !C)^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -64270,8 +64288,8 @@ L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails
   نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ~$C$ اے۔
   \item $!A \ident !B \land !C$ تے سجّے پاسے آؤندا اے۔ $\Pi \Sequent \Lambda, (!B \land !C)^i$ توں اُتّے دو نویں سبھ توں اُتلے سیکوئنٹ شامل کرو:
   \[
-  \Axiom$\Pi \fCenter \Lambda, !B^k$
-  \Axiom$\Pi \fCenter \Lambda, !C^k$
+  \Axiom$\Pi \fCenter \Lambda, !B^{k+1}$
+  \Axiom$\Pi \fCenter \Lambda, !C^{k+1}$
   \RightLabel{\RightR{\land}}
   \BinaryInf$\Pi \fCenter \Lambda, (!B \land !C)^i$
   \DisplayProof
@@ -64282,7 +64300,7 @@ L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails
 
   \item $!A \ident \lexists[x][!B(x)]$ تے کھبّے پاسے آؤندا اے۔ $\lexists[x][!B(x)]^i, \Pi \Sequent \Lambda$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$!B(c)^k, \Pi \fCenter \Lambda$
+  \Axiom$!B(c)^{k+1}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\lexists}}
   \UnaryInf$\lexists[x][!B(x)]^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -64290,16 +64308,16 @@ L(\Gamma_2)$ وچ، تاں ایہ نہیں ہو سکدا کہ $\Gamma_1 \Entails
   جتھے $c$ پہلا !!{constant} اے جیہڑا~$C$ وچ نہیں۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C \cup \{c\}$ اے۔
   \item $!A \ident \lexists[x][!B(x)]$ تے سجّے پاسے آؤندا اے۔ $\Pi \Sequent \Lambda, \lexists[x][!B(x)]$ توں اُتّے اک نواں سبھ توں اُتلا سیکوئنٹ شامل کرو:
   \[
-  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^k, !B(t)^{k+1}$
-  \RightLabel{\LeftR{\lexists}}
+  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^{k+1}, !B(t)^{k+2}$
+  \RightLabel{\RightR{\lexists}}
   \UnaryInf$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^i$
   \DisplayProof
   \]
-  جتھے $t$ پہلا اوہ ٹرم اے جیہدے وچ صرف اوہ !!{constant}s ہون جیہڑے~$C$ وچ نیں، تے جیہڑا ایس سیکوئنٹ توں تھلّے سجّے پاسے $ \lexists[x][!B(x)]$ دی تقلیل لئی پہلاں نہ ورتیا ہووے (یا $\Obj c_0$، جے ایہو جیہے سارے ٹرم ورتے جا چکے نیں)۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C$ اے۔
+  جتھے $t$ پہلا اوہ ٹرم اے جیہدے وچ صرف اوہ !!{constant}s ہون جیہڑے~$C$ وچ نیں، تے جیہڑا ایس سیکوئنٹ توں تھلّے سجّے پاسے $ \lexists[x][!B(x)]$ دی تقلیل لئی پہلاں نہ ورتیا ہووے (یا~$C$ وچلا پہلا !!{constant}، جے ایہو جیہے سارے ٹرم ورتے جا چکے نیں)۔ نویں سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ $C$ اے۔
   \item $!A \ident \lforall[x][!B(x)]$ والیاں صورتاں ایہناں ورگیاں نیں تے مشقاں لئی چھڈّیاں گئیاں نیں۔
 \end{enumerate}
 
-جے پڑاؤ $n+1$ اُتے اسیں کسے وی سبھ توں اُتلے سیکوئنٹ نال کوئی نواں سیکوئنٹ نہیں جوڑیا، تاں الگورتھم کامیابی نال ختم ہو جاندا اے۔ ایس صورت وچ اسیں !!a{proof} لبھ لیا اے~$\Gamma \Sequent \Delta$ دا، جیہڑا پڑاؤ $n+1$ دے درخت توں سارے انڈیکس ہٹا کے ملدا اے۔ سبھ توں اُتلے سارے سیکوئنٹ یا $!A, \Pi \Sequent \Lambda, !A$ دی شکل دے نیں یا $\lfalse, \Pi
+جے پڑاؤ $n+1$ اُتے اسیں کسے وی سبھ توں اُتلے سیکوئنٹ نال کوئی نواں سیکوئنٹ نہیں جوڑیا، تاں الگورتھم کامیابی نال ختم ہو جاندا اے۔ ایس صورت وچ اسیں !!a{proof} لبھ لیا اے~$\Gamma \Sequent \Delta$ دا، جیہڑا پڑاؤ $n+1$ دے درخت توں سارے انڈیکس ہٹا کے ملدا اے۔ سبھ توں اُتلے سارے سیکوئنٹ یا $!A, \Pi \Sequent \Lambda, !A$ دی شکل دے نیں، جتھے $!A$ ایٹمی اے، یا $\lfalse, \Pi
 \Sequent \Lambda$ دی۔ سارے استنباط~\Log{G3c} دے درست استنباط نیں۔ قضیاتی استنباطاں لئی ایہ صاف اے۔ ویکھو کہ ہر قدم اُتے سیٹ~$C$، یعنی سیکوئنٹ نوں دِتّا !!{constant}s دا سیٹ، اوہ سارے !!{constant}s رکھدا اے جیہڑے سیکوئنٹ وچ آؤندے نیں۔ ایس لئی \LeftR{\lexists} تے \RightR{\lforall} نال تقلیل وچ خاص متغیر دی شرط پوری ہوندی اے۔ خاص متغیر~$c$ اک !!a{constant} سی جیہڑا نتیجے نوں دِتّے سیٹ~$C$ وچ نہیں سی، سو $c$ نتیجے وچ وی نہیں آؤندا سی۔ سانوں ایہ ملدا اے:
 
 \begin{prop}
@@ -64658,7 +64676,7 @@ c_0$ جے کوئی !!{constant} نہیں آؤندا)، تے !!{function}s، جی
 \lor !B$ کڈھدا اے، تے فیر \Intro{\lif} لا کے~$!A \lif (!A \lor !B)$ کڈھدا اے۔ \Intro{\lif} استنباط مفروضہ~$!A$ خارج کردا اے۔ ایہ نشان~$x$ دَسدا اے۔
 
 ثبوتی نظریے دے ماہر گینٹسن دے اصلی نظام پسند کردے نیں جیہڑے !!{formula}s دے درختاں نال کم کردے نیں، بھاویں اک وکھرا روپ وی ثبوتی نظریے وچ اہم اے۔ !!^a{proof}~$!A$ دا، مفروضیاں~$\Gamma$ توں، وکھاؤندا اے کہ $!A$،~$\Gamma$ توں نکلدا اے، یعنی $\Gamma \Entails !A$۔ قدرتی اخذ دے استنباطی قاعدے قدرتی طور اُتے ایہو جیہے منطقی نتیجیاں بارے گل کردے پڑھے جا سکدے نیں۔ مثلاً \Intro{\lif} کہندا اے کہ جے $\Gamma + !A
-\Entails !B$، تاں $\Gamma \Entails !B$۔ قاعدیاں نوں سدھا ایویں لکھنا قدرتی اے کہ اوہ استنباطی قاعدے دے مقدمیّاں تے نتیجے وچ، مفروضیاں تے اوہناں توں نکلن والے نتیجے دوہاں اُتے کم کرن۔ یعنی اوہ سیکوئنٹاں $\Gamma \Sequent !A$ اُتے کم کرن۔ اُتلا سوکھا ثبوت ایہو جیہے نظام وچ ایویں دِسے گا:
+\Entails !B$، تاں $\Gamma \Entails !A \lif !B$۔ قاعدیاں نوں سدھا ایویں لکھنا قدرتی اے کہ اوہ استنباطی قاعدے دے مقدمیّاں تے نتیجے وچ، مفروضیاں تے اوہناں توں نکلن والے نتیجے دوہاں اُتے کم کرن۔ یعنی اوہ سیکوئنٹاں $\Gamma \Sequent !A$ اُتے کم کرن۔ اُتلا سوکھا ثبوت ایہو جیہے نظام وچ ایویں دِسے گا:
 \[
 \Axiom$x:!A \fCenter !A$
 \RightLabel{\Intro{\lor}}
@@ -65327,7 +65345,7 @@ $\pheight{\delta}$ اُتے استقرا نال۔ جے $\pheight{\delta} = 0$، 
     \UnaryInfC{$\lforall[x][!A(x)]$}
     \DisplayProof
     \]
-تاں اک میلا خاص متغیر والا استنباط اک صاف استنباط نال بدل دِتّا اے، تے اکّو فرق ایہ اے کہ خاص متغیر $c$ دی تھاں~$a$ آ گیا اے۔ حاصل ثبوت وچ $n-1$ میلے خاص متغیر والے استنباط نیں، تے نتیجہ استقرا دے مفروضے توں نکلدا اے۔
+تاں اک میلا خاص متغیر والا استنباط اک صاف استنباط نال بدل دِتّا اے، تے اکّو فرق ایہ اے کہ خاص متغیر $c$ دی تھاں~$a$ آ گیا اے۔ حاصل ثبوت وچ $n$ توں گھٹ میلے خاص متغیر والے استنباط نیں، تے نتیجہ استقرا دے مفروضے توں نکلدا اے۔
 \end{proof}
 
 \begin{prob}
@@ -67048,14 +67066,14 @@ x:!A$ اے۔ جے $\delta$ استنباطی قاعدے اُتے مُکدا اے�
   \item جے $N$ دی نوع~$!A_1 \land !A_2$ اے، تاں $\proj{i}{N}$ دی نوع~$!A_i$ اے۔
   \item جے $N$ دی نوع $!A$ اے، تاں $\inj[!B]{i}{!M}$ دی نوع $!A \lor !B$ اے جے $i=1$ تے نوع $!B \lor
     !A$ اے جے $i=2$۔
-  \item جے $M$ دی نوع $!A \lor !B$ اے، تے $N_1$ دی نوع $!C$ اے $x:!A, \Gamma$ دے لحاظ نال، تے $N_2$ دی نوع~$!C$ اے $y:!B,
+  \item جے $M$ دی نوع $!A \lor !B$ اے، $N_1$ دی نوع $!C$ اے $x_1:!A, \Gamma$ دے لحاظ نال، تے $N_2$ دی نوع~$!C$ اے $x_2:!B,
   \Gamma$ دے لحاظ نال، تاں $\dcase{M}{x_1}{N_1}{x_2}{N_2}$ دی نوع~$!C$ اے۔
   \item جے $N$ دی نوع~$\lfalse$ اے، تاں $\abort{!A}{N}$ دی نوع~$!A$ اے۔
   \end{enumerate}
 \end{defn}
 
 \begin{prop}
-ہر ثبوت ٹرم~$N$ دی عین اک نوع اے، سیاق~$\Gamma$ دے لحاظ نال جیہڑا~$N$ لئی اے۔
+ہر ثبوت ٹرم~$N$ دی عین اک نوع اے، سیاق~$\Gamma$ دے لحاظ نال جیہڑا~$N$ لئی اے، جے اوہدی کوئی نوع ہووے (یعنی اوہ اک درست ثبوت ٹرم ہووے)۔
 \end{prop}
 
 \begin{proof}
@@ -71571,7 +71589,7 @@ $c \in A$ اے جیہدے لئی $\setrank{c} = \gamma$، تے $A$ دا کوئی
 \begin{prob}
 ایہو جیہے سیٹ $A$ تے $B$ دیو کہ $\setrank{A \times B}=
 \max(\setrank{A}, \setrank{B})$۔ ایہو جیہے سیٹ $A$ تے $B$ دیو کہ
-$\setrank{A \times B}\max(\setrank{A}, \setrank{B}) \ordplus  2$۔
+$\setrank{A \times B} = \max(\setrank{A}, \setrank{B}) \ordplus  2$۔
 کی کوئی ہور درجہ ممکن اے؟
 \end{prob}
 

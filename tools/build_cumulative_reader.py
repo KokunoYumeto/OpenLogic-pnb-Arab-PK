@@ -299,6 +299,10 @@ class Reader:
     def project(self, n, body):
         def change(old, new, reason):
             nonlocal body
+            if old not in body:
+                # Upstream 3aacf4af already made this repair in the source (for example a distinct table label).
+                self.changes[n].append("not needed at the current upstream: " + reason)
+                return
             body = replace_once(body, old, new, f"OLP-{n:04d}")
             self.changes[n].append(reason)
 
@@ -409,8 +413,12 @@ class Reader:
                 705: ("G1c", "G1i"), 708: ("G3c", "G3i"),
                 709: ("G1c", "LK"), 710: ("G3c", "mG3i"),
             }[n]
-            change(r"\ollabel{tab:" + old + "}", r"\label{pt:seq:alt:tab:" + new + "}",
-                   "give the additional rule table a distinct system label")
+            if r"\ollabel{tab:" + old + "}" in body:
+                change(r"\ollabel{tab:" + old + "}", r"\label{pt:seq:alt:tab:" + new + "}",
+                       "give the additional rule table a distinct system label")
+            else:
+                # Upstream 3aacf4af gives these tables their own labels (tab:G1i, tab:G3i), so nothing to repair.
+                self.changes[n].append("rule table label already distinct upstream")
         if n == 714:
             if body.count(r"\olref[axd]{prop:phi}") != 2:
                 raise ValueError("OLP-0714: expected two references to the consistency dichotomy")

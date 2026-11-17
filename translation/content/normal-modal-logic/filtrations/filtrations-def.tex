@@ -61,38 +61,43 @@ V(p)$ لئی۔
       اکّو !!{formula}s،~$\Gamma$ وچوں، سچے کردے نیں۔ مفروضے مطابق $p
       \in \Gamma$ تے $\mSat{M}{p}[v]$، ایس لئی $\mSat{M}{\indfrm}[w]$۔}
 
-    \tagitem{prvNot}{\iftag{probNot}{مشق۔}{\indcase{!A}{\lnot
-          !B}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$۔
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}
+         {\iftag{probNot}{مشق۔}
+         {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$۔
           استقرائی مفروضے مطابق $\mSat/{M}{!B}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat/{M^*}{!B}[{[w]}]$۔ آخر $\mSat/{M^*}{!B}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{\indfrm}[{[w]}]$۔}}}{}
 
-    \tagitem{prvAnd}{\iftag{probAnd}{مشق۔}{\indcase{!A}{(!B \land
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے
+    \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}
+          {\iftag{probAnd}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ تے
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ تے
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvOr}{\iftag{probOr}{مشق۔}{\indcase{!A}{(!B \lor
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا
+    \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}
+          {\iftag{probOr}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat{M}{!B}[w]$ یا
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$ یا
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvIf}{\iftag{probIf}{مشق۔}{\indcase{!A}{(!B \lif
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا
+    \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}
+          {\iftag{probIf}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں $\mSat/{M}{!B}[w]$ یا
           $\mSat{M}{!C}[w]$۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
           $\mSat{M^*}{!C}[{[w]}]$۔ تے $\mSat{M^*}{\indfrm}[{[w]}]$
           اُدوں تے صرف اُدوں جدوں $\mSat/{M^*}{!B}[{[w]}]$ یا
           $\mSat{M^*}{!C}[{[w]}]$۔}}}{}
 
-    \tagitem{prvIff}{\iftag{probIff}{مشق۔}{\indcase{!A}{(!B \liff
-          !C)}{$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے
+    \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}
+          {\iftag{probIff}{مشق۔}
+          {$\mSat{M}{\indfrm}[w]$ اُدوں تے صرف اُدوں جدوں یا تاں $\mSat{M}{!B}[w]$ تے
           $\mSat{M}{!C}[w]$ دونیں، یا $\mSat/{M}{!B}[w]$ تے
           $\mSat/{M}{!C}[w]$ دونیں۔ استقرائی مفروضے مطابق $\mSat{M}{!B}[w]$
           اُدوں تے صرف اُدوں جدوں $\mSat{M^*}{!B}[{[w]}]$، تے $\mSat{M}{!C}[w]$ اُدوں تے صرف اُدوں جدوں
@@ -101,8 +106,9 @@ V(p)$ لئی۔
           $\mSat{M^*}{!C}[{[w]}]$ دونیں، یا $\mSat/{M^*}{!B}[{[w]}]$ تے
           $\mSat/{M^*}{!C}[{[w]}]$ دونیں۔}}}{}
 
-    \tagitem{prvBox}{\iftag{probBox}{مشق۔}{\indcase{!A}{\Box
-          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔
+    \tagitem{prvBox}{\indcase{!A}{\Box !B}
+          {\iftag{probBox}{مشق۔}
+          {منّ لو $\mSat{M}{\indfrm}[w]$۔
           $\mSat{M^*}{\indfrm}[{[w]}]$ وکھاؤن لئی ایسا $v$ لے لو جیہدے لئی
           $R^*[w][v]$۔
           \olref{defn:filtration}\olref{defn:filtration-R2} توں
@@ -116,8 +122,9 @@ V(p)$ لئی۔
           $R^*[w][v]$ ملدا اے، سو $\mSat{M^*}{!B}[{[v]}]$، تے استقرائی مفروضے توں $\mSat{M}{!B}[v]$۔ کیوں جے $v$ کوئی وی ایسا جہان ہو سکدا سی،
           ایس لئی $\mSat{M}{\indfrm}[w]$۔}}}{}
 
-    \tagitem{prvDiamond}{\iftag{probDiamond}{مشق۔}{\indcase{!A}{\Diamond
-          !B}{منّ لو $\mSat{M}{\indfrm}[w]$۔ فیر کسے $v \in W$ لئی
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}
+          {\iftag{probDiamond}{مشق۔}
+          {منّ لو $\mSat{M}{\indfrm}[w]$۔ فیر کسے $v \in W$ لئی
           $Rwv$ تے $\mSat{M}{!B}[v]$۔ استقرائی مفروضے مطابق
           $\mSat{M^*}{!B}[{[v]}]$، تے
           \olref{defn:filtration}\olref{defn:filtration-R1} مطابق

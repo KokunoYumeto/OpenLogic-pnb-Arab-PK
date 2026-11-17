@@ -374,7 +374,7 @@
     {
       "unit_id": "OLP-0054",
       "source_path": "content/sets-functions-relations/infinite/card-sb.tex",
-      "target_sha256": "4dbeb5c2ef8508756a83a320b86de9ada2f7b0c07d9fad3a93fed2bcef83bb84",
+      "target_sha256": "9579e01ed8a21b437caca5f695599c1fcf1786148c5668be5275925952246e02",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -563,7 +563,7 @@
     {
       "unit_id": "OLP-0081",
       "source_path": "content/first-order-logic/sequent-calculus/soundness.tex",
-      "target_sha256": "c18d0b3268037d7a4abdafbf001329ded3acc4fa6ef4a9f0accb2286dab27c92",
+      "target_sha256": "49d63340edabd5cc34d5e2ebcaea1ac6e57ed7288bd26699d2b78ac48dd7a485",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -1207,7 +1207,7 @@
     {
       "unit_id": "OLP-0173",
       "source_path": "content/first-order-logic/models-theories/size-of-structures.tex",
-      "target_sha256": "fb27d72a6def09e144ee73ca7be4fabb8f69115ea3445b2268b74e71efca2418",
+      "target_sha256": "e83b33849c57dfd7d1af751322bcf7eb3e4ab70a109dff00219c2fd1e6bc945e",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -1305,7 +1305,7 @@
     {
       "unit_id": "OLP-0187",
       "source_path": "content/model-theory/basics/isomorphism.tex",
-      "target_sha256": "37c8b318ffd7f932c05cd36a45a7b454fbd9d174369a6a18c480791016ed7760",
+      "target_sha256": "724096f7fd1c96579133bab3ffda762bb5b803db52d6af7bbafec62c9c7a2260",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -1494,7 +1494,7 @@
     {
       "unit_id": "OLP-0214",
       "source_path": "content/computability/recursive-functions/notation-pr-functions.tex",
-      "target_sha256": "b5a68440b7f650fc6fb1ff474a685cc98ef46bfeb169fd889609f3804c4cd81e",
+      "target_sha256": "a0dcc75014b9318288a48b8b504749198c729ed3b111d36f780f38d83fc858fd",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -2152,7 +2152,7 @@
     {
       "unit_id": "OLP-0308",
       "source_path": "content/incompleteness/theories-computability/first-incompleteness.tex",
-      "target_sha256": "6d697e5ca216df6e02b135b41407f998935137c3844db1a29ef73ba8a0a571b9",
+      "target_sha256": "657a81649a03e7d7983c027ff98177e49b54d8a0f42992c7d5ad3041f3e08d90",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -2320,7 +2320,7 @@
     {
       "unit_id": "OLP-0332",
       "source_path": "content/second-order-logic/metatheory/second-order-arithmetic.tex",
-      "target_sha256": "cae597ecb031c178b82773ff02eef1f42efa2420a205f6a2abb0ddec80fc9f47",
+      "target_sha256": "b32deb1f49e146a3365aec3a56c4ee2991d047f35940797b2ed5ae442f1be128",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -2362,7 +2362,7 @@
     {
       "unit_id": "OLP-0338",
       "source_path": "content/second-order-logic/sol-and-set-theory/comparing-sets.tex",
-      "target_sha256": "61f78223041d07d917ce5062537db6df2695c5e073948896f3a186b21f8f1bd0",
+      "target_sha256": "87f7488b71ab9c28f9a3f0b524070d31131ea9fc93f9b4239d451cb4ff64d20f",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -2621,7 +2621,7 @@
     {
       "unit_id": "OLP-0375",
       "source_path": "content/lambda-calculus/lambda-definability/arithmetical-functions.tex",
-      "target_sha256": "406e3e7169f33d3876e41360777b1266015b9398490064ebef754657fc6f0c4c",
+      "target_sha256": "c1546265250dba1df327d76b3b6fc5ffe0519134be296d19e135a320744ee97c",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -2635,28 +2635,28 @@
     {
       "unit_id": "OLP-0377",
       "source_path": "content/lambda-calculus/lambda-definability/truth-values.tex",
-      "target_sha256": "a6cb62d23bde2e3eef51babd8be068a7530f2dbe6c45a3a1edee3ec8728e2dce",
+      "target_sha256": "11fd60a7bd567916c368ad22a92fdc2b4a9be8db03ba6afaf8efb3bf903dc321",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
     {
       "unit_id": "OLP-0378",
       "source_path": "content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex",
-      "target_sha256": "3e78180c971a83d7dede38ebea0bd88fbe9ed984abb34c2cf7c48bfa193a5b71",
+      "target_sha256": "aae04119f97d567e67a7767b09342b16df200d0b4cd142bbf553f9a8cbf40018",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
     {
       "unit_id": "OLP-0379",
       "source_path": "content/lambda-calculus/lambda-definability/fixpoints.tex",
-      "target_sha256": "33400af914fec39667b5062c571e0bcd457c99ecf367bae59f1fd3a8a6468108",
+      "target_sha256": "0ec49ee15908dfbf6c886058ccf8ca9e8cb880c917b0d9d716b9cf4b86b77217",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
     {
       "unit_id": "OLP-0380",
       "source_path": "content/lambda-calculus/lambda-definability/minimization.tex",
-      "target_sha256": "1556ee5607f4beb067d87e7fc1746e6f513225a94615e03501636085d4defb89",
+      "target_sha256": "46448ec801c276c50fa76c1275909ddefcea4ea6ef66121dca032ab06a8564b7",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3097,7 +3097,7 @@
     {
       "unit_id": "OLP-0443",
       "source_path": "content/normal-modal-logic/completeness/complete-consistent-sets.tex",
-      "target_sha256": "56b77fd14015ff36b3e62dd42b41716416e2707a431409150397a2bf42cff8da",
+      "target_sha256": "c3b88136bc72bec3f0c3c4218f94d1861fbe220e04797cffc639c14dbe6035ea",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3153,7 +3153,7 @@
     {
       "unit_id": "OLP-0451",
       "source_path": "content/normal-modal-logic/filtrations/introduction.tex",
-      "target_sha256": "d8ae7c810496a5d40189d18bd245b48284d7037f51b9433849a90155bbe49ff4",
+      "target_sha256": "7128270ac51bf126fa99cd81b21db049704e213ce6d0301e7ac439ee4baaa918",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3167,14 +3167,14 @@
     {
       "unit_id": "OLP-0453",
       "source_path": "content/normal-modal-logic/filtrations/filtrations-def.tex",
-      "target_sha256": "3f0a98cfc60b4a28d47b4b80e99b91f288c689a2f8d4a3cc79b953cafd6cb9aa",
+      "target_sha256": "846c66b26fe897034081eb9b7019078b450600fd90f3cd04b41885c23fd0492c",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
     {
       "unit_id": "OLP-0454",
       "source_path": "content/normal-modal-logic/filtrations/examples-of-filtrations.tex",
-      "target_sha256": "e307a1b59fb65e96f1e1d9a9ca4b5c2736da576bac0ee07786ce0fb0339e637e",
+      "target_sha256": "aff9b5ca3e58f1d9d0afcc609da76cf3b22a501d79e793168341ab0d8487e2b7",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3209,7 +3209,7 @@
     {
       "unit_id": "OLP-0459",
       "source_path": "content/normal-modal-logic/filtrations/euclidean-filtrations.tex",
-      "target_sha256": "b4953bd258e67b36b947b78d210708f9228d12ea38203d09eb0b29a220c5a250",
+      "target_sha256": "84ce23efc8f490fcb0540d02903cbc17c055847eedfededc5d5bf6f7d7b71f83",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3244,7 +3244,7 @@
     {
       "unit_id": "OLP-0464",
       "source_path": "content/normal-modal-logic/tableaux/soundness.tex",
-      "target_sha256": "33c3c401cfad014c49ebe6a6b2b078a246dadfad0f5153997dce1f6f8021f08d",
+      "target_sha256": "7dce3fccb38d8333b7d9828af63ed711a49dfd8ac4d7ebdc1efe7cb594f01d44",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3461,7 +3461,7 @@
     {
       "unit_id": "OLP-0495",
       "source_path": "content/intuitionistic-logic/introduction/bhk-interpretation.tex",
-      "target_sha256": "c4e3f13bd8ad729132cd2e72bfecca523093ab6e720c5848f1ca368c5ed415b3",
+      "target_sha256": "a99363802387ff39600cc9274cf6b5cec87d77090f71ed1e4cbbe687d64b1952",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -3601,7 +3601,7 @@
     {
       "unit_id": "OLP-0515",
       "source_path": "content/intuitionistic-logic/tableaux/soundness.tex",
-      "target_sha256": "41696b0fc1353be0f6f27a95c7c33ce8a69720b18252298c8015b662e81de9b8",
+      "target_sha256": "707d9cc43d5ec4a9d419030727b21b595fa653d65b4ecefe87a7483da047bdaf",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -4035,7 +4035,7 @@
     {
       "unit_id": "OLP-0577",
       "source_path": "content/set-theory/ord-arithmetic/using-addition.tex",
-      "target_sha256": "cb5a32b5785b9f010fc3b5d40e2cf52f240a026ff52421735b5421bd2a311864",
+      "target_sha256": "d9da77517cd9762e9a7d85c6328070d48f976b44bbd4dbc408188b712fae1a83",
       "proposed_placement": "ordinary_graph",
       "related_units": []
     },
@@ -4497,7 +4497,7 @@
     {
       "unit_id": "OLP-0643",
       "source_path": "content/first-order-logic/axiomatic-deduction/provability.tex",
-      "target_sha256": "a99ef23a136f05bcea8be39afec9f1202c449978fc7cd9a9a638931d7d7eacf5",
+      "target_sha256": "cbe4d9ed5351cf6a1f7718fba72fef9f66b5df46d24a6cf174253e190af2a820",
       "proposed_placement": "reader_alternative_at_topic",
       "related_units": [
         "OLP-0112"
@@ -4664,7 +4664,7 @@
     {
       "unit_id": "OLP-0663",
       "source_path": "content/proof-theory/natural-deduction/introduction.tex",
-      "target_sha256": "19a88815d40f0ab57d955af83d15503a0d7a0651c2272246aa9cf129d49ab0fa",
+      "target_sha256": "008bc35e9e71a0f0bcfbcc51f02a92e12dc897496d11ddcba602259c46a39e4b",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4678,7 +4678,7 @@
     {
       "unit_id": "OLP-0665",
       "source_path": "content/proof-theory/natural-deduction/quantifiers.tex",
-      "target_sha256": "ac65b1563fdb08450eaa436fe420327759b4980d8afc0974b7eb52d9dac1f66f",
+      "target_sha256": "1444598e1787bef4c819d62b033cfc126d7b4b0351417198e6e0312eee67aca4",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4806,7 +4806,7 @@
     {
       "unit_id": "OLP-0683",
       "source_path": "content/proof-theory/proof-search/search-algorithm.tex",
-      "target_sha256": "a0ae43171c0ef7906d95433c13dbef342a06682e158b61f1770f075c8266156a",
+      "target_sha256": "f9961a8672bb67b6b1fe76a9aa22039294477ce14b2042591d792ffe62b0124e",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4878,7 +4878,7 @@
     {
       "unit_id": "OLP-0693",
       "source_path": "content/proof-theory/propositions-as-types/rules-tN3.tex",
-      "target_sha256": "d3145ebeea369862c1ccce5e9b445259168c43f585460d56f4ca6debdaabc3ee",
+      "target_sha256": "05c6491cf0c21e1e43a95bb5702568549abbda4a8d59ab746d158789840680d1",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4908,7 +4908,7 @@
     {
       "unit_id": "OLP-0697",
       "source_path": "content/proof-theory/propositions-as-types/types.tex",
-      "target_sha256": "ea0cf41bd5ef5bed36cbf5d270e3c923da6ad036987c09c0ec0fdbeaabbc61ef",
+      "target_sha256": "5224fed438656bd5e82596f8efae0f6b71ec81015e52c4129f80e88dbab92322",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4922,7 +4922,7 @@
     {
       "unit_id": "OLP-0699",
       "source_path": "content/proof-theory/sequent-calculus/interpretation-rules.tex",
-      "target_sha256": "dbfafcfa3be3ddafcac4c2c3f8cc980a85e20d4988d3daeb6dcfcb2fd5e21684",
+      "target_sha256": "c64c59fef29f29e3f663316a26cc8a5f8462aca68be3c5779ccaf472dea27215",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4936,7 +4936,7 @@
     {
       "unit_id": "OLP-0701",
       "source_path": "content/proof-theory/sequent-calculus/invertibility.tex",
-      "target_sha256": "f6f089bf3fb029c2b4565ccfa1c250a7ce17a86b97b9adac80bc9deb4b7e1cf8",
+      "target_sha256": "e23a02f7c917a5dd455d2b4aa6b1ce8c694e978edc393f2d8444acff443dfa5a",
       "proposed_placement": "proof_theory_reader",
       "related_units": []
     },
@@ -4964,7 +4964,7 @@
     {
       "unit_id": "OLP-0705",
       "source_path": "content/proof-theory/sequent-calculus/rules-G1i.tex",
-      "target_sha256": "0b7daa98b80141bdc71b88467921de3ee60a0a99e53ddb545316874e22703e21",
+      "target_sha256": "ae2ebca35dbd0093a136c140e32c45c9de959d2d251300d4195203d56cea6464",
       "proposed_placement": "reader_alternative_at_topic",
       "related_units": [
         "OLP-0712"
@@ -4987,7 +4987,7 @@
     {
       "unit_id": "OLP-0708",
       "source_path": "content/proof-theory/sequent-calculus/rules-G3i.tex",
-      "target_sha256": "82dd2b3cb1a2e9a58de0fa7c6e73435d7110dc12a92ba889d602b24f31db780d",
+      "target_sha256": "5223435c16c1b1e61c6097bf128dfd939454ef8d765e930c75881264059ad9d2",
       "proposed_placement": "reader_alternative_at_topic",
       "related_units": [
         "OLP-0712"

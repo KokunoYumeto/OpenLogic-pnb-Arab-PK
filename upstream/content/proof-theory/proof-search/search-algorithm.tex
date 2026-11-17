@@ -54,7 +54,7 @@ Suppose the algorithm has generated a tree of indexed sequents, with
 associated sets of !!{constant}s, at stage~$n$. At stage~$n+1$, we do
 the following, for each topmost sequent. 
 
-If there is !!a{formula}~$!A$ that occurs on both the left and the
+If there is an atomic !!{formula}~$!A$ that occurs on both the left and the
 right of the sequent, or the left contains~$\lfalse$, we do nothing:
 such sequents have !!{proof}s in~\Log{G3c}, and for this particular
 topmost sequent there is nothing left to do.
@@ -76,7 +76,7 @@ and according to whether $!A^i$ appears on the left or the right.
   \item $!A \ident !B \land !C$ and occurs on the left: Add one new
   topmost sequent above $(!B \land !C)^i, \Pi \Sequent \Lambda$:
   \[
-  \Axiom$!B^k, !C^{k+1}, \Pi \fCenter \Lambda$
+  \Axiom$!B^{k+1}, !C^{k+2}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\land}}
   \UnaryInf$(!B \land !C)^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -85,8 +85,8 @@ and according to whether $!A^i$ appears on the left or the right.
   \item $!A \ident !B \land !C$ and occurs on the right: Add two new
   topmost sequents above $\Pi \Sequent \Lambda, (!B \land !C)^i$:
   \[
-  \Axiom$\Pi \fCenter \Lambda, !B^k$
-  \Axiom$\Pi \fCenter \Lambda, !C^k$
+  \Axiom$\Pi \fCenter \Lambda, !B^{k+1}$
+  \Axiom$\Pi \fCenter \Lambda, !C^{k+1}$
   \RightLabel{\RightR{\land}}
   \BinaryInf$\Pi \fCenter \Lambda, (!B \land !C)^i$
   \DisplayProof
@@ -99,7 +99,7 @@ and according to whether $!A^i$ appears on the left or the right.
   \item $!A \ident \lexists[x][!B(x)]$ and occurs on the left: Add one new
   topmost sequent above $\lexists[x][!B(x)]^i, \Pi \Sequent \Lambda$:
   \[
-  \Axiom$!B(c)^k, \Pi \fCenter \Lambda$
+  \Axiom$!B(c)^{k+1}, \Pi \fCenter \Lambda$
   \RightLabel{\LeftR{\lexists}}
   \UnaryInf$\lexists[x][!B(x)]^i, \Pi \fCenter \Lambda$
   \DisplayProof
@@ -109,14 +109,14 @@ and according to whether $!A^i$ appears on the left or the right.
   \item $!A \ident \lexists[x][!B(x)]$ and occurs on the right: Add one new
   topmost sequent above $\Pi \Sequent \Lambda, \lexists[x][!B(x)]$:
   \[
-  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^k, !B(t)^{k+1}$
-  \RightLabel{\LeftR{\lexists}}
+  \Axiom$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^{k+1}, !B(t)^{k+2}$
+  \RightLabel{\RightR{\lexists}}
   \UnaryInf$\Pi \fCenter \Lambda, \lexists[x][!B(x)]^i$
   \DisplayProof
   \]
   where $t$ is the first term containing only !!{constant}s in~$C$ not
   already used in the reduction of $\lexists[x][!B(x)]$ on the right
-  below this sequent (or $\Obj c_0$ if all such terms have been used).
+  below this sequent (or the first !!{constant} in~$C$ if all such terms have been used).
   The set of !!{constant}s assigned to the new sequent is $C$.
   \item The cases where $!A \ident \lforall[x][!B(x)]$ are similar and
   left as exercises.
@@ -126,7 +126,7 @@ If at stage $n+1$ we have not added a new sequent to any topmost
 sequent, the algorithm terminates successfully. In this case we have
 found !!a{proof} of~$\Gamma \Sequent \Delta$, obtained from the tree
 at stage $n+1$ by erasing all indices. The topmost sequents are all of
-the form $!A, \Pi \Sequent \Lambda, !A$ or of the form $\lfalse, \Pi
+the form $!A, \Pi \Sequent \Lambda, !A$ with $!A$ atomic, or of the form $\lfalse, \Pi
 \Sequent \Lambda$. All inferences are correct inferences of~\Log{G3c}.
 This is obvious for the propositional inferences. Observe that at each
 step, the set~$C$ of !!{constant}s assigned to a sequent contains all

@@ -40,16 +40,17 @@ of atomic and negated atomic !!{formula}s. For instance, take $!A
 calculus rules for $\oplus$ as
 \begin{align*}
 &
+\Axiom$!A, \Gamma \fCenter \Delta, !B$
+\Axiom$!B, \Gamma \fCenter \Delta, !A$
+\RightLabel{\LeftR{\oplus}}
+\BinaryInf$!A \oplus !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\\
+&
 \Axiom$\Gamma \fCenter \Delta, !A, !B$
 \Axiom$!A, !B, \Gamma \fCenter \Delta$
 \RightLabel{\RightR{\oplus}}
 \BinaryInf$\Gamma \fCenter \Delta, !A \oplus !B$
-\DisplayProof
-\\
-& \Axiom$!A, \Gamma \fCenter \Delta, !B$
-\Axiom$!B, \Gamma \fCenter \Delta, !A$
-\RightLabel{\RightR{\oplus}}
-\BinaryInf$!A \oplus !B, \Gamma \fCenter \Delta$
 \DisplayProof
 \end{align*}
 and these rules would also be sound and complete. Their conclusions

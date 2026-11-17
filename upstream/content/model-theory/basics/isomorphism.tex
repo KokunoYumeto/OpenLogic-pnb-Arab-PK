@@ -86,14 +86,14 @@ The first is proved by induction on the complexity of~$t$.
 \item If $t \ident f(t_1, \dots, t_n)$, then
   \begin{align*}
     \Value{t}{M}[s] & = \Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \quad\text{and}\\
-  \Value{t}{M'}[h \circ s] & = \Assign{f}{M}(\Value{t_1}{M'}[h \circ
+  \Value{t}{M'}[h \circ s] & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ
     s], \dots, \Value{t_n}{M'}[h \circ s]).
   \end{align*}
   The induction hypothesis is that for each $i$, $h(\Value{t_i}{M}[s])
   = \Value{t_i}{M'}[h\circ s]$. So,
   \begin{align}
     h(\Value{t}{M}[s]) 
-    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \notag\\
+    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]))\notag\\
     & = \Assign{f}{M'}(h(\Value{t_1}{M}[s]), \dots,
     h(\Value{t_n}{M}[s])) \ollabel{iso-1}\\
     & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ s], \dots,
